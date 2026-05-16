@@ -66,7 +66,14 @@ ${C_BOLD}Subcommands:${C_RESET}
   say-it daily                   speak today's pronunciation (deterministic)
   say-it quiz                    interactive game — guess the respelling
   say-it compare <word>          audibly compare primary vs alternates
+  say-it diff <word1> <word2>    audibly compare two different words
+  say-it teach <word>            slow, syllabified pronunciation for learners
   say-it tweet <word>            generate a tweet draft + copy to clipboard
+  say-it badge <word>            print a markdown badge w/ audio link
+  say-it explain <word>          print extended context for a word
+  say-it history                 your recent lookups + streak
+  say-it me                      pronounce your git user.name
+  say-it import <file.tsv>       merge a file into your local override dict
   say-it stats                   print dictionary statistics
   say-it config                  print resolved paths / version
   say-it update                  pull the latest dict and CLI from upstream
@@ -180,6 +187,151 @@ case "${1:-}" in
     echo "  ${C_CYAN}voice:${C_RESET}       $VOICE"
     echo "  ${C_CYAN}rate:${C_RESET}        $RATE wpm"
     echo "  ${C_CYAN}upstream:${C_RESET}    ${SAY_IT_UPSTREAM:-https://github.com/anzy-renlab-ai/pronounce.git}"
+    exit 0
+    ;;
+  history)
+    HIST_FILE="${SAY_IT_HISTORY_FILE:-$HOME/.local/share/say-it/history}"
+    if [[ ! -f "$HIST_FILE" ]]; then echo "${C_DIM}No history yet.${C_RESET}"; exit 0; fi
+    total=$(wc -l < "$HIST_FILE" | tr -d ' ')
+    unique=$(awk '{print $2}' "$HIST_FILE" | sort -u | wc -l | tr -d ' ')
+    days=$(awk '{print substr($1, 1, 10)}' "$HIST_FILE" | sort -u | wc -l | tr -d ' ')
+    echo "${C_BOLD}say-it history${C_RESET}"
+    echo "  ${C_CYAN}lookups${C_RESET}        $total"
+    echo "  ${C_CYAN}unique words${C_RESET}   $unique"
+    echo "  ${C_CYAN}active days${C_RESET}    $days"
+    echo ""
+    echo "  ${C_CYAN}recent:${C_RESET}"
+    tail -10 "$HIST_FILE" | awk '{printf "    %s  %s\n", $1, $2}'
+    exit 0
+    ;;
+  me)
+    name="$(git config user.name 2>/dev/null || echo "$USER")"
+    echo "${C_DIM}Pronouncing your git user.name: ${C_RESET}${C_BOLD}$name${C_RESET}"
+    exec "$0" --no-dict "$name"
+    ;;
+  import)
+    src="${2:-}"
+    [[ -z "$src" || ! -f "$src" ]] && { echo "say-it import: file not found: $src" >&2; exit 2; }
+    local_dict="$HOME/.config/say-it/pronunciations.local.tsv"
+    mkdir -p "$(dirname "$local_dict")"
+    if [[ ! -f "$local_dict" ]]; then
+      # Copy header from main dict
+      head -27 "$DICT" > "$local_dict"
+    fi
+    appended=0
+    while IFS= read -r line; do
+      [[ -z "$line" || "$line" =~ ^# ]] && continue
+      word=$(printf '%s' "$line" | awk -F'\t' '{print $1}')
+      [[ -z "$word" || "$word" == "word" ]] && continue
+      # Skip if already in local dict
+      if awk -F'\t' -v w="$word" 'tolower($1)==tolower(w) {f=1} END{exit !f}' "$local_dict" 2>/dev/null; then continue; fi
+      echo "$line" >> "$local_dict"
+      appended=$((appended+1))
+    done < "$src"
+    echo "${C_GREEN}Imported $appended entries to $local_dict${C_RESET}"
+    echo "  Your local entries take precedence over the bundled dictionary."
+    exit 0
+    ;;
+  badge)
+    [[ -z "${2:-}" ]] && { echo "say-it: usage: say-it badge <word>" >&2; exit 2; }
+    word="$2"
+    slug="$(printf '%s' "$word" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9._-]/-/g')"
+    line=$(awk -F'\t' -v w="$(printf '%s' "$word" | tr '[:upper:]' '[:lower:]')" '!/^#/ && tolower($1)==w { print; exit }' "$DICT")
+    if [[ -z "$line" ]]; then
+      echo "say-it badge: '$word' not in dictionary" >&2; exit 4
+    fi
+    resp=$(echo "$line" | awk -F'\t' '{print $3}')
+    ipa=$(echo "$line" | awk -F'\t' '{print $2}')
+    cat <<MD
+[![🔊 $word — $resp](https://img.shields.io/badge/🔊-$word%20%E2%86%92%20$(printf '%s' "$resp" | sed 's/ /%20/g')-ff6a3d?style=flat&logo=speakerdeck&logoColor=white)](https://pronounce.renlab.ai/word/$slug)
+MD
+    if command -v pbcopy >/dev/null 2>&1; then
+      cat <<MD | tr -d '\n' | pbcopy
+[![🔊 $word — $resp](https://img.shields.io/badge/🔊-$word%20%E2%86%92%20$(printf '%s' "$resp" | sed 's/ /%20/g')-ff6a3d?style=flat&logo=speakerdeck&logoColor=white)](https://pronounce.renlab.ai/word/$slug)
+MD
+      [[ $QUIET -eq 0 ]] && echo "${C_DIM}(badge markdown copied to clipboard)${C_RESET}" >&2
+    fi
+    exit 0
+    ;;
+  explain)
+    [[ -z "${2:-}" ]] && { echo "say-it: usage: say-it explain <word>" >&2; exit 2; }
+    word="$2"
+    line=$(awk -F'\t' -v w="$(printf '%s' "$word" | tr '[:upper:]' '[:lower:]')" '!/^#/ && tolower($1)==w { print; exit }' "$DICT")
+    if [[ -z "$line" ]]; then
+      echo "say-it explain: '$word' not in dictionary" >&2
+      exit 4
+    fi
+    ipa=$(echo "$line" | awk -F'\t' '{print $2}')
+    resp=$(echo "$line" | awk -F'\t' '{print $3}')
+    alt=$(echo "$line" | awk -F'\t' '{print $5}')
+    src_url=$(echo "$line" | awk -F'\t' '{print $6}')
+    src_label=$(echo "$line" | awk -F'\t' '{print $7}')
+    cat=$(echo "$line" | awk -F'\t' '{print $8}')
+    conf=$(echo "$line" | awk -F'\t' '{print $9}')
+    notes=$(echo "$line" | awk -F'\t' '{print $10}')
+    echo "${C_BOLD}$word${C_RESET}"
+    echo ""
+    echo "${C_DIM}Most engineers say it as${C_RESET} ${C_GREEN}\"$resp\"${C_RESET} ${C_DIM}($ipa)${C_RESET}."
+    if [[ -n "$alt" ]]; then
+      echo ""
+      IFS='|' read -ra ALTS <<< "$alt"
+      if [[ ${#ALTS[@]} -gt 1 ]]; then
+        echo "${C_DIM}Other readings in active use:${C_RESET}"
+        for a in "${ALTS[@]}"; do echo "  • ${C_ORANGE}$a${C_RESET}"; done
+      else
+        echo "${C_DIM}Some also say${C_RESET} ${C_ORANGE}\"${ALTS[0]}\"${C_RESET}."
+      fi
+    fi
+    if [[ -n "$notes" ]]; then echo ""; echo "${C_CYAN}Context:${C_RESET} $notes"; fi
+    case "$conf" in
+      creator-clarified) blurb="The reading above is documented by the creators / official project page" ;;
+      contested) blurb="This reading is one of several in active use — the developer community hasn't converged on a single answer" ;;
+      community-consensus) blurb="This is the most common reading among engineers" ;;
+    esac
+    [[ -n "$blurb" ]] && { echo ""; echo "${C_DIM}${blurb}.${C_RESET}"; }
+    if [[ -n "$src_url" ]]; then echo ""; echo "${C_DIM}Source:${C_RESET} ${C_BLUE}$src_label${C_RESET}"; echo "        $src_url"; fi
+    echo ""
+    echo "${C_DIM}Category:${C_RESET} $cat${C_DIM} · Confidence:${C_RESET} $conf"
+    exit 0
+    ;;
+  diff)
+    word1="${2:-}"
+    word2="${3:-}"
+    [[ -z "$word1" || -z "$word2" ]] && { echo "say-it: usage: say-it diff <word1> <word2>" >&2; exit 2; }
+    lookup_resp() {
+      awk -F'\t' -v w="$(printf '%s' "$1" | tr '[:upper:]' '[:lower:]')" '!/^#/ && tolower($1)==w {print $3; exit}' "$DICT"
+    }
+    r1=$(lookup_resp "$word1"); [[ -z "$r1" ]] && r1="$word1"
+    r2=$(lookup_resp "$word2"); [[ -z "$r2" ]] && r2="$word2"
+    echo "${C_DIM}Comparing:${C_RESET}"
+    echo "  ${C_GREEN}$word1${C_RESET}  →  $r1"
+    echo "  ${C_ORANGE}$word2${C_RESET}  →  $r2"
+    BODY="$r1. [[slnc 400]] $r1. [[slnc 700]] $r2. [[slnc 400]] $r2."
+    say -v "$VOICE" -r "$RATE" "$BODY"
+    exit 0
+    ;;
+  teach)
+    [[ -z "${2:-}" ]] && { echo "say-it: usage: say-it teach <word>" >&2; exit 2; }
+    word="$2"
+    line=$(awk -F'\t' -v w="$(printf '%s' "$word" | tr '[:upper:]' '[:lower:]')" '!/^#/ && tolower($1)==w { print; exit }' "$DICT")
+    if [[ -z "$line" ]]; then
+      echo "say-it teach: '$word' not in dictionary; sending raw spelling" >&2
+      resp="$word"
+    else
+      resp=$(echo "$line" | awk -F'\t' '{print $3}')
+    fi
+    echo "${C_BOLD}Teaching mode for ${word}${C_RESET}"
+    echo "${C_DIM}1. The whole word, slowly${C_RESET}"
+    say -v "$VOICE" -r 110 "$resp." 2>/dev/null
+    echo "${C_DIM}2. Each syllable${C_RESET}"
+    # Treat each space-separated piece as a syllable
+    for syl in $resp; do
+      printf "  ${C_CYAN}%s${C_RESET}\n" "$syl"
+      say -v "$VOICE" -r 90 "$syl." 2>/dev/null
+      sleep 0.3
+    done
+    echo "${C_DIM}3. Normal speed, twice${C_RESET}"
+    say -v "$VOICE" -r 175 "$resp. [[slnc 500]] $resp." 2>/dev/null
     exit 0
     ;;
   quiz)
@@ -509,6 +661,13 @@ else
       say -v "$VOICE" -r "$RATE" "$BODY"
     fi
   fi
+fi
+
+# --- record history -----------------------------------------------------------
+HIST_FILE="${SAY_IT_HISTORY_FILE:-$HOME/.local/share/say-it/history}"
+if [[ "${SAY_IT_NO_HISTORY:-0}" != "1" ]]; then
+  mkdir -p "$(dirname "$HIST_FILE")" 2>/dev/null
+  printf '%s %s\n' "$(date -u +%Y-%m-%dT%H:%M:%S)" "$WORD" >> "$HIST_FILE" 2>/dev/null || true
 fi
 
 # --- post-play actions --------------------------------------------------------

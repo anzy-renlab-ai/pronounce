@@ -334,12 +334,24 @@ function buildBody(entry, opts) {
   return body;
 }
 
-let CURRENT_UTTER = null;
+// CURRENT_AUDIO holds the most recently triggered HTMLAudioElement so we can stop it.
+let CURRENT_AUDIO = null;
+function audioUrl(word) {
+  const slug = word.toLowerCase().replace(/[^a-z0-9._-]/g, '-');
+  return '/audio/' + slug + '.mp3';
+}
+
+function playPrerendered(url, fallbackBody) {
+  if (CURRENT_AUDIO) { try { CURRENT_AUDIO.pause(); } catch(_) {} }
+  const a = new Audio(url);
+  a.onerror = () => speakBody(fallbackBody);
+  CURRENT_AUDIO = a;
+  a.play().catch(() => speakBody(fallbackBody));
+  return a;
+}
+
 function speakBody(text) {
-  if (!('speechSynthesis' in window)) {
-    alert("Your browser doesn't support speech synthesis. Try Safari or Chrome on macOS.");
-    return;
-  }
+  if (!('speechSynthesis' in window)) return;
   speechSynthesis.cancel();
   const u = new SpeechSynthesisUtterance(text);
   const voices = speechSynthesis.getVoices();
@@ -347,15 +359,20 @@ function speakBody(text) {
   if (us) u.voice = us;
   u.rate = 0.9;
   u.lang = 'en-US';
-  CURRENT_UTTER = u;
   speechSynthesis.speak(u);
 }
 
 function playEntry(idx, opts) {
   const entry = (typeof idx === 'number') ? ENTRIES[idx] : BY_WORD[idx.toLowerCase()];
   if (!entry) return;
-  const body = buildBody(entry, opts || {});
-  if (body) speakBody(body);
+  // Prefer the pre-rendered .mp3 (matches the CLI exactly).
+  // For --alt mode use a Web Speech fallback since we don't pre-render alt-isolated audio.
+  if (opts && opts.altIdx !== undefined) {
+    const body = buildBody(entry, opts);
+    if (body) speakBody(body);
+    return;
+  }
+  playPrerendered(audioUrl(entry.w), buildBody(entry, opts || {}));
 }
 
 function escHTML(s) {

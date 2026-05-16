@@ -116,6 +116,18 @@ header.hero { margin-bottom: 48px; text-align: center; }
 .famous-item a:hover { text-decoration: underline; }
 .disclaimer { background: var(--warn-bg); border: 1px solid var(--warn-border); border-radius: 8px; padding: 14px 18px; margin-bottom: 24px; font-size: 13.5px; color: var(--warn-fg); line-height: 1.55; }
 .disclaimer code { font-family: var(--mono); color: var(--accent-2); background: rgba(0,0,0,0.3); padding: 1px 5px; border-radius: 3px; }
+.info-pill { background: rgba(122, 223, 187, 0.08); border: 1px solid rgba(122, 223, 187, 0.30); border-radius: 8px; padding: 12px 18px; margin-bottom: 24px; font-size: 13.5px; color: var(--accent-2); line-height: 1.55; }
+.info-pill strong { color: #a4ffd1; }
+
+/* Download audio link */
+.download-mp3 { display: inline-block; font-size: 12px; color: var(--muted); padding: 4px 10px; border: 1px solid var(--border); border-radius: 999px; text-decoration: none; margin-left: 10px; }
+.download-mp3:hover { border-color: var(--accent-2); color: var(--accent-2); }
+.download-mp3::before { content: "⬇ "; }
+
+/* Difficulty rating badge */
+.difficulty { display: inline-flex; gap: 2px; vertical-align: middle; margin-left: 8px; }
+.difficulty .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--border); }
+.difficulty .dot.on { background: var(--accent); }
 .controls { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; align-items: center; }
 .controls input[type="search"] { flex: 1; min-width: 240px; background: var(--card); color: var(--fg); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; font-size: 15px; font-family: var(--sans); }
 .controls input[type="search"]:focus { outline: 2px solid var(--accent); }
@@ -272,12 +284,24 @@ function buildBody(entry, opts) {
   return body;
 }
 
-let CURRENT_UTTER = null;
+// CURRENT_AUDIO holds the most recently triggered HTMLAudioElement so we can stop it.
+let CURRENT_AUDIO = null;
+function audioUrl(word) {
+  const slug = word.toLowerCase().replace(/[^a-z0-9._-]/g, '-');
+  return '/audio/' + slug + '.mp3';
+}
+
+function playPrerendered(url, fallbackBody) {
+  if (CURRENT_AUDIO) { try { CURRENT_AUDIO.pause(); } catch(_) {} }
+  const a = new Audio(url);
+  a.onerror = () => speakBody(fallbackBody);
+  CURRENT_AUDIO = a;
+  a.play().catch(() => speakBody(fallbackBody));
+  return a;
+}
+
 function speakBody(text) {
-  if (!('speechSynthesis' in window)) {
-    alert("Your browser doesn't support speech synthesis. Try Safari or Chrome on macOS.");
-    return;
-  }
+  if (!('speechSynthesis' in window)) return;
   speechSynthesis.cancel();
   const u = new SpeechSynthesisUtterance(text);
   const voices = speechSynthesis.getVoices();
@@ -285,15 +309,20 @@ function speakBody(text) {
   if (us) u.voice = us;
   u.rate = 0.9;
   u.lang = 'en-US';
-  CURRENT_UTTER = u;
   speechSynthesis.speak(u);
 }
 
 function playEntry(idx, opts) {
   const entry = (typeof idx === 'number') ? ENTRIES[idx] : BY_WORD[idx.toLowerCase()];
   if (!entry) return;
-  const body = buildBody(entry, opts || {});
-  if (body) speakBody(body);
+  // Prefer the pre-rendered .mp3 (matches the CLI exactly).
+  // For --alt mode use a Web Speech fallback since we don't pre-render alt-isolated audio.
+  if (opts && opts.altIdx !== undefined) {
+    const body = buildBody(entry, opts);
+    if (body) speakBody(body);
+    return;
+  }
+  playPrerendered(audioUrl(entry.w), buildBody(entry, opts || {}));
 }
 
 function escHTML(s) {
@@ -697,9 +726,8 @@ cat > "$DOCS/browse.html" <<EOF
     <h1 style="font-size: 36px; margin: 0 0 8px;">Pronunciation dictionary</h1>
     <p style="color: var(--muted-strong); margin: 0 0 20px;">130+ entries · click ▶ to hear · press <kbd>/</kbd> to search</p>
 
-    <div class="disclaimer">
-      <strong>ℹ Audio quality note:</strong>
-      the ▶ button uses your browser's Web Speech API, which varies by OS and browser. Install the CLI for the canonical macOS Samantha rendering: <code>git clone https://github.com/${GH_REPO}.git &amp;&amp; cd pronounce &amp;&amp; ./install.sh</code>
+    <div class="info-pill">
+      <strong>🎧 Real macOS Samantha audio</strong> — every ▶ plays the exact same audio the CLI produces, pre-rendered server-side. Not browser TTS variability.
     </div>
 
     <div class="controls">
@@ -930,6 +958,7 @@ HTML
         <button class="play-btn play-primary" onclick="playEntry('$(htmlesc "$word")')" aria-label="Play primary reading">▶</button>
         <span class="resp-large">$resp_esc</span>
         <span class="ipa">$ipa_esc</span>
+        <a class="download-mp3" href="$SITE_URL/audio/$slug.mp3" download="$slug.mp3" title="Download macOS Samantha audio (.mp3)">mp3</a>
       </div>
 $alts_html
     </div>
@@ -1118,6 +1147,60 @@ User-agent: *
 Allow: /
 
 Sitemap: $SITE_URL/sitemap.xml
+EOF
+
+# ---------------------------------------------------------------------------
+# Embed widgets — iframe-friendly mini player per word
+# ---------------------------------------------------------------------------
+mkdir -p "$DOCS/embed"
+# Clear stale embeds
+find "$DOCS/embed" -name '*.html' -delete 2>/dev/null || true
+
+awk -F'\t' -v brand="$BRAND" -v site="$SITE_URL" -v outdir="$DOCS/embed" '
+  function esc(s) { gsub(/&/, "\\&amp;", s); gsub(/</, "\\&lt;", s); gsub(/>/, "\\&gt;", s); gsub(/"/, "\\&quot;", s); return s }
+  function slug(s,    out) { out = tolower(s); gsub(/[^a-z0-9._-]/, "-", out); return out }
+  !/^#/ && NF>=3 && $1 != "" && $1 != "word" {
+    word=$1; ipa=$2; resp=$3
+    s = slug(word)
+    fn = outdir "/" s ".html"
+    printf "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"utf-8\"><title>%s — pronounce</title><style>" \
+           "body{margin:0;font-family:-apple-system,BlinkMacSystemFont,\"Inter\",sans-serif;background:#18181b;color:#f6f6f7;display:flex;align-items:center;gap:16px;padding:16px 20px;font-size:16px;border-radius:12px}" \
+           ".play{background:#ff6a3d;color:#0e0e10;border:none;width:42px;height:42px;border-radius:50%%;cursor:pointer;font-size:14px;font-weight:bold;flex-shrink:0}" \
+           ".play:hover{filter:brightness(1.1)}" \
+           ".word{font-family:ui-monospace,Menlo,monospace;font-size:18px}" \
+           ".resp{color:#7adfbb;font-family:ui-monospace,monospace;margin-left:auto;font-size:14px}" \
+           ".attr{color:#9b9ba0;font-size:11px;text-decoration:none;margin-left:8px}" \
+           "</style></head><body>" \
+           "<button class=\"play\" onclick=\"a.play()\" aria-label=\"Play\">▶</button>" \
+           "<span class=\"word\">%s</span>" \
+           "<span class=\"resp\">%s</span>" \
+           "<a class=\"attr\" href=\"%s/word/%s\" target=\"_blank\">pronounce →</a>" \
+           "<audio id=\"a\" src=\"%s/audio/%s.mp3\" preload=\"none\"></audio>" \
+           "<script>var a=document.getElementById(\"a\");</script>" \
+           "</body></html>\n", esc(word), esc(word), esc(resp), site, s, site, s > fn
+    close(fn); count++
+  }
+  END { print "Built " count " embed widgets." }
+' "$DICT"
+
+# ---------------------------------------------------------------------------
+# /random — picks a random word client-side and redirects
+# ---------------------------------------------------------------------------
+cat > "$DOCS/random.html" <<EOF
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Random word — ${BRAND}</title>
+<script src="/script.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const pick = ENTRIES[Math.floor(Math.random() * ENTRIES.length)];
+  const slug = pick.w.toLowerCase().replace(/[^a-z0-9._-]/g, '-');
+  window.location.replace("/word/" + slug);
+});
+</script>
+</head><body style="background:#0e0e10;color:#9b9ba0;font-family:-apple-system,sans-serif;padding:40px;text-align:center;">
+<p>Picking a random word…</p>
+</body></html>
 EOF
 
 # ---------------------------------------------------------------------------

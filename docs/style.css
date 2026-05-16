@@ -61,6 +61,18 @@ header.hero { margin-bottom: 48px; text-align: center; }
 .famous-item a:hover { text-decoration: underline; }
 .disclaimer { background: var(--warn-bg); border: 1px solid var(--warn-border); border-radius: 8px; padding: 14px 18px; margin-bottom: 24px; font-size: 13.5px; color: var(--warn-fg); line-height: 1.55; }
 .disclaimer code { font-family: var(--mono); color: var(--accent-2); background: rgba(0,0,0,0.3); padding: 1px 5px; border-radius: 3px; }
+.info-pill { background: rgba(122, 223, 187, 0.08); border: 1px solid rgba(122, 223, 187, 0.30); border-radius: 8px; padding: 12px 18px; margin-bottom: 24px; font-size: 13.5px; color: var(--accent-2); line-height: 1.55; }
+.info-pill strong { color: #a4ffd1; }
+
+/* Download audio link */
+.download-mp3 { display: inline-block; font-size: 12px; color: var(--muted); padding: 4px 10px; border: 1px solid var(--border); border-radius: 999px; text-decoration: none; margin-left: 10px; }
+.download-mp3:hover { border-color: var(--accent-2); color: var(--accent-2); }
+.download-mp3::before { content: "⬇ "; }
+
+/* Difficulty rating badge */
+.difficulty { display: inline-flex; gap: 2px; vertical-align: middle; margin-left: 8px; }
+.difficulty .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--border); }
+.difficulty .dot.on { background: var(--accent); }
 .controls { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; align-items: center; }
 .controls input[type="search"] { flex: 1; min-width: 240px; background: var(--card); color: var(--fg); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; font-size: 15px; font-family: var(--sans); }
 .controls input[type="search"]:focus { outline: 2px solid var(--accent); }

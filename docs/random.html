@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Random word — Pronounce</title>
+<script src="/script.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const pick = ENTRIES[Math.floor(Math.random() * ENTRIES.length)];
+  const slug = pick.w.toLowerCase().replace(/[^a-z0-9._-]/g, '-');
+  window.location.replace("/word/" + slug);
+});
+</script>
+</head><body style="background:#0e0e10;color:#9b9ba0;font-family:-apple-system,sans-serif;padding:40px;text-align:center;">
+<p>Picking a random word…</p>
+</body></html>
