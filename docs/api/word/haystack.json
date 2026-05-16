@@ -1,0 +1,12 @@
+{
+  "word": "Haystack",
+  "ipa": "/ˈheɪˌstæk/",
+  "respelling_us": "hay stack",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://haystack.deepset.ai/",
+  "source_label": "Haystack",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"HAY-stack\" — Deepset's NLP framework."
+}

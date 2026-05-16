@@ -1,0 +1,12 @@
+{
+  "word": "Viper",
+  "ipa": "/ˈvaɪpər/",
+  "respelling_us": "vy per",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/spf13/viper",
+  "source_label": "Viper",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "\"VYE-per\" — Go config library."
+}

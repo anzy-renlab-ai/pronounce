@@ -1,0 +1,12 @@
+{
+  "word": "Echo",
+  "ipa": "/ˈɛkoʊ/",
+  "respelling_us": "ek oh",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://echo.labstack.com/",
+  "source_label": "Echo",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"EK-oh\" — Go framework."
+}

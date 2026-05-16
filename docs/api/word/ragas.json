@@ -1,0 +1,12 @@
+{
+  "word": "RAGAS",
+  "ipa": "/ˈræɡəs/",
+  "respelling_us": "rag us",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://docs.ragas.io/",
+  "source_label": "Ragas",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"RAG-us\" — RAG evaluation library."
+}

@@ -1,0 +1,12 @@
+{
+  "word": "Polars",
+  "ipa": "/ˈpoʊlərz/",
+  "respelling_us": "po lerz",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://pola.rs/",
+  "source_label": "Polars",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"POH-lerz\" — Rust-backed DataFrame lib."
+}

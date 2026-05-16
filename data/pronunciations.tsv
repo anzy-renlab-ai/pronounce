@@ -361,3 +361,135 @@ Tantivy	/ˈtæntɪvi/	tan ti vee			https://github.com/quickwit-oss/tantivy	Tanti
 Cody	/ˈkoʊdi/	co dee			https://sourcegraph.com/cody	Sourcegraph Cody	product	community-consensus	"KOH-dee".
 Continue	/kənˈtɪnjuː/	continue			https://www.continue.dev/	Continue.dev	product	community-consensus	"con-TIN-yoo" — exactly like the verb.
 Bolt.new	/ˈboʊlt njuː/	bolt new			https://bolt.new/	Bolt.new	product	community-consensus	"BOLT-new" — two words.
+
+# --- v2.0 expansion: AI agents, ML/data, frameworks, CS concepts ---
+Agno	/ˈæɡnoʊ/	ag no			https://docs.agno.com/	Agno docs	product	community-consensus	"AG-no" — Python agent framework.
+smolagents	/ˈsmoʊlˌeɪdʒənts/	smol agents			https://huggingface.co/docs/smolagents/	HuggingFace smolagents	product	community-consensus	"SMOL-agents" — Hugging Face tiny agent lib.
+Outlines	/ˈaʊtˌlaɪnz/	out lines			https://dottxt-ai.github.io/outlines/	Outlines	product	community-consensus	"OUT-lines" — structured LLM generation.
+Instructor	/ɪnˈstrʌktər/	in struk ter			https://python.useinstructor.com/	Instructor	product	community-consensus	"in-STRUCK-tor" — structured outputs for OpenAI/Anthropic.
+Guardrails	/ˈɡɑːrdˌreɪlz/	guard rails			https://www.guardrailsai.com/	Guardrails AI	product	community-consensus	"GUARD-rails" — LLM validation framework.
+Marvin	/ˈmɑːrvɪn/	mar vin			https://www.askmarvin.ai/	Marvin	product	community-consensus	"MAR-vin" — Prefect's AI engineering toolkit.
+Phidata	/ˈfaɪˌdeɪtə/	fie data			https://www.phidata.com/	Phidata	product	community-consensus	"FYE-data" — agent framework now rebranded as Agno.
+Haystack	/ˈheɪˌstæk/	hay stack			https://haystack.deepset.ai/	Haystack	product	community-consensus	"HAY-stack" — Deepset's NLP framework.
+RAGAS	/ˈræɡəs/	rag us			https://docs.ragas.io/	Ragas	product	community-consensus	"RAG-us" — RAG evaluation library.
+Pydantic AI	/paɪˈdæntɪk eɪ aɪ/	pie dantick A I			https://ai.pydantic.dev/	Pydantic AI	product	community-consensus	"pie-DAN-tick A-I" — same maker as Pydantic.
+Windsurf	/ˈwɪndˌsɜːrf/	wind surf			https://codeium.com/windsurf	Codeium Windsurf	product	community-consensus	"WIND-surf" — Codeium's AI IDE.
+Lovable	/ˈlʌvəbəl/	love a bul			https://lovable.dev/	Lovable	product	community-consensus	"LUV-uh-bul" — AI app builder.
+v0	/ˌviː ˈzɪəroʊ/	V zero			https://v0.dev/	Vercel v0	product	community-consensus	"V-zero" — Vercel's AI UI generator.
+n8n	/ˌɛn ˈeɪt ɛn/	N eight N			https://n8n.io/	n8n	product	creator-clarified	"N-eight-N" — workflow automation. Documented as "nodemation".
+Tabnine	/ˈtæbnaɪn/	tab nine			https://www.tabnine.com/	Tabnine	product	community-consensus	"TAB-nine" — AI completion."
+Roo	/ruː/	roo			https://github.com/RooVetGit/Roo-Cline	Roo Code	product	community-consensus	"roo" — fork of Cline.
+Crystal	/ˈkrɪstəl/	crys tul			https://crystal-lang.org/	Crystal	product	community-consensus	"CRIS-tul" — Ruby-like compiled lang.
+Nim	/nɪm/	nim			https://nim-lang.org/	Nim	product	community-consensus	"nim" — one syllable.
+Lean	/liːn/	leen			https://lean-lang.org/	Lean	product	community-consensus	"leen" — theorem prover and language.
+Idris	/ˈɪdrɪs/	id riss			https://www.idris-lang.org/	Idris	product	community-consensus	"ID-riss" — dependently-typed lang.
+Coq	/kɒk/	kok			https://rocq-prover.org/	Rocq (formerly Coq)	product	community-consensus	"kok" — proof assistant. Now renamed Rocq.
+Agda	/ˈæɡdə/	ag duh			https://wiki.portal.chalmers.se/agda/	Agda	product	community-consensus	"AG-duh" — dependently-typed lang.
+F#	/ˌɛf ˈʃɑːrp/	F sharp			https://fsharp.org/	F#	product	community-consensus	"F-sharp" — like the musical note.
+ReScript	/ˈriːˌskrɪpt/	ree script			https://rescript-lang.org/	ReScript	product	community-consensus	"REE-script" — typed JS lang.
+Dart	/dɑːrt/	dart			https://dart.dev/	Dart	product	community-consensus	"dart" — Google's language for Flutter.
+Flutter	/ˈflʌtər/	flutter			https://flutter.dev/	Flutter	product	community-consensus	"FLUT-er" — cross-platform UI toolkit.
+Pony	/ˈpoʊni/	po nee			https://www.ponylang.io/	Pony	product	community-consensus	"POH-nee" — actor-model lang.
+PlanetScale	/ˈplænɪtˌskeɪl/	planet scale			https://planetscale.com/	PlanetScale	product	community-consensus	"PLANET-scale" — MySQL-compatible serverless DB.
+Neon	/ˈniːɒn/	nee on			https://neon.tech/	Neon	product	community-consensus	"NEE-on" — serverless Postgres.
+Turso	/ˈtɜːrsoʊ/	tur so			https://turso.tech/	Turso	product	community-consensus	"TUR-so" — edge SQLite.
+libSQL	/ˌlɪb ɛs kjuː ˈɛl/	lib S Q L			https://github.com/tursodatabase/libsql	libSQL	product	community-consensus	"LIB-S-Q-L" — Turso's SQLite fork.
+Dgraph	/ˈdiːˌɡræf/	D graph			https://dgraph.io/	Dgraph	product	community-consensus	"D-graph" — graph DB.
+FaunaDB	/ˈfɔːnə diː biː/	faw na D B			https://fauna.com/	Fauna	product	community-consensus	"FAW-na-D-B" — serverless DB.
+OpenSearch	/ˈoʊpənˌsɜːrtʃ/	open search			https://opensearch.org/	OpenSearch	product	community-consensus	"OPEN-search" — Elasticsearch fork by AWS.
+Spanner	/ˈspænər/	span ner			https://cloud.google.com/spanner	Google Spanner	product	community-consensus	"SPAN-er" — Google's global SQL DB.
+Bigtable	/ˈbɪɡˌteɪbəl/	big table			https://cloud.google.com/bigtable	Bigtable	product	community-consensus	"BIG-table".
+DynamoDB	/daɪˈnæmoʊ diː biː/	die namo D B			https://aws.amazon.com/dynamodb/	AWS DynamoDB	product	community-consensus	"die-NAM-oh-D-B".
+Rollup	/ˈroʊlˌʌp/	roll up			https://rollupjs.org/	Rollup	tool	community-consensus	"ROLL-up".
+Parcel	/ˈpɑːrsəl/	par sul			https://parceljs.org/	Parcel	tool	community-consensus	"PAR-sul".
+Tsup	/ˌtiː ˈsʌp/	T sup			https://tsup.egoist.dev/	tsup	tool	community-consensus	"T-sup" — esbuild-based bundler.
+Tsx	/ˌtiː ɛs ˈɛks/	T S X			https://tsx.is/	tsx	tool	community-consensus	"T-S-X" — TypeScript execute.
+Vinxi	/ˈvɪŋksi/	vink see			https://vinxi.vercel.app/	Vinxi	tool	community-consensus	"VINK-see" — full-stack JS framework toolkit.
+Capacitor	/kəˈpæsɪtər/	cuh pass i ter			https://capacitorjs.com/	Capacitor	tool	community-consensus	"kuh-PASS-i-ter" — Ionic's native runtime.
+Ionic	/aɪˈɒnɪk/	eye on ick			https://ionic.io/	Ionic	product	community-consensus	"eye-ON-ick".
+Expo	/ˈɛkspoʊ/	ex po			https://expo.dev/	Expo	product	community-consensus	"EX-po" — React Native toolchain.
+NativeScript	/ˈneɪtɪvˌskrɪpt/	native script			https://nativescript.org/	NativeScript	product	community-consensus	"NATIVE-script".
+Three.js	/ˈθriː dʒeɪ ɛs/	three J S			https://threejs.org/	Three.js	product	community-consensus	"three-J-S" — WebGL 3D lib.
+Babylon.js	/ˈbæbɪlɒn dʒeɪ ɛs/	babylon J S			https://www.babylonjs.com/	Babylon.js	product	community-consensus	"BAB-i-lon-J-S".
+PixiJS	/ˈpɪksi dʒeɪ ɛs/	pixie J S			https://pixijs.com/	PixiJS	product	community-consensus	"PIX-ee-J-S".
+Skia	/ˈskiːə/	skee uh			https://skia.org/	Skia	product	community-consensus	"SKEE-uh" — Google's graphics lib.
+Manim	/ˈmænɪm/	man im			https://www.manim.community/	Manim	product	community-consensus	"MAN-im" — math animation engine, 3Blue1Brown.
+p5.js	/ˌpiː faɪv dʒeɪ ˈɛs/	P five J S			https://p5js.org/	p5.js	product	community-consensus	"P-five-J-S" — Processing for JS.
+D3	/ˌdiː ˈθriː/	D three			https://d3js.org/	D3	product	community-consensus	"D-three" — data visualization lib.
+scikit-learn	/ˈsaɪkɪt lɜːrn/	sai kit learn			https://scikit-learn.org/	scikit-learn	product	community-consensus	"SCI-kit-learn".
+Polars	/ˈpoʊlərz/	po lerz			https://pola.rs/	Polars	product	community-consensus	"POH-lerz" — Rust-backed DataFrame lib.
+Dask	/dæsk/	dask			https://www.dask.org/	Dask	product	community-consensus	"dask" — parallel Python compute.
+Ray	/reɪ/	ray			https://www.ray.io/	Ray	product	community-consensus	"ray" — Anyscale's distributed compute.
+Modin	/ˈmoʊdɪn/	mo din			https://modin.readthedocs.io/	Modin	product	community-consensus	"MO-din" — drop-in pandas replacement.
+Spark	/spɑːrk/	spark			https://spark.apache.org/	Apache Spark	product	community-consensus	"spark" — distributed compute.
+Flink	/flɪŋk/	flink			https://flink.apache.org/	Apache Flink	product	community-consensus	"flink" — stream processing.
+Beam	/biːm/	beem			https://beam.apache.org/	Apache Beam	product	community-consensus	"beem" — unified batch+stream model.
+Tailscale	/ˈteɪlˌskeɪl/	tail scale			https://tailscale.com/	Tailscale	product	community-consensus	"TAIL-scale" — mesh VPN.
+Wireshark	/ˈwaɪərˌʃɑːrk/	wire shark			https://www.wireshark.org/	Wireshark	tool	community-consensus	"WIRE-shark".
+HAProxy	/ˌeɪtʃ eɪ ˈprɒksi/	H A proxy			https://www.haproxy.org/	HAProxy	product	community-consensus	"H-A-proxy".
+Alpine.js	/ˈælpaɪn dʒeɪ ɛs/	al pine J S			https://alpinejs.dev/	Alpine.js	product	community-consensus	"AL-pine-J-S".
+Phoenix	/ˈfiːnɪks/	fee nix			https://www.phoenixframework.org/	Phoenix	product	community-consensus	"FEE-nix" — Elixir web framework.
+Rails	/reɪlz/	rails			https://rubyonrails.org/	Ruby on Rails	product	community-consensus	"rails" — Ruby on Rails.
+Laravel	/ˈlærəˌvɛl/	lar a vel			https://laravel.com/	Laravel	product	community-consensus	"LAR-uh-vel".
+Symfony	/ˈsɪmfəni/	sim fo nee			https://symfony.com/	Symfony	product	community-consensus	"SIM-fuh-nee" — like symphony.
+Sinatra	/sɪˈnɑːtrə/	sin ah tra			http://sinatrarb.com/	Sinatra	product	community-consensus	"sin-AH-tra" — Ruby micro framework.
+Flask	/flæsk/	flask			https://flask.palletsprojects.com/	Flask	product	community-consensus	"flask" — Python microframework.
+Starlette	/stɑːrˈlɛt/	star let			https://www.starlette.io/	Starlette	product	community-consensus	"star-LET" — ASGI framework.
+Litestar	/ˈlaɪtˌstɑːr/	lite star			https://litestar.dev/	Litestar	product	community-consensus	"LITE-star".
+Sanic	/ˈsɒnɪk/	son ick			https://sanic.dev/	Sanic	product	community-consensus	"SON-ick" — Python async framework.
+Express	/ɪkˈsprɛs/	ex press			https://expressjs.com/	Express	product	community-consensus	"ex-PRESS" — Node.js framework.
+Koa	/ˈkoʊə/	ko ah			https://koajs.com/	Koa	product	community-consensus	"KO-ah".
+Fastify	/ˈfæstɪfaɪ/	fast i fye			https://fastify.dev/	Fastify	product	community-consensus	"FAST-i-fye".
+Hapi	/ˈhæpi/	happy			https://hapi.dev/	hapi	product	community-consensus	"HAP-ee" — like "happy".
+Echo	/ˈɛkoʊ/	ek oh			https://echo.labstack.com/	Echo	product	community-consensus	"EK-oh" — Go framework.
+Fiber	/ˈfaɪbər/	fi ber			https://gofiber.io/	Fiber	product	community-consensus	"FYE-ber" — Go Express-like framework.
+Gin	/dʒɪn/	jin			https://gin-gonic.com/	Gin	product	community-consensus	"jin" — Go web framework.
+Chi	/tʃaɪ/	chai			https://go-chi.io/	chi	product	community-consensus	"chai" — Go router.
+GORM	/ɡɔːrm/	gorm			https://gorm.io/	GORM	tool	community-consensus	"gorm" — Go ORM.
+Cobra	/ˈkoʊbrə/	ko bra			https://cobra.dev/	Cobra	tool	community-consensus	"KO-bra" — Go CLI library.
+Viper	/ˈvaɪpər/	vy per			https://github.com/spf13/viper	Viper	tool	community-consensus	"VYE-per" — Go config library.
+SOLID	/ˈsɒlɪd/	solid			https://en.wikipedia.org/wiki/SOLID	Wikipedia	acronym	community-consensus	"SOL-id" — OOP design principles.
+TDD	/ˌtiː diː ˈdiː/	T D D			https://en.wikipedia.org/wiki/Test-driven_development	Wikipedia	acronym	community-consensus	"T-D-D" — Test Driven Development.
+BDD	/ˌbiː diː ˈdiː/	B D D			https://en.wikipedia.org/wiki/Behavior-driven_development	Wikipedia	acronym	community-consensus	"B-D-D" — Behavior Driven Development.
+CI/CD	/ˌsiː aɪ siː ˈdiː/	C I C D			https://en.wikipedia.org/wiki/CI/CD	Wikipedia	acronym	community-consensus	"C-I-C-D" — letter-by-letter.
+MVP	/ˌɛm viː ˈpiː/	M V P			https://en.wikipedia.org/wiki/Minimum_viable_product	Wikipedia	acronym	community-consensus	"M-V-P" — Minimum Viable Product.
+MVC	/ˌɛm viː ˈsiː/	M V C			https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller	Wikipedia	acronym	community-consensus	"M-V-C".
+MVVM	/ˌɛm viː viː ˈɛm/	M V V M			https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel	Wikipedia	acronym	community-consensus	"M-V-V-M".
+OOP	/ˌoʊ oʊ ˈpiː/	O O P			https://en.wikipedia.org/wiki/Object-oriented_programming	Wikipedia	acronym	community-consensus	"O-O-P" letter-by-letter.
+FP	/ˌɛf ˈpiː/	F P			https://en.wikipedia.org/wiki/Functional_programming	Wikipedia	acronym	community-consensus	"F-P" — Functional Programming.
+DDD	/ˌdiː diː ˈdiː/	D D D			https://en.wikipedia.org/wiki/Domain-driven_design	Wikipedia	acronym	community-consensus	"D-D-D" — Domain-Driven Design.
+CQRS	/ˌsiː kjuː ɑːr ˈɛs/	C Q R S			https://en.wikipedia.org/wiki/Command%E2%80%93query_separation	Wikipedia	acronym	community-consensus	"C-Q-R-S" — Command Query Responsibility Segregation.
+monad	/ˈmɒnæd/	mon ad			https://en.wikipedia.org/wiki/Monad_(functional_programming)	Wikipedia	cs-term	community-consensus	"MON-ad".
+functor	/ˈfʌŋktər/	funk ter			https://en.wikipedia.org/wiki/Functor	Wikipedia	cs-term	community-consensus	"FUNK-ter".
+idempotent	/ˌaɪdɛmˈpoʊtənt/	eye dem po tent	/ˌɪdɛmˈpoʊtənt/	id em po tent	https://en.wikipedia.org/wiki/Idempotence	Wikipedia	cs-term	contested	"eye-dem-PO-tent" vs "id-em-PO-tent".
+lambda	/ˈlæmdə/	lam da			https://en.wikipedia.org/wiki/Lambda_calculus	Wikipedia	cs-term	community-consensus	"LAM-duh".
+closure	/ˈkloʊʒər/	clo zure			https://en.wikipedia.org/wiki/Closure_(computer_programming)	Wikipedia	cs-term	community-consensus	"CLO-zhur".
+mutex	/ˈmjuːˌtɛks/	myoo tex			https://en.wikipedia.org/wiki/Lock_(computer_science)	Wikipedia	cs-term	community-consensus	"MYOO-tex" — mutual exclusion.
+semaphore	/ˈsɛməˌfɔːr/	sem a for			https://en.wikipedia.org/wiki/Semaphore_(programming)	Wikipedia	cs-term	community-consensus	"SEM-uh-for".
+async	/ˈeɪsɪŋk/	a sink			https://en.wikipedia.org/wiki/Asynchrony_(computer_programming)	Wikipedia	cs-term	community-consensus	"AY-sink".
+coroutine	/ˌkoʊˈruːtiːn/	co roo teen			https://en.wikipedia.org/wiki/Coroutine	Wikipedia	cs-term	community-consensus	"co-ROO-teen".
+RSA	/ˌɑːr ɛs ˈeɪ/	R S A			https://en.wikipedia.org/wiki/RSA_(cryptosystem)	Wikipedia	acronym	community-consensus	"R-S-A".
+AES	/ˌeɪ iː ˈɛs/	A E S			https://en.wikipedia.org/wiki/Advanced_Encryption_Standard	Wikipedia	acronym	community-consensus	"A-E-S".
+SHA	/ʃɑː/	shah	/ˌɛs eɪtʃ ˈeɪ/	S H A	https://en.wikipedia.org/wiki/Secure_Hash_Algorithms	Wikipedia	acronym	contested	"shah" or letter-by-letter "S-H-A".
+TLS	/ˌtiː ɛl ˈɛs/	T L S			https://en.wikipedia.org/wiki/Transport_Layer_Security	Wikipedia	acronym	community-consensus	"T-L-S".
+PGP	/ˌpiː dʒiː ˈpiː/	P G P			https://en.wikipedia.org/wiki/Pretty_Good_Privacy	Wikipedia	acronym	community-consensus	"P-G-P".
+GPG	/ˌdʒiː piː ˈdʒiː/	G P G			https://gnupg.org/	GnuPG	abbreviation	community-consensus	"G-P-G".
+WebRTC	/wɛb ɑːr tiː ˈsiː/	web R T C			https://webrtc.org/	WebRTC	tool	community-consensus	"web-R-T-C".
+WebGPU	/wɛb dʒiː piː ˈjuː/	web G P U			https://www.w3.org/TR/webgpu/	W3C WebGPU	tool	community-consensus	"web-G-P-U".
+WASI	/ˈwɑːzi/	wah zee			https://wasi.dev/	WASI	abbreviation	community-consensus	"WAH-zee" — WebAssembly System Interface.
+IPFS	/ˌaɪ piː ɛf ˈɛs/	I P F S			https://ipfs.tech/	IPFS	abbreviation	community-consensus	"I-P-F-S".
+Solidity	/səˈlɪdɪti/	so lid i tee			https://soliditylang.org/	Solidity	product	community-consensus	"sol-LID-i-tee".
+Ethereum	/ɪˈθɪriəm/	e thee ree um			https://ethereum.org/	Ethereum	product	community-consensus	"e-THEE-ree-um".
+Fleet	/fliːt/	fleet			https://www.jetbrains.com/fleet/	JetBrains Fleet	tool	community-consensus	"fleet".
+Lapce	/læps/	lapss			https://lapce.dev/	Lapce	tool	community-consensus	"LAPSS" — Rust editor.
+Sublime	/səˈblaɪm/	sub lime			https://www.sublimetext.com/	Sublime Text	tool	community-consensus	"sub-LIME".
+VSCode	/ˌviː ɛs ˈkoʊd/	V S code			https://code.visualstudio.com/	VS Code	tool	community-consensus	"V-S-code".
+Raycast	/ˈreɪˌkæst/	ray cast			https://www.raycast.com/	Raycast	product	community-consensus	"RAY-cast".
+Alfred	/ˈælfrɛd/	al fred			https://www.alfredapp.com/	Alfred	product	community-consensus	"AL-fred".
+Homebrew	/ˈhoʊmˌbruː/	home brew			https://brew.sh/	Homebrew	tool	community-consensus	"HOME-brew".
+Fedora	/fəˈdɔːrə/	fuh dora			https://fedoraproject.org/	Fedora	product	community-consensus	"fuh-DOR-uh".
+CentOS	/ˌsɛnt ˈoʊ ɛs/	cent O S			https://www.centos.org/	CentOS	product	community-consensus	"cent-O-S".
+RHEL	/rɛl/	rell			https://www.redhat.com/	Red Hat	product	community-consensus	"rell" — Red Hat Enterprise Linux.
+Manjaro	/mənˈdʒɑːroʊ/	mun jar oh			https://manjaro.org/	Manjaro	product	community-consensus	"mun-JAR-oh".
+FreeBSD	/ˌfriː biː ɛs ˈdiː/	free B S D			https://www.freebsd.org/	FreeBSD	product	community-consensus	"free-B-S-D".
+Puppeteer	/ˌpʌpɪˈtɪər/	puppy teer			https://pptr.dev/	Puppeteer	tool	community-consensus	"PUP-uh-teer".

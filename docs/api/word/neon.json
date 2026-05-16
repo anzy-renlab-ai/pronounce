@@ -1,0 +1,12 @@
+{
+  "word": "Neon",
+  "ipa": "/ˈniːɒn/",
+  "respelling_us": "nee on",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://neon.tech/",
+  "source_label": "Neon",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"NEE-on\" — serverless Postgres."
+}

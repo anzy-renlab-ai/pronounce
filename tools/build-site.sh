@@ -306,6 +306,45 @@ kbd { background: var(--card-2); border: 1px solid var(--border); border-radius:
 .faq details p { color: var(--muted-strong); margin: 14px 0 0; line-height: 1.65; }
 .faq details code { background: var(--bg); border: 1px solid var(--border); padding: 1px 6px; border-radius: 3px; color: var(--accent-2); font-size: 0.92em; }
 @media (max-width: 640px) { .gh-float { bottom: 16px; right: 16px; padding: 10px 14px; font-size: 12px; } .gh-banner { font-size: 13px; padding: 8px 16px; } }
+
+/* Accessibility — skip link */
+.skip-link { position: absolute; left: -9999px; top: 0; background: var(--accent); color: var(--bg); padding: 8px 14px; border-radius: 0 0 6px 0; font-weight: 700; z-index: 9999; }
+.skip-link:focus { left: 0; outline: 3px solid var(--accent-2); }
+
+/* Focus-visible polish */
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid var(--accent); }
+
+/* Hero instant search */
+.hero-search { position: relative; max-width: 560px; margin: 0 auto 24px; display: flex; gap: 8px; }
+.hero-search input { flex: 1; background: var(--card); color: var(--fg); border: 1px solid var(--border); border-radius: 999px; padding: 14px 22px; font-size: 17px; font-family: var(--sans); outline: none; transition: border-color 0.15s, box-shadow 0.15s; }
+.hero-search input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(255,106,61,0.18); }
+.hero-mic { background: var(--card); color: var(--accent); border: 1px solid var(--border); border-radius: 50%; width: 50px; height: 50px; font-size: 20px; cursor: pointer; flex-shrink: 0; transition: all 0.15s; }
+.hero-mic:hover { border-color: var(--accent); transform: scale(1.05); }
+.hero-mic.listening { background: var(--accent); color: var(--bg); border-color: var(--accent); animation: pulse 1.2s ease-in-out infinite; }
+@keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(255,106,61,0.6); } 50% { box-shadow: 0 0 0 10px rgba(255,106,61,0); } }
+.hero-suggest { position: absolute; top: calc(100% + 6px); left: 0; right: 58px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.32); max-height: 360px; overflow-y: auto; z-index: 30; }
+.suggest-row { display: grid; grid-template-columns: 1fr 1fr auto; gap: 14px; align-items: center; padding: 10px 16px; text-decoration: none; color: var(--fg); border-bottom: 1px solid var(--border); transition: background 0.1s; }
+.suggest-row:last-child { border-bottom: none; }
+.suggest-row:hover, .suggest-row.active { background: var(--card-2); }
+.suggest-w { font-family: var(--mono); font-weight: 600; color: var(--accent); }
+.suggest-r { font-family: var(--mono); color: var(--muted-strong); font-size: 14px; }
+.suggest-i { font-family: var(--mono); color: var(--muted); font-size: 12px; text-align: right; }
+@media (max-width: 640px) {
+  .hero-search { max-width: 100%; }
+  .suggest-row { grid-template-columns: 1fr 1fr; }
+  .suggest-i { display: none; }
+}
+
+/* Animated speaker on hero */
+.hero h1 .speaker { display: inline-block; animation: speakerWiggle 4s ease-in-out infinite; transform-origin: 50% 70%; }
+@keyframes speakerWiggle { 0%,90%,100% { transform: rotate(0deg); } 92% { transform: rotate(-8deg); } 95% { transform: rotate(8deg); } 97% { transform: rotate(-4deg); } }
+
+/* prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero h1 .speaker, .hero-mic.listening { animation: none; }
+  html { scroll-behavior: auto; }
+}
 EOF
 
 # ---------------------------------------------------------------------------
@@ -599,8 +638,100 @@ function toggleTheme() {
 }
 applyTheme();
 
+// Hero search — instant search on landing page (suggest list)
+function initHeroSearch() {
+  const input = document.getElementById('hero-search');
+  const sug = document.getElementById('hero-suggest');
+  const mic = document.getElementById('hero-mic');
+  if (!input || !sug) return;
+
+  function slugify(w) { return w.toLowerCase().replace(/[^a-z0-9._-]/g, '-'); }
+  function escapeHtml(s){ return String(s||'').replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+  function searchEntries(q) {
+    q = q.toLowerCase().trim();
+    if (!q) return [];
+    const exact = [], prefix = [], contains = [];
+    for (const e of ENTRIES) {
+      const w = e.w.toLowerCase();
+      if (w === q) exact.push(e);
+      else if (w.startsWith(q)) prefix.push(e);
+      else if (w.includes(q) || (e.r || '').toLowerCase().includes(q)) contains.push(e);
+    }
+    return [...exact, ...prefix, ...contains].slice(0, 8);
+  }
+
+  function render(items) {
+    if (!items.length) { sug.hidden = true; sug.innerHTML = ''; return; }
+    sug.hidden = false;
+    sug.innerHTML = items.map((e, i) => {
+      const slug = slugify(e.w);
+      return '<a class="suggest-row" role="option" data-i="' + i + '" href="./word/' + slug + '.html">' +
+        '<span class="suggest-w">' + escapeHtml(e.w) + '</span>' +
+        '<span class="suggest-r">' + escapeHtml(e.r || '') + '</span>' +
+        '<span class="suggest-i">' + escapeHtml(e.ipa || '') + '</span>' +
+        '</a>';
+    }).join('');
+  }
+
+  let cur = -1, items = [];
+  input.addEventListener('input', () => {
+    items = searchEntries(input.value);
+    cur = -1;
+    render(items);
+  });
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowDown') { e.preventDefault(); cur = Math.min(cur+1, items.length-1); highlight(); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); cur = Math.max(cur-1, -1); highlight(); }
+    else if (e.key === 'Enter' && items.length) {
+      e.preventDefault();
+      const pick = cur >= 0 ? items[cur] : items[0];
+      window.location.href = './word/' + slugify(pick.w) + '.html';
+    } else if (e.key === 'Escape') { sug.hidden = true; }
+  });
+  function highlight() {
+    sug.querySelectorAll('.suggest-row').forEach((el, i) => el.classList.toggle('active', i === cur));
+  }
+  document.addEventListener('click', (e) => {
+    if (!sug.contains(e.target) && e.target !== input) sug.hidden = true;
+  });
+
+  // Voice mic — uses Web Speech API for speech recognition
+  if (mic) {
+    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SR) {
+      mic.disabled = true;
+      mic.title = 'Voice search not supported in this browser';
+      mic.style.opacity = '0.4';
+    } else {
+      mic.addEventListener('click', () => {
+        const rec = new SR();
+        rec.lang = 'en-US';
+        rec.interimResults = false;
+        rec.maxAlternatives = 1;
+        mic.classList.add('listening');
+        rec.onresult = (ev) => {
+          const txt = (ev.results[0][0].transcript || '').trim().replace(/[.,!?]$/,'');
+          input.value = txt;
+          items = searchEntries(txt);
+          cur = -1;
+          render(items);
+          if (items.length) {
+            // jump straight to top match
+            setTimeout(() => { window.location.href = './word/' + slugify(items[0].w) + '.html'; }, 400);
+          }
+        };
+        rec.onend = () => mic.classList.remove('listening');
+        rec.onerror = () => mic.classList.remove('listening');
+        rec.start();
+      });
+    }
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   renderTodaysWord();
+  initHeroSearch();
   // Wire up theme toggle button if present in topbar
   const tb = document.getElementById('theme-toggle');
   if (tb) tb.addEventListener('click', toggleTheme);
@@ -637,7 +768,7 @@ cat > "$DOCS/index.html" <<EOF
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>How to pronounce kubectl, nginx, GIF, JSON — ${BRAND}</title>
-  <meta name="description" content="A community-maintained pronunciation dictionary for the project, product, and programmer-jargon names developers actually use — kubectl, nginx, GIF, JSON, Pydantic, Knative, LaTeX, Postgres, and 130+ more. With sources.">
+  <meta name="description" content="A community-maintained pronunciation dictionary — 440+ entries — for the project, product, and programmer-jargon names developers actually use. kubectl, nginx, GIF, JSON, Pydantic, Knative, LaTeX, Postgres, and many more. With sources. Interactive quiz, voice search, MCP server, and a Claude Code skill included.">
   <meta name="keywords" content="how to pronounce kubectl, how to pronounce nginx, how to pronounce GIF, how to pronounce JSON, project name pronunciation, developer pronunciation guide">
   <link rel="canonical" href="${SITE_URL}/">
   <meta property="og:title" content="How to pronounce kubectl, nginx, GIF, JSON — ${BRAND}">
@@ -672,24 +803,32 @@ cat > "$DOCS/index.html" <<EOF
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
   <div class="gh-banner">⭐ If this saves you from saying "kub-cuttle" one more time — <a href="https://github.com/${GH_REPO}">star us on GitHub</a></div>
   <nav class="topbar">
     <div class="brand"><a href="./">🔊 ${BRAND}</a></div>
     <div class="links">
       <a href="./browse.html">Browse</a>
+      <a href="./quiz.html">Quiz</a>
       <a href="./stats.html">Stats</a>
       <a href="https://github.com/${GH_REPO}">GitHub</a>
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button>
     </div>
   </nav>
 
-  <div class="container">
+  <div class="container" id="main">
 
     <header class="hero">
       <h1><span class="speaker">🔊</span><br>How to pronounce <code>kubectl</code><br>without the cringe.</h1>
       <p class="tagline">A community dictionary of how engineers <em>actually</em> say <code>kubectl</code>, <code>nginx</code>, <code>GIF</code>, <code>JSON</code>, <code>Pydantic</code>, <code>Knative</code>, <code>LaTeX</code>, <code>Postgres</code>… <strong>with sources</strong>.</p>
+      <div class="hero-search" role="search">
+        <input id="hero-search" type="search" placeholder="🔍 Type a word — kubectl, nginx, Pydantic, JWT…" autocomplete="off" aria-label="Search pronunciation dictionary">
+        <button id="hero-mic" type="button" class="hero-mic" aria-label="Speak a word">🎤</button>
+        <div id="hero-suggest" class="hero-suggest" role="listbox" hidden></div>
+      </div>
       <div class="cta">
-        <a href="./browse.html">Browse 130+ words →</a>
+        <a href="./browse.html">Browse ${ENTRY_COUNT:-236} words →</a>
+        <a class="secondary" href="./quiz.html">🎯 Take the quiz</a>
         <a class="secondary" href="https://github.com/${GH_REPO}">GitHub</a>
       </div>
       <div class="install">
@@ -724,7 +863,7 @@ $FAMOUS_HTML
 
     <div class="section-title">What's in the box</div>
     <div class="features">
-      <div class="feature"><span class="icon">🗂</span><h3>130+ entries, source-cited</h3><p>Project names, product names, programmer jargon, acronyms. Every entry tagged with confidence (creator-clarified, community-consensus, contested) and linked to a real source where one exists.</p></div>
+      <div class="feature"><span class="icon">🗂</span><h3>${ENTRY_COUNT:-440}+ entries, source-cited</h3><p>Project names, product names, programmer jargon, acronyms. Every entry tagged with confidence (creator-clarified, community-consensus, contested) and linked to a real source where one exists.</p></div>
       <div class="feature"><span class="icon">🔊</span><h3>Multi-reading audio awareness</h3><p>When a word is contested — GIF, SQL, GUI, kubectl — the CLI audibly chains the alternates ("…or: gif"), so you hear the debate without watching the terminal.</p></div>
       <div class="feature"><span class="icon">🤖</span><h3>Claude Code skill included</h3><p>Ask Claude "how do you pronounce X?" — it replies with audio, IPA, and a source citation, not a phonetic guess.</p></div>
       <div class="feature"><span class="icon">⚡</span><h3>Zero deps, ~250 lines of bash</h3><p>Wraps the macOS \`say\` engine you already have. No npm, no sudo, no surprises.</p></div>
@@ -834,6 +973,7 @@ cat > "$DOCS/browse.html" <<EOF
     <div class="brand"><a href="./">🔊 ${BRAND}</a></div>
     <div class="links">
       <a href="./">Home</a>
+      <a href="./quiz.html">Quiz</a>
       <a href="./stats.html">Stats</a>
       <a href="https://github.com/${GH_REPO}">GitHub</a>
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button>
@@ -842,7 +982,7 @@ cat > "$DOCS/browse.html" <<EOF
 
   <div class="container-wide">
     <h1 style="font-size: 36px; margin: 0 0 8px;">Pronunciation dictionary</h1>
-    <p style="color: var(--muted-strong); margin: 0 0 20px;">130+ entries · click ▶ to hear · press <kbd>/</kbd> to search</p>
+    <p style="color: var(--muted-strong); margin: 0 0 20px;">${ENTRY_COUNT:-440}+ entries · click ▶ to hear · press <kbd>/</kbd> to search · 🎤 voice search supported</p>
 
     <div class="info-pill">
       <strong>🎧 Real macOS Samantha audio</strong> — every ▶ plays the exact same audio the CLI produces, pre-rendered server-side. Not browser TTS variability.
@@ -1069,6 +1209,7 @@ HTML
     <div class="brand"><a href="../">🔊 $BRAND</a></div>
     <div class="links">
       <a href="../browse.html">Browse all</a>
+      <a href="../quiz.html">Quiz</a>
       <a href="../stats.html">Stats</a>
       <a href="https://github.com/$GH_REPO">GitHub</a>
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button>
@@ -1466,6 +1607,9 @@ TODAY="$(date +%Y-%m-%d)"
   printf '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
   printf '  <url><loc>%s/</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>\n' "$SITE_URL" "$TODAY"
   printf '  <url><loc>%s/browse.html</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>\n' "$SITE_URL" "$TODAY"
+  printf '  <url><loc>%s/quiz.html</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>\n' "$SITE_URL" "$TODAY"
+  printf '  <url><loc>%s/stats.html</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>\n' "$SITE_URL" "$TODAY"
+  printf '  <url><loc>%s/about.html</loc><lastmod>%s</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>\n' "$SITE_URL" "$TODAY"
   awk -F'\t' '!/^#/ && NF>=3 && $1 != "" && $1 != "word" { print $1 }' "$DICT" | while read -r w; do
     slug="$(slugify "$w")"
     printf '  <url><loc>%s/word/%s</loc><lastmod>%s</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>\n' "$SITE_URL" "$slug" "$TODAY"
@@ -1537,6 +1681,7 @@ cat > "$DOCS/stats.html" <<EOF
     <div class="links">
       <a href="./">Home</a>
       <a href="./browse.html">Browse</a>
+      <a href="./quiz.html">Quiz</a>
       <a href="https://github.com/${GH_REPO}">GitHub</a>
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button>
     </div>
@@ -1647,7 +1792,7 @@ awk -F'\t' '!/^#/ && NF>=8 && $1 != "" && $1 != "word" { print $8 }' "$DICT" | s
     printf '</head>\n<body>\n'
     printf '  <div class="gh-banner">⭐ <a href="https://github.com/%s">Star on GitHub</a></div>\n' "$GH_REPO"
     printf '  <nav class="topbar"><div class="brand"><a href="/">🔊 %s</a></div>\n' "$BRAND"
-    printf '    <div class="links"><a href="/">Home</a><a href="/browse.html">Browse all</a><a href="/stats.html">Stats</a>\n'
+    printf '    <div class="links"><a href="/">Home</a><a href="/browse.html">Browse all</a><a href="/quiz.html">Quiz</a><a href="/stats.html">Stats</a>\n'
     printf '      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button></div></nav>\n'
     printf '  <div class="container">\n'
     printf '    <h1>Category: <code>%s</code></h1>\n' "$catname"
@@ -1742,6 +1887,7 @@ cat > "$DOCS/about.html" <<EOF
     <div class="links">
       <a href="/">Home</a>
       <a href="/browse.html">Browse</a>
+      <a href="/quiz.html">Quiz</a>
       <a href="/stats.html">Stats</a>
       <a href="https://github.com/${GH_REPO}">GitHub</a>
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button>

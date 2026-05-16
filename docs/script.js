@@ -310,6 +310,136 @@ const ENTRIES = [
   { w: "Cody", ipa: "/ˈkoʊdi/", r: "co dee", aIpa: "", aR: "", url: "https://sourcegraph.com/cody", srcLabel: "Sourcegraph Cody", cat: "product", conf: "community-consensus", notes: "\"KOH-dee\"." },
   { w: "Continue", ipa: "/kənˈtɪnjuː/", r: "continue", aIpa: "", aR: "", url: "https://www.continue.dev/", srcLabel: "Continue.dev", cat: "product", conf: "community-consensus", notes: "\"con-TIN-yoo\" — exactly like the verb." },
   { w: "Bolt.new", ipa: "/ˈboʊlt njuː/", r: "bolt new", aIpa: "", aR: "", url: "https://bolt.new/", srcLabel: "Bolt.new", cat: "product", conf: "community-consensus", notes: "\"BOLT-new\" — two words." },
+  { w: "Agno", ipa: "/ˈæɡnoʊ/", r: "ag no", aIpa: "", aR: "", url: "https://docs.agno.com/", srcLabel: "Agno docs", cat: "product", conf: "community-consensus", notes: "\"AG-no\" — Python agent framework." },
+  { w: "smolagents", ipa: "/ˈsmoʊlˌeɪdʒənts/", r: "smol agents", aIpa: "", aR: "", url: "https://huggingface.co/docs/smolagents/", srcLabel: "HuggingFace smolagents", cat: "product", conf: "community-consensus", notes: "\"SMOL-agents\" — Hugging Face tiny agent lib." },
+  { w: "Outlines", ipa: "/ˈaʊtˌlaɪnz/", r: "out lines", aIpa: "", aR: "", url: "https://dottxt-ai.github.io/outlines/", srcLabel: "Outlines", cat: "product", conf: "community-consensus", notes: "\"OUT-lines\" — structured LLM generation." },
+  { w: "Instructor", ipa: "/ɪnˈstrʌktər/", r: "in struk ter", aIpa: "", aR: "", url: "https://python.useinstructor.com/", srcLabel: "Instructor", cat: "product", conf: "community-consensus", notes: "\"in-STRUCK-tor\" — structured outputs for OpenAI/Anthropic." },
+  { w: "Guardrails", ipa: "/ˈɡɑːrdˌreɪlz/", r: "guard rails", aIpa: "", aR: "", url: "https://www.guardrailsai.com/", srcLabel: "Guardrails AI", cat: "product", conf: "community-consensus", notes: "\"GUARD-rails\" — LLM validation framework." },
+  { w: "Marvin", ipa: "/ˈmɑːrvɪn/", r: "mar vin", aIpa: "", aR: "", url: "https://www.askmarvin.ai/", srcLabel: "Marvin", cat: "product", conf: "community-consensus", notes: "\"MAR-vin\" — Prefect's AI engineering toolkit." },
+  { w: "Phidata", ipa: "/ˈfaɪˌdeɪtə/", r: "fie data", aIpa: "", aR: "", url: "https://www.phidata.com/", srcLabel: "Phidata", cat: "product", conf: "community-consensus", notes: "\"FYE-data\" — agent framework now rebranded as Agno." },
+  { w: "Haystack", ipa: "/ˈheɪˌstæk/", r: "hay stack", aIpa: "", aR: "", url: "https://haystack.deepset.ai/", srcLabel: "Haystack", cat: "product", conf: "community-consensus", notes: "\"HAY-stack\" — Deepset's NLP framework." },
+  { w: "RAGAS", ipa: "/ˈræɡəs/", r: "rag us", aIpa: "", aR: "", url: "https://docs.ragas.io/", srcLabel: "Ragas", cat: "product", conf: "community-consensus", notes: "\"RAG-us\" — RAG evaluation library." },
+  { w: "Pydantic AI", ipa: "/paɪˈdæntɪk eɪ aɪ/", r: "pie dantick A I", aIpa: "", aR: "", url: "https://ai.pydantic.dev/", srcLabel: "Pydantic AI", cat: "product", conf: "community-consensus", notes: "\"pie-DAN-tick A-I\" — same maker as Pydantic." },
+  { w: "Windsurf", ipa: "/ˈwɪndˌsɜːrf/", r: "wind surf", aIpa: "", aR: "", url: "https://codeium.com/windsurf", srcLabel: "Codeium Windsurf", cat: "product", conf: "community-consensus", notes: "\"WIND-surf\" — Codeium's AI IDE." },
+  { w: "Lovable", ipa: "/ˈlʌvəbəl/", r: "love a bul", aIpa: "", aR: "", url: "https://lovable.dev/", srcLabel: "Lovable", cat: "product", conf: "community-consensus", notes: "\"LUV-uh-bul\" — AI app builder." },
+  { w: "v0", ipa: "/ˌviː ˈzɪəroʊ/", r: "V zero", aIpa: "", aR: "", url: "https://v0.dev/", srcLabel: "Vercel v0", cat: "product", conf: "community-consensus", notes: "\"V-zero\" — Vercel's AI UI generator." },
+  { w: "n8n", ipa: "/ˌɛn ˈeɪt ɛn/", r: "N eight N", aIpa: "", aR: "", url: "https://n8n.io/", srcLabel: "n8n", cat: "product", conf: "creator-clarified", notes: "\"N-eight-N\" — workflow automation. Documented as \"nodemation\"." },
+  { w: "Tabnine", ipa: "/ˈtæbnaɪn/", r: "tab nine", aIpa: "", aR: "", url: "https://www.tabnine.com/", srcLabel: "Tabnine", cat: "product", conf: "community-consensus", notes: "\"TAB-nine\" — AI completion.\"" },
+  { w: "Roo", ipa: "/ruː/", r: "roo", aIpa: "", aR: "", url: "https://github.com/RooVetGit/Roo-Cline", srcLabel: "Roo Code", cat: "product", conf: "community-consensus", notes: "\"roo\" — fork of Cline." },
+  { w: "Crystal", ipa: "/ˈkrɪstəl/", r: "crys tul", aIpa: "", aR: "", url: "https://crystal-lang.org/", srcLabel: "Crystal", cat: "product", conf: "community-consensus", notes: "\"CRIS-tul\" — Ruby-like compiled lang." },
+  { w: "Nim", ipa: "/nɪm/", r: "nim", aIpa: "", aR: "", url: "https://nim-lang.org/", srcLabel: "Nim", cat: "product", conf: "community-consensus", notes: "\"nim\" — one syllable." },
+  { w: "Lean", ipa: "/liːn/", r: "leen", aIpa: "", aR: "", url: "https://lean-lang.org/", srcLabel: "Lean", cat: "product", conf: "community-consensus", notes: "\"leen\" — theorem prover and language." },
+  { w: "Idris", ipa: "/ˈɪdrɪs/", r: "id riss", aIpa: "", aR: "", url: "https://www.idris-lang.org/", srcLabel: "Idris", cat: "product", conf: "community-consensus", notes: "\"ID-riss\" — dependently-typed lang." },
+  { w: "Coq", ipa: "/kɒk/", r: "kok", aIpa: "", aR: "", url: "https://rocq-prover.org/", srcLabel: "Rocq (formerly Coq)", cat: "product", conf: "community-consensus", notes: "\"kok\" — proof assistant. Now renamed Rocq." },
+  { w: "Agda", ipa: "/ˈæɡdə/", r: "ag duh", aIpa: "", aR: "", url: "https://wiki.portal.chalmers.se/agda/", srcLabel: "Agda", cat: "product", conf: "community-consensus", notes: "\"AG-duh\" — dependently-typed lang." },
+  { w: "F#", ipa: "/ˌɛf ˈʃɑːrp/", r: "F sharp", aIpa: "", aR: "", url: "https://fsharp.org/", srcLabel: "F#", cat: "product", conf: "community-consensus", notes: "\"F-sharp\" — like the musical note." },
+  { w: "ReScript", ipa: "/ˈriːˌskrɪpt/", r: "ree script", aIpa: "", aR: "", url: "https://rescript-lang.org/", srcLabel: "ReScript", cat: "product", conf: "community-consensus", notes: "\"REE-script\" — typed JS lang." },
+  { w: "Dart", ipa: "/dɑːrt/", r: "dart", aIpa: "", aR: "", url: "https://dart.dev/", srcLabel: "Dart", cat: "product", conf: "community-consensus", notes: "\"dart\" — Google's language for Flutter." },
+  { w: "Flutter", ipa: "/ˈflʌtər/", r: "flutter", aIpa: "", aR: "", url: "https://flutter.dev/", srcLabel: "Flutter", cat: "product", conf: "community-consensus", notes: "\"FLUT-er\" — cross-platform UI toolkit." },
+  { w: "Pony", ipa: "/ˈpoʊni/", r: "po nee", aIpa: "", aR: "", url: "https://www.ponylang.io/", srcLabel: "Pony", cat: "product", conf: "community-consensus", notes: "\"POH-nee\" — actor-model lang." },
+  { w: "PlanetScale", ipa: "/ˈplænɪtˌskeɪl/", r: "planet scale", aIpa: "", aR: "", url: "https://planetscale.com/", srcLabel: "PlanetScale", cat: "product", conf: "community-consensus", notes: "\"PLANET-scale\" — MySQL-compatible serverless DB." },
+  { w: "Neon", ipa: "/ˈniːɒn/", r: "nee on", aIpa: "", aR: "", url: "https://neon.tech/", srcLabel: "Neon", cat: "product", conf: "community-consensus", notes: "\"NEE-on\" — serverless Postgres." },
+  { w: "Turso", ipa: "/ˈtɜːrsoʊ/", r: "tur so", aIpa: "", aR: "", url: "https://turso.tech/", srcLabel: "Turso", cat: "product", conf: "community-consensus", notes: "\"TUR-so\" — edge SQLite." },
+  { w: "libSQL", ipa: "/ˌlɪb ɛs kjuː ˈɛl/", r: "lib S Q L", aIpa: "", aR: "", url: "https://github.com/tursodatabase/libsql", srcLabel: "libSQL", cat: "product", conf: "community-consensus", notes: "\"LIB-S-Q-L\" — Turso's SQLite fork." },
+  { w: "Dgraph", ipa: "/ˈdiːˌɡræf/", r: "D graph", aIpa: "", aR: "", url: "https://dgraph.io/", srcLabel: "Dgraph", cat: "product", conf: "community-consensus", notes: "\"D-graph\" — graph DB." },
+  { w: "FaunaDB", ipa: "/ˈfɔːnə diː biː/", r: "faw na D B", aIpa: "", aR: "", url: "https://fauna.com/", srcLabel: "Fauna", cat: "product", conf: "community-consensus", notes: "\"FAW-na-D-B\" — serverless DB." },
+  { w: "OpenSearch", ipa: "/ˈoʊpənˌsɜːrtʃ/", r: "open search", aIpa: "", aR: "", url: "https://opensearch.org/", srcLabel: "OpenSearch", cat: "product", conf: "community-consensus", notes: "\"OPEN-search\" — Elasticsearch fork by AWS." },
+  { w: "Spanner", ipa: "/ˈspænər/", r: "span ner", aIpa: "", aR: "", url: "https://cloud.google.com/spanner", srcLabel: "Google Spanner", cat: "product", conf: "community-consensus", notes: "\"SPAN-er\" — Google's global SQL DB." },
+  { w: "Bigtable", ipa: "/ˈbɪɡˌteɪbəl/", r: "big table", aIpa: "", aR: "", url: "https://cloud.google.com/bigtable", srcLabel: "Bigtable", cat: "product", conf: "community-consensus", notes: "\"BIG-table\"." },
+  { w: "DynamoDB", ipa: "/daɪˈnæmoʊ diː biː/", r: "die namo D B", aIpa: "", aR: "", url: "https://aws.amazon.com/dynamodb/", srcLabel: "AWS DynamoDB", cat: "product", conf: "community-consensus", notes: "\"die-NAM-oh-D-B\"." },
+  { w: "Rollup", ipa: "/ˈroʊlˌʌp/", r: "roll up", aIpa: "", aR: "", url: "https://rollupjs.org/", srcLabel: "Rollup", cat: "tool", conf: "community-consensus", notes: "\"ROLL-up\"." },
+  { w: "Parcel", ipa: "/ˈpɑːrsəl/", r: "par sul", aIpa: "", aR: "", url: "https://parceljs.org/", srcLabel: "Parcel", cat: "tool", conf: "community-consensus", notes: "\"PAR-sul\"." },
+  { w: "Tsup", ipa: "/ˌtiː ˈsʌp/", r: "T sup", aIpa: "", aR: "", url: "https://tsup.egoist.dev/", srcLabel: "tsup", cat: "tool", conf: "community-consensus", notes: "\"T-sup\" — esbuild-based bundler." },
+  { w: "Tsx", ipa: "/ˌtiː ɛs ˈɛks/", r: "T S X", aIpa: "", aR: "", url: "https://tsx.is/", srcLabel: "tsx", cat: "tool", conf: "community-consensus", notes: "\"T-S-X\" — TypeScript execute." },
+  { w: "Vinxi", ipa: "/ˈvɪŋksi/", r: "vink see", aIpa: "", aR: "", url: "https://vinxi.vercel.app/", srcLabel: "Vinxi", cat: "tool", conf: "community-consensus", notes: "\"VINK-see\" — full-stack JS framework toolkit." },
+  { w: "Capacitor", ipa: "/kəˈpæsɪtər/", r: "cuh pass i ter", aIpa: "", aR: "", url: "https://capacitorjs.com/", srcLabel: "Capacitor", cat: "tool", conf: "community-consensus", notes: "\"kuh-PASS-i-ter\" — Ionic's native runtime." },
+  { w: "Ionic", ipa: "/aɪˈɒnɪk/", r: "eye on ick", aIpa: "", aR: "", url: "https://ionic.io/", srcLabel: "Ionic", cat: "product", conf: "community-consensus", notes: "\"eye-ON-ick\"." },
+  { w: "Expo", ipa: "/ˈɛkspoʊ/", r: "ex po", aIpa: "", aR: "", url: "https://expo.dev/", srcLabel: "Expo", cat: "product", conf: "community-consensus", notes: "\"EX-po\" — React Native toolchain." },
+  { w: "NativeScript", ipa: "/ˈneɪtɪvˌskrɪpt/", r: "native script", aIpa: "", aR: "", url: "https://nativescript.org/", srcLabel: "NativeScript", cat: "product", conf: "community-consensus", notes: "\"NATIVE-script\"." },
+  { w: "Three.js", ipa: "/ˈθriː dʒeɪ ɛs/", r: "three J S", aIpa: "", aR: "", url: "https://threejs.org/", srcLabel: "Three.js", cat: "product", conf: "community-consensus", notes: "\"three-J-S\" — WebGL 3D lib." },
+  { w: "Babylon.js", ipa: "/ˈbæbɪlɒn dʒeɪ ɛs/", r: "babylon J S", aIpa: "", aR: "", url: "https://www.babylonjs.com/", srcLabel: "Babylon.js", cat: "product", conf: "community-consensus", notes: "\"BAB-i-lon-J-S\"." },
+  { w: "PixiJS", ipa: "/ˈpɪksi dʒeɪ ɛs/", r: "pixie J S", aIpa: "", aR: "", url: "https://pixijs.com/", srcLabel: "PixiJS", cat: "product", conf: "community-consensus", notes: "\"PIX-ee-J-S\"." },
+  { w: "Skia", ipa: "/ˈskiːə/", r: "skee uh", aIpa: "", aR: "", url: "https://skia.org/", srcLabel: "Skia", cat: "product", conf: "community-consensus", notes: "\"SKEE-uh\" — Google's graphics lib." },
+  { w: "Manim", ipa: "/ˈmænɪm/", r: "man im", aIpa: "", aR: "", url: "https://www.manim.community/", srcLabel: "Manim", cat: "product", conf: "community-consensus", notes: "\"MAN-im\" — math animation engine, 3Blue1Brown." },
+  { w: "p5.js", ipa: "/ˌpiː faɪv dʒeɪ ˈɛs/", r: "P five J S", aIpa: "", aR: "", url: "https://p5js.org/", srcLabel: "p5.js", cat: "product", conf: "community-consensus", notes: "\"P-five-J-S\" — Processing for JS." },
+  { w: "D3", ipa: "/ˌdiː ˈθriː/", r: "D three", aIpa: "", aR: "", url: "https://d3js.org/", srcLabel: "D3", cat: "product", conf: "community-consensus", notes: "\"D-three\" — data visualization lib." },
+  { w: "scikit-learn", ipa: "/ˈsaɪkɪt lɜːrn/", r: "sai kit learn", aIpa: "", aR: "", url: "https://scikit-learn.org/", srcLabel: "scikit-learn", cat: "product", conf: "community-consensus", notes: "\"SCI-kit-learn\"." },
+  { w: "Polars", ipa: "/ˈpoʊlərz/", r: "po lerz", aIpa: "", aR: "", url: "https://pola.rs/", srcLabel: "Polars", cat: "product", conf: "community-consensus", notes: "\"POH-lerz\" — Rust-backed DataFrame lib." },
+  { w: "Dask", ipa: "/dæsk/", r: "dask", aIpa: "", aR: "", url: "https://www.dask.org/", srcLabel: "Dask", cat: "product", conf: "community-consensus", notes: "\"dask\" — parallel Python compute." },
+  { w: "Ray", ipa: "/reɪ/", r: "ray", aIpa: "", aR: "", url: "https://www.ray.io/", srcLabel: "Ray", cat: "product", conf: "community-consensus", notes: "\"ray\" — Anyscale's distributed compute." },
+  { w: "Modin", ipa: "/ˈmoʊdɪn/", r: "mo din", aIpa: "", aR: "", url: "https://modin.readthedocs.io/", srcLabel: "Modin", cat: "product", conf: "community-consensus", notes: "\"MO-din\" — drop-in pandas replacement." },
+  { w: "Spark", ipa: "/spɑːrk/", r: "spark", aIpa: "", aR: "", url: "https://spark.apache.org/", srcLabel: "Apache Spark", cat: "product", conf: "community-consensus", notes: "\"spark\" — distributed compute." },
+  { w: "Flink", ipa: "/flɪŋk/", r: "flink", aIpa: "", aR: "", url: "https://flink.apache.org/", srcLabel: "Apache Flink", cat: "product", conf: "community-consensus", notes: "\"flink\" — stream processing." },
+  { w: "Beam", ipa: "/biːm/", r: "beem", aIpa: "", aR: "", url: "https://beam.apache.org/", srcLabel: "Apache Beam", cat: "product", conf: "community-consensus", notes: "\"beem\" — unified batch+stream model." },
+  { w: "Tailscale", ipa: "/ˈteɪlˌskeɪl/", r: "tail scale", aIpa: "", aR: "", url: "https://tailscale.com/", srcLabel: "Tailscale", cat: "product", conf: "community-consensus", notes: "\"TAIL-scale\" — mesh VPN." },
+  { w: "Wireshark", ipa: "/ˈwaɪərˌʃɑːrk/", r: "wire shark", aIpa: "", aR: "", url: "https://www.wireshark.org/", srcLabel: "Wireshark", cat: "tool", conf: "community-consensus", notes: "\"WIRE-shark\"." },
+  { w: "HAProxy", ipa: "/ˌeɪtʃ eɪ ˈprɒksi/", r: "H A proxy", aIpa: "", aR: "", url: "https://www.haproxy.org/", srcLabel: "HAProxy", cat: "product", conf: "community-consensus", notes: "\"H-A-proxy\"." },
+  { w: "Alpine.js", ipa: "/ˈælpaɪn dʒeɪ ɛs/", r: "al pine J S", aIpa: "", aR: "", url: "https://alpinejs.dev/", srcLabel: "Alpine.js", cat: "product", conf: "community-consensus", notes: "\"AL-pine-J-S\"." },
+  { w: "Phoenix", ipa: "/ˈfiːnɪks/", r: "fee nix", aIpa: "", aR: "", url: "https://www.phoenixframework.org/", srcLabel: "Phoenix", cat: "product", conf: "community-consensus", notes: "\"FEE-nix\" — Elixir web framework." },
+  { w: "Rails", ipa: "/reɪlz/", r: "rails", aIpa: "", aR: "", url: "https://rubyonrails.org/", srcLabel: "Ruby on Rails", cat: "product", conf: "community-consensus", notes: "\"rails\" — Ruby on Rails." },
+  { w: "Laravel", ipa: "/ˈlærəˌvɛl/", r: "lar a vel", aIpa: "", aR: "", url: "https://laravel.com/", srcLabel: "Laravel", cat: "product", conf: "community-consensus", notes: "\"LAR-uh-vel\"." },
+  { w: "Symfony", ipa: "/ˈsɪmfəni/", r: "sim fo nee", aIpa: "", aR: "", url: "https://symfony.com/", srcLabel: "Symfony", cat: "product", conf: "community-consensus", notes: "\"SIM-fuh-nee\" — like symphony." },
+  { w: "Sinatra", ipa: "/sɪˈnɑːtrə/", r: "sin ah tra", aIpa: "", aR: "", url: "http://sinatrarb.com/", srcLabel: "Sinatra", cat: "product", conf: "community-consensus", notes: "\"sin-AH-tra\" — Ruby micro framework." },
+  { w: "Flask", ipa: "/flæsk/", r: "flask", aIpa: "", aR: "", url: "https://flask.palletsprojects.com/", srcLabel: "Flask", cat: "product", conf: "community-consensus", notes: "\"flask\" — Python microframework." },
+  { w: "Starlette", ipa: "/stɑːrˈlɛt/", r: "star let", aIpa: "", aR: "", url: "https://www.starlette.io/", srcLabel: "Starlette", cat: "product", conf: "community-consensus", notes: "\"star-LET\" — ASGI framework." },
+  { w: "Litestar", ipa: "/ˈlaɪtˌstɑːr/", r: "lite star", aIpa: "", aR: "", url: "https://litestar.dev/", srcLabel: "Litestar", cat: "product", conf: "community-consensus", notes: "\"LITE-star\"." },
+  { w: "Sanic", ipa: "/ˈsɒnɪk/", r: "son ick", aIpa: "", aR: "", url: "https://sanic.dev/", srcLabel: "Sanic", cat: "product", conf: "community-consensus", notes: "\"SON-ick\" — Python async framework." },
+  { w: "Express", ipa: "/ɪkˈsprɛs/", r: "ex press", aIpa: "", aR: "", url: "https://expressjs.com/", srcLabel: "Express", cat: "product", conf: "community-consensus", notes: "\"ex-PRESS\" — Node.js framework." },
+  { w: "Koa", ipa: "/ˈkoʊə/", r: "ko ah", aIpa: "", aR: "", url: "https://koajs.com/", srcLabel: "Koa", cat: "product", conf: "community-consensus", notes: "\"KO-ah\"." },
+  { w: "Fastify", ipa: "/ˈfæstɪfaɪ/", r: "fast i fye", aIpa: "", aR: "", url: "https://fastify.dev/", srcLabel: "Fastify", cat: "product", conf: "community-consensus", notes: "\"FAST-i-fye\"." },
+  { w: "Hapi", ipa: "/ˈhæpi/", r: "happy", aIpa: "", aR: "", url: "https://hapi.dev/", srcLabel: "hapi", cat: "product", conf: "community-consensus", notes: "\"HAP-ee\" — like \"happy\"." },
+  { w: "Echo", ipa: "/ˈɛkoʊ/", r: "ek oh", aIpa: "", aR: "", url: "https://echo.labstack.com/", srcLabel: "Echo", cat: "product", conf: "community-consensus", notes: "\"EK-oh\" — Go framework." },
+  { w: "Fiber", ipa: "/ˈfaɪbər/", r: "fi ber", aIpa: "", aR: "", url: "https://gofiber.io/", srcLabel: "Fiber", cat: "product", conf: "community-consensus", notes: "\"FYE-ber\" — Go Express-like framework." },
+  { w: "Gin", ipa: "/dʒɪn/", r: "jin", aIpa: "", aR: "", url: "https://gin-gonic.com/", srcLabel: "Gin", cat: "product", conf: "community-consensus", notes: "\"jin\" — Go web framework." },
+  { w: "Chi", ipa: "/tʃaɪ/", r: "chai", aIpa: "", aR: "", url: "https://go-chi.io/", srcLabel: "chi", cat: "product", conf: "community-consensus", notes: "\"chai\" — Go router." },
+  { w: "GORM", ipa: "/ɡɔːrm/", r: "gorm", aIpa: "", aR: "", url: "https://gorm.io/", srcLabel: "GORM", cat: "tool", conf: "community-consensus", notes: "\"gorm\" — Go ORM." },
+  { w: "Cobra", ipa: "/ˈkoʊbrə/", r: "ko bra", aIpa: "", aR: "", url: "https://cobra.dev/", srcLabel: "Cobra", cat: "tool", conf: "community-consensus", notes: "\"KO-bra\" — Go CLI library." },
+  { w: "Viper", ipa: "/ˈvaɪpər/", r: "vy per", aIpa: "", aR: "", url: "https://github.com/spf13/viper", srcLabel: "Viper", cat: "tool", conf: "community-consensus", notes: "\"VYE-per\" — Go config library." },
+  { w: "SOLID", ipa: "/ˈsɒlɪd/", r: "solid", aIpa: "", aR: "", url: "https://en.wikipedia.org/wiki/SOLID", srcLabel: "Wikipedia", cat: "acronym", conf: "community-consensus", notes: "\"SOL-id\" — OOP design principles." },
+  { w: "TDD", ipa: "/ˌtiː diː ˈdiː/", r: "T D D", aIpa: "", aR: "", url: "https://en.wikipedia.org/wiki/Test-driven_development", srcLabel: "Wikipedia", cat: "acronym", conf: "community-consensus", notes: "\"T-D-D\" — Test Driven Development." },
+  { w: "BDD", ipa: "/ˌbiː diː ˈdiː/", r: "B D D", aIpa: "", aR: "", url: "https://en.wikipedia.org/wiki/Behavior-driven_development", srcLabel: "Wikipedia", cat: "acronym", conf: "community-consensus", notes: "\"B-D-D\" — Behavior Driven Development." },
+  { w: "CI/CD", ipa: "/ˌsiː aɪ siː ˈdiː/", r: "C I C D", aIpa: "", aR: "", url: "https://en.wikipedia.org/wiki/CI/CD", srcLabel: "Wikipedia", cat: "acronym", conf: "community-consensus", notes: "\"C-I-C-D\" — letter-by-letter." },
+  { w: "MVP", ipa: "/ˌɛm viː ˈpiː/", r: "M V P", aIpa: "", aR: "", url: "https://en.wikipedia.org/wiki/Minimum_viable_product", srcLabel: "Wikipedia", cat: "acronym", conf: "community-consensus", notes: "\"M-V-P\" — Minimum Viable Product." },
+  { w: "MVC", ipa: "/ˌɛm viː ˈsiː/", r: "M V C", aIpa: "", aR: "", url: "https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller", srcLabel: "Wikipedia", cat: "acronym", conf: "community-consensus", notes: "\"M-V-C\"." },
+  { w: "MVVM", ipa: "/ˌɛm viː viː ˈɛm/", r: "M V V M", aIpa: "", aR: "", url: "https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel", srcLabel: "Wikipedia", cat: "acronym", conf: "community-consensus", notes: "\"M-V-V-M\"." },
+  { w: "OOP", ipa: "/ˌoʊ oʊ ˈpiː/", r: "O O P", aIpa: "", aR: "", url: "https://en.wikipedia.org/wiki/Object-oriented_programming", srcLabel: "Wikipedia", cat: "acronym", conf: "community-consensus", notes: "\"O-O-P\" letter-by-letter." },
+  { w: "FP", ipa: "/ˌɛf ˈpiː/", r: "F P", aIpa: "", aR: "", url: "https://en.wikipedia.org/wiki/Functional_programming", srcLabel: "Wikipedia", cat: "acronym", conf: "community-consensus", notes: "\"F-P\" — Functional Programming." },
+  { w: "DDD", ipa: "/ˌdiː diː ˈdiː/", r: "D D D", aIpa: "", aR: "", url: "https://en.wikipedia.org/wiki/Domain-driven_design", srcLabel: "Wikipedia", cat: "acronym", conf: "community-consensus", notes: "\"D-D-D\" — Domain-Driven Design." },
+  { w: "CQRS", ipa: "/ˌsiː kjuː ɑːr ˈɛs/", r: "C Q R S", aIpa: "", aR: "", url: "https://en.wikipedia.org/wiki/Command%E2%80%93query_separation", srcLabel: "Wikipedia", cat: "acronym", conf: "community-consensus", notes: "\"C-Q-R-S\" — Command Query Responsibility Segregation." },
+  { w: "monad", ipa: "/ˈmɒnæd/", r: "mon ad", aIpa: "", aR: "", url: "https://en.wikipedia.org/wiki/Monad_(functional_programming)", srcLabel: "Wikipedia", cat: "cs-term", conf: "community-consensus", notes: "\"MON-ad\"." },
+  { w: "functor", ipa: "/ˈfʌŋktər/", r: "funk ter", aIpa: "", aR: "", url: "https://en.wikipedia.org/wiki/Functor", srcLabel: "Wikipedia", cat: "cs-term", conf: "community-consensus", notes: "\"FUNK-ter\"." },
+  { w: "idempotent", ipa: "/ˌaɪdɛmˈpoʊtənt/", r: "eye dem po tent", aIpa: "/ˌɪdɛmˈpoʊtənt/", aR: "id em po tent", url: "https://en.wikipedia.org/wiki/Idempotence", srcLabel: "Wikipedia", cat: "cs-term", conf: "contested", notes: "\"eye-dem-PO-tent\" vs \"id-em-PO-tent\"." },
+  { w: "lambda", ipa: "/ˈlæmdə/", r: "lam da", aIpa: "", aR: "", url: "https://en.wikipedia.org/wiki/Lambda_calculus", srcLabel: "Wikipedia", cat: "cs-term", conf: "community-consensus", notes: "\"LAM-duh\"." },
+  { w: "closure", ipa: "/ˈkloʊʒər/", r: "clo zure", aIpa: "", aR: "", url: "https://en.wikipedia.org/wiki/Closure_(computer_programming)", srcLabel: "Wikipedia", cat: "cs-term", conf: "community-consensus", notes: "\"CLO-zhur\"." },
+  { w: "mutex", ipa: "/ˈmjuːˌtɛks/", r: "myoo tex", aIpa: "", aR: "", url: "https://en.wikipedia.org/wiki/Lock_(computer_science)", srcLabel: "Wikipedia", cat: "cs-term", conf: "community-consensus", notes: "\"MYOO-tex\" — mutual exclusion." },
+  { w: "semaphore", ipa: "/ˈsɛməˌfɔːr/", r: "sem a for", aIpa: "", aR: "", url: "https://en.wikipedia.org/wiki/Semaphore_(programming)", srcLabel: "Wikipedia", cat: "cs-term", conf: "community-consensus", notes: "\"SEM-uh-for\"." },
+  { w: "async", ipa: "/ˈeɪsɪŋk/", r: "a sink", aIpa: "", aR: "", url: "https://en.wikipedia.org/wiki/Asynchrony_(computer_programming)", srcLabel: "Wikipedia", cat: "cs-term", conf: "community-consensus", notes: "\"AY-sink\"." },
+  { w: "coroutine", ipa: "/ˌkoʊˈruːtiːn/", r: "co roo teen", aIpa: "", aR: "", url: "https://en.wikipedia.org/wiki/Coroutine", srcLabel: "Wikipedia", cat: "cs-term", conf: "community-consensus", notes: "\"co-ROO-teen\"." },
+  { w: "RSA", ipa: "/ˌɑːr ɛs ˈeɪ/", r: "R S A", aIpa: "", aR: "", url: "https://en.wikipedia.org/wiki/RSA_(cryptosystem)", srcLabel: "Wikipedia", cat: "acronym", conf: "community-consensus", notes: "\"R-S-A\"." },
+  { w: "AES", ipa: "/ˌeɪ iː ˈɛs/", r: "A E S", aIpa: "", aR: "", url: "https://en.wikipedia.org/wiki/Advanced_Encryption_Standard", srcLabel: "Wikipedia", cat: "acronym", conf: "community-consensus", notes: "\"A-E-S\"." },
+  { w: "SHA", ipa: "/ʃɑː/", r: "shah", aIpa: "/ˌɛs eɪtʃ ˈeɪ/", aR: "S H A", url: "https://en.wikipedia.org/wiki/Secure_Hash_Algorithms", srcLabel: "Wikipedia", cat: "acronym", conf: "contested", notes: "\"shah\" or letter-by-letter \"S-H-A\"." },
+  { w: "TLS", ipa: "/ˌtiː ɛl ˈɛs/", r: "T L S", aIpa: "", aR: "", url: "https://en.wikipedia.org/wiki/Transport_Layer_Security", srcLabel: "Wikipedia", cat: "acronym", conf: "community-consensus", notes: "\"T-L-S\"." },
+  { w: "PGP", ipa: "/ˌpiː dʒiː ˈpiː/", r: "P G P", aIpa: "", aR: "", url: "https://en.wikipedia.org/wiki/Pretty_Good_Privacy", srcLabel: "Wikipedia", cat: "acronym", conf: "community-consensus", notes: "\"P-G-P\"." },
+  { w: "GPG", ipa: "/ˌdʒiː piː ˈdʒiː/", r: "G P G", aIpa: "", aR: "", url: "https://gnupg.org/", srcLabel: "GnuPG", cat: "abbreviation", conf: "community-consensus", notes: "\"G-P-G\"." },
+  { w: "WebRTC", ipa: "/wɛb ɑːr tiː ˈsiː/", r: "web R T C", aIpa: "", aR: "", url: "https://webrtc.org/", srcLabel: "WebRTC", cat: "tool", conf: "community-consensus", notes: "\"web-R-T-C\"." },
+  { w: "WebGPU", ipa: "/wɛb dʒiː piː ˈjuː/", r: "web G P U", aIpa: "", aR: "", url: "https://www.w3.org/TR/webgpu/", srcLabel: "W3C WebGPU", cat: "tool", conf: "community-consensus", notes: "\"web-G-P-U\"." },
+  { w: "WASI", ipa: "/ˈwɑːzi/", r: "wah zee", aIpa: "", aR: "", url: "https://wasi.dev/", srcLabel: "WASI", cat: "abbreviation", conf: "community-consensus", notes: "\"WAH-zee\" — WebAssembly System Interface." },
+  { w: "IPFS", ipa: "/ˌaɪ piː ɛf ˈɛs/", r: "I P F S", aIpa: "", aR: "", url: "https://ipfs.tech/", srcLabel: "IPFS", cat: "abbreviation", conf: "community-consensus", notes: "\"I-P-F-S\"." },
+  { w: "Solidity", ipa: "/səˈlɪdɪti/", r: "so lid i tee", aIpa: "", aR: "", url: "https://soliditylang.org/", srcLabel: "Solidity", cat: "product", conf: "community-consensus", notes: "\"sol-LID-i-tee\"." },
+  { w: "Ethereum", ipa: "/ɪˈθɪriəm/", r: "e thee ree um", aIpa: "", aR: "", url: "https://ethereum.org/", srcLabel: "Ethereum", cat: "product", conf: "community-consensus", notes: "\"e-THEE-ree-um\"." },
+  { w: "Fleet", ipa: "/fliːt/", r: "fleet", aIpa: "", aR: "", url: "https://www.jetbrains.com/fleet/", srcLabel: "JetBrains Fleet", cat: "tool", conf: "community-consensus", notes: "\"fleet\"." },
+  { w: "Lapce", ipa: "/læps/", r: "lapss", aIpa: "", aR: "", url: "https://lapce.dev/", srcLabel: "Lapce", cat: "tool", conf: "community-consensus", notes: "\"LAPSS\" — Rust editor." },
+  { w: "Sublime", ipa: "/səˈblaɪm/", r: "sub lime", aIpa: "", aR: "", url: "https://www.sublimetext.com/", srcLabel: "Sublime Text", cat: "tool", conf: "community-consensus", notes: "\"sub-LIME\"." },
+  { w: "VSCode", ipa: "/ˌviː ɛs ˈkoʊd/", r: "V S code", aIpa: "", aR: "", url: "https://code.visualstudio.com/", srcLabel: "VS Code", cat: "tool", conf: "community-consensus", notes: "\"V-S-code\"." },
+  { w: "Raycast", ipa: "/ˈreɪˌkæst/", r: "ray cast", aIpa: "", aR: "", url: "https://www.raycast.com/", srcLabel: "Raycast", cat: "product", conf: "community-consensus", notes: "\"RAY-cast\"." },
+  { w: "Alfred", ipa: "/ˈælfrɛd/", r: "al fred", aIpa: "", aR: "", url: "https://www.alfredapp.com/", srcLabel: "Alfred", cat: "product", conf: "community-consensus", notes: "\"AL-fred\"." },
+  { w: "Homebrew", ipa: "/ˈhoʊmˌbruː/", r: "home brew", aIpa: "", aR: "", url: "https://brew.sh/", srcLabel: "Homebrew", cat: "tool", conf: "community-consensus", notes: "\"HOME-brew\"." },
+  { w: "Fedora", ipa: "/fəˈdɔːrə/", r: "fuh dora", aIpa: "", aR: "", url: "https://fedoraproject.org/", srcLabel: "Fedora", cat: "product", conf: "community-consensus", notes: "\"fuh-DOR-uh\"." },
+  { w: "CentOS", ipa: "/ˌsɛnt ˈoʊ ɛs/", r: "cent O S", aIpa: "", aR: "", url: "https://www.centos.org/", srcLabel: "CentOS", cat: "product", conf: "community-consensus", notes: "\"cent-O-S\"." },
+  { w: "RHEL", ipa: "/rɛl/", r: "rell", aIpa: "", aR: "", url: "https://www.redhat.com/", srcLabel: "Red Hat", cat: "product", conf: "community-consensus", notes: "\"rell\" — Red Hat Enterprise Linux." },
+  { w: "Manjaro", ipa: "/mənˈdʒɑːroʊ/", r: "mun jar oh", aIpa: "", aR: "", url: "https://manjaro.org/", srcLabel: "Manjaro", cat: "product", conf: "community-consensus", notes: "\"mun-JAR-oh\"." },
+  { w: "FreeBSD", ipa: "/ˌfriː biː ɛs ˈdiː/", r: "free B S D", aIpa: "", aR: "", url: "https://www.freebsd.org/", srcLabel: "FreeBSD", cat: "product", conf: "community-consensus", notes: "\"free-B-S-D\"." },
+  { w: "Puppeteer", ipa: "/ˌpʌpɪˈtɪər/", r: "puppy teer", aIpa: "", aR: "", url: "https://pptr.dev/", srcLabel: "Puppeteer", cat: "tool", conf: "community-consensus", notes: "\"PUP-uh-teer\"." },
 ];
 const BY_WORD = Object.fromEntries(ENTRIES.map(e => [e.w.toLowerCase(), e]));
 
@@ -594,8 +724,100 @@ function toggleTheme() {
 }
 applyTheme();
 
+// Hero search — instant search on landing page (suggest list)
+function initHeroSearch() {
+  const input = document.getElementById('hero-search');
+  const sug = document.getElementById('hero-suggest');
+  const mic = document.getElementById('hero-mic');
+  if (!input || !sug) return;
+
+  function slugify(w) { return w.toLowerCase().replace(/[^a-z0-9._-]/g, '-'); }
+  function escapeHtml(s){ return String(s||'').replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+  function searchEntries(q) {
+    q = q.toLowerCase().trim();
+    if (!q) return [];
+    const exact = [], prefix = [], contains = [];
+    for (const e of ENTRIES) {
+      const w = e.w.toLowerCase();
+      if (w === q) exact.push(e);
+      else if (w.startsWith(q)) prefix.push(e);
+      else if (w.includes(q) || (e.r || '').toLowerCase().includes(q)) contains.push(e);
+    }
+    return [...exact, ...prefix, ...contains].slice(0, 8);
+  }
+
+  function render(items) {
+    if (!items.length) { sug.hidden = true; sug.innerHTML = ''; return; }
+    sug.hidden = false;
+    sug.innerHTML = items.map((e, i) => {
+      const slug = slugify(e.w);
+      return '<a class="suggest-row" role="option" data-i="' + i + '" href="./word/' + slug + '.html">' +
+        '<span class="suggest-w">' + escapeHtml(e.w) + '</span>' +
+        '<span class="suggest-r">' + escapeHtml(e.r || '') + '</span>' +
+        '<span class="suggest-i">' + escapeHtml(e.ipa || '') + '</span>' +
+        '</a>';
+    }).join('');
+  }
+
+  let cur = -1, items = [];
+  input.addEventListener('input', () => {
+    items = searchEntries(input.value);
+    cur = -1;
+    render(items);
+  });
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowDown') { e.preventDefault(); cur = Math.min(cur+1, items.length-1); highlight(); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); cur = Math.max(cur-1, -1); highlight(); }
+    else if (e.key === 'Enter' && items.length) {
+      e.preventDefault();
+      const pick = cur >= 0 ? items[cur] : items[0];
+      window.location.href = './word/' + slugify(pick.w) + '.html';
+    } else if (e.key === 'Escape') { sug.hidden = true; }
+  });
+  function highlight() {
+    sug.querySelectorAll('.suggest-row').forEach((el, i) => el.classList.toggle('active', i === cur));
+  }
+  document.addEventListener('click', (e) => {
+    if (!sug.contains(e.target) && e.target !== input) sug.hidden = true;
+  });
+
+  // Voice mic — uses Web Speech API for speech recognition
+  if (mic) {
+    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SR) {
+      mic.disabled = true;
+      mic.title = 'Voice search not supported in this browser';
+      mic.style.opacity = '0.4';
+    } else {
+      mic.addEventListener('click', () => {
+        const rec = new SR();
+        rec.lang = 'en-US';
+        rec.interimResults = false;
+        rec.maxAlternatives = 1;
+        mic.classList.add('listening');
+        rec.onresult = (ev) => {
+          const txt = (ev.results[0][0].transcript || '').trim().replace(/[.,!?]$/,'');
+          input.value = txt;
+          items = searchEntries(txt);
+          cur = -1;
+          render(items);
+          if (items.length) {
+            // jump straight to top match
+            setTimeout(() => { window.location.href = './word/' + slugify(items[0].w) + '.html'; }, 400);
+          }
+        };
+        rec.onend = () => mic.classList.remove('listening');
+        rec.onerror = () => mic.classList.remove('listening');
+        rec.start();
+      });
+    }
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   renderTodaysWord();
+  initHeroSearch();
   // Wire up theme toggle button if present in topbar
   const tb = document.getElementById('theme-toggle');
   if (tb) tb.addEventListener('click', toggleTheme);

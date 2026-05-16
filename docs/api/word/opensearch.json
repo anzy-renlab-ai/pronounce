@@ -1,0 +1,12 @@
+{
+  "word": "OpenSearch",
+  "ipa": "/ˈoʊpənˌsɜːrtʃ/",
+  "respelling_us": "open search",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://opensearch.org/",
+  "source_label": "OpenSearch",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"OPEN-search\" — Elasticsearch fork by AWS."
+}

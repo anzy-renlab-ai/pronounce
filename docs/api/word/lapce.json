@@ -1,0 +1,12 @@
+{
+  "word": "Lapce",
+  "ipa": "/læps/",
+  "respelling_us": "lapss",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://lapce.dev/",
+  "source_label": "Lapce",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "\"LAPSS\" — Rust editor."
+}

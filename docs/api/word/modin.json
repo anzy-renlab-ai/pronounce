@@ -1,0 +1,12 @@
+{
+  "word": "Modin",
+  "ipa": "/ˈmoʊdɪn/",
+  "respelling_us": "mo din",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://modin.readthedocs.io/",
+  "source_label": "Modin",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"MO-din\" — drop-in pandas replacement."
+}

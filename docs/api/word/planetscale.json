@@ -1,0 +1,12 @@
+{
+  "word": "PlanetScale",
+  "ipa": "/ˈplænɪtˌskeɪl/",
+  "respelling_us": "planet scale",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://planetscale.com/",
+  "source_label": "PlanetScale",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"PLANET-scale\" — MySQL-compatible serverless DB."
+}

@@ -1,0 +1,12 @@
+{
+  "word": "Phoenix",
+  "ipa": "/ˈfiːnɪks/",
+  "respelling_us": "fee nix",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.phoenixframework.org/",
+  "source_label": "Phoenix",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"FEE-nix\" — Elixir web framework."
+}

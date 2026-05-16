@@ -1,0 +1,12 @@
+{
+  "word": "smolagents",
+  "ipa": "/ˈsmoʊlˌeɪdʒənts/",
+  "respelling_us": "smol agents",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://huggingface.co/docs/smolagents/",
+  "source_label": "HuggingFace smolagents",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"SMOL-agents\" — Hugging Face tiny agent lib."
+}

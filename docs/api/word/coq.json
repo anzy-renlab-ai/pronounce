@@ -1,0 +1,12 @@
+{
+  "word": "Coq",
+  "ipa": "/kɒk/",
+  "respelling_us": "kok",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://rocq-prover.org/",
+  "source_label": "Rocq (formerly Coq)",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"kok\" — proof assistant. Now renamed Rocq."
+}

@@ -1,0 +1,12 @@
+{
+  "word": "mutex",
+  "ipa": "/ˈmjuːˌtɛks/",
+  "respelling_us": "myoo tex",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://en.wikipedia.org/wiki/Lock_(computer_science)",
+  "source_label": "Wikipedia",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "\"MYOO-tex\" — mutual exclusion."
+}

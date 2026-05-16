@@ -3,13 +3,14 @@
 [![GitHub stars](https://img.shields.io/github/stars/anzy-renlab-ai/pronounce?style=social)](https://github.com/anzy-renlab-ai/pronounce/stargazers)
 [![Live site](https://img.shields.io/badge/live-pronounce.renlab.ai-7adfbb?logo=safari&logoColor=white)](https://pronounce.renlab.ai)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Entries](https://img.shields.io/badge/dictionary-236%20entries-ff6a3d)](https://pronounce.renlab.ai/browse)
+[![Entries](https://img.shields.io/badge/dictionary-440%20entries-ff6a3d)](https://pronounce.renlab.ai/browse)
+[![Quiz](https://img.shields.io/badge/quiz-take%20it-7adfbb)](https://pronounce.renlab.ai/quiz.html)
 [![Platform](https://img.shields.io/badge/platform-macOS-lightgrey?logo=apple)](https://pronounce.renlab.ai)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 **Pronounce `kubectl` without the cringe.**
 
-🌐 **[pronounce.renlab.ai](https://pronounce.renlab.ai)** · 📖 [Browse](https://pronounce.renlab.ai/browse) · 🔌 [MCP server](mcp-server/) · 🤖 [Codex / Cursor / Continue](integrations/) · 🤝 [Contribute](CONTRIBUTING.md) · 🗺 [Roadmap](IDEAS.md)
+🌐 **[pronounce.renlab.ai](https://pronounce.renlab.ai)** · 📖 [Browse](https://pronounce.renlab.ai/browse) · 🎯 [Quiz](https://pronounce.renlab.ai/quiz.html) · 🔌 [MCP server](mcp-server/) · 🤖 [Codex / Cursor / Continue / Raycast / Alfred / VSCode](integrations/) · 🤝 [Contribute](CONTRIBUTING.md) · 🗺 [Roadmap](IDEAS.md)
 
 ![say-it terminal demo](https://pronounce.renlab.ai/demo.gif)
 
@@ -143,10 +144,12 @@ Local override: drop a `~/.config/say-it/pronunciations.local.tsv` and it takes 
 ## What works today
 
 - ✅ macOS — any word, via the built-in `say` engine. Zero dependencies.
-- ✅ 70+ project / product / jargon entries with cited sources.
+- ✅ **440+** project / product / jargon entries with cited sources.
 - ✅ **Audible multi-reading awareness** — contested words audibly chain alternates with "or:".
-- ✅ `--alt [N]`, `--all`, `--solo`, `--why`, `--no-dict`, `list`, `search`.
-- ✅ Claude Code skill for AI-side pronunciation questions.
+- ✅ `--alt [N]`, `--all`, `--solo`, `--why`, `--json`, `--md`, `--no-dict`, `list`, `search`, `quiz`, `repl`, `stream`, `doctor`, `export`, `benchmark`, `badge`, `cheatsheet`.
+- ✅ Claude Code skill + MCP server for AI-side pronunciation questions.
+- ✅ Browser PWA — installable, offline-capable, instant search, voice-mic search, interactive quiz.
+- ✅ Editor integrations — Raycast, Alfred, VS Code, Cursor, Codex, Continue.
 
 ## What's coming
 

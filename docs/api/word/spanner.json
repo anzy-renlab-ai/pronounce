@@ -1,0 +1,12 @@
+{
+  "word": "Spanner",
+  "ipa": "/ˈspænər/",
+  "respelling_us": "span ner",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://cloud.google.com/spanner",
+  "source_label": "Google Spanner",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"SPAN-er\" — Google's global SQL DB."
+}

@@ -1,0 +1,12 @@
+{
+  "word": "Expo",
+  "ipa": "/ˈɛkspoʊ/",
+  "respelling_us": "ex po",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://expo.dev/",
+  "source_label": "Expo",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"EX-po\" — React Native toolchain."
+}

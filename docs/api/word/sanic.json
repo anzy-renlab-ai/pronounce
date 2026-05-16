@@ -1,0 +1,12 @@
+{
+  "word": "Sanic",
+  "ipa": "/ˈsɒnɪk/",
+  "respelling_us": "son ick",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://sanic.dev/",
+  "source_label": "Sanic",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"SON-ick\" — Python async framework."
+}

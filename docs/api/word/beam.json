@@ -1,0 +1,12 @@
+{
+  "word": "Beam",
+  "ipa": "/biːm/",
+  "respelling_us": "beem",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://beam.apache.org/",
+  "source_label": "Apache Beam",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"beem\" — unified batch+stream model."
+}

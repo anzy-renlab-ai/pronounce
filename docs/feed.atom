@@ -4,167 +4,181 @@
   <link href="https://pronounce.renlab.ai/feed.atom" rel="self"/>
   <link href="https://pronounce.renlab.ai/"/>
   <id>https://pronounce.renlab.ai/</id>
-  <updated>2026-05-16T16:36:06Z</updated>
+  <updated>2026-05-16T17:40:29Z</updated>
   <subtitle>How engineers actually pronounce project / product / jargon names. Community-maintained.</subtitle>
   <entry>
-    <title>CDN — C D N</title>
-    <link href="https://pronounce.renlab.ai/word/cdn"/>
-    <id>https://pronounce.renlab.ai/word/cdn</id>
-    <updated>2026-05-16T16:36:06Z</updated>
-    <summary>CDN is pronounced "C D N" (/ˌsiː diː ˈɛn/). "C-D-N".</summary>
+    <title>RSA — R S A</title>
+    <link href="https://pronounce.renlab.ai/word/rsa"/>
+    <id>https://pronounce.renlab.ai/word/rsa</id>
+    <updated>2026-05-16T17:40:29Z</updated>
+    <summary>RSA is pronounced "R S A" (/ˌɑːr ɛs ˈeɪ/). "R-S-A".</summary>
   </entry>
   <entry>
-    <title>CRUD — krud</title>
-    <link href="https://pronounce.renlab.ai/word/crud"/>
-    <id>https://pronounce.renlab.ai/word/crud</id>
-    <updated>2026-05-16T16:36:06Z</updated>
-    <summary>CRUD is pronounced "krud" (/krʌd/). "krud" — one syllable.</summary>
+    <title>AES — A E S</title>
+    <link href="https://pronounce.renlab.ai/word/aes"/>
+    <id>https://pronounce.renlab.ai/word/aes</id>
+    <updated>2026-05-16T17:40:29Z</updated>
+    <summary>AES is pronounced "A E S" (/ˌeɪ iː ˈɛs/). "A-E-S".</summary>
   </entry>
   <entry>
-    <title>ETL — E T L</title>
-    <link href="https://pronounce.renlab.ai/word/etl"/>
-    <id>https://pronounce.renlab.ai/word/etl</id>
-    <updated>2026-05-16T16:36:06Z</updated>
-    <summary>ETL is pronounced "E T L" (/ˌiː tiː ˈɛl/). "E-T-L".</summary>
+    <title>SHA — shah</title>
+    <link href="https://pronounce.renlab.ai/word/sha"/>
+    <id>https://pronounce.renlab.ai/word/sha</id>
+    <updated>2026-05-16T17:40:29Z</updated>
+    <summary>SHA is pronounced "shah" (/ʃɑː/). "shah" or letter-by-letter "S-H-A".</summary>
   </entry>
   <entry>
-    <title>JIT — jit</title>
-    <link href="https://pronounce.renlab.ai/word/jit"/>
-    <id>https://pronounce.renlab.ai/word/jit</id>
-    <updated>2026-05-16T16:36:06Z</updated>
-    <summary>JIT is pronounced "jit" (/dʒɪt/). "jit" (one syllable) or "J-I-T".</summary>
+    <title>TLS — T L S</title>
+    <link href="https://pronounce.renlab.ai/word/tls"/>
+    <id>https://pronounce.renlab.ai/word/tls</id>
+    <updated>2026-05-16T17:40:29Z</updated>
+    <summary>TLS is pronounced "T L S" (/ˌtiː ɛl ˈɛs/). "T-L-S".</summary>
   </entry>
   <entry>
-    <title>ORM — O R M</title>
-    <link href="https://pronounce.renlab.ai/word/orm"/>
-    <id>https://pronounce.renlab.ai/word/orm</id>
-    <updated>2026-05-16T16:36:06Z</updated>
-    <summary>ORM is pronounced "O R M" (/ˌoʊ ɑːr ˈɛm/). "O-R-M".</summary>
+    <title>PGP — P G P</title>
+    <link href="https://pronounce.renlab.ai/word/pgp"/>
+    <id>https://pronounce.renlab.ai/word/pgp</id>
+    <updated>2026-05-16T17:40:29Z</updated>
+    <summary>PGP is pronounced "P G P" (/ˌpiː dʒiː ˈpiː/). "P-G-P".</summary>
   </entry>
   <entry>
-    <title>SRE — S R E</title>
-    <link href="https://pronounce.renlab.ai/word/sre"/>
-    <id>https://pronounce.renlab.ai/word/sre</id>
-    <updated>2026-05-16T16:36:06Z</updated>
-    <summary>SRE is pronounced "S R E" (/ˌɛs ɑːr ˈiː/). "S-R-E".</summary>
+    <title>GPG — G P G</title>
+    <link href="https://pronounce.renlab.ai/word/gpg"/>
+    <id>https://pronounce.renlab.ai/word/gpg</id>
+    <updated>2026-05-16T17:40:29Z</updated>
+    <summary>GPG is pronounced "G P G" (/ˌdʒiː piː ˈdʒiː/). "G-P-G".</summary>
   </entry>
   <entry>
-    <title>TLDR — T L D R</title>
-    <link href="https://pronounce.renlab.ai/word/tldr"/>
-    <id>https://pronounce.renlab.ai/word/tldr</id>
-    <updated>2026-05-16T16:36:06Z</updated>
-    <summary>TLDR is pronounced "T L D R" (/ˌtiː ɛl diː ˈɑːr/). "T-L-D-R" — "too long, didn't read".</summary>
+    <title>WebRTC — web R T C</title>
+    <link href="https://pronounce.renlab.ai/word/webrtc"/>
+    <id>https://pronounce.renlab.ai/word/webrtc</id>
+    <updated>2026-05-16T17:40:29Z</updated>
+    <summary>WebRTC is pronounced "web R T C" (/wɛb ɑːr tiː ˈsiː/). "web-R-T-C".</summary>
   </entry>
   <entry>
-    <title>LGTM — L G T M</title>
-    <link href="https://pronounce.renlab.ai/word/lgtm"/>
-    <id>https://pronounce.renlab.ai/word/lgtm</id>
-    <updated>2026-05-16T16:36:06Z</updated>
-    <summary>LGTM is pronounced "L G T M" (/ˌɛl dʒiː tiː ˈɛm/). "L-G-T-M" — "looks good to me".</summary>
+    <title>WebGPU — web G P U</title>
+    <link href="https://pronounce.renlab.ai/word/webgpu"/>
+    <id>https://pronounce.renlab.ai/word/webgpu</id>
+    <updated>2026-05-16T17:40:29Z</updated>
+    <summary>WebGPU is pronounced "web G P U" (/wɛb dʒiː piː ˈjuː/). "web-G-P-U".</summary>
   </entry>
   <entry>
-    <title>DRY — dry</title>
-    <link href="https://pronounce.renlab.ai/word/dry"/>
-    <id>https://pronounce.renlab.ai/word/dry</id>
-    <updated>2026-05-16T16:36:06Z</updated>
-    <summary>DRY is pronounced "dry" (/draɪ/). "dry" — one syllable.</summary>
+    <title>WASI — wah zee</title>
+    <link href="https://pronounce.renlab.ai/word/wasi"/>
+    <id>https://pronounce.renlab.ai/word/wasi</id>
+    <updated>2026-05-16T17:40:29Z</updated>
+    <summary>WASI is pronounced "wah zee" (/ˈwɑːzi/). "WAH-zee" — WebAssembly System Interface.</summary>
   </entry>
   <entry>
-    <title>KISS — kiss</title>
-    <link href="https://pronounce.renlab.ai/word/kiss"/>
-    <id>https://pronounce.renlab.ai/word/kiss</id>
-    <updated>2026-05-16T16:36:06Z</updated>
-    <summary>KISS is pronounced "kiss" (/kɪs/). "kiss" — like the verb.</summary>
+    <title>IPFS — I P F S</title>
+    <link href="https://pronounce.renlab.ai/word/ipfs"/>
+    <id>https://pronounce.renlab.ai/word/ipfs</id>
+    <updated>2026-05-16T17:40:29Z</updated>
+    <summary>IPFS is pronounced "I P F S" (/ˌaɪ piː ɛf ˈɛs/). "I-P-F-S".</summary>
   </entry>
   <entry>
-    <title>YAGNI — yag nee</title>
-    <link href="https://pronounce.renlab.ai/word/yagni"/>
-    <id>https://pronounce.renlab.ai/word/yagni</id>
-    <updated>2026-05-16T16:36:06Z</updated>
-    <summary>YAGNI is pronounced "yag nee" (/ˈjæɡni/). "YAG-nee".</summary>
+    <title>Solidity — so lid i tee</title>
+    <link href="https://pronounce.renlab.ai/word/solidity"/>
+    <id>https://pronounce.renlab.ai/word/solidity</id>
+    <updated>2026-05-16T17:40:29Z</updated>
+    <summary>Solidity is pronounced "so lid i tee" (/səˈlɪdɪti/). "sol-LID-i-tee".</summary>
   </entry>
   <entry>
-    <title>POSIX — pa zicks</title>
-    <link href="https://pronounce.renlab.ai/word/posix"/>
-    <id>https://pronounce.renlab.ai/word/posix</id>
-    <updated>2026-05-16T16:36:06Z</updated>
-    <summary>POSIX is pronounced "pa zicks" (/ˈpɑːzɪks/). "PAH-zicks".</summary>
+    <title>Ethereum — e thee ree um</title>
+    <link href="https://pronounce.renlab.ai/word/ethereum"/>
+    <id>https://pronounce.renlab.ai/word/ethereum</id>
+    <updated>2026-05-16T17:40:29Z</updated>
+    <summary>Ethereum is pronounced "e thee ree um" (/ɪˈθɪriəm/). "e-THEE-ree-um".</summary>
   </entry>
   <entry>
-    <title>Restic — res tic</title>
-    <link href="https://pronounce.renlab.ai/word/restic"/>
-    <id>https://pronounce.renlab.ai/word/restic</id>
-    <updated>2026-05-16T16:36:06Z</updated>
-    <summary>Restic is pronounced "res tic" (/ˈrɛstɪk/). "RES-tic".</summary>
+    <title>Fleet — fleet</title>
+    <link href="https://pronounce.renlab.ai/word/fleet"/>
+    <id>https://pronounce.renlab.ai/word/fleet</id>
+    <updated>2026-05-16T17:40:29Z</updated>
+    <summary>Fleet is pronounced "fleet" (/fliːt/). "fleet".</summary>
   </entry>
   <entry>
-    <title>Renovate — ren oh vate</title>
-    <link href="https://pronounce.renlab.ai/word/renovate"/>
-    <id>https://pronounce.renlab.ai/word/renovate</id>
-    <updated>2026-05-16T16:36:06Z</updated>
-    <summary>Renovate is pronounced "ren oh vate" (/ˈrɛnəveɪt/). "REN-oh-vate".</summary>
+    <title>Lapce — lapss</title>
+    <link href="https://pronounce.renlab.ai/word/lapce"/>
+    <id>https://pronounce.renlab.ai/word/lapce</id>
+    <updated>2026-05-16T17:40:29Z</updated>
+    <summary>Lapce is pronounced "lapss" (/læps/). "LAPSS" — Rust editor.</summary>
   </entry>
   <entry>
-    <title>Daytona — day toh nah</title>
-    <link href="https://pronounce.renlab.ai/word/daytona"/>
-    <id>https://pronounce.renlab.ai/word/daytona</id>
-    <updated>2026-05-16T16:36:06Z</updated>
-    <summary>Daytona is pronounced "day toh nah" (/deɪˈtoʊnə/). "day-TOH-nah".</summary>
+    <title>Sublime — sub lime</title>
+    <link href="https://pronounce.renlab.ai/word/sublime"/>
+    <id>https://pronounce.renlab.ai/word/sublime</id>
+    <updated>2026-05-16T17:40:29Z</updated>
+    <summary>Sublime is pronounced "sub lime" (/səˈblaɪm/). "sub-LIME".</summary>
   </entry>
   <entry>
-    <title>Coolify — cool i fy</title>
-    <link href="https://pronounce.renlab.ai/word/coolify"/>
-    <id>https://pronounce.renlab.ai/word/coolify</id>
-    <updated>2026-05-16T16:36:06Z</updated>
-    <summary>Coolify is pronounced "cool i fy" (/ˈkuːlɪfaɪ/). "COOL-i-fy".</summary>
+    <title>VSCode — V S code</title>
+    <link href="https://pronounce.renlab.ai/word/vscode"/>
+    <id>https://pronounce.renlab.ai/word/vscode</id>
+    <updated>2026-05-16T17:40:29Z</updated>
+    <summary>VSCode is pronounced "V S code" (/ˌviː ɛs ˈkoʊd/). "V-S-code".</summary>
   </entry>
   <entry>
-    <title>Bytebase — byte base</title>
-    <link href="https://pronounce.renlab.ai/word/bytebase"/>
-    <id>https://pronounce.renlab.ai/word/bytebase</id>
-    <updated>2026-05-16T16:36:06Z</updated>
-    <summary>Bytebase is pronounced "byte base" (/ˈbaɪtˌbeɪs/). "BYTE-base".</summary>
+    <title>Raycast — ray cast</title>
+    <link href="https://pronounce.renlab.ai/word/raycast"/>
+    <id>https://pronounce.renlab.ai/word/raycast</id>
+    <updated>2026-05-16T17:40:29Z</updated>
+    <summary>Raycast is pronounced "ray cast" (/ˈreɪˌkæst/). "RAY-cast".</summary>
   </entry>
   <entry>
-    <title>Bolt — bolt</title>
-    <link href="https://pronounce.renlab.ai/word/bolt"/>
-    <id>https://pronounce.renlab.ai/word/bolt</id>
-    <updated>2026-05-16T16:36:06Z</updated>
-    <summary>Bolt is pronounced "bolt" (/boʊlt/). "bolt" — one syllable.</summary>
+    <title>Alfred — al fred</title>
+    <link href="https://pronounce.renlab.ai/word/alfred"/>
+    <id>https://pronounce.renlab.ai/word/alfred</id>
+    <updated>2026-05-16T17:40:29Z</updated>
+    <summary>Alfred is pronounced "al fred" (/ˈælfrɛd/). "AL-fred".</summary>
   </entry>
   <entry>
-    <title>Tabby — tab ee</title>
-    <link href="https://pronounce.renlab.ai/word/tabby"/>
-    <id>https://pronounce.renlab.ai/word/tabby</id>
-    <updated>2026-05-16T16:36:06Z</updated>
-    <summary>Tabby is pronounced "tab ee" (/ˈtæbi/). "TAB-ee".</summary>
+    <title>Homebrew — home brew</title>
+    <link href="https://pronounce.renlab.ai/word/homebrew"/>
+    <id>https://pronounce.renlab.ai/word/homebrew</id>
+    <updated>2026-05-16T17:40:29Z</updated>
+    <summary>Homebrew is pronounced "home brew" (/ˈhoʊmˌbruː/). "HOME-brew".</summary>
   </entry>
   <entry>
-    <title>Tantivy — tan ti vee</title>
-    <link href="https://pronounce.renlab.ai/word/tantivy"/>
-    <id>https://pronounce.renlab.ai/word/tantivy</id>
-    <updated>2026-05-16T16:36:06Z</updated>
-    <summary>Tantivy is pronounced "tan ti vee" (/ˈtæntɪvi/). "TAN-ti-vee".</summary>
+    <title>Fedora — fuh dora</title>
+    <link href="https://pronounce.renlab.ai/word/fedora"/>
+    <id>https://pronounce.renlab.ai/word/fedora</id>
+    <updated>2026-05-16T17:40:29Z</updated>
+    <summary>Fedora is pronounced "fuh dora" (/fəˈdɔːrə/). "fuh-DOR-uh".</summary>
   </entry>
   <entry>
-    <title>Cody — co dee</title>
-    <link href="https://pronounce.renlab.ai/word/cody"/>
-    <id>https://pronounce.renlab.ai/word/cody</id>
-    <updated>2026-05-16T16:36:06Z</updated>
-    <summary>Cody is pronounced "co dee" (/ˈkoʊdi/). "KOH-dee".</summary>
+    <title>CentOS — cent O S</title>
+    <link href="https://pronounce.renlab.ai/word/centos"/>
+    <id>https://pronounce.renlab.ai/word/centos</id>
+    <updated>2026-05-16T17:40:29Z</updated>
+    <summary>CentOS is pronounced "cent O S" (/ˌsɛnt ˈoʊ ɛs/). "cent-O-S".</summary>
   </entry>
   <entry>
-    <title>Continue — continue</title>
-    <link href="https://pronounce.renlab.ai/word/continue"/>
-    <id>https://pronounce.renlab.ai/word/continue</id>
-    <updated>2026-05-16T16:36:06Z</updated>
-    <summary>Continue is pronounced "continue" (/kənˈtɪnjuː/). "con-TIN-yoo" — exactly like the verb.</summary>
+    <title>RHEL — rell</title>
+    <link href="https://pronounce.renlab.ai/word/rhel"/>
+    <id>https://pronounce.renlab.ai/word/rhel</id>
+    <updated>2026-05-16T17:40:29Z</updated>
+    <summary>RHEL is pronounced "rell" (/rɛl/). "rell" — Red Hat Enterprise Linux.</summary>
   </entry>
   <entry>
-    <title>Bolt.new — bolt new</title>
-    <link href="https://pronounce.renlab.ai/word/bolt.new"/>
-    <id>https://pronounce.renlab.ai/word/bolt.new</id>
-    <updated>2026-05-16T16:36:06Z</updated>
-    <summary>Bolt.new is pronounced "bolt new" (/ˈboʊlt njuː/). "BOLT-new" — two words.</summary>
+    <title>Manjaro — mun jar oh</title>
+    <link href="https://pronounce.renlab.ai/word/manjaro"/>
+    <id>https://pronounce.renlab.ai/word/manjaro</id>
+    <updated>2026-05-16T17:40:29Z</updated>
+    <summary>Manjaro is pronounced "mun jar oh" (/mənˈdʒɑːroʊ/). "mun-JAR-oh".</summary>
+  </entry>
+  <entry>
+    <title>FreeBSD — free B S D</title>
+    <link href="https://pronounce.renlab.ai/word/freebsd"/>
+    <id>https://pronounce.renlab.ai/word/freebsd</id>
+    <updated>2026-05-16T17:40:29Z</updated>
+    <summary>FreeBSD is pronounced "free B S D" (/ˌfriː biː ɛs ˈdiː/). "free-B-S-D".</summary>
+  </entry>
+  <entry>
+    <title>Puppeteer — puppy teer</title>
+    <link href="https://pronounce.renlab.ai/word/puppeteer"/>
+    <id>https://pronounce.renlab.ai/word/puppeteer</id>
+    <updated>2026-05-16T17:40:29Z</updated>
+    <summary>Puppeteer is pronounced "puppy teer" (/ˌpʌpɪˈtɪər/). "PUP-uh-teer".</summary>
   </entry>
 </feed>

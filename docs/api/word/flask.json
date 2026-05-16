@@ -1,0 +1,12 @@
+{
+  "word": "Flask",
+  "ipa": "/flæsk/",
+  "respelling_us": "flask",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://flask.palletsprojects.com/",
+  "source_label": "Flask",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"flask\" — Python microframework."
+}

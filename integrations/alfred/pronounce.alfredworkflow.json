@@ -1,0 +1,26 @@
+{
+  "name": "Pronounce",
+  "description": "Pronounce developer jargon via say-it",
+  "createdby": "pronounce.renlab.ai",
+  "objects": [
+    {
+      "type": "alfred.workflow.input.scriptfilter",
+      "config": {
+        "keyword": "say",
+        "title": "Pronounce a word",
+        "subtext": "Type a developer term — kubectl, JWT, GIF, …",
+        "withspace": true,
+        "script": "say-it --why \"$1\" 2>/dev/null || echo not-found",
+        "scripttype": "/bin/bash -lc"
+      }
+    },
+    {
+      "type": "alfred.workflow.action.runscript",
+      "config": {
+        "script": "say-it \"$1\"",
+        "scripttype": "/bin/bash -lc"
+      }
+    }
+  ],
+  "readme": "Install say-it first (https://github.com/anzy-renlab-ai/pronounce). Then double-click this workflow file in Alfred to import. Trigger with `say <word>`."
+}

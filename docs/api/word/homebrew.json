@@ -1,0 +1,12 @@
+{
+  "word": "Homebrew",
+  "ipa": "/ˈhoʊmˌbruː/",
+  "respelling_us": "home brew",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://brew.sh/",
+  "source_label": "Homebrew",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "\"HOME-brew\"."
+}

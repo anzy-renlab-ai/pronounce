@@ -1,0 +1,12 @@
+{
+  "word": "Cobra",
+  "ipa": "/ˈkoʊbrə/",
+  "respelling_us": "ko bra",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://cobra.dev/",
+  "source_label": "Cobra",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "\"KO-bra\" — Go CLI library."
+}

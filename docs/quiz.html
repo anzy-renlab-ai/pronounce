@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pronunciation Quiz — Pronounce</title>
+  <meta name="description" content="Test how well you can pronounce developer jargon. Multiple-choice quiz with audio and source citations.">
+  <link rel="canonical" href="https://pronounce.renlab.ai/quiz.html">
+  <meta property="og:title" content="Pronunciation Quiz — How well do you say kubectl, nginx, GIF?">
+  <meta property="og:description" content="Multiple-choice pronunciation quiz for developer jargon. Audio + source citations.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pronounce.renlab.ai/quiz.html">
+  <meta property="og:image" content="https://pronounce.renlab.ai/og.png">
+  <meta name="theme-color" content="#ff6a3d">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    .quiz-shell { max-width: 720px; margin: 0 auto; padding: 56px 24px 96px; }
+    .quiz-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 32px 28px; margin-bottom: 24px; }
+    .quiz-progress { display: flex; justify-content: space-between; color: var(--muted); font-size: 13px; margin-bottom: 14px; letter-spacing: 0.06em; text-transform: uppercase; }
+    .quiz-progress .score { color: var(--accent-2); font-family: var(--mono); }
+    .quiz-word { font-family: var(--mono); font-size: 44px; letter-spacing: -0.01em; margin: 8px 0 4px; }
+    .quiz-prompt { color: var(--muted-strong); margin: 0 0 24px; }
+    .quiz-prompt button { background: var(--accent); color: var(--bg); border: none; padding: 8px 14px; border-radius: 999px; font-weight: 700; cursor: pointer; }
+    .quiz-prompt button:hover { filter: brightness(1.08); }
+    .quiz-options { display: grid; gap: 10px; }
+    .quiz-option { background: var(--card-2); border: 1px solid var(--border); color: var(--fg); text-align: left; padding: 14px 18px; border-radius: 10px; cursor: pointer; font-family: var(--mono); font-size: 17px; transition: all 0.12s; }
+    .quiz-option:hover:not(.locked) { border-color: var(--accent); transform: translateX(2px); }
+    .quiz-option.correct { background: rgba(122,223,187,0.18); border-color: var(--accent-2); color: var(--accent-2); }
+    .quiz-option.wrong { background: rgba(255,106,61,0.15); border-color: var(--accent); color: var(--accent); }
+    .quiz-option.locked { cursor: default; }
+    .quiz-feedback { margin-top: 18px; padding: 14px 18px; border-radius: 10px; background: var(--card-2); border: 1px solid var(--border); font-size: 14.5px; color: var(--muted-strong); display: none; }
+    .quiz-feedback.shown { display: block; }
+    .quiz-feedback .src a { color: var(--link); }
+    .quiz-next { background: var(--accent); border: none; color: var(--bg); padding: 12px 28px; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 15px; margin-top: 18px; }
+    .quiz-next:hover { filter: brightness(1.08); }
+    .quiz-summary { text-align: center; padding: 36px 28px; }
+    .quiz-summary .big { font-size: 72px; font-family: var(--mono); color: var(--accent); margin: 8px 0; }
+    .quiz-summary .lvl { color: var(--accent-2); font-size: 18px; margin-bottom: 22px; }
+    .quiz-summary .actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 14px; }
+    .quiz-summary .actions a, .quiz-summary .actions button { background: var(--accent); color: var(--bg); border: none; padding: 12px 22px; border-radius: 8px; text-decoration: none; font-weight: 700; cursor: pointer; }
+    .quiz-summary .actions .secondary { background: var(--card); color: var(--fg); border: 1px solid var(--border); }
+    .quiz-controls { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 18px; }
+    .quiz-controls .chip { background: var(--card); border: 1px solid var(--border); color: var(--muted-strong); padding: 6px 12px; border-radius: 999px; cursor: pointer; font-size: 13px; }
+    .quiz-controls .chip.active { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+    .quiz-tagline { color: var(--muted-strong); margin: 0 0 24px; font-size: 17px; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#quiz">Skip to quiz</a>
+  <div class="gh-banner">⭐ Like the quiz? <a href="https://github.com/anzy-renlab-ai/pronounce">Star Pronounce on GitHub</a></div>
+  <nav class="topbar">
+    <div class="brand"><a href="./">🔊 Pronounce</a></div>
+    <div class="links">
+      <a href="./browse.html">Browse</a>
+      <a href="./quiz.html">Quiz</a>
+      <a href="./stats.html">Stats</a>
+      <a href="https://github.com/anzy-renlab-ai/pronounce">GitHub</a>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button>
+    </div>
+  </nav>
+
+  <main class="quiz-shell" id="quiz">
+    <h1 style="font-size: 40px; margin: 0 0 8px;">🎯 Pronunciation Quiz</h1>
+    <p class="quiz-tagline">10 random words. 4 choices each. Audio after every answer. How well do you actually know the pronunciation?</p>
+
+    <div class="quiz-controls" id="quiz-controls">
+      <span style="color: var(--muted); font-size: 13px; align-self: center;">difficulty:</span>
+      <button class="chip active" data-mode="all">All 440+</button>
+      <button class="chip" data-mode="contested">Contested only</button>
+      <button class="chip" data-mode="famous">Famous moments</button>
+      <span style="color: var(--muted); font-size: 13px; align-self: center; margin-left: 14px;">length:</span>
+      <button class="chip active" data-len="10">10 q</button>
+      <button class="chip" data-len="20">20 q</button>
+      <button class="chip" data-len="50">50 q</button>
+    </div>
+
+    <div id="quiz-stage"></div>
+  </main>
+
+  <footer class="footer">
+    <p>Pronounce · MIT · <a href="https://github.com/anzy-renlab-ai/pronounce">GitHub</a> · <a href="./about.html">About</a> · <a href="./browse.html">Browse</a></p>
+  </footer>
+
+  <script src="./script.js"></script>
+  <script src="./quiz.js"></script>
+</body>
+</html>

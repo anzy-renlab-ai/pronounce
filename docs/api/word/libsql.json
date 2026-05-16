@@ -1,0 +1,12 @@
+{
+  "word": "libSQL",
+  "ipa": "/ˌlɪb ɛs kjuː ˈɛl/",
+  "respelling_us": "lib S Q L",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/tursodatabase/libsql",
+  "source_label": "libSQL",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"LIB-S-Q-L\" — Turso's SQLite fork."
+}

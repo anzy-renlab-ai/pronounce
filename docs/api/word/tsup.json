@@ -1,0 +1,12 @@
+{
+  "word": "Tsup",
+  "ipa": "/ˌtiː ˈsʌp/",
+  "respelling_us": "T sup",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://tsup.egoist.dev/",
+  "source_label": "tsup",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "\"T-sup\" — esbuild-based bundler."
+}

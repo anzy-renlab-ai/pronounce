@@ -1,0 +1,12 @@
+{
+  "word": "Spark",
+  "ipa": "/spɑːrk/",
+  "respelling_us": "spark",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://spark.apache.org/",
+  "source_label": "Apache Spark",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"spark\" — distributed compute."
+}

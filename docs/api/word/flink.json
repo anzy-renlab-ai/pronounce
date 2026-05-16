@@ -1,0 +1,12 @@
+{
+  "word": "Flink",
+  "ipa": "/flɪŋk/",
+  "respelling_us": "flink",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://flink.apache.org/",
+  "source_label": "Apache Flink",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"flink\" — stream processing."
+}

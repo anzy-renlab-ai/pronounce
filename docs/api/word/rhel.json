@@ -1,0 +1,12 @@
+{
+  "word": "RHEL",
+  "ipa": "/rɛl/",
+  "respelling_us": "rell",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.redhat.com/",
+  "source_label": "Red Hat",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"rell\" — Red Hat Enterprise Linux."
+}
