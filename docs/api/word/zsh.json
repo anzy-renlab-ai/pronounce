@@ -1,0 +1,12 @@
+{
+  "word": "zsh",
+  "ipa": "/ˌziː ˈʃɛl/",
+  "respelling_us": "Z shell",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://zsh.sourceforge.io/",
+  "source_label": "zsh docs",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "\"Z-shell\"."
+}

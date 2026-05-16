@@ -1,0 +1,12 @@
+{
+  "word": "DALL-E",
+  "ipa": "/ˈdɒli/",
+  "respelling_us": "dolly",
+  "alt_ipa": ["/ˌdiː eɪ ɛl ˈiː/"],
+  "alt_respelling_us": ["D A L L E"],
+  "source_url": "https://openai.com/dall-e-2",
+  "source_label": "OpenAI DALL-E",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"DOLL-ee\" (portmanteau of Dalí + WALL-E); some say it letter-by-letter."
+}

@@ -176,6 +176,18 @@ footer.footer a { color: var(--link); text-decoration: none; }
 }
 kbd { background: var(--card-2); border: 1px solid var(--border); border-radius: 4px; padding: 1px 6px; font-family: var(--mono); font-size: 12px; color: var(--accent-2); }
 
+/* Share buttons */
+.share { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-top: 36px; }
+.share h2 { margin: 0 0 8px; font-size: 20px; }
+.share .share-btn { display: inline-block; margin: 6px 4px 0; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-size: 14px; font-weight: 600; border: 1px solid var(--border); transition: transform 0.12s; }
+.share .share-btn:hover { transform: translateY(-1px); }
+.share-twitter { background: #1da1f2; color: #fff !important; border-color: #1da1f2; }
+.share-twitter:hover { background: #0d8bd9; }
+.share-hn { background: #ff6600; color: #fff !important; border-color: #ff6600; }
+.share-hn:hover { background: #e65c00; }
+.share-reddit { background: #ff4500; color: #fff !important; border-color: #ff4500; }
+.share-reddit:hover { background: #e63e00; }
+
 /* GitHub star drive */
 .gh-banner { background: linear-gradient(90deg, #1a1a1f, #2a1a14); border-bottom: 1px solid var(--border); padding: 10px 24px; text-align: center; font-size: 14px; color: var(--muted-strong); }
 .gh-banner a { color: var(--accent); text-decoration: none; font-weight: 600; }
@@ -811,6 +823,14 @@ HTML
 
 $related_html
 
+    <section class="share" style="margin-top: 36px; text-align: center;">
+      <h2>Share this</h2>
+      <p style="color: var(--muted-strong); font-size: 14.5px;">Help one more dev stop saying "$word_esc" wrong.</p>
+      <a class="share-btn share-twitter" href="https://twitter.com/intent/tweet?text=$(printf '%s' "TIL: $word is pronounced \"$resp\". Receipts + 170 more @ pronounce.renlab.ai" | python3 -c 'import sys, urllib.parse; print(urllib.parse.quote(sys.stdin.read()))')&url=$SITE_URL/word/$slug" target="_blank" rel="noopener">𝕏 Share on X / Twitter</a>
+      <a class="share-btn share-hn" href="https://news.ycombinator.com/submitlink?u=$SITE_URL/word/$slug&t=$(printf '%s' "How to pronounce $word" | python3 -c 'import sys, urllib.parse; print(urllib.parse.quote(sys.stdin.read()))')" target="_blank" rel="noopener">Submit to HN</a>
+      <a class="share-btn share-reddit" href="https://www.reddit.com/submit?url=$SITE_URL/word/$slug&title=$(printf '%s' "How to pronounce $word (with source)" | python3 -c 'import sys, urllib.parse; print(urllib.parse.quote(sys.stdin.read()))')" target="_blank" rel="noopener">Reddit</a>
+    </section>
+
     <section class="related" style="margin-top: 36px;">
       <h2>About this entry</h2>
       <p style="color: var(--muted-strong); font-size: 14.5px;">
@@ -842,6 +862,73 @@ HTML
   WORD_COUNT=$((WORD_COUNT + 1))
 done < "$TMP_LIST"
 rm -f "$TMP_LIST"
+
+# ---------------------------------------------------------------------------
+# JSON API — one static .json per entry so chatbots / MCP servers / agents
+# can consume entries without parsing the TSV. The endpoint shape is
+# stable: /api/word/<lowercase-slug>.json
+# ---------------------------------------------------------------------------
+mkdir -p "$DOCS/api/word"
+find "$DOCS/api/word" -name '*.json' -delete 2>/dev/null || true
+awk -F'\t' '
+  function jesc(s) { gsub(/\\/, "\\\\", s); gsub(/"/, "\\\"", s); gsub(/\t/, " ", s); return s }
+  function slug(s,    out) { out = tolower(s); gsub(/[^a-z0-9._-]/, "-", out); return out }
+  function altarr(s, n,    arr, out, i, first) {
+    n = split(s, arr, "|"); out = "["
+    first = 1
+    for (i = 1; i <= n; i++) {
+      if (arr[i] == "") continue
+      if (!first) out = out ", "
+      out = out "\"" jesc(arr[i]) "\""
+      first = 0
+    }
+    return out "]"
+  }
+  !/^#/ && NF >= 3 && $1 != "" && $1 != "word" {
+    word=$1; ipa=$2; resp=$3; alt_ipa=$4; alt_resp=$5;
+    src_url=$6; src_label=$7; cat=$8; conf=$9; notes=$10
+    out = outdir "/" slug(word) ".json"
+    printf "{\n" > out
+    printf "  \"word\": \"%s\",\n", jesc(word) >> out
+    printf "  \"ipa\": \"%s\",\n", jesc(ipa) >> out
+    printf "  \"respelling_us\": \"%s\",\n", jesc(resp) >> out
+    printf "  \"alt_ipa\": %s,\n", altarr(alt_ipa) >> out
+    printf "  \"alt_respelling_us\": %s,\n", altarr(alt_resp) >> out
+    printf "  \"source_url\": \"%s\",\n", jesc(src_url) >> out
+    printf "  \"source_label\": \"%s\",\n", jesc(src_label) >> out
+    printf "  \"category\": \"%s\",\n", jesc(cat) >> out
+    printf "  \"confidence\": \"%s\",\n", jesc(conf) >> out
+    printf "  \"notes\": \"%s\"\n", jesc(notes) >> out
+    print "}" >> out
+    close(out)
+    count++
+  }
+  END { print "Built " count " JSON API entries." }
+' outdir="$DOCS/api/word" "$DICT"
+
+# Index JSON — list of all words for discovery
+{
+  printf "[\n"
+  awk -F'\t' '
+    function jesc(s) { gsub(/\\/, "\\\\", s); gsub(/"/, "\\\"", s); return s }
+    function slug(s,    out) { out = tolower(s); gsub(/[^a-z0-9._-]/, "-", out); return out }
+    BEGIN { first = 1 }
+    !/^#/ && NF >= 3 && $1 != "" && $1 != "word" {
+      if (!first) print ","
+      printf "  {\"word\": \"%s\", \"slug\": \"%s\", \"category\": \"%s\", \"confidence\": \"%s\"}", jesc($1), slug($1), jesc($8), jesc($9)
+      first = 0
+    }
+    END { print "\n]" }
+  ' "$DICT"
+} > "$DOCS/api/words.json"
+echo "Built $DOCS/api/words.json (index)"
+
+# ---------------------------------------------------------------------------
+# IndexNow key file — submit URLs for instant Bing/Yandex indexing
+# ---------------------------------------------------------------------------
+INDEXNOW_KEY="${INDEXNOW_KEY:-83a4f7e21c5b48d6a0fe2c7b91d4e8af}"
+printf '%s' "$INDEXNOW_KEY" > "$DOCS/$INDEXNOW_KEY.txt"
+echo "$INDEXNOW_KEY" > "$DOCS/.indexnow-key"
 
 # ---------------------------------------------------------------------------
 # sitemap.xml — list every URL

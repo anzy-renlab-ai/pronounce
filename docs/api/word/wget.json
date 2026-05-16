@@ -1,0 +1,12 @@
+{
+  "word": "wget",
+  "ipa": "/ˈdʌbljuː ɡɛt/",
+  "respelling_us": "double-you get",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.gnu.org/software/wget/",
+  "source_label": "GNU Wget",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "\"W-get\" (double-you-get)."
+}

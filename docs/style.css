@@ -125,6 +125,18 @@ footer.footer a { color: var(--link); text-decoration: none; }
 }
 kbd { background: var(--card-2); border: 1px solid var(--border); border-radius: 4px; padding: 1px 6px; font-family: var(--mono); font-size: 12px; color: var(--accent-2); }
 
+/* Share buttons */
+.share { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-top: 36px; }
+.share h2 { margin: 0 0 8px; font-size: 20px; }
+.share .share-btn { display: inline-block; margin: 6px 4px 0; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-size: 14px; font-weight: 600; border: 1px solid var(--border); transition: transform 0.12s; }
+.share .share-btn:hover { transform: translateY(-1px); }
+.share-twitter { background: #1da1f2; color: #fff !important; border-color: #1da1f2; }
+.share-twitter:hover { background: #0d8bd9; }
+.share-hn { background: #ff6600; color: #fff !important; border-color: #ff6600; }
+.share-hn:hover { background: #e65c00; }
+.share-reddit { background: #ff4500; color: #fff !important; border-color: #ff4500; }
+.share-reddit:hover { background: #e63e00; }
+
 /* GitHub star drive */
 .gh-banner { background: linear-gradient(90deg, #1a1a1f, #2a1a14); border-bottom: 1px solid var(--border); padding: 10px 24px; text-align: center; font-size: 14px; color: var(--muted-strong); }
 .gh-banner a { color: var(--accent); text-decoration: none; font-weight: 600; }

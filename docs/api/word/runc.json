@@ -1,0 +1,12 @@
+{
+  "word": "runc",
+  "ipa": "/rʌn ˈsiː/",
+  "respelling_us": "run C",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/opencontainers/runc",
+  "source_label": "OCI runc",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "\"run-C\"."
+}

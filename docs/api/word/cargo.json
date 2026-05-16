@@ -1,0 +1,12 @@
+{
+  "word": "Cargo",
+  "ipa": "/ˈkɑːrɡoʊ/",
+  "respelling_us": "car go",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://doc.rust-lang.org/cargo/",
+  "source_label": "Rust",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "\"CAR-go\" — Rust's package manager."
+}

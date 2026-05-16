@@ -1,0 +1,12 @@
+{
+  "word": "Postgres",
+  "ipa": "/ˈpoʊstɡrɛs/",
+  "respelling_us": "post gress",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.postgresql.org/docs/current/faq.html",
+  "source_label": "PostgreSQL FAQ",
+  "category": "product",
+  "confidence": "creator-clarified",
+  "notes": "\"POST-gress\"."
+}

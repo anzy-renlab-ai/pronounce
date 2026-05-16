@@ -1,0 +1,12 @@
+{
+  "word": "char",
+  "ipa": "/tʃɑːr/",
+  "respelling_us": "char",
+  "alt_ipa": ["/kɛər/", "/kɑːr/"],
+  "alt_respelling_us": ["care", "car"],
+  "source_url": "",
+  "source_label": "dev community",
+  "category": "cs-term",
+  "confidence": "contested",
+  "notes": "\"char\" (rhymes with \"car\") in C/C++ camp; \"care\" and \"kar\" also used."
+}

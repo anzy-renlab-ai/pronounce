@@ -1,0 +1,12 @@
+{
+  "word": "LaTeX",
+  "ipa": "/ˈleɪtɛk/",
+  "respelling_us": "lay tek",
+  "alt_ipa": ["/ˈlɑːtɛx/"],
+  "alt_respelling_us": ["la tek"],
+  "source_url": "https://www.latex-project.org/about/",
+  "source_label": "LaTeX project",
+  "category": "tool",
+  "confidence": "creator-clarified",
+  "notes": "Lamport: \"lay-tek\" (or \"lah-tek\"); never \"lay-teks\". Documented on the about page."
+}

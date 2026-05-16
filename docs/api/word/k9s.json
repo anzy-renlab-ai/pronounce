@@ -1,0 +1,12 @@
+{
+  "word": "k9s",
+  "ipa": "/ˈkeɪ naɪnz/",
+  "respelling_us": "K nines",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://k9scli.io/",
+  "source_label": "k9s",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "\"K-nines\" — K8s TUI."
+}

@@ -1,0 +1,12 @@
+{
+  "word": "mypy",
+  "ipa": "/ˈmaɪpaɪ/",
+  "respelling_us": "my pie",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://mypy.readthedocs.io/",
+  "source_label": "mypy",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "\"MY-pie\" — Python type checker."
+}

@@ -1,0 +1,12 @@
+{
+  "word": "SQLite",
+  "ipa": "/ˌɛs kjuː ɛl ˈaɪt/",
+  "respelling_us": "S Q L ite",
+  "alt_ipa": ["/ˈsiːkwəl laɪt/"],
+  "alt_respelling_us": ["sequel ite"],
+  "source_url": "https://www.sqlite.org/famous.html",
+  "source_label": "SQLite docs",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"S-Q-L-ite\" preferred (per project lore)."
+}

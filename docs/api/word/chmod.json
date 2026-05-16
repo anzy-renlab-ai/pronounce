@@ -1,0 +1,12 @@
+{
+  "word": "chmod",
+  "ipa": "/ˌtʃiː ˈmɒd/",
+  "respelling_us": "C H mod",
+  "alt_ipa": ["/ˈtʃæmɒd/"],
+  "alt_respelling_us": ["chuh mod"],
+  "source_url": "",
+  "source_label": "dev community",
+  "category": "cli-tool",
+  "confidence": "contested",
+  "notes": "\"CH-mod\" or \"chuh-MOD\"."
+}

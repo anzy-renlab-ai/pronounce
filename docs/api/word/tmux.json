@@ -1,0 +1,12 @@
+{
+  "word": "tmux",
+  "ipa": "/ˌtiː ˈmʌks/",
+  "respelling_us": "T mux",
+  "alt_ipa": ["/ˈtiːmʌks/"],
+  "alt_respelling_us": ["tee mucks"],
+  "source_url": "",
+  "source_label": "dev community",
+  "category": "tool",
+  "confidence": "contested",
+  "notes": "\"T-mux\" or \"TEE-mucks\"."
+}

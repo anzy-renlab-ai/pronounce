@@ -1,0 +1,12 @@
+{
+  "word": "JWT",
+  "ipa": "/dʒɒt/",
+  "respelling_us": "jot",
+  "alt_ipa": ["/ˌdʒeɪ dʌbljuː ˈtiː/"],
+  "alt_respelling_us": ["J W T"],
+  "source_url": "https://datatracker.ietf.org/doc/html/rfc7519",
+  "source_label": "IETF RFC 7519",
+  "category": "acronym",
+  "confidence": "contested",
+  "notes": "\"jot\" (RFC pronunciation per Section 1) — but letter-by-letter \"J-W-T\" dominates in spoken practice."
+}

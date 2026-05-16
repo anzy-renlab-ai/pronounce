@@ -1,0 +1,12 @@
+{
+  "word": "helm",
+  "ipa": "/hɛlm/",
+  "respelling_us": "helm",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://helm.sh/",
+  "source_label": "Helm docs",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "\"helm\" (the steering wheel)."
+}

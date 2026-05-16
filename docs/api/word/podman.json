@@ -1,0 +1,12 @@
+{
+  "word": "Podman",
+  "ipa": "/ˈpɑːdmən/",
+  "respelling_us": "pod man",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://podman.io/",
+  "source_label": "Podman site",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "\"POD-man\"."
+}

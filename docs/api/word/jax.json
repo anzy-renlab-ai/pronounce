@@ -1,0 +1,12 @@
+{
+  "word": "JAX",
+  "ipa": "/dʒæks/",
+  "respelling_us": "jacks",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://jax.readthedocs.io/",
+  "source_label": "JAX docs",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"jacks\", one syllable. Google's autograd library."
+}

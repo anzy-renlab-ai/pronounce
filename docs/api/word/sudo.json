@@ -1,0 +1,12 @@
+{
+  "word": "sudo",
+  "ipa": "/ˈsuːduː/",
+  "respelling_us": "soo doo",
+  "alt_ipa": ["/ˈsuːdoʊ/"],
+  "alt_respelling_us": ["soo doh"],
+  "source_url": "https://en.wikipedia.org/wiki/Sudo",
+  "source_label": "Wikipedia",
+  "category": "cli-tool",
+  "confidence": "contested",
+  "notes": "\"soo-doo\" (substitute-user-do, Bourne convention) vs \"soo-doh\"."
+}

@@ -1,0 +1,12 @@
+{
+  "word": "Kubernetes",
+  "ipa": "/ˌkuːbərˈnɛtiːz/",
+  "respelling_us": "koober netteez",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://kubernetes.io/",
+  "source_label": "K8s docs",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"koo-ber-NET-eez\". From Greek κυβερνήτης (helmsman)."
+}

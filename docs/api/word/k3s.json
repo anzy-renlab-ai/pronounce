@@ -1,0 +1,12 @@
+{
+  "word": "k3s",
+  "ipa": "/ˌkeɪ θriː ˈɛs/",
+  "respelling_us": "K three S",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://k3s.io/",
+  "source_label": "Rancher",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"K-three-S\" (lightweight K8s)."
+}

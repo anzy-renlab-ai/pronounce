@@ -1,0 +1,12 @@
+{
+  "word": "rsync",
+  "ipa": "/ˈɑːrˌsɪŋk/",
+  "respelling_us": "R sync",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://rsync.samba.org/",
+  "source_label": "rsync",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "\"R-sync\"."
+}

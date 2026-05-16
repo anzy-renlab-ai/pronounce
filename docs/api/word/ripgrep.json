@@ -1,0 +1,12 @@
+{
+  "word": "ripgrep",
+  "ipa": "/ˈrɪpɡrɛp/",
+  "respelling_us": "rip grep",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/BurntSushi/ripgrep",
+  "source_label": "BurntSushi",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "\"RIP-grep\" (the `rg` command)."
+}

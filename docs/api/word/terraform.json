@@ -1,0 +1,12 @@
+{
+  "word": "Terraform",
+  "ipa": "/ˈtɛrəˌfɔːrm/",
+  "respelling_us": "terra form",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.terraform.io/",
+  "source_label": "HashiCorp docs",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "\"TERR-uh-form\"."
+}

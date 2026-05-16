@@ -1,0 +1,12 @@
+{
+  "word": "containerd",
+  "ipa": "/kənˈteɪnər diː/",
+  "respelling_us": "container D",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://containerd.io/",
+  "source_label": "containerd",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"container-D\" (the D is for \"daemon\")."
+}

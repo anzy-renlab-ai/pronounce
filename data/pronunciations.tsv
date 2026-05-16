@@ -207,3 +207,75 @@ wget	/ˈdʌbljuː ɡɛt/	double-you get			https://www.gnu.org/software/wget/	GNU
 SSH	/ˌɛs ɛs ˈeɪtʃ/	S S H			https://en.wikipedia.org/wiki/Secure_Shell	Wikipedia	abbreviation	community-consensus	"S-S-H" letter-by-letter.
 rsync	/ˈɑːrˌsɪŋk/	R sync			https://rsync.samba.org/	rsync	tool	community-consensus	"R-sync".
 htop	/ˈeɪtʃˌtɒp/	H top			https://htop.dev/	htop	tool	community-consensus	"H-top".
+# --- AI / ML acronyms and models commonly mispronounced ---
+LLM	/ˌɛl ɛl ˈɛm/	L L M			https://en.wikipedia.org/wiki/Large_language_model	Wikipedia	acronym	community-consensus	"L-L-M" letter-by-letter — Large Language Model.
+RAG	/ræɡ/	rag			https://en.wikipedia.org/wiki/Retrieval-augmented_generation	Wikipedia	acronym	community-consensus	"rag" (rhymes with "bag") — Retrieval-Augmented Generation.
+MCP	/ˌɛm siː ˈpiː/	M C P			https://modelcontextprotocol.io/	Model Context Protocol	abbreviation	community-consensus	"M-C-P" letter-by-letter — Model Context Protocol (Anthropic).
+LLaMA	/ˈlɑːmə/	llama			https://www.llama.com/	Meta Llama	product	community-consensus	"LLAH-mah" — same as the animal. Not letter-by-letter.
+DALL-E	/ˈdɒli/	dolly	/ˌdiː eɪ ɛl ˈiː/	D A L L E	https://openai.com/dall-e-2	OpenAI DALL-E	product	community-consensus	"DOLL-ee" (portmanteau of Dalí + WALL-E); some say it letter-by-letter.
+Gemini	/ˈdʒɛmɪnaɪ/	jem in eye			https://gemini.google.com/	Google Gemini	product	community-consensus	"JEM-in-eye" — like the zodiac sign.
+GPT	/ˌdʒiː piː ˈtiː/	G P T			https://en.wikipedia.org/wiki/Generative_pre-trained_transformer	Wikipedia	acronym	community-consensus	"G-P-T" letter-by-letter — Generative Pre-trained Transformer.
+Sora	/ˈsɔːrə/	sor ah			https://openai.com/sora	OpenAI Sora	product	community-consensus	"SOR-ah" — OpenAI's video model.
+Midjourney	/ˈmɪdˌdʒɜːrni/	mid journey			https://www.midjourney.com/	Midjourney	product	community-consensus	"MID-journey" — two clear syllables.
+Codex	/ˈkoʊdɛks/	co decks			https://openai.com/codex	OpenAI Codex	product	community-consensus	"CO-decks" — same as the manuscript term.
+# --- Web protocols / specs commonly mispronounced ---
+HTMX	/ˌeɪtʃ tiː ɛm ˈɛks/	H T M X			https://htmx.org/	htmx	tool	community-consensus	"H-T-M-X" letter-by-letter.
+WebAssembly	/ˈwɛbəˌsɛmbli/	web assembly			https://webassembly.org/	WebAssembly	tool	community-consensus	"WEB-assembly" — two-word reading.
+Wasm	/ˈwɒzəm/	wozum	/ˈwɑːsəm/	wahsum	https://webassembly.org/	WebAssembly	abbreviation	contested	"WOZ-um" is most common; "WAHS-um" also heard.
+GraphQL	/ˌɡræf kjuː ˈɛl/	graph Q L			https://graphql.org/	GraphQL	tool	community-consensus	"graph-Q-L" — not "graph quill".
+gRPC	/ˌdʒiː ɑːr piː ˈsiː/	G R P C			https://grpc.io/	gRPC	tool	community-consensus	"G-R-P-C" letter-by-letter. (Some say "gee-R-P-C" stressing initial g.)
+REST	/rɛst/	rest			https://en.wikipedia.org/wiki/REST	Wikipedia	acronym	community-consensus	"rest" — one syllable.
+OAuth	/ˈoʊɔːθ/	oh awth	/ˌoʊ ˈɔːθ/	O auth	https://oauth.net/	OAuth	acronym	contested	"OH-awth" most common; "O-auth" letter-by-O-then-auth also heard.
+JWT	/dʒɒt/	jot	/ˌdʒeɪ dʌbljuː ˈtiː/	J W T	https://datatracker.ietf.org/doc/html/rfc7519	IETF RFC 7519	acronym	contested	"jot" (RFC pronunciation per Section 1) — but letter-by-letter "J-W-T" dominates in spoken practice.
+SAML	/ˈsæməl/	sam ul			https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language	Wikipedia	acronym	community-consensus	"SAM-ul" — like the name Samuel.
+DNS	/ˌdiː ɛn ˈɛs/	D N S			https://en.wikipedia.org/wiki/Domain_Name_System	Wikipedia	abbreviation	community-consensus	"D-N-S" letter-by-letter.
+CIDR	/ˈsaɪdər/	cider			https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing	Wikipedia	acronym	creator-clarified	"cider" — like the apple drink. Documented in CIDR specs.
+# --- Modern languages / runtimes ---
+Gleam	/ɡliːm/	gleem			https://gleam.run/	Gleam	product	community-consensus	"gleem" — one syllable, like the verb.
+Roc	/rɒk/	rock			https://www.roc-lang.org/	Roc	product	community-consensus	"rock" — one syllable, named after the mythical bird.
+Carbon	/ˈkɑːrbən/	carbon			https://github.com/carbon-language	Carbon	product	community-consensus	"CAR-bun" — like the element.
+V	/viː/	V			https://vlang.io/	V (vlang)	product	community-consensus	"V" — just the letter.
+Odin	/ˈoʊdɪn/	oh din			https://odin-lang.org/	Odin	product	community-consensus	"OH-din" — like the Norse god.
+Racket	/ˈrækɪt/	rack et			https://racket-lang.org/	Racket	product	community-consensus	"RACK-et" — like the tennis equipment.
+# --- Build / package tools ---
+Webpack	/ˈwɛbˌpæk/	web pack			https://webpack.js.org/	Webpack	tool	community-consensus	"WEB-pack" — two-syllable.
+Babel	/ˈbæbəl/	bab ul			https://babeljs.io/	Babel	tool	community-consensus	"BAB-ul" — like the biblical tower.
+ESLint	/ˌiː ɛs ˈlɪnt/	E S lint			https://eslint.org/	ESLint	tool	community-consensus	"E-S-lint".
+Prettier	/ˈprɪtiər/	pretty er			https://prettier.io/	Prettier	tool	community-consensus	"PRETTY-er" — comparative of "pretty".
+Turbo	/ˈtɜːrboʊ/	turbo			https://turbo.build/	Turbo	tool	community-consensus	"TUR-bo".
+Nx	/ˌɛn ˈɛks/	N X			https://nx.dev/	Nx	tool	community-consensus	"N-X" letter-by-letter.
+Lerna	/ˈlɜːrnə/	lurn ah			https://lerna.js.org/	Lerna	tool	community-consensus	"LURN-ah".
+Storybook	/ˈstɔːriˌbʊk/	story book			https://storybook.js.org/	Storybook	tool	community-consensus	"STORY-book".
+Playwright	/ˈpleɪˌraɪt/	play right			https://playwright.dev/	Playwright	tool	community-consensus	"PLAY-rite" — like the theatrical term.
+Cypress	/ˈsaɪprəs/	sigh press			https://www.cypress.io/	Cypress	tool	community-consensus	"SIGH-press" — like the tree.
+Vitest	/ˈviːtɛst/	vee test			https://vitest.dev/	Vitest	tool	community-consensus	"VEE-test" — from Vite.
+Jest	/dʒɛst/	jest			https://jestjs.io/	Jest	tool	community-consensus	"jest" — one syllable.
+# --- Companies / SaaS ---
+Heroku	/həˈroʊkuː/	her oh koo			https://www.heroku.com/	Heroku	product	community-consensus	"her-OH-koo".
+Sourcegraph	/ˈsɔːrsˌɡræf/	source graph			https://sourcegraph.com/	Sourcegraph	product	community-consensus	"SOURCE-graph".
+Codeium	/ˈkoʊdiəm/	co dee um			https://codeium.com/	Codeium	product	community-consensus	"KOH-dee-um".
+Replit	/ˈrɛplɪt/	rep lit			https://replit.com/	Replit	product	community-consensus	"REP-lit".
+Hasura	/həˈsʊrə/	huh sue rah			https://hasura.io/	Hasura	product	community-consensus	"huh-SOO-rah".
+Auth0	/ˌɔːθ ˈziːroʊ/	auth zero			https://auth0.com/	Auth0	product	community-consensus	"auth-zero".
+Clerk	/klɜːrk/	clerk			https://clerk.com/	Clerk	product	community-consensus	"clerk" — one syllable.
+Stripe	/straɪp/	stripe			https://stripe.com/	Stripe	product	community-consensus	(See earlier entry.)
+Supabase	/ˈsuːpəˌbeɪs/	super base			https://supabase.com/	Supabase	product	community-consensus	"SOO-puh-base".
+Twilio	/ˈtwɪlioʊ/	twill ee oh			https://www.twilio.com/	Twilio	product	community-consensus	"TWILL-ee-oh".
+Datadog	/ˈdætəˌdɔːɡ/	data dog			https://www.datadoghq.com/	Datadog	product	community-consensus	(See earlier entry.)
+Plaid	/plæd/	plad			https://plaid.com/	Plaid	product	community-consensus	"plad" — one syllable, like the fabric.
+# --- Databases / data infrastructure ---
+Memcached	/ˌmɛm ˈkæʃt/	mem cashed			https://memcached.org/	Memcached	product	community-consensus	"mem-CASHED" — past tense of cache.
+Valkey	/ˈvælki/	val key			https://valkey.io/	Valkey	product	community-consensus	"VAL-key".
+Aerospike	/ˈɛəroʊˌspaɪk/	air oh spike			https://aerospike.com/	Aerospike	product	community-consensus	"AIR-oh-spike".
+SurrealDB	/səˈriːəl diː biː/	sir ee al D B			https://surrealdb.com/	SurrealDB	product	community-consensus	"sir-EE-uhl-D-B".
+Materialize	/məˈtɪriəˌlaɪz/	muh tear ee al ize			https://materialize.com/	Materialize	product	community-consensus	"muh-TEER-ee-uh-lize".
+Kafka	/ˈkɑːfkə/	kaf kah			https://kafka.apache.org/	Apache Kafka	product	community-consensus	"KAHF-kah" — named after the writer.
+Pulsar	/ˈpʌlsɑːr/	pul sar			https://pulsar.apache.org/	Apache Pulsar	product	community-consensus	"PUL-sar".
+RabbitMQ	/ˈræbɪt ɛm kjuː/	rabbit M Q			https://www.rabbitmq.com/	RabbitMQ	product	community-consensus	"RABBIT-M-Q".
+NATS	/næts/	nats			https://nats.io/	NATS	product	community-consensus	"nats" — rhymes with "bats".
+# --- Misc dev tools ---
+Docker	/ˈdɒkər/	dock er			https://www.docker.com/	Docker	product	community-consensus	"DOCK-er" — like the dock worker.
+Jenkins	/ˈdʒɛŋkɪnz/	jen kinz			https://www.jenkins.io/	Jenkins	product	community-consensus	"JEN-kinz" — like the surname.
+GitHub	/ˈɡɪtˌhʌb/	git hub			https://github.com/	GitHub	product	community-consensus	"GIT-hub".
+GitLab	/ˈɡɪtˌlæb/	git lab			https://about.gitlab.com/	GitLab	product	community-consensus	"GIT-lab".
+CircleCI	/ˈsɜːrkəl siː aɪ/	circle C I			https://circleci.com/	CircleCI	product	community-consensus	"CIRCLE-C-I".

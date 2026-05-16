@@ -1,0 +1,12 @@
+{
+  "word": "kubectl",
+  "ipa": "/ˈkuːb kənˌtroʊl/",
+  "respelling_us": "koob control",
+  "alt_ipa": ["/ˈkjuːb kʌtəl/", "/ˌkjuːb siː tiː ˈɛl/"],
+  "alt_respelling_us": ["cube cuddle", "kube C T L"],
+  "source_url": "",
+  "source_label": "",
+  "category": "cli-tool",
+  "confidence": "contested",
+  "notes": "K8s community readings vary widely. \"koob-control\" is heard from Kelsey Hightower and many maintainers; \"cube-cuddle\" is the running meme; some say it letter-by-letter."
+}
