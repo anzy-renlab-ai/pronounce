@@ -1,8 +1,15 @@
-# 🔊 say-it
+# 🔊 say-it · [pronounce.renlab.ai](https://pronounce.renlab.ai)
+
+[![GitHub stars](https://img.shields.io/github/stars/anzy-renlab-ai/pronounce?style=social)](https://github.com/anzy-renlab-ai/pronounce/stargazers)
+[![Live site](https://img.shields.io/badge/live-pronounce.renlab.ai-7adfbb?logo=safari&logoColor=white)](https://pronounce.renlab.ai)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Entries](https://img.shields.io/badge/dictionary-236%20entries-ff6a3d)](https://pronounce.renlab.ai/browse)
+[![Platform](https://img.shields.io/badge/platform-macOS-lightgrey?logo=apple)](https://pronounce.renlab.ai)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 **Pronounce `kubectl` without the cringe.**
 
-*[中文版 →](./README.zh-CN.md)*
+🌐 **[pronounce.renlab.ai](https://pronounce.renlab.ai)** · 📖 [Browse the dictionary](https://pronounce.renlab.ai/browse) · 🤝 [Contribute](CONTRIBUTING.md) · 🗺 [Roadmap](IDEAS.md)
 
 Every developer has been there. You're in a standup, you say "n-jinx" out loud, and someone gently corrects you to "engine-x". Or you spend six months saying "kub-cuttle" before finally hearing "koob-control".
 

@@ -151,4 +151,14 @@ kbd { background: var(--card-2); border: 1px solid var(--border); border-radius:
 .gh-float { position: fixed; bottom: 24px; right: 24px; background: #24292f; color: #fff; padding: 12px 18px; border-radius: 999px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 16px rgba(0,0,0,0.4); border: 1px solid #444c56; font-size: 14px; display: inline-flex; align-items: center; gap: 8px; z-index: 100; transition: transform 0.15s; }
 .gh-float:hover { transform: scale(1.05); background: #2d333b; color: #fff; }
 .gh-float .star { color: #ffd33d; }
+.stats-bar { margin-top: 22px; color: var(--muted); font-size: 14px; }
+.stats-bar strong { color: var(--accent); font-size: 18px; }
+.faq { margin: 56px 0; }
+.faq h2 { font-size: 26px; margin: 0 0 18px; }
+.faq details { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px 20px; margin-bottom: 10px; cursor: pointer; }
+.faq details[open] { background: var(--card-2); }
+.faq summary { font-weight: 600; font-size: 16px; outline: none; }
+.faq summary::marker { color: var(--accent); }
+.faq details p { color: var(--muted-strong); margin: 14px 0 0; line-height: 1.65; }
+.faq details code { background: var(--bg); border: 1px solid var(--border); padding: 1px 6px; border-radius: 3px; color: var(--accent-2); font-size: 0.92em; }
 @media (max-width: 640px) { .gh-float { bottom: 16px; right: 16px; padding: 10px 14px; font-size: 12px; } .gh-banner { font-size: 13px; padding: 8px 16px; } }

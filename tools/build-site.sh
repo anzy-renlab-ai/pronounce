@@ -25,6 +25,10 @@ if [[ ! -f "$DICT" ]]; then
   echo "build-site: dict not found at $DICT" >&2; exit 1
 fi
 
+# Count dict entries (data rows, ignoring comments)
+ENTRY_COUNT="$(awk -F'\t' '!/^#/ && NF>=3 && $1 != "" && $1 != "word"' "$DICT" | wc -l | tr -d ' ')"
+export ENTRY_COUNT
+
 mkdir -p "$DOCS" "$DOCS/word"
 
 # ---------------------------------------------------------------------------
@@ -202,6 +206,16 @@ kbd { background: var(--card-2); border: 1px solid var(--border); border-radius:
 .gh-float { position: fixed; bottom: 24px; right: 24px; background: #24292f; color: #fff; padding: 12px 18px; border-radius: 999px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 16px rgba(0,0,0,0.4); border: 1px solid #444c56; font-size: 14px; display: inline-flex; align-items: center; gap: 8px; z-index: 100; transition: transform 0.15s; }
 .gh-float:hover { transform: scale(1.05); background: #2d333b; color: #fff; }
 .gh-float .star { color: #ffd33d; }
+.stats-bar { margin-top: 22px; color: var(--muted); font-size: 14px; }
+.stats-bar strong { color: var(--accent); font-size: 18px; }
+.faq { margin: 56px 0; }
+.faq h2 { font-size: 26px; margin: 0 0 18px; }
+.faq details { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px 20px; margin-bottom: 10px; cursor: pointer; }
+.faq details[open] { background: var(--card-2); }
+.faq summary { font-weight: 600; font-size: 16px; outline: none; }
+.faq summary::marker { color: var(--accent); }
+.faq details p { color: var(--muted-strong); margin: 14px 0 0; line-height: 1.65; }
+.faq details code { background: var(--bg); border: 1px solid var(--border); padding: 1px 6px; border-radius: 3px; color: var(--accent-2); font-size: 0.92em; }
 @media (max-width: 640px) { .gh-float { bottom: 16px; right: 16px; padding: 10px 14px; font-size: 12px; } .gh-banner { font-size: 13px; padding: 8px 16px; } }
 EOF
 
@@ -440,6 +454,7 @@ cat > "$DOCS/index.html" <<EOF
       <div class="install">
         <code>git clone https://github.com/${GH_REPO}.git &amp;&amp; cd pronounce &amp;&amp; ./install.sh</code>
       </div>
+      <p class="stats-bar"><strong>${ENTRY_COUNT:-236}</strong> entries · sourced from creator interviews, project FAQs, and Wikipedia · MIT licensed</p>
     </header>
 
     <pre class="demo">
@@ -482,8 +497,44 @@ $FAMOUS_HTML
     <div id="entries"></div>
 
     <p style="text-align: center; margin-top: 32px;">
-      <a href="./browse.html" style="color: var(--accent); font-size: 16px;">See all 130+ entries →</a>
+      <a href="./browse.html" style="color: var(--accent); font-size: 16px;">See all ${ENTRY_COUNT:-236} entries →</a>
     </p>
+
+    <section class="faq">
+      <h2>FAQ</h2>
+      <details>
+        <summary>Why not just listen to a YouTube video?</summary>
+        <p>Because you'd have to hunt for the right clip, unmute, wait, and rewind. <code>say-it kubectl</code> plays the right reading three times in 4 seconds. The site is here for when you're not at a terminal.</p>
+      </details>
+      <details>
+        <summary>Why is the audio in the browser different from the CLI?</summary>
+        <p>The CLI uses macOS's built-in <code>say</code> with a tuned respelling. The site uses your browser's Web Speech API, whose voice and pronunciation rules vary by OS and browser. For a contested word like <code>GIF</code> they should agree; for projects with quirky readings the CLI is the canonical one.</p>
+      </details>
+      <details>
+        <summary>How is this different from a regular pronunciation dictionary?</summary>
+        <p>This one is for the names engineers actually use — <code>kubectl</code>, <code>nginx</code>, <code>Pydantic</code>, <code>Knative</code>, <code>Cilium</code>. Webster doesn't cover them; this does, with the additional value that each entry is tagged with a confidence level and (where possible) a citable source.</p>
+      </details>
+      <details>
+        <summary>Why is GIF pronounced "jif" here? I always say "gif".</summary>
+        <p>Both readings are real. The dictionary picks the creator's stated reading as primary ("jif", per Steve Wilhite at the 2013 Webby Awards) and surfaces "gif" as the alternate. Run <code>say-it --alt GIF</code> to hear the alternate. Same pattern for SQL, JSON, char, regex, and the other contested ones.</p>
+      </details>
+      <details>
+        <summary>Will Windows or Linux be supported?</summary>
+        <p>Yes — Windows (PowerShell + System.Speech) and Linux (espeak-ng / cloud TTS) are M2/M3 on the roadmap. The dictionary itself is platform-agnostic; only the playback engine needs the platform-specific backend. PRs welcome.</p>
+      </details>
+      <details>
+        <summary>How do I add a missing project?</summary>
+        <p>Open a PR adding a row to <a href="https://github.com/${GH_REPO}/blob/main/data/pronunciations.tsv">data/pronunciations.tsv</a>. See <a href="https://github.com/${GH_REPO}/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a> for the column format. There's also a <a href="https://github.com/${GH_REPO}/issues/1">pinned issue</a> with a wishlist of words we want next.</p>
+      </details>
+      <details>
+        <summary>Is the source URL field mandatory?</summary>
+        <p>No. If no source exists, leave it blank and mark <code>confidence</code> as <code>community-consensus</code>. We'd rather under-claim than fabricate.</p>
+      </details>
+      <details>
+        <summary>Why does the CLI play "or: gif" after the primary?</summary>
+        <p>Multi-reading words carry context — you should know there's a debate. The audible <code>"or: &lt;alt&gt;"</code> tail makes that perceptible without watching the terminal. Use <code>--solo</code> to skip it once you've internalized the debate.</p>
+      </details>
+    </section>
 
     <div class="gh-cta">
       <h3>⭐ Like it? Star it.</h3>

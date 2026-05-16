@@ -53,6 +53,7 @@
       <div class="install">
         <code>git clone https://github.com/anzy-renlab-ai/pronounce.git &amp;&amp; cd pronounce &amp;&amp; ./install.sh</code>
       </div>
+      <p class="stats-bar"><strong>236</strong> entries · sourced from creator interviews, project FAQs, and Wikipedia · MIT licensed</p>
     </header>
 
     <pre class="demo">
@@ -105,8 +106,44 @@ url               https://en.wikipedia.org/wiki/JSON#Pronunciation</span></pre>
     <div id="entries"></div>
 
     <p style="text-align: center; margin-top: 32px;">
-      <a href="./browse.html" style="color: var(--accent); font-size: 16px;">See all 130+ entries →</a>
+      <a href="./browse.html" style="color: var(--accent); font-size: 16px;">See all 236 entries →</a>
     </p>
+
+    <section class="faq">
+      <h2>FAQ</h2>
+      <details>
+        <summary>Why not just listen to a YouTube video?</summary>
+        <p>Because you'd have to hunt for the right clip, unmute, wait, and rewind. <code>say-it kubectl</code> plays the right reading three times in 4 seconds. The site is here for when you're not at a terminal.</p>
+      </details>
+      <details>
+        <summary>Why is the audio in the browser different from the CLI?</summary>
+        <p>The CLI uses macOS's built-in <code>say</code> with a tuned respelling. The site uses your browser's Web Speech API, whose voice and pronunciation rules vary by OS and browser. For a contested word like <code>GIF</code> they should agree; for projects with quirky readings the CLI is the canonical one.</p>
+      </details>
+      <details>
+        <summary>How is this different from a regular pronunciation dictionary?</summary>
+        <p>This one is for the names engineers actually use — <code>kubectl</code>, <code>nginx</code>, <code>Pydantic</code>, <code>Knative</code>, <code>Cilium</code>. Webster doesn't cover them; this does, with the additional value that each entry is tagged with a confidence level and (where possible) a citable source.</p>
+      </details>
+      <details>
+        <summary>Why is GIF pronounced "jif" here? I always say "gif".</summary>
+        <p>Both readings are real. The dictionary picks the creator's stated reading as primary ("jif", per Steve Wilhite at the 2013 Webby Awards) and surfaces "gif" as the alternate. Run <code>say-it --alt GIF</code> to hear the alternate. Same pattern for SQL, JSON, char, regex, and the other contested ones.</p>
+      </details>
+      <details>
+        <summary>Will Windows or Linux be supported?</summary>
+        <p>Yes — Windows (PowerShell + System.Speech) and Linux (espeak-ng / cloud TTS) are M2/M3 on the roadmap. The dictionary itself is platform-agnostic; only the playback engine needs the platform-specific backend. PRs welcome.</p>
+      </details>
+      <details>
+        <summary>How do I add a missing project?</summary>
+        <p>Open a PR adding a row to <a href="https://github.com/anzy-renlab-ai/pronounce/blob/main/data/pronunciations.tsv">data/pronunciations.tsv</a>. See <a href="https://github.com/anzy-renlab-ai/pronounce/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a> for the column format. There's also a <a href="https://github.com/anzy-renlab-ai/pronounce/issues/1">pinned issue</a> with a wishlist of words we want next.</p>
+      </details>
+      <details>
+        <summary>Is the source URL field mandatory?</summary>
+        <p>No. If no source exists, leave it blank and mark <code>confidence</code> as <code>community-consensus</code>. We'd rather under-claim than fabricate.</p>
+      </details>
+      <details>
+        <summary>Why does the CLI play "or: gif" after the primary?</summary>
+        <p>Multi-reading words carry context — you should know there's a debate. The audible <code>"or: &lt;alt&gt;"</code> tail makes that perceptible without watching the terminal. Use <code>--solo</code> to skip it once you've internalized the debate.</p>
+      </details>
+    </section>
 
     <div class="gh-cta">
       <h3>⭐ Like it? Star it.</h3>
