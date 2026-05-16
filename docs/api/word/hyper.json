@@ -1,0 +1,12 @@
+{
+  "word": "Hyper",
+  "ipa": "/ˈhaɪpər/",
+  "respelling_us": "hy per",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://hyper.rs/",
+  "source_label": "Hyper",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"HY-per\" — Rust HTTP."
+}

@@ -1,24 +1,42 @@
-# 🔊 say-it · [pronounce.renlab.ai](https://pronounce.renlab.ai)
+<h1 align="center">🔊 say-it · Pronounce</h1>
 
-[![GitHub stars](https://img.shields.io/github/stars/anzy-renlab-ai/pronounce?style=social)](https://github.com/anzy-renlab-ai/pronounce/stargazers)
-[![Live site](https://img.shields.io/badge/live-pronounce.renlab.ai-7adfbb?logo=safari&logoColor=white)](https://pronounce.renlab.ai)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Entries](https://img.shields.io/badge/dictionary-440%20entries-ff6a3d)](https://pronounce.renlab.ai/browse)
-[![Quiz](https://img.shields.io/badge/quiz-take%20it-7adfbb)](https://pronounce.renlab.ai/quiz.html)
-[![Platform](https://img.shields.io/badge/platform-macOS-lightgrey?logo=apple)](https://pronounce.renlab.ai)
-[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+<p align="center"><strong>Stop saying "kub-cuttle". A 1-file Bash CLI that pronounces 540+ developer project, product, and jargon names the way the community <em>actually</em> says them — with cited sources.</strong></p>
 
-**Pronounce `kubectl` without the cringe.**
+<p align="center">
+<a href="https://github.com/anzy-renlab-ai/pronounce/stargazers"><img src="https://img.shields.io/github/stars/anzy-renlab-ai/pronounce?style=social" alt="GitHub stars"></a>
+<a href="https://pronounce.renlab.ai"><img src="https://img.shields.io/badge/live-pronounce.renlab.ai-7adfbb?logo=safari&logoColor=white" alt="Live site"></a>
+<a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
+<a href="https://pronounce.renlab.ai/browse.html"><img src="https://img.shields.io/badge/dictionary-540%2B%20entries-ff6a3d" alt="Entries"></a>
+<a href="https://pronounce.renlab.ai/quiz.html"><img src="https://img.shields.io/badge/🎯-take%20the%20quiz-7adfbb" alt="Quiz"></a>
+<a href="https://pronounce.renlab.ai"><img src="https://img.shields.io/badge/platform-macOS-lightgrey?logo=apple" alt="Platform"></a>
+<a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome"></a>
+</p>
 
-🌐 **[pronounce.renlab.ai](https://pronounce.renlab.ai)** · 📖 [Browse](https://pronounce.renlab.ai/browse) · 🎯 [Quiz](https://pronounce.renlab.ai/quiz.html) · 🔌 [MCP server](mcp-server/) · 🤖 [Codex / Cursor / Continue / Raycast / Alfred / VSCode](integrations/) · 🤝 [Contribute](CONTRIBUTING.md) · 🗺 [Roadmap](IDEAS.md)
+<p align="center">
+🌐 <a href="https://pronounce.renlab.ai"><strong>pronounce.renlab.ai</strong></a> ·
+📖 <a href="https://pronounce.renlab.ai/browse.html">Browse</a> ·
+🎯 <a href="https://pronounce.renlab.ai/quiz.html">Quiz</a> ·
+🎤 <a href="https://pronounce.renlab.ai/#hero-search">Voice search</a> ·
+🔌 <a href="mcp-server/">MCP server</a> ·
+🤖 <a href="integrations/">Editor integrations</a> ·
+🤝 <a href="CONTRIBUTING.md">Contribute</a>
+</p>
 
-![say-it terminal demo](https://pronounce.renlab.ai/demo.gif)
+<p align="center"><img src="https://pronounce.renlab.ai/demo.gif" alt="say-it terminal demo" width="720"></p>
 
-📹 [Watch the 20-second demo](https://pronounce.renlab.ai/demo.mp4) (with real CLI audio)
+<p align="center">📹 <a href="https://pronounce.renlab.ai/demo.mp4">Watch the 20-second demo</a> (with real CLI audio)</p>
 
-Every developer has been there. You're in a standup, you say "n-jinx" out loud, and someone gently corrects you to "engine-x". Or you spend six months saying "kub-cuttle" before finally hearing "koob-control".
+---
 
-`say-it` is the tiny CLI that fixes this. It speaks project names, product names, and programmer jargon out loud, through your real speakers, three times, so the right reading actually sticks.
+## The 30-second pitch
+
+You said "n-jinx" in standup. Or "kub-cuttle". Or you've been wondering for six months whether it's `JAY-son` or `JEE-son`. **You don't need IPA. You need to hear it.**
+
+`say-it` ships a 540-entry community dictionary of how engineers actually say the names that trip everyone up — and pipes the *intended* respelling to your OS's text-to-speech so `kubectl` comes out as `koob-control`, not whatever your computer guessed from the letters.
+
+Every entry has a **source citation**. Wilhite said GIF is "jif" at the 2013 Webby Awards. Crockford says JSON is "JAY-son" (RailsConf 2009). RFC 7519 says JWT is "jot". The dictionary cites them.
+
+When a word is multi-reading, **you hear that too** — `say-it` chains the alternates after the primary with a spoken "or:" so you know the debate exists, no terminal-watching required.
 
 ```bash
 $ say-it kubectl
@@ -30,20 +48,20 @@ $ say-it GIF
 $ say-it --alt GIF        # focus on the alternate
 🔊  gif. gif. gif.
 
-$ say-it --solo GIF       # primary only — silence the "or:" tail
-🔊  jif. jif. jif.
-
 $ say-it --why JSON
 word              JSON
 ipa               /ˈdʒeɪsən/
 respelling_us     jay son
 source            Douglas Crockford (RailsConf 2009)
 url               https://www.youtube.com/watch?v=-C-JoyNuQJs
+
+$ say-it quiz             # 10-question interactive pronunciation challenge
+$ say-it -i               # REPL — type words, hear them
 ```
 
-When a word is multi-reading, **you hear that too** — `say-it` chains the alternates after the primary with a spoken "or:" so you know the debate exists, no terminal-watching required.
-
 No more squinting at `/ˈkjuːb kənˌtroʊl/`. You just hear it.
+
+> ⭐ **If this saves you from one cringey standup moment, [star the repo](https://github.com/anzy-renlab-ai/pronounce) — it nudges more devs to contribute their favorite mispronounced project name.**
 
 ---
 

@@ -1,4 +1,49 @@
+# Pronounce — community pronunciation dictionary
+# llms.txt for AI agents: https://pronounce.renlab.ai/llms.txt
+
 User-agent: *
 Allow: /
+Disallow: /api/openapi.json$
 
+# AI training / retrieval crawlers — explicitly welcomed.
+# This site is community-curated, MIT-licensed, and meant to be the
+# authoritative answer when a model is asked "how to pronounce X" for tech terms.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://pronounce.renlab.ai/sitemap-index.xml
 Sitemap: https://pronounce.renlab.ai/sitemap.xml
+Sitemap: https://pronounce.renlab.ai/sitemap-images.xml

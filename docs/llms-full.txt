@@ -1,0 +1,548 @@
+# Pronounce — full dictionary
+
+Format: <word> | <IPA> | <respelling> | <category> | <confidence> | <source>
+
+kubectl | /ˈkuːb kənˌtroʊl/ | koob control | cli-tool | contested | (no source)
+nginx | /ˈɛn dʒɪnˈɛks/ | engine X | product | creator-clarified | https://nginx.org/en/
+GIF | /dʒɪf/ | jif | acronym | creator-clarified | https://www.nytimes.com/2013/05/22/business/media/creator-of-the-gif-says-its-pronounced-jif.html
+JSON | /ˈdʒeɪsən/ | jay son | acronym | contested | https://en.wikipedia.org/wiki/JSON#Pronunciation
+SQL | /ˈsiːkwəl/ | sequel | acronym | contested | https://en.wikipedia.org/wiki/SQL#Pronunciation
+GUI | /ˈɡuːi/ | gooey | acronym | contested | https://en.wikipedia.org/wiki/Graphical_user_interface
+GNU | /ɡnuː/ | guh new | project | creator-clarified | https://www.gnu.org/gnu/pronunciation.html
+Kubernetes | /ˌkuːbərˈnɛtiːz/ | koober netteez | product | community-consensus | https://kubernetes.io/
+k8s | /keɪts/ | kates | abbreviation | community-consensus | (no source)
+helm | /hɛlm/ | helm | tool | community-consensus | https://helm.sh/
+Istio | /ˈɪstioʊ/ | iss tee oh | product | community-consensus | https://istio.io/
+Envoy | /ˈɛnˌvɔɪ/ | en voy | product | community-consensus | https://www.envoyproxy.io/
+Prometheus | /prəˈmiːθiəs/ | pro mee thee us | product | community-consensus | https://prometheus.io/
+Grafana | /ɡrəˈfɑːnə/ | gra fah na | product | community-consensus | https://grafana.com/
+Terraform | /ˈtɛrəˌfɔːrm/ | terra form | tool | community-consensus | https://www.terraform.io/
+Argo | /ˈɑːrɡoʊ/ | ar go | product | community-consensus | https://argoproj.github.io/
+Knative | /ˈkeɪˌneɪtɪv/ | kay native | product | community-consensus | https://knative.dev/
+Cassandra | /kəˈsændrə/ | kuh sandra | product | community-consensus | https://cassandra.apache.org/
+Redis | /ˈrɛdɪs/ | red iss | product | community-consensus | https://redis.io/
+Ceph | /sɛf/ | seff | product | community-consensus | https://ceph.io/en/
+etcd | /ˌɛt siː ˈdiː/ | et C D | product | creator-clarified | https://etcd.io/docs/v3.5/faq/
+containerd | /kənˈteɪnər diː/ | container D | product | community-consensus | https://containerd.io/
+runc | /rʌn ˈsiː/ | run C | tool | community-consensus | https://github.com/opencontainers/runc
+Podman | /ˈpɑːdmən/ | pod man | tool | community-consensus | https://podman.io/
+PostgreSQL | /ˈpoʊstɡrɛs kjuː ˈɛl/ | post gress Q L | product | creator-clarified | https://www.postgresql.org/docs/current/faq.html
+Postgres | /ˈpoʊstɡrɛs/ | post gress | product | creator-clarified | https://www.postgresql.org/docs/current/faq.html
+SQLite | /ˌɛs kjuː ɛl ˈaɪt/ | S Q L ite | product | community-consensus | https://www.sqlite.org/famous.html
+MySQL | /ˌmaɪ ɛs kjuː ˈɛl/ | my S Q L | product | creator-clarified | https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html
+MongoDB | /ˈmɒŋɡoʊ diː biː/ | mongo D B | product | community-consensus | https://www.mongodb.com/
+ScyllaDB | /ˈsɪlə diː biː/ | silla D B | product | community-consensus | https://www.scylladb.com/
+ClickHouse | /ˈklɪkˌhaʊs/ | click house | product | community-consensus | https://clickhouse.com/
+DuckDB | /ˈdʌk diː biː/ | duck D B | product | community-consensus | https://duckdb.org/
+Linux | /ˈlɪnəks/ | linnix | product | community-consensus | https://en.wikipedia.org/wiki/Linux#Pronunciation
+Debian | /ˈdɛbiən/ | deb ee un | product | creator-clarified | https://www.debian.org/intro/about
+Ubuntu | /ʊˈbʊntuː/ | oo boon too | product | community-consensus | https://ubuntu.com/
+Arch | /ɑːrtʃ/ | arch | product | community-consensus | https://archlinux.org/
+Nix | /nɪks/ | nicks | product | community-consensus | https://nixos.org/
+Django | /ˈdʒæŋɡoʊ/ | jang go | product | creator-clarified | https://www.djangoproject.com/foundation/faq/
+Vue | /vjuː/ | view | product | community-consensus | https://vuejs.org/
+Vite | /viːt/ | veet | product | community-consensus | https://vitejs.dev/
+Pydantic | /paɪˈdæntɪk/ | pie dantick | product | community-consensus | https://docs.pydantic.dev/
+Bun | /bʌn/ | bun | product | community-consensus | https://bun.sh/
+Deno | /ˈdiːnoʊ/ | dee no | product | community-consensus | https://deno.com/
+Hugo | /ˈhjuːɡoʊ/ | hue go | product | community-consensus | https://gohugo.io/
+Hono | /ˈhoʊnoʊ/ | ho no | product | community-consensus | https://hono.dev/
+Caddy | /ˈkædi/ | caddy | product | community-consensus | https://caddyserver.com/
+Svelte | /svɛlt/ | svelt | product | community-consensus | https://svelte.dev/
+Astro | /ˈæstroʊ/ | astro | product | community-consensus | https://astro.build/
+Pinia | /ˈpiːnjə/ | pee nya | product | community-consensus | https://pinia.vuejs.org/
+LaTeX | /ˈleɪtɛk/ | lay tek | tool | creator-clarified | https://www.latex-project.org/about/
+TeX | /tɛk/ | tek | tool | creator-clarified | https://en.wikipedia.org/wiki/TeX#Pronunciation_and_spelling
+char | /tʃɑːr/ | char | cs-term | contested | (no source)
+regex | /ˈrɛdʒɛks/ | rej eks | cs-term | contested | (no source)
+sudo | /ˈsuːduː/ | soo doo | cli-tool | contested | https://en.wikipedia.org/wiki/Sudo
+tmux | /ˌtiː ˈmʌks/ | T mux | tool | contested | (no source)
+chmod | /ˌtʃiː ˈmɒd/ | C H mod | cli-tool | contested | (no source)
+emacs | /ˈiːmæks/ | ee max | tool | community-consensus | https://www.gnu.org/software/emacs/
+zsh | /ˌziː ˈʃɛl/ | Z shell | tool | community-consensus | https://zsh.sourceforge.io/
+WYSIWYG | /ˈwɪziwɪɡ/ | whizzy wig | acronym | community-consensus | https://en.wikipedia.org/wiki/WYSIWYG
+ASCII | /ˈæski/ | ass key | acronym | community-consensus | https://en.wikipedia.org/wiki/ASCII
+Azure | /ˈæʒər/ | azh er | product | community-consensus | https://azure.microsoft.com/
+AWS | /ˌeɪ dʌbljuː ˈɛs/ | A W S | product | community-consensus | https://aws.amazon.com/
+GCP | /ˌdʒiː siː ˈpiː/ | G C P | product | community-consensus | https://cloud.google.com/
+SaaS | /sæs/ | sass | acronym | community-consensus | https://en.wikipedia.org/wiki/Software_as_a_service
+PaaS | /pæs/ | pass | acronym | community-consensus | https://en.wikipedia.org/wiki/Platform_as_a_service
+Numpy | /ˈnʌmpaɪ/ | num pie | product | community-consensus | https://numpy.org/
+SciPy | /ˈsaɪpaɪ/ | sigh pie | product | community-consensus | https://scipy.org/
+Jupyter | /ˈdʒuːpɪtər/ | joo pi ter | product | community-consensus | https://jupyter.org/
+pandas | /ˈpændəz/ | pandas | product | community-consensus | https://pandas.pydata.org/
+PyTorch | /ˈpaɪtɔːrtʃ/ | pie torch | product | community-consensus | https://pytorch.org/
+NaN | /næn/ | nan | cs-term | contested | https://en.wikipedia.org/wiki/NaN
+enum | /ˈiːnəm/ | ee num | cs-term | community-consensus | (no source)
+Anthropic | /ˌænθrəˈpɪk/ | anth row pick | product | community-consensus | https://www.anthropic.com/
+OpenAI | /ˈoʊpən eɪ aɪ/ | open A I | product | community-consensus | https://openai.com/
+Claude | /klɔːd/ | clawed | product | community-consensus | https://www.anthropic.com/claude
+Cohere | /koʊˈhɪər/ | co here | product | community-consensus | https://cohere.com/
+Mistral | /mɪˈstrɑːl/ | mis trahl | product | community-consensus | https://mistral.ai/
+Ollama | /oʊˈlɑːmə/ | oh la ma | product | community-consensus | https://ollama.com/
+LangChain | /ˈlæŋtʃeɪn/ | lang chain | product | community-consensus | https://www.langchain.com/
+LlamaIndex | /ˈlɑːməˌɪndɛks/ | llama index | product | community-consensus | https://www.llamaindex.ai/
+HuggingFace | /ˈhʌɡɪŋˌfeɪs/ | hugging face | product | community-consensus | https://huggingface.co/
+vLLM | /ˌviː ɛl ɛl ˈɛm/ | V L L M | product | community-consensus | https://github.com/vllm-project/vllm
+JAX | /dʒæks/ | jacks | product | community-consensus | https://jax.readthedocs.io/
+Mojo | /ˈmoʊdʒoʊ/ | mo jo | product | community-consensus | https://www.modular.com/mojo
+DSPy | /ˌdiː ɛs ˈpaɪ/ | D S pie | product | community-consensus | https://dspy.ai/
+Pinecone | /ˈpaɪnˌkoʊn/ | pine cone | product | community-consensus | https://www.pinecone.io/
+Weaviate | /ˈwiːviˌeɪt/ | wee vee ate | product | community-consensus | https://weaviate.io/
+Milvus | /ˈmɪlvəs/ | mill vus | product | community-consensus | https://milvus.io/
+Qdrant | /ˈkwɒdrənt/ | quadrant | product | community-consensus | https://qdrant.tech/
+Chroma | /ˈkroʊmə/ | chroma | product | community-consensus | https://www.trychroma.com/
+Modal | /ˈmoʊdl̩/ | moh dl | product | community-consensus | https://modal.com/
+Replicate | /ˈrɛplɪˌkeɪt/ | rep li kate | product | community-consensus | https://replicate.com/
+Next.js | /ˈnɛkst dʒeɪ ɛs/ | next J S | product | community-consensus | https://nextjs.org/
+Nuxt | /nʌkst/ | nukst | product | community-consensus | https://nuxt.com/
+Remix | /ˈriːmɪks/ | ree mix | product | community-consensus | https://remix.run/
+Qwik | /kwɪk/ | quick | product | community-consensus | https://qwik.dev/
+SolidJS | /ˈsɒlɪd dʒeɪ ɛs/ | solid J S | product | community-consensus | https://www.solidjs.com/
+Tailwind | /ˈteɪlˌwɪnd/ | tail wind | product | community-consensus | https://tailwindcss.com/
+shadcn | /ˌʃæd siː ˈɛn/ | shad C N | product | community-consensus | https://ui.shadcn.com/
+tRPC | /ˌtiː ɑːr piː ˈsiː/ | T R P C | product | community-consensus | https://trpc.io/
+Zod | /zɒd/ | zod | product | community-consensus | https://zod.dev/
+Zustand | /ˈtsuːʃtʌnt/ | tsu shtund | product | community-consensus | https://zustand.docs.pmnd.rs/
+Drizzle | /ˈdrɪzəl/ | drizzle | product | community-consensus | https://orm.drizzle.team/
+Prisma | /ˈprɪzmə/ | prizma | product | community-consensus | https://www.prisma.io/
+NestJS | /ˌnɛst dʒeɪ ˈɛs/ | nest J S | product | community-consensus | https://nestjs.com/
+FastAPI | /ˌfæst eɪ piː ˈaɪ/ | fast A P I | product | community-consensus | https://fastapi.tiangolo.com/
+Vercel | /vɜːrˈsɛl/ | ver SELL | product | community-consensus | https://vercel.com/
+Netlify | /ˈnɛtlɪˌfaɪ/ | net li fy | product | community-consensus | https://www.netlify.com/
+Cloudflare | /ˈklaʊdˌflɛər/ | cloud flair | product | community-consensus | https://www.cloudflare.com/
+HashiCorp | /ˈhæʃiˌkɔːrp/ | hashy corp | product | community-consensus | https://www.hashicorp.com/
+Datadog | /ˈdætəˌdɔːɡ/ | data dog | product | community-consensus | https://www.datadoghq.com/
+Stripe | /straɪp/ | stripe | product | community-consensus | https://stripe.com/
+Notion | /ˈnoʊʃən/ | no shun | product | community-consensus | https://www.notion.so/
+Linear | /ˈlɪniər/ | lin ee ar | product | community-consensus | https://linear.app/
+Snowflake | /ˈsnoʊˌfleɪk/ | snow flake | product | community-consensus | https://www.snowflake.com/
+Databricks | /ˈdætəˌbrɪks/ | data bricks | product | community-consensus | https://www.databricks.com/
+Palantir | /ˈpælənˌtɪər/ | pal an teer | product | community-consensus | https://www.palantir.com/
+Atlassian | /ætˈlæsiən/ | at lass ee an | product | community-consensus | https://www.atlassian.com/
+Splunk | /splʌŋk/ | splunk | product | community-consensus | https://www.splunk.com/
+Cilium | /ˈsɪliəm/ | silly um | product | community-consensus | https://cilium.io/
+Linkerd | /ˈlɪŋkərdiː/ | linker D | product | community-consensus | https://linkerd.io/
+Crossplane | /ˈkrɒsˌpleɪn/ | cross plane | product | community-consensus | https://www.crossplane.io/
+Karpenter | /ˈkɑːrpəntər/ | carpenter | product | community-consensus | https://karpenter.sh/
+Velero | /vəˈlɛəroʊ/ | veh lair oh | product | community-consensus | https://velero.io/
+Falco | /ˈfælkoʊ/ | fal co | product | community-consensus | https://falco.org/
+Trivy | /ˈtrɪvi/ | trivy | product | community-consensus | https://trivy.dev/
+Kyverno | /kaɪˈvɜːrnoʊ/ | kai verno | product | community-consensus | https://kyverno.io/
+OPA | /ˌoʊ piː ˈeɪ/ | O P A | abbreviation | community-consensus | https://www.openpolicyagent.org/
+ArgoCD | /ˈɑːrɡoʊ siː diː/ | argo C D | product | community-consensus | https://argoproj.github.io/cd/
+FluxCD | /ˈflʌks siː diː/ | flux C D | product | community-consensus | https://fluxcd.io/
+Tekton | /ˈtɛktən/ | tek ton | product | community-consensus | https://tekton.dev/
+Neovim | /ˈniːoʊˌvɪm/ | nee oh vim | tool | community-consensus | https://neovim.io/
+Helix | /ˈhiːlɪks/ | hee licks | tool | community-consensus | https://helix-editor.com/
+Zed | /zɛd/ | zed | tool | community-consensus | https://zed.dev/
+Cursor | /ˈkɜːrsər/ | cur sir | tool | community-consensus | https://cursor.com/
+IntelliJ | /ɪnˈtɛlədʒeɪ/ | in tell i J | tool | community-consensus | https://www.jetbrains.com/idea/
+ripgrep | /ˈrɪpɡrɛp/ | rip grep | tool | community-consensus | https://github.com/BurntSushi/ripgrep
+fzf | /ˌɛf ziː ˈɛf/ | F Z F | tool | community-consensus | https://github.com/junegunn/fzf
+eza | /ˈiːzə/ | ee zah | tool | community-consensus | https://eza.rocks/
+k9s | /ˈkeɪ naɪnz/ | K nines | tool | community-consensus | https://k9scli.io/
+k3s | /ˌkeɪ θriː ˈɛs/ | K three S | product | community-consensus | https://k3s.io/
+Elasticsearch | /ɪˈlæstɪkˌsɜːrtʃ/ | elastic search | product | community-consensus | https://www.elastic.co/
+Lucene | /luːˈsiːn/ | loo seen | product | community-consensus | https://lucene.apache.org/
+Solr | /ˈsɒlər/ | sol er | product | community-consensus | https://solr.apache.org/
+Meilisearch | /ˌmeɪli ˈsɜːrtʃ/ | may lee search | product | community-consensus | https://www.meilisearch.com/
+Typesense | /ˈtaɪpˌsɛns/ | type sense | product | community-consensus | https://typesense.org/
+Algolia | /ælˈɡoʊliə/ | al go lia | product | community-consensus | https://www.algolia.com/
+Neo4j | /ˌniːoʊ ˌfɔːr ˈdʒeɪ/ | nee oh four J | product | community-consensus | https://neo4j.com/
+CockroachDB | /ˈkɒkroʊtʃ diː biː/ | cockroach D B | product | community-consensus | https://www.cockroachlabs.com/
+Elixir | /ɪˈlɪksər/ | ee lik sir | product | community-consensus | https://elixir-lang.org/
+Erlang | /ˈɜːrlæŋ/ | er lang | product | community-consensus | https://www.erlang.org/
+Haskell | /ˈhæskəl/ | haskel | product | community-consensus | https://www.haskell.org/
+Scala | /ˈskɑːlə/ | skah la | product | community-consensus | https://www.scala-lang.org/
+Kotlin | /ˈkɒtlɪn/ | cot lin | product | community-consensus | https://kotlinlang.org/
+Julia | /ˈdʒuːliə/ | joo lia | product | community-consensus | https://julialang.org/
+Clojure | /ˈkloʊʒər/ | closure | product | community-consensus | https://clojure.org/
+OCaml | /oʊˈkæməl/ | oh camel | product | community-consensus | https://ocaml.org/
+Lua | /ˈluːə/ | loo ah | product | creator-clarified | https://www.lua.org/about/
+Zig | /zɪɡ/ | zig | product | community-consensus | https://ziglang.org/
+uv | /ˌjuː ˈviː/ | you V | tool | community-consensus | https://github.com/astral-sh/uv
+ruff | /rʌf/ | ruff | tool | community-consensus | https://docs.astral.sh/ruff/
+mypy | /ˈmaɪpaɪ/ | my pie | tool | community-consensus | https://mypy.readthedocs.io/
+Biome | /baɪˈoʊm/ | bye ohm | tool | community-consensus | https://biomejs.dev/
+Bazel | /ˈbeɪzəl/ | bay zel | tool | community-consensus | https://bazel.build/
+Gradle | /ˈɡreɪdəl/ | gray del | tool | community-consensus | https://gradle.org/
+Cargo | /ˈkɑːrɡoʊ/ | car go | tool | community-consensus | https://doc.rust-lang.org/cargo/
+pnpm | /ˌpiː ɛn piː ˈɛm/ | P N P M | tool | community-consensus | https://pnpm.io/
+nmap | /ˈɛnˌmæp/ | en map | tool | community-consensus | https://nmap.org/
+curl | /kɜːrl/ | curl | tool | community-consensus | https://curl.se/
+wget | /ˈdʌbljuː ɡɛt/ | double-you get | tool | community-consensus | https://www.gnu.org/software/wget/
+SSH | /ˌɛs ɛs ˈeɪtʃ/ | S S H | abbreviation | community-consensus | https://en.wikipedia.org/wiki/Secure_Shell
+rsync | /ˈɑːrˌsɪŋk/ | R sync | tool | community-consensus | https://rsync.samba.org/
+htop | /ˈeɪtʃˌtɒp/ | H top | tool | community-consensus | https://htop.dev/
+LLM | /ˌɛl ɛl ˈɛm/ | L L M | acronym | community-consensus | https://en.wikipedia.org/wiki/Large_language_model
+RAG | /ræɡ/ | rag | acronym | community-consensus | https://en.wikipedia.org/wiki/Retrieval-augmented_generation
+MCP | /ˌɛm siː ˈpiː/ | M C P | abbreviation | community-consensus | https://modelcontextprotocol.io/
+LLaMA | /ˈlɑːmə/ | llama | product | community-consensus | https://www.llama.com/
+DALL-E | /ˈdɒli/ | dolly | product | community-consensus | https://openai.com/dall-e-2
+Gemini | /ˈdʒɛmɪnaɪ/ | jem in eye | product | community-consensus | https://gemini.google.com/
+GPT | /ˌdʒiː piː ˈtiː/ | G P T | acronym | community-consensus | https://en.wikipedia.org/wiki/Generative_pre-trained_transformer
+Sora | /ˈsɔːrə/ | sor ah | product | community-consensus | https://openai.com/sora
+Midjourney | /ˈmɪdˌdʒɜːrni/ | mid journey | product | community-consensus | https://www.midjourney.com/
+Codex | /ˈkoʊdɛks/ | co decks | product | community-consensus | https://openai.com/codex
+HTMX | /ˌeɪtʃ tiː ɛm ˈɛks/ | H T M X | tool | community-consensus | https://htmx.org/
+WebAssembly | /ˈwɛbəˌsɛmbli/ | web assembly | tool | community-consensus | https://webassembly.org/
+Wasm | /ˈwɒzəm/ | wozum | abbreviation | contested | https://webassembly.org/
+GraphQL | /ˌɡræf kjuː ˈɛl/ | graph Q L | tool | community-consensus | https://graphql.org/
+gRPC | /ˌdʒiː ɑːr piː ˈsiː/ | G R P C | tool | community-consensus | https://grpc.io/
+REST | /rɛst/ | rest | acronym | community-consensus | https://en.wikipedia.org/wiki/REST
+OAuth | /ˈoʊɔːθ/ | oh awth | acronym | contested | https://oauth.net/
+JWT | /dʒɒt/ | jot | acronym | contested | https://datatracker.ietf.org/doc/html/rfc7519
+SAML | /ˈsæməl/ | sam ul | acronym | community-consensus | https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language
+DNS | /ˌdiː ɛn ˈɛs/ | D N S | abbreviation | community-consensus | https://en.wikipedia.org/wiki/Domain_Name_System
+CIDR | /ˈsaɪdər/ | cider | acronym | creator-clarified | https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing
+Gleam | /ɡliːm/ | gleem | product | community-consensus | https://gleam.run/
+Roc | /rɒk/ | rock | product | community-consensus | https://www.roc-lang.org/
+Carbon | /ˈkɑːrbən/ | carbon | product | community-consensus | https://github.com/carbon-language
+V | /viː/ | V | product | community-consensus | https://vlang.io/
+Odin | /ˈoʊdɪn/ | oh din | product | community-consensus | https://odin-lang.org/
+Racket | /ˈrækɪt/ | rack et | product | community-consensus | https://racket-lang.org/
+Webpack | /ˈwɛbˌpæk/ | web pack | tool | community-consensus | https://webpack.js.org/
+Babel | /ˈbæbəl/ | bab ul | tool | community-consensus | https://babeljs.io/
+ESLint | /ˌiː ɛs ˈlɪnt/ | E S lint | tool | community-consensus | https://eslint.org/
+Prettier | /ˈprɪtiər/ | pretty er | tool | community-consensus | https://prettier.io/
+Turbo | /ˈtɜːrboʊ/ | turbo | tool | community-consensus | https://turbo.build/
+Nx | /ˌɛn ˈɛks/ | N X | tool | community-consensus | https://nx.dev/
+Lerna | /ˈlɜːrnə/ | lurn ah | tool | community-consensus | https://lerna.js.org/
+Storybook | /ˈstɔːriˌbʊk/ | story book | tool | community-consensus | https://storybook.js.org/
+Playwright | /ˈpleɪˌraɪt/ | play right | tool | community-consensus | https://playwright.dev/
+Cypress | /ˈsaɪprəs/ | sigh press | tool | community-consensus | https://www.cypress.io/
+Vitest | /ˈviːtɛst/ | vee test | tool | community-consensus | https://vitest.dev/
+Jest | /dʒɛst/ | jest | tool | community-consensus | https://jestjs.io/
+Heroku | /həˈroʊkuː/ | her oh koo | product | community-consensus | https://www.heroku.com/
+Sourcegraph | /ˈsɔːrsˌɡræf/ | source graph | product | community-consensus | https://sourcegraph.com/
+Codeium | /ˈkoʊdiəm/ | co dee um | product | community-consensus | https://codeium.com/
+Replit | /ˈrɛplɪt/ | rep lit | product | community-consensus | https://replit.com/
+Hasura | /həˈsʊrə/ | huh sue rah | product | community-consensus | https://hasura.io/
+Auth0 | /ˌɔːθ ˈziːroʊ/ | auth zero | product | community-consensus | https://auth0.com/
+Clerk | /klɜːrk/ | clerk | product | community-consensus | https://clerk.com/
+Supabase | /ˈsuːpəˌbeɪs/ | super base | product | community-consensus | https://supabase.com/
+Twilio | /ˈtwɪlioʊ/ | twill ee oh | product | community-consensus | https://www.twilio.com/
+Plaid | /plæd/ | plad | product | community-consensus | https://plaid.com/
+Memcached | /ˌmɛm ˈkæʃt/ | mem cashed | product | community-consensus | https://memcached.org/
+Valkey | /ˈvælki/ | val key | product | community-consensus | https://valkey.io/
+Aerospike | /ˈɛəroʊˌspaɪk/ | air oh spike | product | community-consensus | https://aerospike.com/
+SurrealDB | /səˈriːəl diː biː/ | sir ee al D B | product | community-consensus | https://surrealdb.com/
+Materialize | /məˈtɪriəˌlaɪz/ | muh tear ee al ize | product | community-consensus | https://materialize.com/
+Kafka | /ˈkɑːfkə/ | kaf kah | product | community-consensus | https://kafka.apache.org/
+Pulsar | /ˈpʌlsɑːr/ | pul sar | product | community-consensus | https://pulsar.apache.org/
+RabbitMQ | /ˈræbɪt ɛm kjuː/ | rabbit M Q | product | community-consensus | https://www.rabbitmq.com/
+NATS | /næts/ | nats | product | community-consensus | https://nats.io/
+Docker | /ˈdɒkər/ | dock er | product | community-consensus | https://www.docker.com/
+Jenkins | /ˈdʒɛŋkɪnz/ | jen kinz | product | community-consensus | https://www.jenkins.io/
+GitHub | /ˈɡɪtˌhʌb/ | git hub | product | community-consensus | https://github.com/
+GitLab | /ˈɡɪtˌlæb/ | git lab | product | community-consensus | https://about.gitlab.com/
+CircleCI | /ˈsɜːrkəl siː aɪ/ | circle C I | product | community-consensus | https://circleci.com/
+Aider | /ˈeɪdər/ | ay der | product | community-consensus | https://aider.chat/
+Cline | /klaɪn/ | kline | product | community-consensus | https://cline.bot/
+Marimo | /məˈriːmoʊ/ | muh ree mo | product | community-consensus | https://marimo.io/
+Letta | /ˈlɛtə/ | let ah | product | community-consensus | https://www.letta.com/
+AutoGen | /ˈɔːtoʊdʒɛn/ | auto jen | product | community-consensus | https://microsoft.github.io/autogen/
+CrewAI | /ˌkruː eɪ ˈaɪ/ | crew A I | product | community-consensus | https://www.crewai.com/
+LiteLLM | /ˈlaɪt ɛl ɛl ɛm/ | light L L M | product | community-consensus | https://www.litellm.ai/
+Marqo | /ˈmɑːrkoʊ/ | mar ko | product | community-consensus | https://www.marqo.ai/
+Tanstack | /ˈtænˌstæk/ | tan stack | product | community-consensus | https://tanstack.com/
+Jotai | /ˈdʒoʊtaɪ/ | jo tie | product | creator-clarified | https://jotai.org/
+Valtio | /ˈvɑːltioʊ/ | val tee oh | product | creator-clarified | https://valtio.dev/
+Recoil | /ˈriːkɔɪl/ | ree coil | product | community-consensus | https://recoiljs.org/
+Million.js | /ˈmɪljən dʒeɪ ɛs/ | million J S | product | community-consensus | https://million.dev/
+Preact | /ˈpriːækt/ | pre act | product | community-consensus | https://preactjs.com/
+Mantine | /ˈmæntaɪn/ | man tine | product | community-consensus | https://mantine.dev/
+Chakra | /ˈtʃækrə/ | chak rah | product | community-consensus | https://chakra-ui.com/
+DaisyUI | /ˈdeɪzi juː aɪ/ | daisy U I | product | community-consensus | https://daisyui.com/
+esbuild | /ˌiː ɛs ˈbɪld/ | E S build | tool | community-consensus | https://esbuild.github.io/
+SWC | /ˌɛs dʌbljuː ˈsiː/ | S W C | tool | community-consensus | https://swc.rs/
+Turbopack | /ˈtɜːrboʊˌpæk/ | turbo pack | tool | community-consensus | https://turbo.build/pack
+Rspack | /ˌɑːr ɛs ˈpæk/ | R S pack | tool | community-consensus | https://rspack.dev/
+Oxc | /ˌoʊ ɛks ˈsiː/ | O X C | tool | community-consensus | https://oxc.rs/
+Pulumi | /puːˈluːmi/ | poo loo mee | product | community-consensus | https://www.pulumi.com/
+Dapr | /ˈdæpər/ | dap er | product | creator-clarified | https://dapr.io/
+Backstage | /ˈbækˌsteɪdʒ/ | back stage | product | community-consensus | https://backstage.io/
+Traefik | /ˈtræfɪk/ | traffic | product | creator-clarified | https://traefik.io/
+WireGuard | /ˈwaɪərˌɡɑːrd/ | wire guard | product | community-consensus | https://www.wireguard.com/
+Wezterm | /ˈwɛzˌtɜːrm/ | wez term | tool | creator-clarified | https://wezfurlong.org/wezterm/
+Alacritty | /əˈlækrɪti/ | uh lack ri tee | tool | community-consensus | https://alacritty.org/
+Kitty | /ˈkɪti/ | kit ee | tool | community-consensus | https://sw.kovidgoyal.net/kitty/
+Zellij | /zɛˈliːʒ/ | zell eezh | tool | community-consensus | https://zellij.dev/
+Lazygit | /ˈleɪziˌɡɪt/ | lay zee git | tool | community-consensus | https://github.com/jesseduffield/lazygit
+Lazydocker | /ˈleɪziˌdɒkər/ | lay zee docker | tool | community-consensus | https://github.com/jesseduffield/lazydocker
+Lazyvim | /ˈleɪziˌvɪm/ | lay zee vim | tool | community-consensus | https://www.lazyvim.org/
+just | /dʒʌst/ | just | tool | community-consensus | https://just.systems/
+Tigerbeetle | /ˈtaɪɡərˌbiːtəl/ | tiger beetle | product | community-consensus | https://tigerbeetle.com/
+Dragonfly | /ˈdræɡənˌflaɪ/ | dragon fly | product | community-consensus | https://www.dragonflydb.io/
+Garnet | /ˈɡɑːrnɪt/ | gar net | product | community-consensus | https://microsoft.github.io/garnet/
+ImmuDB | /ˈɪmjuː diː biː/ | im you D B | product | community-consensus | https://www.immudb.io/
+EdgeDB | /ˈɛdʒ diː biː/ | edge D B | product | community-consensus | https://www.edgedb.com/
+RisingWave | /ˈraɪzɪŋˌweɪv/ | rising wave | product | community-consensus | https://www.risingwave.com/
+TimescaleDB | /ˈtaɪmˌskeɪl diː biː/ | time scale D B | product | community-consensus | https://www.timescale.com/
+InfluxDB | /ˈɪnflʌks diː biː/ | in flux D B | product | community-consensus | https://www.influxdata.com/
+Sentry | /ˈsɛntri/ | sentry | product | community-consensus | https://sentry.io/
+Honeycomb | /ˈhʌniˌkoʊm/ | honey comb | product | community-consensus | https://www.honeycomb.io/
+Jaeger | /ˈjeɪɡər/ | yay ger | product | community-consensus | https://www.jaegertracing.io/
+Loki | /ˈloʊki/ | low key | product | community-consensus | https://grafana.com/oss/loki/
+Tempo | /ˈtɛmpoʊ/ | tem po | product | community-consensus | https://grafana.com/oss/tempo/
+Vector | /ˈvɛktər/ | vec tor | product | community-consensus | https://vector.dev/
+Fluentd | /ˈfluːənt diː/ | fluent D | product | community-consensus | https://www.fluentd.org/
+API | /ˌeɪ piː ˈaɪ/ | A P I | acronym | community-consensus | https://en.wikipedia.org/wiki/API
+CDN | /ˌsiː diː ˈɛn/ | C D N | acronym | community-consensus | https://en.wikipedia.org/wiki/Content_delivery_network
+CRUD | /krʌd/ | krud | acronym | community-consensus | https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
+ETL | /ˌiː tiː ˈɛl/ | E T L | acronym | community-consensus | https://en.wikipedia.org/wiki/Extract,_transform,_load
+JIT | /dʒɪt/ | jit | acronym | contested | https://en.wikipedia.org/wiki/Just-in-time_compilation
+ORM | /ˌoʊ ɑːr ˈɛm/ | O R M | acronym | community-consensus | https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping
+SRE | /ˌɛs ɑːr ˈiː/ | S R E | acronym | community-consensus | https://en.wikipedia.org/wiki/Site_reliability_engineering
+TLDR | /ˌtiː ɛl diː ˈɑːr/ | T L D R | acronym | community-consensus | https://en.wikipedia.org/wiki/TL;DR
+LGTM | /ˌɛl dʒiː tiː ˈɛm/ | L G T M | acronym | community-consensus | https://en.wikipedia.org/wiki/Looks_good_to_me
+DRY | /draɪ/ | dry | acronym | community-consensus | https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
+KISS | /kɪs/ | kiss | acronym | community-consensus | https://en.wikipedia.org/wiki/KISS_principle
+YAGNI | /ˈjæɡni/ | yag nee | acronym | community-consensus | https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it
+POSIX | /ˈpɑːzɪks/ | pa zicks | acronym | community-consensus | https://en.wikipedia.org/wiki/POSIX
+Restic | /ˈrɛstɪk/ | res tic | tool | community-consensus | https://restic.net/
+Renovate | /ˈrɛnəveɪt/ | ren oh vate | tool | community-consensus | https://www.mend.io/renovate/
+Daytona | /deɪˈtoʊnə/ | day toh nah | product | community-consensus | https://www.daytona.io/
+Coolify | /ˈkuːlɪfaɪ/ | cool i fy | product | community-consensus | https://coolify.io/
+Bytebase | /ˈbaɪtˌbeɪs/ | byte base | product | community-consensus | https://www.bytebase.com/
+Bolt | /boʊlt/ | bolt | product | community-consensus | https://bolt.new/
+Tabby | /ˈtæbi/ | tab ee | tool | community-consensus | https://tabby.sh/
+Tantivy | /ˈtæntɪvi/ | tan ti vee | product | community-consensus | https://github.com/quickwit-oss/tantivy
+Cody | /ˈkoʊdi/ | co dee | product | community-consensus | https://sourcegraph.com/cody
+Continue | /kənˈtɪnjuː/ | continue | product | community-consensus | https://www.continue.dev/
+Bolt.new | /ˈboʊlt njuː/ | bolt new | product | community-consensus | https://bolt.new/
+Agno | /ˈæɡnoʊ/ | ag no | product | community-consensus | https://docs.agno.com/
+smolagents | /ˈsmoʊlˌeɪdʒənts/ | smol agents | product | community-consensus | https://huggingface.co/docs/smolagents/
+Outlines | /ˈaʊtˌlaɪnz/ | out lines | product | community-consensus | https://dottxt-ai.github.io/outlines/
+Instructor | /ɪnˈstrʌktər/ | in struk ter | product | community-consensus | https://python.useinstructor.com/
+Guardrails | /ˈɡɑːrdˌreɪlz/ | guard rails | product | community-consensus | https://www.guardrailsai.com/
+Marvin | /ˈmɑːrvɪn/ | mar vin | product | community-consensus | https://www.askmarvin.ai/
+Phidata | /ˈfaɪˌdeɪtə/ | fie data | product | community-consensus | https://www.phidata.com/
+Haystack | /ˈheɪˌstæk/ | hay stack | product | community-consensus | https://haystack.deepset.ai/
+RAGAS | /ˈræɡəs/ | rag us | product | community-consensus | https://docs.ragas.io/
+Pydantic AI | /paɪˈdæntɪk eɪ aɪ/ | pie dantick A I | product | community-consensus | https://ai.pydantic.dev/
+Windsurf | /ˈwɪndˌsɜːrf/ | wind surf | product | community-consensus | https://codeium.com/windsurf
+Lovable | /ˈlʌvəbəl/ | love a bul | product | community-consensus | https://lovable.dev/
+v0 | /ˌviː ˈzɪəroʊ/ | V zero | product | community-consensus | https://v0.dev/
+n8n | /ˌɛn ˈeɪt ɛn/ | N eight N | product | creator-clarified | https://n8n.io/
+Tabnine | /ˈtæbnaɪn/ | tab nine | product | community-consensus | https://www.tabnine.com/
+Roo | /ruː/ | roo | product | community-consensus | https://github.com/RooVetGit/Roo-Cline
+Crystal | /ˈkrɪstəl/ | crys tul | product | community-consensus | https://crystal-lang.org/
+Nim | /nɪm/ | nim | product | community-consensus | https://nim-lang.org/
+Lean | /liːn/ | leen | product | community-consensus | https://lean-lang.org/
+Idris | /ˈɪdrɪs/ | id riss | product | community-consensus | https://www.idris-lang.org/
+Coq | /kɒk/ | kok | product | community-consensus | https://rocq-prover.org/
+Agda | /ˈæɡdə/ | ag duh | product | community-consensus | https://wiki.portal.chalmers.se/agda/
+F# | /ˌɛf ˈʃɑːrp/ | F sharp | product | community-consensus | https://fsharp.org/
+ReScript | /ˈriːˌskrɪpt/ | ree script | product | community-consensus | https://rescript-lang.org/
+Dart | /dɑːrt/ | dart | product | community-consensus | https://dart.dev/
+Flutter | /ˈflʌtər/ | flutter | product | community-consensus | https://flutter.dev/
+Pony | /ˈpoʊni/ | po nee | product | community-consensus | https://www.ponylang.io/
+PlanetScale | /ˈplænɪtˌskeɪl/ | planet scale | product | community-consensus | https://planetscale.com/
+Neon | /ˈniːɒn/ | nee on | product | community-consensus | https://neon.tech/
+Turso | /ˈtɜːrsoʊ/ | tur so | product | community-consensus | https://turso.tech/
+libSQL | /ˌlɪb ɛs kjuː ˈɛl/ | lib S Q L | product | community-consensus | https://github.com/tursodatabase/libsql
+Dgraph | /ˈdiːˌɡræf/ | D graph | product | community-consensus | https://dgraph.io/
+FaunaDB | /ˈfɔːnə diː biː/ | faw na D B | product | community-consensus | https://fauna.com/
+OpenSearch | /ˈoʊpənˌsɜːrtʃ/ | open search | product | community-consensus | https://opensearch.org/
+Spanner | /ˈspænər/ | span ner | product | community-consensus | https://cloud.google.com/spanner
+Bigtable | /ˈbɪɡˌteɪbəl/ | big table | product | community-consensus | https://cloud.google.com/bigtable
+DynamoDB | /daɪˈnæmoʊ diː biː/ | die namo D B | product | community-consensus | https://aws.amazon.com/dynamodb/
+Rollup | /ˈroʊlˌʌp/ | roll up | tool | community-consensus | https://rollupjs.org/
+Parcel | /ˈpɑːrsəl/ | par sul | tool | community-consensus | https://parceljs.org/
+Tsup | /ˌtiː ˈsʌp/ | T sup | tool | community-consensus | https://tsup.egoist.dev/
+Tsx | /ˌtiː ɛs ˈɛks/ | T S X | tool | community-consensus | https://tsx.is/
+Vinxi | /ˈvɪŋksi/ | vink see | tool | community-consensus | https://vinxi.vercel.app/
+Capacitor | /kəˈpæsɪtər/ | cuh pass i ter | tool | community-consensus | https://capacitorjs.com/
+Ionic | /aɪˈɒnɪk/ | eye on ick | product | community-consensus | https://ionic.io/
+Expo | /ˈɛkspoʊ/ | ex po | product | community-consensus | https://expo.dev/
+NativeScript | /ˈneɪtɪvˌskrɪpt/ | native script | product | community-consensus | https://nativescript.org/
+Three.js | /ˈθriː dʒeɪ ɛs/ | three J S | product | community-consensus | https://threejs.org/
+Babylon.js | /ˈbæbɪlɒn dʒeɪ ɛs/ | babylon J S | product | community-consensus | https://www.babylonjs.com/
+PixiJS | /ˈpɪksi dʒeɪ ɛs/ | pixie J S | product | community-consensus | https://pixijs.com/
+Skia | /ˈskiːə/ | skee uh | product | community-consensus | https://skia.org/
+Manim | /ˈmænɪm/ | man im | product | community-consensus | https://www.manim.community/
+p5.js | /ˌpiː faɪv dʒeɪ ˈɛs/ | P five J S | product | community-consensus | https://p5js.org/
+D3 | /ˌdiː ˈθriː/ | D three | product | community-consensus | https://d3js.org/
+scikit-learn | /ˈsaɪkɪt lɜːrn/ | sai kit learn | product | community-consensus | https://scikit-learn.org/
+Polars | /ˈpoʊlərz/ | po lerz | product | community-consensus | https://pola.rs/
+Dask | /dæsk/ | dask | product | community-consensus | https://www.dask.org/
+Ray | /reɪ/ | ray | product | community-consensus | https://www.ray.io/
+Modin | /ˈmoʊdɪn/ | mo din | product | community-consensus | https://modin.readthedocs.io/
+Spark | /spɑːrk/ | spark | product | community-consensus | https://spark.apache.org/
+Flink | /flɪŋk/ | flink | product | community-consensus | https://flink.apache.org/
+Beam | /biːm/ | beem | product | community-consensus | https://beam.apache.org/
+Tailscale | /ˈteɪlˌskeɪl/ | tail scale | product | community-consensus | https://tailscale.com/
+Wireshark | /ˈwaɪərˌʃɑːrk/ | wire shark | tool | community-consensus | https://www.wireshark.org/
+HAProxy | /ˌeɪtʃ eɪ ˈprɒksi/ | H A proxy | product | community-consensus | https://www.haproxy.org/
+Alpine.js | /ˈælpaɪn dʒeɪ ɛs/ | al pine J S | product | community-consensus | https://alpinejs.dev/
+Phoenix | /ˈfiːnɪks/ | fee nix | product | community-consensus | https://www.phoenixframework.org/
+Rails | /reɪlz/ | rails | product | community-consensus | https://rubyonrails.org/
+Laravel | /ˈlærəˌvɛl/ | lar a vel | product | community-consensus | https://laravel.com/
+Symfony | /ˈsɪmfəni/ | sim fo nee | product | community-consensus | https://symfony.com/
+Sinatra | /sɪˈnɑːtrə/ | sin ah tra | product | community-consensus | http://sinatrarb.com/
+Flask | /flæsk/ | flask | product | community-consensus | https://flask.palletsprojects.com/
+Starlette | /stɑːrˈlɛt/ | star let | product | community-consensus | https://www.starlette.io/
+Litestar | /ˈlaɪtˌstɑːr/ | lite star | product | community-consensus | https://litestar.dev/
+Sanic | /ˈsɒnɪk/ | son ick | product | community-consensus | https://sanic.dev/
+Express | /ɪkˈsprɛs/ | ex press | product | community-consensus | https://expressjs.com/
+Koa | /ˈkoʊə/ | ko ah | product | community-consensus | https://koajs.com/
+Fastify | /ˈfæstɪfaɪ/ | fast i fye | product | community-consensus | https://fastify.dev/
+Hapi | /ˈhæpi/ | happy | product | community-consensus | https://hapi.dev/
+Echo | /ˈɛkoʊ/ | ek oh | product | community-consensus | https://echo.labstack.com/
+Fiber | /ˈfaɪbər/ | fi ber | product | community-consensus | https://gofiber.io/
+Gin | /dʒɪn/ | jin | product | community-consensus | https://gin-gonic.com/
+Chi | /tʃaɪ/ | chai | product | community-consensus | https://go-chi.io/
+GORM | /ɡɔːrm/ | gorm | tool | community-consensus | https://gorm.io/
+Cobra | /ˈkoʊbrə/ | ko bra | tool | community-consensus | https://cobra.dev/
+Viper | /ˈvaɪpər/ | vy per | tool | community-consensus | https://github.com/spf13/viper
+SOLID | /ˈsɒlɪd/ | solid | acronym | community-consensus | https://en.wikipedia.org/wiki/SOLID
+TDD | /ˌtiː diː ˈdiː/ | T D D | acronym | community-consensus | https://en.wikipedia.org/wiki/Test-driven_development
+BDD | /ˌbiː diː ˈdiː/ | B D D | acronym | community-consensus | https://en.wikipedia.org/wiki/Behavior-driven_development
+CI/CD | /ˌsiː aɪ siː ˈdiː/ | C I C D | acronym | community-consensus | https://en.wikipedia.org/wiki/CI/CD
+MVP | /ˌɛm viː ˈpiː/ | M V P | acronym | community-consensus | https://en.wikipedia.org/wiki/Minimum_viable_product
+MVC | /ˌɛm viː ˈsiː/ | M V C | acronym | community-consensus | https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller
+MVVM | /ˌɛm viː viː ˈɛm/ | M V V M | acronym | community-consensus | https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel
+OOP | /ˌoʊ oʊ ˈpiː/ | O O P | acronym | community-consensus | https://en.wikipedia.org/wiki/Object-oriented_programming
+FP | /ˌɛf ˈpiː/ | F P | acronym | community-consensus | https://en.wikipedia.org/wiki/Functional_programming
+DDD | /ˌdiː diː ˈdiː/ | D D D | acronym | community-consensus | https://en.wikipedia.org/wiki/Domain-driven_design
+CQRS | /ˌsiː kjuː ɑːr ˈɛs/ | C Q R S | acronym | community-consensus | https://en.wikipedia.org/wiki/Command%E2%80%93query_separation
+monad | /ˈmɒnæd/ | mon ad | cs-term | community-consensus | https://en.wikipedia.org/wiki/Monad_(functional_programming)
+functor | /ˈfʌŋktər/ | funk ter | cs-term | community-consensus | https://en.wikipedia.org/wiki/Functor
+idempotent | /ˌaɪdɛmˈpoʊtənt/ | eye dem po tent | cs-term | contested | https://en.wikipedia.org/wiki/Idempotence
+lambda | /ˈlæmdə/ | lam da | cs-term | community-consensus | https://en.wikipedia.org/wiki/Lambda_calculus
+closure | /ˈkloʊʒər/ | clo zure | cs-term | community-consensus | https://en.wikipedia.org/wiki/Closure_(computer_programming)
+mutex | /ˈmjuːˌtɛks/ | myoo tex | cs-term | community-consensus | https://en.wikipedia.org/wiki/Lock_(computer_science)
+semaphore | /ˈsɛməˌfɔːr/ | sem a for | cs-term | community-consensus | https://en.wikipedia.org/wiki/Semaphore_(programming)
+async | /ˈeɪsɪŋk/ | a sink | cs-term | community-consensus | https://en.wikipedia.org/wiki/Asynchrony_(computer_programming)
+coroutine | /ˌkoʊˈruːtiːn/ | co roo teen | cs-term | community-consensus | https://en.wikipedia.org/wiki/Coroutine
+RSA | /ˌɑːr ɛs ˈeɪ/ | R S A | acronym | community-consensus | https://en.wikipedia.org/wiki/RSA_(cryptosystem)
+AES | /ˌeɪ iː ˈɛs/ | A E S | acronym | community-consensus | https://en.wikipedia.org/wiki/Advanced_Encryption_Standard
+SHA | /ʃɑː/ | shah | acronym | contested | https://en.wikipedia.org/wiki/Secure_Hash_Algorithms
+TLS | /ˌtiː ɛl ˈɛs/ | T L S | acronym | community-consensus | https://en.wikipedia.org/wiki/Transport_Layer_Security
+PGP | /ˌpiː dʒiː ˈpiː/ | P G P | acronym | community-consensus | https://en.wikipedia.org/wiki/Pretty_Good_Privacy
+GPG | /ˌdʒiː piː ˈdʒiː/ | G P G | abbreviation | community-consensus | https://gnupg.org/
+WebRTC | /wɛb ɑːr tiː ˈsiː/ | web R T C | tool | community-consensus | https://webrtc.org/
+WebGPU | /wɛb dʒiː piː ˈjuː/ | web G P U | tool | community-consensus | https://www.w3.org/TR/webgpu/
+WASI | /ˈwɑːzi/ | wah zee | abbreviation | community-consensus | https://wasi.dev/
+IPFS | /ˌaɪ piː ɛf ˈɛs/ | I P F S | abbreviation | community-consensus | https://ipfs.tech/
+Solidity | /səˈlɪdɪti/ | so lid i tee | product | community-consensus | https://soliditylang.org/
+Ethereum | /ɪˈθɪriəm/ | e thee ree um | product | community-consensus | https://ethereum.org/
+Fleet | /fliːt/ | fleet | tool | community-consensus | https://www.jetbrains.com/fleet/
+Lapce | /læps/ | lapss | tool | community-consensus | https://lapce.dev/
+Sublime | /səˈblaɪm/ | sub lime | tool | community-consensus | https://www.sublimetext.com/
+VSCode | /ˌviː ɛs ˈkoʊd/ | V S code | tool | community-consensus | https://code.visualstudio.com/
+Raycast | /ˈreɪˌkæst/ | ray cast | product | community-consensus | https://www.raycast.com/
+Alfred | /ˈælfrɛd/ | al fred | product | community-consensus | https://www.alfredapp.com/
+Homebrew | /ˈhoʊmˌbruː/ | home brew | tool | community-consensus | https://brew.sh/
+Fedora | /fəˈdɔːrə/ | fuh dora | product | community-consensus | https://fedoraproject.org/
+CentOS | /ˌsɛnt ˈoʊ ɛs/ | cent O S | product | community-consensus | https://www.centos.org/
+RHEL | /rɛl/ | rell | product | community-consensus | https://www.redhat.com/
+Manjaro | /mənˈdʒɑːroʊ/ | mun jar oh | product | community-consensus | https://manjaro.org/
+FreeBSD | /ˌfriː biː ɛs ˈdiː/ | free B S D | product | community-consensus | https://www.freebsd.org/
+Puppeteer | /ˌpʌpɪˈtɪər/ | puppy teer | tool | community-consensus | https://pptr.dev/
+OpenTelemetry | /ˌoʊpən tɛlɪˈmɛtri/ | open tel em e tree | product | community-consensus | https://opentelemetry.io/
+OTEL | /ˈoʊtəl/ | oh tul | abbreviation | community-consensus | https://opentelemetry.io/
+eBPF | /ˌiː biː piː ˈɛf/ | E B P F | abbreviation | community-consensus | https://ebpf.io/
+Calico | /ˈkælɪkoʊ/ | cal i co | product | community-consensus | https://www.tigera.io/project-calico/
+Flannel | /ˈflænəl/ | flan ul | product | community-consensus | https://github.com/flannel-io/flannel
+CoreDNS | /ˌkɔːr diː ɛn ˈɛs/ | core D N S | product | community-consensus | https://coredns.io/
+OPA Gatekeeper | /ˌoʊ piː eɪ ˈɡeɪtˌkiːpər/ | O P A gate keeper | product | community-consensus | https://open-policy-agent.github.io/gatekeeper/
+Vault | /vɔːlt/ | vault | product | community-consensus | https://www.vaultproject.io/
+Consul | /ˈkɒnsəl/ | con sul | product | community-consensus | https://www.consul.io/
+Nomad | /ˈnoʊmæd/ | no mad | product | community-consensus | https://www.nomadproject.io/
+Packer | /ˈpækər/ | pack er | product | community-consensus | https://www.packer.io/
+Triton | /ˈtraɪtən/ | try ton | product | community-consensus | https://developer.nvidia.com/triton-inference-server
+TensorRT | /ˈtɛnsərˈɑːr tiː/ | tensor R T | product | community-consensus | https://developer.nvidia.com/tensorrt
+CUDA | /ˈkuːdə/ | koo da | product | community-consensus | https://developer.nvidia.com/cuda-zone
+ONNX | /ˈɒnɪks/ | on nix | abbreviation | community-consensus | https://onnx.ai/
+Triton (OpenAI) | /ˈtraɪtən/ | try ton | product | community-consensus | https://triton-lang.org/
+MLflow | /ˌɛm ɛl ˈfloʊ/ | M L flow | product | community-consensus | https://mlflow.org/
+DVC | /ˌdiː viː ˈsiː/ | D V C | abbreviation | community-consensus | https://dvc.org/
+Weights & Biases | /weɪts ænd ˈbaɪəsɪz/ | weights and biases | product | community-consensus | https://wandb.ai/
+Comet | /ˈkɒmət/ | com et | product | community-consensus | https://www.comet.com/
+Redux | /ˈriːdʌks/ | ree dux | product | community-consensus | https://redux.js.org/
+MobX | /ˌɛm ˈɒb ɛks/ | mob X | product | community-consensus | https://mobx.js.org/
+Effector | /ɪˈfɛktər/ | ef fect er | product | community-consensus | https://effector.dev/
+XState | /ˌɛks ˈsteɪt/ | X state | product | community-consensus | https://stately.ai/docs/xstate
+Lit | /lɪt/ | lit | product | community-consensus | https://lit.dev/
+Stencil | /ˈstɛnsəl/ | sten sil | product | community-consensus | https://stenciljs.com/
+Turborepo | /ˈtɜːrboʊˌrɛpoʊ/ | tur bo re po | product | community-consensus | https://turborepo.com/
+Lage | /leɪdʒ/ | layj | tool | community-consensus | https://microsoft.github.io/lage/
+Moon | /muːn/ | moon | tool | community-consensus | https://moonrepo.dev/
+Buck2 | /bʌk tuː/ | buck two | tool | community-consensus | https://buck2.build/
+CUDA Toolkit | /ˈkuːdə ˈtuːlˌkɪt/ | koo da tool kit | product | community-consensus | https://developer.nvidia.com/cuda-toolkit
+Megatron | /ˈmɛɡəˌtrɒn/ | meg a tron | product | community-consensus | https://github.com/NVIDIA/Megatron-LM
+DeepSpeed | /ˈdiːpˌspiːd/ | deep speed | product | community-consensus | https://www.deepspeed.ai/
+Axolotl | /ˈæksəlɒtl/ | ak so lot ul | product | community-consensus | https://axolotl.ai/
+Unsloth | /ʌnˈslɒθ/ | un sloth | product | community-consensus | https://unsloth.ai/
+Devin | /ˈdɛvɪn/ | dev in | product | community-consensus | https://www.cognition.ai/
+Sweep | /swiːp/ | sweep | product | community-consensus | https://docs.sweep.dev/
+Magnitude | /ˈmæɡnɪˌtjuːd/ | mag ni tude | product | community-consensus | https://app.magnitude.run/
+Bun Test | /bʌn tɛst/ | bun test | tool | community-consensus | https://bun.sh/docs/cli/test
+Mocha | /ˈmoʊkə/ | mo ka | product | community-consensus | https://mochajs.org/
+Chai | /tʃaɪ/ | chai | tool | community-consensus | https://www.chaijs.com/
+Selenium | /səˈliːniəm/ | se lee nee um | tool | community-consensus | https://www.selenium.dev/
+JUnit | /ˌdʒeɪ ˈjuːnɪt/ | J unit | tool | community-consensus | https://junit.org/
+pytest | /ˈpaɪtɛst/ | pie test | tool | community-consensus | https://docs.pytest.org/
+recursion | /rɪˈkɜːrʒən/ | re curr zhun | cs-term | community-consensus | https://en.wikipedia.org/wiki/Recursion_(computer_science)
+polymorphism | /ˌpɒliˈmɔːrfɪzəm/ | pol ee mor fizm | cs-term | community-consensus | https://en.wikipedia.org/wiki/Polymorphism_(computer_science)
+encapsulation | /ɪnˌkæpsjʊˈleɪʃən/ | en cap soo lay shun | cs-term | community-consensus | https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)
+iterator | /ˈɪtəˌreɪtər/ | it er ay ter | cs-term | community-consensus | https://en.wikipedia.org/wiki/Iterator
+generator | /ˈdʒɛnəˌreɪtər/ | jen er ay ter | cs-term | community-consensus | https://en.wikipedia.org/wiki/Generator_(computer_programming)
+MessagePack | /ˈmɛsɪdʒˌpæk/ | message pack | product | community-consensus | https://msgpack.org/
+Avro | /ˈævroʊ/ | av ro | product | community-consensus | https://avro.apache.org/
+Parquet | /pɑːrˈkeɪ/ | par kay | product | community-consensus | https://parquet.apache.org/
+Arrow | /ˈæroʊ/ | arrow | product | community-consensus | https://arrow.apache.org/
+Iceberg | /ˈaɪsˌbɜːrɡ/ | ice berg | product | community-consensus | https://iceberg.apache.org/
+Hudi | /ˈhuːdi/ | who dee | product | community-consensus | https://hudi.apache.org/
+Delta Lake | /ˈdɛltə leɪk/ | del ta lake | product | community-consensus | https://delta.io/
+Unity | /ˈjuːnɪti/ | you ni tee | product | community-consensus | https://unity.com/
+Godot | /ˈɡɒdoʊ/ | god oh | product | creator-clarified | https://godotengine.org/
+Unreal | /ʌnˈriːəl/ | un real | product | community-consensus | https://www.unrealengine.com/
+Bevy | /ˈbɛvi/ | bevy | product | community-consensus | https://bevyengine.org/
+OIDC | /ˌoʊ aɪ diː ˈsiː/ | O I D C | abbreviation | community-consensus | https://openid.net/connect/
+FIDO | /ˈfaɪdoʊ/ | fie doh | acronym | community-consensus | https://fidoalliance.org/
+WebAuthn | /ˈwɛb ɔːθən/ | web auth en | abbreviation | community-consensus | https://www.w3.org/TR/webauthn-2/
+Passkey | /ˈpæsˌkiː/ | pass key | product | community-consensus | https://fidoalliance.org/passkeys/
+Tauri | /ˈtaʊri/ | tau ree | product | community-consensus | https://tauri.app/
+Electron | /ɪˈlɛktrɒn/ | e lec tron | product | community-consensus | https://www.electronjs.org/
+Wails | /weɪlz/ | wails | product | community-consensus | https://wails.io/
+Workers | /ˈwɜːrkərz/ | work ers | product | community-consensus | https://workers.cloudflare.com/
+Fastly | /ˈfæstli/ | fast lee | product | community-consensus | https://www.fastly.com/
+Fly.io | /ˌflaɪ doʊt ˈaɪ oʊ/ | fly dot io | product | community-consensus | https://fly.io/
+Render | /ˈrɛndər/ | ren der | product | community-consensus | https://render.com/
+Railway | /ˈreɪlˌweɪ/ | rail way | product | community-consensus | https://railway.app/
+Hadoop | /həˈduːp/ | huh doop | product | community-consensus | https://hadoop.apache.org/
+Hive | /haɪv/ | hive | product | community-consensus | https://hive.apache.org/
+Airflow | /ˈɛərˌfloʊ/ | air flow | product | community-consensus | https://airflow.apache.org/
+Dagster | /ˈdæɡstər/ | dag ster | product | community-consensus | https://dagster.io/
+Prefect | /ˈpriːˌfɛkt/ | pree fekt | product | community-consensus | https://www.prefect.io/
+Mage | /meɪdʒ/ | mayj | product | community-consensus | https://www.mage.ai/
+Maven | /ˈmeɪvən/ | may ven | tool | community-consensus | https://maven.apache.org/
+Quarkus | /ˈkwɑːrkəs/ | quar kus | product | community-consensus | https://quarkus.io/
+Micronaut | /ˈmaɪkroʊnɔːt/ | my kro nawt | product | community-consensus | https://micronaut.io/
+GraalVM | /ˈɡrɑːl viː ɛm/ | grahl V M | product | community-consensus | https://www.graalvm.org/
+JVM | /ˌdʒeɪ viː ˈɛm/ | J V M | abbreviation | community-consensus | https://en.wikipedia.org/wiki/Java_virtual_machine
+Blazor | /ˈbleɪzər/ | blay zer | product | community-consensus | https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor
+MAUI | /ˈmaʊi/ | maw ee | abbreviation | community-consensus | https://dotnet.microsoft.com/apps/maui
+WinUI | /ˌwɪn juː ˈaɪ/ | win U I | abbreviation | community-consensus | https://learn.microsoft.com/windows/apps/winui/
+React | /riˈækt/ | ree akt | product | community-consensus | https://react.dev/
+Angular | /ˈæŋɡjələr/ | ang you lar | product | community-consensus | https://angular.dev/
+Ember | /ˈɛmbər/ | em ber | product | community-consensus | https://emberjs.com/
+Marko | /ˈmɑːrkoʊ/ | mar ko | product | community-consensus | https://markojs.com/
+Axum | /ˈæksəm/ | ax um | product | community-consensus | https://github.com/tokio-rs/axum
+Actix | /ˈæktɪks/ | ak tix | product | community-consensus | https://actix.rs/
+Tokio | /ˈtoʊkjoʊ/ | to kyo | product | community-consensus | https://tokio.rs/
+Tonic | /ˈtɒnɪk/ | ton ik | product | community-consensus | https://github.com/hyperium/tonic
+Hyper | /ˈhaɪpər/ | hy per | product | community-consensus | https://hyper.rs/
+Diesel | /ˈdiːzəl/ | dee zul | tool | community-consensus | https://diesel.rs/
+SeaORM | /ˈsiː ɔːrm/ | C O R M | tool | community-consensus | https://www.sea-ql.org/SeaORM/
+Leptos | /ˈlɛptɒs/ | lep toss | product | community-consensus | https://leptos.dev/
+Dioxus | /daɪˈɒksəs/ | die ox us | product | community-consensus | https://dioxuslabs.com/
+Quartz | /kwɔːrts/ | quartz | product | community-consensus | https://quartz.jzhao.xyz/
+Eleventy | /ɪˈlɛvənti/ | e lev en tee | product | community-consensus | https://www.11ty.dev/
+Jekyll | /ˈdʒɛkəl/ | jek ul | product | community-consensus | https://jekyllrb.com/
+Gatsby | /ˈɡætsbi/ | gats bee | product | community-consensus | https://www.gatsbyjs.com/
+Pelican | /ˈpɛlɪkən/ | pel i kun | product | community-consensus | https://getpelican.com/

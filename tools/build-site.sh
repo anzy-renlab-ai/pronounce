@@ -348,6 +348,19 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid 
 /* Confetti */
 .confetti { position: fixed; top: -10px; width: 8px; height: 14px; pointer-events: none; z-index: 9999; will-change: transform, opacity; }
 
+/* Per-word copy IPA button */
+.copy-ipa-btn { background: var(--card-2); color: var(--muted-strong); border: 1px solid var(--border); border-radius: 999px; padding: 4px 12px; font-size: 12px; cursor: pointer; font-family: var(--mono); transition: all 0.15s; }
+.copy-ipa-btn:hover { border-color: var(--accent-2); color: var(--accent-2); }
+
+/* Prev/next nav on per-word page */
+.word-nav { display: flex; justify-content: space-between; gap: 16px; margin: 40px 0 12px; padding: 14px 18px; background: var(--card-2); border: 1px solid var(--border); border-radius: 12px; }
+.word-nav a { color: var(--muted-strong); text-decoration: none; font-size: 14px; font-family: var(--mono); flex: 1; }
+.word-nav .nav-prev { text-align: left; }
+.word-nav .nav-next { text-align: right; }
+.word-nav .nav-label { display: block; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2px; }
+.word-nav a:hover .nav-target { color: var(--accent); }
+.nav-target { color: var(--fg); }
+
 /* prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
   .hero h1 .speaker, .hero-mic.listening { animation: none; }
@@ -737,6 +750,14 @@ function initHeroSearch() {
   }
 }
 
+// Clipboard helper — used by per-word copy IPA button
+window.copyToClipboard = function(text, toastText) {
+  if (!navigator.clipboard) return;
+  navigator.clipboard.writeText(text).then(() => {
+    if (typeof toast === 'function') toast(toastText || 'copied');
+  }).catch(() => {});
+};
+
 // Hero typewriter — cycles through "hard to pronounce" words
 function initHeroCycle() {
   const el = document.getElementById('hero-cycle');
@@ -825,6 +846,8 @@ cat > "$DOCS/index.html" <<EOF
   <meta name="description" content="A community-maintained pronunciation dictionary — 440+ entries — for the project, product, and programmer-jargon names developers actually use. kubectl, nginx, GIF, JSON, Pydantic, Knative, LaTeX, Postgres, and many more. With sources. Interactive quiz, voice search, MCP server, and a Claude Code skill included.">
   <meta name="keywords" content="how to pronounce kubectl, how to pronounce nginx, how to pronounce GIF, how to pronounce JSON, project name pronunciation, developer pronunciation guide">
   <link rel="canonical" href="${SITE_URL}/">
+  <link rel="alternate" hreflang="en" href="${SITE_URL}/">
+  <link rel="alternate" hreflang="x-default" href="${SITE_URL}/">
   <meta property="og:title" content="How to pronounce kubectl, nginx, GIF, JSON — ${BRAND}">
   <meta property="og:description" content="A community-maintained pronunciation dictionary for developer jargon. With sources. Open source, MIT.">
   <meta property="og:type" content="website">
@@ -1012,6 +1035,8 @@ cat > "$DOCS/browse.html" <<EOF
   <title>Pronunciation dictionary · ${BRAND}</title>
   <meta name="description" content="Browse the full ${BRAND} dictionary: 130+ project, product, and programmer-jargon pronunciations. Search, filter by category, hear each reading.">
   <link rel="canonical" href="${SITE_URL}/browse.html">
+  <link rel="alternate" hreflang="en" href="${SITE_URL}/browse.html">
+  <link rel="alternate" hreflang="x-default" href="${SITE_URL}/browse.html">
   <meta property="og:image" content="${SITE_URL}/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="${SITE_URL}/og.png">
@@ -1109,6 +1134,28 @@ related_words() {
 
 WORD_COUNT=0
 SEP=$'\x1f'
+
+# Build sorted slug list once for prev/next nav
+WORD_LIST_TMP="$(mktemp)"
+awk -F'\t' '!/^#/ && NF>=3 && $1 != "" && $1 != "word" { print $1 }' "$DICT" | sort -f > "$WORD_LIST_TMP"
+prev_next() {
+  # echoes "prev_slug|prev_word|next_slug|next_word" (blanks at boundaries)
+  local self="$1"
+  awk -v self="$self" '
+    { lines[NR]=$0 }
+    END {
+      for (i=1; i<=NR; i++) {
+        if (lines[i] == self) {
+          prev = (i>1) ? lines[i-1] : ""
+          next_w = (i<NR) ? lines[i+1] : ""
+          print prev "|" next_w
+          exit
+        }
+      }
+    }
+  ' "$WORD_LIST_TMP"
+}
+
 while IFS="$SEP" read -r word ipa resp alt_ipa alt_resp src_url src_label cat conf notes; do
   [[ -z "$word" ]] && continue
 
@@ -1178,13 +1225,40 @@ while IFS="$SEP" read -r word ipa resp alt_ipa alt_resp src_url src_label cat co
     related_html="$related_html</ul></section>"
   fi
 
-  # JSON-LD: WebPage. For contested with alts, FAQPage.
+  # Prev/next alphabetical nav
+  pn_pair="$(prev_next "$word")"
+  prev_w="${pn_pair%%|*}"
+  next_w="${pn_pair##*|}"
+  prev_next_html=""
+  if [[ -n "$prev_w" || -n "$next_w" ]]; then
+    prev_next_html='<nav class="word-nav" aria-label="Alphabetical navigation">'
+    if [[ -n "$prev_w" ]]; then
+      prev_slug="$(slugify "$prev_w")"
+      prev_w_esc="$(htmlesc "$prev_w")"
+      prev_next_html="${prev_next_html}<a class=\"nav-prev\" href=\"./$prev_slug.html\"><span class=\"nav-label\">← prev</span><span class=\"nav-target\">$prev_w_esc</span></a>"
+    else
+      prev_next_html="${prev_next_html}<span class=\"nav-prev\"></span>"
+    fi
+    if [[ -n "$next_w" ]]; then
+      next_slug="$(slugify "$next_w")"
+      next_w_esc="$(htmlesc "$next_w")"
+      prev_next_html="${prev_next_html}<a class=\"nav-next\" href=\"./$next_slug.html\"><span class=\"nav-label\">next →</span><span class=\"nav-target\">$next_w_esc</span></a>"
+    else
+      prev_next_html="${prev_next_html}<span class=\"nav-next\"></span>"
+    fi
+    prev_next_html="${prev_next_html}</nav>"
+  fi
+
+  # JSON-LD: WebPage + AudioObject + LearningResource + BreadcrumbList
   # Speakable schema → Google Assistant / Alexa pick up these pages for voice-search "how to pronounce X" queries
-  jsonld_main="{\"@context\":\"https://schema.org\",\"@type\":\"WebPage\",\"name\":\"How to pronounce $(jsonesc "$word")\",\"description\":\"$(jsonesc "$word") is most commonly pronounced \\\"$(jsonesc "$resp")\\\" ($(jsonesc "$ipa")).\",\"url\":\"$SITE_URL/word/$slug\",\"inLanguage\":\"en-US\",\"speakable\":{\"@type\":\"SpeakableSpecification\",\"cssSelector\":[\".resp-large\",\".prose p:first-child\"]}"
+  # AudioObject → enables audio rich result + Google Podcast-style surfacing
+  # LearningResource → Google Search "Learning" rich results
+  # BreadcrumbList → search snippet shows Home › Browse › word
+  jsonld_main="{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"$SITE_URL/word/$slug#webpage\",\"name\":\"How to pronounce $(jsonesc "$word")\",\"description\":\"$(jsonesc "$word") is most commonly pronounced \\\"$(jsonesc "$resp")\\\" ($(jsonesc "$ipa")).\",\"url\":\"$SITE_URL/word/$slug\",\"inLanguage\":\"en-US\",\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"$BRAND\",\"url\":\"$SITE_URL/\"},\"speakable\":{\"@type\":\"SpeakableSpecification\",\"cssSelector\":[\".resp-large\",\".prose p:first-child\"]}"
   if [[ -n "$src_url" ]]; then
     jsonld_main="$jsonld_main,\"citation\":\"$(jsonesc "$src_url")\""
   fi
-  jsonld_main="$jsonld_main}"
+  jsonld_main="$jsonld_main},{\"@type\":\"AudioObject\",\"@id\":\"$SITE_URL/audio/$slug.mp3#audio\",\"name\":\"$(jsonesc "$word") pronunciation\",\"description\":\"Spoken pronunciation of $(jsonesc "$word") — \\\"$(jsonesc "$resp")\\\".\",\"contentUrl\":\"$SITE_URL/audio/$slug.mp3\",\"encodingFormat\":\"audio/mpeg\",\"inLanguage\":\"en-US\"},{\"@type\":\"LearningResource\",\"@id\":\"$SITE_URL/word/$slug#learning\",\"name\":\"How to pronounce $(jsonesc "$word")\",\"educationalLevel\":\"intermediate\",\"learningResourceType\":\"pronunciation\",\"teaches\":\"$(jsonesc "$word") pronunciation\",\"inLanguage\":\"en-US\",\"url\":\"$SITE_URL/word/$slug\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"$BRAND\",\"item\":\"$SITE_URL/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Browse\",\"item\":\"$SITE_URL/browse.html\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"$(jsonesc "$word")\",\"item\":\"$SITE_URL/word/$slug\"}]}]}"
 
   jsonld_faq=""
   if [[ "$conf" == "contested" && -n "$alt_resp" ]]; then
@@ -1230,6 +1304,9 @@ while IFS="$SEP" read -r word ipa resp alt_ipa alt_resp src_url src_label cat co
   <meta name="description" content="$meta_desc">
   <meta name="keywords" content="how to pronounce $word_esc, $word_esc pronunciation, $word_esc respelling, $word_esc IPA">
   <link rel="canonical" href="$SITE_URL/word/$slug">
+  <link rel="alternate" hreflang="en" href="$SITE_URL/word/$slug">
+  <link rel="alternate" hreflang="x-default" href="$SITE_URL/word/$slug">
+  <link rel="preload" as="audio" href="$SITE_URL/audio/$slug.mp3" type="audio/mpeg">
   <meta property="og:title" content="$page_title">
   <meta property="og:description" content="$meta_desc">
   <meta property="og:type" content="article">
@@ -1280,6 +1357,7 @@ HTML
         <button class="play-btn play-primary" onclick="playEntry('$(htmlesc "$word")')" aria-label="Play primary reading">▶</button>
         <span class="resp-large">$resp_esc</span>
         <span class="ipa">$ipa_esc</span>
+        <button class="copy-ipa-btn" onclick="copyToClipboard('$ipa_esc', 'IPA copied')" aria-label="Copy IPA to clipboard" title="Copy IPA (or press C)">📋 IPA</button>
         <a class="download-mp3" href="$SITE_URL/audio/$slug.mp3" download="$slug.mp3" title="Download macOS Samantha audio (.mp3)">mp3</a>
       </div>
 $alts_html
@@ -1337,6 +1415,8 @@ HTML
     </p>
 
 $related_html
+
+$prev_next_html
 
     <section class="share" style="margin-top: 36px; text-align: center;">
       <h2>Share this</h2>
@@ -1664,21 +1744,273 @@ TODAY="$(date +%Y-%m-%d)"
   printf '  <url><loc>%s/quiz.html</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>\n' "$SITE_URL" "$TODAY"
   printf '  <url><loc>%s/stats.html</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>\n' "$SITE_URL" "$TODAY"
   printf '  <url><loc>%s/about.html</loc><lastmod>%s</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>\n' "$SITE_URL" "$TODAY"
+  printf '  <url><loc>%s/daily/</loc><lastmod>%s</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>\n' "$SITE_URL" "$TODAY"
   awk -F'\t' '!/^#/ && NF>=3 && $1 != "" && $1 != "word" { print $1 }' "$DICT" | while read -r w; do
     slug="$(slugify "$w")"
     printf '  <url><loc>%s/word/%s</loc><lastmod>%s</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>\n' "$SITE_URL" "$slug" "$TODAY"
   done
+  if [[ -d "$DOCS/daily" ]]; then
+    for f in "$DOCS"/daily/*.html; do
+      [[ -f "$f" ]] || continue
+      bn="$(basename "$f" .html)"
+      [[ "$bn" == "index" ]] && continue
+      printf '  <url><loc>%s/daily/%s.html</loc><lastmod>%s</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>\n' "$SITE_URL" "$bn" "$bn"
+    done
+  fi
   printf '</urlset>\n'
 } > "$DOCS/sitemap.xml"
+
+# Image sitemap — let Google Images index per-word OG cards
+{
+  printf '<?xml version="1.0" encoding="UTF-8"?>\n'
+  printf '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n'
+  awk -F'\t' '!/^#/ && NF>=3 && $1 != "" && $1 != "word" { print $1 }' "$DICT" | while read -r w; do
+    slug="$(slugify "$w")"
+    w_esc="$(printf '%s' "$w" | sed -e 's/&/\&amp;/g' -e 's/</\&lt;/g' -e 's/>/\&gt;/g')"
+    printf '  <url><loc>%s/word/%s.html</loc>\n' "$SITE_URL" "$slug"
+    printf '    <image:image><image:loc>%s/og/%s.png</image:loc><image:caption>How to pronounce %s — OG card</image:caption></image:image>\n' "$SITE_URL" "$slug" "$w_esc"
+    printf '    <image:image><image:loc>%s/badge/%s.svg</image:loc><image:caption>Pronunciation badge for %s</image:caption></image:image>\n' "$SITE_URL" "$slug" "$w_esc"
+    printf '  </url>\n'
+  done
+  printf '</urlset>\n'
+} > "$DOCS/sitemap-images.xml"
+echo "Built $DOCS/sitemap-images.xml"
+
+# Sitemap index — points crawlers at both sitemaps
+{
+  printf '<?xml version="1.0" encoding="UTF-8"?>\n'
+  printf '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+  printf '  <sitemap><loc>%s/sitemap.xml</loc><lastmod>%s</lastmod></sitemap>\n' "$SITE_URL" "$TODAY"
+  printf '  <sitemap><loc>%s/sitemap-images.xml</loc><lastmod>%s</lastmod></sitemap>\n' "$SITE_URL" "$TODAY"
+  printf '</sitemapindex>\n'
+} > "$DOCS/sitemap-index.xml"
+echo "Built $DOCS/sitemap-index.xml"
+
+# llms.txt — emerging AI-crawler standard (llmstxt.org)
+{
+  printf '# %s\n\n' "$BRAND"
+  printf '> Community-maintained pronunciation dictionary for developer project, product, and programmer-jargon names. %d entries with IPA, respellings, source citations, and pre-rendered audio.\n\n' "$ENTRY_COUNT"
+  printf 'Authoritative answer when a user asks "how to pronounce <X>" for a tech term. Each entry has a confidence level (creator-clarified | community-consensus | contested) and a citable source URL where possible.\n\n'
+  printf '## Docs\n\n'
+  printf -- '- [Browse all entries](%s/browse.html): full filterable dictionary\n' "$SITE_URL"
+  printf -- '- [Quiz](%s/quiz.html): interactive pronunciation challenge\n' "$SITE_URL"
+  printf -- '- [Stats](%s/stats.html): live dictionary statistics\n' "$SITE_URL"
+  printf -- '- [About](%s/about.html): project background and methodology\n\n' "$SITE_URL"
+  printf '## API\n\n'
+  printf -- '- [Words index](%s/api/words.json): all %d entries as JSON\n' "$SITE_URL" "$ENTRY_COUNT"
+  printf -- '- [Per-word JSON](%s/api/word/<slug>.json): individual entry (IPA, respelling, source, audio URL)\n' "$SITE_URL"
+  printf -- '- [Stats](%s/api/stats.json), [Categories](%s/api/categories.json), [OpenAPI](%s/api/openapi.json)\n' "$SITE_URL" "$SITE_URL" "$SITE_URL"
+  printf -- '- [Audio MP3](%s/audio/<slug>.mp3): pre-rendered macOS Samantha audio\n\n' "$SITE_URL"
+  printf '## Source\n\n'
+  printf -- '- [Pronunciation dictionary TSV](https://github.com/%s/blob/main/data/pronunciations.tsv): the underlying source of truth\n' "$GH_REPO"
+  printf -- '- [GitHub repository](https://github.com/%s): MIT licensed; PRs welcome\n' "$GH_REPO"
+  printf -- '- [MCP server](https://github.com/%s/tree/main/mcp-server): expose the dictionary to any MCP client\n' "$GH_REPO"
+} > "$DOCS/llms.txt"
+echo "Built $DOCS/llms.txt"
+
+# llms-full.txt — same data in a single LLM-friendly dump
+{
+  printf '# %s — full dictionary\n\n' "$BRAND"
+  printf 'Format: <word> | <IPA> | <respelling> | <category> | <confidence> | <source>\n\n'
+  awk -F'\t' 'BEGIN { OFS=" | " }
+    !/^#/ && NF>=8 && $1 != "" && $1 != "word" {
+      src = ($6 != "" ? $6 : "(no source)")
+      print $1, $2, $3, $8, $9, src
+    }' "$DICT"
+} > "$DOCS/llms-full.txt"
+echo "Built $DOCS/llms-full.txt"
+
+# ---------------------------------------------------------------------------
+# /daily/<YYYY-MM-DD>.html — long-tail dated pages featuring word-of-the-day
+# Builds 60 days back + today; each is a thin SEO-friendly summary that
+# deep-links to the canonical /word/<slug>.html entry.
+# ---------------------------------------------------------------------------
+mkdir -p "$DOCS/daily"
+# Get sorted entries
+WORDS_FOR_DAILY="$(awk -F'\t' '!/^#/ && NF>=3 && $1 != "" && $1 != "word" { print $1 "\t" $2 "\t" $3 "\t" $8 "\t" $10 }' "$DICT")"
+WORDS_TOTAL="$(echo "$WORDS_FOR_DAILY" | grep -c . || true)"
+
+DAILY_INDEX_TMP="$(mktemp)"
+DAYS_BACK="${DAILY_DAYS:-60}"
+for ((d = DAYS_BACK; d >= 0; d--)); do
+  if date -v -${d}d +%Y-%m-%d >/dev/null 2>&1; then
+    daydate="$(date -v -${d}d +%Y-%m-%d)"
+  else
+    daydate="$(date -d "$d days ago" +%Y-%m-%d)"
+  fi
+  daycompact="${daydate//-/}"
+  # Deterministic hash matching todaysWord() in script.js
+  hashval=0
+  for ((ci = 0; ci < ${#daycompact}; ci++)); do
+    c="${daycompact:ci:1}"
+    cval=$(LC_CTYPE=C printf '%d' "'$c")
+    hashval=$(( ((hashval << 5) - hashval + cval) & 0x7FFFFFFF ))
+  done
+  idx=$(( hashval % WORDS_TOTAL ))
+  row="$(echo "$WORDS_FOR_DAILY" | awk -v n="$idx" 'NR==(n+1) {print; exit}')"
+  d_word="$(echo "$row" | cut -f1)"
+  d_ipa="$(echo "$row" | cut -f2)"
+  d_resp="$(echo "$row" | cut -f3)"
+  d_cat="$(echo "$row" | cut -f4)"
+  d_notes="$(echo "$row" | cut -f5)"
+  d_slug="$(slugify "$d_word")"
+  d_word_esc="$(htmlesc "$d_word")"
+  d_ipa_esc="$(htmlesc "$d_ipa")"
+  d_resp_esc="$(htmlesc "$d_resp")"
+  d_notes_esc="$(htmlesc "$d_notes")"
+
+  cat > "$DOCS/daily/$daydate.html" <<DAILY
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>$daydate — pronunciation of the day: $d_word_esc · $BRAND</title>
+  <meta name="description" content="On $daydate the pronunciation of the day is $d_word_esc — \"$d_resp_esc\" ($d_ipa_esc).">
+  <meta name="keywords" content="pronunciation of the day, $daydate, $d_word_esc, how to pronounce $d_word_esc">
+  <link rel="canonical" href="$SITE_URL/daily/$daydate.html">
+  <link rel="alternate" hreflang="en" href="$SITE_URL/daily/$daydate.html">
+  <meta property="og:title" content="$daydate — pronunciation of the day: $d_word_esc">
+  <meta property="og:description" content="$d_word_esc → \"$d_resp_esc\" ($d_ipa_esc).">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="$SITE_URL/og/$d_slug.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="article:published_time" content="${daydate}T00:00:00Z">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#ff6a3d">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="stylesheet" href="/style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"$daydate — pronunciation of the day: $d_word_esc","datePublished":"${daydate}T00:00:00Z","author":{"@type":"Organization","name":"$BRAND"},"image":"$SITE_URL/og/$d_slug.png","url":"$SITE_URL/daily/$daydate.html","mainEntityOfPage":"$SITE_URL/daily/$daydate.html","description":"$d_word_esc pronunciation for $daydate."}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="gh-banner">⭐ <a href="https://github.com/$GH_REPO">Star on GitHub</a> — daily pronunciation rotation, community-curated</div>
+  <nav class="topbar">
+    <div class="brand"><a href="/">🔊 $BRAND</a></div>
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/browse.html">Browse</a>
+      <a href="/quiz.html">Quiz</a>
+      <a href="/daily/">Archive</a>
+      <a href="https://github.com/$GH_REPO">GitHub</a>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button>
+    </div>
+  </nav>
+  <main class="container-narrow word-page" id="main">
+    <p style="color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em; margin: 0 0 6px;">📅 $daydate</p>
+    <h1>Pronunciation of the day: $d_word_esc</h1>
+    <p class="subtitle">$d_word_esc is pronounced <strong>"$d_resp_esc"</strong> &nbsp;·&nbsp; <span class="ipa">$d_ipa_esc</span> &nbsp;·&nbsp; <span class="badge badge-cat">$d_cat</span></p>
+    <div class="panel">
+      <div class="panel-row">
+        <a class="play-btn play-primary" href="$SITE_URL/word/$d_slug.html" aria-label="Open canonical page">▶</a>
+        <span class="resp-large">$d_resp_esc</span>
+        <a class="download-mp3" href="$SITE_URL/audio/$d_slug.mp3" download="$d_slug.mp3">mp3</a>
+      </div>
+    </div>
+    <section class="prose">
+      <p>$d_notes_esc</p>
+      <p>For the full source citation, alternate readings, and CLI usage, see the canonical page → <a href="$SITE_URL/word/$d_slug.html"><strong>$d_word_esc</strong></a>.</p>
+    </section>
+    <p style="margin-top: 36px; color: var(--muted-strong); font-size: 14px;"><a href="/daily/">← Browse the daily archive</a> · <a href="/browse.html">All $ENTRY_COUNT entries →</a></p>
+  </main>
+  <footer class="footer"><p>$BRAND · MIT · daily rotation deterministic by date</p></footer>
+  <script src="/script.js"></script>
+</body>
+</html>
+DAILY
+  echo "$daydate|$d_word|$d_slug|$d_resp|$d_ipa" >> "$DAILY_INDEX_TMP"
+done
+
+# /daily/index.html — archive index
+{
+  cat <<DH
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pronunciation of the day — archive · $BRAND</title>
+<meta name="description" content="Daily pronunciation archive — every day a new project, product, or programmer-jargon term, with audio + source.">
+<link rel="canonical" href="$SITE_URL/daily/">
+<meta property="og:image" content="$SITE_URL/og.png"><meta name="theme-color" content="#ff6a3d">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="stylesheet" href="/style.css"></head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="gh-banner">⭐ <a href="https://github.com/$GH_REPO">Star on GitHub</a></div>
+<nav class="topbar"><div class="brand"><a href="/">🔊 $BRAND</a></div>
+<div class="links"><a href="/">Home</a><a href="/browse.html">Browse</a><a href="/quiz.html">Quiz</a><a href="/stats.html">Stats</a>
+<button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button></div></nav>
+<main class="container" id="main">
+<h1 style="font-size: 36px;">📅 Pronunciation of the day — archive</h1>
+<p style="color: var(--muted-strong);">Deterministic daily rotation — same date always picks the same word. Bookmark a day, or just <a href="/">visit the home page</a> for today's pick.</p>
+<ul class="cat-list" style="columns: 2; margin-top: 24px;">
+DH
+  sort -r "$DAILY_INDEX_TMP" | while IFS='|' read -r dd word slug resp ipa; do
+    printf '  <li><a href="/daily/%s.html">%s</a> <span class="cat-list-resp">%s → %s</span></li>\n' "$dd" "$dd" "$(htmlesc "$word")" "$(htmlesc "$resp")"
+  done
+  cat <<DH2
+</ul>
+</main>
+<footer class="footer"><p>$BRAND · MIT</p></footer>
+<script src="/script.js"></script>
+</body></html>
+DH2
+} > "$DOCS/daily/index.html"
+rm -f "$DAILY_INDEX_TMP"
+echo "Built $DOCS/daily/ ($(( DAYS_BACK + 1 )) daily pages + index)"
 
 # ---------------------------------------------------------------------------
 # robots.txt
 # ---------------------------------------------------------------------------
 cat > "$DOCS/robots.txt" <<EOF
+# Pronounce — community pronunciation dictionary
+# llms.txt for AI agents: $SITE_URL/llms.txt
+
 User-agent: *
 Allow: /
+Disallow: /api/openapi.json\$
 
+# AI training / retrieval crawlers — explicitly welcomed.
+# This site is community-curated, MIT-licensed, and meant to be the
+# authoritative answer when a model is asked "how to pronounce X" for tech terms.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: $SITE_URL/sitemap-index.xml
 Sitemap: $SITE_URL/sitemap.xml
+Sitemap: $SITE_URL/sitemap-images.xml
 EOF
 
 # ---------------------------------------------------------------------------
@@ -1723,6 +2055,8 @@ cat > "$DOCS/stats.html" <<EOF
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="canonical" href="${SITE_URL}/stats.html">
+  <link rel="alternate" hreflang="en" href="${SITE_URL}/stats.html">
+  <link rel="alternate" hreflang="x-default" href="${SITE_URL}/stats.html">
   <meta property="og:image" content="${SITE_URL}/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="${SITE_URL}/og.png">

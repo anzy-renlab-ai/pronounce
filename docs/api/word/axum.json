@@ -1,0 +1,12 @@
+{
+  "word": "Axum",
+  "ipa": "/ˈæksəm/",
+  "respelling_us": "ax um",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/tokio-rs/axum",
+  "source_label": "Tokio Axum",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"AX-um\"."
+}

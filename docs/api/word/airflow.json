@@ -1,0 +1,12 @@
+{
+  "word": "Airflow",
+  "ipa": "/ˈɛərˌfloʊ/",
+  "respelling_us": "air flow",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://airflow.apache.org/",
+  "source_label": "Apache Airflow",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"AIR-flow\"."
+}

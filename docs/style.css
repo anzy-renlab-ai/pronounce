@@ -293,6 +293,19 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid 
 /* Confetti */
 .confetti { position: fixed; top: -10px; width: 8px; height: 14px; pointer-events: none; z-index: 9999; will-change: transform, opacity; }
 
+/* Per-word copy IPA button */
+.copy-ipa-btn { background: var(--card-2); color: var(--muted-strong); border: 1px solid var(--border); border-radius: 999px; padding: 4px 12px; font-size: 12px; cursor: pointer; font-family: var(--mono); transition: all 0.15s; }
+.copy-ipa-btn:hover { border-color: var(--accent-2); color: var(--accent-2); }
+
+/* Prev/next nav on per-word page */
+.word-nav { display: flex; justify-content: space-between; gap: 16px; margin: 40px 0 12px; padding: 14px 18px; background: var(--card-2); border: 1px solid var(--border); border-radius: 12px; }
+.word-nav a { color: var(--muted-strong); text-decoration: none; font-size: 14px; font-family: var(--mono); flex: 1; }
+.word-nav .nav-prev { text-align: left; }
+.word-nav .nav-next { text-align: right; }
+.word-nav .nav-label { display: block; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2px; }
+.word-nav a:hover .nav-target { color: var(--accent); }
+.nav-target { color: var(--fg); }
+
 /* prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
   .hero h1 .speaker, .hero-mic.listening { animation: none; }

@@ -1,0 +1,12 @@
+{
+  "word": "Tonic",
+  "ipa": "/ˈtɒnɪk/",
+  "respelling_us": "ton ik",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/hyperium/tonic",
+  "source_label": "Tonic",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"TON-ik\" — Rust gRPC."
+}

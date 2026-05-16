@@ -1,0 +1,12 @@
+{
+  "word": "Passkey",
+  "ipa": "/ˈpæsˌkiː/",
+  "respelling_us": "pass key",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://fidoalliance.org/passkeys/",
+  "source_label": "FIDO Alliance",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"PASS-key\"."
+}

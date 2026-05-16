@@ -1,0 +1,12 @@
+{
+  "word": "Leptos",
+  "ipa": "/ˈlɛptɒs/",
+  "respelling_us": "lep toss",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://leptos.dev/",
+  "source_label": "Leptos",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"LEP-toss\" — Rust web framework."
+}

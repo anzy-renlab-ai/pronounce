@@ -1,0 +1,12 @@
+{
+  "word": "WebAuthn",
+  "ipa": "/ˈwɛb ɔːθən/",
+  "respelling_us": "web auth en",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.w3.org/TR/webauthn-2/",
+  "source_label": "W3C WebAuthn",
+  "category": "abbreviation",
+  "confidence": "community-consensus",
+  "notes": "\"WEB-AUTH-en\"."
+}

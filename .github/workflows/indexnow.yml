@@ -1,0 +1,22 @@
+name: IndexNow ping
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/sitemap.xml'
+      - 'docs/sitemap-images.xml'
+      - 'tools/indexnow-submit.sh'
+  schedule:
+    - cron: '0 6 * * *'   # daily 06:00 UTC
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Submit URLs to Bing + Yandex
+        run: bash tools/indexnow-submit.sh --only-new
+        env:
+          SITE_URL: https://pronounce.renlab.ai

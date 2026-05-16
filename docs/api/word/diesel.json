@@ -1,0 +1,12 @@
+{
+  "word": "Diesel",
+  "ipa": "/ˈdiːzəl/",
+  "respelling_us": "dee zul",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://diesel.rs/",
+  "source_label": "Diesel",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "\"DEE-zul\" — Rust ORM."
+}

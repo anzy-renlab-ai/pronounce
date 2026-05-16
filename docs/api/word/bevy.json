@@ -1,0 +1,12 @@
+{
+  "word": "Bevy",
+  "ipa": "/ˈbɛvi/",
+  "respelling_us": "bevy",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://bevyengine.org/",
+  "source_label": "Bevy",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"BEV-ee\" — Rust game engine."
+}

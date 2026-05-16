@@ -551,3 +551,53 @@ Arrow	/ˈæroʊ/	arrow			https://arrow.apache.org/	Apache Arrow	product	communit
 Iceberg	/ˈaɪsˌbɜːrɡ/	ice berg			https://iceberg.apache.org/	Apache Iceberg	product	community-consensus	"ICE-berg".
 Hudi	/ˈhuːdi/	who dee			https://hudi.apache.org/	Apache Hudi	product	community-consensus	"HOO-dee".
 Delta Lake	/ˈdɛltə leɪk/	del ta lake			https://delta.io/	Delta Lake	product	community-consensus	"DEL-ta lake".
+
+# --- v2.2 wave 3: edge runtimes, JVM, .NET, Rust web, static-site gens ---
+Unity	/ˈjuːnɪti/	you ni tee			https://unity.com/	Unity	product	community-consensus	"YOU-ni-tee".
+Godot	/ˈɡɒdoʊ/	god oh	/ˈɡɒdɒt/	god ot	https://godotengine.org/	Godot	product	creator-clarified	"GOD-oh" per project FAQ. "GOD-ot" also widespread.
+Unreal	/ʌnˈriːəl/	un real			https://www.unrealengine.com/	Epic Games	product	community-consensus	"un-REAL".
+Bevy	/ˈbɛvi/	bevy			https://bevyengine.org/	Bevy	product	community-consensus	"BEV-ee" — Rust game engine.
+OIDC	/ˌoʊ aɪ diː ˈsiː/	O I D C			https://openid.net/connect/	OpenID Connect	abbreviation	community-consensus	"O-I-D-C".
+FIDO	/ˈfaɪdoʊ/	fie doh			https://fidoalliance.org/	FIDO Alliance	acronym	community-consensus	"FYE-doh".
+WebAuthn	/ˈwɛb ɔːθən/	web auth en			https://www.w3.org/TR/webauthn-2/	W3C WebAuthn	abbreviation	community-consensus	"WEB-AUTH-en".
+Passkey	/ˈpæsˌkiː/	pass key			https://fidoalliance.org/passkeys/	FIDO Alliance	product	community-consensus	"PASS-key".
+Tauri	/ˈtaʊri/	tau ree			https://tauri.app/	Tauri	product	community-consensus	"TAU-ree" — Rust desktop framework.
+Electron	/ɪˈlɛktrɒn/	e lec tron			https://www.electronjs.org/	Electron	product	community-consensus	"e-LEC-tron".
+Wails	/weɪlz/	wails			https://wails.io/	Wails	product	community-consensus	"wails" — Go desktop framework.
+Workers	/ˈwɜːrkərz/	work ers			https://workers.cloudflare.com/	Cloudflare Workers	product	community-consensus	"WORK-ers".
+Fastly	/ˈfæstli/	fast lee			https://www.fastly.com/	Fastly	product	community-consensus	"FAST-lee".
+Fly.io	/ˌflaɪ doʊt ˈaɪ oʊ/	fly dot io			https://fly.io/	Fly.io	product	community-consensus	"FLY-dot-I-O".
+Render	/ˈrɛndər/	ren der			https://render.com/	Render	product	community-consensus	"REN-der".
+Railway	/ˈreɪlˌweɪ/	rail way			https://railway.app/	Railway	product	community-consensus	"RAIL-way".
+Hadoop	/həˈduːp/	huh doop			https://hadoop.apache.org/	Apache Hadoop	product	community-consensus	"huh-DOOP".
+Hive	/haɪv/	hive			https://hive.apache.org/	Apache Hive	product	community-consensus	"hive".
+Airflow	/ˈɛərˌfloʊ/	air flow			https://airflow.apache.org/	Apache Airflow	product	community-consensus	"AIR-flow".
+Dagster	/ˈdæɡstər/	dag ster			https://dagster.io/	Dagster	product	community-consensus	"DAG-ster".
+Prefect	/ˈpriːˌfɛkt/	pree fekt			https://www.prefect.io/	Prefect	product	community-consensus	"PREE-fekt".
+Mage	/meɪdʒ/	mayj			https://www.mage.ai/	Mage	product	community-consensus	"mayj" — orchestration tool.
+Maven	/ˈmeɪvən/	may ven			https://maven.apache.org/	Apache Maven	tool	community-consensus	"MAY-ven".
+Quarkus	/ˈkwɑːrkəs/	quar kus			https://quarkus.io/	Quarkus	product	community-consensus	"QUAR-kus".
+Micronaut	/ˈmaɪkroʊnɔːt/	my kro nawt			https://micronaut.io/	Micronaut	product	community-consensus	"MY-kro-nawt".
+GraalVM	/ˈɡrɑːl viː ɛm/	grahl V M			https://www.graalvm.org/	GraalVM	product	community-consensus	"GRAHL-V-M".
+JVM	/ˌdʒeɪ viː ˈɛm/	J V M			https://en.wikipedia.org/wiki/Java_virtual_machine	Wikipedia	abbreviation	community-consensus	"J-V-M".
+Blazor	/ˈbleɪzər/	blay zer			https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor	Microsoft Blazor	product	community-consensus	"BLAY-zer".
+MAUI	/ˈmaʊi/	maw ee			https://dotnet.microsoft.com/apps/maui	Microsoft MAUI	abbreviation	community-consensus	".NET MAW-ee".
+WinUI	/ˌwɪn juː ˈaɪ/	win U I			https://learn.microsoft.com/windows/apps/winui/	Microsoft WinUI	abbreviation	community-consensus	"WIN-U-I".
+React	/riˈækt/	ree akt			https://react.dev/	React	product	community-consensus	"ree-AKT".
+Angular	/ˈæŋɡjələr/	ang you lar			https://angular.dev/	Angular	product	community-consensus	"ANG-yuh-ler".
+Ember	/ˈɛmbər/	em ber			https://emberjs.com/	Ember.js	product	community-consensus	"EM-ber".
+Marko	/ˈmɑːrkoʊ/	mar ko			https://markojs.com/	Marko	product	community-consensus	"MAR-koh".
+Axum	/ˈæksəm/	ax um			https://github.com/tokio-rs/axum	Tokio Axum	product	community-consensus	"AX-um".
+Actix	/ˈæktɪks/	ak tix			https://actix.rs/	Actix	product	community-consensus	"AK-tix".
+Tokio	/ˈtoʊkjoʊ/	to kyo			https://tokio.rs/	Tokio	product	community-consensus	"TOH-kyo" — like the city.
+Tonic	/ˈtɒnɪk/	ton ik			https://github.com/hyperium/tonic	Tonic	product	community-consensus	"TON-ik" — Rust gRPC.
+Hyper	/ˈhaɪpər/	hy per			https://hyper.rs/	Hyper	product	community-consensus	"HY-per" — Rust HTTP.
+Diesel	/ˈdiːzəl/	dee zul			https://diesel.rs/	Diesel	tool	community-consensus	"DEE-zul" — Rust ORM.
+SeaORM	/ˈsiː ɔːrm/	C O R M			https://www.sea-ql.org/SeaORM/	SeaORM	tool	community-consensus	"SEA-orm".
+Leptos	/ˈlɛptɒs/	lep toss			https://leptos.dev/	Leptos	product	community-consensus	"LEP-toss" — Rust web framework.
+Dioxus	/daɪˈɒksəs/	die ox us			https://dioxuslabs.com/	Dioxus	product	community-consensus	"die-OX-us".
+Quartz	/kwɔːrts/	quartz			https://quartz.jzhao.xyz/	Quartz	product	community-consensus	"quartz" — static site gen for digital gardens.
+Eleventy	/ɪˈlɛvənti/	e lev en tee			https://www.11ty.dev/	Eleventy	product	community-consensus	"e-LEV-en-tee" — aka 11ty.
+Jekyll	/ˈdʒɛkəl/	jek ul			https://jekyllrb.com/	Jekyll	product	community-consensus	"JEK-ul".
+Gatsby	/ˈɡætsbi/	gats bee			https://www.gatsbyjs.com/	Gatsby	product	community-consensus	"GATS-bee".
+Pelican	/ˈpɛlɪkən/	pel i kun			https://getpelican.com/	Pelican	product	community-consensus	"PEL-i-kun".
