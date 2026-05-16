@@ -1,0 +1,69 @@
+#!/usr/bin/env bash
+# say-it — speak an English word out loud, 3 times by default.
+set -e
+
+VOICE="Samantha"
+TIMES=3
+RATE=200
+SAVE=""
+
+usage() {
+  cat <<EOF
+say-it — speak an English word out loud, 3 times by default.
+
+Usage:
+  say-it <word>                  speak 3 times with the default voice
+  say-it -v Daniel <word>        use a different voice (British)
+  say-it -n 5 <word>             repeat N times instead of 3
+  say-it -r 130 <word>           slower rate (default 200 wpm)
+  say-it -o out.aiff <word>      save to file instead of playing
+  say-it -l                      list available macOS voices
+
+Options:
+  -v, --voice VOICE     voice name (default: Samantha)
+  -n, --times N         number of repetitions (default: 3)
+  -r, --rate WPM        speech rate, words/minute (default: 200)
+  -o, --output FILE     write audio to FILE instead of playing
+  -l, --list            list available voices
+  -h, --help            this help
+
+Examples:
+  say-it simile
+  say-it --voice Daniel pronunciation
+  say-it -n 1 -r 130 schadenfreude
+EOF
+}
+
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    -v|--voice)  VOICE="$2"; shift 2 ;;
+    -n|--times)  TIMES="$2"; shift 2 ;;
+    -r|--rate)   RATE="$2"; shift 2 ;;
+    -o|--output) SAVE="$2"; shift 2 ;;
+    -l|--list)   say -v "?"; exit 0 ;;
+    -h|--help)   usage; exit 0 ;;
+    --)          shift; break ;;
+    -*)          echo "say-it: unknown flag: $1" >&2; usage; exit 2 ;;
+    *)           break ;;
+  esac
+done
+
+if [[ $# -eq 0 ]]; then
+  usage; exit 2
+fi
+
+if ! command -v say >/dev/null 2>&1; then
+  echo "say-it: macOS \`say\` not found. Linux/Windows support is on the roadmap." >&2
+  exit 3
+fi
+
+WORD="$*"
+TEXT=""
+for ((i=0; i<TIMES; i++)); do TEXT+="$WORD. "; done
+
+if [[ -n "$SAVE" ]]; then
+  say -v "$VOICE" -r "$RATE" -o "$SAVE" "$TEXT"
+  echo "Saved: $SAVE"
+else
+  say -v "$VOICE" -r "$RATE" "$TEXT"
+fi
