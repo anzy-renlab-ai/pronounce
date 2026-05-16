@@ -1,0 +1,12 @@
+{
+  "word": "pytest",
+  "ipa": "/ˈpaɪtɛst/",
+  "respelling_us": "pie test",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://docs.pytest.org/",
+  "source_label": "pytest",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "\"PIE-test\"."
+}

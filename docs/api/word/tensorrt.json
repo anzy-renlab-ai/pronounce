@@ -1,0 +1,12 @@
+{
+  "word": "TensorRT",
+  "ipa": "/ˈtɛnsərˈɑːr tiː/",
+  "respelling_us": "tensor R T",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://developer.nvidia.com/tensorrt",
+  "source_label": "NVIDIA TensorRT",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"TENSOR-R-T\"."
+}

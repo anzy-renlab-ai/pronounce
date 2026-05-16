@@ -1,0 +1,12 @@
+{
+  "word": "Lit",
+  "ipa": "/lɪt/",
+  "respelling_us": "lit",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://lit.dev/",
+  "source_label": "Lit",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"lit\" — Google's web components lib."
+}

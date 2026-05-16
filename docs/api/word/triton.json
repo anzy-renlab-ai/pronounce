@@ -1,0 +1,12 @@
+{
+  "word": "Triton",
+  "ipa": "/ˈtraɪtən/",
+  "respelling_us": "try ton",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://developer.nvidia.com/triton-inference-server",
+  "source_label": "NVIDIA Triton",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"TRY-ton\" — NVIDIA inference server."
+}

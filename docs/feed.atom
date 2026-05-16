@@ -4,181 +4,181 @@
   <link href="https://pronounce.renlab.ai/feed.atom" rel="self"/>
   <link href="https://pronounce.renlab.ai/"/>
   <id>https://pronounce.renlab.ai/</id>
-  <updated>2026-05-16T17:40:29Z</updated>
+  <updated>2026-05-16T17:51:17Z</updated>
   <subtitle>How engineers actually pronounce project / product / jargon names. Community-maintained.</subtitle>
   <entry>
-    <title>RSA — R S A</title>
-    <link href="https://pronounce.renlab.ai/word/rsa"/>
-    <id>https://pronounce.renlab.ai/word/rsa</id>
-    <updated>2026-05-16T17:40:29Z</updated>
-    <summary>RSA is pronounced "R S A" (/ˌɑːr ɛs ˈeɪ/). "R-S-A".</summary>
+    <title>Megatron — meg a tron</title>
+    <link href="https://pronounce.renlab.ai/word/megatron"/>
+    <id>https://pronounce.renlab.ai/word/megatron</id>
+    <updated>2026-05-16T17:51:17Z</updated>
+    <summary>Megatron is pronounced "meg a tron" (/ˈmɛɡəˌtrɒn/). "MEG-uh-tron" — large-scale training framework.</summary>
   </entry>
   <entry>
-    <title>AES — A E S</title>
-    <link href="https://pronounce.renlab.ai/word/aes"/>
-    <id>https://pronounce.renlab.ai/word/aes</id>
-    <updated>2026-05-16T17:40:29Z</updated>
-    <summary>AES is pronounced "A E S" (/ˌeɪ iː ˈɛs/). "A-E-S".</summary>
+    <title>DeepSpeed — deep speed</title>
+    <link href="https://pronounce.renlab.ai/word/deepspeed"/>
+    <id>https://pronounce.renlab.ai/word/deepspeed</id>
+    <updated>2026-05-16T17:51:17Z</updated>
+    <summary>DeepSpeed is pronounced "deep speed" (/ˈdiːpˌspiːd/). "DEEP-speed".</summary>
   </entry>
   <entry>
-    <title>SHA — shah</title>
-    <link href="https://pronounce.renlab.ai/word/sha"/>
-    <id>https://pronounce.renlab.ai/word/sha</id>
-    <updated>2026-05-16T17:40:29Z</updated>
-    <summary>SHA is pronounced "shah" (/ʃɑː/). "shah" or letter-by-letter "S-H-A".</summary>
+    <title>Axolotl — ak so lot ul</title>
+    <link href="https://pronounce.renlab.ai/word/axolotl"/>
+    <id>https://pronounce.renlab.ai/word/axolotl</id>
+    <updated>2026-05-16T17:51:17Z</updated>
+    <summary>Axolotl is pronounced "ak so lot ul" (/ˈæksəlɒtl/). "AK-so-lot-ul" — fine-tuning framework.</summary>
   </entry>
   <entry>
-    <title>TLS — T L S</title>
-    <link href="https://pronounce.renlab.ai/word/tls"/>
-    <id>https://pronounce.renlab.ai/word/tls</id>
-    <updated>2026-05-16T17:40:29Z</updated>
-    <summary>TLS is pronounced "T L S" (/ˌtiː ɛl ˈɛs/). "T-L-S".</summary>
+    <title>Unsloth — un sloth</title>
+    <link href="https://pronounce.renlab.ai/word/unsloth"/>
+    <id>https://pronounce.renlab.ai/word/unsloth</id>
+    <updated>2026-05-16T17:51:17Z</updated>
+    <summary>Unsloth is pronounced "un sloth" (/ʌnˈslɒθ/). "un-SLOTH" — fast LLM fine-tuning.</summary>
   </entry>
   <entry>
-    <title>PGP — P G P</title>
-    <link href="https://pronounce.renlab.ai/word/pgp"/>
-    <id>https://pronounce.renlab.ai/word/pgp</id>
-    <updated>2026-05-16T17:40:29Z</updated>
-    <summary>PGP is pronounced "P G P" (/ˌpiː dʒiː ˈpiː/). "P-G-P".</summary>
+    <title>Devin — dev in</title>
+    <link href="https://pronounce.renlab.ai/word/devin"/>
+    <id>https://pronounce.renlab.ai/word/devin</id>
+    <updated>2026-05-16T17:51:17Z</updated>
+    <summary>Devin is pronounced "dev in" (/ˈdɛvɪn/). "DEV-in" — AI software engineer.</summary>
   </entry>
   <entry>
-    <title>GPG — G P G</title>
-    <link href="https://pronounce.renlab.ai/word/gpg"/>
-    <id>https://pronounce.renlab.ai/word/gpg</id>
-    <updated>2026-05-16T17:40:29Z</updated>
-    <summary>GPG is pronounced "G P G" (/ˌdʒiː piː ˈdʒiː/). "G-P-G".</summary>
+    <title>Sweep — sweep</title>
+    <link href="https://pronounce.renlab.ai/word/sweep"/>
+    <id>https://pronounce.renlab.ai/word/sweep</id>
+    <updated>2026-05-16T17:51:17Z</updated>
+    <summary>Sweep is pronounced "sweep" (/swiːp/). "sweep" — AI code review.</summary>
   </entry>
   <entry>
-    <title>WebRTC — web R T C</title>
-    <link href="https://pronounce.renlab.ai/word/webrtc"/>
-    <id>https://pronounce.renlab.ai/word/webrtc</id>
-    <updated>2026-05-16T17:40:29Z</updated>
-    <summary>WebRTC is pronounced "web R T C" (/wɛb ɑːr tiː ˈsiː/). "web-R-T-C".</summary>
+    <title>Magnitude — mag ni tude</title>
+    <link href="https://pronounce.renlab.ai/word/magnitude"/>
+    <id>https://pronounce.renlab.ai/word/magnitude</id>
+    <updated>2026-05-16T17:51:17Z</updated>
+    <summary>Magnitude is pronounced "mag ni tude" (/ˈmæɡnɪˌtjuːd/). "MAG-ni-tude" — agent testing platform.</summary>
   </entry>
   <entry>
-    <title>WebGPU — web G P U</title>
-    <link href="https://pronounce.renlab.ai/word/webgpu"/>
-    <id>https://pronounce.renlab.ai/word/webgpu</id>
-    <updated>2026-05-16T17:40:29Z</updated>
-    <summary>WebGPU is pronounced "web G P U" (/wɛb dʒiː piː ˈjuː/). "web-G-P-U".</summary>
+    <title>Bun Test — bun test</title>
+    <link href="https://pronounce.renlab.ai/word/bun-test"/>
+    <id>https://pronounce.renlab.ai/word/bun-test</id>
+    <updated>2026-05-16T17:51:17Z</updated>
+    <summary>Bun Test is pronounced "bun test" (/bʌn tɛst/). "BUN-test".</summary>
   </entry>
   <entry>
-    <title>WASI — wah zee</title>
-    <link href="https://pronounce.renlab.ai/word/wasi"/>
-    <id>https://pronounce.renlab.ai/word/wasi</id>
-    <updated>2026-05-16T17:40:29Z</updated>
-    <summary>WASI is pronounced "wah zee" (/ˈwɑːzi/). "WAH-zee" — WebAssembly System Interface.</summary>
+    <title>Mocha — mo ka</title>
+    <link href="https://pronounce.renlab.ai/word/mocha"/>
+    <id>https://pronounce.renlab.ai/word/mocha</id>
+    <updated>2026-05-16T17:51:17Z</updated>
+    <summary>Mocha is pronounced "mo ka" (/ˈmoʊkə/). "MO-ka" — like the coffee.</summary>
   </entry>
   <entry>
-    <title>IPFS — I P F S</title>
-    <link href="https://pronounce.renlab.ai/word/ipfs"/>
-    <id>https://pronounce.renlab.ai/word/ipfs</id>
-    <updated>2026-05-16T17:40:29Z</updated>
-    <summary>IPFS is pronounced "I P F S" (/ˌaɪ piː ɛf ˈɛs/). "I-P-F-S".</summary>
+    <title>Chai — chai</title>
+    <link href="https://pronounce.renlab.ai/word/chai"/>
+    <id>https://pronounce.renlab.ai/word/chai</id>
+    <updated>2026-05-16T17:51:17Z</updated>
+    <summary>Chai is pronounced "chai" (/tʃaɪ/). "chai" — like the tea.</summary>
   </entry>
   <entry>
-    <title>Solidity — so lid i tee</title>
-    <link href="https://pronounce.renlab.ai/word/solidity"/>
-    <id>https://pronounce.renlab.ai/word/solidity</id>
-    <updated>2026-05-16T17:40:29Z</updated>
-    <summary>Solidity is pronounced "so lid i tee" (/səˈlɪdɪti/). "sol-LID-i-tee".</summary>
+    <title>Selenium — se lee nee um</title>
+    <link href="https://pronounce.renlab.ai/word/selenium"/>
+    <id>https://pronounce.renlab.ai/word/selenium</id>
+    <updated>2026-05-16T17:51:17Z</updated>
+    <summary>Selenium is pronounced "se lee nee um" (/səˈliːniəm/). "se-LEE-nee-um" — like the element.</summary>
   </entry>
   <entry>
-    <title>Ethereum — e thee ree um</title>
-    <link href="https://pronounce.renlab.ai/word/ethereum"/>
-    <id>https://pronounce.renlab.ai/word/ethereum</id>
-    <updated>2026-05-16T17:40:29Z</updated>
-    <summary>Ethereum is pronounced "e thee ree um" (/ɪˈθɪriəm/). "e-THEE-ree-um".</summary>
+    <title>JUnit — J unit</title>
+    <link href="https://pronounce.renlab.ai/word/junit"/>
+    <id>https://pronounce.renlab.ai/word/junit</id>
+    <updated>2026-05-16T17:51:17Z</updated>
+    <summary>JUnit is pronounced "J unit" (/ˌdʒeɪ ˈjuːnɪt/). "J-unit".</summary>
   </entry>
   <entry>
-    <title>Fleet — fleet</title>
-    <link href="https://pronounce.renlab.ai/word/fleet"/>
-    <id>https://pronounce.renlab.ai/word/fleet</id>
-    <updated>2026-05-16T17:40:29Z</updated>
-    <summary>Fleet is pronounced "fleet" (/fliːt/). "fleet".</summary>
+    <title>pytest — pie test</title>
+    <link href="https://pronounce.renlab.ai/word/pytest"/>
+    <id>https://pronounce.renlab.ai/word/pytest</id>
+    <updated>2026-05-16T17:51:17Z</updated>
+    <summary>pytest is pronounced "pie test" (/ˈpaɪtɛst/). "PIE-test".</summary>
   </entry>
   <entry>
-    <title>Lapce — lapss</title>
-    <link href="https://pronounce.renlab.ai/word/lapce"/>
-    <id>https://pronounce.renlab.ai/word/lapce</id>
-    <updated>2026-05-16T17:40:29Z</updated>
-    <summary>Lapce is pronounced "lapss" (/læps/). "LAPSS" — Rust editor.</summary>
+    <title>recursion — re curr zhun</title>
+    <link href="https://pronounce.renlab.ai/word/recursion"/>
+    <id>https://pronounce.renlab.ai/word/recursion</id>
+    <updated>2026-05-16T17:51:17Z</updated>
+    <summary>recursion is pronounced "re curr zhun" (/rɪˈkɜːrʒən/). "re-CUR-zhun".</summary>
   </entry>
   <entry>
-    <title>Sublime — sub lime</title>
-    <link href="https://pronounce.renlab.ai/word/sublime"/>
-    <id>https://pronounce.renlab.ai/word/sublime</id>
-    <updated>2026-05-16T17:40:29Z</updated>
-    <summary>Sublime is pronounced "sub lime" (/səˈblaɪm/). "sub-LIME".</summary>
+    <title>polymorphism — pol ee mor fizm</title>
+    <link href="https://pronounce.renlab.ai/word/polymorphism"/>
+    <id>https://pronounce.renlab.ai/word/polymorphism</id>
+    <updated>2026-05-16T17:51:17Z</updated>
+    <summary>polymorphism is pronounced "pol ee mor fizm" (/ˌpɒliˈmɔːrfɪzəm/). "pol-ee-MOR-fizm".</summary>
   </entry>
   <entry>
-    <title>VSCode — V S code</title>
-    <link href="https://pronounce.renlab.ai/word/vscode"/>
-    <id>https://pronounce.renlab.ai/word/vscode</id>
-    <updated>2026-05-16T17:40:29Z</updated>
-    <summary>VSCode is pronounced "V S code" (/ˌviː ɛs ˈkoʊd/). "V-S-code".</summary>
+    <title>encapsulation — en cap soo lay shun</title>
+    <link href="https://pronounce.renlab.ai/word/encapsulation"/>
+    <id>https://pronounce.renlab.ai/word/encapsulation</id>
+    <updated>2026-05-16T17:51:17Z</updated>
+    <summary>encapsulation is pronounced "en cap soo lay shun" (/ɪnˌkæpsjʊˈleɪʃən/). "en-cap-soo-LAY-shun".</summary>
   </entry>
   <entry>
-    <title>Raycast — ray cast</title>
-    <link href="https://pronounce.renlab.ai/word/raycast"/>
-    <id>https://pronounce.renlab.ai/word/raycast</id>
-    <updated>2026-05-16T17:40:29Z</updated>
-    <summary>Raycast is pronounced "ray cast" (/ˈreɪˌkæst/). "RAY-cast".</summary>
+    <title>iterator — it er ay ter</title>
+    <link href="https://pronounce.renlab.ai/word/iterator"/>
+    <id>https://pronounce.renlab.ai/word/iterator</id>
+    <updated>2026-05-16T17:51:17Z</updated>
+    <summary>iterator is pronounced "it er ay ter" (/ˈɪtəˌreɪtər/). "IT-er-AY-ter".</summary>
   </entry>
   <entry>
-    <title>Alfred — al fred</title>
-    <link href="https://pronounce.renlab.ai/word/alfred"/>
-    <id>https://pronounce.renlab.ai/word/alfred</id>
-    <updated>2026-05-16T17:40:29Z</updated>
-    <summary>Alfred is pronounced "al fred" (/ˈælfrɛd/). "AL-fred".</summary>
+    <title>generator — jen er ay ter</title>
+    <link href="https://pronounce.renlab.ai/word/generator"/>
+    <id>https://pronounce.renlab.ai/word/generator</id>
+    <updated>2026-05-16T17:51:17Z</updated>
+    <summary>generator is pronounced "jen er ay ter" (/ˈdʒɛnəˌreɪtər/). "JEN-er-AY-ter".</summary>
   </entry>
   <entry>
-    <title>Homebrew — home brew</title>
-    <link href="https://pronounce.renlab.ai/word/homebrew"/>
-    <id>https://pronounce.renlab.ai/word/homebrew</id>
-    <updated>2026-05-16T17:40:29Z</updated>
-    <summary>Homebrew is pronounced "home brew" (/ˈhoʊmˌbruː/). "HOME-brew".</summary>
+    <title>MessagePack — message pack</title>
+    <link href="https://pronounce.renlab.ai/word/messagepack"/>
+    <id>https://pronounce.renlab.ai/word/messagepack</id>
+    <updated>2026-05-16T17:51:17Z</updated>
+    <summary>MessagePack is pronounced "message pack" (/ˈmɛsɪdʒˌpæk/). "MESSAGE-pack".</summary>
   </entry>
   <entry>
-    <title>Fedora — fuh dora</title>
-    <link href="https://pronounce.renlab.ai/word/fedora"/>
-    <id>https://pronounce.renlab.ai/word/fedora</id>
-    <updated>2026-05-16T17:40:29Z</updated>
-    <summary>Fedora is pronounced "fuh dora" (/fəˈdɔːrə/). "fuh-DOR-uh".</summary>
+    <title>Avro — av ro</title>
+    <link href="https://pronounce.renlab.ai/word/avro"/>
+    <id>https://pronounce.renlab.ai/word/avro</id>
+    <updated>2026-05-16T17:51:17Z</updated>
+    <summary>Avro is pronounced "av ro" (/ˈævroʊ/). "AV-ro".</summary>
   </entry>
   <entry>
-    <title>CentOS — cent O S</title>
-    <link href="https://pronounce.renlab.ai/word/centos"/>
-    <id>https://pronounce.renlab.ai/word/centos</id>
-    <updated>2026-05-16T17:40:29Z</updated>
-    <summary>CentOS is pronounced "cent O S" (/ˌsɛnt ˈoʊ ɛs/). "cent-O-S".</summary>
+    <title>Parquet — par kay</title>
+    <link href="https://pronounce.renlab.ai/word/parquet"/>
+    <id>https://pronounce.renlab.ai/word/parquet</id>
+    <updated>2026-05-16T17:51:17Z</updated>
+    <summary>Parquet is pronounced "par kay" (/pɑːrˈkeɪ/). "par-KAY" — like the floor.</summary>
   </entry>
   <entry>
-    <title>RHEL — rell</title>
-    <link href="https://pronounce.renlab.ai/word/rhel"/>
-    <id>https://pronounce.renlab.ai/word/rhel</id>
-    <updated>2026-05-16T17:40:29Z</updated>
-    <summary>RHEL is pronounced "rell" (/rɛl/). "rell" — Red Hat Enterprise Linux.</summary>
+    <title>Arrow — arrow</title>
+    <link href="https://pronounce.renlab.ai/word/arrow"/>
+    <id>https://pronounce.renlab.ai/word/arrow</id>
+    <updated>2026-05-16T17:51:17Z</updated>
+    <summary>Arrow is pronounced "arrow" (/ˈæroʊ/). "AR-row".</summary>
   </entry>
   <entry>
-    <title>Manjaro — mun jar oh</title>
-    <link href="https://pronounce.renlab.ai/word/manjaro"/>
-    <id>https://pronounce.renlab.ai/word/manjaro</id>
-    <updated>2026-05-16T17:40:29Z</updated>
-    <summary>Manjaro is pronounced "mun jar oh" (/mənˈdʒɑːroʊ/). "mun-JAR-oh".</summary>
+    <title>Iceberg — ice berg</title>
+    <link href="https://pronounce.renlab.ai/word/iceberg"/>
+    <id>https://pronounce.renlab.ai/word/iceberg</id>
+    <updated>2026-05-16T17:51:17Z</updated>
+    <summary>Iceberg is pronounced "ice berg" (/ˈaɪsˌbɜːrɡ/). "ICE-berg".</summary>
   </entry>
   <entry>
-    <title>FreeBSD — free B S D</title>
-    <link href="https://pronounce.renlab.ai/word/freebsd"/>
-    <id>https://pronounce.renlab.ai/word/freebsd</id>
-    <updated>2026-05-16T17:40:29Z</updated>
-    <summary>FreeBSD is pronounced "free B S D" (/ˌfriː biː ɛs ˈdiː/). "free-B-S-D".</summary>
+    <title>Hudi — who dee</title>
+    <link href="https://pronounce.renlab.ai/word/hudi"/>
+    <id>https://pronounce.renlab.ai/word/hudi</id>
+    <updated>2026-05-16T17:51:17Z</updated>
+    <summary>Hudi is pronounced "who dee" (/ˈhuːdi/). "HOO-dee".</summary>
   </entry>
   <entry>
-    <title>Puppeteer — puppy teer</title>
-    <link href="https://pronounce.renlab.ai/word/puppeteer"/>
-    <id>https://pronounce.renlab.ai/word/puppeteer</id>
-    <updated>2026-05-16T17:40:29Z</updated>
-    <summary>Puppeteer is pronounced "puppy teer" (/ˌpʌpɪˈtɪər/). "PUP-uh-teer".</summary>
+    <title>Delta Lake — del ta lake</title>
+    <link href="https://pronounce.renlab.ai/word/delta-lake"/>
+    <id>https://pronounce.renlab.ai/word/delta-lake</id>
+    <updated>2026-05-16T17:51:17Z</updated>
+    <summary>Delta Lake is pronounced "del ta lake" (/ˈdɛltə leɪk/). "DEL-ta lake".</summary>
   </entry>
 </feed>

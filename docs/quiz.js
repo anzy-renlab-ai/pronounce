@@ -116,6 +116,9 @@
               : '🐣 First day on the job';
     const wrong = state.history.filter(h => !h.right).map(h => h.w);
     const tweet = encodeURIComponent(`I scored ${state.score}/${state.qs.length} (${pct}%) on the developer pronunciation quiz — ${lvl}\n\nTry it: https://pronounce.renlab.ai/quiz.html`);
+    if (state.score === state.qs.length && typeof window.confettiBurst === 'function') {
+      window.confettiBurst(160);
+    }
     stage.innerHTML = `
       <div class="quiz-card quiz-summary">
         <div style="color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em;">Final score</div>

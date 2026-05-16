@@ -493,3 +493,61 @@ RHEL	/rɛl/	rell			https://www.redhat.com/	Red Hat	product	community-consensus	"
 Manjaro	/mənˈdʒɑːroʊ/	mun jar oh			https://manjaro.org/	Manjaro	product	community-consensus	"mun-JAR-oh".
 FreeBSD	/ˌfriː biː ɛs ˈdiː/	free B S D			https://www.freebsd.org/	FreeBSD	product	community-consensus	"free-B-S-D".
 Puppeteer	/ˌpʌpɪˈtɪər/	puppy teer			https://pptr.dev/	Puppeteer	tool	community-consensus	"PUP-uh-teer".
+
+# --- v2.0 wave 2: observability, AI inference, monorepo, data formats ---
+OpenTelemetry	/ˌoʊpən tɛlɪˈmɛtri/	open tel em e tree			https://opentelemetry.io/	OpenTelemetry	product	community-consensus	"open-tel-EM-e-tree".
+OTEL	/ˈoʊtəl/	oh tul			https://opentelemetry.io/	OpenTelemetry	abbreviation	community-consensus	"OH-tul" — short for OpenTelemetry.
+eBPF	/ˌiː biː piː ˈɛf/	E B P F			https://ebpf.io/	eBPF	abbreviation	community-consensus	"E-B-P-F" letter-by-letter.
+Calico	/ˈkælɪkoʊ/	cal i co			https://www.tigera.io/project-calico/	Tigera Calico	product	community-consensus	"CAL-i-co".
+Flannel	/ˈflænəl/	flan ul			https://github.com/flannel-io/flannel	Flannel	product	community-consensus	"FLAN-ul".
+CoreDNS	/ˌkɔːr diː ɛn ˈɛs/	core D N S			https://coredns.io/	CoreDNS	product	community-consensus	"CORE-D-N-S".
+OPA Gatekeeper	/ˌoʊ piː eɪ ˈɡeɪtˌkiːpər/	O P A gate keeper			https://open-policy-agent.github.io/gatekeeper/	OPA Gatekeeper	product	community-consensus	"O-P-A GATE-keeper".
+Vault	/vɔːlt/	vault			https://www.vaultproject.io/	HashiCorp Vault	product	community-consensus	"vault".
+Consul	/ˈkɒnsəl/	con sul			https://www.consul.io/	HashiCorp Consul	product	community-consensus	"CON-sul".
+Nomad	/ˈnoʊmæd/	no mad			https://www.nomadproject.io/	HashiCorp Nomad	product	community-consensus	"NO-mad".
+Packer	/ˈpækər/	pack er			https://www.packer.io/	HashiCorp Packer	product	community-consensus	"PACK-er".
+Triton	/ˈtraɪtən/	try ton			https://developer.nvidia.com/triton-inference-server	NVIDIA Triton	product	community-consensus	"TRY-ton" — NVIDIA inference server.
+TensorRT	/ˈtɛnsərˈɑːr tiː/	tensor R T			https://developer.nvidia.com/tensorrt	NVIDIA TensorRT	product	community-consensus	"TENSOR-R-T".
+CUDA	/ˈkuːdə/	koo da			https://developer.nvidia.com/cuda-zone	NVIDIA CUDA	product	community-consensus	"KOO-duh".
+ONNX	/ˈɒnɪks/	on nix			https://onnx.ai/	ONNX	abbreviation	community-consensus	"ON-nix".
+Triton (OpenAI)	/ˈtraɪtən/	try ton			https://triton-lang.org/	OpenAI Triton	product	community-consensus	"TRY-ton" — Python GPU kernel DSL.
+MLflow	/ˌɛm ɛl ˈfloʊ/	M L flow			https://mlflow.org/	MLflow	product	community-consensus	"M-L-flow".
+DVC	/ˌdiː viː ˈsiː/	D V C			https://dvc.org/	DVC	abbreviation	community-consensus	"D-V-C" — Data Version Control.
+Weights & Biases	/weɪts ænd ˈbaɪəsɪz/	weights and biases			https://wandb.ai/	wandb	product	community-consensus	"weights-and-BYE-uh-siz".
+Comet	/ˈkɒmət/	com et			https://www.comet.com/	Comet ML	product	community-consensus	"COM-et".
+Redux	/ˈriːdʌks/	ree dux			https://redux.js.org/	Redux	product	community-consensus	"REE-dux".
+MobX	/ˌɛm ˈɒb ɛks/	mob X			https://mobx.js.org/	MobX	product	community-consensus	"MOB-X".
+Effector	/ɪˈfɛktər/	ef fect er			https://effector.dev/	Effector	product	community-consensus	"ef-FECT-er".
+XState	/ˌɛks ˈsteɪt/	X state			https://stately.ai/docs/xstate	XState	product	community-consensus	"X-STATE".
+Lit	/lɪt/	lit			https://lit.dev/	Lit	product	community-consensus	"lit" — Google's web components lib.
+Stencil	/ˈstɛnsəl/	sten sil			https://stenciljs.com/	Stencil	product	community-consensus	"STEN-sil".
+Turborepo	/ˈtɜːrboʊˌrɛpoʊ/	tur bo re po			https://turborepo.com/	Turborepo	product	community-consensus	"TUR-bo-re-po".
+Lage	/leɪdʒ/	layj			https://microsoft.github.io/lage/	Microsoft Lage	tool	community-consensus	"layj" — JS task runner.
+Moon	/muːn/	moon			https://moonrepo.dev/	Moon	tool	community-consensus	"moon" — Rust-based build system.
+Buck2	/bʌk tuː/	buck two			https://buck2.build/	Buck2	tool	community-consensus	"BUCK-two" — Meta's build system.
+CUDA Toolkit	/ˈkuːdə ˈtuːlˌkɪt/	koo da tool kit			https://developer.nvidia.com/cuda-toolkit	NVIDIA	product	community-consensus	"KOO-duh tool-kit".
+Megatron	/ˈmɛɡəˌtrɒn/	meg a tron			https://github.com/NVIDIA/Megatron-LM	NVIDIA Megatron	product	community-consensus	"MEG-uh-tron" — large-scale training framework.
+DeepSpeed	/ˈdiːpˌspiːd/	deep speed			https://www.deepspeed.ai/	Microsoft DeepSpeed	product	community-consensus	"DEEP-speed".
+Axolotl	/ˈæksəlɒtl/	ak so lot ul			https://axolotl.ai/	Axolotl	product	community-consensus	"AK-so-lot-ul" — fine-tuning framework.
+Unsloth	/ʌnˈslɒθ/	un sloth			https://unsloth.ai/	Unsloth	product	community-consensus	"un-SLOTH" — fast LLM fine-tuning.
+Devin	/ˈdɛvɪn/	dev in			https://www.cognition.ai/	Cognition Devin	product	community-consensus	"DEV-in" — AI software engineer.
+Sweep	/swiːp/	sweep			https://docs.sweep.dev/	Sweep	product	community-consensus	"sweep" — AI code review.
+Magnitude	/ˈmæɡnɪˌtjuːd/	mag ni tude			https://app.magnitude.run/	Magnitude	product	community-consensus	"MAG-ni-tude" — agent testing platform.
+Bun Test	/bʌn tɛst/	bun test			https://bun.sh/docs/cli/test	Bun Test	tool	community-consensus	"BUN-test".
+Mocha	/ˈmoʊkə/	mo ka			https://mochajs.org/	Mocha	product	community-consensus	"MO-ka" — like the coffee.
+Chai	/tʃaɪ/	chai			https://www.chaijs.com/	Chai	tool	community-consensus	"chai" — like the tea.
+Selenium	/səˈliːniəm/	se lee nee um			https://www.selenium.dev/	Selenium	tool	community-consensus	"se-LEE-nee-um" — like the element.
+JUnit	/ˌdʒeɪ ˈjuːnɪt/	J unit			https://junit.org/	JUnit	tool	community-consensus	"J-unit".
+pytest	/ˈpaɪtɛst/	pie test			https://docs.pytest.org/	pytest	tool	community-consensus	"PIE-test".
+recursion	/rɪˈkɜːrʒən/	re curr zhun			https://en.wikipedia.org/wiki/Recursion_(computer_science)	Wikipedia	cs-term	community-consensus	"re-CUR-zhun".
+polymorphism	/ˌpɒliˈmɔːrfɪzəm/	pol ee mor fizm			https://en.wikipedia.org/wiki/Polymorphism_(computer_science)	Wikipedia	cs-term	community-consensus	"pol-ee-MOR-fizm".
+encapsulation	/ɪnˌkæpsjʊˈleɪʃən/	en cap soo lay shun			https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)	Wikipedia	cs-term	community-consensus	"en-cap-soo-LAY-shun".
+iterator	/ˈɪtəˌreɪtər/	it er ay ter			https://en.wikipedia.org/wiki/Iterator	Wikipedia	cs-term	community-consensus	"IT-er-AY-ter".
+generator	/ˈdʒɛnəˌreɪtər/	jen er ay ter			https://en.wikipedia.org/wiki/Generator_(computer_programming)	Wikipedia	cs-term	community-consensus	"JEN-er-AY-ter".
+MessagePack	/ˈmɛsɪdʒˌpæk/	message pack			https://msgpack.org/	MessagePack	product	community-consensus	"MESSAGE-pack".
+Avro	/ˈævroʊ/	av ro			https://avro.apache.org/	Apache Avro	product	community-consensus	"AV-ro".
+Parquet	/pɑːrˈkeɪ/	par kay			https://parquet.apache.org/	Apache Parquet	product	community-consensus	"par-KAY" — like the floor.
+Arrow	/ˈæroʊ/	arrow			https://arrow.apache.org/	Apache Arrow	product	community-consensus	"AR-row".
+Iceberg	/ˈaɪsˌbɜːrɡ/	ice berg			https://iceberg.apache.org/	Apache Iceberg	product	community-consensus	"ICE-berg".
+Hudi	/ˈhuːdi/	who dee			https://hudi.apache.org/	Apache Hudi	product	community-consensus	"HOO-dee".
+Delta Lake	/ˈdɛltə leɪk/	del ta lake			https://delta.io/	Delta Lake	product	community-consensus	"DEL-ta lake".

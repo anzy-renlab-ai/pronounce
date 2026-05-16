@@ -1,0 +1,12 @@
+{
+  "word": "Megatron",
+  "ipa": "/ˈmɛɡəˌtrɒn/",
+  "respelling_us": "meg a tron",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/NVIDIA/Megatron-LM",
+  "source_label": "NVIDIA Megatron",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"MEG-uh-tron\" — large-scale training framework."
+}

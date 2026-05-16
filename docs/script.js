@@ -440,6 +440,62 @@ const ENTRIES = [
   { w: "Manjaro", ipa: "/mənˈdʒɑːroʊ/", r: "mun jar oh", aIpa: "", aR: "", url: "https://manjaro.org/", srcLabel: "Manjaro", cat: "product", conf: "community-consensus", notes: "\"mun-JAR-oh\"." },
   { w: "FreeBSD", ipa: "/ˌfriː biː ɛs ˈdiː/", r: "free B S D", aIpa: "", aR: "", url: "https://www.freebsd.org/", srcLabel: "FreeBSD", cat: "product", conf: "community-consensus", notes: "\"free-B-S-D\"." },
   { w: "Puppeteer", ipa: "/ˌpʌpɪˈtɪər/", r: "puppy teer", aIpa: "", aR: "", url: "https://pptr.dev/", srcLabel: "Puppeteer", cat: "tool", conf: "community-consensus", notes: "\"PUP-uh-teer\"." },
+  { w: "OpenTelemetry", ipa: "/ˌoʊpən tɛlɪˈmɛtri/", r: "open tel em e tree", aIpa: "", aR: "", url: "https://opentelemetry.io/", srcLabel: "OpenTelemetry", cat: "product", conf: "community-consensus", notes: "\"open-tel-EM-e-tree\"." },
+  { w: "OTEL", ipa: "/ˈoʊtəl/", r: "oh tul", aIpa: "", aR: "", url: "https://opentelemetry.io/", srcLabel: "OpenTelemetry", cat: "abbreviation", conf: "community-consensus", notes: "\"OH-tul\" — short for OpenTelemetry." },
+  { w: "eBPF", ipa: "/ˌiː biː piː ˈɛf/", r: "E B P F", aIpa: "", aR: "", url: "https://ebpf.io/", srcLabel: "eBPF", cat: "abbreviation", conf: "community-consensus", notes: "\"E-B-P-F\" letter-by-letter." },
+  { w: "Calico", ipa: "/ˈkælɪkoʊ/", r: "cal i co", aIpa: "", aR: "", url: "https://www.tigera.io/project-calico/", srcLabel: "Tigera Calico", cat: "product", conf: "community-consensus", notes: "\"CAL-i-co\"." },
+  { w: "Flannel", ipa: "/ˈflænəl/", r: "flan ul", aIpa: "", aR: "", url: "https://github.com/flannel-io/flannel", srcLabel: "Flannel", cat: "product", conf: "community-consensus", notes: "\"FLAN-ul\"." },
+  { w: "CoreDNS", ipa: "/ˌkɔːr diː ɛn ˈɛs/", r: "core D N S", aIpa: "", aR: "", url: "https://coredns.io/", srcLabel: "CoreDNS", cat: "product", conf: "community-consensus", notes: "\"CORE-D-N-S\"." },
+  { w: "OPA Gatekeeper", ipa: "/ˌoʊ piː eɪ ˈɡeɪtˌkiːpər/", r: "O P A gate keeper", aIpa: "", aR: "", url: "https://open-policy-agent.github.io/gatekeeper/", srcLabel: "OPA Gatekeeper", cat: "product", conf: "community-consensus", notes: "\"O-P-A GATE-keeper\"." },
+  { w: "Vault", ipa: "/vɔːlt/", r: "vault", aIpa: "", aR: "", url: "https://www.vaultproject.io/", srcLabel: "HashiCorp Vault", cat: "product", conf: "community-consensus", notes: "\"vault\"." },
+  { w: "Consul", ipa: "/ˈkɒnsəl/", r: "con sul", aIpa: "", aR: "", url: "https://www.consul.io/", srcLabel: "HashiCorp Consul", cat: "product", conf: "community-consensus", notes: "\"CON-sul\"." },
+  { w: "Nomad", ipa: "/ˈnoʊmæd/", r: "no mad", aIpa: "", aR: "", url: "https://www.nomadproject.io/", srcLabel: "HashiCorp Nomad", cat: "product", conf: "community-consensus", notes: "\"NO-mad\"." },
+  { w: "Packer", ipa: "/ˈpækər/", r: "pack er", aIpa: "", aR: "", url: "https://www.packer.io/", srcLabel: "HashiCorp Packer", cat: "product", conf: "community-consensus", notes: "\"PACK-er\"." },
+  { w: "Triton", ipa: "/ˈtraɪtən/", r: "try ton", aIpa: "", aR: "", url: "https://developer.nvidia.com/triton-inference-server", srcLabel: "NVIDIA Triton", cat: "product", conf: "community-consensus", notes: "\"TRY-ton\" — NVIDIA inference server." },
+  { w: "TensorRT", ipa: "/ˈtɛnsərˈɑːr tiː/", r: "tensor R T", aIpa: "", aR: "", url: "https://developer.nvidia.com/tensorrt", srcLabel: "NVIDIA TensorRT", cat: "product", conf: "community-consensus", notes: "\"TENSOR-R-T\"." },
+  { w: "CUDA", ipa: "/ˈkuːdə/", r: "koo da", aIpa: "", aR: "", url: "https://developer.nvidia.com/cuda-zone", srcLabel: "NVIDIA CUDA", cat: "product", conf: "community-consensus", notes: "\"KOO-duh\"." },
+  { w: "ONNX", ipa: "/ˈɒnɪks/", r: "on nix", aIpa: "", aR: "", url: "https://onnx.ai/", srcLabel: "ONNX", cat: "abbreviation", conf: "community-consensus", notes: "\"ON-nix\"." },
+  { w: "Triton (OpenAI)", ipa: "/ˈtraɪtən/", r: "try ton", aIpa: "", aR: "", url: "https://triton-lang.org/", srcLabel: "OpenAI Triton", cat: "product", conf: "community-consensus", notes: "\"TRY-ton\" — Python GPU kernel DSL." },
+  { w: "MLflow", ipa: "/ˌɛm ɛl ˈfloʊ/", r: "M L flow", aIpa: "", aR: "", url: "https://mlflow.org/", srcLabel: "MLflow", cat: "product", conf: "community-consensus", notes: "\"M-L-flow\"." },
+  { w: "DVC", ipa: "/ˌdiː viː ˈsiː/", r: "D V C", aIpa: "", aR: "", url: "https://dvc.org/", srcLabel: "DVC", cat: "abbreviation", conf: "community-consensus", notes: "\"D-V-C\" — Data Version Control." },
+  { w: "Weights & Biases", ipa: "/weɪts ænd ˈbaɪəsɪz/", r: "weights and biases", aIpa: "", aR: "", url: "https://wandb.ai/", srcLabel: "wandb", cat: "product", conf: "community-consensus", notes: "\"weights-and-BYE-uh-siz\"." },
+  { w: "Comet", ipa: "/ˈkɒmət/", r: "com et", aIpa: "", aR: "", url: "https://www.comet.com/", srcLabel: "Comet ML", cat: "product", conf: "community-consensus", notes: "\"COM-et\"." },
+  { w: "Redux", ipa: "/ˈriːdʌks/", r: "ree dux", aIpa: "", aR: "", url: "https://redux.js.org/", srcLabel: "Redux", cat: "product", conf: "community-consensus", notes: "\"REE-dux\"." },
+  { w: "MobX", ipa: "/ˌɛm ˈɒb ɛks/", r: "mob X", aIpa: "", aR: "", url: "https://mobx.js.org/", srcLabel: "MobX", cat: "product", conf: "community-consensus", notes: "\"MOB-X\"." },
+  { w: "Effector", ipa: "/ɪˈfɛktər/", r: "ef fect er", aIpa: "", aR: "", url: "https://effector.dev/", srcLabel: "Effector", cat: "product", conf: "community-consensus", notes: "\"ef-FECT-er\"." },
+  { w: "XState", ipa: "/ˌɛks ˈsteɪt/", r: "X state", aIpa: "", aR: "", url: "https://stately.ai/docs/xstate", srcLabel: "XState", cat: "product", conf: "community-consensus", notes: "\"X-STATE\"." },
+  { w: "Lit", ipa: "/lɪt/", r: "lit", aIpa: "", aR: "", url: "https://lit.dev/", srcLabel: "Lit", cat: "product", conf: "community-consensus", notes: "\"lit\" — Google's web components lib." },
+  { w: "Stencil", ipa: "/ˈstɛnsəl/", r: "sten sil", aIpa: "", aR: "", url: "https://stenciljs.com/", srcLabel: "Stencil", cat: "product", conf: "community-consensus", notes: "\"STEN-sil\"." },
+  { w: "Turborepo", ipa: "/ˈtɜːrboʊˌrɛpoʊ/", r: "tur bo re po", aIpa: "", aR: "", url: "https://turborepo.com/", srcLabel: "Turborepo", cat: "product", conf: "community-consensus", notes: "\"TUR-bo-re-po\"." },
+  { w: "Lage", ipa: "/leɪdʒ/", r: "layj", aIpa: "", aR: "", url: "https://microsoft.github.io/lage/", srcLabel: "Microsoft Lage", cat: "tool", conf: "community-consensus", notes: "\"layj\" — JS task runner." },
+  { w: "Moon", ipa: "/muːn/", r: "moon", aIpa: "", aR: "", url: "https://moonrepo.dev/", srcLabel: "Moon", cat: "tool", conf: "community-consensus", notes: "\"moon\" — Rust-based build system." },
+  { w: "Buck2", ipa: "/bʌk tuː/", r: "buck two", aIpa: "", aR: "", url: "https://buck2.build/", srcLabel: "Buck2", cat: "tool", conf: "community-consensus", notes: "\"BUCK-two\" — Meta's build system." },
+  { w: "CUDA Toolkit", ipa: "/ˈkuːdə ˈtuːlˌkɪt/", r: "koo da tool kit", aIpa: "", aR: "", url: "https://developer.nvidia.com/cuda-toolkit", srcLabel: "NVIDIA", cat: "product", conf: "community-consensus", notes: "\"KOO-duh tool-kit\"." },
+  { w: "Megatron", ipa: "/ˈmɛɡəˌtrɒn/", r: "meg a tron", aIpa: "", aR: "", url: "https://github.com/NVIDIA/Megatron-LM", srcLabel: "NVIDIA Megatron", cat: "product", conf: "community-consensus", notes: "\"MEG-uh-tron\" — large-scale training framework." },
+  { w: "DeepSpeed", ipa: "/ˈdiːpˌspiːd/", r: "deep speed", aIpa: "", aR: "", url: "https://www.deepspeed.ai/", srcLabel: "Microsoft DeepSpeed", cat: "product", conf: "community-consensus", notes: "\"DEEP-speed\"." },
+  { w: "Axolotl", ipa: "/ˈæksəlɒtl/", r: "ak so lot ul", aIpa: "", aR: "", url: "https://axolotl.ai/", srcLabel: "Axolotl", cat: "product", conf: "community-consensus", notes: "\"AK-so-lot-ul\" — fine-tuning framework." },
+  { w: "Unsloth", ipa: "/ʌnˈslɒθ/", r: "un sloth", aIpa: "", aR: "", url: "https://unsloth.ai/", srcLabel: "Unsloth", cat: "product", conf: "community-consensus", notes: "\"un-SLOTH\" — fast LLM fine-tuning." },
+  { w: "Devin", ipa: "/ˈdɛvɪn/", r: "dev in", aIpa: "", aR: "", url: "https://www.cognition.ai/", srcLabel: "Cognition Devin", cat: "product", conf: "community-consensus", notes: "\"DEV-in\" — AI software engineer." },
+  { w: "Sweep", ipa: "/swiːp/", r: "sweep", aIpa: "", aR: "", url: "https://docs.sweep.dev/", srcLabel: "Sweep", cat: "product", conf: "community-consensus", notes: "\"sweep\" — AI code review." },
+  { w: "Magnitude", ipa: "/ˈmæɡnɪˌtjuːd/", r: "mag ni tude", aIpa: "", aR: "", url: "https://app.magnitude.run/", srcLabel: "Magnitude", cat: "product", conf: "community-consensus", notes: "\"MAG-ni-tude\" — agent testing platform." },
+  { w: "Bun Test", ipa: "/bʌn tɛst/", r: "bun test", aIpa: "", aR: "", url: "https://bun.sh/docs/cli/test", srcLabel: "Bun Test", cat: "tool", conf: "community-consensus", notes: "\"BUN-test\"." },
+  { w: "Mocha", ipa: "/ˈmoʊkə/", r: "mo ka", aIpa: "", aR: "", url: "https://mochajs.org/", srcLabel: "Mocha", cat: "product", conf: "community-consensus", notes: "\"MO-ka\" — like the coffee." },
+  { w: "Chai", ipa: "/tʃaɪ/", r: "chai", aIpa: "", aR: "", url: "https://www.chaijs.com/", srcLabel: "Chai", cat: "tool", conf: "community-consensus", notes: "\"chai\" — like the tea." },
+  { w: "Selenium", ipa: "/səˈliːniəm/", r: "se lee nee um", aIpa: "", aR: "", url: "https://www.selenium.dev/", srcLabel: "Selenium", cat: "tool", conf: "community-consensus", notes: "\"se-LEE-nee-um\" — like the element." },
+  { w: "JUnit", ipa: "/ˌdʒeɪ ˈjuːnɪt/", r: "J unit", aIpa: "", aR: "", url: "https://junit.org/", srcLabel: "JUnit", cat: "tool", conf: "community-consensus", notes: "\"J-unit\"." },
+  { w: "pytest", ipa: "/ˈpaɪtɛst/", r: "pie test", aIpa: "", aR: "", url: "https://docs.pytest.org/", srcLabel: "pytest", cat: "tool", conf: "community-consensus", notes: "\"PIE-test\"." },
+  { w: "recursion", ipa: "/rɪˈkɜːrʒən/", r: "re curr zhun", aIpa: "", aR: "", url: "https://en.wikipedia.org/wiki/Recursion_(computer_science)", srcLabel: "Wikipedia", cat: "cs-term", conf: "community-consensus", notes: "\"re-CUR-zhun\"." },
+  { w: "polymorphism", ipa: "/ˌpɒliˈmɔːrfɪzəm/", r: "pol ee mor fizm", aIpa: "", aR: "", url: "https://en.wikipedia.org/wiki/Polymorphism_(computer_science)", srcLabel: "Wikipedia", cat: "cs-term", conf: "community-consensus", notes: "\"pol-ee-MOR-fizm\"." },
+  { w: "encapsulation", ipa: "/ɪnˌkæpsjʊˈleɪʃən/", r: "en cap soo lay shun", aIpa: "", aR: "", url: "https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)", srcLabel: "Wikipedia", cat: "cs-term", conf: "community-consensus", notes: "\"en-cap-soo-LAY-shun\"." },
+  { w: "iterator", ipa: "/ˈɪtəˌreɪtər/", r: "it er ay ter", aIpa: "", aR: "", url: "https://en.wikipedia.org/wiki/Iterator", srcLabel: "Wikipedia", cat: "cs-term", conf: "community-consensus", notes: "\"IT-er-AY-ter\"." },
+  { w: "generator", ipa: "/ˈdʒɛnəˌreɪtər/", r: "jen er ay ter", aIpa: "", aR: "", url: "https://en.wikipedia.org/wiki/Generator_(computer_programming)", srcLabel: "Wikipedia", cat: "cs-term", conf: "community-consensus", notes: "\"JEN-er-AY-ter\"." },
+  { w: "MessagePack", ipa: "/ˈmɛsɪdʒˌpæk/", r: "message pack", aIpa: "", aR: "", url: "https://msgpack.org/", srcLabel: "MessagePack", cat: "product", conf: "community-consensus", notes: "\"MESSAGE-pack\"." },
+  { w: "Avro", ipa: "/ˈævroʊ/", r: "av ro", aIpa: "", aR: "", url: "https://avro.apache.org/", srcLabel: "Apache Avro", cat: "product", conf: "community-consensus", notes: "\"AV-ro\"." },
+  { w: "Parquet", ipa: "/pɑːrˈkeɪ/", r: "par kay", aIpa: "", aR: "", url: "https://parquet.apache.org/", srcLabel: "Apache Parquet", cat: "product", conf: "community-consensus", notes: "\"par-KAY\" — like the floor." },
+  { w: "Arrow", ipa: "/ˈæroʊ/", r: "arrow", aIpa: "", aR: "", url: "https://arrow.apache.org/", srcLabel: "Apache Arrow", cat: "product", conf: "community-consensus", notes: "\"AR-row\"." },
+  { w: "Iceberg", ipa: "/ˈaɪsˌbɜːrɡ/", r: "ice berg", aIpa: "", aR: "", url: "https://iceberg.apache.org/", srcLabel: "Apache Iceberg", cat: "product", conf: "community-consensus", notes: "\"ICE-berg\"." },
+  { w: "Hudi", ipa: "/ˈhuːdi/", r: "who dee", aIpa: "", aR: "", url: "https://hudi.apache.org/", srcLabel: "Apache Hudi", cat: "product", conf: "community-consensus", notes: "\"HOO-dee\"." },
+  { w: "Delta Lake", ipa: "/ˈdɛltə leɪk/", r: "del ta lake", aIpa: "", aR: "", url: "https://delta.io/", srcLabel: "Delta Lake", cat: "product", conf: "community-consensus", notes: "\"DEL-ta lake\"." },
 ];
 const BY_WORD = Object.fromEntries(ENTRIES.map(e => [e.w.toLowerCase(), e]));
 
@@ -815,9 +871,55 @@ function initHeroSearch() {
   }
 }
 
+// Hero typewriter — cycles through "hard to pronounce" words
+function initHeroCycle() {
+  const el = document.getElementById('hero-cycle');
+  if (!el) return;
+  const words = ['kubectl', 'nginx', 'GIF', 'JSON', 'Pydantic', 'Knative', 'LaTeX', 'JWT', 'CIDR', 'kubectl'];
+  let i = 0, j = 0, deleting = false;
+  function tick() {
+    const w = words[i];
+    if (!deleting) {
+      el.textContent = w.slice(0, ++j);
+      if (j === w.length) { deleting = true; return setTimeout(tick, 1800); }
+    } else {
+      el.textContent = w.slice(0, --j);
+      if (j === 0) { deleting = false; i = (i + 1) % words.length; return setTimeout(tick, 250); }
+    }
+    setTimeout(tick, deleting ? 40 : 100);
+  }
+  // honor reduced motion
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    el.textContent = 'kubectl';
+    return;
+  }
+  tick();
+}
+
+// Confetti — used by quiz on perfect score
+window.confettiBurst = function(n) {
+  n = n || 80;
+  const colors = ['#ff6a3d', '#7adfbb', '#7ab8ff', '#ffd33d', '#ff85a8'];
+  for (let i = 0; i < n; i++) {
+    const c = document.createElement('div');
+    c.className = 'confetti';
+    c.style.left = (Math.random() * 100) + 'vw';
+    c.style.background = colors[Math.floor(Math.random() * colors.length)];
+    c.style.transform = 'rotate(' + (Math.random() * 360) + 'deg)';
+    document.body.appendChild(c);
+    const dx = (Math.random() - 0.5) * 200;
+    const dur = 2200 + Math.random() * 1500;
+    c.animate([
+      { transform: c.style.transform + ' translate(0, 0)', opacity: 1 },
+      { transform: 'translate(' + dx + 'px, 100vh) rotate(' + (Math.random() * 720) + 'deg)', opacity: 0 }
+    ], { duration: dur, easing: 'cubic-bezier(.2,.6,.4,1)' }).onfinish = () => c.remove();
+  }
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   renderTodaysWord();
   initHeroSearch();
+  initHeroCycle();
   // Wire up theme toggle button if present in topbar
   const tb = document.getElementById('theme-toggle');
   if (tb) tb.addEventListener('click', toggleTheme);

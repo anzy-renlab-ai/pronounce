@@ -1,0 +1,12 @@
+{
+  "word": "Buck2",
+  "ipa": "/bʌk tuː/",
+  "respelling_us": "buck two",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://buck2.build/",
+  "source_label": "Buck2",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "\"BUCK-two\" — Meta's build system."
+}

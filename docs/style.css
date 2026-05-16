@@ -285,6 +285,14 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid 
 .hero h1 .speaker { display: inline-block; animation: speakerWiggle 4s ease-in-out infinite; transform-origin: 50% 70%; }
 @keyframes speakerWiggle { 0%,90%,100% { transform: rotate(0deg); } 92% { transform: rotate(-8deg); } 95% { transform: rotate(8deg); } 97% { transform: rotate(-4deg); } }
 
+/* Hero word cycle */
+.hero-cycle { display: inline-block; position: relative; color: var(--accent); }
+.hero-cycle::after { content: '|'; position: absolute; right: -8px; top: 0; color: var(--accent-2); animation: blink 1.05s steps(2,end) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+/* Confetti */
+.confetti { position: fixed; top: -10px; width: 8px; height: 14px; pointer-events: none; z-index: 9999; will-change: transform, opacity; }
+
 /* prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
   .hero h1 .speaker, .hero-mic.listening { animation: none; }

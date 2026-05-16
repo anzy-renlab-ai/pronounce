@@ -340,6 +340,14 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 2px solid 
 .hero h1 .speaker { display: inline-block; animation: speakerWiggle 4s ease-in-out infinite; transform-origin: 50% 70%; }
 @keyframes speakerWiggle { 0%,90%,100% { transform: rotate(0deg); } 92% { transform: rotate(-8deg); } 95% { transform: rotate(8deg); } 97% { transform: rotate(-4deg); } }
 
+/* Hero word cycle */
+.hero-cycle { display: inline-block; position: relative; color: var(--accent); }
+.hero-cycle::after { content: '|'; position: absolute; right: -8px; top: 0; color: var(--accent-2); animation: blink 1.05s steps(2,end) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+/* Confetti */
+.confetti { position: fixed; top: -10px; width: 8px; height: 14px; pointer-events: none; z-index: 9999; will-change: transform, opacity; }
+
 /* prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
   .hero h1 .speaker, .hero-mic.listening { animation: none; }
@@ -729,9 +737,55 @@ function initHeroSearch() {
   }
 }
 
+// Hero typewriter — cycles through "hard to pronounce" words
+function initHeroCycle() {
+  const el = document.getElementById('hero-cycle');
+  if (!el) return;
+  const words = ['kubectl', 'nginx', 'GIF', 'JSON', 'Pydantic', 'Knative', 'LaTeX', 'JWT', 'CIDR', 'kubectl'];
+  let i = 0, j = 0, deleting = false;
+  function tick() {
+    const w = words[i];
+    if (!deleting) {
+      el.textContent = w.slice(0, ++j);
+      if (j === w.length) { deleting = true; return setTimeout(tick, 1800); }
+    } else {
+      el.textContent = w.slice(0, --j);
+      if (j === 0) { deleting = false; i = (i + 1) % words.length; return setTimeout(tick, 250); }
+    }
+    setTimeout(tick, deleting ? 40 : 100);
+  }
+  // honor reduced motion
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    el.textContent = 'kubectl';
+    return;
+  }
+  tick();
+}
+
+// Confetti — used by quiz on perfect score
+window.confettiBurst = function(n) {
+  n = n || 80;
+  const colors = ['#ff6a3d', '#7adfbb', '#7ab8ff', '#ffd33d', '#ff85a8'];
+  for (let i = 0; i < n; i++) {
+    const c = document.createElement('div');
+    c.className = 'confetti';
+    c.style.left = (Math.random() * 100) + 'vw';
+    c.style.background = colors[Math.floor(Math.random() * colors.length)];
+    c.style.transform = 'rotate(' + (Math.random() * 360) + 'deg)';
+    document.body.appendChild(c);
+    const dx = (Math.random() - 0.5) * 200;
+    const dur = 2200 + Math.random() * 1500;
+    c.animate([
+      { transform: c.style.transform + ' translate(0, 0)', opacity: 1 },
+      { transform: 'translate(' + dx + 'px, 100vh) rotate(' + (Math.random() * 720) + 'deg)', opacity: 0 }
+    ], { duration: dur, easing: 'cubic-bezier(.2,.6,.4,1)' }).onfinish = () => c.remove();
+  }
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   renderTodaysWord();
   initHeroSearch();
+  initHeroCycle();
   // Wire up theme toggle button if present in topbar
   const tb = document.getElementById('theme-toggle');
   if (tb) tb.addEventListener('click', toggleTheme);
@@ -819,7 +873,7 @@ cat > "$DOCS/index.html" <<EOF
   <div class="container" id="main">
 
     <header class="hero">
-      <h1><span class="speaker">🔊</span><br>How to pronounce <code>kubectl</code><br>without the cringe.</h1>
+      <h1><span class="speaker">🔊</span><br>How to pronounce <code id="hero-cycle" class="hero-cycle">kubectl</code><br>without the cringe.</h1>
       <p class="tagline">A community dictionary of how engineers <em>actually</em> say <code>kubectl</code>, <code>nginx</code>, <code>GIF</code>, <code>JSON</code>, <code>Pydantic</code>, <code>Knative</code>, <code>LaTeX</code>, <code>Postgres</code>… <strong>with sources</strong>.</p>
       <div class="hero-search" role="search">
         <input id="hero-search" type="search" placeholder="🔍 Type a word — kubectl, nginx, Pydantic, JWT…" autocomplete="off" aria-label="Search pronunciation dictionary">

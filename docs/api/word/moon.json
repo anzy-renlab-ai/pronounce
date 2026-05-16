@@ -1,0 +1,12 @@
+{
+  "word": "Moon",
+  "ipa": "/muːn/",
+  "respelling_us": "moon",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://moonrepo.dev/",
+  "source_label": "Moon",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "\"moon\" — Rust-based build system."
+}

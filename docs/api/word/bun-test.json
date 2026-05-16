@@ -1,0 +1,12 @@
+{
+  "word": "Bun Test",
+  "ipa": "/bʌn tɛst/",
+  "respelling_us": "bun test",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://bun.sh/docs/cli/test",
+  "source_label": "Bun Test",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "\"BUN-test\"."
+}

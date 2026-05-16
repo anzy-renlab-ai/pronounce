@@ -1,0 +1,12 @@
+{
+  "word": "Lage",
+  "ipa": "/leɪdʒ/",
+  "respelling_us": "layj",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://microsoft.github.io/lage/",
+  "source_label": "Microsoft Lage",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "\"layj\" — JS task runner."
+}

@@ -1,0 +1,12 @@
+{
+  "word": "Triton (OpenAI)",
+  "ipa": "/ˈtraɪtən/",
+  "respelling_us": "try ton",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://triton-lang.org/",
+  "source_label": "OpenAI Triton",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"TRY-ton\" — Python GPU kernel DSL."
+}
