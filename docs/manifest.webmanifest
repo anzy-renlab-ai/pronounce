@@ -1,0 +1,40 @@
+{
+  "name": "Pronounce — pronounce.renlab.ai",
+  "short_name": "Pronounce",
+  "description": "How engineers actually pronounce project, product, and programmer-jargon names.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0e0e10",
+  "theme_color": "#ff6a3d",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["education", "developer"],
+  "shortcuts": [
+    {
+      "name": "Random word",
+      "url": "/random",
+      "description": "Hear a random dictionary entry"
+    },
+    {
+      "name": "Browse",
+      "url": "/browse.html",
+      "description": "Browse all 310 entries"
+    }
+  ]
+}

@@ -572,8 +572,33 @@ function renderTodaysWord() {
     </div>`;
 }
 
+// Service worker — installable PWA + offline cache for visited words
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch(() => {});
+  });
+}
+
+// Theme: respect OS by default, allow manual override via localStorage
+function applyTheme() {
+  const stored = localStorage.getItem('pronounce-theme');
+  const sysDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const useDark = stored ? stored === 'dark' : sysDark;
+  document.documentElement.dataset.theme = useDark ? 'dark' : 'light';
+}
+function toggleTheme() {
+  const cur = document.documentElement.dataset.theme || 'dark';
+  const next = cur === 'dark' ? 'light' : 'dark';
+  localStorage.setItem('pronounce-theme', next);
+  applyTheme();
+}
+applyTheme();
+
 document.addEventListener('DOMContentLoaded', () => {
   renderTodaysWord();
+  // Wire up theme toggle button if present in topbar
+  const tb = document.getElementById('theme-toggle');
+  if (tb) tb.addEventListener('click', toggleTheme);
   if (document.getElementById('entries')) initBrowse();
   else initWordPage();
 });

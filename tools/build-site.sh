@@ -53,7 +53,7 @@ ENTRIES_JS="$(awk -F'\t' '
 # style.css
 # ---------------------------------------------------------------------------
 cat > "$DOCS/style.css" <<'EOF'
-:root {
+:root, html[data-theme="dark"] {
   --bg: #0e0e10;
   --fg: #f6f6f7;
   --muted: #9b9ba0;
@@ -70,6 +70,21 @@ cat > "$DOCS/style.css" <<'EOF'
   --mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
   --sans: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Helvetica, Arial, sans-serif;
 }
+html[data-theme="light"] {
+  --bg: #fefefe;
+  --fg: #0e0e10;
+  --muted: #6b6b71;
+  --muted-strong: #3b3b41;
+  --accent: #d54a1f;
+  --accent-2: #1a8a5d;
+  --card: #f6f6f8;
+  --card-2: #ebebef;
+  --border: #d8d8de;
+  --link: #2462c1;
+  --warn-bg: rgba(218, 165, 32, 0.08);
+  --warn-border: rgba(218, 165, 32, 0.35);
+  --warn-fg: #7a6420;
+}
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--sans); line-height: 1.65; font-size: 17px; -webkit-font-smoothing: antialiased; }
@@ -83,6 +98,8 @@ nav.topbar .brand { font-weight: 700; font-size: 18px; letter-spacing: -0.01em; 
 nav.topbar .brand a { color: var(--fg); text-decoration: none; }
 nav.topbar .links a { color: var(--muted-strong); margin-left: 22px; text-decoration: none; font-size: 14px; }
 nav.topbar .links a:hover { color: var(--accent); }
+nav.topbar .theme-toggle { background: transparent; border: 1px solid var(--border); color: var(--muted-strong); font-size: 14px; padding: 4px 8px; border-radius: 6px; cursor: pointer; margin-left: 12px; }
+nav.topbar .theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
 header.hero { margin-bottom: 48px; text-align: center; }
 .hero h1 { font-size: 64px; margin: 0 0 14px; letter-spacing: -0.03em; line-height: 1.05; }
 .hero h1 .speaker { color: var(--accent); }
@@ -132,6 +149,40 @@ header.hero { margin-bottom: 48px; text-align: center; }
 /* Toast for copy feedback */
 .toast { position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%) translateY(20px); background: var(--card-2); border: 1px solid var(--accent-2); color: var(--accent-2); padding: 10px 18px; border-radius: 8px; font-size: 14px; opacity: 0; transition: all 0.2s; z-index: 200; pointer-events: none; }
 .toast.toast-show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* Stats page */
+.big-numbers { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 14px; margin-bottom: 36px; }
+.bn-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 22px; text-align: center; }
+.bn-num { font-size: 40px; font-weight: 700; color: var(--accent); font-family: var(--mono); }
+.bn-label { color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px; }
+.bars { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 22px; margin-bottom: 36px; }
+.bar-row { display: grid; grid-template-columns: 180px 1fr 60px; align-items: center; gap: 14px; padding: 4px 0; }
+.bar-label { color: var(--muted-strong); font-size: 14px; font-family: var(--mono); }
+.bar-label a { color: inherit; text-decoration: none; }
+.bar-label a:hover { color: var(--accent); }
+.bar-track { background: var(--card-2); height: 12px; border-radius: 6px; overflow: hidden; }
+.bar-fill { height: 100%; transition: width 0.4s; }
+.bar-orange { background: linear-gradient(90deg, var(--accent), #ff8b5e); }
+.bar-green { background: linear-gradient(90deg, var(--accent-2), #95e9c6); }
+.bar-value { font-family: var(--mono); font-size: 14px; color: var(--muted-strong); text-align: right; }
+.alphabet { display: grid; grid-template-columns: repeat(26, 1fr); gap: 6px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px; margin-bottom: 36px; align-items: end; }
+.letter-col { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.letter-bar { background: var(--accent); width: 70%; border-radius: 2px 2px 0 0; min-height: 4px; }
+.letter-label { font-family: var(--mono); color: var(--muted-strong); font-size: 12px; }
+.letter-count { color: var(--muted); font-size: 10px; min-height: 14px; }
+.cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+.cat-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; text-decoration: none; color: var(--fg); display: block; transition: transform 0.15s; }
+.cat-card:hover { transform: translateY(-2px); border-color: var(--accent); }
+.cat-name { font-family: var(--mono); font-size: 16px; color: var(--accent); margin-bottom: 4px; }
+.cat-count { color: var(--muted); font-size: 13px; }
+
+/* Per-category page */
+.cat-list { list-style: none; padding: 0; columns: 2; column-gap: 32px; }
+.cat-list li { break-inside: avoid; padding: 6px 0; font-size: 14.5px; }
+.cat-list li a { color: var(--accent); text-decoration: none; font-family: var(--mono); }
+.cat-list li a:hover { text-decoration: underline; }
+.cat-list-resp { color: var(--muted); margin-left: 8px; font-family: var(--mono); font-size: 13px; }
+@media (max-width: 640px) { .cat-list { columns: 1; } }
 .controls { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; align-items: center; }
 .controls input[type="search"] { flex: 1; min-width: 240px; background: var(--card); color: var(--fg); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; font-size: 15px; font-family: var(--sans); }
 .controls input[type="search"]:focus { outline: 2px solid var(--accent); }
@@ -526,8 +577,33 @@ function renderTodaysWord() {
     </div>\`;
 }
 
+// Service worker — installable PWA + offline cache for visited words
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch(() => {});
+  });
+}
+
+// Theme: respect OS by default, allow manual override via localStorage
+function applyTheme() {
+  const stored = localStorage.getItem('pronounce-theme');
+  const sysDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const useDark = stored ? stored === 'dark' : sysDark;
+  document.documentElement.dataset.theme = useDark ? 'dark' : 'light';
+}
+function toggleTheme() {
+  const cur = document.documentElement.dataset.theme || 'dark';
+  const next = cur === 'dark' ? 'light' : 'dark';
+  localStorage.setItem('pronounce-theme', next);
+  applyTheme();
+}
+applyTheme();
+
 document.addEventListener('DOMContentLoaded', () => {
   renderTodaysWord();
+  // Wire up theme toggle button if present in topbar
+  const tb = document.getElementById('theme-toggle');
+  if (tb) tb.addEventListener('click', toggleTheme);
   if (document.getElementById('entries')) initBrowse();
   else initWordPage();
 });
@@ -575,6 +651,10 @@ cat > "$DOCS/index.html" <<EOF
   <meta name="twitter:title" content="How to pronounce kubectl, nginx, GIF, JSON">
   <meta name="twitter:description" content="A community pronunciation dictionary for the names developers actually use. With sources.">
   <meta name="twitter:image" content="${SITE_URL}/og.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#ff6a3d">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="./style.css">
   <script type="application/ld+json">
   {
@@ -597,8 +677,9 @@ cat > "$DOCS/index.html" <<EOF
     <div class="brand"><a href="./">🔊 ${BRAND}</a></div>
     <div class="links">
       <a href="./browse.html">Browse</a>
+      <a href="./stats.html">Stats</a>
       <a href="https://github.com/${GH_REPO}">GitHub</a>
-      <a href="https://github.com/${GH_REPO}/blob/main/IDEAS.md">Roadmap</a>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button>
     </div>
   </nav>
 
@@ -741,13 +822,22 @@ cat > "$DOCS/browse.html" <<EOF
   <meta property="og:image" content="${SITE_URL}/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="${SITE_URL}/og.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#ff6a3d">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <div class="gh-banner">⭐ <a href="https://github.com/${GH_REPO}">Star on GitHub</a> — open source, MIT, every dictionary entry is a community PR</div>
   <nav class="topbar">
     <div class="brand"><a href="./">🔊 ${BRAND}</a></div>
-    <div class="links"><a href="./">Home</a><a href="https://github.com/${GH_REPO}">GitHub</a></div>
+    <div class="links">
+      <a href="./">Home</a>
+      <a href="./stats.html">Stats</a>
+      <a href="https://github.com/${GH_REPO}">GitHub</a>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button>
+    </div>
   </nav>
 
   <div class="container-wide">
@@ -957,6 +1047,10 @@ while IFS="$SEP" read -r word ipa resp alt_ipa alt_resp src_url src_label cat co
   <meta name="twitter:title" content="$page_title">
   <meta name="twitter:description" content="$meta_desc">
   <meta name="twitter:image" content="$SITE_URL/og/$slug.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#ff6a3d">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="../style.css">
   <script type="application/ld+json">$jsonld_main</script>
 HTML
@@ -973,7 +1067,12 @@ HTML
   <div class="gh-banner">⭐ <a href="https://github.com/$GH_REPO">Star on GitHub</a> — community-maintained pronunciation dictionary</div>
   <nav class="topbar">
     <div class="brand"><a href="../">🔊 $BRAND</a></div>
-    <div class="links"><a href="../browse.html">Browse all</a><a href="https://github.com/$GH_REPO">GitHub</a></div>
+    <div class="links">
+      <a href="../browse.html">Browse all</a>
+      <a href="../stats.html">Stats</a>
+      <a href="https://github.com/$GH_REPO">GitHub</a>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button>
+    </div>
   </nav>
 
   <div class="container-narrow word-page">
@@ -1176,6 +1275,186 @@ Allow: /
 
 Sitemap: $SITE_URL/sitemap.xml
 EOF
+
+# ---------------------------------------------------------------------------
+# /stats.html — dictionary statistics with bar charts
+# ---------------------------------------------------------------------------
+# Pre-compute stats as inline JS
+STATS_JS="$(awk -F'\t' '
+  BEGIN { total = 0; with_src = 0 }
+  !/^#/ && NF>=3 && $1 != "" && $1 != "word" {
+    total++
+    cats[$8]++
+    confs[$9]++
+    if ($6 != "") with_src++
+    # First-letter for A-Z dist
+    fl = toupper(substr($1, 1, 1))
+    letters[fl]++
+  }
+  END {
+    printf "const STATS = {\n  total: %d,\n  withSource: %d,\n  cats: {", total, with_src
+    sep = ""
+    for (c in cats) { printf "%s\"%s\": %d", sep, c, cats[c]; sep = "," }
+    printf "},\n  confs: {"
+    sep = ""
+    for (c in confs) { printf "%s\"%s\": %d", sep, c, confs[c]; sep = "," }
+    printf "},\n  letters: {"
+    sep = ""
+    for (l in letters) { printf "%s\"%s\": %d", sep, l, letters[l]; sep = "," }
+    printf "}\n};\n"
+  }
+' "$DICT")"
+
+cat > "$DOCS/stats.html" <<EOF
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dictionary stats — ${BRAND}</title>
+  <meta name="description" content="Live statistics of the pronounce.renlab.ai dictionary — total entries, breakdown by category, confidence distribution, and source coverage.">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#ff6a3d">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="canonical" href="${SITE_URL}/stats.html">
+  <meta property="og:image" content="${SITE_URL}/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="${SITE_URL}/og.png">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="gh-banner">⭐ <a href="https://github.com/${GH_REPO}">Star on GitHub</a> · community-maintained pronunciation dictionary</div>
+  <nav class="topbar">
+    <div class="brand"><a href="./">🔊 ${BRAND}</a></div>
+    <div class="links">
+      <a href="./">Home</a>
+      <a href="./browse.html">Browse</a>
+      <a href="https://github.com/${GH_REPO}">GitHub</a>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1 style="font-size: 36px;">Dictionary stats</h1>
+    <p style="color: var(--muted-strong); margin-bottom: 24px;">Live numbers from <a href="https://github.com/${GH_REPO}/blob/main/data/pronunciations.tsv">data/pronunciations.tsv</a>, regenerated on every build.</p>
+
+    <div class="big-numbers" id="big-numbers"></div>
+
+    <div class="section-title">By category</div>
+    <div class="bars" id="bars-cats"></div>
+
+    <div class="section-title">By confidence</div>
+    <div class="bars" id="bars-confs"></div>
+
+    <div class="section-title">First letter distribution (A → Z)</div>
+    <div class="alphabet" id="bars-letters"></div>
+
+    <div class="section-title">Browse by category</div>
+    <div class="cat-grid" id="cat-grid"></div>
+  </div>
+
+  <a class="gh-float" href="https://github.com/${GH_REPO}" target="_blank" rel="noopener"><span class="star">★</span> Star on GitHub</a>
+
+  <footer class="footer">
+    <p>${BRAND} · MIT · <a href="https://github.com/${GH_REPO}">GitHub</a></p>
+  </footer>
+
+  <script>
+$STATS_JS
+
+function init() {
+  const bn = document.getElementById('big-numbers');
+  bn.innerHTML = \`
+    <div class="bn-card"><div class="bn-num">\${STATS.total}</div><div class="bn-label">total entries</div></div>
+    <div class="bn-card"><div class="bn-num">\${STATS.withSource}</div><div class="bn-label">with source URL</div></div>
+    <div class="bn-card"><div class="bn-num">\${Object.keys(STATS.cats).length}</div><div class="bn-label">categories</div></div>
+    <div class="bn-card"><div class="bn-num">\${Math.round(100 * STATS.withSource / STATS.total)}%</div><div class="bn-label">cited</div></div>
+  \`;
+
+  function renderBars(target, data, totalKey, color) {
+    const el = document.getElementById(target);
+    const max = Math.max(...Object.values(data));
+    const items = Object.entries(data).sort((a, b) => b[1] - a[1]);
+    el.innerHTML = items.map(([k, v]) => \`
+      <div class="bar-row">
+        <div class="bar-label"><a href="\${target === 'bars-cats' ? '/category/' + k + '.html' : '#'}">\${k}</a></div>
+        <div class="bar-track"><div class="bar-fill bar-\${color}" style="width: \${100 * v / max}%"></div></div>
+        <div class="bar-value">\${v}</div>
+      </div>\`).join('');
+  }
+  renderBars('bars-cats', STATS.cats, 'total', 'orange');
+  renderBars('bars-confs', STATS.confs, 'total', 'green');
+
+  // A-Z grid
+  const az = document.getElementById('bars-letters');
+  const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+  const maxL = Math.max(...Object.values(STATS.letters));
+  az.innerHTML = letters.map(l => {
+    const v = STATS.letters[l] || 0;
+    const h = v ? 8 + Math.round(60 * v / maxL) : 4;
+    return \`<div class="letter-col" title="\${l}: \${v}">
+      <div class="letter-bar" style="height: \${h}px"></div>
+      <div class="letter-label">\${l}</div>
+      <div class="letter-count">\${v || ''}</div>
+    </div>\`;
+  }).join('');
+
+  // Category grid (clickable cards)
+  const cg = document.getElementById('cat-grid');
+  const cats = Object.entries(STATS.cats).sort((a, b) => b[1] - a[1]);
+  cg.innerHTML = cats.map(([c, n]) => \`
+    <a class="cat-card" href="/category/\${c}.html">
+      <div class="cat-name">\${c}</div>
+      <div class="cat-count">\${n} entries</div>
+    </a>\`).join('');
+}
+document.addEventListener('DOMContentLoaded', init);
+  </script>
+  <script src="./script.js"></script>
+</body>
+</html>
+EOF
+
+# ---------------------------------------------------------------------------
+# Per-category landing pages: /category/<cat>.html
+# ---------------------------------------------------------------------------
+mkdir -p "$DOCS/category"
+find "$DOCS/category" -name '*.html' -delete 2>/dev/null || true
+
+awk -F'\t' '!/^#/ && NF>=8 && $1 != "" && $1 != "word" { print $8 }' "$DICT" | sort -u | while read -r catname; do
+  [[ -z "$catname" ]] && continue
+  fn="$DOCS/category/${catname}.html"
+  cat_title="$(printf '%s' "$catname" | awk '{print toupper(substr($0,1,1)) substr($0,2)}')"
+  {
+    printf '<!DOCTYPE html>\n<html lang="en">\n<head>\n'
+    printf '  <meta charset="utf-8">\n'
+    printf '  <meta name="viewport" content="width=device-width, initial-scale=1">\n'
+    printf '  <title>%s pronunciations — %s</title>\n' "$cat_title" "$BRAND"
+    printf '  <meta name="description" content="Every %s in the pronounce.renlab.ai dictionary, with respellings.">\n' "$catname"
+    printf '  <link rel="manifest" href="/manifest.webmanifest">\n'
+    printf '  <meta name="theme-color" content="#ff6a3d">\n'
+    printf '  <link rel="canonical" href="%s/category/%s.html">\n' "$SITE_URL" "$catname"
+    printf '  <meta property="og:image" content="%s/og.png">\n' "$SITE_URL"
+    printf '  <link rel="stylesheet" href="/style.css">\n'
+    printf '</head>\n<body>\n'
+    printf '  <div class="gh-banner">⭐ <a href="https://github.com/%s">Star on GitHub</a></div>\n' "$GH_REPO"
+    printf '  <nav class="topbar"><div class="brand"><a href="/">🔊 %s</a></div>\n' "$BRAND"
+    printf '    <div class="links"><a href="/">Home</a><a href="/browse.html">Browse all</a><a href="/stats.html">Stats</a>\n'
+    printf '      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button></div></nav>\n'
+    printf '  <div class="container">\n'
+    printf '    <h1>Category: <code>%s</code></h1>\n' "$catname"
+    printf '    <ul class="cat-list">\n'
+    awk -F'\t' -v c="$catname" '!/^#/ && NF>=8 && $8==c && $1 != "" && $1 != "word" {
+      sl=tolower($1); gsub(/[^a-z0-9._-]/,"-",sl)
+      printf "      <li><a href=\"/word/%s.html\">%s</a> <span class=\"cat-list-resp\">%s</span></li>\n", sl, $1, $3
+    }' "$DICT"
+    printf '    </ul>\n  </div>\n'
+    printf '  <a class="gh-float" href="https://github.com/%s" target="_blank" rel="noopener"><span class="star">★</span> Star on GitHub</a>\n' "$GH_REPO"
+    printf '  <footer class="footer"><p>%s · MIT</p></footer>\n' "$BRAND"
+    printf '  <script src="/script.js"></script>\n</body></html>\n'
+  } > "$fn"
+done
 
 # ---------------------------------------------------------------------------
 # Embed widgets — iframe-friendly mini player per word

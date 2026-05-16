@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dictionary stats — Pronounce</title>
+  <meta name="description" content="Live statistics of the pronounce.renlab.ai dictionary — total entries, breakdown by category, confidence distribution, and source coverage.">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#ff6a3d">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="canonical" href="https://pronounce.renlab.ai/stats.html">
+  <meta property="og:image" content="https://pronounce.renlab.ai/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://pronounce.renlab.ai/og.png">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="gh-banner">⭐ <a href="https://github.com/anzy-renlab-ai/pronounce">Star on GitHub</a> · community-maintained pronunciation dictionary</div>
+  <nav class="topbar">
+    <div class="brand"><a href="./">🔊 Pronounce</a></div>
+    <div class="links">
+      <a href="./">Home</a>
+      <a href="./browse.html">Browse</a>
+      <a href="https://github.com/anzy-renlab-ai/pronounce">GitHub</a>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1 style="font-size: 36px;">Dictionary stats</h1>
+    <p style="color: var(--muted-strong); margin-bottom: 24px;">Live numbers from <a href="https://github.com/anzy-renlab-ai/pronounce/blob/main/data/pronunciations.tsv">data/pronunciations.tsv</a>, regenerated on every build.</p>
+
+    <div class="big-numbers" id="big-numbers"></div>
+
+    <div class="section-title">By category</div>
+    <div class="bars" id="bars-cats"></div>
+
+    <div class="section-title">By confidence</div>
+    <div class="bars" id="bars-confs"></div>
+
+    <div class="section-title">First letter distribution (A → Z)</div>
+    <div class="alphabet" id="bars-letters"></div>
+
+    <div class="section-title">Browse by category</div>
+    <div class="cat-grid" id="cat-grid"></div>
+  </div>
+
+  <a class="gh-float" href="https://github.com/anzy-renlab-ai/pronounce" target="_blank" rel="noopener"><span class="star">★</span> Star on GitHub</a>
+
+  <footer class="footer">
+    <p>Pronounce · MIT · <a href="https://github.com/anzy-renlab-ai/pronounce">GitHub</a></p>
+  </footer>
+
+  <script>
+const STATS = {
+  total: 310,
+  withSource: 303,
+  cats: {"project": 1,"acronym": 29,"cs-term": 4,"tool": 63,"product": 204,"abbreviation": 6,"cli-tool": 3},
+  confs: {"contested": 14,"creator-clarified": 18,"community-consensus": 278},
+  letters: {"A": 16,"B": 8,"C": 33,"D": 16,"E": 12,"F": 5,"G": 14,"H": 12,"I": 4,"J": 11,"K": 12,"L": 18,"M": 16,"N": 14,"O": 8,"P": 20,"Q": 2,"R": 19,"S": 24,"T": 19,"U": 2,"V": 10,"W": 8,"Y": 1,"Z": 6}
+};
+
+function init() {
+  const bn = document.getElementById('big-numbers');
+  bn.innerHTML = `
+    <div class="bn-card"><div class="bn-num">${STATS.total}</div><div class="bn-label">total entries</div></div>
+    <div class="bn-card"><div class="bn-num">${STATS.withSource}</div><div class="bn-label">with source URL</div></div>
+    <div class="bn-card"><div class="bn-num">${Object.keys(STATS.cats).length}</div><div class="bn-label">categories</div></div>
+    <div class="bn-card"><div class="bn-num">${Math.round(100 * STATS.withSource / STATS.total)}%</div><div class="bn-label">cited</div></div>
+  `;
+
+  function renderBars(target, data, totalKey, color) {
+    const el = document.getElementById(target);
+    const max = Math.max(...Object.values(data));
+    const items = Object.entries(data).sort((a, b) => b[1] - a[1]);
+    el.innerHTML = items.map(([k, v]) => `
+      <div class="bar-row">
+        <div class="bar-label"><a href="${target === 'bars-cats' ? '/category/' + k + '.html' : '#'}">${k}</a></div>
+        <div class="bar-track"><div class="bar-fill bar-${color}" style="width: ${100 * v / max}%"></div></div>
+        <div class="bar-value">${v}</div>
+      </div>`).join('');
+  }
+  renderBars('bars-cats', STATS.cats, 'total', 'orange');
+  renderBars('bars-confs', STATS.confs, 'total', 'green');
+
+  // A-Z grid
+  const az = document.getElementById('bars-letters');
+  const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+  const maxL = Math.max(...Object.values(STATS.letters));
+  az.innerHTML = letters.map(l => {
+    const v = STATS.letters[l] || 0;
+    const h = v ? 8 + Math.round(60 * v / maxL) : 4;
+    return `<div class="letter-col" title="${l}: ${v}">
+      <div class="letter-bar" style="height: ${h}px"></div>
+      <div class="letter-label">${l}</div>
+      <div class="letter-count">${v || ''}</div>
+    </div>`;
+  }).join('');
+
+  // Category grid (clickable cards)
+  const cg = document.getElementById('cat-grid');
+  const cats = Object.entries(STATS.cats).sort((a, b) => b[1] - a[1]);
+  cg.innerHTML = cats.map(([c, n]) => `
+    <a class="cat-card" href="/category/${c}.html">
+      <div class="cat-name">${c}</div>
+      <div class="cat-count">${n} entries</div>
+    </a>`).join('');
+}
+document.addEventListener('DOMContentLoaded', init);
+  </script>
+  <script src="./script.js"></script>
+</body>
+</html>
