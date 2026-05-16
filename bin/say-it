@@ -1,50 +1,119 @@
 #!/usr/bin/env bash
-# say-it — speak an English word out loud, 3 times by default.
+# say-it — speak an English word out loud, the way engineers actually say it.
+#
+# Looks up the word in the community-maintained pronunciation dictionary
+# (data/pronunciations.tsv) and feeds an English-like respelling to macOS
+# `say`, so project names like kubectl ("koob control"), nginx ("engine X"),
+# GIF ("jif") come out the way engineers actually pronounce them.
+#
+# Why respelling rather than IPA/phonemes? Modern macOS `say` does not parse
+# `[[inpt PHON]]` markup or SSML `<phoneme>` tags — both are read as literal
+# text. Respelling rides the TTS's built-in letter-to-sound rules, which give
+# acceptable output for short English-shaped strings.
 set -e
 
 VOICE="Samantha"
 TIMES=3
-RATE=200
+RATE=175
 SAVE=""
+USE_ALT=0
+ALT_IDX=1
+USE_ALL=0
+USE_SOLO=0
+NO_DICT=0
+SHOW_WHY=0
 
 usage() {
   cat <<EOF
-say-it — speak an English word out loud, 3 times by default.
+say-it — speak project / product / jargon names the way engineers actually say them.
 
 Usage:
-  say-it <word>                  speak 3 times with the default voice
-  say-it -v Daniel <word>        use a different voice (British)
+  say-it <word>                  speak 3 times using the community dict if known
+  say-it -v <voice> <word>       any macOS voice (default: Samantha, GenAm)
   say-it -n 5 <word>             repeat N times instead of 3
-  say-it -r 130 <word>           slower rate (default 200 wpm)
+  say-it -r 130 <word>           slower rate (default 175 wpm)
   say-it -o out.aiff <word>      save to file instead of playing
-  say-it -l                      list available macOS voices
-
-Options:
-  -v, --voice VOICE     voice name (default: Samantha)
-  -n, --times N         number of repetitions (default: 3)
-  -r, --rate WPM        speech rate, words/minute (default: 200)
-  -o, --output FILE     write audio to FILE instead of playing
-  -l, --list            list available voices
-  -h, --help            this help
+  say-it --alt <word>            speak the first alternate reading only
+  say-it --alt N <word>          speak the Nth alternate only (1-indexed)
+  say-it --all <word>            play primary AND every alternate, each repeated
+  say-it --solo <word>            primary only — suppress the "or: <alt>" tail
+  say-it --no-dict <word>        skip the dictionary, send the raw spelling to TTS
+  say-it --why <word>            print the dict entry, source URL, and confidence
+  say-it list                    list every word in the dictionary
+  say-it search <pattern>        grep the dictionary (case-insensitive)
+  say-it -l                      list every macOS voice
+  say-it -h                      this help
 
 Examples:
-  say-it simile
-  say-it --voice Daniel pronunciation
-  say-it -n 1 -r 130 schadenfreude
+  say-it kubectl
+  say-it --all GIF
+  say-it --why JSON
+  say-it list | head
 EOF
 }
 
+# --- locate the dictionary ----------------------------------------------------
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DICT_CANDIDATES=(
+  "${SAY_IT_DICT:-}"
+  "$HOME/.config/say-it/pronunciations.local.tsv"
+  "$SCRIPT_DIR/../share/say-it/pronunciations.tsv"
+  "$SCRIPT_DIR/../data/pronunciations.tsv"
+)
+DICT=""
+for c in "${DICT_CANDIDATES[@]}"; do
+  if [[ -n "$c" && -f "$c" ]]; then DICT="$c"; break; fi
+done
+
+# --- subcommands --------------------------------------------------------------
+case "${1:-}" in
+  list)
+    if [[ -z "$DICT" ]]; then
+      echo "say-it: dictionary not found" >&2; exit 4
+    fi
+    awk -F'\t' '!/^#/ && NF>=2 && $1 != "" && $1 != "word" { print $1 }' "$DICT" | sort -u
+    exit 0
+    ;;
+  search)
+    if [[ -z "$DICT" ]]; then
+      echo "say-it: dictionary not found" >&2; exit 4
+    fi
+    pat="${2:-}"
+    if [[ -z "$pat" ]]; then echo "say-it: usage: say-it search <pattern>" >&2; exit 2; fi
+    pat_lower="$(printf '%s' "$pat" | tr '[:upper:]' '[:lower:]')"
+    awk -v p="$pat_lower" -F'\t' '
+      !/^#/ && NF>=2 && $1 != "" && $1 != "word" {
+        if (tolower($1) ~ p || tolower($10) ~ p) printf "%-20s %s\n", $1, $10
+      }
+    ' "$DICT"
+    exit 0
+    ;;
+esac
+
+# --- flag parsing -------------------------------------------------------------
 while [[ $# -gt 0 ]]; do
   case "$1" in
-    -v|--voice)  VOICE="$2"; shift 2 ;;
-    -n|--times)  TIMES="$2"; shift 2 ;;
-    -r|--rate)   RATE="$2"; shift 2 ;;
-    -o|--output) SAVE="$2"; shift 2 ;;
-    -l|--list)   say -v "?"; exit 0 ;;
-    -h|--help)   usage; exit 0 ;;
-    --)          shift; break ;;
-    -*)          echo "say-it: unknown flag: $1" >&2; usage; exit 2 ;;
-    *)           break ;;
+    -v|--voice)    VOICE="$2"; shift 2 ;;
+    -n|--times)    TIMES="$2"; shift 2 ;;
+    -r|--rate)     RATE="$2"; shift 2 ;;
+    -o|--output)   SAVE="$2"; shift 2 ;;
+    --alt)
+                   USE_ALT=1
+                   if [[ "${2:-}" =~ ^[0-9]+$ ]]; then
+                     ALT_IDX="$2"; shift 2
+                   else
+                     shift
+                   fi
+                   ;;
+    --all)         USE_ALL=1; shift ;;
+    --solo)        USE_SOLO=1; shift ;;
+    --no-dict)     NO_DICT=1; shift ;;
+    --why)         SHOW_WHY=1; shift ;;
+    -l|--list)     say -v "?"; exit 0 ;;
+    -h|--help)     usage; exit 0 ;;
+    --)            shift; break ;;
+    -*)            echo "say-it: unknown flag: $1" >&2; usage; exit 2 ;;
+    *)             break ;;
   esac
 done
 
@@ -53,17 +122,120 @@ if [[ $# -eq 0 ]]; then
 fi
 
 if ! command -v say >/dev/null 2>&1; then
-  echo "say-it: macOS \`say\` not found. Linux/Windows support is on the roadmap." >&2
+  echo "say-it: macOS \`say\` not found. Windows/Linux backends are on the roadmap." >&2
   exit 3
 fi
 
 WORD="$*"
-TEXT=""
-for ((i=0; i<TIMES; i++)); do TEXT+="$WORD. "; done
 
+# --- dictionary lookup --------------------------------------------------------
+# Returns 9 fields separated by ASCII unit-separator (\x1f). We do not use TAB
+# here because bash `IFS=$'\t' read` collapses consecutive tabs (it treats
+# whitespace IFS specially), which would silently mis-shift empty alt columns.
+SEP=$'\x1f'
+lookup() {
+  local word="$1"
+  local lower
+  lower="$(printf '%s' "$word" | tr '[:upper:]' '[:lower:]')"
+  awk -v w="$lower" -v s="$SEP" -F'\t' '
+    !/^#/ && NF>=3 && $1 != "" && $1 != "word" {
+      if (tolower($1) == w) {
+        printf "%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s\n", $2, s, $3, s, $4, s, $5, s, $6, s, $7, s, $8, s, $9, s, $10
+        exit
+      }
+    }
+  ' "$DICT"
+}
+
+ENTRY=""
+if [[ $NO_DICT -eq 0 && -n "$DICT" ]]; then
+  ENTRY="$(lookup "$WORD" || true)"
+fi
+
+IPA=""; RESP=""; ALT_IPA=""; ALT_RESP=""; SRC_URL=""; SRC_LABEL=""; CATEGORY=""; CONFIDENCE=""; NOTES=""
+if [[ -n "$ENTRY" ]]; then
+  IFS="$SEP" read -r IPA RESP ALT_IPA ALT_RESP SRC_URL SRC_LABEL CATEGORY CONFIDENCE NOTES <<< "$ENTRY"
+fi
+
+# --- decide what to speak -----------------------------------------------------
+# Produces the full string to feed `say`. Awareness of alternates is baked
+# *into the audio* via spoken "or: <alt>" tails, so the user hears that the
+# word is multi-reading even without watching the terminal.
+#
+# Pauses are inserted via Apple's `[[slnc N]]` directive (which, unlike
+# `[[inpt PHON]]`, IS honored by the modern `say` CLI). This prevents the
+# tail of one repetition from being clipped by the head of the next.
+PAUSE_INTRA="[[slnc 400]]"   # between repetitions of the same reading
+PAUSE_INTER="[[slnc 700]]"   # between primary block and "or:" alternate
+
+build_reps() {
+  local resp="$1"; local n="$2"
+  local out=""
+  for ((i=0; i<n; i++)); do
+    out+="$resp. "
+    if (( i < n - 1 )); then out+="$PAUSE_INTRA "; fi
+  done
+  printf '%s' "$out"
+}
+
+build_audible_body() {
+  local primary_speech
+  if [[ -n "$RESP" ]]; then primary_speech="$RESP"; else primary_speech="$WORD"; fi
+
+  # --alt focuses on a single alternate only.
+  if [[ $USE_ALT -eq 1 ]]; then
+    if [[ -z "$ALT_RESP" ]]; then
+      echo "say-it: '$WORD' has no recorded alternates." >&2; exit 4
+    fi
+    IFS='|' read -ra ALTS <<< "$ALT_RESP"
+    local idx=$((ALT_IDX - 1))
+    if (( idx < 0 || idx >= ${#ALTS[@]} )); then
+      echo "say-it: --alt $ALT_IDX: only ${#ALTS[@]} alternate(s) recorded for '$WORD'" >&2
+      exit 4
+    fi
+    build_reps "${ALTS[$idx]}" "$TIMES"
+    return 0
+  fi
+
+  # Default and --all: primary first, then chain alts with spoken "or:".
+  local body
+  body="$(build_reps "$primary_speech" "$TIMES")"
+
+  if [[ $USE_SOLO -eq 0 && -n "$ALT_RESP" ]]; then
+    local rep_each=1
+    [[ $USE_ALL -eq 1 ]] && rep_each=$TIMES
+    IFS='|' read -ra ALTS <<< "$ALT_RESP"
+    for a in "${ALTS[@]}"; do
+      body+="$PAUSE_INTER or: "
+      body+="$(build_reps "$a" "$rep_each")"
+    done
+  fi
+  printf '%s' "$body"
+}
+
+# --- --why output (printed before the audio) ----------------------------------
+if [[ $SHOW_WHY -eq 1 ]]; then
+  if [[ -n "$ENTRY" ]]; then
+    echo "word              $WORD"
+    echo "ipa               $IPA"
+    echo "respelling_us     $RESP"
+    [[ -n "$ALT_IPA" ]]   && echo "alt_ipa           $ALT_IPA"
+    [[ -n "$ALT_RESP" ]]  && echo "alt_respelling_us $ALT_RESP"
+    [[ -n "$CATEGORY" ]]  && echo "category          $CATEGORY"
+    [[ -n "$CONFIDENCE" ]]&& echo "confidence        $CONFIDENCE"
+    [[ -n "$SRC_LABEL" ]] && echo "source            $SRC_LABEL"
+    [[ -n "$SRC_URL" ]]   && echo "url               $SRC_URL"
+    [[ -n "$NOTES" ]]     && echo "notes             $NOTES"
+  else
+    echo "$WORD: not in dictionary; sending raw spelling to TTS."
+  fi
+fi
+
+# --- play / save --------------------------------------------------------------
+BODY="$(build_audible_body)"
 if [[ -n "$SAVE" ]]; then
-  say -v "$VOICE" -r "$RATE" -o "$SAVE" "$TEXT"
+  say -v "$VOICE" -r "$RATE" -o "$SAVE" "$BODY"
   echo "Saved: $SAVE"
 else
-  say -v "$VOICE" -r "$RATE" "$TEXT"
+  say -v "$VOICE" -r "$RATE" "$BODY"
 fi

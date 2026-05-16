@@ -1,8 +1,8 @@
 # say-it — Design
 
-Status: **draft** · Owner: @alvin · Last touched: 2026-05-16
+Status: **v0.1 shipped** · Owner: @alvin · Last touched: 2026-05-16
 
-This doc captures the architecture for say-it after the 2026-05-16 scope clarification. The published README is still the old "five accents" framing and will be rewritten once this design is approved.
+This doc captures the architecture for say-it after the 2026-05-16 scope clarification, plus the technical surprise discovered during M1 (Apple's documented `[[inpt PHON]]` markup is dead — see §"macOS surprise").
 
 ## Goals (revised)
 
@@ -12,38 +12,54 @@ This doc captures the architecture for say-it after the 2026-05-16 scope clarifi
 
 Non-goals: regional accent showcase (US/UK/AU/IE/ZA voices), sentence-level prosody, language learning curriculum.
 
+## macOS surprise (key finding from M1)
+
+Apple's Speech Synthesis Programming Guide documents two phoneme-injection paths: the legacy `[[inpt PHON]]…[[inpt TEXT]]` bracket commands and SSML `<phoneme alphabet="ipa" ph="…">…</phoneme>`. **Neither is parsed by the modern `say(1)` CLI in macOS 14+.** Both fall through as literal text — `say "[[inpt PHON]]k AE1 t[[inpt TEXT]]"` is read character-by-character (~3.5s of mumbling), not as "cat" (~0.6s). Empirical test in `tools/phon_audit.sh`.
+
+Consequence: the dictionary cannot ship Apple phoneme strings and rely on `say` to honor them. Instead we ship **English-like respellings** (`"koob control"`, `"jif"`, `"engine X"`) and ride the TTS engine's built-in letter-to-sound rules, which produce acceptable output for short English-shaped strings. The trade-off is lossy precision in exchange for reliability.
+
+The IPA column is retained in the dictionary anyway — it's still useful for (a) display in `--why` output, (b) future cloud TTS providers (ElevenLabs, OpenAI) and (c) the Windows SAPI backend, both of which DO parse SSML `<phoneme>`.
+
 ## Pipeline
 
 ```
 say-it <word>
   │
-  ├── 1. Normalize (lowercase, strip surrounding punctuation)
+  ├── 1. Normalize (lowercase for lookup, original case preserved for display)
   │
   ├── 2. Lookup in dictionary (data/pronunciations.tsv)
-  │      ├── hit → respelling string, e.g. "koob control"
-  │      └── miss → use word as-is
+  │      ├── hit → respelling_us string, e.g. "koob control"
+  │      └── miss → use the raw word
   │
-  ├── 3. Route to backend
-  │      ├── default → platform TTS with respelling (offline, fast, free)
-  │      │              macOS:   say -v Samantha "<respelling>"
-  │      │              Windows: System.Speech SpeechSynthesizer.Speak
-  │      ├── --cloud → cloud TTS with the original word (better on names
-  │      │             the platform voice mangles)
-  │      └── auto-fallback policy: if dictionary entry is tagged
-  │                                cloud-preferred=true, route to cloud.
+  ├── 3. Build the audible body
+  │      ├── default       → primary × N reps + spoken "or: <alt>" for each alt
+  │      ├── --solo        → primary × N reps only
+  │      ├── --alt [N]     → Nth alt × N reps only
+  │      └── --all         → primary × N + each alt × N, chained with "or:"
   │
-  ├── 4. Cache (only for cloud) at ~/.cache/say-it/<provider>-<voice>-<hash>.mp3
-  │
-  └── 5. Repeat N times (default 3), play through platform audio
-         or save to --output FILE.
+  └── 4. Feed to the platform TTS
+         ├── macOS   → say -v Samantha -r 200 "<body>"
+         ├── Windows → SSML body with <phoneme alphabet="ipa" ph="..."> (M2)
+         └── Cloud   → ElevenLabs / OpenAI with SSML phoneme (M3)
 ```
+
+### Why alternates chain into the audio by default
+
+Multi-reading words (`GIF`, `SQL`, `GUI`, `kubectl`, `char`, ...) carry context: the user needs to know there's debate. Printing "alt = gif" to stdout is invisible if the user isn't watching the terminal. Spoken `"or: <alt>"` makes the multi-reading status perceptible from the audio alone. `--solo` opts out for users who have already grasped this.
 
 ## Dictionary
 
-**Format:** TSV at `data/pronunciations.tsv`, columns:
+**Format:** TSV at `data/pronunciations.tsv`, 10 columns:
 
 ```
-word            respelling             alt                       notes
+word | ipa | respelling_us | alt_ipa | alt_respelling_us | source_url | source_label | category | confidence | notes
+```
+
+`alt_*` columns are `|`-separated for multi-reading words (e.g. `char` has 2 alts: `care|car`). Lookup is case-insensitive on `word`.
+
+Example rows (header omitted, TAB-separated in real file):
+
+```
 kubectl         koob control           cube cuddle | cube C T L  most common in K8s community
 nginx           engine ex                                        official: "engine x"
 GUI             gooey                   G U I                     RMS prefers G-U-I
