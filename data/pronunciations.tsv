@@ -277,3 +277,87 @@ Jenkins	/ˈdʒɛŋkɪnz/	jen kinz			https://www.jenkins.io/	Jenkins	product	comm
 GitHub	/ˈɡɪtˌhʌb/	git hub			https://github.com/	GitHub	product	community-consensus	"GIT-hub".
 GitLab	/ˈɡɪtˌlæb/	git lab			https://about.gitlab.com/	GitLab	product	community-consensus	"GIT-lab".
 CircleCI	/ˈsɜːrkəl siː aɪ/	circle C I			https://circleci.com/	CircleCI	product	community-consensus	"CIRCLE-C-I".
+# --- 2024-2026 hot AI / ML tools ---
+Aider	/ˈeɪdər/	ay der			https://aider.chat/	Aider docs	product	community-consensus	"AY-der" — like the noun.
+Cline	/klaɪn/	kline			https://cline.bot/	Cline	product	community-consensus	"kline" — one syllable, from "Claude line".
+Marimo	/məˈriːmoʊ/	muh ree mo			https://marimo.io/	Marimo	product	community-consensus	"mar-EE-mo" — Japanese for the moss balls.
+Letta	/ˈlɛtə/	let ah			https://www.letta.com/	Letta (formerly MemGPT)	product	community-consensus	"LET-ah" — short E.
+AutoGen	/ˈɔːtoʊdʒɛn/	auto jen			https://microsoft.github.io/autogen/	Microsoft AutoGen	product	community-consensus	"AUTO-jen" — like "auto-generate".
+CrewAI	/ˌkruː eɪ ˈaɪ/	crew A I			https://www.crewai.com/	CrewAI	product	community-consensus	"crew-A-I".
+LiteLLM	/ˈlaɪt ɛl ɛl ɛm/	light L L M			https://www.litellm.ai/	LiteLLM	product	community-consensus	"LIGHT-L-L-M".
+Marqo	/ˈmɑːrkoʊ/	mar ko			https://www.marqo.ai/	Marqo	product	community-consensus	"MAR-ko".
+# --- Frontend state / framework ---
+Tanstack	/ˈtænˌstæk/	tan stack			https://tanstack.com/	TanStack	product	community-consensus	"TAN-stack" — TypeScript + Stack.
+Jotai	/ˈdʒoʊtaɪ/	jo tie			https://jotai.org/	Jotai docs	product	creator-clarified	Japanese for "state": "JOH-tie".
+Valtio	/ˈvɑːltioʊ/	val tee oh			https://valtio.dev/	Valtio docs	product	creator-clarified	Finnish for "state": "VAHL-tee-oh".
+Recoil	/ˈriːkɔɪl/	ree coil			https://recoiljs.org/	Recoil	product	community-consensus	"REE-coil".
+Million.js	/ˈmɪljən dʒeɪ ɛs/	million J S			https://million.dev/	Million	product	community-consensus	"MILLION-J-S".
+Preact	/ˈpriːækt/	pre act			https://preactjs.com/	Preact	product	community-consensus	"PREE-act".
+Mantine	/ˈmæntaɪn/	man tine			https://mantine.dev/	Mantine	product	community-consensus	"MAN-tine".
+Chakra	/ˈtʃækrə/	chak rah			https://chakra-ui.com/	Chakra UI	product	community-consensus	"CHAK-rah".
+DaisyUI	/ˈdeɪzi juː aɪ/	daisy U I			https://daisyui.com/	daisyUI	product	community-consensus	"DAISY-U-I".
+# --- Build / compile tools ---
+esbuild	/ˌiː ɛs ˈbɪld/	E S build			https://esbuild.github.io/	esbuild	tool	community-consensus	"E-S-build".
+SWC	/ˌɛs dʌbljuː ˈsiː/	S W C			https://swc.rs/	SWC	tool	community-consensus	"S-W-C" letter-by-letter (stands for "Speedy Web Compiler").
+Turbopack	/ˈtɜːrboʊˌpæk/	turbo pack			https://turbo.build/pack	Turbopack	tool	community-consensus	"TURBO-pack".
+Rspack	/ˌɑːr ɛs ˈpæk/	R S pack			https://rspack.dev/	Rspack	tool	community-consensus	"R-S-pack".
+Oxc	/ˌoʊ ɛks ˈsiː/	O X C			https://oxc.rs/	Oxc	tool	community-consensus	"O-X-C" letter-by-letter.
+# --- Containers / cloud-native more ---
+Pulumi	/puːˈluːmi/	poo loo mee			https://www.pulumi.com/	Pulumi	product	community-consensus	"poo-LOO-mee" — Hawaiian for "feather".
+Dapr	/ˈdæpər/	dap er			https://dapr.io/	Dapr	product	creator-clarified	"DAP-er" — like the adjective dapper. Distributed Application Runtime.
+Backstage	/ˈbækˌsteɪdʒ/	back stage			https://backstage.io/	Backstage	product	community-consensus	"BACK-stage" — like the theater term.
+Traefik	/ˈtræfɪk/	traffic			https://traefik.io/	Traefik	product	creator-clarified	"TRAFFIC" — exactly like the word.
+WireGuard	/ˈwaɪərˌɡɑːrd/	wire guard			https://www.wireguard.com/	WireGuard	product	community-consensus	"WIRE-guard".
+# --- Editors / terminals ---
+Wezterm	/ˈwɛzˌtɜːrm/	wez term			https://wezfurlong.org/wezterm/	WezTerm	tool	creator-clarified	Named after Wez Furlong: "WEZ-term".
+Alacritty	/əˈlækrɪti/	uh lack ri tee			https://alacritty.org/	Alacritty	tool	community-consensus	"uh-LACK-ri-tee".
+Kitty	/ˈkɪti/	kit ee			https://sw.kovidgoyal.net/kitty/	kitty	tool	community-consensus	"KIT-ee" — like the cat.
+Zellij	/zɛˈliːʒ/	zell eezh			https://zellij.dev/	Zellij	tool	community-consensus	"zell-EEZH" — Arabic, the tessellated tiles.
+Lazygit	/ˈleɪziˌɡɪt/	lay zee git			https://github.com/jesseduffield/lazygit	lazygit	tool	community-consensus	"LAY-zee-git".
+Lazydocker	/ˈleɪziˌdɒkər/	lay zee docker			https://github.com/jesseduffield/lazydocker	lazydocker	tool	community-consensus	"LAY-zee-docker".
+Lazyvim	/ˈleɪziˌvɪm/	lay zee vim			https://www.lazyvim.org/	LazyVim	tool	community-consensus	"LAY-zee-vim".
+just	/dʒʌst/	just			https://just.systems/	just	tool	community-consensus	"just" — exactly like the adverb.
+# --- Modern databases ---
+Tigerbeetle	/ˈtaɪɡərˌbiːtəl/	tiger beetle			https://tigerbeetle.com/	TigerBeetle	product	community-consensus	"TIGER-beetle".
+Dragonfly	/ˈdræɡənˌflaɪ/	dragon fly			https://www.dragonflydb.io/	Dragonfly	product	community-consensus	"DRAGON-fly" — full word, then DB.
+Garnet	/ˈɡɑːrnɪt/	gar net			https://microsoft.github.io/garnet/	Microsoft Garnet	product	community-consensus	"GAR-net" — like the gemstone.
+ImmuDB	/ˈɪmjuː diː biː/	im you D B			https://www.immudb.io/	Immudb	product	community-consensus	"IM-you-D-B".
+EdgeDB	/ˈɛdʒ diː biː/	edge D B			https://www.edgedb.com/	EdgeDB	product	community-consensus	"EDGE-D-B".
+RisingWave	/ˈraɪzɪŋˌweɪv/	rising wave			https://www.risingwave.com/	RisingWave	product	community-consensus	"RISING-wave".
+TimescaleDB	/ˈtaɪmˌskeɪl diː biː/	time scale D B			https://www.timescale.com/	Timescale	product	community-consensus	"TIME-scale-D-B".
+InfluxDB	/ˈɪnflʌks diː biː/	in flux D B			https://www.influxdata.com/	InfluxDB	product	community-consensus	"IN-flux-D-B".
+# --- Observability ---
+Sentry	/ˈsɛntri/	sentry			https://sentry.io/	Sentry	product	community-consensus	"SEN-tree".
+Honeycomb	/ˈhʌniˌkoʊm/	honey comb			https://www.honeycomb.io/	Honeycomb	product	community-consensus	"HONEY-comb".
+Jaeger	/ˈjeɪɡər/	yay ger			https://www.jaegertracing.io/	Jaeger	product	community-consensus	"YAY-ger" — German pronunciation; some say "JAY-ger" too.
+Loki	/ˈloʊki/	low key			https://grafana.com/oss/loki/	Grafana Loki	product	community-consensus	"LOW-key" — Norse god name.
+Tempo	/ˈtɛmpoʊ/	tem po			https://grafana.com/oss/tempo/	Grafana Tempo	product	community-consensus	"TEM-po" — like the music term.
+Vector	/ˈvɛktər/	vec tor			https://vector.dev/	Vector	product	community-consensus	"VEC-tor" — like the noun.
+Fluentd	/ˈfluːənt diː/	fluent D			https://www.fluentd.org/	Fluentd	product	community-consensus	"FLUENT-D".
+# --- Acronyms / jargon ---
+API	/ˌeɪ piː ˈaɪ/	A P I			https://en.wikipedia.org/wiki/API	Wikipedia	acronym	community-consensus	"A-P-I" letter-by-letter.
+CDN	/ˌsiː diː ˈɛn/	C D N			https://en.wikipedia.org/wiki/Content_delivery_network	Wikipedia	acronym	community-consensus	"C-D-N".
+CRUD	/krʌd/	krud			https://en.wikipedia.org/wiki/Create,_read,_update_and_delete	Wikipedia	acronym	community-consensus	"krud" — one syllable.
+ETL	/ˌiː tiː ˈɛl/	E T L			https://en.wikipedia.org/wiki/Extract,_transform,_load	Wikipedia	acronym	community-consensus	"E-T-L".
+JIT	/dʒɪt/	jit	/ˌdʒeɪ aɪ ˈtiː/	J I T	https://en.wikipedia.org/wiki/Just-in-time_compilation	Wikipedia	acronym	contested	"jit" (one syllable) or "J-I-T".
+ORM	/ˌoʊ ɑːr ˈɛm/	O R M			https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping	Wikipedia	acronym	community-consensus	"O-R-M".
+SRE	/ˌɛs ɑːr ˈiː/	S R E			https://en.wikipedia.org/wiki/Site_reliability_engineering	Wikipedia	acronym	community-consensus	"S-R-E".
+TLDR	/ˌtiː ɛl diː ˈɑːr/	T L D R			https://en.wikipedia.org/wiki/TL;DR	Wikipedia	acronym	community-consensus	"T-L-D-R" — "too long, didn't read".
+LGTM	/ˌɛl dʒiː tiː ˈɛm/	L G T M			https://en.wikipedia.org/wiki/Looks_good_to_me	dev community	acronym	community-consensus	"L-G-T-M" — "looks good to me".
+DRY	/draɪ/	dry			https://en.wikipedia.org/wiki/Don%27t_repeat_yourself	Wikipedia	acronym	community-consensus	"dry" — one syllable.
+KISS	/kɪs/	kiss			https://en.wikipedia.org/wiki/KISS_principle	Wikipedia	acronym	community-consensus	"kiss" — like the verb.
+YAGNI	/ˈjæɡni/	yag nee			https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it	Wikipedia	acronym	community-consensus	"YAG-nee".
+POSIX	/ˈpɑːzɪks/	pa zicks			https://en.wikipedia.org/wiki/POSIX	Wikipedia	acronym	community-consensus	"PAH-zicks".
+# --- Tools / utilities ---
+Restic	/ˈrɛstɪk/	res tic			https://restic.net/	restic	tool	community-consensus	"RES-tic".
+Renovate	/ˈrɛnəveɪt/	ren oh vate			https://www.mend.io/renovate/	Renovate	tool	community-consensus	"REN-oh-vate".
+Daytona	/deɪˈtoʊnə/	day toh nah			https://www.daytona.io/	Daytona	product	community-consensus	"day-TOH-nah".
+Coolify	/ˈkuːlɪfaɪ/	cool i fy			https://coolify.io/	Coolify	product	community-consensus	"COOL-i-fy".
+Bytebase	/ˈbaɪtˌbeɪs/	byte base			https://www.bytebase.com/	Bytebase	product	community-consensus	"BYTE-base".
+Bolt	/boʊlt/	bolt			https://bolt.new/	Bolt.new	product	community-consensus	"bolt" — one syllable.
+Tabby	/ˈtæbi/	tab ee			https://tabby.sh/	Tabby	tool	community-consensus	"TAB-ee".
+Tantivy	/ˈtæntɪvi/	tan ti vee			https://github.com/quickwit-oss/tantivy	Tantivy	product	community-consensus	"TAN-ti-vee".
+# --- AI-coding agents (hot in 2026) ---
+Cody	/ˈkoʊdi/	co dee			https://sourcegraph.com/cody	Sourcegraph Cody	product	community-consensus	"KOH-dee".
+Continue	/kənˈtɪnjuː/	continue			https://www.continue.dev/	Continue.dev	product	community-consensus	"con-TIN-yoo" — exactly like the verb.
+Bolt.new	/ˈboʊlt njuː/	bolt new			https://bolt.new/	Bolt.new	product	community-consensus	"BOLT-new" — two words.

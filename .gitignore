@@ -8,3 +8,4 @@
 /.audit-audio
 .vercel
 
+.draft-*
