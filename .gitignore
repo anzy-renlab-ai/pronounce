@@ -5,3 +5,6 @@
 *.log
 /dist
 /node_modules
+/.audit-audio
+.vercel
+

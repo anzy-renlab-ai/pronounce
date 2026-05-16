@@ -9,12 +9,20 @@ description: User asks how to pronounce an English word or project/product name 
 
 ## Trigger patterns
 
-Auto-invoke when the user's message matches any of:
+Auto-invoke ONLY when the user's message matches a **single-word or short-name** pronunciation request:
 
-- English: `how to pronounce X`, `how do you pronounce X`, `pronounce X`, `how do you say X`, `what does X sound like`
-- Chinese: `X 怎么读`, `X 怎么念`, `X 怎么发音`, `读一下 X`, `念一下 X`
+- English: `how to pronounce <X>`, `how do you pronounce <X>`, `pronounce <X>`, `how do you say <X>`, `what does <X> sound like`
+- Chinese: `<X> 怎么读`, `<X> 怎么念`, `<X> 怎么发音`, `读一下 <X>`, `念一下 <X>`
 
-`X` is typically a single English word, project name, or short phrase. If the target is ambiguous (multiple candidates in the message), ask which one. If it's clearly a single token, proceed.
+`<X>` MUST be a single token: a word, project name, product name, acronym, or short identifier (max 2-3 words). The kind of thing a developer would actually type into `say-it <X>`.
+
+**Do NOT trigger this skill when:**
+
+- `<X>` is a sentence or paragraph the user wants narrated (e.g. `读一下这段` / `read this paragraph`). That's a TTS request, not a pronunciation lookup. Suggest `say "<sentence>"` instead, or just answer in text.
+- The message is asking *about* pronunciation conceptually (e.g. `IPA 是什么` / `what is phonetic spelling`). Answer in text.
+- `<X>` is non-English everyday vocabulary or a person's name unrelated to tech. The dictionary's editorial scope is tech-only — fall through to plain `say -v Samantha "<X>"` or skip.
+
+If the target token is ambiguous (multiple candidates in the message), ask which one before invoking.
 
 ## What to do
 

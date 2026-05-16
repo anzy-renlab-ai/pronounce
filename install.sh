@@ -3,6 +3,23 @@
 # and the Claude Code skill into place.
 set -e
 
+# --- OS gate -----------------------------------------------------------------
+# The current backend uses macOS `say`. Windows + Linux are roadmap.
+if [[ "$(uname -s)" != "Darwin" ]]; then
+  cat >&2 <<EOF
+say-it: this release only works on macOS (uses the built-in \`say\` TTS).
+        Detected: $(uname -s).
+
+Windows (PowerShell + System.Speech) and Linux (espeak-ng / cloud TTS)
+backends are on the roadmap. Track or contribute:
+  https://github.com/anzy-renlab-ai/say-it
+
+To force install anyway (CLI will exit on first invocation), run:
+  SAY_IT_FORCE=1 ./install.sh
+EOF
+  if [[ "${SAY_IT_FORCE:-0}" != "1" ]]; then exit 2; fi
+fi
+
 PREFIX="${PREFIX:-$HOME/.local}"
 SKILLS_DIR="${CLAUDE_SKILLS_DIR:-$HOME/.claude/skills}"
 

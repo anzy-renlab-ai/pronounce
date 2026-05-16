@@ -3,76 +3,80 @@
 # Columns (TAB-separated, case-insensitive lookup on `word`):
 #   1. word               the lookup key
 #   2. ipa                primary GenAm IPA, with stress marks (for display + future SSML backends)
-#   3. respelling_us      English-like phonetic respelling, fed verbatim to macOS `say` (the one that actually works today)
+#   3. respelling_us      English-like phonetic respelling, fed verbatim to macOS `say` (the path that actually works today)
 #   4. alt_ipa            `|`-separated alternative IPAs, or empty
 #   5. alt_respelling_us  `|`-separated alternative respellings, paired with alt_ipa by index, or empty
-#   6. source_url         best citation: creator interview, conference talk, official FAQ
-#   7. source_label       human-readable source label
+#   6. source_url         best citation: documented pronunciation page, official FAQ, Wikipedia anchor, etc. Leave empty if unverified.
+#   7. source_label       human-readable source label (e.g. "GNU Project official", "Wikipedia § Pronunciation")
 #   8. category           project | product | cli-tool | tool | cs-term | acronym | abbreviation
 #   9. confidence         creator-clarified | community-consensus | contested
+#                         Only use `creator-clarified` when source_url documents a creator quote / official FAQ entry.
 #  10. notes              editorial context (never spoken)
 #
 # Why English respelling rather than IPA/PHON phonemes?
-#   macOS `say` (the current CLI, 2026 era) does not parse `[[inpt PHON]]` markup
-#   or SSML `<phoneme>` tags — both are read as literal text. So we feed plain
-#   English-like spellings that the TTS's internal letter-to-sound rules render
-#   acceptably. The `ipa` column is retained for display, for future cloud TTS
-#   (ElevenLabs / OpenAI), and for the Windows SAPI backend (which DOES honor
-#   SSML phoneme tags).
+#   macOS `say` (2026 era) does not parse `[[inpt PHON]]` markup or SSML `<phoneme>` tags — both are read as literal
+#   text. So we feed plain English-like spellings that the TTS's internal letter-to-sound rules render acceptably.
+#   The `ipa` column is retained for display, for future cloud TTS, and for the Windows SAPI backend (which DOES
+#   honor SSML phoneme tags).
+#
+# Adding entries:
+#   - All entries are best-effort and welcome PRs to improve. Confidence should reflect what the source URL actually
+#     proves, not what you believe to be true. When in doubt, mark `community-consensus` and let a future PR upgrade
+#     with a real citation.
 #
 word	ipa	respelling_us	alt_ipa	alt_respelling_us	source_url	source_label	category	confidence	notes
-kubectl	/ˈkuːb kənˌtroʊl/	koob control	/ˈkjuːb kʌtəl/|/ˌkjuːb siː tiː ˈɛl/	cube cuddle|kube C T L	https://www.youtube.com/watch?v=2wgAIvXpJqU	Kelsey Hightower (KubeCon)	cli-tool	contested	Hightower & many K8s maintainers say "koob-control"; "cube-cuddle" and "K-U-B-E-C-T-L" both exist.
-nginx	/ˈɛn dʒɪnˈɛks/	engine X			https://nginx.org/en/	NGINX official	product	creator-clarified	Creator Igor Sysoev confirms "engine-x".
-GIF	/dʒɪf/	jif	/ɡɪf/	gif	https://www.nytimes.com/2013/05/22/business/media/creator-of-the-gif-says-its-pronounced-jif.html	Steve Wilhite, Webby Awards 2013	acronym	creator-clarified	Wilhite (creator): "It's pronounced JIF, not GIF." Community remains split.
-JSON	/ˈdʒeɪsən/	jay son	/ˈdʒiːˌsɒn/	jee son	https://www.youtube.com/watch?v=-C-JoyNuQJs	Douglas Crockford (RailsConf 2009)	acronym	creator-clarified	Crockford prefers "JAY-son"; accepts "JEE-son" too.
-SQL	/ˈsiːkwəl/	sequel	/ˌɛs kjuː ˈɛl/	S Q L	https://en.wikipedia.org/wiki/SQL#Pronunciation	Wikipedia / ANSI	acronym	contested	ANSI: "S-Q-L". Practitioner: "sequel" (heir to IBM SEQUEL).
-GUI	/ˈɡuːi/	gooey	/ˌdʒiː juː ˈaɪ/|/ɡwi/	G U I|gwee	https://en.wikipedia.org/wiki/Graphical_user_interface	Wikipedia / common usage	acronym	contested	"GOOEY" is mainstream (matches Mandarin 故意 sound); "G-U-I" letter-by-letter is RMS / old-school; "gwee" is rare but exists.
-GNU	/ɡnuː/	guh new			https://www.gnu.org/gnu/pronunciation.html	GNU Project official	project	creator-clarified	One syllable, hard G, rhymes with "new".
+kubectl	/ˈkuːb kənˌtroʊl/	koob control	/ˈkjuːb kʌtəl/|/ˌkjuːb siː tiː ˈɛl/	cube cuddle|kube C T L			cli-tool	contested	K8s community readings vary widely. "koob-control" is heard from Kelsey Hightower and many maintainers; "cube-cuddle" is the running meme; some say it letter-by-letter.
+nginx	/ˈɛn dʒɪnˈɛks/	engine X			https://nginx.org/en/	NGINX official	product	creator-clarified	"engine-x" is the documented reading from the official site.
+GIF	/dʒɪf/	jif	/ɡɪf/	gif	https://www.nytimes.com/2013/05/22/business/media/creator-of-the-gif-says-its-pronounced-jif.html	Steve Wilhite, NYT (2013)	acronym	creator-clarified	Wilhite (creator): "It's pronounced JIF, not GIF." Community remains split.
+JSON	/ˈdʒeɪsən/	jay son	/ˈdʒiːˌsɒn/	jee son	https://en.wikipedia.org/wiki/JSON#Pronunciation	Wikipedia § Pronunciation	acronym	contested	Crockford uses "JAY-son"; "JEE-son" is also widespread. Wikipedia notes the variance.
+SQL	/ˈsiːkwəl/	sequel	/ˌɛs kjuː ˈɛl/	S Q L	https://en.wikipedia.org/wiki/SQL#Pronunciation	Wikipedia § Pronunciation	acronym	contested	ANSI: "S-Q-L"; practitioner: "sequel" (heir to IBM SEQUEL).
+GUI	/ˈɡuːi/	gooey	/ˌdʒiː juː ˈaɪ/|/ɡwi/	G U I|gwee	https://en.wikipedia.org/wiki/Graphical_user_interface	Wikipedia	acronym	contested	"GOOEY" is mainstream (matches Mandarin 故意 sound); "G-U-I" letter-by-letter is RMS/old-school; "gwee" is rare.
+GNU	/ɡnuː/	guh new			https://www.gnu.org/gnu/pronunciation.html	GNU Project official	project	creator-clarified	One syllable, hard G, rhymes with "new". Page is a dedicated pronunciation FAQ.
 Kubernetes	/ˌkuːbərˈnɛtiːz/	koober netteez			https://kubernetes.io/	K8s docs	product	community-consensus	"koo-ber-NET-eez". From Greek κυβερνήτης (helmsman).
-k8s	/keɪts/	kates	/ˌkeɪ eɪ ɛs/	K eight S	https://kubernetes.io/	K8s docs	abbreviation	community-consensus	"kates" (8 letters between K and s) — community shorthand.
+k8s	/keɪts/	kates	/ˌkeɪ eɪ ɛs/	K eight S		dev community	abbreviation	community-consensus	"kates" (8 letters between K and s) — community shorthand.
 helm	/hɛlm/	helm			https://helm.sh/	Helm docs	tool	community-consensus	"helm" (the steering wheel).
 Istio	/ˈɪstioʊ/	iss tee oh			https://istio.io/	Istio docs	product	community-consensus	"ISS-tee-oh". Greek for "to sail".
 Envoy	/ˈɛnˌvɔɪ/	en voy			https://www.envoyproxy.io/	Envoy docs	product	community-consensus	"EN-voy".
 Prometheus	/prəˈmiːθiəs/	pro mee thee us			https://prometheus.io/	Prometheus docs	product	community-consensus	"pro-MEE-thee-uss".
-Grafana	/ɡrəˈfɑːnə/	gra fah na			https://grafana.com/	Grafana site	product	creator-clarified	Torkel Ödegaard: "gra-FAH-na".
+Grafana	/ɡrəˈfɑːnə/	gra fah na			https://grafana.com/	Grafana site	product	community-consensus	"gra-FAH-na" is the most common community reading.
 Terraform	/ˈtɛrəˌfɔːrm/	terra form			https://www.terraform.io/	HashiCorp docs	tool	community-consensus	"TERR-uh-form".
 Argo	/ˈɑːrɡoʊ/	ar go			https://argoproj.github.io/	Argo project	product	community-consensus	"AR-go".
-Knative	/ˈkeɪˌneɪtɪv/	kay native			https://knative.dev/	Knative docs	product	creator-clarified	"KAY-native" — the K is voiced.
+Knative	/ˈkeɪˌneɪtɪv/	kay native			https://knative.dev/	Knative docs	product	community-consensus	"KAY-native" — the K is voiced. (Heard from project maintainers in talks; needs a citable source.)
 Cassandra	/kəˈsændrə/	kuh sandra			https://cassandra.apache.org/	Apache Cassandra	product	community-consensus	"kuh-SAN-druh".
-Redis	/ˈrɛdɪs/	red iss			https://redis.io/	Redis site	product	creator-clarified	Salvatore Sanfilippo: "RED-iss".
-Ceph	/sɛf/	seff			https://ceph.io/en/	Ceph docs	product	creator-clarified	One syllable: "seff".
-etcd	/ˌɛt siː ˈdiː/	et C D	/ˌɛt ˈsɛtərə diː/	et cetera D	https://etcd.io/docs/v3.5/faq/	etcd FAQ	product	creator-clarified	Brandon Philips: "et-cetera-distributed" → "et-cee-dee".
-containerd	/kənˈteɪnər diː/	container D			https://containerd.io/	containerd	product	creator-clarified	"container-D" (the D is for "daemon").
+Redis	/ˈrɛdɪs/	red iss			https://redis.io/	Redis site	product	community-consensus	"RED-iss". (Heard from Salvatore Sanfilippo in interviews; citable source TBD.)
+Ceph	/sɛf/	seff			https://ceph.io/en/	Ceph docs	product	community-consensus	One syllable: "seff".
+etcd	/ˌɛt siː ˈdiː/	et C D	/ˌɛt ˈsɛtərə diː/	et cetera D	https://etcd.io/docs/v3.5/faq/	etcd FAQ	product	creator-clarified	Project FAQ documents "et-cetera-distributed".
+containerd	/kənˈteɪnər diː/	container D			https://containerd.io/	containerd	product	community-consensus	"container-D" (the D is for "daemon").
 runc	/rʌn ˈsiː/	run C			https://github.com/opencontainers/runc	OCI runc	tool	community-consensus	"run-C".
 Podman	/ˈpɑːdmən/	pod man			https://podman.io/	Podman site	tool	community-consensus	"POD-man".
-PostgreSQL	/ˈpoʊstɡrɛs kjuː ˈɛl/	post gress Q L	/ˈpoʊstɡrɛs ˈsiːkwəl/	post gress sequel	https://www.postgresql.org/docs/current/faq.html	PostgreSQL FAQ	product	creator-clarified	Official: "post-gres-Q-L". "post-gres-sequel" common too.
+PostgreSQL	/ˈpoʊstɡrɛs kjuː ˈɛl/	post gress Q L	/ˈpoʊstɡrɛs ˈsiːkwəl/	post gress sequel	https://www.postgresql.org/docs/current/faq.html	PostgreSQL FAQ	product	creator-clarified	FAQ documents "post-gres-Q-L" as official.
 Postgres	/ˈpoʊstɡrɛs/	post gress			https://www.postgresql.org/docs/current/faq.html	PostgreSQL FAQ	product	creator-clarified	"POST-gress".
-SQLite	/ˌɛs kjuː ɛl ˈaɪt/	S Q L ite	/ˈsiːkwəl laɪt/	sequel ite	https://www.sqlite.org/faq.html	SQLite FAQ	product	creator-clarified	D. Richard Hipp: "S-Q-L-ite" preferred.
+SQLite	/ˌɛs kjuː ɛl ˈaɪt/	S Q L ite	/ˈsiːkwəl laɪt/	sequel ite	https://www.sqlite.org/famous.html	SQLite docs	product	community-consensus	"S-Q-L-ite" preferred (per project lore).
 MySQL	/ˌmaɪ ɛs kjuː ˈɛl/	my S Q L	/ˌmaɪ ˈsiːkwəl/	my sequel	https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html	MySQL docs	product	creator-clarified	Official: "my-S-Q-L". "my-sequel" is common informal.
 MongoDB	/ˈmɒŋɡoʊ diː biː/	mongo D B			https://www.mongodb.com/	MongoDB site	product	community-consensus	"MONG-oh-D-B".
 ScyllaDB	/ˈsɪlə diː biː/	silla D B			https://www.scylladb.com/	ScyllaDB	product	community-consensus	"SILL-uh-D-B".
 ClickHouse	/ˈklɪkˌhaʊs/	click house			https://clickhouse.com/	ClickHouse	product	community-consensus	"CLICK-house".
 DuckDB	/ˈdʌk diː biː/	duck D B			https://duckdb.org/	DuckDB	product	community-consensus	"DUCK-D-B".
-Linux	/ˈlɪnəks/	linnix			https://www.youtube.com/watch?v=5IfHm6R5le0	Linus Torvalds clip	product	creator-clarified	Linus says "LIN-ux" (short I, schwa).
-Debian	/ˈdɛbiən/	deb ee un			https://www.debian.org/intro/about	Debian about	product	creator-clarified	"DEB-ee-uhn" — portmanteau of Debra + Ian Murdock.
+Linux	/ˈlɪnəks/	linnix			https://en.wikipedia.org/wiki/Linux#Pronunciation	Wikipedia § Pronunciation	product	community-consensus	Linus's own pronunciation is "LIN-ux" (short I, schwa). Wikipedia documents the variants.
+Debian	/ˈdɛbiən/	deb ee un			https://www.debian.org/intro/about	Debian about	product	creator-clarified	"DEB-ee-uhn" — portmanteau of Debra + Ian Murdock, documented on the about page.
 Ubuntu	/ʊˈbʊntuː/	oo boon too			https://ubuntu.com/	Ubuntu	product	community-consensus	"oo-BOON-too" (Zulu).
 Arch	/ɑːrtʃ/	arch			https://archlinux.org/	Arch Linux	product	community-consensus	"arch" (one syllable).
 Nix	/nɪks/	nicks			https://nixos.org/	NixOS	product	community-consensus	"nicks".
-Django	/ˈdʒæŋɡoʊ/	jang go			https://www.djangoproject.com/foundation/faq/	Django FAQ	product	creator-clarified	"JANG-go" — silent D, like jazz guitarist Django Reinhardt.
-Vue	/vjuː/	view			https://vuejs.org/	Vue docs	product	creator-clarified	Evan You: "view" — single syllable.
-Vite	/viːt/	veet			https://vitejs.dev/	Vite docs	product	creator-clarified	"veet" — French for "quick".
-Pydantic	/paɪˈdæntɪk/	pie dantick			https://docs.pydantic.dev/	Pydantic docs	product	creator-clarified	Samuel Colvin: "pie-DAN-tic".
+Django	/ˈdʒæŋɡoʊ/	jang go			https://www.djangoproject.com/foundation/faq/	Django FAQ	product	creator-clarified	FAQ documents "JANG-go" — silent D, like jazz guitarist Django Reinhardt.
+Vue	/vjuː/	view			https://vuejs.org/	Vue docs	product	community-consensus	"view" — one syllable. (Heard from Evan You in talks; needs a citable source.)
+Vite	/viːt/	veet			https://vitejs.dev/	Vite docs	product	community-consensus	"veet" — French for "quick". (Heard from Evan You in talks; needs a citable source.)
+Pydantic	/paɪˈdæntɪk/	pie dantick			https://docs.pydantic.dev/	Pydantic docs	product	community-consensus	"pie-DAN-tic". (Heard from Samuel Colvin in podcasts; needs a citable source.)
 Bun	/bʌn/	bun			https://bun.sh/	Bun docs	product	community-consensus	"bun" — like the bread.
 Deno	/ˈdiːnoʊ/	dee no			https://deno.com/	Deno docs	product	community-consensus	"DEE-no".
 Hugo	/ˈhjuːɡoʊ/	hue go			https://gohugo.io/	Hugo	product	community-consensus	"HUE-go".
-Hono	/ˈhoʊnoʊ/	ho no			https://hono.dev/	Hono docs	product	creator-clarified	Japanese for "flame": "HOH-no".
+Hono	/ˈhoʊnoʊ/	ho no			https://hono.dev/	Hono docs	product	community-consensus	Japanese for "flame": "HOH-no".
 Caddy	/ˈkædi/	caddy			https://caddyserver.com/	Caddy	product	community-consensus	"CAD-ee".
 Svelte	/svɛlt/	svelt			https://svelte.dev/	Svelte	product	community-consensus	"svelt" — one syllable.
 Astro	/ˈæstroʊ/	astro			https://astro.build/	Astro	product	community-consensus	"ASS-tro".
-Pinia	/ˈpiːnjə/	pee nya			https://pinia.vuejs.org/	Pinia docs	product	creator-clarified	"PEE-nya".
-LaTeX	/ˈleɪtɛk/	lay tek	/ˈlɑːtɛx/	la tek	https://www.latex-project.org/about/	LaTeX project	tool	creator-clarified	Lamport: "lay-tek" (or "lah-tek"); never "lay-teks".
-TeX	/tɛk/	tek			https://en.wikipedia.org/wiki/TeX	Wikipedia / Knuth	tool	creator-clarified	Knuth: like "tech" — the X is a Greek chi.
-char	/tʃɑːr/	char	/kɛər/|/kɑːr/	care|car	https://stackoverflow.com/q/95773/	StackOverflow C++ debate	cs-term	contested	"char" (rhymes with "car") in C/C++ camp; "care" and "kar" also used.
+Pinia	/ˈpiːnjə/	pee nya			https://pinia.vuejs.org/	Pinia docs	product	community-consensus	"PEE-nya".
+LaTeX	/ˈleɪtɛk/	lay tek	/ˈlɑːtɛx/	la tek	https://www.latex-project.org/about/	LaTeX project	tool	creator-clarified	Lamport: "lay-tek" (or "lah-tek"); never "lay-teks". Documented on the about page.
+TeX	/tɛk/	tek			https://en.wikipedia.org/wiki/TeX#Pronunciation_and_spelling	Wikipedia § Pronunciation	tool	creator-clarified	Knuth: like "tech" — the X is a Greek chi.
+char	/tʃɑːr/	char	/kɛər/|/kɑːr/	care|car		dev community	cs-term	contested	"char" (rhymes with "car") in C/C++ camp; "care" and "kar" also used.
 regex	/ˈrɛdʒɛks/	rej eks	/ˈrɛɡɛks/	reg eks		dev community	cs-term	contested	"REJ-eks" (most common) vs "REG-eks".
 sudo	/ˈsuːduː/	soo doo	/ˈsuːdoʊ/	soo doh	https://en.wikipedia.org/wiki/Sudo	Wikipedia	cli-tool	contested	"soo-doo" (substitute-user-do, Bourne convention) vs "soo-doh".
 tmux	/ˌtiː ˈmʌks/	T mux	/ˈtiːmʌks/	tee mucks		dev community	tool	contested	"T-mux" or "TEE-mucks".
@@ -84,54 +88,53 @@ ASCII	/ˈæski/	ass key			https://en.wikipedia.org/wiki/ASCII	Wikipedia	acronym	
 Azure	/ˈæʒər/	azh er			https://azure.microsoft.com/	Microsoft	product	community-consensus	"AZH-er".
 AWS	/ˌeɪ dʌbljuː ˈɛs/	A W S			https://aws.amazon.com/	Amazon	product	community-consensus	"A-W-S" letter-by-letter.
 GCP	/ˌdʒiː siː ˈpiː/	G C P			https://cloud.google.com/	Google Cloud	product	community-consensus	"G-C-P".
-SaaS	/sæs/	sass			dev community		acronym	community-consensus	"sass".
-PaaS	/pæs/	pass			dev community		acronym	community-consensus	"pass".
-Numpy	/ˈnʌmpaɪ/	num pie			https://numpy.org/	NumPy docs	product	creator-clarified	"NUM-pie".
+SaaS	/sæs/	sass			https://en.wikipedia.org/wiki/Software_as_a_service	Wikipedia	acronym	community-consensus	"sass".
+PaaS	/pæs/	pass			https://en.wikipedia.org/wiki/Platform_as_a_service	Wikipedia	acronym	community-consensus	"pass".
+Numpy	/ˈnʌmpaɪ/	num pie			https://numpy.org/	NumPy docs	product	community-consensus	"NUM-pie".
 SciPy	/ˈsaɪpaɪ/	sigh pie			https://scipy.org/	SciPy docs	product	community-consensus	"SIGH-pie".
 Jupyter	/ˈdʒuːpɪtər/	joo pi ter			https://jupyter.org/	Jupyter docs	product	community-consensus	"JOO-pi-tur" — named after Jupiter (planet) + Julia, Python, R.
 pandas	/ˈpændəz/	pandas			https://pandas.pydata.org/	pandas docs	product	community-consensus	"PAN-duhz".
 PyTorch	/ˈpaɪtɔːrtʃ/	pie torch			https://pytorch.org/	PyTorch	product	community-consensus	"PIE-torch".
-NaN	/næn/	nan	/ˌɛn eɪ ˈɛn/	N A N		IEEE 754 community	cs-term	contested	"nan" (rhymes with "can") or "N-A-N".
+NaN	/næn/	nan	/ˌɛn eɪ ˈɛn/	N A N	https://en.wikipedia.org/wiki/NaN	Wikipedia	cs-term	contested	"nan" (rhymes with "can") or "N-A-N".
 enum	/ˈiːnəm/	ee num			dev community		cs-term	community-consensus	"EE-num".
-# --- AI / ML platforms and tools (~20) ---
-Anthropic	/æn̩ˈθrɒpɪk/	an thraw pick			https://www.anthropic.com/	Anthropic	product	community-consensus	"an-THROP-ick" (or "an-THROW-pick"). Creator of Claude.
+# --- AI / ML platforms and tools ---
+Anthropic	/ˌænθrəˈpɪk/	anth row pick			https://www.anthropic.com/	Anthropic	product	community-consensus	"an-THROW-pick" — heard from Anthropic communications.
 OpenAI	/ˈoʊpən eɪ aɪ/	open A I			https://openai.com/	OpenAI	product	community-consensus	"OH-pen A-I" letter-by-letter.
-Claude	/klɔːd/	clawed			https://www.anthropic.com/claude	Anthropic	product	creator-clarified	One syllable, rhymes with "fraud". Anthropic's LLM.
+Claude	/klɔːd/	clawed			https://www.anthropic.com/claude	Anthropic	product	community-consensus	One syllable, rhymes with "fraud". Anthropic's LLM family.
 Cohere	/koʊˈhɪər/	co here			https://cohere.com/	Cohere	product	community-consensus	"co-HEER", like the verb "cohere".
-Mistral	/mɪˈstrɑːl/	mis traal			https://mistral.ai/	Mistral AI	product	community-consensus	"miss-TRAL" (French style; like the wind).
-Ollama	/oʊˈlɑːmə/	oh la ma			https://ollama.com/	Ollama project	product	creator-clarified	"oh-LAH-mah".
+Mistral	/mɪˈstrɑːl/	mis trahl			https://mistral.ai/	Mistral AI	product	community-consensus	"miss-TRAL" (French style; the wind).
+Ollama	/oʊˈlɑːmə/	oh la ma			https://ollama.com/	Ollama project	product	community-consensus	"oh-LAH-mah" — common community reading.
 LangChain	/ˈlæŋtʃeɪn/	lang chain			https://www.langchain.com/	LangChain	product	community-consensus	"LANG-chain".
 LlamaIndex	/ˈlɑːməˌɪndɛks/	llama index			https://www.llamaindex.ai/	LlamaIndex	product	community-consensus	"LLAH-mah index".
-HuggingFace	/ˈhʌɡɪŋˌfeɪs/	hugging face			https://huggingface.co/	Hugging Face	product	community-consensus	"HUGGING face". Yes — like the emoji.
+HuggingFace	/ˈhʌɡɪŋˌfeɪs/	hugging face			https://huggingface.co/	Hugging Face	product	community-consensus	"HUGGING face" — like the emoji.
 vLLM	/ˌviː ɛl ɛl ˈɛm/	V L L M			https://github.com/vllm-project/vllm	vLLM	product	community-consensus	"V-L-L-M" letter-by-letter.
 JAX	/dʒæks/	jacks			https://jax.readthedocs.io/	JAX docs	product	community-consensus	"jacks", one syllable. Google's autograd library.
 Mojo	/ˈmoʊdʒoʊ/	mo jo			https://www.modular.com/mojo	Modular	product	community-consensus	"MOH-joe".
-DSPy	/ˌdiː ɛs ˈpaɪ/	D S pie			https://dspy.ai/	DSPy	product	creator-clarified	"D-S-py" — Stanford framework.
+DSPy	/ˌdiː ɛs ˈpaɪ/	D S pie			https://dspy.ai/	DSPy	product	community-consensus	"D-S-py" — Stanford framework.
 Pinecone	/ˈpaɪnˌkoʊn/	pine cone			https://www.pinecone.io/	Pinecone	product	community-consensus	"PINE-cone". Vector DB.
-Weaviate	/ˈwiːviˌeɪt/	wee vee ate			https://weaviate.io/	Weaviate	product	creator-clarified	"WEE-vee-ate" per founder Bob van Luijt.
+Weaviate	/ˈwiːviˌeɪt/	wee vee ate			https://weaviate.io/	Weaviate	product	community-consensus	"WEE-vee-ate" — common community reading.
 Milvus	/ˈmɪlvəs/	mill vus			https://milvus.io/	Milvus	product	community-consensus	"MILL-vuhs".
-Qdrant	/ˈkwɒdrənt/	quadrant			https://qdrant.tech/	Qdrant	product	creator-clarified	"QUADRANT" per project FAQ.
+Qdrant	/ˈkwɒdrənt/	quadrant			https://qdrant.tech/	Qdrant	product	community-consensus	"QUADRANT" — common reading; project FAQ TBD as a citable source.
 Chroma	/ˈkroʊmə/	chroma			https://www.trychroma.com/	Chroma	product	community-consensus	"KROH-mah". Vector DB.
 Modal	/ˈmoʊdl̩/	moh dl			https://modal.com/	Modal	product	community-consensus	"MOH-dul".
 Replicate	/ˈrɛplɪˌkeɪt/	rep li kate			https://replicate.com/	Replicate	product	community-consensus	"REP-li-kate".
-# --- Modern frontend frameworks (~15) ---
+# --- Modern frontend frameworks ---
 Next.js	/ˈnɛkst dʒeɪ ɛs/	next J S			https://nextjs.org/	Vercel	product	community-consensus	"NEXT-J-S".
 Nuxt	/nʌkst/	nukst			https://nuxt.com/	Nuxt	product	community-consensus	"nukst" — one syllable.
 Remix	/ˈriːmɪks/	ree mix			https://remix.run/	Remix	product	community-consensus	"REE-mix".
-Qwik	/kwɪk/	quick			https://qwik.dev/	Qwik	product	creator-clarified	"quick" — yes, intentional. Misko Hevery.
+Qwik	/kwɪk/	quick			https://qwik.dev/	Qwik	product	community-consensus	"quick" — yes, intentional. Heard from creator Misko Hevery.
 SolidJS	/ˈsɒlɪd dʒeɪ ɛs/	solid J S			https://www.solidjs.com/	SolidJS	product	community-consensus	"SOLID-J-S".
 Tailwind	/ˈteɪlˌwɪnd/	tail wind			https://tailwindcss.com/	Tailwind CSS	product	community-consensus	"TAIL-wind".
-shadcn	/ˌʃæd siː ˈɛn/	shad C N			https://ui.shadcn.com/	shadcn/ui	product	creator-clarified	"shad-C-N" — creator Shadcn says letter-by-letter for "cn".
+shadcn	/ˌʃæd siː ˈɛn/	shad C N			https://ui.shadcn.com/	shadcn/ui	product	community-consensus	"shad-C-N" — common community reading; creator clarification TBD as a citable source.
 tRPC	/ˌtiː ɑːr piː ˈsiː/	T R P C			https://trpc.io/	tRPC	product	community-consensus	"T-R-P-C".
 Zod	/zɒd/	zod			https://zod.dev/	Zod	product	community-consensus	"zod" — one syllable.
-Zustand	/ˈtsuːʃtʌnt/	tsu shtund			https://zustand.docs.pmnd.rs/	Poimandres	product	creator-clarified	German for "state": "TSOO-shtund" (most common in English: "ZOO-stund").
+Zustand	/ˈtsuːʃtʌnt/	tsu shtund			https://zustand.docs.pmnd.rs/	Poimandres	product	community-consensus	German for "state": "TSOO-shtund" in German; most English speakers say "ZOO-stund". Creator clarification TBD.
 Drizzle	/ˈdrɪzəl/	drizzle			https://orm.drizzle.team/	Drizzle ORM	product	community-consensus	"DRIZ-l".
 Prisma	/ˈprɪzmə/	prizma			https://www.prisma.io/	Prisma	product	community-consensus	"PRIZ-muh".
 NestJS	/ˌnɛst dʒeɪ ˈɛs/	nest J S			https://nestjs.com/	NestJS	product	community-consensus	"NEST-J-S".
 FastAPI	/ˌfæst eɪ piː ˈaɪ/	fast A P I			https://fastapi.tiangolo.com/	FastAPI	product	community-consensus	"fast-A-P-I".
-Hono	/ˈhoʊnoʊ/	ho no			https://hono.dev/	Hono	product	creator-clarified	(See earlier entry.)
-# --- Companies (~12) ---
-Vercel	/vɜːrˈsɛl/	ver SELL			https://vercel.com/	Vercel	product	creator-clarified	"vur-SELL" per founder Guillermo Rauch.
+# --- Companies ---
+Vercel	/vɜːrˈsɛl/	ver SELL			https://vercel.com/	Vercel	product	community-consensus	"vur-SELL" — heard from Vercel communications.
 Netlify	/ˈnɛtlɪˌfaɪ/	net li fy			https://www.netlify.com/	Netlify	product	community-consensus	"NET-li-fy".
 Cloudflare	/ˈklaʊdˌflɛər/	cloud flair			https://www.cloudflare.com/	Cloudflare	product	community-consensus	"CLOUD-flair".
 HashiCorp	/ˈhæʃiˌkɔːrp/	hashy corp			https://www.hashicorp.com/	HashiCorp	product	community-consensus	"HASH-ee-corp".
@@ -144,62 +147,62 @@ Databricks	/ˈdætəˌbrɪks/	data bricks			https://www.databricks.com/	Databric
 Palantir	/ˈpælənˌtɪər/	pal an teer			https://www.palantir.com/	Palantir	product	community-consensus	"PAL-an-teer" — from Tolkien's seeing-stones.
 Atlassian	/ætˈlæsiən/	at lass ee an			https://www.atlassian.com/	Atlassian	product	community-consensus	"at-LASS-ee-an".
 Splunk	/splʌŋk/	splunk			https://www.splunk.com/	Splunk	product	community-consensus	"splunk" — rhymes with "drunk".
-# --- K8s / CNCF ecosystem (~12) ---
-Cilium	/ˈsɪliəm/	silly um			https://cilium.io/	Cilium	product	creator-clarified	"SIL-ee-um" — Latin for eyelash.
-Linkerd	/ˈlɪŋkərdiː/	linker D			https://linkerd.io/	Linkerd	product	creator-clarified	"LINKER-D".
+# --- K8s / CNCF ecosystem ---
+Cilium	/ˈsɪliəm/	silly um			https://cilium.io/	Cilium	product	community-consensus	"SIL-ee-um" — Latin for eyelash.
+Linkerd	/ˈlɪŋkərdiː/	linker D			https://linkerd.io/	Linkerd	product	community-consensus	"LINKER-D".
 Crossplane	/ˈkrɒsˌpleɪn/	cross plane			https://www.crossplane.io/	Crossplane	product	community-consensus	"CROSS-plane".
 Karpenter	/ˈkɑːrpəntər/	carpenter			https://karpenter.sh/	Karpenter	product	community-consensus	"CARPENTER" — like the trade.
 Velero	/vəˈlɛəroʊ/	veh lair oh			https://velero.io/	Velero	product	community-consensus	"vuh-LAIR-oh".
 Falco	/ˈfælkoʊ/	fal co			https://falco.org/	Falco	product	community-consensus	"FAL-co".
-Trivy	/ˈtrɪvi/	trivy			https://trivy.dev/	Trivy	product	creator-clarified	"TRIV-ee" per Aqua Security docs.
+Trivy	/ˈtrɪvi/	trivy			https://trivy.dev/	Trivy	product	community-consensus	"TRIV-ee".
 Kyverno	/kaɪˈvɜːrnoʊ/	kai verno			https://kyverno.io/	Kyverno	product	community-consensus	"kai-VER-no".
 OPA	/ˌoʊ piː ˈeɪ/	O P A			https://www.openpolicyagent.org/	OPA project	abbreviation	community-consensus	"O-P-A" letter-by-letter.
 ArgoCD	/ˈɑːrɡoʊ siː diː/	argo C D			https://argoproj.github.io/cd/	Argo CD	product	community-consensus	"AR-go-C-D".
 FluxCD	/ˈflʌks siː diː/	flux C D			https://fluxcd.io/	Flux CD	product	community-consensus	"FLUX-C-D".
 Tekton	/ˈtɛktən/	tek ton			https://tekton.dev/	Tekton	product	community-consensus	"TEK-tun".
-# --- Editors / IDEs / tools (~10) ---
-Neovim	/ˈniːoʊˌvɪm/	nee oh vim			https://neovim.io/faq/	Neovim FAQ	tool	creator-clarified	Project FAQ: "NEE-oh-vim" (not "NAY-oh-vim").
+# --- Editors / IDEs / tools ---
+Neovim	/ˈniːoʊˌvɪm/	nee oh vim			https://neovim.io/	Neovim	tool	community-consensus	"NEE-oh-vim" is the most common community reading.
 Helix	/ˈhiːlɪks/	hee licks			https://helix-editor.com/	Helix	tool	community-consensus	"HEE-licks".
 Zed	/zɛd/	zed			https://zed.dev/	Zed	tool	community-consensus	"zed" — the letter.
 Cursor	/ˈkɜːrsər/	cur sir			https://cursor.com/	Cursor	tool	community-consensus	"CUR-sir".
 IntelliJ	/ɪnˈtɛlədʒeɪ/	in tell i J			https://www.jetbrains.com/idea/	JetBrains	tool	community-consensus	"in-TELL-i-J".
-ripgrep	/ˈrɪpɡrɛp/	rip grep			https://github.com/BurntSushi/ripgrep	BurntSushi	tool	creator-clarified	"RIP-grep" (the `rg` command).
+ripgrep	/ˈrɪpɡrɛp/	rip grep			https://github.com/BurntSushi/ripgrep	BurntSushi	tool	community-consensus	"RIP-grep" (the `rg` command).
 fzf	/ˌɛf ziː ˈɛf/	F Z F			https://github.com/junegunn/fzf	junegunn/fzf	tool	community-consensus	"F-Z-F" letter-by-letter.
 eza	/ˈiːzə/	ee zah			https://eza.rocks/	eza	tool	community-consensus	"EE-zah" (ls replacement).
 k9s	/ˈkeɪ naɪnz/	K nines			https://k9scli.io/	k9s	tool	community-consensus	"K-nines" — K8s TUI.
 k3s	/ˌkeɪ θriː ˈɛs/	K three S			https://k3s.io/	Rancher	product	community-consensus	"K-three-S" (lightweight K8s).
-# --- Search / DB engines (~8) ---
+# --- Search / DB engines ---
 Elasticsearch	/ɪˈlæstɪkˌsɜːrtʃ/	elastic search			https://www.elastic.co/	Elastic	product	community-consensus	"e-LAS-tic-search".
 Lucene	/luːˈsiːn/	loo seen			https://lucene.apache.org/	Apache Lucene	product	community-consensus	"loo-SEEN".
 Solr	/ˈsɒlər/	sol er			https://solr.apache.org/	Apache Solr	product	community-consensus	"SOL-er".
-Meilisearch	/ˌmeɪli ˈsɜːrtʃ/	may lee search			https://www.meilisearch.com/	Meilisearch	product	creator-clarified	"MAY-lee-search".
+Meilisearch	/ˌmeɪli ˈsɜːrtʃ/	may lee search			https://www.meilisearch.com/	Meilisearch	product	community-consensus	"MAY-lee-search".
 Typesense	/ˈtaɪpˌsɛns/	type sense			https://typesense.org/	Typesense	product	community-consensus	"TYPE-sense".
 Algolia	/ælˈɡoʊliə/	al go lia			https://www.algolia.com/	Algolia	product	community-consensus	"al-GO-lia".
 Neo4j	/ˌniːoʊ ˌfɔːr ˈdʒeɪ/	nee oh four J			https://neo4j.com/	Neo4j	product	community-consensus	"NEE-oh-FOUR-J".
 CockroachDB	/ˈkɒkroʊtʃ diː biː/	cockroach D B			https://www.cockroachlabs.com/	Cockroach Labs	product	community-consensus	"COCK-roach-D-B".
-# --- Languages / runtimes (~10) ---
+# --- Languages / runtimes ---
 Elixir	/ɪˈlɪksər/	ee lik sir			https://elixir-lang.org/	Elixir	product	community-consensus	"ee-LIK-sir".
 Erlang	/ˈɜːrlæŋ/	er lang			https://www.erlang.org/	Erlang	product	community-consensus	"ER-lang".
 Haskell	/ˈhæskəl/	haskel			https://www.haskell.org/	Haskell	product	community-consensus	"HAS-kell".
 Scala	/ˈskɑːlə/	skah la			https://www.scala-lang.org/	Scala	product	community-consensus	"SKAH-lah".
 Kotlin	/ˈkɒtlɪn/	cot lin			https://kotlinlang.org/	Kotlin	product	community-consensus	"COT-lin" — short O.
 Julia	/ˈdʒuːliə/	joo lia			https://julialang.org/	Julia	product	community-consensus	"JOO-lee-uh".
-Clojure	/ˈkloʊʒər/	closure			https://clojure.org/	Clojure	product	creator-clarified	Rich Hickey: sounds like "closure".
+Clojure	/ˈkloʊʒər/	closure			https://clojure.org/	Clojure	product	community-consensus	Rich Hickey has said it sounds like "closure". Community reading.
 OCaml	/oʊˈkæməl/	oh camel			https://ocaml.org/	OCaml	product	community-consensus	"OH-camel".
-Lua	/ˈluːə/	loo ah			https://www.lua.org/	Lua	product	creator-clarified	"LOO-ah" — Portuguese for "moon".
+Lua	/ˈluːə/	loo ah			https://www.lua.org/about/	Lua about	product	creator-clarified	"LOO-ah" — Portuguese for "moon". Documented on the about page.
 Zig	/zɪɡ/	zig			https://ziglang.org/	Zig	product	community-consensus	"zig" — one syllable.
-# --- Package / build tools (~8) ---
+# --- Package / build tools ---
 uv	/ˌjuː ˈviː/	you V			https://github.com/astral-sh/uv	Astral	tool	community-consensus	"U-V" — Astral's Python installer/resolver.
 ruff	/rʌf/	ruff			https://docs.astral.sh/ruff/	Astral	tool	community-consensus	"ruff" — like a dog bark.
-mypy	/ˈmaɪpaɪ/	my pie			https://mypy.readthedocs.io/	mypy	tool	creator-clarified	"MY-pie" — Python type checker.
+mypy	/ˈmaɪpaɪ/	my pie			https://mypy.readthedocs.io/	mypy	tool	community-consensus	"MY-pie" — Python type checker.
 Biome	/baɪˈoʊm/	bye ohm			https://biomejs.dev/	Biome	tool	community-consensus	"BYE-ohm".
 Bazel	/ˈbeɪzəl/	bay zel			https://bazel.build/	Bazel	tool	community-consensus	"BAY-zel".
 Gradle	/ˈɡreɪdəl/	gray del			https://gradle.org/	Gradle	tool	community-consensus	"GRAY-del".
 Cargo	/ˈkɑːrɡoʊ/	car go			https://doc.rust-lang.org/cargo/	Rust	tool	community-consensus	"CAR-go" — Rust's package manager.
 pnpm	/ˌpiː ɛn piː ˈɛm/	P N P M			https://pnpm.io/	pnpm	tool	community-consensus	"P-N-P-M" letter-by-letter.
-# --- Network / utility tools (~6) ---
-nmap	/ˈɛnˌmæp/	en map			https://nmap.org/	Nmap	tool	creator-clarified	"EN-map" per Fyodor (creator).
-curl	/kɜːrl/	curl			https://curl.se/	curl	tool	creator-clarified	"curl" — one syllable, per Daniel Stenberg.
+# --- Network / utility tools ---
+nmap	/ˈɛnˌmæp/	en map			https://nmap.org/	Nmap	tool	community-consensus	"EN-map" — common community reading.
+curl	/kɜːrl/	curl			https://curl.se/	curl	tool	community-consensus	"curl" — one syllable.
 wget	/ˈdʌbljuː ɡɛt/	double-you get			https://www.gnu.org/software/wget/	GNU Wget	tool	community-consensus	"W-get" (double-you-get).
 SSH	/ˌɛs ɛs ˈeɪtʃ/	S S H			https://en.wikipedia.org/wiki/Secure_Shell	Wikipedia	abbreviation	community-consensus	"S-S-H" letter-by-letter.
 rsync	/ˈɑːrˌsɪŋk/	R sync			https://rsync.samba.org/	rsync	tool	community-consensus	"R-sync".

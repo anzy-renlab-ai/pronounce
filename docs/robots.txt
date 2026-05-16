@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pronounce.renlab.ai/sitemap.xml

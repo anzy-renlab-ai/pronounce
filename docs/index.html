@@ -3,72 +3,134 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>say-it · How engineers actually pronounce kubectl, nginx, GIF, JSON…</title>
-  <meta name="description" content="A community-maintained dictionary of how engineers actually pronounce project names — kubectl, nginx, GIF, JSON, GUI, PostgreSQL, and 60+ more. With creator citations.">
-  <meta property="og:title" content="say-it — How engineers actually pronounce kubectl">
-  <meta property="og:description" content="A community-maintained dictionary of how engineers actually pronounce project names. With creator citations.">
+  <title>How to pronounce kubectl, nginx, GIF, JSON — Pronounce</title>
+  <meta name="description" content="A community-maintained pronunciation dictionary for the project, product, and programmer-jargon names developers actually use — kubectl, nginx, GIF, JSON, Pydantic, Knative, LaTeX, Postgres, and 130+ more. With sources.">
+  <meta name="keywords" content="how to pronounce kubectl, how to pronounce nginx, how to pronounce GIF, how to pronounce JSON, project name pronunciation, developer pronunciation guide">
+  <link rel="canonical" href="https://pronounce.renlab.ai/">
+  <meta property="og:title" content="How to pronounce kubectl, nginx, GIF, JSON — Pronounce">
+  <meta property="og:description" content="A community-maintained pronunciation dictionary for developer jargon. With sources. Open source, MIT.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pronounce.renlab.ai/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How to pronounce kubectl, nginx, GIF, JSON">
+  <meta name="twitter:description" content="A community pronunciation dictionary for the names developers actually use. With sources.">
   <link rel="stylesheet" href="./style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Pronounce",
+    "description": "Community pronunciation dictionary for developer project and product names.",
+    "url": "https://pronounce.renlab.ai/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://pronounce.renlab.ai/browse.html?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
 </head>
 <body>
+  <div class="gh-banner">⭐ If this saves you from saying "kub-cuttle" one more time — <a href="https://github.com/anzy-renlab-ai/say-it">star us on GitHub</a></div>
+  <nav class="topbar">
+    <div class="brand"><a href="./">🔊 Pronounce</a></div>
+    <div class="links">
+      <a href="./browse.html">Browse</a>
+      <a href="https://github.com/anzy-renlab-ai/say-it">GitHub</a>
+      <a href="https://github.com/anzy-renlab-ai/say-it/blob/main/IDEAS.md">Roadmap</a>
+    </div>
+  </nav>
+
   <div class="container">
 
     <header class="hero">
-      <h1><span class="speaker">🔊</span> say-it</h1>
-      <p class="tagline">How engineers <em>actually</em> pronounce <code>kubectl</code>, <code>nginx</code>, <code>GIF</code>, <code>JSON</code>… with receipts.</p>
+      <h1><span class="speaker">🔊</span><br>How to pronounce <code>kubectl</code><br>without the cringe.</h1>
+      <p class="tagline">A community dictionary of how engineers <em>actually</em> say <code>kubectl</code>, <code>nginx</code>, <code>GIF</code>, <code>JSON</code>, <code>Pydantic</code>, <code>Knative</code>, <code>LaTeX</code>, <code>Postgres</code>… <strong>with sources</strong>.</p>
+      <div class="cta">
+        <a href="./browse.html">Browse 130+ words →</a>
+        <a class="secondary" href="https://github.com/anzy-renlab-ai/say-it">GitHub</a>
+      </div>
       <div class="install">
         <code>git clone https://github.com/anzy-renlab-ai/say-it.git &amp;&amp; cd say-it &amp;&amp; ./install.sh</code>
       </div>
-      <div class="links">
-        <a href="https://github.com/anzy-renlab-ai/say-it">GitHub →</a>
-        <a href="https://github.com/anzy-renlab-ai/say-it#famous-moments">Famous Moments</a>
-        <a href="https://github.com/anzy-renlab-ai/say-it/blob/main/data/pronunciations.tsv">Dictionary source</a>
-      </div>
     </header>
+
+    <pre class="demo">
+<span class="prompt">$</span> say-it kubectl
+<span class="out">🔊 koob control. koob control. koob control. <span class="alt">or: cube cuddle. or: kube C T L.</span></span>
+
+<span class="prompt">$</span> say-it GIF
+<span class="out">🔊 jif. jif. jif. <span class="alt">or: gif.</span></span>          <span class="comment"># with receipts — Wilhite at the Webby Awards, 2013</span>
+
+<span class="prompt">$</span> say-it --why JSON
+<span class="comment">word              JSON
+ipa               /ˈdʒeɪsən/
+respelling_us     jay son
+source            Wikipedia § Pronunciation
+url               https://en.wikipedia.org/wiki/JSON#Pronunciation</span></pre>
 
     <section class="famous">
       <h2>📜 Famous moments</h2>
-      <p>Some pronunciations aren't opinions — the creators settled them on record.</p>
+      <p class="sub">Some pronunciations aren't opinions — the creators settled them on record.</p>
       <div class="famous-list">
-      <div class="famous-item"><span class="fam-word">GIF</span> → <span class="fam-resp">jif</span><a class="fam-src" href="https://www.nytimes.com/2013/05/22/business/media/creator-of-the-gif-says-its-pronounced-jif.html" target="_blank" rel="noopener">Steve Wilhite, Webby Awards 2013</a></div>
-      <div class="famous-item"><span class="fam-word">JSON</span> → <span class="fam-resp">jay son</span><a class="fam-src" href="https://www.youtube.com/watch?v=-C-JoyNuQJs" target="_blank" rel="noopener">Douglas Crockford (RailsConf 2009)</a></div>
-      <div class="famous-item"><span class="fam-word">GNU</span> → <span class="fam-resp">guh new</span><a class="fam-src" href="https://www.gnu.org/gnu/pronunciation.html" target="_blank" rel="noopener">GNU Project official</a></div>
-      <div class="famous-item"><span class="fam-word">Knative</span> → <span class="fam-resp">kay native</span><a class="fam-src" href="https://knative.dev/" target="_blank" rel="noopener">Knative docs</a></div>
-      <div class="famous-item"><span class="fam-word">Redis</span> → <span class="fam-resp">red iss</span><a class="fam-src" href="https://redis.io/" target="_blank" rel="noopener">Redis site</a></div>
-      <div class="famous-item"><span class="fam-word">etcd</span> → <span class="fam-resp">et C D</span><a class="fam-src" href="https://etcd.io/docs/v3.5/faq/" target="_blank" rel="noopener">etcd FAQ</a></div>
-      <div class="famous-item"><span class="fam-word">Linux</span> → <span class="fam-resp">linnix</span><a class="fam-src" href="https://www.youtube.com/watch?v=5IfHm6R5le0" target="_blank" rel="noopener">Linus Torvalds clip</a></div>
-      <div class="famous-item"><span class="fam-word">Django</span> → <span class="fam-resp">jang go</span><a class="fam-src" href="https://www.djangoproject.com/foundation/faq/" target="_blank" rel="noopener">Django FAQ</a></div>
-      <div class="famous-item"><span class="fam-word">Vue</span> → <span class="fam-resp">view</span><a class="fam-src" href="https://vuejs.org/" target="_blank" rel="noopener">Vue docs</a></div>
-      <div class="famous-item"><span class="fam-word">Vite</span> → <span class="fam-resp">veet</span><a class="fam-src" href="https://vitejs.dev/" target="_blank" rel="noopener">Vite docs</a></div>
-      <div class="famous-item"><span class="fam-word">Pydantic</span> → <span class="fam-resp">pie dantick</span><a class="fam-src" href="https://docs.pydantic.dev/" target="_blank" rel="noopener">Pydantic docs</a></div>
-      <div class="famous-item"><span class="fam-word">LaTeX</span> → <span class="fam-resp">lay tek</span><a class="fam-src" href="https://www.latex-project.org/about/" target="_blank" rel="noopener">LaTeX project</a></div>
+        <div class="famous-item"><span class="fam-word">nginx</span> → <span class="fam-resp">engine X</span><a class="fam-src" href="https://nginx.org/en/" target="_blank" rel="noopener">NGINX official</a></div>
+        <div class="famous-item"><span class="fam-word">GIF</span> → <span class="fam-resp">jif</span><a class="fam-src" href="https://www.nytimes.com/2013/05/22/business/media/creator-of-the-gif-says-its-pronounced-jif.html" target="_blank" rel="noopener">Steve Wilhite, NYT (2013)</a></div>
+        <div class="famous-item"><span class="fam-word">GNU</span> → <span class="fam-resp">guh new</span><a class="fam-src" href="https://www.gnu.org/gnu/pronunciation.html" target="_blank" rel="noopener">GNU Project official</a></div>
+        <div class="famous-item"><span class="fam-word">etcd</span> → <span class="fam-resp">et C D</span><a class="fam-src" href="https://etcd.io/docs/v3.5/faq/" target="_blank" rel="noopener">etcd FAQ</a></div>
+        <div class="famous-item"><span class="fam-word">PostgreSQL</span> → <span class="fam-resp">post gress Q L</span><a class="fam-src" href="https://www.postgresql.org/docs/current/faq.html" target="_blank" rel="noopener">PostgreSQL FAQ</a></div>
+        <div class="famous-item"><span class="fam-word">MySQL</span> → <span class="fam-resp">my S Q L</span><a class="fam-src" href="https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html" target="_blank" rel="noopener">MySQL docs</a></div>
+        <div class="famous-item"><span class="fam-word">Debian</span> → <span class="fam-resp">deb ee un</span><a class="fam-src" href="https://www.debian.org/intro/about" target="_blank" rel="noopener">Debian about</a></div>
+        <div class="famous-item"><span class="fam-word">Django</span> → <span class="fam-resp">jang go</span><a class="fam-src" href="https://www.djangoproject.com/foundation/faq/" target="_blank" rel="noopener">Django FAQ</a></div>
+        <div class="famous-item"><span class="fam-word">LaTeX</span> → <span class="fam-resp">lay tek</span><a class="fam-src" href="https://www.latex-project.org/about/" target="_blank" rel="noopener">LaTeX project</a></div>
+        <div class="famous-item"><span class="fam-word">TeX</span> → <span class="fam-resp">tek</span><a class="fam-src" href="https://en.wikipedia.org/wiki/TeX#Pronunciation_and_spelling" target="_blank" rel="noopener">Wikipedia § Pronunciation</a></div>
+        <div class="famous-item"><span class="fam-word">Lua</span> → <span class="fam-resp">loo ah</span><a class="fam-src" href="https://www.lua.org/about/" target="_blank" rel="noopener">Lua about</a></div>
       </div>
     </section>
 
-    <div class="section-title">Browse the dictionary <span style="text-transform:none; font-weight:normal;">— click ▶ to hear it</span></div>
-    <div class="controls">
-      <input type="search" id="search" placeholder="Search: kubectl, gif, postgres…" autocomplete="off">
-      <div class="chips">
-        <button class="chip active" data-cat="all">all</button>
-        <button class="chip" data-cat="product">product</button>
-        <button class="chip" data-cat="cli-tool">cli-tool</button>
-        <button class="chip" data-cat="tool">tool</button>
-        <button class="chip" data-cat="acronym">acronym</button>
-        <button class="chip" data-cat="cs-term">cs-term</button>
-        <button class="chip" data-cat="project">project</button>
-        <button class="chip" data-cat="abbreviation">abbrev</button>
-      </div>
-      <span class="counter-label"><span id="counter">…</span> entries</span>
+    <div class="section-title">What's in the box</div>
+    <div class="features">
+      <div class="feature"><span class="icon">🗂</span><h3>130+ entries, source-cited</h3><p>Project names, product names, programmer jargon, acronyms. Every entry tagged with confidence (creator-clarified, community-consensus, contested) and linked to a real source where one exists.</p></div>
+      <div class="feature"><span class="icon">🔊</span><h3>Multi-reading audio awareness</h3><p>When a word is contested — GIF, SQL, GUI, kubectl — the CLI audibly chains the alternates ("…or: gif"), so you hear the debate without watching the terminal.</p></div>
+      <div class="feature"><span class="icon">🤖</span><h3>Claude Code skill included</h3><p>Ask Claude "how do you pronounce X?" — it replies with audio, IPA, and a source citation, not a phonetic guess.</p></div>
+      <div class="feature"><span class="icon">⚡</span><h3>Zero deps, ~250 lines of bash</h3><p>Wraps the macOS `say` engine you already have. No npm, no sudo, no surprises.</p></div>
+      <div class="feature"><span class="icon">🔁</span><h3>Pluggable alternates</h3><p><code>--alt</code> for the rival reading, <code>--all</code> for every variant, <code>--solo</code> to skip the chain, <code>--why</code> shows the dict entry with source URL.</p></div>
+      <div class="feature"><span class="icon">📦</span><h3>Community-owned</h3><p>The dictionary is a TSV file you can edit. Open a PR with your favorite mispronounced project — see <a href="https://github.com/anzy-renlab-ai/say-it/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a>.</p></div>
     </div>
 
+    <div class="section-title">Heard, not just read</div>
+    <p style="color: var(--muted-strong); margin-bottom: 28px;">IPA is a reference — like a dictionary entry for a foreign word. You don't learn how to pronounce <code>schadenfreude</code> by squinting at <code>/ˈʃɑːdənˌfrɔɪdə/</code>. You learn it by hearing someone say it three times. <strong>Pronounce</strong> wires your OS's TTS to a one-shot CLI so the answer is sound, not a phonetic transcription.</p>
+
+    <div class="section-title">Try a few</div>
+    <p style="margin-bottom: 16px; color: var(--muted-strong);">Click ▶ to hear it in your browser. (Audio quality varies by browser — install the CLI for the macOS Samantha rendering.)</p>
     <div id="entries"></div>
 
-    <footer class="footer">
-      <p>Built with <a href="https://github.com/anzy-renlab-ai/say-it">say-it</a>. MIT licensed. PRs welcome to grow the dictionary — <a href="https://github.com/anzy-renlab-ai/say-it/blob/main/data/pronunciations.tsv">edit <code>pronunciations.tsv</code></a>.</p>
-      <p style="margin-top:8px;">Audio uses your browser's Web Speech API; quality varies by OS. Install the CLI for the canonical macOS `say` output.</p>
-    </footer>
+    <p style="text-align: center; margin-top: 32px;">
+      <a href="./browse.html" style="color: var(--accent); font-size: 16px;">See all 130+ entries →</a>
+    </p>
+
+    <div class="gh-cta">
+      <h3>⭐ Like it? Star it.</h3>
+      <p>The dictionary is community-maintained — every star nudges more devs to contribute their favorite mispronounced project name.</p>
+      <a href="https://github.com/anzy-renlab-ai/say-it" class="gh-btn" target="_blank" rel="noopener"><span class="star">★</span> Star on GitHub</a>
+      <img class="shields" src="https://img.shields.io/github/stars/anzy-renlab-ai/say-it?style=social" alt="GitHub stars">
+    </div>
 
   </div>
+
+  <a class="gh-float" href="https://github.com/anzy-renlab-ai/say-it" target="_blank" rel="noopener"><span class="star">★</span> Star on GitHub</a>
+
+  <footer class="footer">
+    <p>Pronounce · MIT · <a href="https://github.com/anzy-renlab-ai/say-it">GitHub</a> · <a href="https://github.com/anzy-renlab-ai/say-it/blob/main/CONTRIBUTING.md">Contribute</a> · <a href="https://github.com/anzy-renlab-ai/say-it/blob/main/IDEAS.md">Roadmap</a></p>
+  </footer>
+
   <script src="./script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const c = document.getElementById('entries');
+      if (!c) return;
+      const max = 8;
+      c.querySelectorAll('.entry').forEach((el, i) => { if (i >= max) el.style.display = 'none'; });
+    });
+  </script>
 </body>
 </html>

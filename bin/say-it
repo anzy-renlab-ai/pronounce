@@ -41,6 +41,7 @@ Usage:
   say-it --why <word>            print the dict entry, source URL, and confidence
   say-it list                    list every word in the dictionary
   say-it search <pattern>        grep the dictionary (case-insensitive)
+  say-it update                  pull the latest dictionary and CLI from upstream
   say-it -l                      list every macOS voice
   say-it -h                      this help
 
@@ -67,6 +68,26 @@ done
 
 # --- subcommands --------------------------------------------------------------
 case "${1:-}" in
+  update)
+    # Best-effort updater: re-clone or git pull the upstream repo into a temp
+    # dir, then run install.sh from there. Works without sudo when $PREFIX is
+    # writable (default ~/.local).
+    UPSTREAM="${SAY_IT_UPSTREAM:-https://github.com/anzy-renlab-ai/say-it.git}"
+    TMP_DIR="$(mktemp -d -t say-it-update.XXXXXX)"
+    trap 'rm -rf "$TMP_DIR"' EXIT
+    echo "Cloning $UPSTREAM into $TMP_DIR …"
+    if ! git clone --depth=1 "$UPSTREAM" "$TMP_DIR/repo" >/dev/null 2>&1; then
+      echo "say-it update: git clone failed. Check connectivity or set SAY_IT_UPSTREAM." >&2
+      exit 5
+    fi
+    echo "Running installer …"
+    if ! (cd "$TMP_DIR/repo" && ./install.sh); then
+      echo "say-it update: installer failed; previous install left intact." >&2
+      exit 5
+    fi
+    echo "say-it: updated."
+    exit 0
+    ;;
   list)
     if [[ -z "$DICT" ]]; then
       echo "say-it: dictionary not found" >&2; exit 4
