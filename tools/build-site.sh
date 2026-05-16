@@ -738,7 +738,8 @@ while IFS="$SEP" read -r word ipa resp alt_ipa alt_resp src_url src_label cat co
   fi
 
   # JSON-LD: WebPage. For contested with alts, FAQPage.
-  jsonld_main="{\"@context\":\"https://schema.org\",\"@type\":\"WebPage\",\"name\":\"How to pronounce $(jsonesc "$word")\",\"description\":\"$(jsonesc "$word") is most commonly pronounced \\\"$(jsonesc "$resp")\\\" ($(jsonesc "$ipa")).\",\"url\":\"$SITE_URL/word/$slug\",\"inLanguage\":\"en-US\""
+  # Speakable schema → Google Assistant / Alexa pick up these pages for voice-search "how to pronounce X" queries
+  jsonld_main="{\"@context\":\"https://schema.org\",\"@type\":\"WebPage\",\"name\":\"How to pronounce $(jsonesc "$word")\",\"description\":\"$(jsonesc "$word") is most commonly pronounced \\\"$(jsonesc "$resp")\\\" ($(jsonesc "$ipa")).\",\"url\":\"$SITE_URL/word/$slug\",\"inLanguage\":\"en-US\",\"speakable\":{\"@type\":\"SpeakableSpecification\",\"cssSelector\":[\".resp-large\",\".prose p:first-child\"]}"
   if [[ -n "$src_url" ]]; then
     jsonld_main="$jsonld_main,\"citation\":\"$(jsonesc "$src_url")\""
   fi
