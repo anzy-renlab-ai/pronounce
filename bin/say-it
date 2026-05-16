@@ -72,7 +72,7 @@ case "${1:-}" in
     # Best-effort updater: re-clone or git pull the upstream repo into a temp
     # dir, then run install.sh from there. Works without sudo when $PREFIX is
     # writable (default ~/.local).
-    UPSTREAM="${SAY_IT_UPSTREAM:-https://github.com/anzy-renlab-ai/say-it.git}"
+    UPSTREAM="${SAY_IT_UPSTREAM:-https://github.com/anzy-renlab-ai/pronounce.git}"
     TMP_DIR="$(mktemp -d -t say-it-update.XXXXXX)"
     trap 'rm -rf "$TMP_DIR"' EXIT
     echo "Cloning $UPSTREAM into $TMP_DIR …"

@@ -12,7 +12,7 @@ say-it: this release only works on macOS (uses the built-in \`say\` TTS).
 
 Windows (PowerShell + System.Speech) and Linux (espeak-ng / cloud TTS)
 backends are on the roadmap. Track or contribute:
-  https://github.com/anzy-renlab-ai/say-it
+  https://github.com/anzy-renlab-ai/pronounce
 
 To force install anyway (CLI will exit on first invocation), run:
   SAY_IT_FORCE=1 ./install.sh

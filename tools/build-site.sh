@@ -18,7 +18,7 @@ REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 DICT="$REPO_ROOT/data/pronunciations.tsv"
 DOCS="$REPO_ROOT/docs"
 BRAND="${BRAND:-Pronounce}"
-GH_REPO="${GH_REPO:-anzy-renlab-ai/say-it}"
+GH_REPO="${GH_REPO:-anzy-renlab-ai/pronounce}"
 SITE_URL="${SITE_URL:-https://pronounce.renlab.ai}"
 
 if [[ ! -f "$DICT" ]]; then
@@ -438,7 +438,7 @@ cat > "$DOCS/index.html" <<EOF
         <a class="secondary" href="https://github.com/${GH_REPO}">GitHub</a>
       </div>
       <div class="install">
-        <code>git clone https://github.com/${GH_REPO}.git &amp;&amp; cd say-it &amp;&amp; ./install.sh</code>
+        <code>git clone https://github.com/${GH_REPO}.git &amp;&amp; cd pronounce &amp;&amp; ./install.sh</code>
       </div>
     </header>
 
@@ -540,7 +540,7 @@ cat > "$DOCS/browse.html" <<EOF
 
     <div class="disclaimer">
       <strong>ℹ Audio quality note:</strong>
-      the ▶ button uses your browser's Web Speech API, which varies by OS and browser. Install the CLI for the canonical macOS Samantha rendering: <code>git clone https://github.com/${GH_REPO}.git &amp;&amp; cd say-it &amp;&amp; ./install.sh</code>
+      the ▶ button uses your browser's Web Speech API, which varies by OS and browser. Install the CLI for the canonical macOS Samantha rendering: <code>git clone https://github.com/${GH_REPO}.git &amp;&amp; cd pronounce &amp;&amp; ./install.sh</code>
     </div>
 
     <div class="controls">
@@ -818,7 +818,7 @@ HTML
     </div>
 
     <p style="margin-top: 20px; font-size: 14px; color: var(--muted);">
-      Install the CLI: <code>git clone https://github.com/$GH_REPO.git &amp;&amp; cd say-it &amp;&amp; ./install.sh</code>
+      Install the CLI: <code>git clone https://github.com/$GH_REPO.git &amp;&amp; cd pronounce &amp;&amp; ./install.sh</code>
     </p>
 
 $related_html

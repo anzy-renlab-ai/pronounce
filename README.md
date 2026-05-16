@@ -65,8 +65,8 @@ Every dictionary entry includes a `source_url`. Run `say-it --why <word>` to see
 ## Install (macOS)
 
 ```bash
-git clone https://github.com/anzy-renlab-ai/say-it.git
-cd say-it && ./install.sh
+git clone https://github.com/anzy-renlab-ai/pronounce.git
+cd pronounce && ./install.sh
 ```
 
 This drops:

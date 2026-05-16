@@ -3,7 +3,7 @@
 This is an opinionated, executable plan. It assumes:
 
 - The site is live at <https://pronounce.renlab.ai>
-- The repo is at <https://github.com/anzy-renlab-ai/say-it>
+- The repo is at <https://github.com/anzy-renlab-ai/pronounce>
 - You can dedicate ~2-3 hours on Day 0 and ~30 min/day after.
 
 ## Honest expectation
@@ -23,7 +23,7 @@ These are P0. Do not skip.
 
 - [ ] **Listen to 20-30 dict entries.** Run `tools/audit-listen.sh && open .audit-audio/`. Click through `kubectl`, `nginx`, `Pydantic`, `Anthropic`, `Kubernetes`, `Cilium`, `Knative`, `Vercel`, `Postgres`, `Mistral`, `Ollama`, `LaTeX`, `Pinia`, `Cassandra`, `Velero`, every `contested` entry, the Famous Moments words. If any sound badly wrong, fix the `respelling_us` column and re-run.
 - [ ] **Verify every Famous Moments source URL clicks through to the right material.** A 404 or wrong-video URL kills credibility instantly on HN. If a source can't be verified, blank the URL and downgrade `confidence` to `community-consensus`.
-- [ ] **Smoke test the install path on a fresh terminal.** `git clone … && cd say-it && ./install.sh && say-it kubectl`. If anything errors, fix before launching.
+- [ ] **Smoke test the install path on a fresh terminal.** `git clone … && cd pronounce && ./install.sh && say-it kubectl`. If anything errors, fix before launching.
 - [ ] **Test the site at <https://pronounce.renlab.ai> on Safari + Chrome.** Click ▶ on a few words — Web Speech voice will differ from CLI, that's documented in the disclaimer.
 - [ ] **Take a 6-10 sec demo screen recording** of the terminal showing `say-it kubectl` and `say-it GIF`. Use [asciinema](https://asciinema.org) or [Cleanshot](https://cleanshot.com) → MP4. Upload to <https://x.com/upload/video> or wherever. Pin to repo README.
 - [ ] **Star + watch your own repo** (signal to GitHub trending algorithm). Have a friend or two do the same — 5-10 stars before launch isn't suspicious, it's normal.
@@ -76,7 +76,7 @@ The CLI is a ~250-line Bash script wrapping macOS `say`. There's also a Claude
 Code skill so "how do you pronounce X?" prompts get answered with audio + a
 source URL instead of a phonetic guess.
 
-GitHub: https://github.com/anzy-renlab-ai/say-it
+GitHub: https://github.com/anzy-renlab-ai/pronounce
 MIT, contributions very welcome — especially for the contested entries.
 
 Things I learned writing this that surprised me:
@@ -157,7 +157,7 @@ Code skill that turns "how do you pronounce X?" into audio with a source.
 If you've been saying any of these wrong, the cure is hearing them three times.
 
 ▶ pronounce.renlab.ai
-⭐ https://github.com/anzy-renlab-ai/say-it
+⭐ https://github.com/anzy-renlab-ai/pronounce
 ```
 
 Tag 2-3 relevant people in the relevant tweets — Kelsey Hightower (kubectl), Linus on Linux (low chance of response but raises odds of someone in their orbit retweeting), Crockford if findable, Evan You.
