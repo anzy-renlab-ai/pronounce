@@ -1243,6 +1243,213 @@ awk -F'\t' '
 } > "$DOCS/api/words.json"
 echo "Built $DOCS/api/words.json (index)"
 
+# Stats JSON — same data the /stats.html page renders, machine-readable
+{
+  awk -F'\t' '
+    BEGIN { total = 0; with_src = 0 }
+    !/^#/ && NF>=3 && $1 != "" && $1 != "word" {
+      total++; cats[$8]++; confs[$9]++
+      if ($6 != "") with_src++
+    }
+    function jesc(s) { gsub(/\\/, "\\\\", s); gsub(/"/, "\\\"", s); return s }
+    END {
+      printf "{\n  \"total\": %d,\n  \"with_source\": %d,\n  \"source_coverage_pct\": %.1f,\n", total, with_src, (with_src * 100.0 / total)
+      printf "  \"by_category\": {"
+      sep = ""
+      for (c in cats) { printf "%s\"%s\": %d", sep, jesc(c), cats[c]; sep = "," }
+      printf "},\n  \"by_confidence\": {"
+      sep = ""
+      for (c in confs) { printf "%s\"%s\": %d", sep, jesc(c), confs[c]; sep = "," }
+      printf "}\n}\n"
+    }
+  ' "$DICT"
+} > "$DOCS/api/stats.json"
+echo "Built $DOCS/api/stats.json"
+
+# Categories JSON — list of all categories with counts
+{
+  printf "{\n  \"categories\": [\n"
+  awk -F'\t' '!/^#/ && NF>=8 && $1 != "" && $1 != "word" { print $8 }' "$DICT" | sort | uniq -c | sort -rn | awk '
+    BEGIN { first = 1 }
+    {
+      if (!first) print ","
+      printf "    {\"name\": \"%s\", \"count\": %d}", $2, $1
+      first = 0
+    }
+    END { print "" }
+  '
+  printf "  ]\n}\n"
+} > "$DOCS/api/categories.json"
+echo "Built $DOCS/api/categories.json"
+
+# OpenAPI spec
+cat > "$DOCS/api/openapi.json" <<EOF
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Pronounce API",
+    "version": "1.0.0",
+    "description": "Community-maintained pronunciation dictionary for developer project / product / jargon names.",
+    "license": { "name": "MIT" },
+    "contact": { "url": "https://github.com/${GH_REPO}" }
+  },
+  "servers": [
+    { "url": "${SITE_URL}", "description": "Production" }
+  ],
+  "paths": {
+    "/api/words.json": {
+      "get": {
+        "summary": "List all dictionary entries (index)",
+        "responses": {
+          "200": {
+            "description": "Array of {word, slug, category, confidence}",
+            "content": { "application/json": { "schema": { "type": "array" } } }
+          }
+        }
+      }
+    },
+    "/api/word/{slug}.json": {
+      "get": {
+        "summary": "Full entry for a word",
+        "parameters": [
+          { "name": "slug", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": {
+          "200": {
+            "description": "Full entry: word, ipa, respelling_us, alt_*, source_url, source_label, category, confidence, notes",
+            "content": { "application/json": { "schema": { "type": "object" } } }
+          },
+          "404": { "description": "Word not in dictionary" }
+        }
+      }
+    },
+    "/api/stats.json": {
+      "get": {
+        "summary": "Dictionary stats — total / by_category / by_confidence / source coverage",
+        "responses": { "200": { "description": "Stats object", "content": { "application/json": {} } } }
+      }
+    },
+    "/api/categories.json": {
+      "get": {
+        "summary": "All categories with counts",
+        "responses": { "200": { "description": "Categories list", "content": { "application/json": {} } } }
+      }
+    },
+    "/audio/{slug}.mp3": {
+      "get": {
+        "summary": "Pre-rendered macOS Samantha audio for a word",
+        "parameters": [
+          { "name": "slug", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": { "200": { "description": "MP3 audio (~20 KB)" } }
+      }
+    }
+  }
+}
+EOF
+echo "Built $DOCS/api/openapi.json"
+
+# Atom feed — recent additions (synthetic: order by row position in TSV)
+{
+  build_date="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+  cat <<XML
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>${BRAND} — recent dictionary additions</title>
+  <link href="${SITE_URL}/feed.atom" rel="self"/>
+  <link href="${SITE_URL}/"/>
+  <id>${SITE_URL}/</id>
+  <updated>${build_date}</updated>
+  <subtitle>How engineers actually pronounce project / product / jargon names. Community-maintained.</subtitle>
+XML
+  # Take the last 25 entries from the TSV
+  tail -25 "$DICT" | awk -F'\t' -v site="$SITE_URL" -v bd="$build_date" '
+    function jesc(s) { gsub(/&/, "\\&amp;", s); gsub(/</, "\\&lt;", s); gsub(/>/, "\\&gt;", s); return s }
+    function slug(s,    out) { out = tolower(s); gsub(/[^a-z0-9._-]/, "-", out); return out }
+    !/^#/ && NF>=3 && $1 != "" && $1 != "word" {
+      printf "  <entry>\n"
+      printf "    <title>%s — %s</title>\n", jesc($1), jesc($3)
+      printf "    <link href=\"%s/word/%s\"/>\n", site, slug($1)
+      printf "    <id>%s/word/%s</id>\n", site, slug($1)
+      printf "    <updated>%s</updated>\n", bd
+      printf "    <summary>%s is pronounced \"%s\" (%s). %s</summary>\n", jesc($1), jesc($3), jesc($2), jesc($10)
+      printf "  </entry>\n"
+    }
+  '
+  echo "</feed>"
+} > "$DOCS/feed.atom"
+echo "Built $DOCS/feed.atom"
+
+# ---------------------------------------------------------------------------
+# /badge/<slug>.svg — embeddable shields.io-style SVG badge for any README
+# ---------------------------------------------------------------------------
+mkdir -p "$DOCS/badge"
+find "$DOCS/badge" -name '*.svg' -delete 2>/dev/null || true
+
+awk -F'\t' '!/^#/ && NF>=3 && $1 != "" && $1 != "word" {
+  word = $1
+  resp = $3
+  s = tolower(word); gsub(/[^a-z0-9._-]/, "-", s)
+  # Approx text width — 7px per char in monospace
+  word_w = length(word) * 8 + 8
+  resp_w = length(resp) * 8 + 16
+  total_w = 22 + word_w + resp_w
+  printf "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"%d\" height=\"20\" role=\"img\" aria-label=\"%s: %s\">", total_w, word, resp
+  printf "<linearGradient id=\"g\" x2=\"0\" y2=\"100%%\"><stop offset=\"0\" stop-color=\"#fff\" stop-opacity=\".7\"/><stop offset=\".1\" stop-color=\"#aaa\" stop-opacity=\".1\"/><stop offset=\".9\" stop-opacity=\".3\"/><stop offset=\"1\" stop-opacity=\".5\"/></linearGradient>"
+  printf "<rect rx=\"3\" width=\"%d\" height=\"20\" fill=\"#555\"/>", total_w
+  printf "<rect rx=\"3\" x=\"%d\" width=\"%d\" height=\"20\" fill=\"#ff6a3d\"/>", word_w + 22, resp_w
+  printf "<rect rx=\"3\" width=\"%d\" height=\"20\" fill=\"url(#g)\"/>", total_w
+  printf "<g fill=\"#fff\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Verdana,Geneva,sans-serif\" font-size=\"11\">"
+  printf "<text x=\"11\" y=\"14\" fill=\"#010101\" fill-opacity=\".3\">🔊</text>"
+  printf "<text x=\"11\" y=\"13\">🔊</text>"
+  # Word in left side
+  cx = 22 + word_w / 2
+  printf "<text x=\"%.1f\" y=\"14\" fill=\"#010101\" fill-opacity=\".3\">%s</text>", cx, word
+  printf "<text x=\"%.1f\" y=\"13\">%s</text>", cx, word
+  # Respelling in right side
+  cx2 = 22 + word_w + resp_w / 2
+  printf "<text x=\"%.1f\" y=\"14\" fill=\"#010101\" fill-opacity=\".3\">%s</text>", cx2, resp
+  printf "<text x=\"%.1f\" y=\"13\">%s</text>", cx2, resp
+  printf "</g></svg>\n"
+  out_fn = "'"$DOCS"'/badge/" s ".svg"
+  # Output goes to file via shell redirect below — print on stdout, shell handles
+}' "$DICT" | awk -F'\t' '
+{
+  # Each line from previous awk is one full SVG. Split into per-file based on filename hint embedded would be ugly.
+  # Instead, iterate dict again and write files one-at-a-time.
+}' > /dev/null
+
+# Rerun to write per-word SVG files
+awk -F'\t' -v outdir="$DOCS/badge" '!/^#/ && NF>=3 && $1 != "" && $1 != "word" {
+  word = $1
+  resp = $3
+  s = tolower(word); gsub(/[^a-z0-9._-]/, "-", s)
+  word_w = length(word) * 8 + 8
+  resp_w = length(resp) * 8 + 16
+  total_w = 22 + word_w + resp_w
+  cx = 22 + word_w / 2
+  cx2 = 22 + word_w + resp_w / 2
+  out = outdir "/" s ".svg"
+  svg = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"" total_w "\" height=\"20\" role=\"img\" aria-label=\"" word ": " resp "\">"
+  svg = svg "<linearGradient id=\"g\" x2=\"0\" y2=\"100%\"><stop offset=\"0\" stop-color=\"#fff\" stop-opacity=\".7\"/><stop offset=\".1\" stop-color=\"#aaa\" stop-opacity=\".1\"/><stop offset=\".9\" stop-opacity=\".3\"/><stop offset=\"1\" stop-opacity=\".5\"/></linearGradient>"
+  svg = svg "<rect rx=\"3\" width=\"" total_w "\" height=\"20\" fill=\"#555\"/>"
+  svg = svg "<rect rx=\"3\" x=\"" (word_w + 22) "\" width=\"" resp_w "\" height=\"20\" fill=\"#ff6a3d\"/>"
+  svg = svg "<rect rx=\"3\" width=\"" total_w "\" height=\"20\" fill=\"url(#g)\"/>"
+  svg = svg "<g fill=\"#fff\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Verdana,Geneva,sans-serif\" font-size=\"11\">"
+  svg = svg "<text x=\"11\" y=\"14\" fill=\"#010101\" fill-opacity=\".3\">🔊</text>"
+  svg = svg "<text x=\"11\" y=\"13\">🔊</text>"
+  svg = svg "<text x=\"" cx "\" y=\"14\" fill=\"#010101\" fill-opacity=\".3\">" word "</text>"
+  svg = svg "<text x=\"" cx "\" y=\"13\">" word "</text>"
+  svg = svg "<text x=\"" cx2 "\" y=\"14\" fill=\"#010101\" fill-opacity=\".3\">" resp "</text>"
+  svg = svg "<text x=\"" cx2 "\" y=\"13\">" resp "</text>"
+  svg = svg "</g></svg>"
+  print svg > out
+  close(out)
+  cnt++
+}
+END { printf "Built %d badge SVGs in %s\n", cnt, outdir }
+' "$DICT"
+
 # ---------------------------------------------------------------------------
 # IndexNow key file — submit URLs for instant Bing/Yandex indexing
 # ---------------------------------------------------------------------------
@@ -1509,6 +1716,95 @@ document.addEventListener("DOMContentLoaded", () => {
 <p>Picking a random word…</p>
 </body></html>
 EOF
+
+# ---------------------------------------------------------------------------
+# /about.html — backstory + how dictionary works + how to contribute
+# ---------------------------------------------------------------------------
+cat > "$DOCS/about.html" <<EOF
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — ${BRAND}</title>
+  <meta name="description" content="The backstory behind pronounce.renlab.ai — built so engineers stop saying 'kub-cuttle' and start saying 'koob-control'.">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#ff6a3d">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="canonical" href="${SITE_URL}/about.html">
+  <meta property="og:image" content="${SITE_URL}/og.png">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="gh-banner">⭐ <a href="https://github.com/${GH_REPO}">Star on GitHub</a> — open source, MIT</div>
+  <nav class="topbar">
+    <div class="brand"><a href="/">🔊 ${BRAND}</a></div>
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/browse.html">Browse</a>
+      <a href="/stats.html">Stats</a>
+      <a href="https://github.com/${GH_REPO}">GitHub</a>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button>
+    </div>
+  </nav>
+  <div class="container-narrow">
+    <h1>About this thing</h1>
+
+    <p style="color: var(--muted-strong); font-size: 18px;">A community-maintained dictionary of how engineers actually pronounce project, product, and programmer-jargon names. With sources.</p>
+
+    <h2>Why</h2>
+    <p>Every developer has been corrected mid-sentence at least once. "It's pronounced <strong>engine-x</strong>, not n-jinx." "It's <strong>koob-control</strong>, not kub-cuttle." "It's <strong>jif</strong>, not gif. <em>The creator said so.</em>"</p>
+
+    <p>IPA helps you read the answer; audio helps you internalize it. We built this so you don't have to scrub through a 47-minute conference talk to find the right reading.</p>
+
+    <h2>How the dictionary works</h2>
+
+    <p>The whole thing is one TSV file: <a href="https://github.com/${GH_REPO}/blob/main/data/pronunciations.tsv"><code>data/pronunciations.tsv</code></a>. Ten columns per entry:</p>
+
+    <pre style="background: var(--card); padding: 14px 18px; border-radius: 8px; overflow-x: auto; font-size: 13px;"><code>word | ipa | respelling_us | alt_ipa | alt_respelling_us
+  | source_url | source_label | category | confidence | notes</code></pre>
+
+    <p>Each entry is tagged with one of three confidence levels:</p>
+    <ul>
+      <li><span class="badge badge-creator-clarified">creator-clarified</span> — the source URL documents a creator quote or official FAQ entry. Best.</li>
+      <li><span class="badge badge-community-consensus">community-consensus</span> — widely used in the community, but no single citable source.</li>
+      <li><span class="badge badge-contested">contested</span> — multiple readings genuinely compete. \`<code>say-it --all &lt;word&gt;</code>\` plays all of them.</li>
+    </ul>
+
+    <h2>Where the audio comes from</h2>
+
+    <p>Every entry has a pre-rendered <code>.mp3</code> generated via macOS's built-in <code>say</code> command (<code>say -v Samantha -r 175</code>, with <code>[[slnc N]]</code> inter-rep pauses) and converted to MP3 via ffmpeg. The browser ▶ button plays these files directly, so the audio you hear on the website is <em>byte-identical</em> to what the CLI produces.</p>
+
+    <h2>How to contribute</h2>
+
+    <ol>
+      <li>Find a word that's missing or wrong.</li>
+      <li>Open a PR adding or fixing one row in <code>pronunciations.tsv</code>.</li>
+      <li>Mark <code>confidence</code> honestly. Leave <code>source_url</code> empty rather than fabricate.</li>
+      <li><code>./bin/say-it -o /tmp/test.aiff &lt;word&gt; && afplay /tmp/test.aiff</code> to verify the respelling sounds right.</li>
+    </ol>
+
+    <p>See <a href="https://github.com/${GH_REPO}/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a> for details.</p>
+
+    <h2>What's NOT in scope</h2>
+    <ul>
+      <li>General English vocabulary — there are real dictionaries for that.</li>
+      <li>UK / AU / IE / ZA accents. We're General American only, by design.</li>
+      <li>Fabricated sources. We'd rather under-claim than make stuff up.</li>
+    </ul>
+
+    <h2>Project</h2>
+    <p>MIT licensed. Maintained on GitHub. The dictionary, the CLI, the MCP server, the website, the OG cards, the audio files — everything is in <a href="https://github.com/${GH_REPO}">one repo</a>.</p>
+
+    <h2>Acknowledgements</h2>
+    <p>Steve Wilhite (GIF), Douglas Crockford (JSON), Linus Torvalds (Linux), Leslie Lamport (LaTeX), Donald Knuth (TeX), Igor Sysoev (nginx), Salvatore Sanfilippo (Redis), Brandon Philips (etcd), Kelsey Hightower (kubectl), Evan You (Vue / Vite), Samuel Colvin (Pydantic), and every other creator whose stated pronunciation we cite. This project is just a thin wrapper around your prior art.</p>
+  </div>
+  <a class="gh-float" href="https://github.com/${GH_REPO}" target="_blank" rel="noopener"><span class="star">★</span> Star on GitHub</a>
+  <footer class="footer"><p>${BRAND} · MIT · <a href="https://github.com/${GH_REPO}">GitHub</a></p></footer>
+  <script src="/script.js"></script>
+</body></html>
+EOF
+echo "Built $DOCS/about.html"
 
 # ---------------------------------------------------------------------------
 # 404.html — custom not-found page with search

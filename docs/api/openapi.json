@@ -1,0 +1,62 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Pronounce API",
+    "version": "1.0.0",
+    "description": "Community-maintained pronunciation dictionary for developer project / product / jargon names.",
+    "license": { "name": "MIT" },
+    "contact": { "url": "https://github.com/anzy-renlab-ai/pronounce" }
+  },
+  "servers": [
+    { "url": "https://pronounce.renlab.ai", "description": "Production" }
+  ],
+  "paths": {
+    "/api/words.json": {
+      "get": {
+        "summary": "List all dictionary entries (index)",
+        "responses": {
+          "200": {
+            "description": "Array of {word, slug, category, confidence}",
+            "content": { "application/json": { "schema": { "type": "array" } } }
+          }
+        }
+      }
+    },
+    "/api/word/{slug}.json": {
+      "get": {
+        "summary": "Full entry for a word",
+        "parameters": [
+          { "name": "slug", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": {
+          "200": {
+            "description": "Full entry: word, ipa, respelling_us, alt_*, source_url, source_label, category, confidence, notes",
+            "content": { "application/json": { "schema": { "type": "object" } } }
+          },
+          "404": { "description": "Word not in dictionary" }
+        }
+      }
+    },
+    "/api/stats.json": {
+      "get": {
+        "summary": "Dictionary stats — total / by_category / by_confidence / source coverage",
+        "responses": { "200": { "description": "Stats object", "content": { "application/json": {} } } }
+      }
+    },
+    "/api/categories.json": {
+      "get": {
+        "summary": "All categories with counts",
+        "responses": { "200": { "description": "Categories list", "content": { "application/json": {} } } }
+      }
+    },
+    "/audio/{slug}.mp3": {
+      "get": {
+        "summary": "Pre-rendered macOS Samantha audio for a word",
+        "parameters": [
+          { "name": "slug", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": { "200": { "description": "MP3 audio (~20 KB)" } }
+      }
+    }
+  }
+}

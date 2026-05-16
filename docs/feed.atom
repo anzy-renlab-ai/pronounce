@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Pronounce — recent dictionary additions</title>
+  <link href="https://pronounce.renlab.ai/feed.atom" rel="self"/>
+  <link href="https://pronounce.renlab.ai/"/>
+  <id>https://pronounce.renlab.ai/</id>
+  <updated>2026-05-16T16:36:06Z</updated>
+  <subtitle>How engineers actually pronounce project / product / jargon names. Community-maintained.</subtitle>
+  <entry>
+    <title>CDN — C D N</title>
+    <link href="https://pronounce.renlab.ai/word/cdn"/>
+    <id>https://pronounce.renlab.ai/word/cdn</id>
+    <updated>2026-05-16T16:36:06Z</updated>
+    <summary>CDN is pronounced "C D N" (/ˌsiː diː ˈɛn/). "C-D-N".</summary>
+  </entry>
+  <entry>
+    <title>CRUD — krud</title>
+    <link href="https://pronounce.renlab.ai/word/crud"/>
+    <id>https://pronounce.renlab.ai/word/crud</id>
+    <updated>2026-05-16T16:36:06Z</updated>
+    <summary>CRUD is pronounced "krud" (/krʌd/). "krud" — one syllable.</summary>
+  </entry>
+  <entry>
+    <title>ETL — E T L</title>
+    <link href="https://pronounce.renlab.ai/word/etl"/>
+    <id>https://pronounce.renlab.ai/word/etl</id>
+    <updated>2026-05-16T16:36:06Z</updated>
+    <summary>ETL is pronounced "E T L" (/ˌiː tiː ˈɛl/). "E-T-L".</summary>
+  </entry>
+  <entry>
+    <title>JIT — jit</title>
+    <link href="https://pronounce.renlab.ai/word/jit"/>
+    <id>https://pronounce.renlab.ai/word/jit</id>
+    <updated>2026-05-16T16:36:06Z</updated>
+    <summary>JIT is pronounced "jit" (/dʒɪt/). "jit" (one syllable) or "J-I-T".</summary>
+  </entry>
+  <entry>
+    <title>ORM — O R M</title>
+    <link href="https://pronounce.renlab.ai/word/orm"/>
+    <id>https://pronounce.renlab.ai/word/orm</id>
+    <updated>2026-05-16T16:36:06Z</updated>
+    <summary>ORM is pronounced "O R M" (/ˌoʊ ɑːr ˈɛm/). "O-R-M".</summary>
+  </entry>
+  <entry>
+    <title>SRE — S R E</title>
+    <link href="https://pronounce.renlab.ai/word/sre"/>
+    <id>https://pronounce.renlab.ai/word/sre</id>
+    <updated>2026-05-16T16:36:06Z</updated>
+    <summary>SRE is pronounced "S R E" (/ˌɛs ɑːr ˈiː/). "S-R-E".</summary>
+  </entry>
+  <entry>
+    <title>TLDR — T L D R</title>
+    <link href="https://pronounce.renlab.ai/word/tldr"/>
+    <id>https://pronounce.renlab.ai/word/tldr</id>
+    <updated>2026-05-16T16:36:06Z</updated>
+    <summary>TLDR is pronounced "T L D R" (/ˌtiː ɛl diː ˈɑːr/). "T-L-D-R" — "too long, didn't read".</summary>
+  </entry>
+  <entry>
+    <title>LGTM — L G T M</title>
+    <link href="https://pronounce.renlab.ai/word/lgtm"/>
+    <id>https://pronounce.renlab.ai/word/lgtm</id>
+    <updated>2026-05-16T16:36:06Z</updated>
+    <summary>LGTM is pronounced "L G T M" (/ˌɛl dʒiː tiː ˈɛm/). "L-G-T-M" — "looks good to me".</summary>
+  </entry>
+  <entry>
+    <title>DRY — dry</title>
+    <link href="https://pronounce.renlab.ai/word/dry"/>
+    <id>https://pronounce.renlab.ai/word/dry</id>
+    <updated>2026-05-16T16:36:06Z</updated>
+    <summary>DRY is pronounced "dry" (/draɪ/). "dry" — one syllable.</summary>
+  </entry>
+  <entry>
+    <title>KISS — kiss</title>
+    <link href="https://pronounce.renlab.ai/word/kiss"/>
+    <id>https://pronounce.renlab.ai/word/kiss</id>
+    <updated>2026-05-16T16:36:06Z</updated>
+    <summary>KISS is pronounced "kiss" (/kɪs/). "kiss" — like the verb.</summary>
+  </entry>
+  <entry>
+    <title>YAGNI — yag nee</title>
+    <link href="https://pronounce.renlab.ai/word/yagni"/>
+    <id>https://pronounce.renlab.ai/word/yagni</id>
+    <updated>2026-05-16T16:36:06Z</updated>
+    <summary>YAGNI is pronounced "yag nee" (/ˈjæɡni/). "YAG-nee".</summary>
+  </entry>
+  <entry>
+    <title>POSIX — pa zicks</title>
+    <link href="https://pronounce.renlab.ai/word/posix"/>
+    <id>https://pronounce.renlab.ai/word/posix</id>
+    <updated>2026-05-16T16:36:06Z</updated>
+    <summary>POSIX is pronounced "pa zicks" (/ˈpɑːzɪks/). "PAH-zicks".</summary>
+  </entry>
+  <entry>
+    <title>Restic — res tic</title>
+    <link href="https://pronounce.renlab.ai/word/restic"/>
+    <id>https://pronounce.renlab.ai/word/restic</id>
+    <updated>2026-05-16T16:36:06Z</updated>
+    <summary>Restic is pronounced "res tic" (/ˈrɛstɪk/). "RES-tic".</summary>
+  </entry>
+  <entry>
+    <title>Renovate — ren oh vate</title>
+    <link href="https://pronounce.renlab.ai/word/renovate"/>
+    <id>https://pronounce.renlab.ai/word/renovate</id>
+    <updated>2026-05-16T16:36:06Z</updated>
+    <summary>Renovate is pronounced "ren oh vate" (/ˈrɛnəveɪt/). "REN-oh-vate".</summary>
+  </entry>
+  <entry>
+    <title>Daytona — day toh nah</title>
+    <link href="https://pronounce.renlab.ai/word/daytona"/>
+    <id>https://pronounce.renlab.ai/word/daytona</id>
+    <updated>2026-05-16T16:36:06Z</updated>
+    <summary>Daytona is pronounced "day toh nah" (/deɪˈtoʊnə/). "day-TOH-nah".</summary>
+  </entry>
+  <entry>
+    <title>Coolify — cool i fy</title>
+    <link href="https://pronounce.renlab.ai/word/coolify"/>
+    <id>https://pronounce.renlab.ai/word/coolify</id>
+    <updated>2026-05-16T16:36:06Z</updated>
+    <summary>Coolify is pronounced "cool i fy" (/ˈkuːlɪfaɪ/). "COOL-i-fy".</summary>
+  </entry>
+  <entry>
+    <title>Bytebase — byte base</title>
+    <link href="https://pronounce.renlab.ai/word/bytebase"/>
+    <id>https://pronounce.renlab.ai/word/bytebase</id>
+    <updated>2026-05-16T16:36:06Z</updated>
+    <summary>Bytebase is pronounced "byte base" (/ˈbaɪtˌbeɪs/). "BYTE-base".</summary>
+  </entry>
+  <entry>
+    <title>Bolt — bolt</title>
+    <link href="https://pronounce.renlab.ai/word/bolt"/>
+    <id>https://pronounce.renlab.ai/word/bolt</id>
+    <updated>2026-05-16T16:36:06Z</updated>
+    <summary>Bolt is pronounced "bolt" (/boʊlt/). "bolt" — one syllable.</summary>
+  </entry>
+  <entry>
+    <title>Tabby — tab ee</title>
+    <link href="https://pronounce.renlab.ai/word/tabby"/>
+    <id>https://pronounce.renlab.ai/word/tabby</id>
+    <updated>2026-05-16T16:36:06Z</updated>
+    <summary>Tabby is pronounced "tab ee" (/ˈtæbi/). "TAB-ee".</summary>
+  </entry>
+  <entry>
+    <title>Tantivy — tan ti vee</title>
+    <link href="https://pronounce.renlab.ai/word/tantivy"/>
+    <id>https://pronounce.renlab.ai/word/tantivy</id>
+    <updated>2026-05-16T16:36:06Z</updated>
+    <summary>Tantivy is pronounced "tan ti vee" (/ˈtæntɪvi/). "TAN-ti-vee".</summary>
+  </entry>
+  <entry>
+    <title>Cody — co dee</title>
+    <link href="https://pronounce.renlab.ai/word/cody"/>
+    <id>https://pronounce.renlab.ai/word/cody</id>
+    <updated>2026-05-16T16:36:06Z</updated>
+    <summary>Cody is pronounced "co dee" (/ˈkoʊdi/). "KOH-dee".</summary>
+  </entry>
+  <entry>
+    <title>Continue — continue</title>
+    <link href="https://pronounce.renlab.ai/word/continue"/>
+    <id>https://pronounce.renlab.ai/word/continue</id>
+    <updated>2026-05-16T16:36:06Z</updated>
+    <summary>Continue is pronounced "continue" (/kənˈtɪnjuː/). "con-TIN-yoo" — exactly like the verb.</summary>
+  </entry>
+  <entry>
+    <title>Bolt.new — bolt new</title>
+    <link href="https://pronounce.renlab.ai/word/bolt.new"/>
+    <id>https://pronounce.renlab.ai/word/bolt.new</id>
+    <updated>2026-05-16T16:36:06Z</updated>
+    <summary>Bolt.new is pronounced "bolt new" (/ˈboʊlt njuː/). "BOLT-new" — two words.</summary>
+  </entry>
+</feed>

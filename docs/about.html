@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — Pronounce</title>
+  <meta name="description" content="The backstory behind pronounce.renlab.ai — built so engineers stop saying 'kub-cuttle' and start saying 'koob-control'.">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#ff6a3d">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="canonical" href="https://pronounce.renlab.ai/about.html">
+  <meta property="og:image" content="https://pronounce.renlab.ai/og.png">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="gh-banner">⭐ <a href="https://github.com/anzy-renlab-ai/pronounce">Star on GitHub</a> — open source, MIT</div>
+  <nav class="topbar">
+    <div class="brand"><a href="/">🔊 Pronounce</a></div>
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/browse.html">Browse</a>
+      <a href="/stats.html">Stats</a>
+      <a href="https://github.com/anzy-renlab-ai/pronounce">GitHub</a>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button>
+    </div>
+  </nav>
+  <div class="container-narrow">
+    <h1>About this thing</h1>
+
+    <p style="color: var(--muted-strong); font-size: 18px;">A community-maintained dictionary of how engineers actually pronounce project, product, and programmer-jargon names. With sources.</p>
+
+    <h2>Why</h2>
+    <p>Every developer has been corrected mid-sentence at least once. "It's pronounced <strong>engine-x</strong>, not n-jinx." "It's <strong>koob-control</strong>, not kub-cuttle." "It's <strong>jif</strong>, not gif. <em>The creator said so.</em>"</p>
+
+    <p>IPA helps you read the answer; audio helps you internalize it. We built this so you don't have to scrub through a 47-minute conference talk to find the right reading.</p>
+
+    <h2>How the dictionary works</h2>
+
+    <p>The whole thing is one TSV file: <a href="https://github.com/anzy-renlab-ai/pronounce/blob/main/data/pronunciations.tsv"><code>data/pronunciations.tsv</code></a>. Ten columns per entry:</p>
+
+    <pre style="background: var(--card); padding: 14px 18px; border-radius: 8px; overflow-x: auto; font-size: 13px;"><code>word | ipa | respelling_us | alt_ipa | alt_respelling_us
+  | source_url | source_label | category | confidence | notes</code></pre>
+
+    <p>Each entry is tagged with one of three confidence levels:</p>
+    <ul>
+      <li><span class="badge badge-creator-clarified">creator-clarified</span> — the source URL documents a creator quote or official FAQ entry. Best.</li>
+      <li><span class="badge badge-community-consensus">community-consensus</span> — widely used in the community, but no single citable source.</li>
+      <li><span class="badge badge-contested">contested</span> — multiple readings genuinely compete. `<code>say-it --all &lt;word&gt;</code>` plays all of them.</li>
+    </ul>
+
+    <h2>Where the audio comes from</h2>
+
+    <p>Every entry has a pre-rendered <code>.mp3</code> generated via macOS's built-in <code>say</code> command (<code>say -v Samantha -r 175</code>, with <code>[[slnc N]]</code> inter-rep pauses) and converted to MP3 via ffmpeg. The browser ▶ button plays these files directly, so the audio you hear on the website is <em>byte-identical</em> to what the CLI produces.</p>
+
+    <h2>How to contribute</h2>
+
+    <ol>
+      <li>Find a word that's missing or wrong.</li>
+      <li>Open a PR adding or fixing one row in <code>pronunciations.tsv</code>.</li>
+      <li>Mark <code>confidence</code> honestly. Leave <code>source_url</code> empty rather than fabricate.</li>
+      <li><code>./bin/say-it -o /tmp/test.aiff &lt;word&gt; && afplay /tmp/test.aiff</code> to verify the respelling sounds right.</li>
+    </ol>
+
+    <p>See <a href="https://github.com/anzy-renlab-ai/pronounce/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a> for details.</p>
+
+    <h2>What's NOT in scope</h2>
+    <ul>
+      <li>General English vocabulary — there are real dictionaries for that.</li>
+      <li>UK / AU / IE / ZA accents. We're General American only, by design.</li>
+      <li>Fabricated sources. We'd rather under-claim than make stuff up.</li>
+    </ul>
+
+    <h2>Project</h2>
+    <p>MIT licensed. Maintained on GitHub. The dictionary, the CLI, the MCP server, the website, the OG cards, the audio files — everything is in <a href="https://github.com/anzy-renlab-ai/pronounce">one repo</a>.</p>
+
+    <h2>Acknowledgements</h2>
+    <p>Steve Wilhite (GIF), Douglas Crockford (JSON), Linus Torvalds (Linux), Leslie Lamport (LaTeX), Donald Knuth (TeX), Igor Sysoev (nginx), Salvatore Sanfilippo (Redis), Brandon Philips (etcd), Kelsey Hightower (kubectl), Evan You (Vue / Vite), Samuel Colvin (Pydantic), and every other creator whose stated pronunciation we cite. This project is just a thin wrapper around your prior art.</p>
+  </div>
+  <a class="gh-float" href="https://github.com/anzy-renlab-ai/pronounce" target="_blank" rel="noopener"><span class="star">★</span> Star on GitHub</a>
+  <footer class="footer"><p>Pronounce · MIT · <a href="https://github.com/anzy-renlab-ai/pronounce">GitHub</a></p></footer>
+  <script src="/script.js"></script>
+</body></html>
