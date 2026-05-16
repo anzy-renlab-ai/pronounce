@@ -1,0 +1,65 @@
+#!/usr/bin/env bash
+# Lint data/pronunciations.tsv — check format, dup slugs, broken fields,
+# obvious problems. Run from repo root.
+set -e
+
+REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+DICT="$REPO_ROOT/data/pronunciations.tsv"
+
+if [[ ! -f "$DICT" ]]; then
+  echo "lint: dict not found at $DICT" >&2; exit 1
+fi
+
+fail=0
+
+# Check column count
+echo "[1/5] checking row column counts..."
+bad=$(awk -F'\t' '!/^#/ && NF>=1 && $1 != "" && $1 != "word" && NF != 10 { print NR ": got "NF" cols ("$1")" }' "$DICT")
+if [[ -n "$bad" ]]; then
+  echo "  ✗ rows with != 10 cols:" >&2
+  echo "$bad" >&2
+  fail=1
+else echo "  ✓ all rows have 10 columns"; fi
+
+# Check duplicate slugs
+echo "[2/5] checking for duplicate slugs..."
+dups=$(awk -F'\t' '!/^#/ && NF>=1 && $1 != "" && $1 != "word" {
+  s=tolower($1); gsub(/[^a-z0-9._-]/,"-",s); print s
+}' "$DICT" | sort | uniq -d)
+if [[ -n "$dups" ]]; then
+  echo "  ✗ duplicate slugs:" >&2; echo "$dups" >&2; fail=1
+else echo "  ✓ no duplicate slugs"; fi
+
+# Check confidence values
+echo "[3/5] checking confidence values..."
+bad=$(awk -F'\t' '
+  BEGIN { ok["creator-clarified"]=1; ok["community-consensus"]=1; ok["contested"]=1 }
+  !/^#/ && NF>=9 && $1 != "" && $1 != "word" && !($9 in ok) { print NR": "$1" has confidence: "$9 }
+' "$DICT")
+if [[ -n "$bad" ]]; then
+  echo "  ✗ rows with invalid confidence:" >&2; echo "$bad" >&2; fail=1
+else echo "  ✓ all confidence values valid"; fi
+
+# Check creator-clarified entries have a source URL
+echo "[4/5] checking creator-clarified rows have source_url..."
+bad=$(awk -F'\t' '
+  !/^#/ && NF>=9 && $1 != "" && $1 != "word" && $9 == "creator-clarified" && $6 == "" { print NR": "$1 }
+' "$DICT")
+if [[ -n "$bad" ]]; then
+  echo "  ✗ creator-clarified rows missing source URL:" >&2
+  echo "$bad" >&2
+  fail=1
+else echo "  ✓ all creator-clarified rows have a source URL"; fi
+
+# Check source URLs start with http(s)://
+echo "[5/5] checking source URL formats..."
+bad=$(awk -F'\t' '
+  !/^#/ && NF>=6 && $1 != "" && $1 != "word" && $6 != "" && $6 !~ /^https?:\/\// { print NR": "$1": "$6 }
+' "$DICT")
+if [[ -n "$bad" ]]; then
+  echo "  ✗ source_url not a URL:" >&2; echo "$bad" >&2; fail=1
+else echo "  ✓ all source URLs well-formed"; fi
+
+echo ""
+if (( fail )); then echo "✗ lint failed"; exit 1
+else echo "✓ lint passed"; fi

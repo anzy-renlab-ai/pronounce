@@ -294,6 +294,133 @@ MD
     echo "${C_DIM}Category:${C_RESET} $cat${C_DIM} · Confidence:${C_RESET} $conf"
     exit 0
     ;;
+  playlist)
+    [[ -z "$DICT" ]] && { echo "say-it: dictionary not found" >&2; exit 4; }
+    shift
+    declare -a WORDS=()
+    if [[ "${1:-}" == "--category" && -n "${2:-}" ]]; then
+      while IFS= read -r w; do WORDS+=("$w"); done < <(awk -F'\t' -v c="$2" '!/^#/ && NF>=8 && $8==c { print $1 }' "$DICT")
+      shift 2
+    elif [[ "${1:-}" == "--confidence" && -n "${2:-}" ]]; then
+      while IFS= read -r w; do WORDS+=("$w"); done < <(awk -F'\t' -v c="$2" '!/^#/ && NF>=9 && $9==c { print $1 }' "$DICT")
+      shift 2
+    elif [[ "${1:-}" == "--all" ]]; then
+      while IFS= read -r w; do WORDS+=("$w"); done < <(awk -F'\t' '!/^#/ && NF>=2 && $1 != "" && $1 != "word" { print $1 }' "$DICT")
+      shift
+    else
+      IFS=',' read -ra WORDS <<< "$1"
+      shift
+    fi
+    [[ ${#WORDS[@]} -eq 0 ]] && { echo "say-it playlist: nothing to play" >&2; exit 2; }
+    echo "${C_BOLD}🔊 playlist (${#WORDS[@]} words)${C_RESET}"
+    for w in "${WORDS[@]}"; do
+      resp=$(awk -F'\t' -v w="$(printf '%s' "$w" | tr '[:upper:]' '[:lower:]')" '!/^#/ && tolower($1)==w {print $3; exit}' "$DICT")
+      [[ -z "$resp" ]] && resp="$w"
+      echo "  ${C_CYAN}▶${C_RESET} $w  →  $resp"
+      say -v "$VOICE" -r "$RATE" "$resp. [[slnc 400]] $resp." 2>/dev/null
+      sleep 0.4
+    done
+    exit 0
+    ;;
+  minute)
+    [[ -z "$DICT" ]] && { echo "say-it: dictionary not found" >&2; exit 4; }
+    echo "${C_BOLD}🔊 60-second pronunciation drill${C_RESET}  ${C_DIM}(ctrl-C anytime)${C_RESET}"
+    start=$(date +%s)
+    count=0
+    while :; do
+      now=$(date +%s)
+      (( now - start >= 60 )) && break
+      line=$(awk -F'\t' '!/^#/ && NF>=3 && $1 != "" && $1 != "word"' "$DICT" | sort -R | head -1)
+      word=$(echo "$line" | awk -F'\t' '{print $1}')
+      resp=$(echo "$line" | awk -F'\t' '{print $3}')
+      count=$((count+1))
+      elapsed=$((now - start))
+      remain=$((60 - elapsed))
+      printf "  ${C_DIM}[%2ds]${C_RESET} ${C_CYAN}%-22s${C_RESET}  %s\n" "$remain" "$word" "$resp"
+      say -v "$VOICE" -r "$RATE" "$resp. [[slnc 300]] $resp." 2>/dev/null
+    done
+    echo ""
+    echo "${C_GREEN}Done.${C_RESET} ${count} words in 60s."
+    exit 0
+    ;;
+  show)
+    [[ -z "${2:-}" ]] && { echo "say-it: usage: say-it show <word>" >&2; exit 2; }
+    word="$2"
+    slug="$(printf '%s' "$word" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9._-]/-/g')"
+    url="https://pronounce.renlab.ai/word/$slug"
+    if command -v open >/dev/null 2>&1; then open "$url"
+    elif command -v xdg-open >/dev/null 2>&1; then xdg-open "$url"
+    else echo "$url"; fi
+    exit 0
+    ;;
+  serve)
+    [[ -z "$DICT" ]] && { echo "say-it: dictionary not found" >&2; exit 4; }
+    port="${2:-8787}"
+    static_dir="$SCRIPT_DIR/../docs"
+    if [[ ! -d "$static_dir" ]]; then
+      echo "say-it serve: docs/ dir not found at $static_dir" >&2
+      echo "(run from a repo checkout; the homebrew-installed CLI doesn't ship the site)" >&2
+      exit 4
+    fi
+    echo "${C_BOLD}🌐 Serving $static_dir on http://localhost:$port${C_RESET}"
+    echo "${C_DIM}Open http://localhost:$port/browse.html — ctrl-C to stop.${C_RESET}"
+    cd "$static_dir" && python3 -m http.server "$port"
+    ;;
+  cheatsheet)
+    cat <<EOF
+${C_BOLD}🔊 say-it cheatsheet${C_RESET}
+
+${C_CYAN}Basics${C_RESET}
+  say-it ${C_BOLD}<word>${C_RESET}                   primary × 3 + "or: <alt>" tail
+  say-it --solo ${C_BOLD}<word>${C_RESET}            primary only
+  say-it --alt ${C_BOLD}<word>${C_RESET}             focus on first alternate
+  say-it --alt 2 ${C_BOLD}<word>${C_RESET}           Nth alternate
+  say-it --all ${C_BOLD}<word>${C_RESET}             primary AND every alternate
+
+${C_CYAN}Output modes${C_RESET}
+  say-it --why ${C_BOLD}<word>${C_RESET}             colored entry w/ source
+  say-it --json ${C_BOLD}<word>${C_RESET}            JSON (pipe to jq)
+  say-it --md ${C_BOLD}<word>${C_RESET}              markdown card
+  say-it --copy ${C_BOLD}<word>${C_RESET}            copy respelling to clipboard
+  say-it -o out.aiff ${C_BOLD}<word>${C_RESET}       save audio to file
+
+${C_CYAN}Discovery${C_RESET}
+  say-it list                       all words
+  say-it list --category cli-tool   filter
+  say-it search redis               grep dict
+  say-it stats                      bar charts
+  say-it random                     random pick
+  say-it daily                      today's word
+  say-it history                    your lookups + streak
+
+${C_CYAN}Learn${C_RESET}
+  say-it quiz                       listen-and-guess game
+  say-it minute                     60s pronunciation drill
+  say-it teach ${C_BOLD}<word>${C_RESET}             slow + syllabified
+  say-it diff ${C_BOLD}<a> <b>${C_RESET}             audibly compare two words
+  say-it compare ${C_BOLD}<word>${C_RESET}           primary vs its alternates
+  say-it explain ${C_BOLD}<word>${C_RESET}           textual context
+  say-it playlist kubectl,nginx     plays a sequence
+  say-it playlist --category cli-tool   plays every cli-tool word
+
+${C_CYAN}Share${C_RESET}
+  say-it tweet ${C_BOLD}<word>${C_RESET}             tweet draft → clipboard
+  say-it badge ${C_BOLD}<word>${C_RESET}             shields.io markdown
+  say-it show ${C_BOLD}<word>${C_RESET}              open browser to word page
+
+${C_CYAN}Power${C_RESET}
+  say-it me                         your git user.name
+  say-it import file.tsv            merge into local override
+  say-it serve [port]               local HTTP browse server
+  say-it config                     paths + version
+  say-it update                     pull latest from upstream
+
+${C_CYAN}Site shortcuts${C_RESET}
+  ${C_BOLD}/${C_RESET}  search    ${C_BOLD}r${C_RESET}  random word    ${C_BOLD}space${C_RESET}  play    ${C_BOLD}?${C_RESET}  help
+
+EOF
+    exit 0
+    ;;
   diff)
     word1="${2:-}"
     word2="${3:-}"

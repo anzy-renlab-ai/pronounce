@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+    paths:
+      - 'bin/say-it'
+      - 'data/pronunciations.tsv'
+      - 'tools/lint-dict.sh'
+      - 'tools/smoke-test.sh'
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lint dictionary format
+        run: bash tools/lint-dict.sh
+
+  smoke:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: CLI smoke test
+        run: bash tools/smoke-test.sh

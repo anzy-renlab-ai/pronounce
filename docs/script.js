@@ -71,7 +71,7 @@ const ENTRIES = [
   { w: "pandas", ipa: "/ˈpændəz/", r: "pandas", aIpa: "", aR: "", url: "https://pandas.pydata.org/", srcLabel: "pandas docs", cat: "product", conf: "community-consensus", notes: "\"PAN-duhz\"." },
   { w: "PyTorch", ipa: "/ˈpaɪtɔːrtʃ/", r: "pie torch", aIpa: "", aR: "", url: "https://pytorch.org/", srcLabel: "PyTorch", cat: "product", conf: "community-consensus", notes: "\"PIE-torch\"." },
   { w: "NaN", ipa: "/næn/", r: "nan", aIpa: "/ˌɛn eɪ ˈɛn/", aR: "N A N", url: "https://en.wikipedia.org/wiki/NaN", srcLabel: "Wikipedia", cat: "cs-term", conf: "contested", notes: "\"nan\" (rhymes with \"can\") or \"N-A-N\"." },
-  { w: "enum", ipa: "/ˈiːnəm/", r: "ee num", aIpa: "", aR: "", url: "dev community", srcLabel: "", cat: "cs-term", conf: "community-consensus", notes: "\"EE-num\"." },
+  { w: "enum", ipa: "/ˈiːnəm/", r: "ee num", aIpa: "", aR: "", url: "", srcLabel: "dev community", cat: "cs-term", conf: "community-consensus", notes: "\"EE-num\"." },
   { w: "Anthropic", ipa: "/ˌænθrəˈpɪk/", r: "anth row pick", aIpa: "", aR: "", url: "https://www.anthropic.com/", srcLabel: "Anthropic", cat: "product", conf: "community-consensus", notes: "\"an-THROW-pick\" — heard from Anthropic communications." },
   { w: "OpenAI", ipa: "/ˈoʊpən eɪ aɪ/", r: "open A I", aIpa: "", aR: "", url: "https://openai.com/", srcLabel: "OpenAI", cat: "product", conf: "community-consensus", notes: "\"OH-pen A-I\" letter-by-letter." },
   { w: "Claude", ipa: "/klɔːd/", r: "clawed", aIpa: "", aR: "", url: "https://www.anthropic.com/claude", srcLabel: "Anthropic", cat: "product", conf: "community-consensus", notes: "One syllable, rhymes with \"fraud\". Anthropic's LLM family." },
@@ -515,9 +515,33 @@ function initWordPage() {
     } else if (e.key === '/') {
       e.preventDefault();
       window.location.href = '../browse.html';
+    } else if (e.key === 'c' || e.key === 'C') {
+      // copy IPA
+      e.preventDefault();
+      const ipa = document.querySelector('.ipa-large');
+      if (ipa && navigator.clipboard) { navigator.clipboard.writeText(ipa.textContent.trim()); toast('IPA copied'); }
+    } else if (e.key === 'm' || e.key === 'M') {
+      // copy mp3 URL
+      e.preventDefault();
+      const a = document.querySelector('.download-mp3');
+      if (a && navigator.clipboard) { navigator.clipboard.writeText(a.href); toast('audio URL copied'); }
+    } else if (e.key === 't' || e.key === 'T') {
+      // tweet this word
+      e.preventDefault();
+      const tw = document.querySelector('.share-twitter');
+      if (tw) tw.click();
     } else if (e.key === '?') { e.preventDefault(); toggleHelp(); }
     else if (e.key === 'Escape') { closeHelp(); }
   });
+}
+
+function toast(text) {
+  const t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = text;
+  document.body.appendChild(t);
+  setTimeout(() => t.classList.add('toast-show'), 10);
+  setTimeout(() => { t.classList.remove('toast-show'); setTimeout(() => t.remove(), 200); }, 1400);
 }
 
 function todaysWord() {

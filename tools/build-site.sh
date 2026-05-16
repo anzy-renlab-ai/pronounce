@@ -128,6 +128,10 @@ header.hero { margin-bottom: 48px; text-align: center; }
 .difficulty { display: inline-flex; gap: 2px; vertical-align: middle; margin-left: 8px; }
 .difficulty .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--border); }
 .difficulty .dot.on { background: var(--accent); }
+
+/* Toast for copy feedback */
+.toast { position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%) translateY(20px); background: var(--card-2); border: 1px solid var(--accent-2); color: var(--accent-2); padding: 10px 18px; border-radius: 8px; font-size: 14px; opacity: 0; transition: all 0.2s; z-index: 200; pointer-events: none; }
+.toast.toast-show { opacity: 1; transform: translateX(-50%) translateY(0); }
 .controls { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; align-items: center; }
 .controls input[type="search"] { flex: 1; min-width: 240px; background: var(--card); color: var(--fg); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; font-size: 15px; font-family: var(--sans); }
 .controls input[type="search"]:focus { outline: 2px solid var(--accent); }
@@ -465,9 +469,33 @@ function initWordPage() {
     } else if (e.key === '/') {
       e.preventDefault();
       window.location.href = '../browse.html';
+    } else if (e.key === 'c' || e.key === 'C') {
+      // copy IPA
+      e.preventDefault();
+      const ipa = document.querySelector('.ipa-large');
+      if (ipa && navigator.clipboard) { navigator.clipboard.writeText(ipa.textContent.trim()); toast('IPA copied'); }
+    } else if (e.key === 'm' || e.key === 'M') {
+      // copy mp3 URL
+      e.preventDefault();
+      const a = document.querySelector('.download-mp3');
+      if (a && navigator.clipboard) { navigator.clipboard.writeText(a.href); toast('audio URL copied'); }
+    } else if (e.key === 't' || e.key === 'T') {
+      // tweet this word
+      e.preventDefault();
+      const tw = document.querySelector('.share-twitter');
+      if (tw) tw.click();
     } else if (e.key === '?') { e.preventDefault(); toggleHelp(); }
     else if (e.key === 'Escape') { closeHelp(); }
   });
+}
+
+function toast(text) {
+  const t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = text;
+  document.body.appendChild(t);
+  setTimeout(() => t.classList.add('toast-show'), 10);
+  setTimeout(() => { t.classList.remove('toast-show'); setTimeout(() => t.remove(), 200); }, 1400);
 }
 
 function todaysWord() {
