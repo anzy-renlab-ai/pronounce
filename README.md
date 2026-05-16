@@ -11,7 +11,9 @@
 
 🌐 **[pronounce.renlab.ai](https://pronounce.renlab.ai)** · 📖 [Browse the dictionary](https://pronounce.renlab.ai/browse) · 🔌 [MCP server](mcp-server/) · 🤝 [Contribute](CONTRIBUTING.md) · 🗺 [Roadmap](IDEAS.md)
 
-![say-it terminal demo](https://pronounce.renlab.ai/demo.svg)
+![say-it terminal demo](https://pronounce.renlab.ai/demo.gif)
+
+📹 [Watch the 20-second demo](https://pronounce.renlab.ai/demo.mp4) (with real CLI audio)
 
 Every developer has been there. You're in a standup, you say "n-jinx" out loud, and someone gently corrects you to "engine-x". Or you spend six months saying "kub-cuttle" before finally hearing "koob-control".
 
