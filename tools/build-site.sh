@@ -412,9 +412,13 @@ cat > "$DOCS/index.html" <<EOF
   <meta property="og:description" content="A community-maintained pronunciation dictionary for developer jargon. With sources. Open source, MIT.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="${SITE_URL}/">
+  <meta property="og:image" content="${SITE_URL}/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="How to pronounce kubectl, nginx, GIF, JSON">
   <meta name="twitter:description" content="A community pronunciation dictionary for the names developers actually use. With sources.">
+  <meta name="twitter:image" content="${SITE_URL}/og.png">
   <link rel="stylesheet" href="./style.css">
   <script type="application/ld+json">
   {
@@ -576,6 +580,9 @@ cat > "$DOCS/browse.html" <<EOF
   <title>Pronunciation dictionary · ${BRAND}</title>
   <meta name="description" content="Browse the full ${BRAND} dictionary: 130+ project, product, and programmer-jargon pronunciations. Search, filter by category, hear each reading.">
   <link rel="canonical" href="${SITE_URL}/browse.html">
+  <meta property="og:image" content="${SITE_URL}/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="${SITE_URL}/og.png">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -785,9 +792,13 @@ while IFS="$SEP" read -r word ipa resp alt_ipa alt_resp src_url src_label cat co
   <meta property="og:description" content="$meta_desc">
   <meta property="og:type" content="article">
   <meta property="og:url" content="$SITE_URL/word/$slug">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="$SITE_URL/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="$page_title">
   <meta name="twitter:description" content="$meta_desc">
+  <meta name="twitter:image" content="$SITE_URL/og.png">
   <link rel="stylesheet" href="../style.css">
   <script type="application/ld+json">$jsonld_main</script>
 HTML

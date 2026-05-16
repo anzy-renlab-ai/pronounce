@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" role="img" aria-label="say-it terminal demo">
+  <defs>
+    <style type="text/css"><![CDATA[
+      .bg     { fill: #0e0e10; }
+      .card   { fill: #18181b; stroke: #2a2a30; stroke-width: 1; }
+      .dot-r  { fill: #ff5f56; }
+      .dot-y  { fill: #ffbd2e; }
+      .dot-g  { fill: #27c93f; }
+      text { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; font-size: 18px; }
+      .prompt   { fill: #9b9ba0; }
+      .cmd      { fill: #f6f6f7; }
+      .out      { fill: #7adfbb; }
+      .alt      { fill: #ff6a3d; }
+      .comment  { fill: #9b9ba0; }
+      .title-h  { fill: #f6f6f7; font-size: 22px; font-weight: 700; }
+      .title-s  { fill: #ff6a3d; font-size: 14px; }
+      .url      { fill: #7adfbb; font-size: 13px; }
+      @keyframes blink { 50% { opacity: 0; } }
+      .cursor { animation: blink 1s steps(2) infinite; fill: #ff6a3d; }
+    ]]></style>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="880" height="420"/>
+
+  <!-- Title row -->
+  <text class="title-h" x="32" y="40">🔊 say-it</text>
+  <text class="title-s" x="120" y="40">— pronounce.renlab.ai</text>
+  <text class="url" x="32" y="65">$ git clone https://github.com/anzy-renlab-ai/pronounce.git &amp;&amp; cd pronounce &amp;&amp; ./install.sh</text>
+
+  <!-- Terminal card -->
+  <rect class="card" x="20" y="90" width="840" height="310" rx="12" ry="12"/>
+
+  <!-- Mac window dots -->
+  <circle class="dot-r" cx="44" cy="116" r="7"/>
+  <circle class="dot-y" cx="66" cy="116" r="7"/>
+  <circle class="dot-g" cx="88" cy="116" r="7"/>
+
+  <!-- Terminal contents -->
+  <g transform="translate(36, 158)">
+    <!-- Line 1: prompt + command -->
+    <text x="0" y="0"><tspan class="prompt">$ </tspan><tspan class="cmd">say-it kubectl</tspan></text>
+    <!-- Line 2: output -->
+    <text x="0" y="32"><tspan class="cmd">🔊 </tspan><tspan class="out">koob control. koob control. koob control. </tspan><tspan class="alt">or: cube cuddle. or: kube C T L.</tspan></text>
+
+    <!-- Line 3 (spacer + next prompt) -->
+    <text x="0" y="76"><tspan class="prompt">$ </tspan><tspan class="cmd">say-it GIF</tspan></text>
+    <text x="0" y="108"><tspan class="cmd">🔊 </tspan><tspan class="out">jif. jif. jif. </tspan><tspan class="alt">or: gif.</tspan><tspan class="comment">    # creator-clarified — Wilhite, Webbys 2013</tspan></text>
+
+    <!-- Line 4 (--why) -->
+    <text x="0" y="152"><tspan class="prompt">$ </tspan><tspan class="cmd">say-it --why JSON</tspan></text>
+    <text x="0" y="184"><tspan class="comment">word              JSON</tspan></text>
+    <text x="0" y="208"><tspan class="comment">ipa               /ˈdʒeɪsən/</tspan></text>
+    <text x="0" y="232"><tspan class="comment">respelling_us     jay son</tspan></text>
+    <!-- Cursor at end -->
+    <rect class="cursor" x="0" y="245" width="10" height="20"/>
+  </g>
+</svg>

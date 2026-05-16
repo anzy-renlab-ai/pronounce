@@ -11,6 +11,8 @@
 
 🌐 **[pronounce.renlab.ai](https://pronounce.renlab.ai)** · 📖 [Browse the dictionary](https://pronounce.renlab.ai/browse) · 🤝 [Contribute](CONTRIBUTING.md) · 🗺 [Roadmap](IDEAS.md)
 
+![say-it terminal demo](https://pronounce.renlab.ai/demo.svg)
+
 Every developer has been there. You're in a standup, you say "n-jinx" out loud, and someone gently corrects you to "engine-x". Or you spend six months saying "kub-cuttle" before finally hearing "koob-control".
 
 `say-it` is the tiny CLI that fixes this. It speaks project names, product names, and programmer jargon out loud, through your real speakers, three times, so the right reading actually sticks.
