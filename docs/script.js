@@ -442,10 +442,41 @@ function initBrowse() {
     });
   });
   document.addEventListener('keydown', (e) => {
-    if (e.key === '/' && document.activeElement !== search) {
-      e.preventDefault(); search.focus();
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+    if (e.key === '/') { e.preventDefault(); search.focus(); }
+    else if (e.key === 'r' || e.key === 'R') {
+      e.preventDefault();
+      const pick = ENTRIES[Math.floor(Math.random() * ENTRIES.length)];
+      window.location.href = entryHref(pick.w);
     }
+    else if (e.key === '?') { e.preventDefault(); toggleHelp(); }
+    else if (e.key === 'Escape') { closeHelp(); }
   });
+}
+
+function toggleHelp() {
+  let modal = document.getElementById('help-modal');
+  if (modal) { modal.remove(); return; }
+  modal = document.createElement('div');
+  modal.id = 'help-modal';
+  modal.className = 'help-modal';
+  modal.innerHTML = `
+    <div class="help-card">
+      <h3>Keyboard shortcuts</h3>
+      <table>
+        <tr><td><kbd>/</kbd></td><td>focus search</td></tr>
+        <tr><td><kbd>r</kbd></td><td>random word</td></tr>
+        <tr><td><kbd>?</kbd></td><td>this help</td></tr>
+        <tr><td><kbd>Esc</kbd></td><td>close</td></tr>
+      </table>
+      <p class="hint">on a word page: <kbd>r</kbd> jumps to another random entry</p>
+    </div>`;
+  modal.addEventListener('click', e => { if (e.target === modal) closeHelp(); });
+  document.body.appendChild(modal);
+}
+function closeHelp() {
+  const m = document.getElementById('help-modal');
+  if (m) m.remove();
 }
 
 function initWordPage() {
@@ -453,9 +484,55 @@ function initWordPage() {
     speechSynthesis.getVoices();
     speechSynthesis.onvoiceschanged = () => speechSynthesis.getVoices();
   }
+  // Keyboard shortcuts on individual word pages
+  document.addEventListener('keydown', (e) => {
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+    if (e.key === 'r' || e.key === 'R') {
+      e.preventDefault();
+      const pick = ENTRIES[Math.floor(Math.random() * ENTRIES.length)];
+      window.location.href = './' + pick.w.toLowerCase().replace(/[^a-z0-9._-]/g, '-') + '.html';
+    } else if (e.key === ' ') {
+      e.preventDefault();
+      const btn = document.querySelector('.play-primary');
+      if (btn) btn.click();
+    } else if (e.key === '/') {
+      e.preventDefault();
+      window.location.href = '../browse.html';
+    } else if (e.key === '?') { e.preventDefault(); toggleHelp(); }
+    else if (e.key === 'Escape') { closeHelp(); }
+  });
+}
+
+function todaysWord() {
+  // Deterministic per day
+  const day = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+  let hash = 0;
+  for (const c of day) hash = ((hash << 5) - hash + c.charCodeAt(0)) | 0;
+  return ENTRIES[Math.abs(hash) % ENTRIES.length];
+}
+
+function renderTodaysWord() {
+  const el = document.getElementById('todays-word');
+  if (!el) return;
+  const e = todaysWord();
+  const slug = e.w.toLowerCase().replace(/[^a-z0-9._-]/g, '-');
+  el.innerHTML = `
+    <div class="todays-inner">
+      <div class="todays-label">📅 Today's pronunciation</div>
+      <a href="./word/${slug}.html" class="todays-word-link">
+        <span class="todays-word">${escHTML(e.w)}</span>
+        <span class="todays-resp">${escHTML(e.r)}</span>
+        <span class="todays-ipa">${escHTML(e.ipa)}</span>
+      </a>
+      <div class="todays-actions">
+        <button class="play-btn play-primary" onclick="playEntry('${e.w}')" aria-label="Play today's word">▶</button>
+        <a href="./word/${slug}.html" class="todays-cta">See the source →</a>
+      </div>
+    </div>`;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  renderTodaysWord();
   if (document.getElementById('entries')) initBrowse();
   else initWordPage();
 });

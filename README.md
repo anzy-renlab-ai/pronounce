@@ -9,7 +9,7 @@
 
 **Pronounce `kubectl` without the cringe.**
 
-🌐 **[pronounce.renlab.ai](https://pronounce.renlab.ai)** · 📖 [Browse the dictionary](https://pronounce.renlab.ai/browse) · 🔌 [MCP server](mcp-server/) · 🤝 [Contribute](CONTRIBUTING.md) · 🗺 [Roadmap](IDEAS.md)
+🌐 **[pronounce.renlab.ai](https://pronounce.renlab.ai)** · 📖 [Browse](https://pronounce.renlab.ai/browse) · 🔌 [MCP server](mcp-server/) · 🤖 [Codex / Cursor / Continue](integrations/) · 🤝 [Contribute](CONTRIBUTING.md) · 🗺 [Roadmap](IDEAS.md)
 
 ![say-it terminal demo](https://pronounce.renlab.ai/demo.gif)
 

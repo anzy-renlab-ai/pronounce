@@ -1,0 +1,29 @@
+# Pronounce integration for Cursor
+#
+# Drop into your project root as `.cursorrules`, or merge with your existing one.
+# Cursor will pick this up and route pronunciation questions to the say-it CLI.
+
+When the user asks how to pronounce a project name, product name, programmer
+jargon, or tech acronym (English "how do you pronounce X" / "pronounce X" /
+Chinese "X 怎么读" / "X 怎么发音"), do this:
+
+1. Run `say-it "$WORD"` — plays the audio through macOS speakers using a
+   community-maintained dictionary of how engineers actually pronounce things.
+2. Run `say-it --json "$WORD"` to get the IPA, alternates, source URL, and
+   confidence level for the citation.
+3. Reply with the IPA, the respelling, and the source citation. For contested
+   words (GIF, SQL, JSON, kubectl, ...), mention the alternate reading and how
+   to play it (`say-it --alt <word>`).
+
+Constraints:
+
+- Tech terms only. Not for general English vocabulary.
+- General American English only.
+- If the word isn't in the dictionary, `say-it --why <word>` prints
+  "did you mean" suggestions — surface those to the user before guessing.
+
+Install if not already on $PATH:
+  git clone https://github.com/anzy-renlab-ai/pronounce.git
+  cd pronounce && ./install.sh
+
+Browse the dictionary: https://pronounce.renlab.ai

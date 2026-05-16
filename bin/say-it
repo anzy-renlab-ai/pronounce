@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# say-it — speak an English word out loud, the way engineers actually say it.
+# say-it — speak project / product / jargon names the way engineers actually say them.
 #
 # Looks up the word in the community-maintained pronunciation dictionary
 # (data/pronunciations.tsv) and feeds an English-like respelling to macOS
@@ -8,10 +8,10 @@
 #
 # Why respelling rather than IPA/phonemes? Modern macOS `say` does not parse
 # `[[inpt PHON]]` markup or SSML `<phoneme>` tags — both are read as literal
-# text. Respelling rides the TTS's built-in letter-to-sound rules, which give
-# acceptable output for short English-shaped strings.
+# text. Respelling rides the TTS's built-in letter-to-sound rules.
 set -e
 
+VERSION="0.2.0"
 VOICE="Samantha"
 TIMES=3
 RATE=175
@@ -22,12 +22,27 @@ USE_ALL=0
 USE_SOLO=0
 NO_DICT=0
 SHOW_WHY=0
+OUTPUT_JSON=0
+OUTPUT_MD=0
+COPY_CLIP=0
+QUIET=0
+
+# ANSI colors (disabled if NO_COLOR or not a TTY)
+if [[ -t 1 && -z "${NO_COLOR:-}" ]]; then
+  C_RESET=$'\033[0m'; C_BOLD=$'\033[1m'; C_DIM=$'\033[2m'
+  C_RED=$'\033[31m'; C_GREEN=$'\033[32m'; C_YELLOW=$'\033[33m'
+  C_BLUE=$'\033[34m'; C_MAGENTA=$'\033[35m'; C_CYAN=$'\033[36m'; C_WHITE=$'\033[37m'
+  C_ORANGE=$'\033[38;5;208m'
+else
+  C_RESET=""; C_BOLD=""; C_DIM=""; C_RED=""; C_GREEN=""
+  C_YELLOW=""; C_BLUE=""; C_MAGENTA=""; C_CYAN=""; C_WHITE=""; C_ORANGE=""
+fi
 
 usage() {
   cat <<EOF
-say-it — speak project / product / jargon names the way engineers actually say them.
+${C_BOLD}say-it${C_RESET} — speak project / product / jargon names the way engineers actually say them.
 
-Usage:
+${C_BOLD}Usage:${C_RESET}
   say-it <word>                  speak 3 times using the community dict if known
   say-it -v <voice> <word>       any macOS voice (default: Samantha, GenAm)
   say-it -n 5 <word>             repeat N times instead of 3
@@ -36,20 +51,35 @@ Usage:
   say-it --alt <word>            speak the first alternate reading only
   say-it --alt N <word>          speak the Nth alternate only (1-indexed)
   say-it --all <word>            play primary AND every alternate, each repeated
-  say-it --solo <word>            primary only — suppress the "or: <alt>" tail
-  say-it --no-dict <word>        skip the dictionary, send the raw spelling to TTS
-  say-it --why <word>            print the dict entry, source URL, and confidence
+  say-it --solo <word>           primary only — suppress the "or: <alt>" tail
+  say-it --no-dict <word>        skip the dictionary, send raw spelling to TTS
+  say-it --why <word>            print the dict entry — colored, with source
+  say-it --json <word>           print the dict entry as JSON (pipeable)
+  say-it --md <word>             print a markdown card (paste into Slack/Notion)
+  say-it --copy <word>           copy the respelling to clipboard after speaking
+
+${C_BOLD}Subcommands:${C_RESET}
   say-it list                    list every word in the dictionary
+  say-it list --category cli-tool   filter by category
   say-it search <pattern>        grep the dictionary (case-insensitive)
-  say-it update                  pull the latest dictionary and CLI from upstream
+  say-it random                  speak a random word
+  say-it daily                   speak today's pronunciation (deterministic)
+  say-it quiz                    interactive game — guess the respelling
+  say-it compare <word>          audibly compare primary vs alternates
+  say-it tweet <word>            generate a tweet draft + copy to clipboard
+  say-it stats                   print dictionary statistics
+  say-it config                  print resolved paths / version
+  say-it update                  pull the latest dict and CLI from upstream
   say-it -l                      list every macOS voice
   say-it -h                      this help
 
-Examples:
+${C_BOLD}Examples:${C_RESET}
   say-it kubectl
   say-it --all GIF
   say-it --why JSON
-  say-it list | head
+  say-it --md Pydantic | pbcopy
+  say-it tweet kubectl
+  say-it quiz
 EOF
 }
 
@@ -66,48 +96,119 @@ for c in "${DICT_CANDIDATES[@]}"; do
   if [[ -n "$c" && -f "$c" ]]; then DICT="$c"; break; fi
 done
 
+CACHE_DIR="${SAY_IT_CACHE_DIR:-$HOME/.cache/say-it}"
+
 # --- subcommands --------------------------------------------------------------
 case "${1:-}" in
   update)
-    # Best-effort updater: re-clone or git pull the upstream repo into a temp
-    # dir, then run install.sh from there. Works without sudo when $PREFIX is
-    # writable (default ~/.local).
     UPSTREAM="${SAY_IT_UPSTREAM:-https://github.com/anzy-renlab-ai/pronounce.git}"
     TMP_DIR="$(mktemp -d -t say-it-update.XXXXXX)"
     trap 'rm -rf "$TMP_DIR"' EXIT
-    echo "Cloning $UPSTREAM into $TMP_DIR …"
+    echo "${C_DIM}Cloning $UPSTREAM …${C_RESET}"
     if ! git clone --depth=1 "$UPSTREAM" "$TMP_DIR/repo" >/dev/null 2>&1; then
-      echo "say-it update: git clone failed. Check connectivity or set SAY_IT_UPSTREAM." >&2
-      exit 5
+      echo "say-it update: git clone failed." >&2; exit 5
     fi
-    echo "Running installer …"
+    echo "${C_DIM}Running installer …${C_RESET}"
     if ! (cd "$TMP_DIR/repo" && ./install.sh); then
-      echo "say-it update: installer failed; previous install left intact." >&2
-      exit 5
+      echo "say-it update: installer failed." >&2; exit 5
     fi
-    echo "say-it: updated."
+    echo "${C_GREEN}say-it: updated.${C_RESET}"
     exit 0
     ;;
   list)
-    if [[ -z "$DICT" ]]; then
-      echo "say-it: dictionary not found" >&2; exit 4
+    [[ -z "$DICT" ]] && { echo "say-it: dictionary not found" >&2; exit 4; }
+    if [[ "${2:-}" == "--category" && -n "${3:-}" ]]; then
+      awk -F'\t' -v c="$3" '!/^#/ && NF>=2 && $1 != "" && $1 != "word" && $8 == c { print $1 }' "$DICT" | sort -u
+    else
+      awk -F'\t' '!/^#/ && NF>=2 && $1 != "" && $1 != "word" { print $1 }' "$DICT" | sort -u
     fi
-    awk -F'\t' '!/^#/ && NF>=2 && $1 != "" && $1 != "word" { print $1 }' "$DICT" | sort -u
     exit 0
     ;;
   search)
-    if [[ -z "$DICT" ]]; then
-      echo "say-it: dictionary not found" >&2; exit 4
-    fi
+    [[ -z "$DICT" ]] && { echo "say-it: dictionary not found" >&2; exit 4; }
     pat="${2:-}"
-    if [[ -z "$pat" ]]; then echo "say-it: usage: say-it search <pattern>" >&2; exit 2; fi
+    [[ -z "$pat" ]] && { echo "say-it: usage: say-it search <pattern>" >&2; exit 2; }
     pat_lower="$(printf '%s' "$pat" | tr '[:upper:]' '[:lower:]')"
     awk -v p="$pat_lower" -F'\t' '
       !/^#/ && NF>=2 && $1 != "" && $1 != "word" {
-        if (tolower($1) ~ p || tolower($10) ~ p) printf "%-20s %s\n", $1, $10
+        if (tolower($1) ~ p || tolower($10) ~ p) printf "%-22s %s\n", $1, $10
       }
     ' "$DICT"
     exit 0
+    ;;
+  random)
+    [[ -z "$DICT" ]] && { echo "say-it: dictionary not found" >&2; exit 4; }
+    word="$(awk -F'\t' '!/^#/ && NF>=2 && $1 != "" && $1 != "word" { print $1 }' "$DICT" | sort -R | head -1)"
+    echo "${C_DIM}Random pick:${C_RESET} ${C_BOLD}$word${C_RESET}"
+    exec "$0" "$word"
+    ;;
+  daily)
+    [[ -z "$DICT" ]] && { echo "say-it: dictionary not found" >&2; exit 4; }
+    # Deterministic: hash today's date, pick word at that index
+    day="$(date +%Y%m%d)"
+    idx=$(printf '%s' "$day" | shasum | awk '{print substr($1,1,8)}' | (echo "ibase=16; $(tr a-f A-F)" | bc) 2>/dev/null || echo "0")
+    count=$(awk -F'\t' '!/^#/ && NF>=2 && $1 != "" && $1 != "word"' "$DICT" | wc -l | tr -d ' ')
+    pick=$((idx % count + 1))
+    word="$(awk -F'\t' -v n="$pick" '!/^#/ && NF>=2 && $1 != "" && $1 != "word" { i++; if (i==n) { print $1; exit } }' "$DICT")"
+    echo "${C_DIM}Today's pronunciation ($(date +%Y-%m-%d)):${C_RESET} ${C_BOLD}$word${C_RESET}"
+    exec "$0" "$word"
+    ;;
+  stats)
+    [[ -z "$DICT" ]] && { echo "say-it: dictionary not found" >&2; exit 4; }
+    echo "${C_BOLD}say-it dictionary — stats${C_RESET}"
+    echo ""
+    total=$(awk -F'\t' '!/^#/ && NF>=2 && $1 != "" && $1 != "word"' "$DICT" | wc -l | tr -d ' ')
+    echo "  ${C_CYAN}Total entries:${C_RESET} ${C_BOLD}$total${C_RESET}"
+    echo ""
+    echo "  ${C_CYAN}By category:${C_RESET}"
+    awk -F'\t' '!/^#/ && NF>=8 && $1 != "" && $1 != "word" { print $8 }' "$DICT" | sort | uniq -c | sort -rn | \
+      while read -r n c; do printf "    %-20s ${C_BOLD}%4d${C_RESET}  %s\n" "$c" "$n" "$(printf '█%.0s' $(seq 1 $((n/2))))" ; done
+    echo ""
+    echo "  ${C_CYAN}By confidence:${C_RESET}"
+    awk -F'\t' '!/^#/ && NF>=9 && $1 != "" && $1 != "word" { print $9 }' "$DICT" | sort | uniq -c | sort -rn | \
+      while read -r n c; do printf "    %-22s ${C_BOLD}%4d${C_RESET}\n" "$c" "$n"; done
+    echo ""
+    src=$(awk -F'\t' '!/^#/ && NF>=6 && $1 != "" && $1 != "word" && $6 != ""' "$DICT" | wc -l | tr -d ' ')
+    echo "  ${C_CYAN}With source URL:${C_RESET} ${C_BOLD}$src${C_RESET}/$total ($((src * 100 / total))%)"
+    exit 0
+    ;;
+  config)
+    echo "${C_BOLD}say-it config${C_RESET}"
+    echo "  ${C_CYAN}version:${C_RESET}     $VERSION"
+    echo "  ${C_CYAN}dict path:${C_RESET}   ${DICT:-<not found>}"
+    echo "  ${C_CYAN}cache dir:${C_RESET}   $CACHE_DIR"
+    echo "  ${C_CYAN}voice:${C_RESET}       $VOICE"
+    echo "  ${C_CYAN}rate:${C_RESET}        $RATE wpm"
+    echo "  ${C_CYAN}upstream:${C_RESET}    ${SAY_IT_UPSTREAM:-https://github.com/anzy-renlab-ai/pronounce.git}"
+    exit 0
+    ;;
+  quiz)
+    [[ -z "$DICT" ]] && { echo "say-it: dictionary not found" >&2; exit 4; }
+    if ! command -v say >/dev/null 2>&1; then echo "say-it: macOS \`say\` required for quiz" >&2; exit 3; fi
+    echo "${C_BOLD}🔊 say-it quiz${C_RESET} — listen and type the respelling. ctrl-C to quit."
+    score=0; rounds=0
+    while :; do
+      rounds=$((rounds+1))
+      line=$(awk -F'\t' '!/^#/ && NF>=3 && $1 != "" && $1 != "word"' "$DICT" | sort -R | head -1)
+      word=$(echo "$line" | awk -F'\t' '{print $1}')
+      resp=$(echo "$line" | awk -F'\t' '{print $3}')
+      echo ""
+      echo "${C_DIM}#$rounds — ${C_RESET}${C_CYAN}plays in 3, 2, 1…${C_RESET}"
+      sleep 0.7
+      say -v "$VOICE" -r "$RATE" "$resp. $resp. $resp." 2>/dev/null
+      printf "  guess (or type the actual word): ${C_BOLD}"
+      read -r guess
+      printf "${C_RESET}"
+      lower_word=$(echo "$word" | tr '[:upper:]' '[:lower:]')
+      lower_guess=$(echo "$guess" | tr '[:upper:]' '[:lower:]')
+      lower_resp=$(echo "$resp" | tr '[:upper:]' '[:lower:]')
+      if [[ "$lower_guess" == "$lower_word" ]] || [[ "$lower_guess" == "$lower_resp" ]]; then
+        score=$((score+1))
+        echo "  ${C_GREEN}✓ correct — $word (\"$resp\")${C_RESET}  score: ${C_BOLD}$score/$rounds${C_RESET}"
+      else
+        echo "  ${C_YELLOW}✗ was $word (\"$resp\")${C_RESET}  score: ${C_DIM}$score/$rounds${C_RESET}"
+      fi
+    done
     ;;
 esac
 
@@ -120,28 +221,33 @@ while [[ $# -gt 0 ]]; do
     -o|--output)   SAVE="$2"; shift 2 ;;
     --alt)
                    USE_ALT=1
-                   if [[ "${2:-}" =~ ^[0-9]+$ ]]; then
-                     ALT_IDX="$2"; shift 2
-                   else
-                     shift
-                   fi
-                   ;;
+                   if [[ "${2:-}" =~ ^[0-9]+$ ]]; then ALT_IDX="$2"; shift 2
+                   else shift; fi ;;
     --all)         USE_ALL=1; shift ;;
     --solo)        USE_SOLO=1; shift ;;
     --no-dict)     NO_DICT=1; shift ;;
     --why)         SHOW_WHY=1; shift ;;
+    --json)        OUTPUT_JSON=1; QUIET=1; shift ;;
+    --md|--markdown) OUTPUT_MD=1; QUIET=1; shift ;;
+    --copy)        COPY_CLIP=1; shift ;;
+    -q|--quiet)    QUIET=1; shift ;;
     -l|--list)     say -v "?"; exit 0 ;;
     -h|--help)     usage; exit 0 ;;
+    -V|--version)  echo "say-it $VERSION"; exit 0 ;;
     --)            shift; break ;;
     -*)            echo "say-it: unknown flag: $1" >&2; usage; exit 2 ;;
     *)             break ;;
   esac
 done
 
-if [[ $# -eq 0 ]]; then
-  usage; exit 2
+# compare and tweet subcommands need a word arg from positional
+SUBCMD=""
+if [[ "${1:-}" == "compare" || "${1:-}" == "tweet" ]]; then
+  SUBCMD="$1"
+  shift
 fi
 
+[[ $# -eq 0 ]] && { usage; exit 2; }
 if ! command -v say >/dev/null 2>&1; then
   echo "say-it: macOS \`say\` not found. Windows/Linux backends are on the roadmap." >&2
   exit 3
@@ -150,9 +256,6 @@ fi
 WORD="$*"
 
 # --- dictionary lookup --------------------------------------------------------
-# Returns 9 fields separated by ASCII unit-separator (\x1f). We do not use TAB
-# here because bash `IFS=$'\t' read` collapses consecutive tabs (it treats
-# whitespace IFS specially), which would silently mis-shift empty alt columns.
 SEP=$'\x1f'
 lookup() {
   local word="$1"
@@ -168,6 +271,21 @@ lookup() {
   ' "$DICT"
 }
 
+# Did-you-mean — Python difflib for proper fuzzy match
+did_you_mean() {
+  local word="$1"
+  awk -F'\t' '!/^#/ && NF>=2 && $1 != "" && $1 != "word" { print $1 }' "$DICT" | \
+    python3 -c "
+import sys, difflib
+w = sys.argv[1].lower()
+words = [l.strip() for l in sys.stdin if l.strip()]
+matches = difflib.get_close_matches(w, [x.lower() for x in words], n=3, cutoff=0.65)
+# Map back to canonical case
+canon = {x.lower(): x for x in words}
+for m in matches: print(canon.get(m, m))
+" "$word"
+}
+
 ENTRY=""
 if [[ $NO_DICT -eq 0 && -n "$DICT" ]]; then
   ENTRY="$(lookup "$WORD" || true)"
@@ -178,23 +296,131 @@ if [[ -n "$ENTRY" ]]; then
   IFS="$SEP" read -r IPA RESP ALT_IPA ALT_RESP SRC_URL SRC_LABEL CATEGORY CONFIDENCE NOTES <<< "$ENTRY"
 fi
 
+# --- output modes (early exit for --json/--md, must precede speaking) ---------
+
+emit_json() {
+  python3 -c "
+import json, sys, urllib.parse
+def alt_list(s):
+    return [x for x in s.split('|') if x] if s else []
+word = '$WORD'
+slug = ''.join(c if c.isalnum() or c in '._-' else '-' for c in word.lower())
+out = {
+  'word': word,
+  'ipa': '$IPA',
+  'respelling_us': '$RESP',
+  'alt_ipa': alt_list('$ALT_IPA'),
+  'alt_respelling_us': alt_list('$ALT_RESP'),
+  'source_url': '$SRC_URL',
+  'source_label': '$SRC_LABEL',
+  'category': '$CATEGORY',
+  'confidence': '$CONFIDENCE',
+  'notes': '''$NOTES''',
+  'url': f'https://pronounce.renlab.ai/word/{slug}' if word else None,
+  'in_dict': bool('$RESP'),
+}
+print(json.dumps(out, indent=2, ensure_ascii=False))
+"
+}
+
+emit_md() {
+  cat <<MD
+### How to pronounce \`$WORD\`
+
+**$RESP** — \`$IPA\`
+MD
+  if [[ -n "$ALT_RESP" ]]; then
+    echo ""
+    echo "**Alternates:**"
+    IFS='|' read -ra ALTS <<< "$ALT_RESP"
+    IFS='|' read -ra ALT_IPAS <<< "$ALT_IPA"
+    for i in "${!ALTS[@]}"; do
+      ai="${ALT_IPAS[$i]:-}"
+      echo "- $(printf '%s' "${ALTS[$i]}")${ai:+ \`$ai\`}"
+    done
+  fi
+  if [[ -n "$NOTES" ]]; then echo ""; echo "_${NOTES}_"; fi
+  if [[ -n "$SRC_URL" ]]; then
+    echo ""
+    echo "📎 [${SRC_LABEL:-source}]($SRC_URL)"
+  fi
+  echo ""
+  echo "🔊 \`say-it $WORD\`  ·  🌐 https://pronounce.renlab.ai/word/$(echo "$WORD" | tr '[:upper:]' '[:lower:]')"
+}
+
+emit_tweet() {
+  local text
+  if [[ -n "$RESP" ]]; then
+    text="TIL: $WORD is pronounced \"$RESP\""
+    [[ -n "$ALT_RESP" ]] && text="$text (or \"${ALT_RESP%%|*}\")"
+    text="$text 🔊"
+    [[ -n "$SRC_LABEL" ]] && text="$text — ${SRC_LABEL}"
+    text="$text · https://pronounce.renlab.ai/word/$(echo "$WORD" | tr '[:upper:]' '[:lower:]')"
+  else
+    text="How do you pronounce $WORD? https://pronounce.renlab.ai"
+  fi
+  printf '%s\n' "$text"
+  if command -v pbcopy >/dev/null 2>&1; then
+    printf '%s' "$text" | pbcopy
+    [[ $QUIET -eq 0 ]] && echo "${C_DIM}(copied to clipboard — paste into x.com)${C_RESET}" >&2
+  fi
+}
+
+# --- handle compare/tweet/--json/--md early -----------------------------------
+
+if [[ "$SUBCMD" == "tweet" ]]; then
+  emit_tweet
+  exit 0
+fi
+
+if [[ $OUTPUT_JSON -eq 1 ]]; then
+  emit_json
+  exit 0
+fi
+
+if [[ $OUTPUT_MD -eq 1 ]]; then
+  emit_md
+  exit 0
+fi
+
+# --- show why before speaking -------------------------------------------------
+print_why() {
+  if [[ -n "$ENTRY" ]]; then
+    local conf_color="$C_CYAN"
+    case "$CONFIDENCE" in
+      creator-clarified) conf_color="$C_GREEN" ;;
+      contested) conf_color="$C_ORANGE" ;;
+      community-consensus) conf_color="$C_BLUE" ;;
+    esac
+    echo "${C_BOLD}${WORD}${C_RESET}  ${C_DIM}┄${C_RESET}  ${C_GREEN}${RESP}${C_RESET}  ${C_DIM}${IPA}${C_RESET}"
+    [[ -n "$ALT_RESP" ]] && echo "  ${C_DIM}or:${C_RESET}    ${C_ORANGE}$(echo "$ALT_RESP" | tr '|' '\n' | sed "s/^/  /" | tr '\n' ' ')${C_RESET}"
+    [[ -n "$CATEGORY" ]] && echo "  ${C_DIM}category${C_RESET}  $CATEGORY"
+    [[ -n "$CONFIDENCE" ]] && echo "  ${C_DIM}confidence${C_RESET} ${conf_color}$CONFIDENCE${C_RESET}"
+    [[ -n "$SRC_LABEL" ]] && echo "  ${C_DIM}source${C_RESET}    $SRC_LABEL"
+    [[ -n "$SRC_URL" ]] && echo "  ${C_DIM}url${C_RESET}       $SRC_URL"
+    [[ -n "$NOTES" ]] && echo "  ${C_DIM}notes${C_RESET}     $NOTES"
+  else
+    echo "${C_YELLOW}$WORD: not in dictionary; sending raw spelling to TTS.${C_RESET}"
+    suggestions=$(did_you_mean "$WORD")
+    if [[ -n "$suggestions" ]]; then
+      echo "${C_DIM}did you mean:${C_RESET}"
+      while read -r s; do echo "  • ${C_CYAN}$s${C_RESET}"; done <<< "$suggestions"
+    fi
+  fi
+}
+
+[[ $SHOW_WHY -eq 1 ]] && print_why
+
 # --- decide what to speak -----------------------------------------------------
-# Produces the full string to feed `say`. Awareness of alternates is baked
-# *into the audio* via spoken "or: <alt>" tails, so the user hears that the
-# word is multi-reading even without watching the terminal.
-#
-# Pauses are inserted via Apple's `[[slnc N]]` directive (which, unlike
-# `[[inpt PHON]]`, IS honored by the modern `say` CLI). This prevents the
-# tail of one repetition from being clipped by the head of the next.
-PAUSE_INTRA="[[slnc 400]]"   # between repetitions of the same reading
-PAUSE_INTER="[[slnc 700]]"   # between primary block and "or:" alternate
+PAUSE_INTRA="[[slnc 400]]"
+PAUSE_INTER="[[slnc 700]]"
 
 build_reps() {
   local resp="$1"; local n="$2"
   local out=""
   for ((i=0; i<n; i++)); do
     out+="$resp. "
-    if (( i < n - 1 )); then out+="$PAUSE_INTRA "; fi
+    (( i < n - 1 )) && out+="$PAUSE_INTRA "
   done
   printf '%s' "$out"
 }
@@ -203,25 +429,16 @@ build_audible_body() {
   local primary_speech
   if [[ -n "$RESP" ]]; then primary_speech="$RESP"; else primary_speech="$WORD"; fi
 
-  # --alt focuses on a single alternate only.
   if [[ $USE_ALT -eq 1 ]]; then
-    if [[ -z "$ALT_RESP" ]]; then
-      echo "say-it: '$WORD' has no recorded alternates." >&2; exit 4
-    fi
+    [[ -z "$ALT_RESP" ]] && { echo "say-it: '$WORD' has no recorded alternates." >&2; exit 4; }
     IFS='|' read -ra ALTS <<< "$ALT_RESP"
     local idx=$((ALT_IDX - 1))
-    if (( idx < 0 || idx >= ${#ALTS[@]} )); then
-      echo "say-it: --alt $ALT_IDX: only ${#ALTS[@]} alternate(s) recorded for '$WORD'" >&2
-      exit 4
-    fi
-    build_reps "${ALTS[$idx]}" "$TIMES"
-    return 0
+    (( idx < 0 || idx >= ${#ALTS[@]} )) && { echo "say-it: --alt $ALT_IDX: only ${#ALTS[@]} alternate(s) for '$WORD'" >&2; exit 4; }
+    build_reps "${ALTS[$idx]}" "$TIMES"; return 0
   fi
 
-  # Default and --all: primary first, then chain alts with spoken "or:".
   local body
   body="$(build_reps "$primary_speech" "$TIMES")"
-
   if [[ $USE_SOLO -eq 0 && -n "$ALT_RESP" ]]; then
     local rep_each=1
     [[ $USE_ALL -eq 1 ]] && rep_each=$TIMES
@@ -234,29 +451,68 @@ build_audible_body() {
   printf '%s' "$body"
 }
 
-# --- --why output (printed before the audio) ----------------------------------
-if [[ $SHOW_WHY -eq 1 ]]; then
-  if [[ -n "$ENTRY" ]]; then
-    echo "word              $WORD"
-    echo "ipa               $IPA"
-    echo "respelling_us     $RESP"
-    [[ -n "$ALT_IPA" ]]   && echo "alt_ipa           $ALT_IPA"
-    [[ -n "$ALT_RESP" ]]  && echo "alt_respelling_us $ALT_RESP"
-    [[ -n "$CATEGORY" ]]  && echo "category          $CATEGORY"
-    [[ -n "$CONFIDENCE" ]]&& echo "confidence        $CONFIDENCE"
-    [[ -n "$SRC_LABEL" ]] && echo "source            $SRC_LABEL"
-    [[ -n "$SRC_URL" ]]   && echo "url               $SRC_URL"
-    [[ -n "$NOTES" ]]     && echo "notes             $NOTES"
-  else
-    echo "$WORD: not in dictionary; sending raw spelling to TTS."
+# --- audio cache --------------------------------------------------------------
+cache_path() {
+  local body="$1"
+  local key
+  key="$(printf '%s\x1f%s\x1f%s\x1f%s' "$VOICE" "$RATE" "$TIMES" "$body" | shasum | awk '{print $1}')"
+  printf '%s/%s.aiff' "$CACHE_DIR" "$key"
+}
+
+# --- compare subcommand: speak primary, alts in sequence with spoken labels ---
+if [[ "$SUBCMD" == "compare" ]]; then
+  if [[ -z "$RESP" ]]; then
+    echo "say-it compare: '$WORD' not in dictionary." >&2
+    suggestions=$(did_you_mean "$WORD")
+    [[ -n "$suggestions" ]] && { echo "did you mean:"; echo "$suggestions"; }
+    exit 4
   fi
+  if [[ -z "$ALT_RESP" ]]; then
+    echo "${C_DIM}'$WORD' has only one recorded reading. Playing primary × 3:${C_RESET}"
+    BODY="$(build_reps "$RESP" "$TIMES")"
+  else
+    echo "${C_BOLD}🔊 comparing readings for '$WORD'${C_RESET}"
+    echo "  ${C_GREEN}primary:${C_RESET}   $RESP"
+    IFS='|' read -ra ALTS <<< "$ALT_RESP"
+    for i in "${!ALTS[@]}"; do
+      echo "  ${C_ORANGE}alt #$((i+1)):${C_RESET}   ${ALTS[$i]}"
+    done
+    BODY="primary. $PAUSE_INTRA $RESP. $RESP. $PAUSE_INTER"
+    for i in "${!ALTS[@]}"; do
+      BODY+="alternate $((i+1)). $PAUSE_INTRA ${ALTS[$i]}. ${ALTS[$i]}. $PAUSE_INTER"
+    done
+  fi
+  if [[ -n "$SAVE" ]]; then
+    say -v "$VOICE" -r "$RATE" -o "$SAVE" "$BODY"
+    echo "Saved: $SAVE"
+  else
+    say -v "$VOICE" -r "$RATE" "$BODY"
+  fi
+  exit 0
 fi
 
-# --- play / save --------------------------------------------------------------
+# --- play / save with cache ---------------------------------------------------
 BODY="$(build_audible_body)"
 if [[ -n "$SAVE" ]]; then
   say -v "$VOICE" -r "$RATE" -o "$SAVE" "$BODY"
   echo "Saved: $SAVE"
 else
-  say -v "$VOICE" -r "$RATE" "$BODY"
+  mkdir -p "$CACHE_DIR" 2>/dev/null || true
+  CACHED="$(cache_path "$BODY")"
+  if [[ -f "$CACHED" && -s "$CACHED" ]]; then
+    afplay "$CACHED" 2>/dev/null
+  else
+    if [[ -d "$CACHE_DIR" && -w "$CACHE_DIR" ]]; then
+      say -v "$VOICE" -r "$RATE" -o "$CACHED" "$BODY"
+      afplay "$CACHED" 2>/dev/null
+    else
+      say -v "$VOICE" -r "$RATE" "$BODY"
+    fi
+  fi
+fi
+
+# --- post-play actions --------------------------------------------------------
+if [[ $COPY_CLIP -eq 1 && -n "$RESP" ]] && command -v pbcopy >/dev/null 2>&1; then
+  printf '%s' "$RESP" | pbcopy
+  [[ $QUIET -eq 0 ]] && echo "${C_DIM}(respelling \"$RESP\" copied to clipboard)${C_RESET}"
 fi

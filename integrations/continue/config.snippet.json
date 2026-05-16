@@ -1,0 +1,10 @@
+{
+  "_comment": "Snippet for ~/.continue/config.json — merge with your existing customCommands array. Continue will route pronunciation questions to the say-it CLI via this slash command.",
+  "customCommands": [
+    {
+      "name": "pronounce",
+      "description": "Pronounce a project / product / jargon name out loud via say-it",
+      "prompt": "Run `say-it {{{ input }}}` to play the audio, then run `say-it --json {{{ input }}}` to fetch the dictionary entry. In your reply, include the IPA, the respelling, and the source citation when one exists. For contested words, mention the alternate reading. Source: https://pronounce.renlab.ai · https://github.com/anzy-renlab-ai/pronounce"
+    }
+  ]
+}

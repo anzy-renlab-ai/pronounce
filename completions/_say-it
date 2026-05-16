@@ -1,0 +1,82 @@
+#compdef say-it
+# zsh completion for say-it
+# Install: put this file in a directory on your $fpath, then
+#   compinit
+# e.g.:
+#   mkdir -p ~/.zsh/completions
+#   cp completions/_say-it ~/.zsh/completions/
+#   echo 'fpath=(~/.zsh/completions $fpath); autoload -U compinit; compinit' >> ~/.zshrc
+
+_say_it_words() {
+  local dict
+  for c in "$SAY_IT_DICT" "$HOME/.config/say-it/pronunciations.local.tsv" \
+           "$HOME/.local/share/say-it/pronunciations.tsv"; do
+    [[ -n "$c" && -f "$c" ]] && { dict="$c"; break; }
+  done
+  [[ -z "$dict" ]] && return 0
+  awk -F'\t' '!/^#/ && NF>=2 && $1 != "" && $1 != "word" { print $1 ":" $8 ", " $9 }' "$dict" 2>/dev/null
+}
+
+_say-it() {
+  local -a subcommands flags
+  subcommands=(
+    'list:list every word in the dictionary'
+    'search:grep the dictionary'
+    'random:speak a random word'
+    'daily:today'"'"'s deterministic word'
+    'quiz:interactive guess game'
+    'compare:audibly compare primary vs alternates'
+    'tweet:generate a tweet draft (copies to clipboard)'
+    'stats:dictionary statistics'
+    'config:resolved paths and version'
+    'update:pull latest from upstream'
+  )
+  flags=(
+    '-v[voice]:voice:_say_voices'
+    '--voice[voice]:voice:_say_voices'
+    '-n[repetitions]:n:'
+    '--times[repetitions]:n:'
+    '-r[rate (wpm)]:rate:'
+    '--rate[rate (wpm)]:rate:'
+    '-o[output file]:file:_files'
+    '--output[output file]:file:_files'
+    '--alt[speak the Nth alternate]'
+    '--all[speak primary AND every alternate]'
+    '--solo[silence the audible alt tail]'
+    '--no-dict[skip the dictionary lookup]'
+    '--why[print the dict entry]'
+    '--json[print as JSON]'
+    '--md[print as markdown card]'
+    '--copy[copy respelling to clipboard]'
+    '-q[quiet]'
+    '-l[list voices]'
+    '-h[help]'
+    '-V[version]'
+  )
+
+  if (( CURRENT == 2 )); then
+    local -a words
+    words=("${(@f)$(_say_it_words)}")
+    _alternative \
+      "subcommands:command:_describe 'subcommand' subcommands" \
+      "flags:flag:_describe 'flag' flags" \
+      "words:word:_describe 'dictionary word' words"
+  else
+    _arguments $flags '*::word:->word'
+    case $state in
+      word)
+        local -a words
+        words=("${(@f)$(_say_it_words)}")
+        _describe 'dictionary word' words
+        ;;
+    esac
+  fi
+}
+
+_say_voices() {
+  local -a voices
+  voices=("${(@f)$(say -v '?' 2>/dev/null | awk '$1 !~ /^\(/ {print $1}')}")
+  _describe 'voice' voices
+}
+
+_say-it "$@"

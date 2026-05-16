@@ -192,6 +192,28 @@ kbd { background: var(--card-2); border: 1px solid var(--border); border-radius:
 .share-reddit { background: #ff4500; color: #fff !important; border-color: #ff4500; }
 .share-reddit:hover { background: #e63e00; }
 
+/* Help modal (? shortcut) */
+.help-modal { position: fixed; inset: 0; background: rgba(0,0,0,0.7); display: flex; align-items: center; justify-content: center; z-index: 1000; backdrop-filter: blur(4px); }
+.help-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 28px 32px; max-width: 420px; }
+.help-card h3 { margin: 0 0 16px; }
+.help-card table { width: 100%; border-collapse: collapse; }
+.help-card td { padding: 6px 0; font-size: 14.5px; color: var(--muted-strong); }
+.help-card td:first-child { width: 60px; }
+.help-card .hint { color: var(--muted); font-size: 13px; margin-top: 14px; }
+
+/* Today's word widget on landing */
+#todays-word { margin: 40px 0; }
+.todays-inner { background: linear-gradient(135deg, rgba(255,106,61,0.10), rgba(122,223,187,0.10)); border: 1px solid var(--border); border-radius: 14px; padding: 24px 28px; }
+.todays-label { color: var(--muted); font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px; }
+.todays-word-link { text-decoration: none; display: flex; gap: 16px; align-items: baseline; flex-wrap: wrap; margin-bottom: 14px; }
+.todays-word-link:hover .todays-word { color: var(--accent); }
+.todays-word { font-family: var(--mono); font-size: 30px; color: var(--fg); transition: color 0.15s; }
+.todays-resp { font-family: var(--mono); font-size: 22px; color: var(--accent); }
+.todays-ipa { font-family: var(--mono); font-size: 14px; color: var(--muted); }
+.todays-actions { display: flex; align-items: center; gap: 14px; }
+.todays-cta { color: var(--link); text-decoration: none; font-size: 14px; }
+.todays-cta:hover { text-decoration: underline; }
+
 /* GitHub star drive */
 .gh-banner { background: linear-gradient(90deg, #1a1a1f, #2a1a14); border-bottom: 1px solid var(--border); padding: 10px 24px; text-align: center; font-size: 14px; color: var(--muted-strong); }
 .gh-banner a { color: var(--accent); text-decoration: none; font-weight: 600; }
@@ -358,10 +380,41 @@ function initBrowse() {
     });
   });
   document.addEventListener('keydown', (e) => {
-    if (e.key === '/' && document.activeElement !== search) {
-      e.preventDefault(); search.focus();
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+    if (e.key === '/') { e.preventDefault(); search.focus(); }
+    else if (e.key === 'r' || e.key === 'R') {
+      e.preventDefault();
+      const pick = ENTRIES[Math.floor(Math.random() * ENTRIES.length)];
+      window.location.href = entryHref(pick.w);
     }
+    else if (e.key === '?') { e.preventDefault(); toggleHelp(); }
+    else if (e.key === 'Escape') { closeHelp(); }
   });
+}
+
+function toggleHelp() {
+  let modal = document.getElementById('help-modal');
+  if (modal) { modal.remove(); return; }
+  modal = document.createElement('div');
+  modal.id = 'help-modal';
+  modal.className = 'help-modal';
+  modal.innerHTML = \`
+    <div class="help-card">
+      <h3>Keyboard shortcuts</h3>
+      <table>
+        <tr><td><kbd>/</kbd></td><td>focus search</td></tr>
+        <tr><td><kbd>r</kbd></td><td>random word</td></tr>
+        <tr><td><kbd>?</kbd></td><td>this help</td></tr>
+        <tr><td><kbd>Esc</kbd></td><td>close</td></tr>
+      </table>
+      <p class="hint">on a word page: <kbd>r</kbd> jumps to another random entry</p>
+    </div>\`;
+  modal.addEventListener('click', e => { if (e.target === modal) closeHelp(); });
+  document.body.appendChild(modal);
+}
+function closeHelp() {
+  const m = document.getElementById('help-modal');
+  if (m) m.remove();
 }
 
 function initWordPage() {
@@ -369,9 +422,55 @@ function initWordPage() {
     speechSynthesis.getVoices();
     speechSynthesis.onvoiceschanged = () => speechSynthesis.getVoices();
   }
+  // Keyboard shortcuts on individual word pages
+  document.addEventListener('keydown', (e) => {
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+    if (e.key === 'r' || e.key === 'R') {
+      e.preventDefault();
+      const pick = ENTRIES[Math.floor(Math.random() * ENTRIES.length)];
+      window.location.href = './' + pick.w.toLowerCase().replace(/[^a-z0-9._-]/g, '-') + '.html';
+    } else if (e.key === ' ') {
+      e.preventDefault();
+      const btn = document.querySelector('.play-primary');
+      if (btn) btn.click();
+    } else if (e.key === '/') {
+      e.preventDefault();
+      window.location.href = '../browse.html';
+    } else if (e.key === '?') { e.preventDefault(); toggleHelp(); }
+    else if (e.key === 'Escape') { closeHelp(); }
+  });
+}
+
+function todaysWord() {
+  // Deterministic per day
+  const day = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+  let hash = 0;
+  for (const c of day) hash = ((hash << 5) - hash + c.charCodeAt(0)) | 0;
+  return ENTRIES[Math.abs(hash) % ENTRIES.length];
+}
+
+function renderTodaysWord() {
+  const el = document.getElementById('todays-word');
+  if (!el) return;
+  const e = todaysWord();
+  const slug = e.w.toLowerCase().replace(/[^a-z0-9._-]/g, '-');
+  el.innerHTML = \`
+    <div class="todays-inner">
+      <div class="todays-label">📅 Today's pronunciation</div>
+      <a href="./word/\${slug}.html" class="todays-word-link">
+        <span class="todays-word">\${escHTML(e.w)}</span>
+        <span class="todays-resp">\${escHTML(e.r)}</span>
+        <span class="todays-ipa">\${escHTML(e.ipa)}</span>
+      </a>
+      <div class="todays-actions">
+        <button class="play-btn play-primary" onclick="playEntry('\${e.w}')" aria-label="Play today's word">▶</button>
+        <a href="./word/\${slug}.html" class="todays-cta">See the source →</a>
+      </div>
+    </div>\`;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  renderTodaysWord();
   if (document.getElementById('entries')) initBrowse();
   else initWordPage();
 });
@@ -460,6 +559,8 @@ cat > "$DOCS/index.html" <<EOF
       </div>
       <p class="stats-bar"><strong>${ENTRY_COUNT:-236}</strong> entries · sourced from creator interviews, project FAQs, and Wikipedia · MIT licensed</p>
     </header>
+
+    <div id="todays-word"></div>
 
     <pre class="demo">
 <span class="prompt">\$</span> say-it kubectl
@@ -793,13 +894,13 @@ while IFS="$SEP" read -r word ipa resp alt_ipa alt_resp src_url src_label cat co
   <meta property="og:description" content="$meta_desc">
   <meta property="og:type" content="article">
   <meta property="og:url" content="$SITE_URL/word/$slug">
-  <meta property="og:image" content="$SITE_URL/og.png">
+  <meta property="og:image" content="$SITE_URL/og/$slug.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="$page_title">
   <meta name="twitter:description" content="$meta_desc">
-  <meta name="twitter:image" content="$SITE_URL/og.png">
+  <meta name="twitter:image" content="$SITE_URL/og/$slug.png">
   <link rel="stylesheet" href="../style.css">
   <script type="application/ld+json">$jsonld_main</script>
 HTML
@@ -1019,8 +1120,49 @@ Allow: /
 Sitemap: $SITE_URL/sitemap.xml
 EOF
 
+# ---------------------------------------------------------------------------
+# 404.html — custom not-found page with search
+# ---------------------------------------------------------------------------
+cat > "$DOCS/404.html" <<EOF
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Word not in the dictionary — ${BRAND}</title>
+  <meta name="description" content="That word isn't in the Pronounce dictionary yet. Browse 310+ entries or open a PR to add it.">
+  <meta property="og:image" content="${SITE_URL}/og.png">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <nav class="topbar">
+    <div class="brand"><a href="/">🔊 ${BRAND}</a></div>
+    <div class="links"><a href="/">Home</a><a href="/browse.html">Browse</a><a href="https://github.com/${GH_REPO}">GitHub</a></div>
+  </nav>
+  <div class="container-narrow" style="text-align: center; padding-top: 96px;">
+    <h1 style="font-size: 88px; margin: 0; font-family: var(--mono);">404</h1>
+    <p style="color: var(--muted-strong); font-size: 20px; margin: 8px 0 36px;">That word isn't in our dictionary <em>yet</em>.</p>
+    <div class="install" style="margin-bottom: 32px;">
+      <code>git clone https://github.com/${GH_REPO}.git &amp;&amp; cd pronounce &amp;&amp; ./install.sh</code>
+    </div>
+    <p style="margin: 36px 0;">
+      <a href="/browse.html" class="cta-btn" style="background: var(--accent); color: var(--bg); padding: 12px 22px; border-radius: 6px; text-decoration: none; font-weight: 600;">Browse the dictionary →</a>
+      &nbsp;
+      <a href="https://github.com/${GH_REPO}/issues/new?template=add-word.md" style="color: var(--link); padding: 12px 22px;">or open a PR →</a>
+    </p>
+    <p style="color: var(--muted); font-size: 14px; margin-top: 48px;">
+      <kbd>r</kbd> takes you to a random word.
+    </p>
+  </div>
+  <a class="gh-float" href="https://github.com/${GH_REPO}" target="_blank" rel="noopener"><span class="star">★</span> Star on GitHub</a>
+  <script src="/script.js"></script>
+</body>
+</html>
+EOF
+
 echo "Built $DOCS/index.html"
 echo "Built $DOCS/browse.html"
+echo "Built $DOCS/404.html"
 echo "Built $DOCS/style.css"
 echo "Built $DOCS/script.js"
 echo "Built $DOCS/sitemap.xml"
