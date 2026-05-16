@@ -189,6 +189,145 @@ case "${1:-}" in
     echo "  ${C_CYAN}upstream:${C_RESET}    ${SAY_IT_UPSTREAM:-https://github.com/anzy-renlab-ai/pronounce.git}"
     exit 0
     ;;
+  -i|--interactive|repl)
+    [[ -z "$DICT" ]] && { echo "say-it: dictionary not found" >&2; exit 4; }
+    if ! command -v say >/dev/null 2>&1; then echo "say-it: macOS \`say\` required" >&2; exit 3; fi
+    echo "${C_BOLD}🔊 say-it interactive${C_RESET} ${C_DIM}(type a word + enter to play; '?' for help; ctrl-D to quit)${C_RESET}"
+    while IFS= read -r -e -p "$(printf '%s>%s ' "${C_ACCENT_FG:-$C_ORANGE}" "$C_RESET")" line; do
+      line="$(echo "$line" | sed 's/^ *//;s/ *$//')"
+      [[ -z "$line" ]] && continue
+      case "$line" in
+        "?"|h|help)
+          echo "  ${C_DIM}<word>${C_RESET}    play"
+          echo "  ${C_DIM}!w <word>${C_RESET}  show why (entry details)"
+          echo "  ${C_DIM}!r${C_RESET}        random"
+          echo "  ${C_DIM}!s${C_RESET}        stats"
+          echo "  ${C_DIM}q${C_RESET}         quit"
+          ;;
+        q|quit|exit) break ;;
+        "!r") "$0" random ;;
+        "!s") "$0" stats ;;
+        "!w "*) "$0" --why "${line#!w }" ;;
+        *) "$0" "$line" ;;
+      esac
+    done
+    echo ""
+    echo "${C_DIM}bye.${C_RESET}"
+    exit 0
+    ;;
+  stream)
+    # Read stdin, extract words present in the dict, play each in sequence.
+    # bash 3.2 compat: no assoc arrays; use awk for membership + seen tracking
+    [[ -z "$DICT" ]] && { echo "say-it: dictionary not found" >&2; exit 4; }
+    echo "${C_DIM}Reading stdin — extracting dict words…${C_RESET}"
+    cat | awk -F'\t' -v dict="$DICT" '
+      BEGIN {
+        while ((getline l < dict) > 0) {
+          if (l ~ /^#/) continue
+          n = split(l, c, "\t")
+          if (n >= 2 && c[1] != "" && c[1] != "word") {
+            lw = tolower(c[1]); known[lw] = c[1]; resp[lw] = c[3]
+          }
+        }
+        close(dict)
+      }
+      {
+        gsub(/[^A-Za-z0-9._-]+/, " ", $0)
+        n = split($0, toks, " ")
+        for (i = 1; i <= n; i++) {
+          t = tolower(toks[i])
+          if (t in known && !(t in seen)) {
+            seen[t] = 1
+            print known[t] "\t" resp[t]
+          }
+        }
+      }
+    ' | while IFS=$'\t' read -r word resp; do
+      echo "  ▶ $word"
+      [[ -z "$resp" ]] && resp="$word"
+      say -v "$VOICE" -r "$RATE" "$resp." 2>/dev/null
+    done
+    exit 0
+    ;;
+  doctor)
+    echo "${C_BOLD}🩺 say-it doctor${C_RESET}"
+    ok=0; bad=0
+    check() {
+      if eval "$2" >/dev/null 2>&1; then printf "  ${C_GREEN}✓${C_RESET} %s\n" "$1"; ok=$((ok+1))
+      else printf "  ${C_RED}✗${C_RESET} %s\n" "$1"; bad=$((bad+1)); fi
+    }
+    check "macOS detected"               "[[ \$(uname -s) == Darwin ]]"
+    check "\`say\` command present"       "command -v say"
+    check "\`afplay\` command present"    "command -v afplay"
+    check "dictionary file readable"     "[[ -r '$DICT' ]]"
+    check "cache dir writable"           "[[ -d '$CACHE_DIR' && -w '$CACHE_DIR' ]] || mkdir -p '$CACHE_DIR'"
+    check "PATH contains ~/.local/bin"   "echo \":\$PATH:\" | grep -q ':[^:]*/.local/bin:'"
+    check "python3 (for did-you-mean & exports)" "command -v python3"
+    check "pbcopy (for --copy / tweet)"  "command -v pbcopy"
+    check "git (for \`say-it update\`)"   "command -v git"
+    echo ""
+    if (( bad == 0 )); then echo "${C_GREEN}$ok checks passed — you're good.${C_RESET}"
+    else echo "${C_YELLOW}$ok passed, $bad failed.${C_RESET}"; fi
+    exit 0
+    ;;
+  export)
+    [[ -z "$DICT" ]] && { echo "say-it: dictionary not found" >&2; exit 4; }
+    fmt="${2:-json}"
+    case "$fmt" in
+      json)
+        python3 -c "
+import csv, json, sys
+keys = ['word','ipa','respelling_us','alt_ipa','alt_respelling_us','source_url','source_label','category','confidence','notes']
+with open('$DICT') as f:
+    out = []
+    for line in f:
+        if line.startswith('#') or not line.strip(): continue
+        cols = line.rstrip('\n').split('\t')
+        if len(cols) < 3 or cols[0] in ('', 'word'): continue
+        out.append({k: (cols[i] if i < len(cols) else '') for i, k in enumerate(keys)})
+print(json.dumps(out, indent=2, ensure_ascii=False))
+"
+        ;;
+      csv)
+        awk -F'\t' 'BEGIN { print "word,ipa,respelling_us,alt_ipa,alt_respelling_us,source_url,source_label,category,confidence,notes" }
+          !/^#/ && NF>=3 && $1 != "" && $1 != "word" {
+            for(i=1;i<=10;i++){ f=$i; gsub(/"/,"\"\"",f); printf "\"%s\"%s", f, (i<10?",":"\n") }
+          }' "$DICT"
+        ;;
+      md)
+        echo "# say-it pronunciation dictionary"
+        echo ""
+        echo "| Word | Respelling | IPA | Source |"
+        echo "|------|-----------|-----|--------|"
+        awk -F'\t' '!/^#/ && NF>=3 && $1 != "" && $1 != "word" {
+          src = ($7 ? $7 : "—")
+          if ($6) src = "["$7"]("$6")"
+          gsub(/\|/,"\\|",$3); gsub(/\|/,"\\|",$2)
+          printf "| `%s` | %s | `%s` | %s |\n", $1, $3, $2, src
+        }' "$DICT"
+        ;;
+      *) echo "say-it export: format must be json|csv|md" >&2; exit 2 ;;
+    esac
+    exit 0
+    ;;
+  benchmark)
+    [[ -z "$DICT" ]] && { echo "say-it: dictionary not found" >&2; exit 4; }
+    echo "${C_BOLD}⏱  say-it benchmark${C_RESET}"
+    n=10
+    start=$(python3 -c 'import time; print(time.time())')
+    for i in $(seq 1 $n); do
+      "$0" --json kubectl >/dev/null 2>&1
+    done
+    end=$(python3 -c 'import time; print(time.time())')
+    elapsed=$(python3 -c "print(round($end - $start, 3))")
+    avg=$(python3 -c "print(round(($end - $start) / $n * 1000, 1))")
+    echo "  ${C_CYAN}$n × \`--json kubectl\`:${C_RESET} ${C_BOLD}${elapsed}s${C_RESET}  (avg ${avg}ms)"
+    cache_count=$(ls "$CACHE_DIR"/*.aiff 2>/dev/null | wc -l | tr -d ' ')
+    echo "  ${C_CYAN}cache:${C_RESET}             ${cache_count} files"
+    dict_count=$(awk -F'\t' '!/^#/ && NF>=2 && $1 != "" && $1 != "word"' "$DICT" | wc -l | tr -d ' ')
+    echo "  ${C_CYAN}dict:${C_RESET}              ${dict_count} entries"
+    exit 0
+    ;;
   history)
     HIST_FILE="${SAY_IT_HISTORY_FILE:-$HOME/.local/share/say-it/history}"
     if [[ ! -f "$HIST_FILE" ]]; then echo "${C_DIM}No history yet.${C_RESET}"; exit 0; fi
