@@ -1,12 +1,12 @@
 <h1 align="center">🔊 say-it · Pronounce</h1>
 
-<p align="center"><strong>Stop saying "kub-cuttle". One Bash command pronounces 540+ developer jargon names — with cited sources.</strong></p>
+<p align="center"><strong>Stop saying "kub-cuttle". One Bash command pronounces 544+ developer jargon names — with cited sources.</strong></p>
 
 <p align="center">
 <a href="https://github.com/anzy-renlab-ai/pronounce/stargazers"><img src="https://img.shields.io/github/stars/anzy-renlab-ai/pronounce?style=social" alt="GitHub stars"></a>
 <a href="https://pronounce.renlab.ai"><img src="https://img.shields.io/badge/live-pronounce.renlab.ai-7adfbb?logo=safari&logoColor=white" alt="Live site"></a>
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
-<a href="https://pronounce.renlab.ai/browse.html"><img src="https://img.shields.io/badge/dictionary-540%2B%20entries-ff6a3d" alt="Entries"></a>
+<a href="https://pronounce.renlab.ai/browse.html"><img src="https://img.shields.io/badge/dictionary-544%2B%20entries-ff6a3d" alt="Entries"></a>
 </p>
 
 <p align="center">
@@ -50,7 +50,7 @@ That's it. Now try `say-it GIF`, `say-it nginx`, `say-it Pydantic`, `say-it --wh
 
 ## What you're actually getting
 
-- **540+ entries, every one sourced.** Confidence-tagged (`creator-clarified` / `community-consensus` / `contested`) with a citable URL where one exists. Wilhite said GIF is "jif" at the 2013 Webby Awards. Crockford says JSON is "JAY-son" (RailsConf 2009). RFC 7519 says JWT is "jot". The dictionary cites them.
+- **544+ entries, every one sourced.** Confidence-tagged (`creator-clarified` / `community-consensus` / `contested`) with a citable URL where one exists. Wilhite said GIF is "jif" at the 2013 Webby Awards. Crockford says JSON is "JAY-son" (RailsConf 2009). RFC 7519 says JWT is "jot". The dictionary cites them.
 - **Multi-reading audio.** For words where the debate is real — GIF, SQL, GUI, char, regex — the CLI chains the alternates after the primary with a spoken "or:" so you *hear* the debate without staring at the terminal. `--solo` skips the tail once you've internalized it.
 - **Zero deps. ~250 lines of Bash.** No npm, no sudo, no surprises. Wraps the `say` engine that's already on your Mac. Ships a [Claude Code skill](skills/pronounce-word/SKILL.md) and an [MCP server](mcp-server/) so your AI answers "how do you pronounce X?" with **audio**, not a phonetic guess.
 
