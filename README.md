@@ -157,19 +157,19 @@ Local override: drop a `~/.config/say-it/pronunciations.local.tsv` and it takes 
 ## What works today
 
 - ✅ macOS — any word, via the built-in `say` engine. Zero dependencies.
-- ✅ **440+** project / product / jargon entries with cited sources.
+- ✅ **544+** project / product / jargon entries with cited sources.
 - ✅ **Audible multi-reading awareness** — contested words audibly chain alternates with "or:".
 - ✅ `--alt [N]`, `--all`, `--solo`, `--why`, `--json`, `--md`, `--no-dict`, `list`, `search`, `quiz`, `repl`, `stream`, `doctor`, `export`, `benchmark`, `badge`, `cheatsheet`.
 - ✅ Claude Code skill + MCP server for AI-side pronunciation questions.
 - ✅ Browser PWA — installable, offline-capable, instant search, voice-mic search, interactive quiz.
 - ✅ Editor integrations — Raycast, Alfred, VS Code, Cursor, Codex, Continue.
+- ✅ **🌐 Live site** — [pronounce.renlab.ai](https://pronounce.renlab.ai) (every word browsable, audio, source citation) + [/zh.html](https://pronounce.renlab.ai/zh.html) (Chinese landing).
 
 ## What's coming
 
 See [`DESIGN.md`](DESIGN.md) for the architecture.
 
 - **🪟 Windows support** via PowerShell + `System.Speech.SpeechSynthesizer`, same CLI flags.
-- **🌐 Static dictionary site** on GitHub Pages — every word browsable, with a play button and source citation.
 - **☁️ Cloud TTS** (opt-in ElevenLabs / OpenAI) for the names native TTS still mangles.
 - **🐧 Linux backend** (`espeak-ng`, then cloud).
 - **🔄 `say-it update`** to pull the latest dictionary without reinstalling.
@@ -183,6 +183,12 @@ Two things we want most:
 2. **Non-Mac backends.** Windows and Linux are top priority. See `DESIGN.md` §Backends.
 
 Keep it tiny. Keep it dep-free where possible. Keep the defaults opinionated (3 reps, GenAm, Samantha voice).
+
+## Contributors
+
+<a href="https://github.com/anzy-renlab-ai/pronounce/graphs/contributors"><img src="https://contrib.rocks/image?repo=anzy-renlab-ai/pronounce" alt="Contributors"></a>
+
+Every entry, source upgrade, and skill fix counts. Open a PR — your face shows up here.
 
 ## License
 
