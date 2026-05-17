@@ -1,0 +1,37 @@
+{
+  "productName": "Pronounce",
+  "tagline": "How to pronounce kubectl, nginx, GIF — with receipts.",
+  "category": "Developer tool · CLI · open-source dictionary",
+  "domain": "pronounce.renlab.ai",
+  "problem": "Engineers butcher project names daily — kub-cuttle, eng-inks, jraffic. Every standup, every conference talk, every Loom. There's no canonical answer because the names are jargon Webster doesn't cover.",
+  "solution": "Pronounce is a 540+ entry community dictionary of how engineers actually say developer jargon — kubectl, nginx, GIF, JSON, Pydantic, Knative — with cited sources (creator interviews, project FAQs, Wikipedia). One Bash CLI, one webapp, one Claude Code skill, zero dependencies.",
+  "why_now": "AI coding agents (Claude / Cursor) hit the same wall: they read 'kubectl' and have no idea how to say it. A pronunciation MCP server fixes that in one install. Meanwhile remote-first work makes pronunciation drift worse — colleagues never hear each other say the words.",
+  "market_size": "30M+ developers worldwide (Stack Overflow 2024). Every one of them mispronounces at least one project name a week.",
+  "target_customer": "Backend engineers, DevOps, SREs, AI coding agent users, conference speakers, dev-tool YouTubers.",
+  "features": [
+    { "title": "540+ sourced entries", "description": "Every word tagged with confidence (creator-clarified / consensus / contested) and a citable source URL.", "icon": "📚" },
+    { "title": "Multi-reading audio", "description": "Contested words like GIF and SQL play 'jif … or: gif' — you hear the debate, not just one side.", "icon": "🔊" },
+    { "title": "Claude Code skill built-in", "description": "Ask Claude 'how do you pronounce X' — it returns audio + IPA + source, not a phonetic guess.", "icon": "🤖" },
+    { "title": "Zero dependencies", "description": "~250 lines of Bash wrapping macOS `say`. No npm, no sudo, no surprises.", "icon": "⚡" },
+    { "title": "MCP server", "description": "Plug into Cursor / Claude / any MCP client. The agent gets pronunciation tools for free.", "icon": "🔌" },
+    { "title": "Community-owned", "description": "Dictionary is a TSV file. Open a PR. Get your favorite mispronounced project shipped.", "icon": "📦" }
+  ],
+  "demo_video_path": "",
+  "traction": [
+    { "metric": "Dictionary entries", "value": "544", "delta": "from 0 in 6 weeks" },
+    { "metric": "MCP servers built", "value": "1", "delta": "first pronunciation MCP on record" },
+    { "metric": "Pages indexed", "value": "611", "delta": "Bing + Yandex via IndexNow" }
+  ],
+  "pricing": [
+    { "tier": "Open source", "price": "$0", "features": ["MIT license", "All 544 entries", "CLI + webapp + MCP server + Claude Code skill", "Community-maintained"], "highlight": true }
+  ],
+  "team": [
+    { "name": "alvin", "role": "Maintainer", "bio": "Engineer · built say-it after the 47th time someone said 'kub-cuttle' on a call." }
+  ],
+  "ask": { "amount": "Stars · contributions · feedback", "use_of_funds": "Every star nudges more devs to contribute their favorite mispronounced project." },
+  "primary_cta": { "text": "Star on GitHub", "url": "https://github.com/anzy-renlab-ai/pronounce" },
+  "primary_color": "#ff6a3d",
+  "secondary_color": "#7adfbb",
+  "bg_color": "#0a0a0a",
+  "elevator_pitch": "Pronounce — the dictionary engineers reach for when they realize they've been saying kubectl wrong for three years."
+}
