@@ -16,6 +16,23 @@
 
 ---
 
+## 0. Media kit — drop one of these in every post
+
+All four hosted on the v2.5.0 release. Direct CDN URLs:
+
+| Asset | Aspect | Best for | URL |
+|---|---|---|---|
+| `promo.mp4` | **16:9** · 47 s · EN voice | Hacker News, Twitter/X, LinkedIn, Mastodon, Dev.to, PH, Discord/Slack | <https://github.com/anzy-renlab-ai/pronounce/releases/download/v2.5.0/promo.mp4> |
+| `promo-zh.mp4` | **16:9** · 47 s · 中文 voice | V2EX, 掘金, WeChat 文章, 知乎 | <https://github.com/anzy-renlab-ai/pronounce/releases/download/v2.5.0/promo-zh.mp4> |
+| `promo-zh-vertical.mp4` | **9:16** · 47 s · 中文 voice | **B 站 / 抖音 / 微博 / 小红书** (vertical-first feeds) | <https://github.com/anzy-renlab-ai/pronounce/releases/download/v2.5.0/promo-zh-vertical.mp4> |
+| `deck.pptx` | 11 slides · editable | Conf talks, PH gallery, sponsor pitches | <https://github.com/anzy-renlab-ai/pronounce/releases/download/v2.5.0/deck.pptx> |
+
+**Twitter/X posting tip**: drag-drop `promo.mp4` directly into the compose box — autoplay = ~3-5× engagement vs. linking to YouTube. Same on LinkedIn.
+
+**B 站 / 抖音 / 微博**: upload `promo-zh-vertical.mp4` (1080×1920) — horizontal videos get cropped or letterboxed, killing watch time.
+
+---
+
 ## 1. Hacker News (Show HN)
 
 **Title** (≤80 chars, no emoji):

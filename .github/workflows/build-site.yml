@@ -6,6 +6,7 @@ on:
     paths:
       - 'data/pronunciations.tsv'
       - 'tools/build-site.sh'
+      - 'tools/make-og.py'
       - 'tools/make-og-all.py'
       - '.github/workflows/build-site.yml'
   workflow_dispatch:
@@ -31,6 +32,9 @@ jobs:
 
       - name: Build static site
         run: bash tools/build-site.sh
+
+      - name: Regenerate global OG card (docs/og.png — keeps "and N more." in sync with dict)
+        run: python3 tools/make-og.py
 
       - name: Regenerate per-word OG images
         run: python3 tools/make-og-all.py

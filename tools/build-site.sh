@@ -920,6 +920,14 @@ cat > "$DOCS/index.html" <<EOF
 
     <div id="todays-word"></div>
 
+    <div style="margin: 0 0 40px; text-align: center;">
+      <video controls preload="metadata" poster="/og.png" playsinline style="max-width: 720px; width: 100%; border-radius: 14px; border: 1px solid var(--border); background: #000;">
+        <source src="https://github.com/${GH_REPO}/releases/download/v2.5.0/promo.mp4" type="video/mp4">
+        <a href="https://github.com/${GH_REPO}/releases/download/v2.5.0/promo.mp4">▶ 47-second promo with voice</a>
+      </video>
+      <p style="margin: 12px 0 0; color: var(--muted); font-size: 13px;">▶ 47-second promo (with voice)</p>
+    </div>
+
     <pre class="demo">
 <span class="prompt">\$</span> say-it kubectl
 <span class="out">🔊 koob control. koob control. koob control. <span class="alt">or: cube cuddle. or: kube C T L.</span></span>
@@ -1114,6 +1122,14 @@ cat > "$DOCS/zh.html" <<EOF
       </div>
       <p class="stats-bar"><strong>${ENTRY_COUNT:-544}</strong> 条词条 · 来源覆盖创作者访谈、项目 FAQ、Wikipedia · MIT 许可</p>
     </header>
+
+    <div style="margin: 0 0 48px; text-align: center;">
+      <video controls preload="metadata" poster="/og.png" playsinline style="max-width: 720px; width: 100%; border-radius: 14px; border: 1px solid var(--border); background: #000;">
+        <source src="https://github.com/${GH_REPO}/releases/download/v2.5.0/promo-zh.mp4" type="video/mp4">
+        <a href="https://github.com/${GH_REPO}/releases/download/v2.5.0/promo-zh.mp4">▶ 47 秒中文宣传片</a>
+      </video>
+      <p style="margin: 12px 0 0; color: var(--muted); font-size: 13px;">▶ 47 秒中文宣传片 · 也有 <a href="https://github.com/${GH_REPO}/releases/download/v2.5.0/promo-zh-vertical.mp4">竖版 9:16</a>（B 站 / 抖音 / 微博）</p>
+    </div>
 
     <pre class="demo">
 <span class="prompt">\$</span> say-it kubectl
