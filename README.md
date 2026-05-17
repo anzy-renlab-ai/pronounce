@@ -24,7 +24,9 @@
 
 <p align="center"><img src="https://pronounce.renlab.ai/demo.gif" alt="say-it terminal demo" width="720"></p>
 
-<p align="center">📹 <a href="https://pronounce.renlab.ai/demo.mp4">Watch the 20-second demo</a> (with real CLI audio)</p>
+<p align="center">📹 <a href="https://pronounce.renlab.ai/demo.mp4">Watch the 20-second demo</a> (with real CLI audio) · 🎯 <a href="https://pronounce.renlab.ai/quiz.html">Try the quiz</a> · 🎤 <a href="https://pronounce.renlab.ai/#hero-search">Voice search</a></p>
+
+<p align="center"><a href="https://star-history.com/#anzy-renlab-ai/pronounce&Date"><img src="https://api.star-history.com/svg?repos=anzy-renlab-ai/pronounce&type=Date" alt="Star history" width="600"></a></p>
 
 ---
 
