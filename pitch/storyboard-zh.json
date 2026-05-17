@@ -1,0 +1,66 @@
+{
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "bg_color": "#0a0a0a",
+  "segments": [
+    {
+      "scene": "hook-slate",
+      "duration_frames": 135,
+      "props": {
+        "productName": "Pronounce",
+        "tagline": "kubectl, 有据可查"
+      }
+    },
+    {
+      "scene": "comparison-split",
+      "duration_frames": 345,
+      "transition_in": { "type": "fade", "duration_frames": 12 },
+      "props": {
+        "comparisonOldTitle": "之前",
+        "comparisonOld": ["库布喀托", "恩金克斯", "杰拉菲克", "全凭感觉"],
+        "comparisonNewTitle": "之后",
+        "comparisonNew": ["koo-buh-K-T-L", "engine X", "jif（有出处）", "say-it kubectl"]
+      }
+    },
+    {
+      "scene": "stat-highlight",
+      "duration_frames": 180,
+      "transition_in": { "type": "fade", "duration_frames": 12 },
+      "props": {
+        "bigNumber": "544",
+        "numberLabel": "条词条 · 每一条都带来源"
+      }
+    },
+    {
+      "scene": "feature-spotlight",
+      "duration_frames": 240,
+      "transition_in": { "type": "fade", "duration_frames": 12 },
+      "props": {
+        "spotlightFeature": "多读法连读",
+        "spotlightSubtext": "jif … 或者: gif。争议，听得见。"
+      }
+    },
+    {
+      "scene": "feature-spotlight",
+      "duration_frames": 300,
+      "transition_in": { "type": "fade", "duration_frames": 12 },
+      "props": {
+        "spotlightFeature": "自带 Claude Code skill",
+        "spotlightSubtext": "问 Claude: 音频 + IPA + 来源, 不是瞎猜。"
+      }
+    },
+    {
+      "scene": "cta-outro",
+      "duration_frames": 270,
+      "transition_in": { "type": "fade", "duration_frames": 12 },
+      "props": {
+        "ctaText": "GitHub 加星支持 Pronounce",
+        "ctaUrl": "github.com/anzy-renlab-ai/pronounce"
+      }
+    }
+  ],
+  "audio": {
+    "voice_path": "/tmp/say-it-voice-zh.mp3"
+  }
+}

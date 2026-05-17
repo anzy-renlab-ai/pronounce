@@ -1,15 +1,12 @@
 <h1 align="center">🔊 say-it · Pronounce</h1>
 
-<p align="center"><strong>Stop saying "kub-cuttle". A 1-file Bash CLI that pronounces 540+ developer project, product, and jargon names the way the community <em>actually</em> says them — with cited sources.</strong></p>
+<p align="center"><strong>Stop saying "kub-cuttle". One Bash command pronounces 540+ developer jargon names — with cited sources.</strong></p>
 
 <p align="center">
 <a href="https://github.com/anzy-renlab-ai/pronounce/stargazers"><img src="https://img.shields.io/github/stars/anzy-renlab-ai/pronounce?style=social" alt="GitHub stars"></a>
 <a href="https://pronounce.renlab.ai"><img src="https://img.shields.io/badge/live-pronounce.renlab.ai-7adfbb?logo=safari&logoColor=white" alt="Live site"></a>
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
 <a href="https://pronounce.renlab.ai/browse.html"><img src="https://img.shields.io/badge/dictionary-540%2B%20entries-ff6a3d" alt="Entries"></a>
-<a href="https://pronounce.renlab.ai/quiz.html"><img src="https://img.shields.io/badge/🎯-take%20the%20quiz-7adfbb" alt="Quiz"></a>
-<a href="https://pronounce.renlab.ai"><img src="https://img.shields.io/badge/platform-macOS-lightgrey?logo=apple" alt="Platform"></a>
-<a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome"></a>
 </p>
 
 <p align="center">
@@ -18,53 +15,53 @@
 📖 <a href="https://pronounce.renlab.ai/browse.html">Browse</a> ·
 🎯 <a href="https://pronounce.renlab.ai/quiz.html">Quiz</a> ·
 🎤 <a href="https://pronounce.renlab.ai/#hero-search">Voice search</a> ·
-🔌 <a href="mcp-server/">MCP server</a> ·
-🤖 <a href="integrations/">Editor integrations</a> ·
-🤝 <a href="CONTRIBUTING.md">Contribute</a>
+🔌 <a href="mcp-server/">MCP server</a>
 </p>
 
-<p align="center"><img src="https://pronounce.renlab.ai/demo.gif" alt="say-it terminal demo" width="720"></p>
+<p align="center"><img src="https://pronounce.renlab.ai/demo.gif" alt="say-it kubectl — terminal demo" width="720"></p>
 
-<p align="center">📹 <a href="https://pronounce.renlab.ai/demo.mp4">Watch the 20-second demo</a> (with real CLI audio) · 🎯 <a href="https://pronounce.renlab.ai/quiz.html">Try the quiz</a> · 🎤 <a href="https://pronounce.renlab.ai/#hero-search">Voice search</a></p>
+<p align="center">
+  <a href="https://github.com/anzy-renlab-ai/pronounce/releases/download/v2.5.0/promo.mp4"><strong>▶ Watch the 47-second promo</strong> (with voice)</a> ·
+  <a href="https://pronounce.renlab.ai/quiz.html">🎯 Try the quiz</a> ·
+  <a href="https://pronounce.renlab.ai/#hero-search">🎤 Voice search</a>
+</p>
+
+---
+
+## 🚀 Try it in 30 seconds
+
+```bash
+git clone https://github.com/anzy-renlab-ai/pronounce.git
+cd pronounce && ./install.sh
+say-it kubectl
+```
+
+```
+🔊  koob control. koob control. koob control. or: cube cuddle. or: kube C T L.
+```
+
+That's it. Now try `say-it GIF`, `say-it nginx`, `say-it Pydantic`, `say-it --why JSON`, or `say-it quiz` for a 10-question challenge. Not on macOS? The dictionary works in the browser at **[pronounce.renlab.ai](https://pronounce.renlab.ai)** — same audio, no install.
+
+> ⭐ If `say-it kubectl` saves you one cringey standup moment — **[star the repo](https://github.com/anzy-renlab-ai/pronounce)**. It nudges more devs to contribute their favorite mispronounced project name.
 
 <p align="center"><a href="https://star-history.com/#anzy-renlab-ai/pronounce&Date"><img src="https://api.star-history.com/svg?repos=anzy-renlab-ai/pronounce&type=Date" alt="Star history" width="600"></a></p>
 
 ---
 
-## The 30-second pitch
+## What you're actually getting
 
-You said "n-jinx" in standup. Or "kub-cuttle". Or you've been wondering for six months whether it's `JAY-son` or `JEE-son`. **You don't need IPA. You need to hear it.**
-
-`say-it` ships a 540-entry community dictionary of how engineers actually say the names that trip everyone up — and pipes the *intended* respelling to your OS's text-to-speech so `kubectl` comes out as `koob-control`, not whatever your computer guessed from the letters.
-
-Every entry has a **source citation**. Wilhite said GIF is "jif" at the 2013 Webby Awards. Crockford says JSON is "JAY-son" (RailsConf 2009). RFC 7519 says JWT is "jot". The dictionary cites them.
-
-When a word is multi-reading, **you hear that too** — `say-it` chains the alternates after the primary with a spoken "or:" so you know the debate exists, no terminal-watching required.
+- **540+ entries, every one sourced.** Confidence-tagged (`creator-clarified` / `community-consensus` / `contested`) with a citable URL where one exists. Wilhite said GIF is "jif" at the 2013 Webby Awards. Crockford says JSON is "JAY-son" (RailsConf 2009). RFC 7519 says JWT is "jot". The dictionary cites them.
+- **Multi-reading audio.** For words where the debate is real — GIF, SQL, GUI, char, regex — the CLI chains the alternates after the primary with a spoken "or:" so you *hear* the debate without staring at the terminal. `--solo` skips the tail once you've internalized it.
+- **Zero deps. ~250 lines of Bash.** No npm, no sudo, no surprises. Wraps the `say` engine that's already on your Mac. Ships a [Claude Code skill](skills/pronounce-word/SKILL.md) and an [MCP server](mcp-server/) so your AI answers "how do you pronounce X?" with **audio**, not a phonetic guess.
 
 ```bash
-$ say-it kubectl
-🔊  koob control. koob control. koob control. or: cube cuddle. or: kube C T L.
-
-$ say-it GIF
-🔊  jif. jif. jif. or: gif.
-
-$ say-it --alt GIF        # focus on the alternate
-🔊  gif. gif. gif.
-
 $ say-it --why JSON
 word              JSON
 ipa               /ˈdʒeɪsən/
 respelling_us     jay son
 source            Douglas Crockford (RailsConf 2009)
 url               https://www.youtube.com/watch?v=-C-JoyNuQJs
-
-$ say-it quiz             # 10-question interactive pronunciation challenge
-$ say-it -i               # REPL — type words, hear them
 ```
-
-No more squinting at `/ˈkjuːb kənˌtroʊl/`. You just hear it.
-
-> ⭐ **If this saves you from one cringey standup moment, [star the repo](https://github.com/anzy-renlab-ai/pronounce) — it nudges more devs to contribute their favorite mispronounced project name.**
 
 ---
 
@@ -97,18 +94,13 @@ Every dictionary entry includes a `source_url`. Run `say-it --why <word>` to see
 
 ## Install (macOS)
 
-```bash
-git clone https://github.com/anzy-renlab-ai/pronounce.git
-cd pronounce && ./install.sh
-```
-
-This drops:
+The "Try it in 30 seconds" block above has the full install. `./install.sh` drops:
 
 - the CLI at `~/.local/bin/say-it`,
-- the pronunciation dictionary at `~/.local/share/say-it/pronunciations.tsv`, and
+- the pronunciation dictionary at `~/.local/share/say-it/pronunciations.tsv`,
 - if you use [Claude Code](https://claude.com/claude-code), a `pronounce-word` skill at `~/.claude/skills/pronounce-word/` so any "how do you say X?" prompt to your AI gets answered with **audio** instead of IPA.
 
-Make sure `~/.local/bin` is on your `$PATH`.
+Make sure `~/.local/bin` is on your `$PATH`. Not on macOS? Use the browser version at **[pronounce.renlab.ai](https://pronounce.renlab.ai)** — same dictionary, same audio.
 
 ## Usage
 

@@ -6,11 +6,12 @@ Generated with [pitchkit](https://github.com/EricSun0218/pitchkit) (HyperFrames 
 
 | File | What | Use it for |
 |---|---|---|
-| `promo.mp4` | 47 s, 1920×1080, English narration. Hook → Before/After → 544 → Multi-reading audio → Claude Code skill → CTA. | Twitter/X, Product Hunt, LinkedIn, Hacker News, B站, 抖音 |
+| `promo.mp4` | 47 s, 1920×1080, **English** narration. Hook → Before/After → 544 → Multi-reading audio → Claude Code skill → CTA. | Twitter/X, Product Hunt, LinkedIn, Hacker News |
+| `promo-zh.mp4` | 47 s, 1920×1080, **中文** narration + 中文 visuals (不羁青年 voice). Same storyboard, localized props. | B站, 抖音, 微博, V2EX, 掘金 |
 | `deck.pptx` | 11-slide VC-style pitch deck (Cover/Problem/Solution/Product/Market/Traction/Business/Competition/Team/Ask/Closing). Editable in PowerPoint / Keynote / Google Slides. | Conference talks, PH submission collateral, sponsor pitches |
 | `ctx.json` | ProductContext — single source of truth that drives the deck + landing + voice script. | Edit + re-run `pitchkit pitch-deck` / `landing-page` / `tts-build.py` to refresh the whole kit |
-| `storyboard.json` | HyperFrames Storyboard for the promo video. Per-segment frame counts tuned to match aligned voiceover. | Edit + re-run `pitchkit render-storyboard` to re-render visuals |
-| `tts-build.py` | Per-segment MiniMax TTS builder. Each line of narration generated separately, padded with silence to its target segment duration, concatenated → one mp3 that lines up with the storyboard beats. | Re-run with `MM_KEY=...` to regenerate aligned voiceover |
+| `storyboard.json` / `storyboard-zh.json` | HyperFrames Storyboards for EN / CN promo videos. Per-segment frame counts tuned to match aligned voiceover. | Edit + re-run `pitchkit render-storyboard` to re-render visuals |
+| `tts-build.py` / `tts-build-zh.py` | Per-segment MiniMax TTS builders. Each line of narration generated separately, padded with silence to its target segment duration, concatenated → one mp3 that lines up with the storyboard beats. | Re-run with `MM_KEY=...` to regenerate aligned voiceover |
 
 ## How to regenerate
 
