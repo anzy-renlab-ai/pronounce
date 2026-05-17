@@ -1,0 +1,43 @@
+name: 💡 Feature / idea
+description: Suggest a new feature for the CLI, site, MCP server, or skill. Or propose a new editor / shell integration.
+title: "[feat] <one-line summary>"
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Big-picture roadmap items are in [`IDEAS.md`](https://github.com/anzy-renlab-ai/pronounce/blob/main/IDEAS.md). Read those first — your idea might already be planned. If yes, open a 👍 reaction or comment instead of a new issue.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's the problem this would solve?
+      description: Describe the friction or missing capability — not the solution.
+      placeholder: When I'm in <editor> and see <X>, I want to <Y> but currently have to <Z>.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Sketch a solution
+      description: What would the API / UX / behavior look like? Pseudocode and screenshots welcome.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Why this over the obvious workarounds?
+
+  - type: dropdown
+    id: willing
+    attributes:
+      label: Would you be willing to PR this?
+      options:
+        - "Yes — I can take it"
+        - "Maybe — with guidance"
+        - "No — just floating the idea"
+    validations:
+      required: true

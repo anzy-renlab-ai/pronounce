@@ -1,0 +1,16 @@
+# Default: any change → owner gets auto-requested for review.
+*       @anzy-renlab-ai
+
+# Dictionary edits are the most common contribution path — same owner,
+# called out so contributors know who'll be reviewing.
+/data/pronunciations.tsv  @anzy-renlab-ai
+
+# Build / SEO infra: stricter review since regressions ship to every page.
+/tools/build-site.sh      @anzy-renlab-ai
+/vercel.json              @anzy-renlab-ai
+
+# Claude Code skill — narrow contract with the harness; review carefully.
+/skills/                  @anzy-renlab-ai
+
+# MCP server — public surface for Cursor / Claude / agents.
+/mcp-server/              @anzy-renlab-ai

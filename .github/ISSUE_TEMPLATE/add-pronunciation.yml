@@ -1,0 +1,62 @@
+name: 🔊 Add a pronunciation entry
+description: Suggest a project / product / jargon name the dictionary should cover.
+title: "Add pronunciation entry: <word>"
+labels: ["dictionary", "good first issue", "hacktoberfest"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping the dictionary grow. Fill out what you know — the more sourced, the faster it ships.
+
+        Quicker path: open a PR with the new TSV row in [`data/pronunciations.tsv`](https://github.com/anzy-renlab-ai/pronounce/blob/main/data/pronunciations.tsv) (see [CONTRIBUTING.md](https://github.com/anzy-renlab-ai/pronounce/blob/main/CONTRIBUTING.md) for the column format). Issues are fine if you don't want to PR.
+
+  - type: input
+    id: word
+    attributes:
+      label: Word
+      description: The lookup key, canonical capitalization preserved (kubectl, nginx, Pydantic, GIF, …).
+      placeholder: kubectl
+    validations:
+      required: true
+
+  - type: input
+    id: respelling
+    attributes:
+      label: Respelling (how you'd write it for someone to read aloud)
+      description: Plain English syllables that `say` can read. e.g. "koo-buh-K-T-L", "engine X", "jif".
+      placeholder: koo-buh-K-T-L
+    validations:
+      required: true
+
+  - type: input
+    id: ipa
+    attributes:
+      label: IPA (optional)
+      description: International Phonetic Alphabet, if you have it.
+      placeholder: /ˈkuːb kənˈtroʊl/
+
+  - type: dropdown
+    id: confidence
+    attributes:
+      label: Confidence
+      description: How sure are we?
+      options:
+        - creator-clarified (the project author / FAQ said so on record)
+        - community-consensus (widely used, no single citable source)
+        - contested (multiple readings genuinely compete)
+    validations:
+      required: true
+
+  - type: input
+    id: source
+    attributes:
+      label: Source URL
+      description: Project FAQ, Wikipedia § Pronunciation, creator interview with timestamp, etc. Leave blank if no real source exists — we'd rather under-claim than fabricate.
+      placeholder: https://example.com/faq#pronunciation
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Why this matters / where you encountered it
+      description: 1-2 sentences. Helps future readers understand why this word made the cut.
+      placeholder: I've heard 4 different readings of this on calls this month.

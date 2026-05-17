@@ -1,0 +1,45 @@
+name: 📜 Upgrade a source citation
+description: Found a better source for an existing entry? (creator quote, official FAQ, project Wikipedia § Pronunciation, etc.)
+title: "Source upgrade: find a real creator citation for <word>"
+labels: ["dictionary", "good first issue", "hacktoberfest"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Many entries currently sit at `community-consensus` because no single citable source was found at curation time. If you've spotted a creator quote, official FAQ, project documentation page that documents the pronunciation, or a podcast/conference clip — please bring the receipt.
+
+  - type: input
+    id: word
+    attributes:
+      label: Word
+      placeholder: kubectl
+    validations:
+      required: true
+
+  - type: input
+    id: source
+    attributes:
+      label: New source URL
+      description: Specific page / timestamp — not the project homepage.
+      placeholder: https://www.youtube.com/watch?v=…&t=12m34s
+    validations:
+      required: true
+
+  - type: textarea
+    id: quote
+    attributes:
+      label: What the source actually says (quote or paraphrase)
+      placeholder: At 12:34 Joe Beda says "I pronounce it koo-buh-K-T-L."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: new_confidence
+    attributes:
+      label: After this upgrade, confidence should be
+      options:
+        - creator-clarified
+        - community-consensus
+        - contested
+    validations:
+      required: true

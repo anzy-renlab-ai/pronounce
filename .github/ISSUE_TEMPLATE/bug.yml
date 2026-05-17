@@ -1,0 +1,47 @@
+name: 🐛 Bug report
+description: Something in the CLI, the site, the MCP server, or the Claude Code skill misbehaves.
+title: "[bug] <one-line summary>"
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Where did it happen?
+      options:
+        - CLI (`say-it` command)
+        - Site (https://pronounce.renlab.ai)
+        - MCP server
+        - Claude Code skill (`pronounce-word`)
+        - Other / not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you do, what did you see, what did you expect?
+      placeholder: |
+        I ran `say-it kubectl` and …
+        I expected …
+        Instead …
+    validations:
+      required: true
+
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version (CLI bugs only)
+      placeholder: "14.6.1"
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser + version (site bugs only)
+      placeholder: "Chrome 132 / Safari 18 / Firefox 130"
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else
+      description: Stack traces, screenshots, terminal output. Anything that helps reproduce.

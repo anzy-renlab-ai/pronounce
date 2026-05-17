@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Discussions — pronunciation wishlist
+    url: https://github.com/anzy-renlab-ai/pronounce/discussions/34
+    about: Vote on / suggest words for the next batch instead of opening an issue.
+  - name: 📢 Discussions — announcements
+    url: https://github.com/anzy-renlab-ai/pronounce/discussions/categories/announcements
+    about: Read about new releases and what shipped last.
+  - name: 🌐 Live site
+    url: https://pronounce.renlab.ai
+    about: Try the dictionary in your browser before filing an issue.

@@ -1,5 +1,43 @@
 # Changelog
 
+## v2.5.0 — 2026-05-17
+
+### Added
+- **`/zh.html`** — full Chinese landing for V2EX / 掘金 / B站 / 微博 audience. Mirrors the English landing (hero, demo, Famous Moments, features, FAQ, GH CTA) with `lang="zh-Hans"` and matching schema. Dictionary stays GenAm-only; only site copy is localized.
+- **Site-wide 中文 nav link** propagated through every nav template (home, browse, per-word, daily archive, category index, about). hreflang `zh-Hans` + `zh-CN` declared on the EN landing for search engines.
+- **`pitch/`** — distribution kit for the maintainer to take to socials without leaving the checkout.
+  - `promo.mp4` — 47 s, 1920×1080, MiniMax-narrated promo built per-segment so the voiceover lands on each storyboard beat (no audio drift).
+  - `deck.pptx` — 11-slide editable VC-style pitch deck.
+  - `ctx.json` / `storyboard.json` / `tts-build.py` — sources for regen.
+- **Issue templates** (`.github/ISSUE_TEMPLATE/`) — `🔊 Add a pronunciation entry`, `📜 Upgrade a source citation`, `🐛 Bug report`, `💡 Feature / idea` — each opinionated about what info to capture so future PR translation is mechanical.
+- **`.github/CODEOWNERS`** — auto-routes review requests for dictionary, build script, skill, and MCP server changes.
+
+## v2.4.0 — 2026-05-17
+
+### Added
+- **`/faq.html`** with `FAQPage` JSON-LD targeting "how to pronounce X" queries — the canonical Google snippet for the project.
+
+## v2.3.0 — 2026-05-17
+
+### Added
+- **`/receipts.html`** — showcase of 20 creator-clarified pronunciations with direct citation links (Wilhite/GIF, GNU FAQ, etcd FAQ, …).
+- **"Top 25"** nav link wired across every page → `/hall-of-shame.html`.
+
+## v2.2.0 — 2026-05-17
+
+### Added
+- **SEO push**: `llms.txt` + `llms-full.txt` (llmstxt.org standard), per-word `WebPage` + `AudioObject` + `LearningResource` + `BreadcrumbList` + Speakable JSON-LD, `hreflang en` + `x-default` on top pages, image sitemap (1100 image URLs), `robots.txt` explicitly allowing GPTBot/ClaudeBot/PerplexityBot/Amazonbot/etc.
+- **61 `/daily/[YYYY-MM-DD].html`** long-tail pages with Article JSON-LD (deterministic rotation).
+- **IndexNow live submission** + `.github/workflows/indexnow.yml` cron — Bing HTTP 200 + Yandex HTTP 202.
+- **Dictionary 496 → 544 entries.**
+
+## v2.1.0 — 2026-05-17
+
+### Added
+- Hero typewriter cycle (kubectl → nginx → GIF → JSON → …).
+- Perfect-score confetti on `/quiz.html`.
+- **Dictionary 440 → 496 entries.**
+
 ## v2.0.0 — 2026-05-17 (500-round optimization)
 
 Massive feature + content push. 440+ dictionary entries, interactive quiz, voice search, instant landing-page search, accessibility polish.
