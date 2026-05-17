@@ -887,6 +887,7 @@ cat > "$DOCS/index.html" <<EOF
     <div class="links">
       <a href="./browse.html">Browse</a>
       <a href="./quiz.html">Quiz</a>
+      <a href="./hall-of-shame.html">Top 25</a>
       <a href="./stats.html">Stats</a>
       <a href="https://github.com/${GH_REPO}">GitHub</a>
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button>
@@ -1742,6 +1743,7 @@ TODAY="$(date +%Y-%m-%d)"
   printf '  <url><loc>%s/</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>\n' "$SITE_URL" "$TODAY"
   printf '  <url><loc>%s/browse.html</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>\n' "$SITE_URL" "$TODAY"
   printf '  <url><loc>%s/quiz.html</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>\n' "$SITE_URL" "$TODAY"
+  printf '  <url><loc>%s/hall-of-shame.html</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>\n' "$SITE_URL" "$TODAY"
   printf '  <url><loc>%s/stats.html</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>\n' "$SITE_URL" "$TODAY"
   printf '  <url><loc>%s/about.html</loc><lastmod>%s</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>\n' "$SITE_URL" "$TODAY"
   printf '  <url><loc>%s/daily/</loc><lastmod>%s</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>\n' "$SITE_URL" "$TODAY"
