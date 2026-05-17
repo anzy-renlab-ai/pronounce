@@ -8,6 +8,21 @@ import pathlib
 
 REPO = pathlib.Path(__file__).resolve().parent.parent
 OUT = REPO / "docs" / "og.png"
+DICT = REPO / "data" / "pronunciations.tsv"
+
+def entry_count() -> int:
+    n = 0
+    with open(DICT) as f:
+        for line in f:
+            if line.startswith("#"):
+                continue
+            cols = line.rstrip("\n").split("\t")
+            if len(cols) >= 3 and cols[0] and cols[0] != "word":
+                n += 1
+    return n
+
+ENTRIES = entry_count()
+OTHERS = ENTRIES - 1  # subtract the "kubectl" headline word
 
 W, H = 1200, 630
 
@@ -84,7 +99,7 @@ draw.text((60, 48), "🔊  pronounce.renlab.ai", font=font_brand, fill=ACCENT_2)
 HEADLINE_TOP = 110
 draw.text((60, HEADLINE_TOP), "How to pronounce", font=font_subtitle, fill=MUTED_STRONG)
 draw.text((60, HEADLINE_TOP + 50), "kubectl", font=font_title, fill=FG)
-draw.text((60, HEADLINE_TOP + 132), "and 235 more.", font=font_title, fill=ACCENT)
+draw.text((60, HEADLINE_TOP + 132), f"and {OTHERS} more.", font=font_title, fill=ACCENT)
 
 # Subhead
 draw.text((60, HEADLINE_TOP + 218),
