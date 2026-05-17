@@ -14,6 +14,7 @@
 
 <p align="center">
 🌐 <a href="https://pronounce.renlab.ai"><strong>pronounce.renlab.ai</strong></a> ·
+🇨🇳 <a href="https://pronounce.renlab.ai/zh.html" hreflang="zh-Hans">中文</a> ·
 📖 <a href="https://pronounce.renlab.ai/browse.html">Browse</a> ·
 🎯 <a href="https://pronounce.renlab.ai/quiz.html">Quiz</a> ·
 🎤 <a href="https://pronounce.renlab.ai/#hero-search">Voice search</a> ·
