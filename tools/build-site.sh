@@ -847,6 +847,8 @@ cat > "$DOCS/index.html" <<EOF
   <meta name="keywords" content="how to pronounce kubectl, how to pronounce nginx, how to pronounce GIF, how to pronounce JSON, project name pronunciation, developer pronunciation guide">
   <link rel="canonical" href="${SITE_URL}/">
   <link rel="alternate" hreflang="en" href="${SITE_URL}/">
+  <link rel="alternate" hreflang="zh-Hans" href="${SITE_URL}/zh.html">
+  <link rel="alternate" hreflang="zh-CN" href="${SITE_URL}/zh.html">
   <link rel="alternate" hreflang="x-default" href="${SITE_URL}/">
   <meta property="og:title" content="How to pronounce kubectl, nginx, GIF, JSON — ${BRAND}">
   <meta property="og:description" content="A community-maintained pronunciation dictionary for developer jargon. With sources. Open source, MIT.">
@@ -889,6 +891,7 @@ cat > "$DOCS/index.html" <<EOF
       <a href="./quiz.html">Quiz</a>
       <a href="./hall-of-shame.html">Top 25</a>
       <a href="./stats.html">Stats</a>
+      <a href="./zh.html" hreflang="zh-Hans" lang="zh-Hans">中文</a>
       <a href="https://github.com/${GH_REPO}">GitHub</a>
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button>
     </div>
@@ -1009,6 +1012,211 @@ $FAMOUS_HTML
 
   <footer class="footer">
     <p>${BRAND} · MIT · <a href="https://github.com/${GH_REPO}">GitHub</a> · <a href="https://github.com/${GH_REPO}/blob/main/CONTRIBUTING.md">Contribute</a> · <a href="https://github.com/${GH_REPO}/blob/main/IDEAS.md">Roadmap</a></p>
+  </footer>
+
+  <script src="./script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const c = document.getElementById('entries');
+      if (!c) return;
+      const max = 8;
+      c.querySelectorAll('.entry').forEach((el, i) => { if (i >= max) el.style.display = 'none'; });
+    });
+  </script>
+</body>
+</html>
+EOF
+
+# ---------------------------------------------------------------------------
+# zh.html — 中文落地页 (V2EX/掘金/微博 audience)
+# ---------------------------------------------------------------------------
+cat > "$DOCS/zh.html" <<EOF
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>kubectl / nginx / GIF / JSON 怎么读 — ${BRAND} 程序员发音词典</title>
+  <meta name="description" content="开源、社区维护的程序员发音词典，${ENTRY_COUNT:-544} 条词条带来源引用——kubectl、nginx、GIF、JSON、Pydantic、Knative、LaTeX、Postgres ……不再为读音吵架。命令行工具 + 互动测验 + 语音搜索 + MCP server + Claude Code skill 一应俱全。">
+  <meta name="keywords" content="kubectl 怎么读, nginx 发音, GIF 发音, JSON 发音, 程序员发音, 项目名读音, 英文发音词典">
+  <link rel="canonical" href="${SITE_URL}/zh.html">
+  <link rel="alternate" hreflang="zh-Hans" href="${SITE_URL}/zh.html">
+  <link rel="alternate" hreflang="zh-CN" href="${SITE_URL}/zh.html">
+  <link rel="alternate" hreflang="en" href="${SITE_URL}/">
+  <link rel="alternate" hreflang="x-default" href="${SITE_URL}/">
+  <meta property="og:title" content="kubectl / nginx / GIF / JSON 怎么读 — ${BRAND}">
+  <meta property="og:description" content="开源、社区维护的程序员发音词典，带来源引用。MIT 许可，命令行 + 网站 + Claude Code skill。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="${SITE_URL}/zh.html">
+  <meta property="og:image" content="${SITE_URL}/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="kubectl / nginx / GIF / JSON 怎么读">
+  <meta name="twitter:description" content="社区维护的程序员发音词典，每条带可引用的来源。">
+  <meta name="twitter:image" content="${SITE_URL}/og.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#ff6a3d">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="./style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "${BRAND}",
+    "inLanguage": "zh-Hans",
+    "description": "社区维护的程序员项目与产品名发音词典。",
+    "url": "${SITE_URL}/zh.html",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "${SITE_URL}/browse.html?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <div class="gh-banner">⭐ 这词典帮你少念错一次 "库布喀托" — <a href="https://github.com/${GH_REPO}">来 GitHub 给个星</a></div>
+  <nav class="topbar">
+    <div class="brand"><a href="./zh.html">🔊 ${BRAND}</a></div>
+    <div class="links">
+      <a href="./browse.html">浏览词条</a>
+      <a href="./quiz.html">测验</a>
+      <a href="./hall-of-shame.html">Top 25 易错</a>
+      <a href="./stats.html">数据</a>
+      <a href="./" hreflang="en" lang="en">English</a>
+      <a href="https://github.com/${GH_REPO}">GitHub</a>
+      <button id="theme-toggle" class="theme-toggle" aria-label="切换主题">◐</button>
+    </div>
+  </nav>
+
+  <div class="container" id="main">
+
+    <header class="hero">
+      <h1><span class="speaker">🔊</span><br><code id="hero-cycle" class="hero-cycle">kubectl</code><br>到底怎么读？</h1>
+      <p class="tagline">一份社区维护的程序员发音词典——<code>kubectl</code>、<code>nginx</code>、<code>GIF</code>、<code>JSON</code>、<code>Pydantic</code>、<code>Knative</code>、<code>LaTeX</code>、<code>Postgres</code> ……每条都<strong>带来源引用</strong>，不再凭感觉吵。</p>
+      <div class="hero-search" role="search">
+        <input id="hero-search" type="search" placeholder="🔍 输入单词 — kubectl、nginx、Pydantic、JWT…" autocomplete="off" aria-label="搜索发音词典">
+        <button id="hero-mic" type="button" class="hero-mic" aria-label="语音输入">🎤</button>
+        <div id="hero-suggest" class="hero-suggest" role="listbox" hidden></div>
+      </div>
+      <div class="cta">
+        <a href="./browse.html">浏览全部 ${ENTRY_COUNT:-544} 条词条 →</a>
+        <a class="secondary" href="./quiz.html">🎯 来做个测验</a>
+        <a class="secondary" href="https://github.com/${GH_REPO}">GitHub</a>
+      </div>
+      <div class="install">
+        <code>git clone https://github.com/${GH_REPO}.git &amp;&amp; cd pronounce &amp;&amp; ./install.sh</code>
+      </div>
+      <p class="stats-bar"><strong>${ENTRY_COUNT:-544}</strong> 条词条 · 来源覆盖创作者访谈、项目 FAQ、Wikipedia · MIT 许可</p>
+    </header>
+
+    <pre class="demo">
+<span class="prompt">\$</span> say-it kubectl
+<span class="out">🔊 koob control. koob control. koob control. <span class="alt">或读: cube cuddle. 或读: kube C T L.</span></span>
+
+<span class="prompt">\$</span> say-it GIF
+<span class="out">🔊 jif. jif. jif. <span class="alt">或读: gif.</span></span>          <span class="comment"># 带来源 — Wilhite 2013 年 Webby 奖现场亲口说</span>
+
+<span class="prompt">\$</span> say-it --why JSON
+<span class="comment">word              JSON
+ipa               /ˈdʒeɪsən/
+respelling_us     jay son
+source            Wikipedia § Pronunciation
+url               https://en.wikipedia.org/wiki/JSON#Pronunciation</span></pre>
+
+    <section class="famous">
+      <h2>📜 经典案例（创作者钦定的读法）</h2>
+      <p class="sub">有些读音不是观点之争——创作者已经留下了"官方"答案。</p>
+      <div class="famous-list">
+        <div class="famous-item"><span class="fam-word">nginx</span> → <span class="fam-resp">engine X（"引擎 X"）</span><a class="fam-src" href="https://nginx.org/en/" target="_blank" rel="noopener">NGINX 官方</a></div>
+        <div class="famous-item"><span class="fam-word">GIF</span> → <span class="fam-resp">jif（"吉夫"）</span><a class="fam-src" href="https://www.nytimes.com/2013/05/22/business/media/creator-of-the-gif-says-its-pronounced-jif.html" target="_blank" rel="noopener">Steve Wilhite, NYT (2013)</a></div>
+        <div class="famous-item"><span class="fam-word">GNU</span> → <span class="fam-resp">guh new（"哥扭"）</span><a class="fam-src" href="https://www.gnu.org/gnu/pronunciation.html" target="_blank" rel="noopener">GNU 官方</a></div>
+        <div class="famous-item"><span class="fam-word">etcd</span> → <span class="fam-resp">et C D（字母念）</span><a class="fam-src" href="https://etcd.io/docs/v3.5/faq/" target="_blank" rel="noopener">etcd FAQ</a></div>
+        <div class="famous-item"><span class="fam-word">PostgreSQL</span> → <span class="fam-resp">post gress Q L</span><a class="fam-src" href="https://www.postgresql.org/docs/current/faq.html" target="_blank" rel="noopener">PostgreSQL FAQ</a></div>
+        <div class="famous-item"><span class="fam-word">MySQL</span> → <span class="fam-resp">my S Q L（字母念）</span><a class="fam-src" href="https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html" target="_blank" rel="noopener">MySQL 文档</a></div>
+        <div class="famous-item"><span class="fam-word">Debian</span> → <span class="fam-resp">deb ee un（"德比恩"）</span><a class="fam-src" href="https://www.debian.org/intro/about" target="_blank" rel="noopener">Debian 介绍</a></div>
+        <div class="famous-item"><span class="fam-word">Django</span> → <span class="fam-resp">jang go（"姜狗"，D 不发音）</span><a class="fam-src" href="https://www.djangoproject.com/foundation/faq/" target="_blank" rel="noopener">Django FAQ</a></div>
+        <div class="famous-item"><span class="fam-word">LaTeX</span> → <span class="fam-resp">lay tek（"雷泰克"）</span><a class="fam-src" href="https://www.latex-project.org/about/" target="_blank" rel="noopener">LaTeX 项目</a></div>
+        <div class="famous-item"><span class="fam-word">TeX</span> → <span class="fam-resp">tek（"泰克"，X 是希腊字母 χ）</span><a class="fam-src" href="https://en.wikipedia.org/wiki/TeX#Pronunciation_and_spelling" target="_blank" rel="noopener">Wikipedia</a></div>
+        <div class="famous-item"><span class="fam-word">Lua</span> → <span class="fam-resp">loo ah（"路啊"）</span><a class="fam-src" href="https://www.lua.org/about/" target="_blank" rel="noopener">Lua 官方</a></div>
+      </div>
+    </section>
+
+    <div class="section-title">这个工具盒里有什么</div>
+    <div class="features">
+      <div class="feature"><span class="icon">🗂</span><h3>${ENTRY_COUNT:-544}+ 条词条，每条带来源</h3><p>项目名、产品名、程序员行话、缩写。每条带 confidence 标签（创作者钦定 / 社区共识 / 有争议）和可点开的来源链接。</p></div>
+      <div class="feature"><span class="icon">🔊</span><h3>多读法链式播放</h3><p>对于 GIF / SQL / GUI / kubectl 这类有争议的词，CLI 会把所有读法连着播——"……或读: gif."——你不盯终端也能听到争议。</p></div>
+      <div class="feature"><span class="icon">🤖</span><h3>自带 Claude Code skill</h3><p>问 Claude："X 怎么读？"——它会播音频、给 IPA、附来源引用，而不是瞎猜一个音标。</p></div>
+      <div class="feature"><span class="icon">⚡</span><h3>零依赖，~250 行 Bash</h3><p>包了 macOS 自带的 <code>say</code> 引擎。无 npm、无 sudo、无 surprise。</p></div>
+      <div class="feature"><span class="icon">🔁</span><h3>多种播放控制</h3><p><code>--alt</code> 听备选读法，<code>--all</code> 听所有变体，<code>--solo</code> 跳过链式，<code>--why</code> 看完整词条和来源 URL。</p></div>
+      <div class="feature"><span class="icon">📦</span><h3>社区共有</h3><p>词典本身就是一个 TSV 文件，欢迎 PR 加入你身边被念错的项目名 —— 详见 <a href="https://github.com/${GH_REPO}/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a>。</p></div>
+    </div>
+
+    <div class="section-title">为什么要"听"而不是"看 IPA"</div>
+    <p style="color: var(--muted-strong); margin-bottom: 28px;">IPA 是参考，就像查一个外语词的字典条目——你不会盯着 <code>/ˈʃɑːdənˌfrɔɪdə/</code> 去学发音，你听别人念三遍才学会。<strong>${BRAND}</strong> 把系统 TTS 接到一行 CLI 上，让答案直接进耳朵，而不是停在纸面上的音标。</p>
+
+    <div class="section-title">试试看</div>
+    <p style="margin-bottom: 16px; color: var(--muted-strong);">点 ▶ 在浏览器里听。（音质因浏览器而异——装上 CLI 听 macOS Samantha 的原声更准。）</p>
+    <div id="entries"></div>
+
+    <p style="text-align: center; margin-top: 32px;">
+      <a href="./browse.html" style="color: var(--accent); font-size: 16px;">查看全部 ${ENTRY_COUNT:-544} 条 →</a>
+    </p>
+
+    <section class="faq">
+      <h2>常见问题</h2>
+      <details>
+        <summary>为什么不直接看 YouTube 视频？</summary>
+        <p>因为你得先搜对视频、取消静音、等加载、再倒回。<code>say-it kubectl</code> 在 4 秒内把正确读法播三遍。网站是给你不在终端旁时用的。</p>
+      </details>
+      <details>
+        <summary>浏览器里的声音和 CLI 不一样？</summary>
+        <p>CLI 用 macOS 内置的 <code>say</code>，配合调好的 respelling。网站用浏览器的 Web Speech API，发音引擎随 OS / 浏览器变。GIF 这类争议词两边应一致；项目名带怪读音时以 CLI 为准。</p>
+      </details>
+      <details>
+        <summary>和普通发音词典有什么区别？</summary>
+        <p>这本只收程序员日常会念的名字——<code>kubectl</code>、<code>nginx</code>、<code>Pydantic</code>、<code>Knative</code>、<code>Cilium</code>。Webster 没收，这里有，并且每条带 confidence 标签和（尽可能）一条可引用的来源。</p>
+      </details>
+      <details>
+        <summary>为什么 GIF 是 "jif"？我一直读 "gif"。</summary>
+        <p>两种读法都真实存在。词典把创作者亲口说的读法 ("jif"，Steve Wilhite 2013 年 Webby 奖) 列为主读，"gif" 作为 alt。<code>say-it --alt GIF</code> 听备选。SQL / JSON / char / regex 同款多读处理。</p>
+      </details>
+      <details>
+        <summary>支持 Windows / Linux 吗？</summary>
+        <p>是的——Windows (PowerShell + System.Speech) 和 Linux (espeak-ng / 云 TTS) 在 M2/M3 路线图上。词典本身平台无关，只有播放引擎需要平台后端。欢迎 PR。</p>
+      </details>
+      <details>
+        <summary>怎么加一个缺失的项目？</summary>
+        <p>提个 PR，在 <a href="https://github.com/${GH_REPO}/blob/main/data/pronunciations.tsv">data/pronunciations.tsv</a> 加一行。列格式见 <a href="https://github.com/${GH_REPO}/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a>。还有 <a href="https://github.com/${GH_REPO}/issues/1">置顶 issue</a> 收集愿望清单。</p>
+      </details>
+      <details>
+        <summary>来源 URL 是必填的吗？</summary>
+        <p>不必。没有可靠来源就留空，confidence 标 <code>community-consensus</code>。宁可保守也不胡编。</p>
+      </details>
+      <details>
+        <summary>为什么 CLI 在主读后还播 "or: gif"？</summary>
+        <p>多读法的词自带语境——你应该知道存在争议。可听的 <code>"or: &lt;alt&gt;"</code> 尾巴让你不盯终端也能感知。熟了之后 <code>--solo</code> 跳过即可。</p>
+      </details>
+    </section>
+
+    <div class="gh-cta">
+      <h3>⭐ 喜欢就给个 Star</h3>
+      <p>词典靠社区维护——每多一个 Star 都在推动更多开发者贡献自己手上被念错的项目名。</p>
+      <a href="https://github.com/${GH_REPO}" class="gh-btn" target="_blank" rel="noopener"><span class="star">★</span> 来 GitHub 加星</a>
+      <img class="shields" src="https://img.shields.io/github/stars/${GH_REPO}?style=social" alt="GitHub stars">
+    </div>
+
+  </div>
+
+  <a class="gh-float" href="https://github.com/${GH_REPO}" target="_blank" rel="noopener"><span class="star">★</span> Star on GitHub</a>
+
+  <footer class="footer">
+    <p>${BRAND} · MIT · <a href="./">English</a> · <a href="https://github.com/${GH_REPO}">GitHub</a> · <a href="https://github.com/${GH_REPO}/blob/main/CONTRIBUTING.md">参与贡献</a> · <a href="https://github.com/${GH_REPO}/blob/main/IDEAS.md">路线图</a></p>
   </footer>
 
   <script src="./script.js"></script>
@@ -1743,6 +1951,7 @@ TODAY="$(date +%Y-%m-%d)"
   printf '<?xml version="1.0" encoding="UTF-8"?>\n'
   printf '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
   printf '  <url><loc>%s/</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>\n' "$SITE_URL" "$TODAY"
+  printf '  <url><loc>%s/zh.html</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>\n' "$SITE_URL" "$TODAY"
   printf '  <url><loc>%s/browse.html</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>\n' "$SITE_URL" "$TODAY"
   printf '  <url><loc>%s/quiz.html</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>\n' "$SITE_URL" "$TODAY"
   printf '  <url><loc>%s/hall-of-shame.html</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>\n' "$SITE_URL" "$TODAY"
