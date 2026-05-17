@@ -1054,6 +1054,7 @@ cat > "$DOCS/browse.html" <<EOF
     <div class="links">
       <a href="./">Home</a>
       <a href="./quiz.html">Quiz</a>
+      <a href="./hall-of-shame.html">Top 25</a>
       <a href="./stats.html">Stats</a>
       <a href="https://github.com/${GH_REPO}">GitHub</a>
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button>
@@ -1342,6 +1343,7 @@ HTML
     <div class="links">
       <a href="../browse.html">Browse all</a>
       <a href="../quiz.html">Quiz</a>
+      <a href="../hall-of-shame.html">Top 25</a>
       <a href="../stats.html">Stats</a>
       <a href="https://github.com/$GH_REPO">GitHub</a>
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button>
@@ -1939,7 +1941,7 @@ done
 <a class="skip-link" href="#main">Skip to main content</a>
 <div class="gh-banner">⭐ <a href="https://github.com/$GH_REPO">Star on GitHub</a></div>
 <nav class="topbar"><div class="brand"><a href="/">🔊 $BRAND</a></div>
-<div class="links"><a href="/">Home</a><a href="/browse.html">Browse</a><a href="/quiz.html">Quiz</a><a href="/stats.html">Stats</a>
+<div class="links"><a href="/">Home</a><a href="/browse.html">Browse</a><a href="/quiz.html">Quiz</a><a href="/hall-of-shame.html">Top 25</a><a href="/stats.html">Stats</a>
 <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button></div></nav>
 <main class="container" id="main">
 <h1 style="font-size: 36px;">📅 Pronunciation of the day — archive</h1>
@@ -2072,6 +2074,7 @@ cat > "$DOCS/stats.html" <<EOF
       <a href="./">Home</a>
       <a href="./browse.html">Browse</a>
       <a href="./quiz.html">Quiz</a>
+      <a href="./hall-of-shame.html">Top 25</a>
       <a href="https://github.com/${GH_REPO}">GitHub</a>
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button>
     </div>
@@ -2182,7 +2185,7 @@ awk -F'\t' '!/^#/ && NF>=8 && $1 != "" && $1 != "word" { print $8 }' "$DICT" | s
     printf '</head>\n<body>\n'
     printf '  <div class="gh-banner">⭐ <a href="https://github.com/%s">Star on GitHub</a></div>\n' "$GH_REPO"
     printf '  <nav class="topbar"><div class="brand"><a href="/">🔊 %s</a></div>\n' "$BRAND"
-    printf '    <div class="links"><a href="/">Home</a><a href="/browse.html">Browse all</a><a href="/quiz.html">Quiz</a><a href="/stats.html">Stats</a>\n'
+    printf '    <div class="links"><a href="/">Home</a><a href="/browse.html">Browse all</a><a href="/quiz.html">Quiz</a><a href="/hall-of-shame.html">Top 25</a><a href="/stats.html">Stats</a>\n'
     printf '      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button></div></nav>\n'
     printf '  <div class="container">\n'
     printf '    <h1>Category: <code>%s</code></h1>\n' "$catname"
@@ -2278,6 +2281,7 @@ cat > "$DOCS/about.html" <<EOF
       <a href="/">Home</a>
       <a href="/browse.html">Browse</a>
       <a href="/quiz.html">Quiz</a>
+      <a href="/hall-of-shame.html">Top 25</a>
       <a href="/stats.html">Stats</a>
       <a href="https://github.com/${GH_REPO}">GitHub</a>
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button>
