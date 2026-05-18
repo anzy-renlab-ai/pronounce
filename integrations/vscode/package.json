@@ -5,14 +5,15 @@
   "version": "0.1.0",
   "publisher": "sayit",
   "license": "MIT",
+  "icon": "icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/alvinhochun/say-it",
+    "url": "https://github.com/anzy-renlab-ai/pronounce",
     "directory": "integrations/vscode"
   },
-  "homepage": "https://github.com/alvinhochun/say-it/tree/main/integrations/vscode",
+  "homepage": "https://github.com/anzy-renlab-ai/pronounce/tree/main/integrations/vscode",
   "bugs": {
-    "url": "https://github.com/alvinhochun/say-it/issues"
+    "url": "https://github.com/anzy-renlab-ai/pronounce/issues"
   },
   "engines": {
     "vscode": "^1.85.0"

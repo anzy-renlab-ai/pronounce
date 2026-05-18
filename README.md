@@ -140,9 +140,28 @@ Once installed, the `pronounce-word` skill auto-triggers on:
 
 Your AI replies with **sound**, not just a phonetic guess. Skill file: [`skills/pronounce-word/SKILL.md`](skills/pronounce-word/SKILL.md).
 
+## VS Code extension
+
+Hover over any tech word in any file — see the IPA, hear the pronunciation. Same dictionary as the CLI, no daemon, zero runtime parse cost (dictionary is JSON-bundled at build).
+
+```bash
+# 1. install from .vsix
+code --install-extension integrations/vscode/pronounce-0.1.0.vsix
+
+# 2. or from the marketplace (when published)
+#    VS Code:    ext install sayit.pronounce
+#    Cursor:     same ID via Open VSX
+```
+
+- **Hover** over `kubectl`, `YAML`, `Ghostty`, `wagmi`… → tooltip with IPA + 🔊 Play.
+- **⌘⇧'** — speak selection.
+- **`Pronounce: Search dictionary…`** — fuzzy-find all 817 entries.
+
+Source: [`integrations/vscode/`](integrations/vscode/). Mac-only v0.1 (uses `say`); cross-platform on roadmap.
+
 ## How the dictionary works
 
-`data/pronunciations.tsv` is the single source of truth — tab-separated, 70+ entries at v0.1, covering:
+`data/pronunciations.tsv` is the single source of truth — tab-separated, 817 entries, covering:
 
 - **Cloud / DevOps:** `kubectl`, `nginx`, `Kubernetes`, `helm`, `Istio`, `Envoy`, `Prometheus`, `Grafana`, `Terraform`, `Argo`, `Knative`, `etcd`, `containerd`, `runc`, `Podman`, ...
 - **Languages / Frameworks:** `Django`, `Vue`, `Vite`, `Pydantic`, `Bun`, `Deno`, `Hugo`, `Hono`, `Caddy`, `Svelte`, `Astro`, `Pinia`, ...
@@ -157,7 +176,7 @@ Local override: drop a `~/.config/say-it/pronunciations.local.tsv` and it takes 
 ## What works today
 
 - ✅ macOS — any word, via the built-in `say` engine. Zero dependencies.
-- ✅ **544+** project / product / jargon entries with cited sources.
+- ✅ **817+** project / product / jargon entries with cited sources.
 - ✅ **Audible multi-reading awareness** — contested words audibly chain alternates with "or:".
 - ✅ `--alt [N]`, `--all`, `--solo`, `--why`, `--json`, `--md`, `--no-dict`, `list`, `search`, `quiz`, `repl`, `stream`, `doctor`, `export`, `benchmark`, `badge`, `cheatsheet`.
 - ✅ Claude Code skill + MCP server for AI-side pronunciation questions.

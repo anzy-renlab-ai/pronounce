@@ -1,8 +1,8 @@
 # Pronounce — VS Code
 
-Hover over `kubectl`, `nginx`, `kubectl`, `GIF`, `Affine`, `Logseq` — see IPA, hear the pronunciation. Backed by the community-curated [Pronounce.ai](https://github.com/alvinhochun/say-it) dictionary (~625 tech terms).
+Hover over `kubectl`, `nginx`, `kubectl`, `GIF`, `Affine`, `Logseq` — see IPA, hear the pronunciation. Backed by the community-curated [Pronounce.ai](https://github.com/anzy-renlab-ai/pronounce) dictionary (~817 tech terms).
 
-> **macOS only in v0.1.** Uses the built-in `say` voice. Linux/Windows backends are on the roadmap (track issue [#vscode-ext-crossplatform](https://github.com/alvinhochun/say-it/issues)).
+> **macOS only in v0.1.** Uses the built-in `say` voice. Linux/Windows backends are on the roadmap (track issue [#vscode-ext-crossplatform](https://github.com/anzy-renlab-ai/pronounce/issues)).
 
 ## Features
 
@@ -33,7 +33,7 @@ brew install say-it    # or `./install.sh` from the repo
 say-it kubernetes      # speaks it 3x
 ```
 
-See the [main repo](https://github.com/alvinhochun/say-it) for CLI, MCP server, and Raycast/Alfred integrations.
+See the [main repo](https://github.com/anzy-renlab-ai/pronounce) for CLI, MCP server, and Raycast/Alfred integrations.
 
 ## Contributing
 
