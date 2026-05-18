@@ -115,3 +115,25 @@ body::before {
   padding: 1px 5px; background: var(--bg-3); border-radius: 3px;
   border: 1px solid var(--line);
 }
+
+/* ========== a11y focus rings (keyboard-only) ========== */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+button.word-card:focus-visible {
+  outline-offset: 4px;
+}
+/* WordCard is now a button — strip default button chrome so styling stays */
+button.word-card {
+  appearance: none;
+  background: transparent;
+  border: 1px solid var(--line);
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+}
+.moment[role="button"] { cursor: pointer; }

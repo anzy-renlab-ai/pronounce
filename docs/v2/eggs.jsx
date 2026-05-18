@@ -37,8 +37,14 @@ function CommandPalette({ open, onClose, registerEgg }) {
   };
 
   return (
-    <div className={`palette-mask ${open ? 'open' : ''}`} onClick={onClose}>
-      <div className="palette" onClick={(e) => e.stopPropagation()}>
+    <div className={`palette-mask ${open ? 'open' : ''}`} onClick={onClose} aria-hidden={!open}>
+      <div
+        className="palette"
+        onClick={(e) => e.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Command palette — search dictionary"
+      >
         <div className="input-row">
           <span className="glyph">say-it</span>
           <input

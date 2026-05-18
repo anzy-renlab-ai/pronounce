@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pronounce · how to say kubectl, nginx, YAML, Ghostty</title>
 
-<!-- SEO (mirrors /index.html) -->
 <meta name="description" content="A community-maintained pronunciation dictionary — 817 entries — for the project, product, and programmer-jargon names developers actually use. kubectl, nginx, YAML, Ghostty, wagmi, Dijkstra, and 800+ more. With cited sources. CLI + VS Code extension + MCP server + Claude Code skill.">
 <meta name="keywords" content="how to pronounce kubectl, how to pronounce nginx, how to pronounce YAML, how to pronounce Ghostty, project name pronunciation, developer pronunciation guide">
 <link rel="canonical" href="https://pronounce.renlab.ai/v2/">
@@ -40,10 +39,9 @@
 {"@context":"https://schema.org","@type":"WebSite","name":"Pronounce","description":"Community pronunciation dictionary for developer project and product names.","url":"https://pronounce.renlab.ai/","potentialAction":{"@type":"SearchAction","target":"https://pronounce.renlab.ai/browse.html?q={search_term_string}","query-input":"required name=search_term_string"}}
 </script>
 
-<!-- React + Babel (production builds) -->
+<!-- React 18 production builds. JSX precompiled via esbuild into bundle.js (no in-browser Babel). -->
 <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
 </head>
 <body>
 <div id="root"></div>
@@ -51,11 +49,7 @@
 <!-- Data (auto-generated from data/pronunciations.tsv via tools/build-v2-data.py) -->
 <script src="data.js"></script>
 
-<!-- Components -->
-<script type="text/babel" src="audio.jsx"></script>
-<script type="text/babel" src="sections-1.jsx"></script>
-<script type="text/babel" src="sections-2.jsx"></script>
-<script type="text/babel" src="eggs.jsx"></script>
-<script type="text/babel" src="app.jsx"></script>
+<!-- App bundle (audio + sections + eggs + app concatenated, esbuild-compiled) -->
+<script src="bundle.js"></script>
 </body>
 </html>

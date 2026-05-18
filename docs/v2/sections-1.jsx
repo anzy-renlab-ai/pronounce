@@ -156,10 +156,11 @@ function WordGrid({ registerEgg }) {
 
       <div className="try-grid">
         {filtered.map((d, i) => (
-          <div
+          <button
             key={d.w}
             className={`word-card ${playingIdx === i ? 'playing' : ''}`}
             onClick={() => play(i, d)}
+            aria-label={`Hear ${d.w} pronounced ${d.resp}`}
           >
             <div className="word-top">
               <div className="w">{d.w}</div>
@@ -175,7 +176,7 @@ function WordGrid({ registerEgg }) {
               </div>
               <div>{d.src || '—'}</div>
             </div>
-          </div>
+          </button>
         ))}
       </div>
 
@@ -202,11 +203,19 @@ function Famous({ registerEgg }) {
       </div>
       <div className="famous">
         {FAMOUS.map(m => (
-          <div className="moment" key={m.w} onClick={() => speak(m)}>
+          <div
+            className="moment"
+            key={m.w}
+            role="button"
+            tabIndex={0}
+            aria-label={`Hear ${m.w} pronounced ${m.said}`}
+            onClick={() => speak(m)}
+            onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); speak(m); } }}
+          >
             <div>
               <span className="word">{m.w}</span> <span className="arrow">→</span> <span className="said">"{m.said}"</span>
             </div>
-            <div className="src"><a href={m.url}>{m.src}</a></div>
+            <div className="src"><a href={m.url} onClick={(e) => e.stopPropagation()}>{m.src}</a></div>
           </div>
         ))}
       </div>
