@@ -1,0 +1,12 @@
+{
+  "word": "sglang",
+  "ipa": "/ˌɛs dʒiː ˈlæŋ/",
+  "respelling_us": "S G lang",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/sgl-project/sglang",
+  "source_label": "SGLang GitHub",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "Fast LLM serving runtime. \"S-G-lang\" (structured-generation language)."
+}

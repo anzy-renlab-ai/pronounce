@@ -1,0 +1,12 @@
+{
+  "word": "NVMe",
+  "ipa": "/ˌɛn viː ɛm ˈiː/",
+  "respelling_us": "N V M E",
+  "alt_ipa": ["/ˈɛnvi ɛm iː/"],
+  "alt_respelling_us": ["ENVY M E"],
+  "source_url": "https://nvmexpress.org/",
+  "source_label": "NVM Express",
+  "category": "acronym",
+  "confidence": "contested",
+  "notes": "Letter-by-letter dominant; \"envy-M-E\" rare. Non-Volatile Memory Express."
+}

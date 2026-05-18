@@ -1,0 +1,12 @@
+{
+  "word": "dbrx",
+  "ipa": "/ˌdiː biː ɑːr ˈɛks/",
+  "respelling_us": "D B R X",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.databricks.com/blog/introducing-dbrx-new-state-art-open-llm",
+  "source_label": "Databricks DBRX",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Databricks' MoE LLM. Spelled out \"D-B-R-X.\""
+}

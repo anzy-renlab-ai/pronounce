@@ -1,0 +1,12 @@
+{
+  "word": "viem",
+  "ipa": "/viːm/",
+  "respelling_us": "veem",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://viem.sh/",
+  "source_label": "viem docs",
+  "category": "tool",
+  "confidence": "creator-clarified",
+  "notes": "One syllable, \"veem\". TypeScript Ethereum library."
+}

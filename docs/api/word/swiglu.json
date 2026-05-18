@@ -1,0 +1,12 @@
+{
+  "word": "SwiGLU",
+  "ipa": "/ˈswiː ɡluː/",
+  "respelling_us": "swee gloo",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2002.05202",
+  "source_label": "Shazeer",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "\"swee-GLOO\". Swish-Gated Linear Unit."
+}

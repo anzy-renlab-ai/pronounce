@@ -1,0 +1,12 @@
+{
+  "word": "qwen",
+  "ipa": "/kwɛn/",
+  "respelling_us": "kwen",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://huggingface.co/Qwen",
+  "source_label": "Alibaba Qwen HF",
+  "category": "product",
+  "confidence": "creator-clarified",
+  "notes": "Alibaba's open LLM family. Single syllable \"KWEN\" — short for 通义千问."
+}

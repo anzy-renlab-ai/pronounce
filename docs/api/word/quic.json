@@ -1,0 +1,12 @@
+{
+  "word": "QUIC",
+  "ipa": "/kwɪk/",
+  "respelling_us": "quick",
+  "alt_ipa": ["/ˌkjuː juː aɪ ˈsiː/"],
+  "alt_respelling_us": ["Q U I C"],
+  "source_url": "https://datatracker.ietf.org/doc/html/rfc9000",
+  "source_label": "IETF RFC 9000",
+  "category": "acronym",
+  "confidence": "creator-clarified",
+  "notes": "IETF + Google docs: \"quick\". From \"Quick UDP Internet Connections\"."
+}

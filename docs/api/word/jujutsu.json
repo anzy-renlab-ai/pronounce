@@ -1,0 +1,12 @@
+{
+  "word": "jujutsu",
+  "ipa": "/dʒuː ˈdʒʊt suː/",
+  "respelling_us": "joo JUT soo",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/jj-vcs/jj",
+  "source_label": "jj VCS GitHub",
+  "category": "cli-tool",
+  "confidence": "community-consensus",
+  "notes": "Git-compatible VCS (jj). Japanese \"gentle art\" — \"joo-JUT-soo.\""
+}

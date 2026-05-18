@@ -1,0 +1,12 @@
+{
+  "word": "firecrawl",
+  "ipa": "/ˈfaɪər krɔːl/",
+  "respelling_us": "FIRE krawl",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.firecrawl.dev/",
+  "source_label": "Firecrawl",
+  "category": "project",
+  "confidence": "community-consensus",
+  "notes": "Web-crawling API for LLMs. Compound \"fire-crawl.\""
+}

@@ -1,0 +1,12 @@
+{
+  "word": "Whisper",
+  "ipa": "/ˈwɪspər/",
+  "respelling_us": "whisper",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://openai.com/research/whisper",
+  "source_label": "OpenAI",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "English word \"whisper\". OpenAI speech-to-text."
+}

@@ -1,0 +1,12 @@
+{
+  "word": "HTTPie",
+  "ipa": "/ˌeɪtʃ tiː tiː piː ˈaɪ/",
+  "respelling_us": "H T T P aye",
+  "alt_ipa": ["/ˌeɪtʃ tiː tiː ˈpaɪ/"],
+  "alt_respelling_us": ["H T T P pie"],
+  "source_url": "https://httpie.io/docs/cli",
+  "source_label": "HTTPie docs",
+  "category": "cli-tool",
+  "confidence": "creator-clarified",
+  "notes": "\"aitch-tee-tee-pie\" — like the suffix \"-ie\" in English."
+}

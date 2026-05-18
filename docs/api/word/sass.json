@@ -1,0 +1,12 @@
+{
+  "word": "Sass",
+  "ipa": "/sæs/",
+  "respelling_us": "sass",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://sass-lang.com/",
+  "source_label": "Sass docs",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "English word \"sass\". CSS preprocessor."
+}

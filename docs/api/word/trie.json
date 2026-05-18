@@ -1,0 +1,12 @@
+{
+  "word": "trie",
+  "ipa": "/triː/",
+  "respelling_us": "tree",
+  "alt_ipa": ["/traɪ/"],
+  "alt_respelling_us": ["try"],
+  "source_url": "https://en.wikipedia.org/wiki/Trie",
+  "source_label": "Knuth TAOCP",
+  "category": "cs-term",
+  "confidence": "contested",
+  "notes": "Knuth (creator): \"tree\" (from \"retrieval\"). Most engineers say \"try\" to disambiguate from binary tree."
+}

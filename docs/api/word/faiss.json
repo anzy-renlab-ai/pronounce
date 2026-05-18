@@ -1,0 +1,12 @@
+{
+  "word": "Faiss",
+  "ipa": "/feɪs/",
+  "respelling_us": "face",
+  "alt_ipa": ["/faɪs/"],
+  "alt_respelling_us": ["fyce"],
+  "source_url": "https://github.com/facebookresearch/faiss",
+  "source_label": "Meta AI",
+  "category": "tool",
+  "confidence": "contested",
+  "notes": "\"face\" common (FB AI Similarity Search); \"fice\" also heard."
+}

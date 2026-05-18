@@ -1,0 +1,12 @@
+{
+  "word": "Yazi",
+  "ipa": "/ˈjɑː ziː/",
+  "respelling_us": "YAH zee",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://yazi-rs.github.io/",
+  "source_label": "Yazi docs",
+  "category": "cli-tool",
+  "confidence": "community-consensus",
+  "notes": "Chinese 鸭子 (duck). \"YAH-zee\". Terminal file manager."
+}

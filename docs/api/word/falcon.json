@@ -1,0 +1,12 @@
+{
+  "word": "falcon",
+  "ipa": "/ˈfæl kən/",
+  "respelling_us": "FAL kuhn",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://falconllm.tii.ae/",
+  "source_label": "TII Falcon",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "TII's open LLM. Same as the bird."
+}

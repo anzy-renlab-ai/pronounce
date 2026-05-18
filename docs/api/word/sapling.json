@@ -1,0 +1,12 @@
+{
+  "word": "sapling",
+  "ipa": "/ˈsæp lɪŋ/",
+  "respelling_us": "SAP ling",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://sapling-scm.com/",
+  "source_label": "Sapling SCM",
+  "category": "cli-tool",
+  "confidence": "community-consensus",
+  "notes": "Meta's VCS. Same as the young tree."
+}

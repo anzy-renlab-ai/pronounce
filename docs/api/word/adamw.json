@@ -1,0 +1,12 @@
+{
+  "word": "AdamW",
+  "ipa": "/ˈæ dəm ˈdʌbəl juː/",
+  "respelling_us": "adam W",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/1711.05101",
+  "source_label": "AdamW paper",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "\"AD-uhm W\" — Adam with decoupled Weight decay."
+}

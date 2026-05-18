@@ -1,0 +1,12 @@
+{
+  "word": "HNSW",
+  "ipa": "/ˌeɪtʃ ɛn ɛs ˈdʌbəl juː/",
+  "respelling_us": "H N S W",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/1603.09320",
+  "source_label": "HNSW paper",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "Letters \"H-N-S-W\". Hierarchical Navigable Small World."
+}

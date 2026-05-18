@@ -1,0 +1,12 @@
+{
+  "word": "command-r",
+  "ipa": "/kə ˈmænd ɑːr/",
+  "respelling_us": "kuh MAND R",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://cohere.com/blog/command-r",
+  "source_label": "Cohere",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Cohere's retrieval LLM. \"Command R\" — R as a letter."
+}

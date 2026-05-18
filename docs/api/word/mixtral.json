@@ -1,0 +1,12 @@
+{
+  "word": "mixtral",
+  "ipa": "/mɪks ˈtrɑːl/",
+  "respelling_us": "miks TRAHL",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://mistral.ai/news/mixtral-of-experts/",
+  "source_label": "Mistral AI",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Mistral's MoE model. Portmanteau \"mixture\" + \"Mistral.\""
+}

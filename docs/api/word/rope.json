@@ -1,0 +1,12 @@
+{
+  "word": "RoPE",
+  "ipa": "/roʊp/",
+  "respelling_us": "rope",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2104.09864",
+  "source_label": "RoFormer paper",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "\"rope\" the word. Rotary Position Embedding."
+}

@@ -1,0 +1,12 @@
+{
+  "word": "moe",
+  "ipa": "/ˌɛm oʊ ˈiː/",
+  "respelling_us": "M O E",
+  "alt_ipa": ["/moʊ/"],
+  "alt_respelling_us": ["moh"],
+  "source_url": "https://huggingface.co/blog/moe",
+  "source_label": "HuggingFace MoE blog",
+  "category": "acronym",
+  "confidence": "contested",
+  "notes": "Mixture of Experts. Spelled \"M-O-E\" in papers; some pronounce it \"MOH\" like the Three Stooges character."
+}

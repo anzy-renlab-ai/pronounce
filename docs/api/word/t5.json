@@ -1,0 +1,12 @@
+{
+  "word": "T5",
+  "ipa": "/ˌtiː ˈfaɪv/",
+  "respelling_us": "T five",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/1910.10683",
+  "source_label": "T5 paper",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"T-five\". Text-to-Text Transfer Transformer."
+}

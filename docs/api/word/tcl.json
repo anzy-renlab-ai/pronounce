@@ -1,0 +1,12 @@
+{
+  "word": "Tcl",
+  "ipa": "/ˈtɪkəl/",
+  "respelling_us": "tickle",
+  "alt_ipa": ["/ˌtiː siː ˈɛl/"],
+  "alt_respelling_us": ["T C L"],
+  "source_url": "https://www.tcl-lang.org/",
+  "source_label": "Tcl official",
+  "category": "product",
+  "confidence": "creator-clarified",
+  "notes": "John Ousterhout (creator): \"tickle\". Official Tcl Developer Xchange confirms."
+}

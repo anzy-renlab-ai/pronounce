@@ -1,0 +1,12 @@
+{
+  "word": "DINO",
+  "ipa": "/ˈdiː noʊ/",
+  "respelling_us": "DEE noh",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2104.14294",
+  "source_label": "DINO paper",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"DEE-noh\". Self-DIstillation with NO labels."
+}

@@ -1,0 +1,12 @@
+{
+  "word": "GAN",
+  "ipa": "/ɡæn/",
+  "respelling_us": "gan",
+  "alt_ipa": ["/ˌdʒiː eɪ ˈɛn/"],
+  "alt_respelling_us": ["G A N"],
+  "source_url": "https://arxiv.org/abs/1406.2661",
+  "source_label": "Goodfellow et al.",
+  "category": "acronym",
+  "confidence": "community-consensus",
+  "notes": "\"gan\" the word common; letters in formal contexts. Generative Adversarial Network."
+}

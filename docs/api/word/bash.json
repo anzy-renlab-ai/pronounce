@@ -1,0 +1,12 @@
+{
+  "word": "Bash",
+  "ipa": "/bæʃ/",
+  "respelling_us": "bash",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.gnu.org/software/bash/",
+  "source_label": "GNU Bash",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"bash\" the word. Bourne-Again Shell."
+}

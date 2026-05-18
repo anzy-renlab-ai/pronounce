@@ -1,0 +1,12 @@
+{
+  "word": "RBAC",
+  "ipa": "/ˈɑːr bæk/",
+  "respelling_us": "R back",
+  "alt_ipa": ["/ˌɑːr biː eɪ ˈsiː/"],
+  "alt_respelling_us": ["R B A C"],
+  "source_url": "",
+  "source_label": "",
+  "category": "acronym",
+  "confidence": "contested",
+  "notes": "\"R-back\" common in Kubernetes; letter-by-letter in enterprise. Role-Based Access Control."
+}

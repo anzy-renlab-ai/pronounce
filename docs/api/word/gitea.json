@@ -1,0 +1,12 @@
+{
+  "word": "Gitea",
+  "ipa": "/ɡɪˈteɪ ə/",
+  "respelling_us": "gi TAY uh",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://docs.gitea.com/",
+  "source_label": "Gitea docs",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"gi-TAY-uh\". Self-hosted Git service."
+}

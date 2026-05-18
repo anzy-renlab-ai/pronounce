@@ -1,0 +1,12 @@
+{
+  "word": "LoRA",
+  "ipa": "/ˈlɔːr ə/",
+  "respelling_us": "LOR ah",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2106.09685",
+  "source_label": "LoRA paper",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "\"LOR-uh\". Low-Rank Adaptation."
+}

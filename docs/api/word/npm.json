@@ -1,0 +1,12 @@
+{
+  "word": "npm",
+  "ipa": "/ˌɛn piː ˈɛm/",
+  "respelling_us": "N P M",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://docs.npmjs.com/about-npm",
+  "source_label": "npm docs",
+  "category": "cli-tool",
+  "confidence": "community-consensus",
+  "notes": "Letters \"N-P-M\". Officially lowercase, not an acronym."
+}

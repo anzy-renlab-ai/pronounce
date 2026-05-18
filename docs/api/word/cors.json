@@ -1,0 +1,12 @@
+{
+  "word": "CORS",
+  "ipa": "/kɔːrz/",
+  "respelling_us": "cores",
+  "alt_ipa": ["/ˌsiː oʊ ɑːr ˈɛs/"],
+  "alt_respelling_us": ["C O R S"],
+  "source_url": "https://fetch.spec.whatwg.org/",
+  "source_label": "WHATWG Fetch",
+  "category": "acronym",
+  "confidence": "community-consensus",
+  "notes": "\"cores\"; rhymes with \"doors\". Cross-Origin Resource Sharing."
+}

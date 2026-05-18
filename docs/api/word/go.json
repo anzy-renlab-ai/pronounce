@@ -1,0 +1,12 @@
+{
+  "word": "Go",
+  "ipa": "/ɡoʊ/",
+  "respelling_us": "go",
+  "alt_ipa": ["/ˈɡoʊ læŋ/"],
+  "alt_respelling_us": ["go lang"],
+  "source_url": "https://go.dev/",
+  "source_label": "Go",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"go\" the word; \"Golang\" common in writing/SEO but pronounced \"Go\"."
+}

@@ -1,0 +1,12 @@
+{
+  "word": "gemma",
+  "ipa": "/ˈdʒɛ mə/",
+  "respelling_us": "JEM uh",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://ai.google.dev/gemma",
+  "source_label": "Google Gemma",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Google's open-weights model. \"JEM-uh\" — distinct from Gemini."
+}

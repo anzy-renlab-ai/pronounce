@@ -1,0 +1,12 @@
+{
+  "word": "BERT",
+  "ipa": "/bɜːrt/",
+  "respelling_us": "burt",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/1810.04805",
+  "source_label": "BERT paper",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"burt\" — like the name. Bidirectional Encoder Representations from Transformers."
+}

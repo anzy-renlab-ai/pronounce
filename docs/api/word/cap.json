@@ -1,0 +1,12 @@
+{
+  "word": "CAP",
+  "ipa": "/kæp/",
+  "respelling_us": "cap",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://en.wikipedia.org/wiki/CAP_theorem",
+  "source_label": "Wikipedia",
+  "category": "acronym",
+  "confidence": "community-consensus",
+  "notes": "\"cap\" — the word. CAP theorem: Consistency, Availability, Partition tolerance."
+}

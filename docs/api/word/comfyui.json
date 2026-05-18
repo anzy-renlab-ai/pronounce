@@ -1,0 +1,12 @@
+{
+  "word": "comfyui",
+  "ipa": "/ˈkʌm fi juː aɪ/",
+  "respelling_us": "KUM fee U I",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.comfy.org/",
+  "source_label": "ComfyUI",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "Node-based UI for Stable Diffusion. \"KUM-fee U-I\" (letters for UI)."
+}

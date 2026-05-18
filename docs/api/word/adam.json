@@ -1,0 +1,12 @@
+{
+  "word": "Adam",
+  "ipa": "/ˈæ dəm/",
+  "respelling_us": "adam",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/1412.6980",
+  "source_label": "Adam paper",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "\"AD-uhm\" — name. Adaptive Moment Estimation."
+}

@@ -1,0 +1,12 @@
+{
+  "word": "PEFT",
+  "ipa": "/pɛft/",
+  "respelling_us": "peft",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://huggingface.co/docs/peft",
+  "source_label": "PEFT docs",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "\"peft\". Parameter-Efficient Fine-Tuning."
+}

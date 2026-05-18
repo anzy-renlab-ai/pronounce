@@ -1,0 +1,12 @@
+{
+  "word": "braintrust",
+  "ipa": "/ˈbreɪn trʌst/",
+  "respelling_us": "BRAIN trust",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.braintrust.dev/",
+  "source_label": "Braintrust",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "LLM eval platform. Compound \"brain-trust.\""
+}

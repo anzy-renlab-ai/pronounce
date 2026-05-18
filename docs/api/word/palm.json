@@ -1,0 +1,12 @@
+{
+  "word": "PaLM",
+  "ipa": "/pɑːm/",
+  "respelling_us": "pom",
+  "alt_ipa": ["/ˌpiː eɪ ɛl ˈɛm/"],
+  "alt_respelling_us": ["P A L M"],
+  "source_url": "https://arxiv.org/abs/2204.02311",
+  "source_label": "PaLM paper",
+  "category": "product",
+  "confidence": "contested",
+  "notes": "Google brand: \"pom\" (palm tree); letter-by-letter also heard. Pathways Language Model."
+}

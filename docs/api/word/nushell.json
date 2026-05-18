@@ -1,0 +1,12 @@
+{
+  "word": "nushell",
+  "ipa": "/ˈnuː ʃɛl/",
+  "respelling_us": "NOO shell",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.nushell.sh/",
+  "source_label": "Nushell",
+  "category": "cli-tool",
+  "confidence": "community-consensus",
+  "notes": "Structured-data shell. \"NOO-shell\" — letter \"Nu\" + shell."
+}

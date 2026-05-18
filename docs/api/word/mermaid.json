@@ -1,0 +1,12 @@
+{
+  "word": "Mermaid",
+  "ipa": "/ˈmɜːr meɪd/",
+  "respelling_us": "mermaid",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://mermaid.js.org/",
+  "source_label": "Mermaid docs",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "English word. Diagram-as-code framework."
+}

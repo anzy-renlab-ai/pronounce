@@ -1,0 +1,12 @@
+{
+  "word": "fish",
+  "ipa": "/fɪʃ/",
+  "respelling_us": "fish",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://fishshell.com/",
+  "source_label": "fish shell",
+  "category": "cli-tool",
+  "confidence": "community-consensus",
+  "notes": "Friendly Interactive SHell. Same as the animal."
+}

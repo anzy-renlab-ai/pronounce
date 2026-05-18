@@ -1,0 +1,12 @@
+{
+  "word": "TensorFlow",
+  "ipa": "/ˈtɛnsər floʊ/",
+  "respelling_us": "tenser flow",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.tensorflow.org/",
+  "source_label": "TensorFlow docs",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"TEN-sir-flow\". Google ML framework."
+}

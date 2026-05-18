@@ -1,0 +1,12 @@
+{
+  "word": "DAG",
+  "ipa": "/dæɡ/",
+  "respelling_us": "dag",
+  "alt_ipa": ["/ˌdiː eɪ ˈdʒiː/"],
+  "alt_respelling_us": ["D A G"],
+  "source_url": "",
+  "source_label": "",
+  "category": "acronym",
+  "confidence": "contested",
+  "notes": "\"dag\" common in pipeline tools (Airflow, dagster); letter-by-letter \"D-A-G\" in CS papers."
+}

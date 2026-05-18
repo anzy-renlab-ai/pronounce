@@ -1,0 +1,12 @@
+{
+  "word": "V8",
+  "ipa": "/ˌviː ˈeɪt/",
+  "respelling_us": "V eight",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://v8.dev/",
+  "source_label": "V8",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "\"V-eight\". Google JS engine."
+}

@@ -1,0 +1,12 @@
+{
+  "word": "Big-O",
+  "ipa": "/ˌbɪɡ ˈoʊ/",
+  "respelling_us": "big oh",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://en.wikipedia.org/wiki/Big_O_notation",
+  "source_label": "Wikipedia",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "\"big-OH\". Asymptotic upper bound notation."
+}

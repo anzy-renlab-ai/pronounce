@@ -1,0 +1,12 @@
+{
+  "word": "QLoRA",
+  "ipa": "/ˌkjuː ˈlɔːr ə/",
+  "respelling_us": "Q LOR ah",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2305.14314",
+  "source_label": "QLoRA paper",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "\"Q-LOR-uh\". Quantized LoRA."
+}

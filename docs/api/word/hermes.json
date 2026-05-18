@@ -1,0 +1,12 @@
+{
+  "word": "hermes",
+  "ipa": "/ˈhɜːr miːz/",
+  "respelling_us": "HER meez",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://huggingface.co/NousResearch",
+  "source_label": "Nous Research HF",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Nous Research's open-source LLM series. Greek messenger god — \"HER-meez.\""
+}

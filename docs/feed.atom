@@ -4,181 +4,181 @@
   <link href="https://pronounce.renlab.ai/feed.atom" rel="self"/>
   <link href="https://pronounce.renlab.ai/"/>
   <id>https://pronounce.renlab.ai/</id>
-  <updated>2026-05-17T09:06:06Z</updated>
+  <updated>2026-05-18T13:53:37Z</updated>
   <subtitle>How engineers actually pronounce project / product / jargon names. Community-maintained.</subtitle>
   <entry>
-    <title>Quarkus — quar kus</title>
-    <link href="https://pronounce.renlab.ai/word/quarkus"/>
-    <id>https://pronounce.renlab.ai/word/quarkus</id>
-    <updated>2026-05-17T09:06:06Z</updated>
-    <summary>Quarkus is pronounced "quar kus" (/ˈkwɑːrkəs/). "QUAR-kus".</summary>
+    <title>T5 — T five</title>
+    <link href="https://pronounce.renlab.ai/word/t5"/>
+    <id>https://pronounce.renlab.ai/word/t5</id>
+    <updated>2026-05-18T13:53:37Z</updated>
+    <summary>T5 is pronounced "T five" (/ˌtiː ˈfaɪv/). "T-five". Text-to-Text Transfer Transformer.</summary>
   </entry>
   <entry>
-    <title>Micronaut — my kro nawt</title>
-    <link href="https://pronounce.renlab.ai/word/micronaut"/>
-    <id>https://pronounce.renlab.ai/word/micronaut</id>
-    <updated>2026-05-17T09:06:06Z</updated>
-    <summary>Micronaut is pronounced "my kro nawt" (/ˈmaɪkroʊnɔːt/). "MY-kro-nawt".</summary>
+    <title>PaLM — pom</title>
+    <link href="https://pronounce.renlab.ai/word/palm"/>
+    <id>https://pronounce.renlab.ai/word/palm</id>
+    <updated>2026-05-18T13:53:37Z</updated>
+    <summary>PaLM is pronounced "pom" (/pɑːm/). Google brand: "pom" (palm tree); letter-by-letter also heard. Pathways Language Model.</summary>
   </entry>
   <entry>
-    <title>GraalVM — grahl V M</title>
-    <link href="https://pronounce.renlab.ai/word/graalvm"/>
-    <id>https://pronounce.renlab.ai/word/graalvm</id>
-    <updated>2026-05-17T09:06:06Z</updated>
-    <summary>GraalVM is pronounced "grahl V M" (/ˈɡrɑːl viː ɛm/). "GRAHL-V-M".</summary>
+    <title>SAM — sam</title>
+    <link href="https://pronounce.renlab.ai/word/sam"/>
+    <id>https://pronounce.renlab.ai/word/sam</id>
+    <updated>2026-05-18T13:53:37Z</updated>
+    <summary>SAM is pronounced "sam" (/sæm/). "sam" — name. Segment Anything Model.</summary>
   </entry>
   <entry>
-    <title>JVM — J V M</title>
-    <link href="https://pronounce.renlab.ai/word/jvm"/>
-    <id>https://pronounce.renlab.ai/word/jvm</id>
-    <updated>2026-05-17T09:06:06Z</updated>
-    <summary>JVM is pronounced "J V M" (/ˌdʒeɪ viː ˈɛm/). "J-V-M".</summary>
+    <title>CLIP — clip</title>
+    <link href="https://pronounce.renlab.ai/word/clip"/>
+    <id>https://pronounce.renlab.ai/word/clip</id>
+    <updated>2026-05-18T13:53:37Z</updated>
+    <summary>CLIP is pronounced "clip" (/klɪp/). "clip" the word. Contrastive Language-Image Pre-training.</summary>
   </entry>
   <entry>
-    <title>Blazor — blay zer</title>
-    <link href="https://pronounce.renlab.ai/word/blazor"/>
-    <id>https://pronounce.renlab.ai/word/blazor</id>
-    <updated>2026-05-17T09:06:06Z</updated>
-    <summary>Blazor is pronounced "blay zer" (/ˈbleɪzər/). "BLAY-zer".</summary>
+    <title>DINO — DEE noh</title>
+    <link href="https://pronounce.renlab.ai/word/dino"/>
+    <id>https://pronounce.renlab.ai/word/dino</id>
+    <updated>2026-05-18T13:53:37Z</updated>
+    <summary>DINO is pronounced "DEE noh" (/ˈdiː noʊ/). "DEE-noh". Self-DIstillation with NO labels.</summary>
   </entry>
   <entry>
-    <title>MAUI — maw ee</title>
-    <link href="https://pronounce.renlab.ai/word/maui"/>
-    <id>https://pronounce.renlab.ai/word/maui</id>
-    <updated>2026-05-17T09:06:06Z</updated>
-    <summary>MAUI is pronounced "maw ee" (/ˈmaʊi/). ".NET MAW-ee".</summary>
+    <title>ColBERT — col BURT</title>
+    <link href="https://pronounce.renlab.ai/word/colbert"/>
+    <id>https://pronounce.renlab.ai/word/colbert</id>
+    <updated>2026-05-18T13:53:37Z</updated>
+    <summary>ColBERT is pronounced "col BURT" (/kɒlˈbɜːrt/). "col-BURT" — like Stephen Colbert. Contextualized Late interaction over BERT.</summary>
   </entry>
   <entry>
-    <title>WinUI — win U I</title>
-    <link href="https://pronounce.renlab.ai/word/winui"/>
-    <id>https://pronounce.renlab.ai/word/winui</id>
-    <updated>2026-05-17T09:06:06Z</updated>
-    <summary>WinUI is pronounced "win U I" (/ˌwɪn juː ˈaɪ/). "WIN-U-I".</summary>
+    <title>HNSW — H N S W</title>
+    <link href="https://pronounce.renlab.ai/word/hnsw"/>
+    <id>https://pronounce.renlab.ai/word/hnsw</id>
+    <updated>2026-05-18T13:53:37Z</updated>
+    <summary>HNSW is pronounced "H N S W" (/ˌeɪtʃ ɛn ɛs ˈdʌbəl juː/). Letters "H-N-S-W". Hierarchical Navigable Small World.</summary>
   </entry>
   <entry>
-    <title>React — ree akt</title>
-    <link href="https://pronounce.renlab.ai/word/react"/>
-    <id>https://pronounce.renlab.ai/word/react</id>
-    <updated>2026-05-17T09:06:06Z</updated>
-    <summary>React is pronounced "ree akt" (/riˈækt/). "ree-AKT".</summary>
+    <title>Karpathy — kar PAH thee</title>
+    <link href="https://pronounce.renlab.ai/word/karpathy"/>
+    <id>https://pronounce.renlab.ai/word/karpathy</id>
+    <updated>2026-05-18T13:53:37Z</updated>
+    <summary>Karpathy is pronounced "kar PAH thee" (/kɑːrˈpɑː θi/). "kar-PAH-thee". Andrej Karpathy.</summary>
   </entry>
   <entry>
-    <title>Angular — ang you lar</title>
-    <link href="https://pronounce.renlab.ai/word/angular"/>
-    <id>https://pronounce.renlab.ai/word/angular</id>
-    <updated>2026-05-17T09:06:06Z</updated>
-    <summary>Angular is pronounced "ang you lar" (/ˈæŋɡjələr/). "ANG-yuh-ler".</summary>
+    <title>EVM — E V M</title>
+    <link href="https://pronounce.renlab.ai/word/evm"/>
+    <id>https://pronounce.renlab.ai/word/evm</id>
+    <updated>2026-05-18T13:53:37Z</updated>
+    <summary>EVM is pronounced "E V M" (/ˌiː viː ˈɛm/). Letters "E-V-M". Ethereum Virtual Machine.</summary>
   </entry>
   <entry>
-    <title>Ember — em ber</title>
-    <link href="https://pronounce.renlab.ai/word/ember"/>
-    <id>https://pronounce.renlab.ai/word/ember</id>
-    <updated>2026-05-17T09:06:06Z</updated>
-    <summary>Ember is pronounced "em ber" (/ˈɛmbər/). "EM-ber".</summary>
+    <title>ABI — A B I</title>
+    <link href="https://pronounce.renlab.ai/word/abi"/>
+    <id>https://pronounce.renlab.ai/word/abi</id>
+    <updated>2026-05-18T13:53:37Z</updated>
+    <summary>ABI is pronounced "A B I" (/ˌeɪ biː ˈaɪ/). Letters "A-B-I". Application Binary Interface.</summary>
   </entry>
   <entry>
-    <title>Marko — mar ko</title>
-    <link href="https://pronounce.renlab.ai/word/marko"/>
-    <id>https://pronounce.renlab.ai/word/marko</id>
-    <updated>2026-05-17T09:06:06Z</updated>
-    <summary>Marko is pronounced "mar ko" (/ˈmɑːrkoʊ/). "MAR-koh".</summary>
+    <title>dApp — D app</title>
+    <link href="https://pronounce.renlab.ai/word/dapp"/>
+    <id>https://pronounce.renlab.ai/word/dapp</id>
+    <updated>2026-05-18T13:53:37Z</updated>
+    <summary>dApp is pronounced "D app" (/ˈdiː æp/). "D-app". Decentralized App.</summary>
   </entry>
   <entry>
-    <title>Axum — ax um</title>
-    <link href="https://pronounce.renlab.ai/word/axum"/>
-    <id>https://pronounce.renlab.ai/word/axum</id>
-    <updated>2026-05-17T09:06:06Z</updated>
-    <summary>Axum is pronounced "ax um" (/ˈæksəm/). "AX-um".</summary>
+    <title>ENS — E N S</title>
+    <link href="https://pronounce.renlab.ai/word/ens"/>
+    <id>https://pronounce.renlab.ai/word/ens</id>
+    <updated>2026-05-18T13:53:37Z</updated>
+    <summary>ENS is pronounced "E N S" (/ˌiː ɛn ˈɛs/). Letters "E-N-S". Ethereum Name Service.</summary>
   </entry>
   <entry>
-    <title>Actix — ak tix</title>
-    <link href="https://pronounce.renlab.ai/word/actix"/>
-    <id>https://pronounce.renlab.ai/word/actix</id>
-    <updated>2026-05-17T09:06:06Z</updated>
-    <summary>Actix is pronounced "ak tix" (/ˈæktɪks/). "AK-tix".</summary>
+    <title>SLA — S L A</title>
+    <link href="https://pronounce.renlab.ai/word/sla"/>
+    <id>https://pronounce.renlab.ai/word/sla</id>
+    <updated>2026-05-18T13:53:37Z</updated>
+    <summary>SLA is pronounced "S L A" (/ˌɛs ɛl ˈeɪ/). Letters "S-L-A". Service Level Agreement.</summary>
   </entry>
   <entry>
-    <title>Tokio — to kyo</title>
-    <link href="https://pronounce.renlab.ai/word/tokio"/>
-    <id>https://pronounce.renlab.ai/word/tokio</id>
-    <updated>2026-05-17T09:06:06Z</updated>
-    <summary>Tokio is pronounced "to kyo" (/ˈtoʊkjoʊ/). "TOH-kyo" — like the city.</summary>
+    <title>SLO — S L O</title>
+    <link href="https://pronounce.renlab.ai/word/slo"/>
+    <id>https://pronounce.renlab.ai/word/slo</id>
+    <updated>2026-05-18T13:53:37Z</updated>
+    <summary>SLO is pronounced "S L O" (/ˌɛs ɛl ˈoʊ/). Letters "S-L-O". Service Level Objective.</summary>
   </entry>
   <entry>
-    <title>Tonic — ton ik</title>
-    <link href="https://pronounce.renlab.ai/word/tonic"/>
-    <id>https://pronounce.renlab.ai/word/tonic</id>
-    <updated>2026-05-17T09:06:06Z</updated>
-    <summary>Tonic is pronounced "ton ik" (/ˈtɒnɪk/). "TON-ik" — Rust gRPC.</summary>
+    <title>SLI — S L I</title>
+    <link href="https://pronounce.renlab.ai/word/sli"/>
+    <id>https://pronounce.renlab.ai/word/sli</id>
+    <updated>2026-05-18T13:53:37Z</updated>
+    <summary>SLI is pronounced "S L I" (/ˌɛs ɛl ˈaɪ/). Letters "S-L-I". Service Level Indicator.</summary>
   </entry>
   <entry>
-    <title>Hyper — hy per</title>
-    <link href="https://pronounce.renlab.ai/word/hyper"/>
-    <id>https://pronounce.renlab.ai/word/hyper</id>
-    <updated>2026-05-17T09:06:06Z</updated>
-    <summary>Hyper is pronounced "hy per" (/ˈhaɪpər/). "HY-per" — Rust HTTP.</summary>
+    <title>KPI — K P I</title>
+    <link href="https://pronounce.renlab.ai/word/kpi"/>
+    <id>https://pronounce.renlab.ai/word/kpi</id>
+    <updated>2026-05-18T13:53:37Z</updated>
+    <summary>KPI is pronounced "K P I" (/ˌkeɪ piː ˈaɪ/). Letters "K-P-I".</summary>
   </entry>
   <entry>
-    <title>Diesel — dee zul</title>
-    <link href="https://pronounce.renlab.ai/word/diesel"/>
-    <id>https://pronounce.renlab.ai/word/diesel</id>
-    <updated>2026-05-17T09:06:06Z</updated>
-    <summary>Diesel is pronounced "dee zul" (/ˈdiːzəl/). "DEE-zul" — Rust ORM.</summary>
+    <title>MTTR — M T T R</title>
+    <link href="https://pronounce.renlab.ai/word/mttr"/>
+    <id>https://pronounce.renlab.ai/word/mttr</id>
+    <updated>2026-05-18T13:53:37Z</updated>
+    <summary>MTTR is pronounced "M T T R" (/ˌɛm tiː tiː ˈɑːr/). Letters "M-T-T-R". Mean Time To Recovery.</summary>
   </entry>
   <entry>
-    <title>SeaORM — C O R M</title>
-    <link href="https://pronounce.renlab.ai/word/seaorm"/>
-    <id>https://pronounce.renlab.ai/word/seaorm</id>
-    <updated>2026-05-17T09:06:06Z</updated>
-    <summary>SeaORM is pronounced "C O R M" (/ˈsiː ɔːrm/). "SEA-orm".</summary>
+    <title>MTBF — M T B F</title>
+    <link href="https://pronounce.renlab.ai/word/mtbf"/>
+    <id>https://pronounce.renlab.ai/word/mtbf</id>
+    <updated>2026-05-18T13:53:37Z</updated>
+    <summary>MTBF is pronounced "M T B F" (/ˌɛm tiː biː ˈɛf/). Letters "M-T-B-F". Mean Time Between Failures.</summary>
   </entry>
   <entry>
-    <title>Leptos — lep toss</title>
-    <link href="https://pronounce.renlab.ai/word/leptos"/>
-    <id>https://pronounce.renlab.ai/word/leptos</id>
-    <updated>2026-05-17T09:06:06Z</updated>
-    <summary>Leptos is pronounced "lep toss" (/ˈlɛptɒs/). "LEP-toss" — Rust web framework.</summary>
+    <title>uvicorn — yoo vee corn</title>
+    <link href="https://pronounce.renlab.ai/word/uvicorn"/>
+    <id>https://pronounce.renlab.ai/word/uvicorn</id>
+    <updated>2026-05-18T13:53:37Z</updated>
+    <summary>uvicorn is pronounced "yoo vee corn" (/ˌjuː viː ˈkɔːrn/). "yoo-vee-CORN". Python ASGI server.</summary>
   </entry>
   <entry>
-    <title>Dioxus — die ox us</title>
-    <link href="https://pronounce.renlab.ai/word/dioxus"/>
-    <id>https://pronounce.renlab.ai/word/dioxus</id>
-    <updated>2026-05-17T09:06:06Z</updated>
-    <summary>Dioxus is pronounced "die ox us" (/daɪˈɒksəs/). "die-OX-us".</summary>
+    <title>gunicorn — GUN i corn</title>
+    <link href="https://pronounce.renlab.ai/word/gunicorn"/>
+    <id>https://pronounce.renlab.ai/word/gunicorn</id>
+    <updated>2026-05-18T13:53:37Z</updated>
+    <summary>gunicorn is pronounced "GUN i corn" (/ˈɡʌn i kɔːrn/). "GUN-uh-corn" — like a unicorn with a gun. Green Unicorn.</summary>
   </entry>
   <entry>
-    <title>Quartz — quartz</title>
-    <link href="https://pronounce.renlab.ai/word/quartz"/>
-    <id>https://pronounce.renlab.ai/word/quartz</id>
-    <updated>2026-05-17T09:06:06Z</updated>
-    <summary>Quartz is pronounced "quartz" (/kwɔːrts/). "quartz" — static site gen for digital gardens.</summary>
+    <title>WSGI — WIZ gee</title>
+    <link href="https://pronounce.renlab.ai/word/wsgi"/>
+    <id>https://pronounce.renlab.ai/word/wsgi</id>
+    <updated>2026-05-18T13:53:37Z</updated>
+    <summary>WSGI is pronounced "WIZ gee" (/ˈwɪz ɡi/). "WIZ-gee" common; letter-by-letter also heard. Web Server Gateway Interface.</summary>
   </entry>
   <entry>
-    <title>Eleventy — e lev en tee</title>
-    <link href="https://pronounce.renlab.ai/word/eleventy"/>
-    <id>https://pronounce.renlab.ai/word/eleventy</id>
-    <updated>2026-05-17T09:06:06Z</updated>
-    <summary>Eleventy is pronounced "e lev en tee" (/ɪˈlɛvənti/). "e-LEV-en-tee" — aka 11ty.</summary>
+    <title>WebKit — web kit</title>
+    <link href="https://pronounce.renlab.ai/word/webkit"/>
+    <id>https://pronounce.renlab.ai/word/webkit</id>
+    <updated>2026-05-18T13:53:37Z</updated>
+    <summary>WebKit is pronounced "web kit" (/ˈwɛb kɪt/). "web-KIT". Apple browser engine.</summary>
   </entry>
   <entry>
-    <title>Jekyll — jek ul</title>
-    <link href="https://pronounce.renlab.ai/word/jekyll"/>
-    <id>https://pronounce.renlab.ai/word/jekyll</id>
-    <updated>2026-05-17T09:06:06Z</updated>
-    <summary>Jekyll is pronounced "jek ul" (/ˈdʒɛkəl/). "JEK-ul".</summary>
+    <title>Big-O — big oh</title>
+    <link href="https://pronounce.renlab.ai/word/big-o"/>
+    <id>https://pronounce.renlab.ai/word/big-o</id>
+    <updated>2026-05-18T13:53:37Z</updated>
+    <summary>Big-O is pronounced "big oh" (/ˌbɪɡ ˈoʊ/). "big-OH". Asymptotic upper bound notation.</summary>
   </entry>
   <entry>
-    <title>Gatsby — gats bee</title>
-    <link href="https://pronounce.renlab.ai/word/gatsby"/>
-    <id>https://pronounce.renlab.ai/word/gatsby</id>
-    <updated>2026-05-17T09:06:06Z</updated>
-    <summary>Gatsby is pronounced "gats bee" (/ˈɡætsbi/). "GATS-bee".</summary>
+    <title>pub/sub — pub sub</title>
+    <link href="https://pronounce.renlab.ai/word/pub-sub"/>
+    <id>https://pronounce.renlab.ai/word/pub-sub</id>
+    <updated>2026-05-18T13:53:37Z</updated>
+    <summary>pub/sub is pronounced "pub sub" (/ˈpʌb sʌb/). "pub-SUB". Publish/Subscribe pattern.</summary>
   </entry>
   <entry>
-    <title>Pelican — pel i kun</title>
-    <link href="https://pronounce.renlab.ai/word/pelican"/>
-    <id>https://pronounce.renlab.ai/word/pelican</id>
-    <updated>2026-05-17T09:06:06Z</updated>
-    <summary>Pelican is pronounced "pel i kun" (/ˈpɛlɪkən/). "PEL-i-kun".</summary>
+    <title>OOM — O O M</title>
+    <link href="https://pronounce.renlab.ai/word/oom"/>
+    <id>https://pronounce.renlab.ai/word/oom</id>
+    <updated>2026-05-18T13:53:37Z</updated>
+    <summary>OOM is pronounced "O O M" (/ˌoʊ oʊ ˈɛm/). Letters dominant; "oom" rare. Out Of Memory.</summary>
   </entry>
 </feed>

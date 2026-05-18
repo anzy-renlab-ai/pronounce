@@ -1,0 +1,12 @@
+{
+  "word": "rlhf",
+  "ipa": "/ˌɑːr ɛl eɪtʃ ˈɛf/",
+  "respelling_us": "R L H F",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://openai.com/research/learning-from-human-preferences",
+  "source_label": "OpenAI research",
+  "category": "acronym",
+  "confidence": "community-consensus",
+  "notes": "Reinforcement Learning from Human Feedback. Always spelled out."
+}

@@ -1,0 +1,12 @@
+{
+  "word": "phi",
+  "ipa": "/faɪ/",
+  "respelling_us": "fai",
+  "alt_ipa": ["/fiː/"],
+  "alt_respelling_us": ["fee"],
+  "source_url": "https://huggingface.co/microsoft/phi-3",
+  "source_label": "Microsoft Phi",
+  "category": "product",
+  "confidence": "contested",
+  "notes": "Microsoft's small-model series. Greek letter φ — US \"FAI\"; British/math \"FEE.\""
+}

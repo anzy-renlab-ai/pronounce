@@ -1,0 +1,12 @@
+{
+  "word": "langsmith",
+  "ipa": "/ˈlæŋ smɪθ/",
+  "respelling_us": "LANG smith",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.langchain.com/langsmith",
+  "source_label": "LangSmith",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "LangChain's eval/observability platform. \"LANG-smith.\""
+}

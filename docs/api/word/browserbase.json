@@ -1,0 +1,12 @@
+{
+  "word": "browserbase",
+  "ipa": "/ˈbraʊ zər beɪs/",
+  "respelling_us": "BROW zer base",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.browserbase.com/",
+  "source_label": "Browserbase",
+  "category": "project",
+  "confidence": "community-consensus",
+  "notes": "Cloud headless-browser platform. Compound \"browser-base.\""
+}

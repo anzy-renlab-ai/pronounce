@@ -1,0 +1,12 @@
+{
+  "word": "atuin",
+  "ipa": "/ˈeɪ tuː ɪn/",
+  "respelling_us": "AY too in",
+  "alt_ipa": ["/ə ˈtuː ɪn/"],
+  "alt_respelling_us": ["uh TOO in"],
+  "source_url": "https://atuin.sh/",
+  "source_label": "Atuin",
+  "category": "cli-tool",
+  "confidence": "contested",
+  "notes": "Shell history manager. Aztec turtle deity — \"AY-too-in\" common."
+}

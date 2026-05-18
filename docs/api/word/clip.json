@@ -1,0 +1,12 @@
+{
+  "word": "CLIP",
+  "ipa": "/klɪp/",
+  "respelling_us": "clip",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://openai.com/research/clip",
+  "source_label": "OpenAI CLIP",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"clip\" the word. Contrastive Language-Image Pre-training."
+}

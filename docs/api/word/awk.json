@@ -1,0 +1,12 @@
+{
+  "word": "awk",
+  "ipa": "/ɔːk/",
+  "respelling_us": "auk",
+  "alt_ipa": ["/ˌeɪ dʌbəl juː ˈkeɪ/"],
+  "alt_respelling_us": ["A double you K"],
+  "source_url": "https://en.wikipedia.org/wiki/AWK#Origin_of_the_name",
+  "source_label": "Wikipedia § Origin of the name",
+  "category": "cli-tool",
+  "confidence": "creator-clarified",
+  "notes": "\"auk\" — like the seabird, rhymes with \"hawk\". Named after creators' initials (Aho/Weinberger/Kernighan); pronunciation confirmed in original AWK book."
+}

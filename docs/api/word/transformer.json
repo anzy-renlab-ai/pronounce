@@ -1,0 +1,12 @@
+{
+  "word": "Transformer",
+  "ipa": "/trænsˈfɔːr mər/",
+  "respelling_us": "trans former",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/1706.03762",
+  "source_label": "Attention paper",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "\"trans-FOR-mer\" — the architecture, not the toy."
+}

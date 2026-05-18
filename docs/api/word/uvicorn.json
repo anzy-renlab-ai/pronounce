@@ -1,0 +1,12 @@
+{
+  "word": "uvicorn",
+  "ipa": "/ˌjuː viː ˈkɔːrn/",
+  "respelling_us": "yoo vee corn",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.uvicorn.org/",
+  "source_label": "Uvicorn docs",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "\"yoo-vee-CORN\". Python ASGI server."
+}

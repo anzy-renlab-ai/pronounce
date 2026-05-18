@@ -1,0 +1,12 @@
+{
+  "word": "posthog",
+  "ipa": "/ˈpoʊst hɒɡ/",
+  "respelling_us": "POST hog",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://posthog.com/",
+  "source_label": "PostHog",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "Open-source product analytics. Compound \"post-hog.\""
+}

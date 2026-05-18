@@ -1,0 +1,12 @@
+{
+  "word": "Less",
+  "ipa": "/lɛs/",
+  "respelling_us": "less",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://lesscss.org/",
+  "source_label": "Less docs",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "English word \"less\". CSS preprocessor."
+}

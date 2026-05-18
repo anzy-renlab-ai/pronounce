@@ -1,0 +1,12 @@
+{
+  "word": "REPL",
+  "ipa": "/ˈrɛpəl/",
+  "respelling_us": "reh pəl",
+  "alt_ipa": ["/ˌɑːr iː piː ˈɛl/"],
+  "alt_respelling_us": ["R E P L"],
+  "source_url": "https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop",
+  "source_label": "Wikipedia",
+  "category": "acronym",
+  "confidence": "contested",
+  "notes": "\"REP-uhl\" common in Lisp/Clojure; letter-by-letter common elsewhere. Read-Eval-Print Loop."
+}

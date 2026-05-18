@@ -1,0 +1,12 @@
+{
+  "word": "yarn",
+  "ipa": "/jɑːrn/",
+  "respelling_us": "yarn",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://yarnpkg.com/",
+  "source_label": "Yarn docs",
+  "category": "cli-tool",
+  "confidence": "community-consensus",
+  "notes": "\"yarn\" the word."
+}

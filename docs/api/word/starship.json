@@ -1,0 +1,12 @@
+{
+  "word": "starship",
+  "ipa": "/ˈstɑːr ʃɪp/",
+  "respelling_us": "STAR ship",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://starship.rs/",
+  "source_label": "Starship",
+  "category": "cli-tool",
+  "confidence": "community-consensus",
+  "notes": "Cross-shell prompt. Standard compound \"star-ship.\""
+}

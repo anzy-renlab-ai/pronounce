@@ -1,0 +1,12 @@
+{
+  "word": "CVE",
+  "ipa": "/ˌsiː viː ˈiː/",
+  "respelling_us": "C V E",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.cve.org/",
+  "source_label": "MITRE CVE",
+  "category": "acronym",
+  "confidence": "community-consensus",
+  "notes": "Letters \"C-V-E\". Common Vulnerabilities and Exposures."
+}

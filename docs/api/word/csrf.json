@@ -1,0 +1,12 @@
+{
+  "word": "CSRF",
+  "ipa": "/ˈsiː sɜːrf/",
+  "respelling_us": "sea surf",
+  "alt_ipa": ["/ˌsiː ɛs ɑːr ˈɛf/"],
+  "alt_respelling_us": ["C S R F"],
+  "source_url": "https://owasp.org/www-community/attacks/csrf",
+  "source_label": "OWASP",
+  "category": "acronym",
+  "confidence": "contested",
+  "notes": "OWASP-favored \"sea-surf\"; letter-by-letter common too."
+}

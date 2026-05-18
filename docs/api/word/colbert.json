@@ -1,0 +1,12 @@
+{
+  "word": "ColBERT",
+  "ipa": "/kɒlˈbɜːrt/",
+  "respelling_us": "col BURT",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2004.12832",
+  "source_label": "ColBERT paper",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"col-BURT\" — like Stephen Colbert. Contextualized Late interaction over BERT."
+}
