@@ -816,7 +816,7 @@ C#	/ˌsiː ˈʃɑːrp/	C sharp			https://learn.microsoft.com/dotnet/csharp/	Micr
 TypeScript	/ˈtaɪpˌskrɪpt/	TYPE script			https://www.typescriptlang.org/	TypeScript docs	product	community-consensus	"TYPE-script".
 JavaScript	/ˈdʒɑːvə skrɪpt/	JAH vah script			https://tc39.es/	TC39	product	community-consensus	"JAH-vuh-script".
 Tcl	/ˈtɪkəl/	tickle	/ˌtiː siː ˈɛl/	T C L	https://www.tcl-lang.org/	Tcl official	product	creator-clarified	John Ousterhout (creator): "tickle". Official Tcl Developer Xchange confirms.
-awk	/ɔːk/	auk	/ˌeɪ dʌbəl juː ˈkeɪ/	A double you K		Aho/Weinberger/Kernighan	cli-tool	creator-clarified	"auk" — like the seabird, rhymes with "hawk". Named after creators' initials but pronounced as a word.
+awk	/ɔːk/	auk	/ˌeɪ dʌbəl juː ˈkeɪ/	A double you K	https://en.wikipedia.org/wiki/AWK#Origin_of_the_name	Wikipedia § Origin of the name	cli-tool	creator-clarified	"auk" — like the seabird, rhymes with "hawk". Named after creators' initials (Aho/Weinberger/Kernighan); pronunciation confirmed in original AWK book.
 Perl	/pɜːrl/	purl			https://www.perl.org/	perl.org	product	community-consensus	"purl" — homophone of "pearl".
 Lisp	/lɪsp/	lisp					product	community-consensus	"lisp" the word.
 Scheme	/skiːm/	skeem					product	community-consensus	"skeem" — like the word "scheme".
