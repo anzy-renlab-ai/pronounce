@@ -1,6 +1,20 @@
 # Pronounce — VS Code
 
+[![Open VSX Version](https://img.shields.io/open-vsx/v/sayit/pronounce?label=Open%20VSX&color=a60ee5)](https://open-vsx.org/extension/sayit/pronounce)
+[![Open VSX Downloads](https://img.shields.io/open-vsx/dt/sayit/pronounce?label=installs)](https://open-vsx.org/extension/sayit/pronounce)
+[![GitHub stars](https://img.shields.io/github/stars/anzy-renlab-ai/pronounce?style=flat&logo=github)](https://github.com/anzy-renlab-ai/pronounce)
+
 Hover over `kubectl`, `nginx`, `kubectl`, `GIF`, `Affine`, `Logseq` — see IPA, hear the pronunciation. Backed by the community-curated [Pronounce.ai](https://github.com/anzy-renlab-ai/pronounce) dictionary (~817 tech terms).
+
+## Install
+
+```bash
+# VSCodium / Cursor / Zed / Gitpod / Theia / code-server (Open VSX)
+code --install-extension sayit.pronounce
+# or open: https://open-vsx.org/extension/sayit/pronounce
+```
+
+> VS Code (Microsoft Marketplace) coming soon. Track [#vscode-marketplace](https://github.com/anzy-renlab-ai/pronounce/issues).
 
 > **macOS only in v0.1.** Uses the built-in `say` voice. Linux/Windows backends are on the roadmap (track issue [#vscode-ext-crossplatform](https://github.com/anzy-renlab-ai/pronounce/issues)).
 
@@ -8,7 +22,7 @@ Hover over `kubectl`, `nginx`, `kubectl`, `GIF`, `Affine`, `Logseq` — see IPA,
 
 - **Hover** any known tech word → tooltip shows IPA, English-like respelling, source, and a 🔊 Play button.
 - **Speak selection** — highlight a word, press `⌘⇧'`, hear it.
-- **Search** — `Pronounce: Search dictionary…` from the command palette → fuzzy-find any of the ~625 entries.
+- **Search** — `Pronounce: Search dictionary…` from the command palette → fuzzy-find any of the 817 entries.
 
 ## Why
 

@@ -2,7 +2,7 @@
   "name": "pronounce",
   "displayName": "Pronounce — Tech Word Pronunciation",
   "description": "Hover over kubectl, nginx, kubectl, GIF — hear how each is actually pronounced. macOS `say` + the Pronounce.ai community dictionary.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "sayit",
   "license": "MIT",
   "icon": "icon.png",

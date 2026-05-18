@@ -142,16 +142,17 @@ Your AI replies with **sound**, not just a phonetic guess. Skill file: [`skills/
 
 ## VS Code extension
 
-Hover over any tech word in any file — see the IPA, hear the pronunciation. Same dictionary as the CLI, no daemon, zero runtime parse cost (dictionary is JSON-bundled at build).
+[![Open VSX Version](https://img.shields.io/open-vsx/v/sayit/pronounce?label=Open%20VSX&color=a60ee5)](https://open-vsx.org/extension/sayit/pronounce) [![Open VSX Downloads](https://img.shields.io/open-vsx/dt/sayit/pronounce?label=installs)](https://open-vsx.org/extension/sayit/pronounce)
+
+Hover over any tech word in any file — see the IPA, hear the pronunciation. Same 817-entry dictionary as the CLI, JSON-bundled at build (zero runtime parse cost).
 
 ```bash
-# 1. install from .vsix
-code --install-extension integrations/vscode/pronounce-0.1.0.vsix
-
-# 2. or from the marketplace (when published)
-#    VS Code:    ext install sayit.pronounce
-#    Cursor:     same ID via Open VSX
+# Cursor / VSCodium / Zed / Gitpod / Theia / code-server (Open VSX)
+code --install-extension sayit.pronounce
+# or the listing: https://open-vsx.org/extension/sayit/pronounce
 ```
+
+VS Code (Microsoft Marketplace) coming soon.
 
 - **Hover** over `kubectl`, `YAML`, `Ghostty`, `wagmi`… → tooltip with IPA + 🔊 Play.
 - **⌘⇧'** — speak selection.
