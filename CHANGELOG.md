@@ -1,5 +1,26 @@
 # Changelog
 
+## v2.6.0 — 2026-05-18
+
+### Added
+- **VS Code extension** (`integrations/vscode/`, marketplace ID `sayit.pronounce`). Hover over any tech word in any file → tooltip with IPA, English-like respelling, source, and 🔊 Play. ⌘⇧' speaks the selection; `Pronounce: Search dictionary…` is a fuzzy command-palette search over all 817 entries. Mac-only v0.1 (uses `say`); cross-platform on roadmap. Dictionary is JSON-bundled at build (`scripts/build-dict.mjs`) so the extension has zero runtime parse cost.
+- **+193 programmer-targeted dictionary entries** (624 → 817):
+  - Foundation web acronyms: HTTP, HTTPS, TCP, UDP, SSL, QUIC, CORS, CSRF, XSS, YAML, TOML, SDK, CLI, URL, URI, UUID, GUID, HTML, CSS, XML, WebSocket, NoSQL, Sass, SCSS, Less, OpenID, OAuth2, VPN.
+  - Algorithms/CS: Dijkstra, trie, DAG, CRDT, ACID, BASE, CAP, REPL, FIFO, LIFO, LRU, AOT.
+  - Networking: NAT, DHCP, BGP, OSPF, MTU, mTLS, ICMP, ARP, WAN, LAN.
+  - Security: OWASP, SBOM, CVE, CVSS, MFA, 2FA, SSO, RBAC, WAF, SIEM, HIPAA, GDPR, nonce.
+  - Hardware: GPU, CPU, TPU, NPU, ASIC, FPGA, SIMD, DRAM, SRAM, NVMe, RAID, DMA, ECC.
+  - Architecture: SOLID, GitOps, DevOps, MLOps, LLMOps, FinOps, SOA, ELT.
+  - ML deeper: CNN, RNN, LSTM, GRU, GAN, VAE, ReLU, GeLU, SwiGLU, RoPE, tanh, softmax, DPO, PPO, GRPO, Faiss, Adam, AdamW, Transformer, BERT, T5, PaLM, SAM, CLIP, DINO, ColBERT, HNSW, Karpathy.
+  - Languages: C++, C#, TypeScript, JavaScript, Tcl (tickle), awk (auk), Perl, Lisp, Scheme, Prolog, PHP, Bash, Swift, Rust, Go, Ruby.
+  - Web architecture: SPA, PWA, SSR, CSR, SSG, ISR, DOM, AST, V8, BFF.
+  - Java: JPA, JDBC, POJO, DTO.
+  - Web3: EVM, ABI, dApp, ENS.
+  - SRE: SLA, SLO, SLI, KPI, MTTR, MTBF.
+  - Python: uvicorn, gunicorn, WSGI.
+  - High-star repos w/ ambiguous names: Ghostty, viem, wagmi, Logseq, Excalidraw, tldraw, Slidev, Yazi, AppFlowy, Affine, Gitea, Forgejo, Keras, YOLO, Whisper, Streamlit, Gradio, Dify, Hunyuan, Coqui, HTTPie, Bruno, Hoppscotch, TensorFlow, Mermaid, Anytype, Vicuna, LLaVA, LoRA, QLoRA, PEFT.
+- **13 new creator-clarified entries** with citations: YAML → yaml.org FAQ, TOML → toml.io, QUIC → IETF RFC 9000, Keras → Chollet, Tcl → Ousterhout, awk → Aho/Weinberger/Kernighan, tldraw → Steve Ruiz, Slidev → Anthony Fu, Ghostty → Mitchell Hashimoto, viem → viem docs, HTTPie → docs, Logseq → creators, Dijkstra → EWD archive.
+
 ## v2.5.0 — 2026-05-17
 
 ### Added
