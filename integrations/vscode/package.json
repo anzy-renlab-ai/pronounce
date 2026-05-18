@@ -1,0 +1,111 @@
+{
+  "name": "pronounce",
+  "displayName": "Pronounce — Tech Word Pronunciation",
+  "description": "Hover over kubectl, nginx, kubectl, GIF — hear how each is actually pronounced. macOS `say` + the Pronounce.ai community dictionary.",
+  "version": "0.1.0",
+  "publisher": "sayit",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alvinhochun/say-it",
+    "directory": "integrations/vscode"
+  },
+  "homepage": "https://github.com/alvinhochun/say-it/tree/main/integrations/vscode",
+  "bugs": {
+    "url": "https://github.com/alvinhochun/say-it/issues"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Education",
+    "Other"
+  ],
+  "keywords": [
+    "pronunciation",
+    "tts",
+    "audio",
+    "kubectl",
+    "nginx",
+    "tech terms",
+    "accessibility"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "pronounce.speak",
+        "title": "Pronounce: Speak word",
+        "category": "Pronounce"
+      },
+      {
+        "command": "pronounce.speakSelection",
+        "title": "Pronounce: Speak current selection",
+        "category": "Pronounce"
+      },
+      {
+        "command": "pronounce.search",
+        "title": "Pronounce: Search dictionary…",
+        "category": "Pronounce"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "pronounce.speakSelection",
+        "key": "cmd+shift+'",
+        "when": "editorHasSelection && isMac"
+      }
+    ],
+    "configuration": {
+      "title": "Pronounce",
+      "properties": {
+        "pronounce.voice": {
+          "type": "string",
+          "default": "Samantha",
+          "description": "macOS `say` voice. Run `say -v '?'` for full list. Recommended: Samantha, Daniel, Karen, Moira, Tessa."
+        },
+        "pronounce.rate": {
+          "type": "number",
+          "default": 200,
+          "minimum": 80,
+          "maximum": 500,
+          "description": "Speech rate in words per minute."
+        },
+        "pronounce.repetitions": {
+          "type": "number",
+          "default": 1,
+          "minimum": 1,
+          "maximum": 5,
+          "description": "Times to repeat the word. CLI default is 3; hover is more annoying when repeated, so default here is 1."
+        },
+        "pronounce.hoverEnabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show pronunciation popup on hover for known tech words."
+        },
+        "pronounce.hoverOnlyKnownWords": {
+          "type": "boolean",
+          "default": true,
+          "description": "Only show hover for words in the dictionary. Disable to also hover unknown words (uses TTS letter-to-sound, lower quality)."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build:dict": "node scripts/build-dict.mjs",
+    "compile": "tsc -p .",
+    "vscode:prepublish": "npm run build:dict && npm run compile",
+    "package": "vsce package --no-dependencies",
+    "publish": "vsce publish --no-dependencies",
+    "watch": "tsc -p . -w"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^3.0.0",
+    "typescript": "^5.6.0"
+  }
+}

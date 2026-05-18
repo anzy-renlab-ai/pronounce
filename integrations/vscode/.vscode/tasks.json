@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "npm: compile",
+      "type": "npm",
+      "script": "compile",
+      "presentation": { "reveal": "silent" },
+      "group": { "kind": "build", "isDefault": true },
+      "dependsOn": ["npm: build:dict"]
+    },
+    {
+      "label": "npm: build:dict",
+      "type": "npm",
+      "script": "build:dict",
+      "presentation": { "reveal": "silent" }
+    }
+  ]
+}
