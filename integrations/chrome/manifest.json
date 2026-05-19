@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "Pronounce — Tech Word Pronunciation",
+  "short_name": "Pronounce",
+  "version": "0.1.0",
+  "description": "Hover any tech word on any web page — hear how it's actually pronounced. 851 sourced entries.",
+  "author": "Pronounce.ai",
+  "homepage_url": "https://pronounce.renlab.ai/",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_title": "Pronounce — search 851 entries",
+    "default_popup": "src/popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "options_ui": {
+    "page": "src/options.html",
+    "open_in_tab": false
+  },
+  "permissions": ["storage"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content.js"],
+      "css": ["src/content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["src/dictionary.json", "icons/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

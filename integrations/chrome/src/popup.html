@@ -1,0 +1,32 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+  body { width: 360px; max-height: 460px; margin: 0; padding: 0; font-family: -apple-system, sans-serif; background: #14100c; color: #f4ecde; font-size: 13px; overflow: hidden; }
+  .head { padding: 14px 14px 8px; border-bottom: 1px solid #2a2218; }
+  .title { font-size: 16px; font-weight: 600; margin: 0 0 4px; }
+  .sub { color: #8a8270; font-size: 11px; }
+  input { width: 100%; box-sizing: border-box; margin: 10px 14px 8px; width: calc(100% - 28px); padding: 8px 10px; background: #1c1812; border: 1px solid #2a2218; border-radius: 6px; color: #f4ecde; font-family: 'SF Mono', Menlo, monospace; font-size: 13px; }
+  input:focus { outline: 1px solid #8fd694; border-color: #8fd694; }
+  .results { max-height: 320px; overflow-y: auto; padding: 4px 0 8px; }
+  .row { padding: 8px 14px; cursor: pointer; border-left: 2px solid transparent; }
+  .row:hover, .row.sel { background: #1c1812; border-left-color: #8fd694; }
+  .row .w { font-weight: 600; }
+  .row .ipa { color: #7adfbb; font-family: 'SF Mono', Menlo, monospace; font-size: 11px; }
+  .row .resp { color: #c9bfa9; font-size: 12px; margin-top: 2px; }
+  .empty { padding: 14px; color: #8a8270; font-style: italic; }
+  .foot { padding: 8px 14px; border-top: 1px solid #2a2218; display: flex; justify-content: space-between; font-size: 11px; color: #8a8270; }
+  .foot a { color: #8fd694; text-decoration: none; }
+</style>
+</head><body>
+  <div class="head">
+    <div class="title">Pronounce</div>
+    <div class="sub" id="count">…</div>
+  </div>
+  <input id="q" type="search" placeholder="type any word — kubectl, YAML, Ghostty…" autofocus>
+  <div class="results" id="results"></div>
+  <div class="foot">
+    <a href="https://pronounce.renlab.ai/" target="_blank">pronounce.renlab.ai</a>
+    <a href="https://github.com/anzy-renlab-ai/pronounce" target="_blank">★ star on GitHub</a>
+  </div>
+  <script src="popup.js"></script>
+</body></html>

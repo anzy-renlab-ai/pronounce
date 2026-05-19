@@ -162,6 +162,14 @@ VS Code (Microsoft Marketplace) coming soon.
 
 Source: [`integrations/vscode/`](integrations/vscode/). **Cross-platform as of v0.3** — macOS `say`, Linux `espeak-ng`, Windows PowerShell.
 
+## Chrome / Edge / Brave extension
+
+Click any tech word on any webpage → popup with IPA + audio. Same 851-entry dictionary; same Web Speech API as `pronounce.renlab.ai`. **Sideload only for now** (not yet on Chrome Web Store).
+
+Download `pronounce-chrome-0.1.0.zip` from the [latest release](https://github.com/anzy-renlab-ai/pronounce/releases/latest) → unzip → `chrome://extensions/` → Developer mode → Load unpacked.
+
+Source: [`integrations/chrome/`](integrations/chrome/).
+
 ## How the dictionary works
 
 `data/pronunciations.tsv` is the single source of truth — tab-separated, 851 entries, covering:
