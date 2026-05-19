@@ -1,0 +1,12 @@
+{
+  "word": "X25519",
+  "ipa": "/ˌɛks ˌtwɛnti faɪv faɪv ˌwʌn ˈnaɪn/",
+  "respelling_us": "X twenty-five five one nine",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://datatracker.ietf.org/doc/html/rfc7748",
+  "source_label": "RFC 7748",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "\"X-twenty-five-five-one-nine\". DH on Curve25519."
+}

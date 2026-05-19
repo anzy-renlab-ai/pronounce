@@ -1,0 +1,12 @@
+{
+  "word": "EC2",
+  "ipa": "/ˌiː tuː ˈsiː/",
+  "respelling_us": "E two C",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://aws.amazon.com/ec2/",
+  "source_label": "AWS EC2",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"E-two-C\". Elastic Compute Cloud."
+}

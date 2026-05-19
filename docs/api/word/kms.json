@@ -1,0 +1,12 @@
+{
+  "word": "KMS",
+  "ipa": "/ˌkeɪ ɛm ˈɛs/",
+  "respelling_us": "K M S",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://aws.amazon.com/kms/",
+  "source_label": "AWS KMS",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Letters \"K-M-S\". Key Management Service."
+}

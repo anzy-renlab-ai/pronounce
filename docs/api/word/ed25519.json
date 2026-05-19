@@ -1,0 +1,12 @@
+{
+  "word": "Ed25519",
+  "ipa": "/ˌiː diː ˌtwɛnti faɪv faɪv ˌwʌn ˈnaɪn/",
+  "respelling_us": "E D twenty-five five one nine",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://ed25519.cr.yp.to/",
+  "source_label": "ed25519.cr.yp.to",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "\"E-D-twenty-five-five-one-nine\". EdDSA over Curve25519."
+}

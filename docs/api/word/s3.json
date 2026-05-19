@@ -1,0 +1,12 @@
+{
+  "word": "S3",
+  "ipa": "/ˌɛs ˈθriː/",
+  "respelling_us": "S three",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://aws.amazon.com/s3/",
+  "source_label": "AWS S3",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"S-three\". Simple Storage Service."
+}

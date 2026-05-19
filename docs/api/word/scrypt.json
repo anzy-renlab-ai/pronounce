@@ -1,0 +1,12 @@
+{
+  "word": "scrypt",
+  "ipa": "/ɛs ˈkrɪpt/",
+  "respelling_us": "S crypt",
+  "alt_ipa": ["/skrɪpt/"],
+  "alt_respelling_us": ["skript"],
+  "source_url": "https://www.tarsnap.com/scrypt.html",
+  "source_label": "Colin Percival (creator)",
+  "category": "cs-term",
+  "confidence": "creator-clarified",
+  "notes": "Creator Colin Percival: \"ess-crypt\" (S then crypt). \"script\" is common but not the intent."
+}

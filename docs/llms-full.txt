@@ -853,3 +853,44 @@ Solana | /səˈlɑː nə/ | suh LAH nuh | product | community-consensus | https:
 WHATWG | /ˈwɒt wɪɡ/ | WAT wig | acronym | contested | https://whatwg.org/
 ECMA | /ˈɛk mə/ | EK ma | acronym | contested | https://ecma-international.org/
 IETF | /ˌaɪ iː tiː ˈɛf/ | I E T F | acronym | community-consensus | https://www.ietf.org/
+Raft | /ræft/ | raft | cs-term | creator-clarified | https://raft.github.io/
+Paxos | /ˈpæk soʊs/ | PAK sose | cs-term | community-consensus | https://en.wikipedia.org/wiki/Paxos_(computer_science)
+gossip | /ˈɡɒs ɪp/ | gossip | cs-term | community-consensus | https://en.wikipedia.org/wiki/Gossip_protocol
+Byzantine | /bɪˈzæn tiːn/ | biz AN teen | cs-term | contested | https://lamport.azurewebsites.net/pubs/byz.pdf
+quorum | /ˈkwɔːr əm/ | QUOR um | cs-term | community-consensus | (no source)
+Lamport | /ˈlæm pɔːrt/ | LAM port | cs-term | creator-clarified | https://lamport.azurewebsites.net/
+Saga | /ˈsɑː ɡə/ | SAH guh | cs-term | community-consensus | https://microservices.io/patterns/data/saga.html
+HLC | /ˌeɪtʃ ɛl ˈsiː/ | H L C | acronym | community-consensus | https://cse.buffalo.edu/tech-reports/2014-04.pdf
+vector clock | /ˈvɛk tər klɒk/ | VEK ter clock | cs-term | community-consensus | https://en.wikipedia.org/wiki/Vector_clock
+Ed25519 | /ˌiː diː ˌtwɛnti faɪv faɪv ˌwʌn ˈnaɪn/ | E D twenty-five five one nine | cs-term | community-consensus | https://ed25519.cr.yp.to/
+ChaCha20 | /ˌtʃɑː tʃɑː ˈtwɛn ti/ | CHA cha twenty | cs-term | community-consensus | https://datatracker.ietf.org/doc/html/rfc7539
+Poly1305 | /ˈpɒl iː ˌθɜːrˌtiːn ˌoʊ ˈfaɪv/ | PA lee thirteen oh five | cs-term | community-consensus | (no source)
+X25519 | /ˌɛks ˌtwɛnti faɪv faɪv ˌwʌn ˈnaɪn/ | X twenty-five five one nine | cs-term | community-consensus | https://datatracker.ietf.org/doc/html/rfc7748
+OAEP | /ˌoʊ eɪ iː ˈpiː/ | O A E P | acronym | contested | https://datatracker.ietf.org/doc/html/rfc8017
+scrypt | /ɛs ˈkrɪpt/ | S crypt | cs-term | creator-clarified | https://www.tarsnap.com/scrypt.html
+argon2 | /ˈɑːr ɡən tuː/ | AR gon two | cs-term | community-consensus | https://www.password-hashing.net/
+bcrypt | /ˈbiː krɪpt/ | B crypt | cs-term | community-consensus | https://www.usenix.org/legacy/events/usenix99/provos/provos_html/
+EC2 | /ˌiː tuː ˈsiː/ | E two C | product | community-consensus | https://aws.amazon.com/ec2/
+S3 | /ˌɛs ˈθriː/ | S three | product | community-consensus | https://aws.amazon.com/s3/
+RDS | /ˌɑːr diː ˈɛs/ | R D S | product | community-consensus | https://aws.amazon.com/rds/
+IAM | /ˌaɪ eɪ ˈɛm/ | I A M | product | community-consensus | https://docs.aws.amazon.com/iam/
+KMS | /ˌkeɪ ɛm ˈɛs/ | K M S | product | community-consensus | https://aws.amazon.com/kms/
+EKS | /ˌiː keɪ ˈɛs/ | E K S | product | community-consensus | https://aws.amazon.com/eks/
+ECS | /ˌiː siː ˈɛs/ | E C S | product | community-consensus | https://aws.amazon.com/ecs/
+GKE | /ˌdʒiː keɪ ˈiː/ | G K E | product | community-consensus | https://cloud.google.com/kubernetes-engine
+AKS | /ˌeɪ keɪ ˈɛs/ | A K S | product | community-consensus | https://learn.microsoft.com/en-us/azure/aks/
+Route53 | /ruːt ˌfɪf ti ˈθriː/ | root fifty-three | product | contested | https://aws.amazon.com/route53/
+io_uring | /ˌaɪ oʊ ˈjʊər ɪŋ/ | I O YOUR ing | cs-term | creator-clarified | https://kernel.dk/io_uring.pdf
+Btrfs | /ˈbʌt ər ɛf ɛs/ | BUTTER F S | product | contested | https://btrfs.readthedocs.io/
+ZFS | /ˌziː ɛf ˈɛs/ | Z F S | product | community-consensus | https://openzfs.org/
+cgroups | /ˈsiː ɡruːps/ | C groups | cs-term | community-consensus | https://docs.kernel.org/admin-guide/cgroup-v2.html
+strace | /ˌɛs ˈtreɪs/ | S trace | tool | community-consensus | https://strace.io/
+ltrace | /ˌɛl ˈtreɪs/ | L trace | tool | community-consensus | (no source)
+syscall | /ˈsɪs kɔːl/ | SIS call | cs-term | community-consensus | (no source)
+DeepSeek-R1 | /ˌdiːp siːk ˌɑːr ˈwʌn/ | deep seek R one | product | community-consensus | https://www.deepseek.com/
+R1 | /ˌɑːr ˈwʌn/ | R one | abbreviation | community-consensus | (no source)
+o1 | /ˌoʊ ˈwʌn/ | O one | product | community-consensus | https://openai.com/o1/
+o3 | /ˌoʊ ˈθriː/ | O three | product | community-consensus | https://openai.com/o3/
+Sonnet | /ˈsɒn ɪt/ | SON it | product | community-consensus | https://www.anthropic.com/claude
+Opus | /ˈoʊ pəs/ | OH pus | product | community-consensus | https://www.anthropic.com/claude
+Haiku | /ˈhaɪ kuː/ | HIGH koo | product | community-consensus | https://www.anthropic.com/claude

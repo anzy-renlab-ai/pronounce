@@ -1,0 +1,12 @@
+{
+  "word": "Paxos",
+  "ipa": "/ˈpæk soʊs/",
+  "respelling_us": "PAK sose",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://en.wikipedia.org/wiki/Paxos_(computer_science)",
+  "source_label": "Wikipedia",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "\"PAK-sose\" — after the Greek island. Leslie Lamport's consensus algorithm."
+}

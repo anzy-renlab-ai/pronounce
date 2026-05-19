@@ -1,0 +1,12 @@
+{
+  "word": "ChaCha20",
+  "ipa": "/ˌtʃɑː tʃɑː ˈtwɛn ti/",
+  "respelling_us": "CHA cha twenty",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://datatracker.ietf.org/doc/html/rfc7539",
+  "source_label": "RFC 7539",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "\"CHA-cha twenty\". Bernstein stream cipher."
+}

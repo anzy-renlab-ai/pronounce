@@ -1,0 +1,12 @@
+{
+  "word": "GKE",
+  "ipa": "/ˌdʒiː keɪ ˈiː/",
+  "respelling_us": "G K E",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://cloud.google.com/kubernetes-engine",
+  "source_label": "Google GKE",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Letters \"G-K-E\". Google Kubernetes Engine."
+}

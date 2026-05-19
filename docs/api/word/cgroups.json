@@ -1,0 +1,12 @@
+{
+  "word": "cgroups",
+  "ipa": "/ˈsiː ɡruːps/",
+  "respelling_us": "C groups",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://docs.kernel.org/admin-guide/cgroup-v2.html",
+  "source_label": "Linux kernel docs",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "\"C-groups\". Control groups — Linux resource isolation."
+}

@@ -1,0 +1,12 @@
+{
+  "word": "bcrypt",
+  "ipa": "/ˈbiː krɪpt/",
+  "respelling_us": "B crypt",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.usenix.org/legacy/events/usenix99/provos/provos_html/",
+  "source_label": "Provos & Mazières 1999",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "\"B-crypt\" — B for Blowfish + crypt."
+}

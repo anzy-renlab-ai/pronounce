@@ -1,0 +1,12 @@
+{
+  "word": "Lamport",
+  "ipa": "/ˈlæm pɔːrt/",
+  "respelling_us": "LAM port",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://lamport.azurewebsites.net/",
+  "source_label": "Leslie Lamport site",
+  "category": "cs-term",
+  "confidence": "creator-clarified",
+  "notes": "\"LAM-port\". Leslie Lamport — distributed-systems pioneer."
+}

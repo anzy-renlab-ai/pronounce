@@ -1,0 +1,12 @@
+{
+  "word": "OAEP",
+  "ipa": "/ˌoʊ eɪ iː ˈpiː/",
+  "respelling_us": "O A E P",
+  "alt_ipa": ["/ˈweɪ ɛp/"],
+  "alt_respelling_us": ["WAY ep"],
+  "source_url": "https://datatracker.ietf.org/doc/html/rfc8017",
+  "source_label": "RFC 8017",
+  "category": "acronym",
+  "confidence": "contested",
+  "notes": "Letter-by-letter dominant; some crypto folks say \"WAY-ep\". Optimal Asymmetric Encryption Padding."
+}

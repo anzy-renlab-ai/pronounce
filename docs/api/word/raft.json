@@ -1,0 +1,12 @@
+{
+  "word": "Raft",
+  "ipa": "/ræft/",
+  "respelling_us": "raft",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://raft.github.io/",
+  "source_label": "raft.github.io",
+  "category": "cs-term",
+  "confidence": "creator-clarified",
+  "notes": "\"raft\" the word. Consensus algorithm by Diego Ongaro + John Ousterhout, intended as \"more understandable than Paxos\"."
+}

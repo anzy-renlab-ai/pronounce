@@ -1,11 +1,11 @@
 {
   "categories": [
-    {"name": "product", "count": 453},
-    {"name": "acronym", "count": 163},
-    {"name": "tool", "count": 118},
-    {"name": "cs-term", "count": 42},
+    {"name": "product", "count": 471},
+    {"name": "acronym", "count": 165},
+    {"name": "tool", "count": 120},
+    {"name": "cs-term", "count": 60},
     {"name": "project", "count": 35},
-    {"name": "abbreviation", "count": 26},
+    {"name": "abbreviation", "count": 27},
     {"name": "cli-tool", "count": 14}
   ]
 }

@@ -1,0 +1,12 @@
+{
+  "word": "AKS",
+  "ipa": "/ˌeɪ keɪ ˈɛs/",
+  "respelling_us": "A K S",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://learn.microsoft.com/en-us/azure/aks/",
+  "source_label": "Azure AKS",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Letters \"A-K-S\". Azure Kubernetes Service."
+}

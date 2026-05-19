@@ -1,0 +1,12 @@
+{
+  "word": "EKS",
+  "ipa": "/ˌiː keɪ ˈɛs/",
+  "respelling_us": "E K S",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://aws.amazon.com/eks/",
+  "source_label": "AWS EKS",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Letters \"E-K-S\". AWS managed Kubernetes."
+}

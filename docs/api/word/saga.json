@@ -1,0 +1,12 @@
+{
+  "word": "Saga",
+  "ipa": "/ˈsɑː ɡə/",
+  "respelling_us": "SAH guh",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://microservices.io/patterns/data/saga.html",
+  "source_label": "microservices.io",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "\"SAH-guh\". Long-running distributed transaction pattern."
+}

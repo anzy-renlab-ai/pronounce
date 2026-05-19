@@ -1,0 +1,12 @@
+{
+  "word": "Route53",
+  "ipa": "/ruːt ˌfɪf ti ˈθriː/",
+  "respelling_us": "root fifty-three",
+  "alt_ipa": ["/raʊt ˌfɪf ti ˈθriː/"],
+  "alt_respelling_us": ["rowt fifty-three"],
+  "source_url": "https://aws.amazon.com/route53/",
+  "source_label": "AWS Route 53",
+  "category": "product",
+  "confidence": "contested",
+  "notes": "US tech \"root\"; UK / general \"rowt\". Port 53 = DNS."
+}

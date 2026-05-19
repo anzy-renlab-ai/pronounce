@@ -1,0 +1,12 @@
+{
+  "word": "o1",
+  "ipa": "/ˌoʊ ˈwʌn/",
+  "respelling_us": "O one",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://openai.com/o1/",
+  "source_label": "OpenAI o1",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"O-one\". OpenAI reasoning model."
+}

@@ -1,0 +1,12 @@
+{
+  "word": "vector clock",
+  "ipa": "/ˈvɛk tər klɒk/",
+  "respelling_us": "VEK ter clock",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://en.wikipedia.org/wiki/Vector_clock",
+  "source_label": "Wikipedia",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "\"VEK-ter clock\". Logical-time data structure."
+}

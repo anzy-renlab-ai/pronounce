@@ -1,0 +1,12 @@
+{
+  "word": "IAM",
+  "ipa": "/ˌaɪ eɪ ˈɛm/",
+  "respelling_us": "I A M",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://docs.aws.amazon.com/iam/",
+  "source_label": "AWS IAM",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Letters \"I-A-M\". Identity and Access Management."
+}

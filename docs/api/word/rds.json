@@ -1,0 +1,12 @@
+{
+  "word": "RDS",
+  "ipa": "/ˌɑːr diː ˈɛs/",
+  "respelling_us": "R D S",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://aws.amazon.com/rds/",
+  "source_label": "AWS RDS",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Letters \"R-D-S\". Relational Database Service."
+}

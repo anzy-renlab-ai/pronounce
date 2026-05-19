@@ -1,0 +1,12 @@
+{
+  "word": "Byzantine",
+  "ipa": "/bɪˈzæn tiːn/",
+  "respelling_us": "biz AN teen",
+  "alt_ipa": ["/ˈbɪz ən taɪn/"],
+  "alt_respelling_us": ["BIZ un tine"],
+  "source_url": "https://lamport.azurewebsites.net/pubs/byz.pdf",
+  "source_label": "Lamport 1982",
+  "category": "cs-term",
+  "confidence": "contested",
+  "notes": "\"biz-AN-teen\" US default; \"BIZ-un-tine\" UK / older usage. Byzantine fault tolerance."
+}

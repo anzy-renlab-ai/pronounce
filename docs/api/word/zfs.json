@@ -1,0 +1,12 @@
+{
+  "word": "ZFS",
+  "ipa": "/ˌziː ɛf ˈɛs/",
+  "respelling_us": "Z F S",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://openzfs.org/",
+  "source_label": "OpenZFS",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Letters \"Z-F-S\". Originally Zettabyte File System."
+}

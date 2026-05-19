@@ -1,0 +1,12 @@
+{
+  "word": "Btrfs",
+  "ipa": "/ˈbʌt ər ɛf ɛs/",
+  "respelling_us": "BUTTER F S",
+  "alt_ipa": ["/ˌbiː tiː ɑːr ɛf ˈɛs/"],
+  "alt_respelling_us": ["B T R F S"],
+  "source_url": "https://btrfs.readthedocs.io/",
+  "source_label": "Btrfs docs",
+  "category": "product",
+  "confidence": "contested",
+  "notes": "Chris Mason / kernel folks: \"butter-F-S\" (B-Tree File System). Letter-by-letter also common."
+}

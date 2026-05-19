@@ -1,0 +1,12 @@
+{
+  "word": "strace",
+  "ipa": "/ˌɛs ˈtreɪs/",
+  "respelling_us": "S trace",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://strace.io/",
+  "source_label": "strace.io",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "\"S-trace\" — system call trace."
+}
