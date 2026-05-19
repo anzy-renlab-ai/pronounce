@@ -6,6 +6,8 @@
 
 **Hover any tech word — hear how engineers actually say it.** Backed by the community-curated [Pronounce.ai](https://pronounce.renlab.ai/) dictionary — **817 sourced entries**, every one tagged with confidence (`creator-clarified` · `community-consensus` · `contested`) and a citable URL.
 
+![Pronounce demo — kubectl, YAML, Ghostty, wagmi](https://raw.githubusercontent.com/anzy-renlab-ai/pronounce/main/integrations/vscode/media/demo.gif)
+
 ## What you get
 
 - **Hover** over `kubectl`, `nginx`, `GIF`, `YAML`, `TOML`, `Ghostty`, `wagmi`, `JSON`, `Affine`, `Logseq` — popup with IPA, English-style respelling, both readings if contested, the source citation, and a 🔊 Play button.

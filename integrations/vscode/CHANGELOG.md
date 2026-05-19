@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1 — 2026-05-19
+
+- Marketplace listing: 960×540 animated demo GIF at the top of the README — 4 frames cycling kubectl ⇄ YAML ⇄ Ghostty ⇄ wagmi with the full hover popup, status bar item, and source citation visible. Plus a static `screenshot-kubectl.png` for fallbacks.
+
 ## 0.2.0 — 2026-05-19
 
 - **Welcome walkthrough** on first install — 4-step tour with one-click "Hear kubectl", search demo, and a Star CTA. Re-open anytime via `Pronounce: Show welcome / how to use`.
