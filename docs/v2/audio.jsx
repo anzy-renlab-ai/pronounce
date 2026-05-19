@@ -56,7 +56,7 @@ SpeechCtx.init();
 window.SpeechCtx = SpeechCtx;
 
 // ========== Waveform (canvas) ==========
-function Waveform({ active, color = '#ff6a3d', dim = '#3a2c22', bars = 64, height = 140 }) {
+function Waveform({ active, color = '#8fd694', dim = '#3a2c22', bars = 64, height = 140 }) {
   const ref = React.useRef(null);
   const raf = React.useRef(null);
   React.useEffect(() => {

@@ -8,9 +8,9 @@
   --ink-3: #8a8270;
   --line: rgba(244, 236, 222, 0.10);
   --line-2: rgba(244, 236, 222, 0.18);
-  --accent: #ff6a3d;
-  --accent-2: #ffb487;
-  --accent-soft: rgba(255, 106, 61, 0.14);
+  --accent: #8fd694;
+  --accent-2: #b8e7bb;
+  --accent-soft: rgba(143, 214, 148, 0.14);
   --good: #8fd694;
   --warn: #f0c87a;
   --bad: #ef8a82;
@@ -32,8 +32,8 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
   background-image:
-    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(255,106,61,0.10), transparent 60%),
-    radial-gradient(ellipse 60% 50% at 100% 100%, rgba(255,106,61,0.05), transparent 60%);
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(143,214,148,0.10), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 100% 100%, rgba(143,214,148,0.05), transparent 60%);
   background-attachment: fixed;
 }
 ::selection { background: var(--accent); color: var(--bg); }
@@ -71,7 +71,7 @@ body::before {
 .brand .dot {
   width: 28px; height: 28px; border-radius: 50%;
   background: var(--accent); position: relative;
-  box-shadow: 0 0 0 4px rgba(255,106,61,0.12), 0 0 24px rgba(255,106,61,.35);
+  box-shadow: 0 0 0 4px rgba(143,214,148,0.12), 0 0 24px rgba(143,214,148,.35);
   transition: transform .3s cubic-bezier(.2,.7,.2,1.4);
 }
 .brand:hover .dot { transform: scale(1.12); }

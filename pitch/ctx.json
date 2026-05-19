@@ -30,7 +30,7 @@
   ],
   "ask": { "amount": "Stars · contributions · feedback", "use_of_funds": "Every star nudges more devs to contribute their favorite mispronounced project." },
   "primary_cta": { "text": "Star on GitHub", "url": "https://github.com/anzy-renlab-ai/pronounce" },
-  "primary_color": "#ff6a3d",
+  "primary_color": "#8fd694",
   "secondary_color": "#7adfbb",
   "bg_color": "#0a0a0a",
   "elevator_pitch": "Pronounce — the dictionary engineers reach for when they realize they've been saying kubectl wrong for three years."

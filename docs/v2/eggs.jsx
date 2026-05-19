@@ -167,7 +167,7 @@ function Karaoke({ on, onClose }) {
 window.Karaoke = Karaoke;
 
 // ========== Ripple effect ==========
-window.spawnRipple = function (x, y, color = '#ff6a3d') {
+window.spawnRipple = function (x, y, color = '#8fd694') {
   const el = document.createElement('div');
   el.className = 'ripple';
   el.style.left = x + 'px';

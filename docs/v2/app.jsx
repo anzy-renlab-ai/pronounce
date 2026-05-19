@@ -1,6 +1,6 @@
 // ========== Main App ==========
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-  "accent": "#ff6a3d",
+  "accent": "#8fd694",
   "showHud": true,
   "autoSpeak": false,
   "layoutDensity": "comfortable"

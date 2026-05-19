@@ -200,7 +200,7 @@ footer .mark em { font-style: normal; }
   border: 1px solid var(--line-2);
   border-radius: var(--r-lg);
   overflow: hidden;
-  box-shadow: 0 60px 100px -30px rgba(0,0,0,.7), 0 0 0 1px rgba(255,106,61,.15);
+  box-shadow: 0 60px 100px -30px rgba(0,0,0,.7), 0 0 0 1px rgba(143,214,148,.15);
   transform: translateY(-12px); opacity: 0;
   transition: all .25s;
 }
