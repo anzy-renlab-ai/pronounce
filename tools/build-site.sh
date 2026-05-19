@@ -834,9 +834,12 @@ FAMOUS_HTML="$(awk -F'\t' '
 ' "$DICT")"
 
 # ---------------------------------------------------------------------------
-# index.html — landing page
+# v1.html — legacy landing page (was index.html; now archived at /v1/).
+# The new homepage lives at docs/index.html (v2 redesign, hand-maintained).
+# This script keeps generating v1 so its dynamic counts/Famous Moments stay
+# fresh — useful as a fallback + for SEO continuity.
 # ---------------------------------------------------------------------------
-cat > "$DOCS/index.html" <<EOF
+cat > "$DOCS/v1.html" <<EOF
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -2616,7 +2619,7 @@ cat > "$DOCS/404.html" <<EOF
 </html>
 EOF
 
-echo "Built $DOCS/index.html"
+echo "Built $DOCS/v1.html (legacy; root index.html is the v2 redesign, hand-maintained)"
 echo "Built $DOCS/browse.html"
 echo "Built $DOCS/404.html"
 echo "Built $DOCS/style.css"
@@ -2624,3 +2627,10 @@ echo "Built $DOCS/script.js"
 echo "Built $DOCS/sitemap.xml"
 echo "Built $DOCS/robots.txt"
 echo "Built $WORD_COUNT per-word pages"
+
+# ---------------------------------------------------------------------------
+# SEO landing pages (collections, comparisons, Chinese per-word)
+# ---------------------------------------------------------------------------
+if command -v python3 >/dev/null 2>&1; then
+  python3 "$REPO_ROOT/tools/build-seo.py" || echo "build-seo: failed (non-fatal)" >&2
+fi
