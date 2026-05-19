@@ -36,9 +36,7 @@ cd pronounce && ./install.sh
 say-it kubectl
 ```
 
-```
-🔊  koob control. koob control. koob control. or: cube cuddle. or: kube C T L.
-```
+![say-it CLI demo — kubectl, YAML, TOML, Ghostty](pitch/say-it-cli-demo.gif)
 
 That's it. Now try `say-it GIF`, `say-it nginx`, `say-it Pydantic`, `say-it --why JSON`, or `say-it quiz` for a 10-question challenge. Not on macOS? The dictionary works in the browser at **[pronounce.renlab.ai](https://pronounce.renlab.ai)** — same audio, no install.
 
@@ -142,7 +140,9 @@ Your AI replies with **sound**, not just a phonetic guess. Skill file: [`skills/
 
 ## VS Code extension
 
-[![Open VSX Version](https://img.shields.io/open-vsx/v/sayit/pronounce?label=Open%20VSX&color=a60ee5)](https://open-vsx.org/extension/sayit/pronounce) [![Open VSX Downloads](https://img.shields.io/open-vsx/dt/sayit/pronounce?label=installs)](https://open-vsx.org/extension/sayit/pronounce)
+[![Open VSX Version](https://img.shields.io/open-vsx/v/sayit/pronounce?label=Open%20VSX&color=8fd694)](https://open-vsx.org/extension/sayit/pronounce) [![Open VSX Downloads](https://img.shields.io/open-vsx/dt/sayit/pronounce?label=installs)](https://open-vsx.org/extension/sayit/pronounce)
+
+![Pronounce demo — kubectl, YAML, Ghostty, wagmi](integrations/vscode/media/demo.gif)
 
 Hover over any tech word in any file — see the IPA, hear the pronunciation. Same 817-entry dictionary as the CLI, JSON-bundled at build (zero runtime parse cost).
 
@@ -154,11 +154,13 @@ code --install-extension sayit.pronounce
 
 VS Code (Microsoft Marketplace) coming soon.
 
-- **Hover** over `kubectl`, `YAML`, `Ghostty`, `wagmi`… → tooltip with IPA + 🔊 Play.
+- **Hover** over `kubectl`, `YAML`, `Ghostty`, `wagmi`… → tooltip with IPA + 🔊 Play + ★ Star link.
 - **⌘⇧'** — speak selection.
+- **Status bar** `🔊 sayit` — click to speak the current selection.
+- **Welcome walkthrough** — 4-step onboarding on first install.
 - **`Pronounce: Search dictionary…`** — fuzzy-find all 817 entries.
 
-Source: [`integrations/vscode/`](integrations/vscode/). Mac-only v0.1 (uses `say`); cross-platform on roadmap.
+Source: [`integrations/vscode/`](integrations/vscode/). Mac-only v0.2 (uses `say`); cross-platform on roadmap.
 
 ## How the dictionary works
 
