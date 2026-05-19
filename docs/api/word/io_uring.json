@@ -1,12 +1,12 @@
 {
   "word": "io_uring",
-  "ipa": "/ˌaɪ oʊ ˈjʊər ɪŋ/",
-  "respelling_us": "I O YOUR ing",
-  "alt_ipa": ["/ˌaɪ oʊ ˈʊər ɪŋ/"],
-  "alt_respelling_us": ["I O OOR ing"],
+  "ipa": "/ˌaɪ oʊ ˈrɪŋ/",
+  "respelling_us": "I O ring",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
   "source_url": "https://kernel.dk/io_uring.pdf",
   "source_label": "Jens Axboe paper",
   "category": "cs-term",
   "confidence": "creator-clarified",
-  "notes": "Jens Axboe: \"I-O ring\" (the underscore is silent). Async I/O syscall API."
+  "notes": "Jens Axboe (creator): \"I-O ring\" — letters I and O then the word \"ring\". The underscore is silent; the \"u\" is the start of \"uring\" → \"ring\". Async I/O syscall API."
 }

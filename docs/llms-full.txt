@@ -880,7 +880,7 @@ ECS | /ˌiː siː ˈɛs/ | E C S | product | community-consensus | https://aws.a
 GKE | /ˌdʒiː keɪ ˈiː/ | G K E | product | community-consensus | https://cloud.google.com/kubernetes-engine
 AKS | /ˌeɪ keɪ ˈɛs/ | A K S | product | community-consensus | https://learn.microsoft.com/en-us/azure/aks/
 Route53 | /ruːt ˌfɪf ti ˈθriː/ | root fifty-three | product | contested | https://aws.amazon.com/route53/
-io_uring | /ˌaɪ oʊ ˈjʊər ɪŋ/ | I O YOUR ing | cs-term | creator-clarified | https://kernel.dk/io_uring.pdf
+io_uring | /ˌaɪ oʊ ˈrɪŋ/ | I O ring | cs-term | creator-clarified | https://kernel.dk/io_uring.pdf
 Btrfs | /ˈbʌt ər ɛf ɛs/ | BUTTER F S | product | contested | https://btrfs.readthedocs.io/
 ZFS | /ˌziː ɛf ˈɛs/ | Z F S | product | community-consensus | https://openzfs.org/
 cgroups | /ˈsiː ɡruːps/ | C groups | cs-term | community-consensus | https://docs.kernel.org/admin-guide/cgroup-v2.html
