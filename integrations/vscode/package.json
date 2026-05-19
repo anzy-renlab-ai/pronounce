@@ -1,8 +1,8 @@
 {
   "name": "pronounce",
   "displayName": "Pronounce — Tech Word Pronunciation",
-  "description": "Hover over kubectl, nginx, GIF, YAML, Ghostty, wagmi — hear how each is actually pronounced. 817-entry sourced dictionary; macOS `say`-backed. Works in VS Code, Cursor, Windsurf, VSCodium, Zed.",
-  "version": "0.2.1",
+  "description": "Hover over kubectl, nginx, GIF, YAML, Ghostty, wagmi — hear how each is actually pronounced. 851-entry sourced dictionary; macOS `say`-backed. Works in VS Code, Cursor, Windsurf, VSCodium, Zed.",
+  "version": "0.2.2",
   "publisher": "sayit",
   "license": "MIT",
   "icon": "icon.png",

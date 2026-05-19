@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.2 — 2026-05-19
+
+- **Dictionary grows 817 → 851 (+34).** New: numeronyms (i18n, l10n, a11y, e2e, m17n, s11n, p13n, g11n), GPU/CPU codenames (Hopper, Blackwell, Lovelace, Ampere, Volta, Pascal, Grace, Turing), security vulns (Heartbleed, Shellshock, Log4Shell, Spectre, Meltdown), more databases (Druid, Pinot, TiDB, YugabyteDB, StarRocks, Doris), web3 tooling (Hardhat, Foundry, Anvil, Solana), and standards bodies (WHATWG, ECMA, IETF).
+- Marketplace listing description bumped 817 → 851.
+
 ## 0.2.1 — 2026-05-19
 
 - Marketplace listing: 960×540 animated demo GIF at the top of the README — 4 frames cycling kubectl ⇄ YAML ⇄ Ghostty ⇄ wagmi with the full hover popup, status bar item, and source citation visible. Plus a static `screenshot-kubectl.png` for fallbacks.

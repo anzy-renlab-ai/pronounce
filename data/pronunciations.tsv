@@ -874,3 +874,37 @@ WebKit	/ˈwɛb kɪt/	web kit			https://webkit.org/	WebKit	product	community-cons
 Big-O	/ˌbɪɡ ˈoʊ/	big oh			https://en.wikipedia.org/wiki/Big_O_notation	Wikipedia	cs-term	community-consensus	"big-OH". Asymptotic upper bound notation.
 pub/sub	/ˈpʌb sʌb/	pub sub					cs-term	community-consensus	"pub-SUB". Publish/Subscribe pattern.
 OOM	/ˌoʊ oʊ ˈɛm/	O O M	/uːm/	oom			acronym	contested	Letters dominant; "oom" rare. Out Of Memory.
+i18n	/ˌaɪ eɪˈtiːn ɛn/	eye eighteen N			https://en.wikipedia.org/wiki/Internationalization_and_localization	Wikipedia	abbreviation	community-consensus	"eye-eighteen-N". 18 letters between i and n in "internationalization".
+l10n	/ˌɛl tɛn ˈɛn/	L ten N			https://en.wikipedia.org/wiki/Internationalization_and_localization	Wikipedia	abbreviation	community-consensus	"L-ten-N". 10 letters between L and n in "localization".
+a11y	/ˌeɪ ɪˈlɛvən waɪ/	A eleven Y			https://www.a11yproject.com/	A11y Project	abbreviation	creator-clarified	"A-eleven-Y". 11 letters between a and y in "accessibility".
+e2e	/ˌiː tuː ˈiː/	E two E					abbreviation	community-consensus	"E-two-E". End-to-end (testing).
+m17n	/ˌɛm sɛvənˈtiːn ɛn/	M seventeen N					abbreviation	community-consensus	"M-seventeen-N". 17 letters between m and n in "multilingualization".
+s11n	/ˌɛs ɪˈlɛvən ɛn/	S eleven N					abbreviation	community-consensus	"S-eleven-N". Serialization.
+p13n	/ˌpiː θɜːrˈtiːn ɛn/	P thirteen N					abbreviation	community-consensus	"P-thirteen-N". Personalization.
+g11n	/ˌdʒiː ɪˈlɛvən ɛn/	G eleven N					abbreviation	community-consensus	"G-eleven-N". Globalization (umbrella for i18n + l10n).
+Hopper	/ˈhɒpər/	HOP er			https://en.wikipedia.org/wiki/Hopper_(microarchitecture)	NVIDIA Hopper	product	community-consensus	"HOP-er". NVIDIA H100/H200 architecture, named after Grace Hopper.
+Blackwell	/ˈblæk wɛl/	BLACK well			https://en.wikipedia.org/wiki/Blackwell_(microarchitecture)	NVIDIA Blackwell	product	community-consensus	"BLACK-well". NVIDIA B100/B200 architecture, named after mathematician David Blackwell.
+Lovelace	/ˈlʌv leɪs/	LUV lace			https://en.wikipedia.org/wiki/Ada_Lovelace_(microarchitecture)	NVIDIA Ada Lovelace	product	community-consensus	"LUV-lace" (RTX 40-series), after Ada Lovelace.
+Ampere	/ˈæm pɪər/	AM peer	/ˈæm pɛər/	AM pair	https://en.wikipedia.org/wiki/Ampere_(microarchitecture)	NVIDIA Ampere	product	contested	US: "AM-peer"; UK: "AM-pair". RTX 30-series + A100.
+Volta	/ˈvoʊl tə/	VOLE ta			https://en.wikipedia.org/wiki/Volta_(microarchitecture)	NVIDIA Volta	product	community-consensus	"VOLE-ta". V100. Named after Alessandro Volta.
+Pascal	/pæˈskæl/	pas KAL	/ˈpæs kəl/	PAS kuhl	https://en.wikipedia.org/wiki/Pascal_(microarchitecture)	NVIDIA Pascal	product	contested	Programming-language origin "PAS-kuhl"; NVIDIA uses "pas-KAL" in talks. After Blaise Pascal.
+Grace	/ɡreɪs/	grace			https://www.nvidia.com/en-us/data-center/grace-cpu/	NVIDIA Grace	product	community-consensus	"grace" the word. NVIDIA ARM CPU, named after Grace Hopper.
+Turing	/ˈtʊər ɪŋ/	TURE ing			https://en.wikipedia.org/wiki/Turing_(microarchitecture)	NVIDIA Turing	product	community-consensus	"TURE-ing" (rhymes with "during"). RTX 20-series. After Alan Turing.
+Heartbleed	/ˈhɑːrt bliːd/	heart bleed			https://heartbleed.com/	heartbleed.com	cs-term	community-consensus	"heart-bleed". CVE-2014-0160. OpenSSL bug.
+Shellshock	/ˈʃɛl ʃɒk/	shell shock			https://en.wikipedia.org/wiki/Shellshock_(software_bug)	Wikipedia	cs-term	community-consensus	"shell-shock". CVE-2014-6271. Bash bug.
+Log4Shell	/ˌlɒɡ fɔːr ˈʃɛl/	log four shell			https://en.wikipedia.org/wiki/Log4Shell	Wikipedia	cs-term	community-consensus	"log-four-shell". CVE-2021-44228. log4j RCE.
+Spectre	/ˈspɛk tər/	SPEK ter			https://spectreattack.com/	spectreattack.com	cs-term	community-consensus	"SPEK-ter". CPU side-channel vuln (2018).
+Meltdown	/ˈmɛlt daʊn/	melt down			https://meltdownattack.com/	meltdownattack.com	cs-term	community-consensus	"melt-down". CPU vuln paired with Spectre.
+Druid	/ˈdruː ɪd/	DROO id			https://druid.apache.org/	Apache Druid	product	community-consensus	"DROO-id". Real-time analytics DB.
+Pinot	/ˈpiː noʊ/	PEE noh			https://pinot.apache.org/	Apache Pinot	product	community-consensus	"PEE-noh" (like the wine). Real-time OLAP store.
+TiDB	/ˌtiː aɪ diː ˈbiː/	T I D B			https://www.pingcap.com/tidb/	PingCAP TiDB	product	community-consensus	Letters "T-I-D-B". Hybrid SQL by PingCAP.
+YugabyteDB	/ˈjuː ɡə baɪt diː biː/	YOO guh bite D B			https://www.yugabyte.com/	Yugabyte	product	community-consensus	"YOO-guh-bite-D-B". Distributed SQL.
+StarRocks	/ˈstɑːr rɒks/	star rocks			https://www.starrocks.io/	StarRocks	product	community-consensus	"star-rocks". OLAP database.
+Doris	/ˈdɔːr ɪs/	DOR is			https://doris.apache.org/	Apache Doris	product	community-consensus	"DOR-is". MPP analytical DB.
+Hardhat	/ˈhɑːrd hæt/	hard hat			https://hardhat.org/	Hardhat	tool	community-consensus	"hard-hat". Ethereum development environment.
+Foundry	/ˈfaʊn dri/	FOUN dree			https://getfoundry.sh/	Foundry	tool	community-consensus	"FOUN-dree". Solidity smart contract toolkit.
+Anvil	/ˈæn vɪl/	AN vil			https://book.getfoundry.sh/anvil/	Foundry Anvil	tool	community-consensus	"AN-vil". Foundry local Ethereum node.
+Solana	/səˈlɑː nə/	suh LAH nuh			https://solana.com/	Solana	product	community-consensus	"suh-LAH-nuh". L1 blockchain.
+WHATWG	/ˈwɒt wɪɡ/	WAT wig	/ˌdʌbəl juː eɪtʃ eɪ tiː ˌdʌbəl juː ˈdʒiː/	W H A T W G	https://whatwg.org/	WHATWG	acronym	contested	"WHAT-wig" common; letter-by-letter also heard. Web Hypertext Application Technology Working Group.
+ECMA	/ˈɛk mə/	EK ma	/ˌiː siː ɛm ˈeɪ/	E C M A	https://ecma-international.org/	Ecma International	acronym	contested	"EK-ma" (one word) is the org's own usage; letter-by-letter also common. European Computer Manufacturers Association (legacy name).
+IETF	/ˌaɪ iː tiː ˈɛf/	I E T F			https://www.ietf.org/	IETF	acronym	community-consensus	Letters "I-E-T-F". Internet Engineering Task Force.

@@ -4,7 +4,7 @@
 [![Open VSX Downloads](https://img.shields.io/open-vsx/dt/sayit/pronounce?label=installs)](https://open-vsx.org/extension/sayit/pronounce)
 [![GitHub stars](https://img.shields.io/github/stars/anzy-renlab-ai/pronounce?style=flat&logo=github)](https://github.com/anzy-renlab-ai/pronounce)
 
-**Hover any tech word — hear how engineers actually say it.** Backed by the community-curated [Pronounce.ai](https://pronounce.renlab.ai/) dictionary — **817 sourced entries**, every one tagged with confidence (`creator-clarified` · `community-consensus` · `contested`) and a citable URL.
+**Hover any tech word — hear how engineers actually say it.** Backed by the community-curated [Pronounce.ai](https://pronounce.renlab.ai/) dictionary — **851 sourced entries**, every one tagged with confidence (`creator-clarified` · `community-consensus` · `contested`) and a citable URL.
 
 ![Pronounce demo — kubectl, YAML, Ghostty, wagmi](https://raw.githubusercontent.com/anzy-renlab-ai/pronounce/main/integrations/vscode/media/demo.gif)
 
@@ -12,7 +12,7 @@
 
 - **Hover** over `kubectl`, `nginx`, `GIF`, `YAML`, `TOML`, `Ghostty`, `wagmi`, `JSON`, `Affine`, `Logseq` — popup with IPA, English-style respelling, both readings if contested, the source citation, and a 🔊 Play button.
 - **Speak selection** — highlight any word, press `⌘⇧'`, hear it. Works on words not in the dictionary too (lower-quality TTS fallback).
-- **Search dictionary** — fuzzy-find any of the 817 entries from the command palette (`⌘⇧P` → "Pronounce").
+- **Search dictionary** — fuzzy-find any of the 851 entries from the command palette (`⌘⇧P` → "Pronounce").
 - **Status bar `🔊 sayit`** — always-visible reminder; click to speak the current selection.
 - **Welcome walkthrough** — on first install, a 4-step tour shows the hover, the search, and one-click hear-kubectl.
 
@@ -52,7 +52,7 @@ brew install say-it       # or ./install.sh from the repo
 say-it kubernetes         # speaks it 3x with cited pronunciation
 ```
 
-- **Web**: [pronounce.renlab.ai](https://pronounce.renlab.ai/) — full 817-entry browser with Famous Moments + quiz.
+- **Web**: [pronounce.renlab.ai](https://pronounce.renlab.ai/) — full 851-entry browser with Famous Moments + quiz.
 - **Claude Code skill**: triggers on "how do you pronounce X" / "X 怎么读" — the AI plays sound instead of guessing.
 - **MCP server**: drop into Cursor / Claude / any MCP client.
 - **Raycast / Alfred / Continue**: integrations in [the main repo](https://github.com/anzy-renlab-ai/pronounce/tree/main/integrations).
