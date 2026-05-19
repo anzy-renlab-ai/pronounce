@@ -3,6 +3,10 @@ import { speak } from './speak';
 import { loadDict } from './dict';
 import { makeHoverProvider } from './hover';
 
+const FIRST_RUN_KEY = 'pronounce.firstRunCompleted';
+const REPO_URL = 'https://github.com/anzy-renlab-ai/pronounce';
+const SITE_URL = 'https://pronounce.renlab.ai/';
+
 export function activate(ctx: vscode.ExtensionContext): void {
   const root = ctx.extensionPath;
 
@@ -46,9 +50,46 @@ export function activate(ctx: vscode.ExtensionContext): void {
       if (pick) speak(root, pick.label);
     }),
 
+    vscode.commands.registerCommand('pronounce.openWebsite', () => {
+      void vscode.env.openExternal(vscode.Uri.parse(SITE_URL));
+    }),
+
+    vscode.commands.registerCommand('pronounce.starOnGitHub', () => {
+      void vscode.env.openExternal(vscode.Uri.parse(REPO_URL));
+    }),
+
+    vscode.commands.registerCommand('pronounce.openWalkthrough', () => {
+      void vscode.commands.executeCommand(
+        'workbench.action.openWalkthrough',
+        'sayit.pronounce#pronounce.welcome',
+        false,
+      );
+    }),
+
     vscode.languages.registerHoverProvider({ scheme: 'file' }, makeHoverProvider(root)),
     vscode.languages.registerHoverProvider({ scheme: 'untitled' }, makeHoverProvider(root)),
   );
+
+  // Status bar item — persistent reminder + 1-click speak.
+  const cfg = vscode.workspace.getConfiguration('pronounce');
+  if (cfg.get<boolean>('statusBar', true)) {
+    const bar = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 50);
+    bar.text = '$(unmute) sayit';
+    bar.tooltip = 'Pronounce: click to speak the current selection · 817 sourced entries';
+    bar.command = 'pronounce.speakSelection';
+    bar.show();
+    ctx.subscriptions.push(bar);
+  }
+
+  // First-run walkthrough — fires once per machine, not on every reload.
+  if (!ctx.globalState.get<boolean>(FIRST_RUN_KEY)) {
+    void ctx.globalState.update(FIRST_RUN_KEY, true);
+    void vscode.commands.executeCommand(
+      'workbench.action.openWalkthrough',
+      'sayit.pronounce#pronounce.welcome',
+      false,
+    );
+  }
 }
 
 export function deactivate(): void {}

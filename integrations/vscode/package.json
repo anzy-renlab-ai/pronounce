@@ -1,8 +1,8 @@
 {
   "name": "pronounce",
   "displayName": "Pronounce — Tech Word Pronunciation",
-  "description": "Hover over kubectl, nginx, kubectl, GIF — hear how each is actually pronounced. macOS `say` + the Pronounce.ai community dictionary.",
-  "version": "0.1.1",
+  "description": "Hover over kubectl, nginx, GIF, YAML, Ghostty, wagmi — hear how each is actually pronounced. 817-entry sourced dictionary; macOS `say`-backed. Works in VS Code, Cursor, Windsurf, VSCodium, Zed.",
+  "version": "0.2.0",
   "publisher": "sayit",
   "license": "MIT",
   "icon": "icon.png",
@@ -11,9 +11,17 @@
     "url": "https://github.com/anzy-renlab-ai/pronounce",
     "directory": "integrations/vscode"
   },
-  "homepage": "https://github.com/anzy-renlab-ai/pronounce/tree/main/integrations/vscode",
+  "homepage": "https://pronounce.renlab.ai/",
   "bugs": {
     "url": "https://github.com/anzy-renlab-ai/pronounce/issues"
+  },
+  "qna": "https://github.com/anzy-renlab-ai/pronounce/discussions",
+  "sponsor": {
+    "url": "https://github.com/anzy-renlab-ai/pronounce"
+  },
+  "galleryBanner": {
+    "color": "#14100c",
+    "theme": "dark"
   },
   "engines": {
     "vscode": "^1.85.0"
@@ -24,12 +32,25 @@
   ],
   "keywords": [
     "pronunciation",
+    "pronounce",
     "tts",
+    "speak",
     "audio",
+    "speech",
+    "ipa",
+    "phonetic",
     "kubectl",
+    "kubernetes",
     "nginx",
+    "yaml",
+    "toml",
+    "ghostty",
+    "wagmi",
+    "developer tools",
     "tech terms",
-    "accessibility"
+    "accessibility",
+    "cursor",
+    "vscodium"
   ],
   "activationEvents": [
     "onStartupFinished"
@@ -50,6 +71,21 @@
       {
         "command": "pronounce.search",
         "title": "Pronounce: Search dictionary…",
+        "category": "Pronounce"
+      },
+      {
+        "command": "pronounce.openWebsite",
+        "title": "Pronounce: Open dictionary website",
+        "category": "Pronounce"
+      },
+      {
+        "command": "pronounce.starOnGitHub",
+        "title": "Pronounce: ★ Star on GitHub",
+        "category": "Pronounce"
+      },
+      {
+        "command": "pronounce.openWalkthrough",
+        "title": "Pronounce: Show welcome / how to use",
         "category": "Pronounce"
       }
     ],
@@ -91,9 +127,55 @@
           "type": "boolean",
           "default": true,
           "description": "Only show hover for words in the dictionary. Disable to also hover unknown words (uses TTS letter-to-sound, lower quality)."
+        },
+        "pronounce.statusBar": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show a 🔊 Pronounce item in the status bar (click to speak the current selection)."
         }
       }
-    }
+    },
+    "walkthroughs": [
+      {
+        "id": "pronounce.welcome",
+        "title": "Welcome to Pronounce",
+        "description": "Hover any tech word → hear how engineers actually say it. 817 sourced entries. Mac-only v0.2.",
+        "steps": [
+          {
+            "id": "pronounce.welcome.try",
+            "title": "Hear it — try kubectl, nginx, or YAML",
+            "description": "Run `Pronounce: Speak word` to hear any dictionary entry. The fastest way: highlight a word in any file and press **⌘⇧'** (or run `Pronounce: Speak current selection`).\n\n[Hear `kubectl` now](command:pronounce.speak?%22kubectl%22)",
+            "media": {
+              "markdown": "media/walkthrough-speak.md"
+            }
+          },
+          {
+            "id": "pronounce.welcome.hover",
+            "title": "Hover any tech word",
+            "description": "Hover over `kubectl`, `nginx`, `GIF`, `YAML`, `Ghostty`, `wagmi`, `JSON` etc. in any file — a tooltip shows the IPA, the English-style respelling, the source citation, and a 🔊 Play button. Works in **any** language file.\n\n[Open a sample file](command:pronounce.openWalkthrough)",
+            "media": {
+              "markdown": "media/walkthrough-hover.md"
+            }
+          },
+          {
+            "id": "pronounce.welcome.search",
+            "title": "Search all 817 entries",
+            "description": "Run `Pronounce: Search dictionary…` from the command palette (⌘⇧P / Ctrl+Shift+P) and fuzzy-find any word.\n\n[Open search now](command:pronounce.search)",
+            "media": {
+              "markdown": "media/walkthrough-search.md"
+            }
+          },
+          {
+            "id": "pronounce.welcome.star",
+            "title": "Like it? Star the repo · 1-click",
+            "description": "This extension is MIT, the dictionary is community-built. If it saves you one cringey standup moment, a star on GitHub keeps it growing.\n\n[★ Star on GitHub](command:pronounce.starOnGitHub)\n[Visit pronounce.renlab.ai](command:pronounce.openWebsite)",
+            "media": {
+              "markdown": "media/walkthrough-star.md"
+            }
+          }
+        ]
+      }
+    ]
   },
   "scripts": {
     "build:dict": "node scripts/build-dict.mjs",

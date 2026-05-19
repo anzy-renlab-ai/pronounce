@@ -38,14 +38,24 @@ function renderMarkdown(word: string, entry: Entry | null): vscode.MarkdownStrin
     if (entry.respelling_us) {
       md.appendMarkdown(`_say:_ **${entry.respelling_us}**  \n`);
     }
+    // Show alternate readings inline so "contested" words tell the whole story.
+    if (entry.alt_respelling_us) {
+      const alts = entry.alt_respelling_us.split('|').map(s => s.trim()).filter(Boolean);
+      if (alts.length) {
+        md.appendMarkdown(`_or:_ ${alts.map(a => `**${a}**`).join(' · ')}  \n`);
+      }
+    }
     if (entry.confidence) {
-      md.appendMarkdown(`_${entry.confidence}_`);
+      const badge = entry.confidence === 'creator-clarified' ? '✅' :
+                    entry.confidence === 'contested' ? '⚖️' : '·';
+      md.appendMarkdown(`${badge} _${entry.confidence}_`);
       if (entry.source_label) md.appendMarkdown(` · ${entry.source_label}`);
       md.appendMarkdown(`  \n`);
     }
     if (entry.notes) md.appendMarkdown(`\n${entry.notes}\n\n`);
     md.appendMarkdown(`[🔊 Play](${playLink})`);
     if (entry.source_url) md.appendMarkdown(`  ·  [source](${entry.source_url})`);
+    md.appendMarkdown(`  ·  [★ star this dictionary](command:pronounce.starOnGitHub)`);
   } else {
     md.appendMarkdown(`**${word}**  \n[🔊 Play (TTS letter-to-sound)](${playLink})`);
   }
