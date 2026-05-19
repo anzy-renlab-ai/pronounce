@@ -2,6 +2,7 @@ import * as vscode from 'vscode';
 import { speak } from './speak';
 import { loadDict } from './dict';
 import { makeHoverProvider } from './hover';
+import { recordSpeak } from './engagement';
 
 const FIRST_RUN_KEY = 'pronounce.firstRunCompleted';
 const REPO_URL = 'https://github.com/anzy-renlab-ai/pronounce';
@@ -9,9 +10,12 @@ const SITE_URL = 'https://pronounce.renlab.ai/';
 
 export function activate(ctx: vscode.ExtensionContext): void {
   const root = ctx.extensionPath;
-
-  // eager-load so first hover/command has no parse latency
   loadDict(root);
+
+  const speakAndRecord = (word: string) => {
+    speak(root, word);
+    void recordSpeak(ctx);
+  };
 
   ctx.subscriptions.push(
     vscode.commands.registerCommand('pronounce.speak', (arg?: string | { word?: string }) => {
@@ -20,7 +24,7 @@ export function activate(ctx: vscode.ExtensionContext): void {
         vscode.window.showWarningMessage('Pronounce: no word provided.');
         return;
       }
-      speak(root, word);
+      speakAndRecord(word);
     }),
 
     vscode.commands.registerCommand('pronounce.speakSelection', () => {
@@ -32,7 +36,7 @@ export function activate(ctx: vscode.ExtensionContext): void {
         vscode.window.showWarningMessage('Pronounce: nothing selected.');
         return;
       }
-      speak(root, word);
+      speakAndRecord(word);
     }),
 
     vscode.commands.registerCommand('pronounce.search', async () => {
@@ -45,9 +49,9 @@ export function activate(ctx: vscode.ExtensionContext): void {
       const pick = await vscode.window.showQuickPick(items, {
         matchOnDescription: true,
         matchOnDetail: true,
-        placeHolder: `Search ${items.length} pronunciations…`,
+        placeHolder: `Search ${items.length} pronunciations · ⌘⇧P → "Star" to support the dictionary`,
       });
-      if (pick) speak(root, pick.label);
+      if (pick) speakAndRecord(pick.label);
     }),
 
     vscode.commands.registerCommand('pronounce.openWebsite', () => {
@@ -70,18 +74,28 @@ export function activate(ctx: vscode.ExtensionContext): void {
     vscode.languages.registerHoverProvider({ scheme: 'untitled' }, makeHoverProvider(root)),
   );
 
-  // Status bar item — persistent reminder + 1-click speak.
+  // Status bar — persistent reminder + 1-click speak.
+  // The tooltip is a Markdown string with a command link → Star, so users who
+  // hover the status bar see the ★ Star CTA without intrusive prompts.
   const cfg = vscode.workspace.getConfiguration('pronounce');
   if (cfg.get<boolean>('statusBar', true)) {
     const bar = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 50);
     bar.text = '$(unmute) sayit';
-    bar.tooltip = 'Pronounce: click to speak the current selection · 817 sourced entries';
+    const tip = new vscode.MarkdownString(
+      `**Pronounce** · 892 sourced dictionary entries\n\n` +
+      `Click to speak the current selection.  \n` +
+      `[★ Star on GitHub](command:pronounce.starOnGitHub) · ` +
+      `[Search dictionary](command:pronounce.search) · ` +
+      `[Open website](command:pronounce.openWebsite)`,
+    );
+    tip.isTrusted = true;
+    bar.tooltip = tip;
     bar.command = 'pronounce.speakSelection';
     bar.show();
     ctx.subscriptions.push(bar);
   }
 
-  // First-run walkthrough — fires once per machine, not on every reload.
+  // First-run walkthrough — fires once per machine.
   if (!ctx.globalState.get<boolean>(FIRST_RUN_KEY)) {
     void ctx.globalState.update(FIRST_RUN_KEY, true);
     void vscode.commands.executeCommand(

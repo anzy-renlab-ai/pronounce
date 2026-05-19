@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.3.1 — 2026-05-19
+
+- **Dictionary 851 → 892 (+41).** Distributed systems (Raft, Paxos, Byzantine, gossip, Lamport, Saga, HLC, vector clock, quorum); cryptography primitives (Ed25519, ChaCha20, Poly1305, X25519, OAEP, scrypt, argon2, bcrypt); cloud services (EC2, S3, RDS, IAM, KMS, EKS, ECS, GKE, AKS, Route53); Linux kernel (io_uring, Btrfs, ZFS, cgroups, strace, ltrace, syscall); 2026 LLMs (DeepSeek-R1, o1, o3, Sonnet, Opus, Haiku).
+- **Engagement-gated star prompt.** After 5 / 30 / 150 successful speaks the extension shows one non-intrusive info-toast asking for a GitHub star. Three buttons: ★ Star · Maybe later · Don't ask again. Counts persist via `globalState`; "Don't ask again" silences all future prompts.
+- **Status bar tooltip now Markdown** with command links: ★ Star · Search dictionary · Open website. No new UI surface, just a hover-discoverable CTA the user has to opt into.
+- **Search palette placeholder** mentions "Star to support the dictionary" as a passive nudge.
+- Bumped marketplace description to "892-entry sourced dictionary".
+
 ## 0.3.0 — 2026-05-19
 
 **Cross-platform — Linux + Windows backends.** No longer macOS-only.

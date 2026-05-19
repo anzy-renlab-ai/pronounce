@@ -908,3 +908,44 @@ Solana	/səˈlɑː nə/	suh LAH nuh			https://solana.com/	Solana	product	communi
 WHATWG	/ˈwɒt wɪɡ/	WAT wig	/ˌdʌbəl juː eɪtʃ eɪ tiː ˌdʌbəl juː ˈdʒiː/	W H A T W G	https://whatwg.org/	WHATWG	acronym	contested	"WHAT-wig" common; letter-by-letter also heard. Web Hypertext Application Technology Working Group.
 ECMA	/ˈɛk mə/	EK ma	/ˌiː siː ɛm ˈeɪ/	E C M A	https://ecma-international.org/	Ecma International	acronym	contested	"EK-ma" (one word) is the org's own usage; letter-by-letter also common. European Computer Manufacturers Association (legacy name).
 IETF	/ˌaɪ iː tiː ˈɛf/	I E T F			https://www.ietf.org/	IETF	acronym	community-consensus	Letters "I-E-T-F". Internet Engineering Task Force.
+Raft	/ræft/	raft			https://raft.github.io/	raft.github.io	cs-term	creator-clarified	"raft" the word. Consensus algorithm by Diego Ongaro + John Ousterhout, intended as "more understandable than Paxos".
+Paxos	/ˈpæk soʊs/	PAK sose			https://en.wikipedia.org/wiki/Paxos_(computer_science)	Wikipedia	cs-term	community-consensus	"PAK-sose" — after the Greek island. Leslie Lamport's consensus algorithm.
+gossip	/ˈɡɒs ɪp/	gossip			https://en.wikipedia.org/wiki/Gossip_protocol	Wikipedia	cs-term	community-consensus	English word. Epidemic/anti-entropy protocol family.
+Byzantine	/bɪˈzæn tiːn/	biz AN teen	/ˈbɪz ən taɪn/	BIZ un tine	https://lamport.azurewebsites.net/pubs/byz.pdf	Lamport 1982	cs-term	contested	"biz-AN-teen" US default; "BIZ-un-tine" UK / older usage. Byzantine fault tolerance.
+quorum	/ˈkwɔːr əm/	QUOR um					cs-term	community-consensus	"QUOR-um". Latin for the minimum number required.
+Lamport	/ˈlæm pɔːrt/	LAM port			https://lamport.azurewebsites.net/	Leslie Lamport site	cs-term	creator-clarified	"LAM-port". Leslie Lamport — distributed-systems pioneer.
+Saga	/ˈsɑː ɡə/	SAH guh			https://microservices.io/patterns/data/saga.html	microservices.io	cs-term	community-consensus	"SAH-guh". Long-running distributed transaction pattern.
+HLC	/ˌeɪtʃ ɛl ˈsiː/	H L C			https://cse.buffalo.edu/tech-reports/2014-04.pdf	Kulkarni et al. 2014	acronym	community-consensus	Letters "H-L-C". Hybrid Logical Clock.
+vector clock	/ˈvɛk tər klɒk/	VEK ter clock			https://en.wikipedia.org/wiki/Vector_clock	Wikipedia	cs-term	community-consensus	"VEK-ter clock". Logical-time data structure.
+Ed25519	/ˌiː diː ˌtwɛnti faɪv faɪv ˌwʌn ˈnaɪn/	E D twenty-five five one nine			https://ed25519.cr.yp.to/	ed25519.cr.yp.to	cs-term	community-consensus	"E-D-twenty-five-five-one-nine". EdDSA over Curve25519.
+ChaCha20	/ˌtʃɑː tʃɑː ˈtwɛn ti/	CHA cha twenty			https://datatracker.ietf.org/doc/html/rfc7539	RFC 7539	cs-term	community-consensus	"CHA-cha twenty". Bernstein stream cipher.
+Poly1305	/ˈpɒl iː ˌθɜːrˌtiːn ˌoʊ ˈfaɪv/	PA lee thirteen oh five					cs-term	community-consensus	Bernstein MAC; usually said "Polly-thirteen-oh-five".
+X25519	/ˌɛks ˌtwɛnti faɪv faɪv ˌwʌn ˈnaɪn/	X twenty-five five one nine			https://datatracker.ietf.org/doc/html/rfc7748	RFC 7748	cs-term	community-consensus	"X-twenty-five-five-one-nine". DH on Curve25519.
+OAEP	/ˌoʊ eɪ iː ˈpiː/	O A E P	/ˈweɪ ɛp/	WAY ep	https://datatracker.ietf.org/doc/html/rfc8017	RFC 8017	acronym	contested	Letter-by-letter dominant; some crypto folks say "WAY-ep". Optimal Asymmetric Encryption Padding.
+scrypt	/ɛs ˈkrɪpt/	S crypt	/skrɪpt/	skript	https://www.tarsnap.com/scrypt.html	Colin Percival (creator)	cs-term	creator-clarified	Creator Colin Percival: "ess-crypt" (S then crypt). "script" is common but not the intent.
+argon2	/ˈɑːr ɡən tuː/	AR gon two			https://www.password-hashing.net/	Password Hashing Competition	cs-term	community-consensus	"AR-gon-two". 2015 PHC winner.
+bcrypt	/ˈbiː krɪpt/	B crypt			https://www.usenix.org/legacy/events/usenix99/provos/provos_html/	Provos & Mazières 1999	cs-term	community-consensus	"B-crypt" — B for Blowfish + crypt.
+EC2	/ˌiː tuː ˈsiː/	E two C			https://aws.amazon.com/ec2/	AWS EC2	product	community-consensus	"E-two-C". Elastic Compute Cloud.
+S3	/ˌɛs ˈθriː/	S three			https://aws.amazon.com/s3/	AWS S3	product	community-consensus	"S-three". Simple Storage Service.
+RDS	/ˌɑːr diː ˈɛs/	R D S			https://aws.amazon.com/rds/	AWS RDS	product	community-consensus	Letters "R-D-S". Relational Database Service.
+IAM	/ˌaɪ eɪ ˈɛm/	I A M			https://docs.aws.amazon.com/iam/	AWS IAM	product	community-consensus	Letters "I-A-M". Identity and Access Management.
+KMS	/ˌkeɪ ɛm ˈɛs/	K M S			https://aws.amazon.com/kms/	AWS KMS	product	community-consensus	Letters "K-M-S". Key Management Service.
+EKS	/ˌiː keɪ ˈɛs/	E K S			https://aws.amazon.com/eks/	AWS EKS	product	community-consensus	Letters "E-K-S". AWS managed Kubernetes.
+ECS	/ˌiː siː ˈɛs/	E C S			https://aws.amazon.com/ecs/	AWS ECS	product	community-consensus	Letters "E-C-S". Elastic Container Service.
+GKE	/ˌdʒiː keɪ ˈiː/	G K E			https://cloud.google.com/kubernetes-engine	Google GKE	product	community-consensus	Letters "G-K-E". Google Kubernetes Engine.
+AKS	/ˌeɪ keɪ ˈɛs/	A K S			https://learn.microsoft.com/en-us/azure/aks/	Azure AKS	product	community-consensus	Letters "A-K-S". Azure Kubernetes Service.
+Route53	/ruːt ˌfɪf ti ˈθriː/	root fifty-three	/raʊt ˌfɪf ti ˈθriː/	rowt fifty-three	https://aws.amazon.com/route53/	AWS Route 53	product	contested	US tech "root"; UK / general "rowt". Port 53 = DNS.
+io_uring	/ˌaɪ oʊ ˈjʊər ɪŋ/	I O YOUR ing	/ˌaɪ oʊ ˈʊər ɪŋ/	I O OOR ing	https://kernel.dk/io_uring.pdf	Jens Axboe paper	cs-term	creator-clarified	Jens Axboe: "I-O ring" (the underscore is silent). Async I/O syscall API.
+Btrfs	/ˈbʌt ər ɛf ɛs/	BUTTER F S	/ˌbiː tiː ɑːr ɛf ˈɛs/	B T R F S	https://btrfs.readthedocs.io/	Btrfs docs	product	contested	Chris Mason / kernel folks: "butter-F-S" (B-Tree File System). Letter-by-letter also common.
+ZFS	/ˌziː ɛf ˈɛs/	Z F S			https://openzfs.org/	OpenZFS	product	community-consensus	Letters "Z-F-S". Originally Zettabyte File System.
+cgroups	/ˈsiː ɡruːps/	C groups			https://docs.kernel.org/admin-guide/cgroup-v2.html	Linux kernel docs	cs-term	community-consensus	"C-groups". Control groups — Linux resource isolation.
+strace	/ˌɛs ˈtreɪs/	S trace			https://strace.io/	strace.io	tool	community-consensus	"S-trace" — system call trace.
+ltrace	/ˌɛl ˈtreɪs/	L trace					tool	community-consensus	"L-trace" — library-call trace.
+syscall	/ˈsɪs kɔːl/	SIS call					cs-term	community-consensus	"SIS-call". System call.
+DeepSeek-R1	/ˌdiːp siːk ˌɑːr ˈwʌn/	deep seek R one			https://www.deepseek.com/	DeepSeek	product	community-consensus	"deep-seek R-one". DeepSeek's reasoning model.
+R1	/ˌɑːr ˈwʌn/	R one					abbreviation	community-consensus	"R-one". Generic short form, usually DeepSeek-R1.
+o1	/ˌoʊ ˈwʌn/	O one			https://openai.com/o1/	OpenAI o1	product	community-consensus	"O-one". OpenAI reasoning model.
+o3	/ˌoʊ ˈθriː/	O three			https://openai.com/o3/	OpenAI o3	product	community-consensus	"O-three". OpenAI reasoning model.
+Sonnet	/ˈsɒn ɪt/	SON it			https://www.anthropic.com/claude	Anthropic Claude	product	community-consensus	"SON-it" — like the poem. Anthropic's mid-tier Claude.
+Opus	/ˈoʊ pəs/	OH pus			https://www.anthropic.com/claude	Anthropic Claude	product	community-consensus	"OH-pus" — Latin for "work". Anthropic's frontier tier.
+Haiku	/ˈhaɪ kuː/	HIGH koo			https://www.anthropic.com/claude	Anthropic Claude	product	community-consensus	"HIGH-koo" — Japanese poetic form. Anthropic's fast tier.

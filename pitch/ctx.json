@@ -18,12 +18,12 @@
   ],
   "demo_video_path": "",
   "traction": [
-    { "metric": "Dictionary entries", "value": "851", "delta": "from 0 in 6 weeks" },
+    { "metric": "Dictionary entries", "value": "892", "delta": "from 0 in 6 weeks" },
     { "metric": "MCP servers built", "value": "1", "delta": "first pronunciation MCP on record" },
     { "metric": "Pages indexed", "value": "611", "delta": "Bing + Yandex via IndexNow" }
   ],
   "pricing": [
-    { "tier": "Open source", "price": "$0", "features": ["MIT license", "All 851 entries", "CLI + webapp + MCP server + Claude Code skill + VS Code extension", "Community-maintained"], "highlight": true }
+    { "tier": "Open source", "price": "$0", "features": ["MIT license", "All 892 entries", "CLI + webapp + MCP server + Claude Code skill + VS Code extension", "Community-maintained"], "highlight": true }
   ],
   "team": [
     { "name": "alvin", "role": "Maintainer", "bio": "Engineer · built say-it after the 47th time someone said 'kub-cuttle' on a call." }
