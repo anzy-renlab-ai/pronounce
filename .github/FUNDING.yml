@@ -1,0 +1,17 @@
+# Where the GitHub repo's "Sponsor" button points.
+# Once any platform here is filled in, GitHub renders a 💚 Sponsor button
+# above the repo name. Multiple platforms can coexist.
+
+github: [anzy-renlab-ai]                  # Activate at https://github.com/sponsors
+# patreon:                                 # Activate at https://www.patreon.com/creator-home
+# open_collective:                         # Activate at https://opencollective.com/create
+# ko_fi:                                   # e.g. anzy-renlab-ai
+# tidelift:
+# community_bridge:
+# liberapay:
+# issuehunt:
+# lfx_crowdfunding:
+# polar:
+# buy_me_a_coffee:                         # e.g. anzy  (https://www.buymeacoffee.com/anzy)
+# thanks_dev:
+# custom: ['https://paypal.me/your-handle'] # any direct URL

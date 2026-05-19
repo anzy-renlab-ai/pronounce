@@ -27,7 +27,7 @@
 word	ipa	respelling_us	alt_ipa	alt_respelling_us	source_url	source_label	category	confidence	notes
 kubectl	/ˈkuːb kənˌtroʊl/	koob control	/ˈkjuːb kʌtəl/|/ˌkjuːb siː tiː ˈɛl/	cube cuddle|kube C T L			cli-tool	contested	K8s community readings vary widely. "koob-control" is heard from Kelsey Hightower and many maintainers; "cube-cuddle" is the running meme; some say it letter-by-letter.
 nginx	/ˈɛn dʒɪnˈɛks/	engine X			https://nginx.org/en/	NGINX official	product	creator-clarified	"engine-x" is the documented reading from the official site.
-GIF	/dʒɪf/	jif	/ɡɪf/	gif	https://www.nytimes.com/2013/05/22/business/media/creator-of-the-gif-says-its-pronounced-jif.html	Steve Wilhite, NYT (2013)	acronym	creator-clarified	Wilhite (creator): "It's pronounced JIF, not GIF." Community remains split.
+GIF	/dʒɪf/	jif			https://www.nytimes.com/2013/05/22/business/media/creator-of-the-gif-says-its-pronounced-jif.html	Steve Wilhite, NYT (2013)	acronym	creator-clarified	Wilhite (creator): "It's pronounced JIF, not GIF." Community remains split.
 JSON	/ˈdʒeɪsən/	jay son	/ˈdʒiːˌsɒn/	jee son	https://en.wikipedia.org/wiki/JSON#Pronunciation	Wikipedia § Pronunciation	acronym	contested	Crockford uses "JAY-son"; "JEE-son" is also widespread. Wikipedia notes the variance.
 SQL	/ˈsiːkwəl/	sequel	/ˌɛs kjuː ˈɛl/	S Q L	https://en.wikipedia.org/wiki/SQL#Pronunciation	Wikipedia § Pronunciation	acronym	contested	ANSI: "S-Q-L"; practitioner: "sequel" (heir to IBM SEQUEL).
 GUI	/ˈɡuːi/	gooey	/ˌdʒiː juː ˈaɪ/|/ɡwi/	G U I|gwee	https://en.wikipedia.org/wiki/Graphical_user_interface	Wikipedia	acronym	contested	"GOOEY" is mainstream (matches Mandarin 故意 sound); "G-U-I" letter-by-letter is RMS/old-school; "gwee" is rare.
@@ -45,14 +45,14 @@ Knative	/ˈkeɪˌneɪtɪv/	kay native			https://knative.dev/	Knative docs	produc
 Cassandra	/kəˈsændrə/	kuh sandra			https://cassandra.apache.org/	Apache Cassandra	product	community-consensus	"kuh-SAN-druh".
 Redis	/ˈrɛdɪs/	red iss			https://redis.io/	Redis site	product	community-consensus	"RED-iss". (Heard from Salvatore Sanfilippo in interviews; citable source TBD.)
 Ceph	/sɛf/	seff			https://ceph.io/en/	Ceph docs	product	community-consensus	One syllable: "seff".
-etcd	/ˌɛt siː ˈdiː/	et C D	/ˌɛt ˈsɛtərə diː/	et cetera D	https://etcd.io/docs/v3.5/faq/	etcd FAQ	product	creator-clarified	Project FAQ documents "et-cetera-distributed".
+etcd	/ˌɛt siː ˈdiː/	et C D			https://etcd.io/docs/v3.5/faq/	etcd FAQ	product	creator-clarified	Project FAQ documents "et-cetera-distributed".
 containerd	/kənˈteɪnər diː/	container D			https://containerd.io/	containerd	product	community-consensus	"container-D" (the D is for "daemon").
 runc	/rʌn ˈsiː/	run C			https://github.com/opencontainers/runc	OCI runc	tool	community-consensus	"run-C".
 Podman	/ˈpɑːdmən/	pod man			https://podman.io/	Podman site	tool	community-consensus	"POD-man".
-PostgreSQL	/ˈpoʊstɡrɛs kjuː ˈɛl/	post gress Q L	/ˈpoʊstɡrɛs ˈsiːkwəl/	post gress sequel	https://www.postgresql.org/docs/current/faq.html	PostgreSQL FAQ	product	creator-clarified	FAQ documents "post-gres-Q-L" as official.
+PostgreSQL	/ˈpoʊstɡrɛs kjuː ˈɛl/	post gress Q L			https://www.postgresql.org/docs/current/faq.html	PostgreSQL FAQ	product	creator-clarified	FAQ documents "post-gres-Q-L" as official.
 Postgres	/ˈpoʊstɡrɛs/	post gress			https://www.postgresql.org/docs/current/faq.html	PostgreSQL FAQ	product	creator-clarified	"POST-gress".
 SQLite	/ˌɛs kjuː ɛl ˈaɪt/	S Q L ite	/ˈsiːkwəl laɪt/	sequel ite	https://www.sqlite.org/famous.html	SQLite docs	product	community-consensus	"S-Q-L-ite" preferred (per project lore).
-MySQL	/ˌmaɪ ɛs kjuː ˈɛl/	my S Q L	/ˌmaɪ ˈsiːkwəl/	my sequel	https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html	MySQL docs	product	creator-clarified	Official: "my-S-Q-L". "my-sequel" is common informal.
+MySQL	/ˌmaɪ ɛs kjuː ˈɛl/	my S Q L			https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html	MySQL docs	product	creator-clarified	Official: "my-S-Q-L". "my-sequel" is common informal.
 MongoDB	/ˈmɒŋɡoʊ diː biː/	mongo D B			https://www.mongodb.com/	MongoDB site	product	community-consensus	"MONG-oh-D-B".
 ScyllaDB	/ˈsɪlə diː biː/	silla D B			https://www.scylladb.com/	ScyllaDB	product	community-consensus	"SILL-uh-D-B".
 ClickHouse	/ˈklɪkˌhaʊs/	click house			https://clickhouse.com/	ClickHouse	product	community-consensus	"CLICK-house".
@@ -74,7 +74,7 @@ Caddy	/ˈkædi/	caddy			https://caddyserver.com/	Caddy	product	community-consens
 Svelte	/svɛlt/	svelt			https://svelte.dev/	Svelte	product	community-consensus	"svelt" — one syllable.
 Astro	/ˈæstroʊ/	astro			https://astro.build/	Astro	product	community-consensus	"ASS-tro".
 Pinia	/ˈpiːnjə/	pee nya			https://pinia.vuejs.org/	Pinia docs	product	community-consensus	"PEE-nya".
-LaTeX	/ˈleɪtɛk/	lay tek	/ˈlɑːtɛx/	la tek	https://www.latex-project.org/about/	LaTeX project	tool	creator-clarified	Lamport: "lay-tek" (or "lah-tek"); never "lay-teks". Documented on the about page.
+LaTeX	/ˈleɪtɛk/	lay tek			https://www.latex-project.org/about/	LaTeX project	tool	creator-clarified	Lamport: "lay-tek" (or "lah-tek"); never "lay-teks". Documented on the about page.
 TeX	/tɛk/	tek			https://en.wikipedia.org/wiki/TeX#Pronunciation_and_spelling	Wikipedia § Pronunciation	tool	creator-clarified	Knuth: like "tech" — the X is a Greek chi.
 char	/tʃɑːr/	char	/kɛər/|/kɑːr/	care|car		dev community	cs-term	contested	"char" (rhymes with "car") in C/C++ camp; "care" and "kar" also used.
 regex	/ˈrɛdʒɛks/	rej eks	/ˈrɛɡɛks/	reg eks		dev community	cs-term	contested	"REJ-eks" (most common) vs "REG-eks".
@@ -554,7 +554,7 @@ Delta Lake	/ˈdɛltə leɪk/	del ta lake			https://delta.io/	Delta Lake	product	
 
 # --- v2.2 wave 3: edge runtimes, JVM, .NET, Rust web, static-site gens ---
 Unity	/ˈjuːnɪti/	you ni tee			https://unity.com/	Unity	product	community-consensus	"YOU-ni-tee".
-Godot	/ˈɡɒdoʊ/	god oh	/ˈɡɒdɒt/	god ot	https://godotengine.org/	Godot	product	creator-clarified	"GOD-oh" per project FAQ. "GOD-ot" also widespread.
+Godot	/ˈɡɒdoʊ/	god oh			https://godotengine.org/	Godot	product	creator-clarified	"GOD-oh" per project FAQ. "GOD-ot" also widespread.
 Unreal	/ʌnˈriːəl/	un real			https://www.unrealengine.com/	Epic Games	product	community-consensus	"un-REAL".
 Bevy	/ˈbɛvi/	bevy			https://bevyengine.org/	Bevy	product	community-consensus	"BEV-ee" — Rust game engine.
 OIDC	/ˌoʊ aɪ diː ˈsiː/	O I D C			https://openid.net/connect/	OpenID Connect	abbreviation	community-consensus	"O-I-D-C".
@@ -686,11 +686,11 @@ HTTPS	/ˌeɪtʃ tiː tiː piː ˈɛs/	H T T P S					acronym	community-consensus	
 TCP	/ˌtiː siː ˈpiː/	T C P					acronym	community-consensus	Letters "T-C-P". Transmission Control Protocol.
 UDP	/ˌjuː diː ˈpiː/	U D P					acronym	community-consensus	Letters "U-D-P". User Datagram Protocol.
 SSL	/ˌɛs ɛs ˈɛl/	S S L					acronym	community-consensus	Letters "S-S-L". Deprecated in favor of TLS but term persists.
-QUIC	/kwɪk/	quick	/ˌkjuː juː aɪ ˈsiː/	Q U I C	https://datatracker.ietf.org/doc/html/rfc9000	IETF RFC 9000	acronym	creator-clarified	IETF + Google docs: "quick". From "Quick UDP Internet Connections".
+QUIC	/kwɪk/	quick			https://datatracker.ietf.org/doc/html/rfc9000	IETF RFC 9000	acronym	creator-clarified	IETF + Google docs: "quick". From "Quick UDP Internet Connections".
 CORS	/kɔːrz/	cores	/ˌsiː oʊ ɑːr ˈɛs/	C O R S	https://fetch.spec.whatwg.org/	WHATWG Fetch	acronym	community-consensus	"cores"; rhymes with "doors". Cross-Origin Resource Sharing.
 CSRF	/ˈsiː sɜːrf/	sea surf	/ˌsiː ɛs ɑːr ˈɛf/	C S R F	https://owasp.org/www-community/attacks/csrf	OWASP	acronym	contested	OWASP-favored "sea-surf"; letter-by-letter common too.
 XSS	/ˌɛks ɛs ˈɛs/	X S S					acronym	community-consensus	Letters "X-S-S". Cross-Site Scripting.
-YAML	/ˈjæməl/	yam ul	/ˈjeɪməl/	yay mul	https://yaml.org/faq.html	yaml.org FAQ	acronym	creator-clarified	yaml.org FAQ: "rhymes with camel". YAM-uhl.
+YAML	/ˈjæməl/	yam ul			https://yaml.org/faq.html	yaml.org FAQ	acronym	creator-clarified	yaml.org FAQ: "rhymes with camel". YAM-uhl.
 TOML	/toʊml/	tohml			https://toml.io/	toml.io	acronym	creator-clarified	Tom Preston-Werner (creator): "rhymes with knoll/troll/roll".
 SDK	/ˌɛs diː ˈkeɪ/	S D K					acronym	community-consensus	Letters "S-D-K". Software Development Kit.
 CLI	/ˌsiː ɛl ˈaɪ/	C L I					acronym	community-consensus	Letters "C-L-I". Command Line Interface.
@@ -735,12 +735,12 @@ LLaVA	/ˈlɑː vɑː/	LAH vah			https://llava-vl.github.io/	LLaVA	product	commun
 LoRA	/ˈlɔːr ə/	LOR ah			https://arxiv.org/abs/2106.09685	LoRA paper	cs-term	community-consensus	"LOR-uh". Low-Rank Adaptation.
 QLoRA	/ˌkjuː ˈlɔːr ə/	Q LOR ah			https://arxiv.org/abs/2305.14314	QLoRA paper	cs-term	community-consensus	"Q-LOR-uh". Quantized LoRA.
 PEFT	/pɛft/	peft			https://huggingface.co/docs/peft	PEFT docs	tool	community-consensus	"peft". Parameter-Efficient Fine-Tuning.
-HTTPie	/ˌeɪtʃ tiː tiː piː ˈaɪ/	H T T P aye	/ˌeɪtʃ tiː tiː ˈpaɪ/	H T T P pie	https://httpie.io/docs/cli	HTTPie docs	cli-tool	creator-clarified	"aitch-tee-tee-pie" — like the suffix "-ie" in English.
+HTTPie	/ˌeɪtʃ tiː tiː piː ˈaɪ/	H T T P aye			https://httpie.io/docs/cli	HTTPie docs	cli-tool	creator-clarified	"aitch-tee-tee-pie" — like the suffix "-ie" in English.
 Bruno	/ˈbruː noʊ/	BROO no			https://www.usebruno.com/	Bruno	tool	community-consensus	"BROO-noh". Git-friendly API client.
 Hoppscotch	/ˈhɒp skɒtʃ/	HOP skotch			https://hoppscotch.io/	Hoppscotch	tool	community-consensus	"HOP-skotch"; the playground game. API client.
 Dify	/ˈdiː faɪ/	DEE fye			https://dify.ai/	Dify	product	community-consensus	"DEE-fye"; do + ify. LLM app platform.
 Hunyuan	/ˌhuːn juˈɑːn/	hoon yoo en			https://hunyuan.tencent.com/	Tencent Hunyuan	product	community-consensus	Tencent 混元 "hùn yuán"; approximated "HOON-yoo-en".
-Dijkstra	/ˈdaɪk strɑː/	DIKE strah	/ˈdɪk strə/	DICK struh	https://www.cs.utexas.edu/users/EWD/	Edsger Dijkstra archive	cs-term	creator-clarified	Dutch: "DIKE-strah". Edsger himself corrected English speakers many times.
+Dijkstra	/ˈdaɪk strɑː/	DIKE strah			https://www.cs.utexas.edu/users/EWD/	Edsger Dijkstra archive	cs-term	creator-clarified	Dutch: "DIKE-strah". Edsger himself corrected English speakers many times.
 trie	/triː/	tree	/traɪ/	try	https://en.wikipedia.org/wiki/Trie	Knuth TAOCP	cs-term	contested	Knuth (creator): "tree" (from "retrieval"). Most engineers say "try" to disambiguate from binary tree.
 DAG	/dæɡ/	dag	/ˌdiː eɪ ˈdʒiː/	D A G			acronym	contested	"dag" common in pipeline tools (Airflow, dagster); letter-by-letter "D-A-G" in CS papers.
 CRDT	/ˌsiː ɑːr diː ˈtiː/	C R D T			https://crdt.tech/	crdt.tech	acronym	community-consensus	Letters "C-R-D-T". Conflict-free Replicated Data Type.
@@ -815,8 +815,8 @@ C++	/ˌsiː plʌs ˈplʌs/	C plus plus			https://isocpp.org/	ISO C++	product	com
 C#	/ˌsiː ˈʃɑːrp/	C sharp			https://learn.microsoft.com/dotnet/csharp/	Microsoft Learn	product	community-consensus	"C-sharp".
 TypeScript	/ˈtaɪpˌskrɪpt/	TYPE script			https://www.typescriptlang.org/	TypeScript docs	product	community-consensus	"TYPE-script".
 JavaScript	/ˈdʒɑːvə skrɪpt/	JAH vah script			https://tc39.es/	TC39	product	community-consensus	"JAH-vuh-script".
-Tcl	/ˈtɪkəl/	tickle	/ˌtiː siː ˈɛl/	T C L	https://www.tcl-lang.org/	Tcl official	product	creator-clarified	John Ousterhout (creator): "tickle". Official Tcl Developer Xchange confirms.
-awk	/ɔːk/	auk	/ˌeɪ dʌbəl juː ˈkeɪ/	A double you K	https://en.wikipedia.org/wiki/AWK#Origin_of_the_name	Wikipedia § Origin of the name	cli-tool	creator-clarified	"auk" — like the seabird, rhymes with "hawk". Named after creators' initials (Aho/Weinberger/Kernighan); pronunciation confirmed in original AWK book.
+Tcl	/ˈtɪkəl/	tickle			https://www.tcl-lang.org/	Tcl official	product	creator-clarified	John Ousterhout (creator): "tickle". Official Tcl Developer Xchange confirms.
+awk	/ɔːk/	auk			https://en.wikipedia.org/wiki/AWK#Origin_of_the_name	Wikipedia § Origin of the name	cli-tool	creator-clarified	"auk" — like the seabird, rhymes with "hawk". Named after creators' initials (Aho/Weinberger/Kernighan); pronunciation confirmed in original AWK book.
 Perl	/pɜːrl/	purl			https://www.perl.org/	perl.org	product	community-consensus	"purl" — homophone of "pearl".
 Lisp	/lɪsp/	lisp					product	community-consensus	"lisp" the word.
 Scheme	/skiːm/	skeem					product	community-consensus	"skeem" — like the word "scheme".
@@ -922,7 +922,7 @@ ChaCha20	/ˌtʃɑː tʃɑː ˈtwɛn ti/	CHA cha twenty			https://datatracker.iet
 Poly1305	/ˈpɒl iː ˌθɜːrˌtiːn ˌoʊ ˈfaɪv/	PA lee thirteen oh five					cs-term	community-consensus	Bernstein MAC; usually said "Polly-thirteen-oh-five".
 X25519	/ˌɛks ˌtwɛnti faɪv faɪv ˌwʌn ˈnaɪn/	X twenty-five five one nine			https://datatracker.ietf.org/doc/html/rfc7748	RFC 7748	cs-term	community-consensus	"X-twenty-five-five-one-nine". DH on Curve25519.
 OAEP	/ˌoʊ eɪ iː ˈpiː/	O A E P	/ˈweɪ ɛp/	WAY ep	https://datatracker.ietf.org/doc/html/rfc8017	RFC 8017	acronym	contested	Letter-by-letter dominant; some crypto folks say "WAY-ep". Optimal Asymmetric Encryption Padding.
-scrypt	/ɛs ˈkrɪpt/	S crypt	/skrɪpt/	skript	https://www.tarsnap.com/scrypt.html	Colin Percival (creator)	cs-term	creator-clarified	Creator Colin Percival: "ess-crypt" (S then crypt). "script" is common but not the intent.
+scrypt	/ɛs ˈkrɪpt/	S crypt			https://www.tarsnap.com/scrypt.html	Colin Percival (creator)	cs-term	creator-clarified	Creator Colin Percival: "ess-crypt" (S then crypt). "script" is common but not the intent.
 argon2	/ˈɑːr ɡən tuː/	AR gon two			https://www.password-hashing.net/	Password Hashing Competition	cs-term	community-consensus	"AR-gon-two". 2015 PHC winner.
 bcrypt	/ˈbiː krɪpt/	B crypt			https://www.usenix.org/legacy/events/usenix99/provos/provos_html/	Provos & Mazières 1999	cs-term	community-consensus	"B-crypt" — B for Blowfish + crypt.
 EC2	/ˌiː tuː ˈsiː/	E two C			https://aws.amazon.com/ec2/	AWS EC2	product	community-consensus	"E-two-C". Elastic Compute Cloud.
@@ -935,7 +935,7 @@ ECS	/ˌiː siː ˈɛs/	E C S			https://aws.amazon.com/ecs/	AWS ECS	product	commu
 GKE	/ˌdʒiː keɪ ˈiː/	G K E			https://cloud.google.com/kubernetes-engine	Google GKE	product	community-consensus	Letters "G-K-E". Google Kubernetes Engine.
 AKS	/ˌeɪ keɪ ˈɛs/	A K S			https://learn.microsoft.com/en-us/azure/aks/	Azure AKS	product	community-consensus	Letters "A-K-S". Azure Kubernetes Service.
 Route53	/ruːt ˌfɪf ti ˈθriː/	root fifty-three	/raʊt ˌfɪf ti ˈθriː/	rowt fifty-three	https://aws.amazon.com/route53/	AWS Route 53	product	contested	US tech "root"; UK / general "rowt". Port 53 = DNS.
-io_uring	/ˌaɪ oʊ ˈjʊər ɪŋ/	I O YOUR ing	/ˌaɪ oʊ ˈʊər ɪŋ/	I O OOR ing	https://kernel.dk/io_uring.pdf	Jens Axboe paper	cs-term	creator-clarified	Jens Axboe: "I-O ring" (the underscore is silent). Async I/O syscall API.
+io_uring	/ˌaɪ oʊ ˈrɪŋ/	I O ring			https://kernel.dk/io_uring.pdf	Jens Axboe paper	cs-term	creator-clarified	Jens Axboe (creator): "I-O ring" — letters I and O then the word "ring". The underscore is silent; the "u" is the start of "uring" → "ring". Async I/O syscall API.
 Btrfs	/ˈbʌt ər ɛf ɛs/	BUTTER F S	/ˌbiː tiː ɑːr ɛf ˈɛs/	B T R F S	https://btrfs.readthedocs.io/	Btrfs docs	product	contested	Chris Mason / kernel folks: "butter-F-S" (B-Tree File System). Letter-by-letter also common.
 ZFS	/ˌziː ɛf ˈɛs/	Z F S			https://openzfs.org/	OpenZFS	product	community-consensus	Letters "Z-F-S". Originally Zettabyte File System.
 cgroups	/ˈsiː ɡruːps/	C groups			https://docs.kernel.org/admin-guide/cgroup-v2.html	Linux kernel docs	cs-term	community-consensus	"C-groups". Control groups — Linux resource isolation.

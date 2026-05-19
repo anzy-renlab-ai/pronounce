@@ -216,6 +216,15 @@ Two things we want most:
 
 Keep it tiny. Keep it dep-free where possible. Keep the defaults opinionated (3 reps, GenAm, Samantha voice).
 
+## 💚 Support
+
+The dictionary is free and MIT. If it's saved you a standup-cringe moment, two ways to chip in:
+
+- **⭐ [Star on GitHub](https://github.com/anzy-renlab-ai/pronounce)** — costs nothing, nudges more devs to contribute their favorite mispronounced project.
+- **💚 [Sponsor on GitHub](https://github.com/sponsors/anzy-renlab-ai)** — keeps the maintainer caffeinated. The button on the repo header pays for one new entry per coffee.
+
+Every dollar goes to: hosting (Vercel/Cloudflare/Open VSX), domain renewals, MiniMax narration credits for promo videos, and time to track down creator citations for new entries.
+
 ## Contributors
 
 <a href="https://github.com/anzy-renlab-ai/pronounce/graphs/contributors"><img src="https://contrib.rocks/image?repo=anzy-renlab-ai/pronounce" alt="Contributors"></a>

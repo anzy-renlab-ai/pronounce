@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.2 — 2026-05-19
+
+- **Policy: creator-clarified entries no longer surface an "or:" alternate.** Once a project's creator has settled the reading on record, the dictionary teaches *that* reading — not the also-heard ones. Cleared `alt_ipa` + `alt_respelling_us` on 14 rows: GIF, etcd, PostgreSQL, MySQL, LaTeX, Godot, QUIC, YAML, HTTPie, Dijkstra, Tcl, awk, scrypt, io_uring. The hover popup, CLI, and web app all stop offering the alternates for these.
+- **Fix: `io_uring` respelling.** Was "I O YOUR ing" — Samantha read "YOUR" as the possessive, producing "eye-oh-yore-ing". Now "I O ring" per Jens Axboe's stated reading: letters I-O then the word "ring".
+- **Bump CLI version** to 0.4.0 (was lagging at 0.2.0; out-of-sync with the cross-platform refactor + 268-entry growth).
+
 ## 0.3.1 — 2026-05-19
 
 - **Dictionary 851 → 892 (+41).** Distributed systems (Raft, Paxos, Byzantine, gossip, Lamport, Saga, HLC, vector clock, quorum); cryptography primitives (Ed25519, ChaCha20, Poly1305, X25519, OAEP, scrypt, argon2, bcrypt); cloud services (EC2, S3, RDS, IAM, KMS, EKS, ECS, GKE, AKS, Route53); Linux kernel (io_uring, Btrfs, ZFS, cgroups, strace, ltrace, syscall); 2026 LLMs (DeepSeek-R1, o1, o3, Sonnet, Opus, Haiku).
