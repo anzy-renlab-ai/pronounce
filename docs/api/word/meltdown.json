@@ -1,0 +1,12 @@
+{
+  "word": "Meltdown",
+  "ipa": "/ˈmɛlt daʊn/",
+  "respelling_us": "melt down",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://meltdownattack.com/",
+  "source_label": "meltdownattack.com",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "\"melt-down\". CPU vuln paired with Spectre."
+}

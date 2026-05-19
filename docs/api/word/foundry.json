@@ -1,0 +1,12 @@
+{
+  "word": "Foundry",
+  "ipa": "/ˈfaʊn dri/",
+  "respelling_us": "FOUN dree",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://getfoundry.sh/",
+  "source_label": "Foundry",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "\"FOUN-dree\". Solidity smart contract toolkit."
+}

@@ -819,3 +819,37 @@ WebKit | /ˈwɛb kɪt/ | web kit | product | community-consensus | https://webki
 Big-O | /ˌbɪɡ ˈoʊ/ | big oh | cs-term | community-consensus | https://en.wikipedia.org/wiki/Big_O_notation
 pub/sub | /ˈpʌb sʌb/ | pub sub | cs-term | community-consensus | (no source)
 OOM | /ˌoʊ oʊ ˈɛm/ | O O M | acronym | contested | (no source)
+i18n | /ˌaɪ eɪˈtiːn ɛn/ | eye eighteen N | abbreviation | community-consensus | https://en.wikipedia.org/wiki/Internationalization_and_localization
+l10n | /ˌɛl tɛn ˈɛn/ | L ten N | abbreviation | community-consensus | https://en.wikipedia.org/wiki/Internationalization_and_localization
+a11y | /ˌeɪ ɪˈlɛvən waɪ/ | A eleven Y | abbreviation | creator-clarified | https://www.a11yproject.com/
+e2e | /ˌiː tuː ˈiː/ | E two E | abbreviation | community-consensus | (no source)
+m17n | /ˌɛm sɛvənˈtiːn ɛn/ | M seventeen N | abbreviation | community-consensus | (no source)
+s11n | /ˌɛs ɪˈlɛvən ɛn/ | S eleven N | abbreviation | community-consensus | (no source)
+p13n | /ˌpiː θɜːrˈtiːn ɛn/ | P thirteen N | abbreviation | community-consensus | (no source)
+g11n | /ˌdʒiː ɪˈlɛvən ɛn/ | G eleven N | abbreviation | community-consensus | (no source)
+Hopper | /ˈhɒpər/ | HOP er | product | community-consensus | https://en.wikipedia.org/wiki/Hopper_(microarchitecture)
+Blackwell | /ˈblæk wɛl/ | BLACK well | product | community-consensus | https://en.wikipedia.org/wiki/Blackwell_(microarchitecture)
+Lovelace | /ˈlʌv leɪs/ | LUV lace | product | community-consensus | https://en.wikipedia.org/wiki/Ada_Lovelace_(microarchitecture)
+Ampere | /ˈæm pɪər/ | AM peer | product | contested | https://en.wikipedia.org/wiki/Ampere_(microarchitecture)
+Volta | /ˈvoʊl tə/ | VOLE ta | product | community-consensus | https://en.wikipedia.org/wiki/Volta_(microarchitecture)
+Pascal | /pæˈskæl/ | pas KAL | product | contested | https://en.wikipedia.org/wiki/Pascal_(microarchitecture)
+Grace | /ɡreɪs/ | grace | product | community-consensus | https://www.nvidia.com/en-us/data-center/grace-cpu/
+Turing | /ˈtʊər ɪŋ/ | TURE ing | product | community-consensus | https://en.wikipedia.org/wiki/Turing_(microarchitecture)
+Heartbleed | /ˈhɑːrt bliːd/ | heart bleed | cs-term | community-consensus | https://heartbleed.com/
+Shellshock | /ˈʃɛl ʃɒk/ | shell shock | cs-term | community-consensus | https://en.wikipedia.org/wiki/Shellshock_(software_bug)
+Log4Shell | /ˌlɒɡ fɔːr ˈʃɛl/ | log four shell | cs-term | community-consensus | https://en.wikipedia.org/wiki/Log4Shell
+Spectre | /ˈspɛk tər/ | SPEK ter | cs-term | community-consensus | https://spectreattack.com/
+Meltdown | /ˈmɛlt daʊn/ | melt down | cs-term | community-consensus | https://meltdownattack.com/
+Druid | /ˈdruː ɪd/ | DROO id | product | community-consensus | https://druid.apache.org/
+Pinot | /ˈpiː noʊ/ | PEE noh | product | community-consensus | https://pinot.apache.org/
+TiDB | /ˌtiː aɪ diː ˈbiː/ | T I D B | product | community-consensus | https://www.pingcap.com/tidb/
+YugabyteDB | /ˈjuː ɡə baɪt diː biː/ | YOO guh bite D B | product | community-consensus | https://www.yugabyte.com/
+StarRocks | /ˈstɑːr rɒks/ | star rocks | product | community-consensus | https://www.starrocks.io/
+Doris | /ˈdɔːr ɪs/ | DOR is | product | community-consensus | https://doris.apache.org/
+Hardhat | /ˈhɑːrd hæt/ | hard hat | tool | community-consensus | https://hardhat.org/
+Foundry | /ˈfaʊn dri/ | FOUN dree | tool | community-consensus | https://getfoundry.sh/
+Anvil | /ˈæn vɪl/ | AN vil | tool | community-consensus | https://book.getfoundry.sh/anvil/
+Solana | /səˈlɑː nə/ | suh LAH nuh | product | community-consensus | https://solana.com/
+WHATWG | /ˈwɒt wɪɡ/ | WAT wig | acronym | contested | https://whatwg.org/
+ECMA | /ˈɛk mə/ | EK ma | acronym | contested | https://ecma-international.org/
+IETF | /ˌaɪ iː tiː ˈɛf/ | I E T F | acronym | community-consensus | https://www.ietf.org/

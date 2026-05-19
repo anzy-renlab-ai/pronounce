@@ -1,0 +1,12 @@
+{
+  "word": "Ampere",
+  "ipa": "/ˈæm pɪər/",
+  "respelling_us": "AM peer",
+  "alt_ipa": ["/ˈæm pɛər/"],
+  "alt_respelling_us": ["AM pair"],
+  "source_url": "https://en.wikipedia.org/wiki/Ampere_(microarchitecture)",
+  "source_label": "NVIDIA Ampere",
+  "category": "product",
+  "confidence": "contested",
+  "notes": "US: \"AM-peer\"; UK: \"AM-pair\". RTX 30-series + A100."
+}

@@ -1,0 +1,12 @@
+{
+  "word": "Heartbleed",
+  "ipa": "/ˈhɑːrt bliːd/",
+  "respelling_us": "heart bleed",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://heartbleed.com/",
+  "source_label": "heartbleed.com",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "\"heart-bleed\". CVE-2014-0160. OpenSSL bug."
+}

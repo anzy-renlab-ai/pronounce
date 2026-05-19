@@ -1,0 +1,12 @@
+{
+  "word": "Hopper",
+  "ipa": "/ˈhɒpər/",
+  "respelling_us": "HOP er",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://en.wikipedia.org/wiki/Hopper_(microarchitecture)",
+  "source_label": "NVIDIA Hopper",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"HOP-er\". NVIDIA H100/H200 architecture, named after Grace Hopper."
+}

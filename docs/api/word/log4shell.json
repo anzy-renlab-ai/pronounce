@@ -1,0 +1,12 @@
+{
+  "word": "Log4Shell",
+  "ipa": "/ˌlɒɡ fɔːr ˈʃɛl/",
+  "respelling_us": "log four shell",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://en.wikipedia.org/wiki/Log4Shell",
+  "source_label": "Wikipedia",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "\"log-four-shell\". CVE-2021-44228. log4j RCE."
+}

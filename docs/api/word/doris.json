@@ -1,0 +1,12 @@
+{
+  "word": "Doris",
+  "ipa": "/ˈdɔːr ɪs/",
+  "respelling_us": "DOR is",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://doris.apache.org/",
+  "source_label": "Apache Doris",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"DOR-is\". MPP analytical DB."
+}

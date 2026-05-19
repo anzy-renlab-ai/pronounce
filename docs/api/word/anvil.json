@@ -1,0 +1,12 @@
+{
+  "word": "Anvil",
+  "ipa": "/ˈæn vɪl/",
+  "respelling_us": "AN vil",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://book.getfoundry.sh/anvil/",
+  "source_label": "Foundry Anvil",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "\"AN-vil\". Foundry local Ethereum node."
+}

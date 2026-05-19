@@ -1,0 +1,12 @@
+{
+  "word": "Shellshock",
+  "ipa": "/ˈʃɛl ʃɒk/",
+  "respelling_us": "shell shock",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://en.wikipedia.org/wiki/Shellshock_(software_bug)",
+  "source_label": "Wikipedia",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "\"shell-shock\". CVE-2014-6271. Bash bug."
+}

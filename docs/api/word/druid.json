@@ -1,0 +1,12 @@
+{
+  "word": "Druid",
+  "ipa": "/ˈdruː ɪd/",
+  "respelling_us": "DROO id",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://druid.apache.org/",
+  "source_label": "Apache Druid",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"DROO-id\". Real-time analytics DB."
+}

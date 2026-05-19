@@ -1,0 +1,12 @@
+{
+  "word": "Pinot",
+  "ipa": "/ˈpiː noʊ/",
+  "respelling_us": "PEE noh",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://pinot.apache.org/",
+  "source_label": "Apache Pinot",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"PEE-noh\" (like the wine). Real-time OLAP store."
+}

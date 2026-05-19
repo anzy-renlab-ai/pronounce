@@ -1,0 +1,12 @@
+{
+  "word": "TiDB",
+  "ipa": "/ˌtiː aɪ diː ˈbiː/",
+  "respelling_us": "T I D B",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.pingcap.com/tidb/",
+  "source_label": "PingCAP TiDB",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Letters \"T-I-D-B\". Hybrid SQL by PingCAP."
+}

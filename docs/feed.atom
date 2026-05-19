@@ -4,181 +4,181 @@
   <link href="https://pronounce.renlab.ai/feed.atom" rel="self"/>
   <link href="https://pronounce.renlab.ai/"/>
   <id>https://pronounce.renlab.ai/</id>
-  <updated>2026-05-18T13:53:37Z</updated>
+  <updated>2026-05-19T10:29:17Z</updated>
   <subtitle>How engineers actually pronounce project / product / jargon names. Community-maintained.</subtitle>
   <entry>
-    <title>T5 — T five</title>
-    <link href="https://pronounce.renlab.ai/word/t5"/>
-    <id>https://pronounce.renlab.ai/word/t5</id>
-    <updated>2026-05-18T13:53:37Z</updated>
-    <summary>T5 is pronounced "T five" (/ˌtiː ˈfaɪv/). "T-five". Text-to-Text Transfer Transformer.</summary>
+    <title>Blackwell — BLACK well</title>
+    <link href="https://pronounce.renlab.ai/word/blackwell"/>
+    <id>https://pronounce.renlab.ai/word/blackwell</id>
+    <updated>2026-05-19T10:29:17Z</updated>
+    <summary>Blackwell is pronounced "BLACK well" (/ˈblæk wɛl/). "BLACK-well". NVIDIA B100/B200 architecture, named after mathematician David Blackwell.</summary>
   </entry>
   <entry>
-    <title>PaLM — pom</title>
-    <link href="https://pronounce.renlab.ai/word/palm"/>
-    <id>https://pronounce.renlab.ai/word/palm</id>
-    <updated>2026-05-18T13:53:37Z</updated>
-    <summary>PaLM is pronounced "pom" (/pɑːm/). Google brand: "pom" (palm tree); letter-by-letter also heard. Pathways Language Model.</summary>
+    <title>Lovelace — LUV lace</title>
+    <link href="https://pronounce.renlab.ai/word/lovelace"/>
+    <id>https://pronounce.renlab.ai/word/lovelace</id>
+    <updated>2026-05-19T10:29:17Z</updated>
+    <summary>Lovelace is pronounced "LUV lace" (/ˈlʌv leɪs/). "LUV-lace" (RTX 40-series), after Ada Lovelace.</summary>
   </entry>
   <entry>
-    <title>SAM — sam</title>
-    <link href="https://pronounce.renlab.ai/word/sam"/>
-    <id>https://pronounce.renlab.ai/word/sam</id>
-    <updated>2026-05-18T13:53:37Z</updated>
-    <summary>SAM is pronounced "sam" (/sæm/). "sam" — name. Segment Anything Model.</summary>
+    <title>Ampere — AM peer</title>
+    <link href="https://pronounce.renlab.ai/word/ampere"/>
+    <id>https://pronounce.renlab.ai/word/ampere</id>
+    <updated>2026-05-19T10:29:17Z</updated>
+    <summary>Ampere is pronounced "AM peer" (/ˈæm pɪər/). US: "AM-peer"; UK: "AM-pair". RTX 30-series + A100.</summary>
   </entry>
   <entry>
-    <title>CLIP — clip</title>
-    <link href="https://pronounce.renlab.ai/word/clip"/>
-    <id>https://pronounce.renlab.ai/word/clip</id>
-    <updated>2026-05-18T13:53:37Z</updated>
-    <summary>CLIP is pronounced "clip" (/klɪp/). "clip" the word. Contrastive Language-Image Pre-training.</summary>
+    <title>Volta — VOLE ta</title>
+    <link href="https://pronounce.renlab.ai/word/volta"/>
+    <id>https://pronounce.renlab.ai/word/volta</id>
+    <updated>2026-05-19T10:29:17Z</updated>
+    <summary>Volta is pronounced "VOLE ta" (/ˈvoʊl tə/). "VOLE-ta". V100. Named after Alessandro Volta.</summary>
   </entry>
   <entry>
-    <title>DINO — DEE noh</title>
-    <link href="https://pronounce.renlab.ai/word/dino"/>
-    <id>https://pronounce.renlab.ai/word/dino</id>
-    <updated>2026-05-18T13:53:37Z</updated>
-    <summary>DINO is pronounced "DEE noh" (/ˈdiː noʊ/). "DEE-noh". Self-DIstillation with NO labels.</summary>
+    <title>Pascal — pas KAL</title>
+    <link href="https://pronounce.renlab.ai/word/pascal"/>
+    <id>https://pronounce.renlab.ai/word/pascal</id>
+    <updated>2026-05-19T10:29:17Z</updated>
+    <summary>Pascal is pronounced "pas KAL" (/pæˈskæl/). Programming-language origin "PAS-kuhl"; NVIDIA uses "pas-KAL" in talks. After Blaise Pascal.</summary>
   </entry>
   <entry>
-    <title>ColBERT — col BURT</title>
-    <link href="https://pronounce.renlab.ai/word/colbert"/>
-    <id>https://pronounce.renlab.ai/word/colbert</id>
-    <updated>2026-05-18T13:53:37Z</updated>
-    <summary>ColBERT is pronounced "col BURT" (/kɒlˈbɜːrt/). "col-BURT" — like Stephen Colbert. Contextualized Late interaction over BERT.</summary>
+    <title>Grace — grace</title>
+    <link href="https://pronounce.renlab.ai/word/grace"/>
+    <id>https://pronounce.renlab.ai/word/grace</id>
+    <updated>2026-05-19T10:29:17Z</updated>
+    <summary>Grace is pronounced "grace" (/ɡreɪs/). "grace" the word. NVIDIA ARM CPU, named after Grace Hopper.</summary>
   </entry>
   <entry>
-    <title>HNSW — H N S W</title>
-    <link href="https://pronounce.renlab.ai/word/hnsw"/>
-    <id>https://pronounce.renlab.ai/word/hnsw</id>
-    <updated>2026-05-18T13:53:37Z</updated>
-    <summary>HNSW is pronounced "H N S W" (/ˌeɪtʃ ɛn ɛs ˈdʌbəl juː/). Letters "H-N-S-W". Hierarchical Navigable Small World.</summary>
+    <title>Turing — TURE ing</title>
+    <link href="https://pronounce.renlab.ai/word/turing"/>
+    <id>https://pronounce.renlab.ai/word/turing</id>
+    <updated>2026-05-19T10:29:17Z</updated>
+    <summary>Turing is pronounced "TURE ing" (/ˈtʊər ɪŋ/). "TURE-ing" (rhymes with "during"). RTX 20-series. After Alan Turing.</summary>
   </entry>
   <entry>
-    <title>Karpathy — kar PAH thee</title>
-    <link href="https://pronounce.renlab.ai/word/karpathy"/>
-    <id>https://pronounce.renlab.ai/word/karpathy</id>
-    <updated>2026-05-18T13:53:37Z</updated>
-    <summary>Karpathy is pronounced "kar PAH thee" (/kɑːrˈpɑː θi/). "kar-PAH-thee". Andrej Karpathy.</summary>
+    <title>Heartbleed — heart bleed</title>
+    <link href="https://pronounce.renlab.ai/word/heartbleed"/>
+    <id>https://pronounce.renlab.ai/word/heartbleed</id>
+    <updated>2026-05-19T10:29:17Z</updated>
+    <summary>Heartbleed is pronounced "heart bleed" (/ˈhɑːrt bliːd/). "heart-bleed". CVE-2014-0160. OpenSSL bug.</summary>
   </entry>
   <entry>
-    <title>EVM — E V M</title>
-    <link href="https://pronounce.renlab.ai/word/evm"/>
-    <id>https://pronounce.renlab.ai/word/evm</id>
-    <updated>2026-05-18T13:53:37Z</updated>
-    <summary>EVM is pronounced "E V M" (/ˌiː viː ˈɛm/). Letters "E-V-M". Ethereum Virtual Machine.</summary>
+    <title>Shellshock — shell shock</title>
+    <link href="https://pronounce.renlab.ai/word/shellshock"/>
+    <id>https://pronounce.renlab.ai/word/shellshock</id>
+    <updated>2026-05-19T10:29:17Z</updated>
+    <summary>Shellshock is pronounced "shell shock" (/ˈʃɛl ʃɒk/). "shell-shock". CVE-2014-6271. Bash bug.</summary>
   </entry>
   <entry>
-    <title>ABI — A B I</title>
-    <link href="https://pronounce.renlab.ai/word/abi"/>
-    <id>https://pronounce.renlab.ai/word/abi</id>
-    <updated>2026-05-18T13:53:37Z</updated>
-    <summary>ABI is pronounced "A B I" (/ˌeɪ biː ˈaɪ/). Letters "A-B-I". Application Binary Interface.</summary>
+    <title>Log4Shell — log four shell</title>
+    <link href="https://pronounce.renlab.ai/word/log4shell"/>
+    <id>https://pronounce.renlab.ai/word/log4shell</id>
+    <updated>2026-05-19T10:29:17Z</updated>
+    <summary>Log4Shell is pronounced "log four shell" (/ˌlɒɡ fɔːr ˈʃɛl/). "log-four-shell". CVE-2021-44228. log4j RCE.</summary>
   </entry>
   <entry>
-    <title>dApp — D app</title>
-    <link href="https://pronounce.renlab.ai/word/dapp"/>
-    <id>https://pronounce.renlab.ai/word/dapp</id>
-    <updated>2026-05-18T13:53:37Z</updated>
-    <summary>dApp is pronounced "D app" (/ˈdiː æp/). "D-app". Decentralized App.</summary>
+    <title>Spectre — SPEK ter</title>
+    <link href="https://pronounce.renlab.ai/word/spectre"/>
+    <id>https://pronounce.renlab.ai/word/spectre</id>
+    <updated>2026-05-19T10:29:17Z</updated>
+    <summary>Spectre is pronounced "SPEK ter" (/ˈspɛk tər/). "SPEK-ter". CPU side-channel vuln (2018).</summary>
   </entry>
   <entry>
-    <title>ENS — E N S</title>
-    <link href="https://pronounce.renlab.ai/word/ens"/>
-    <id>https://pronounce.renlab.ai/word/ens</id>
-    <updated>2026-05-18T13:53:37Z</updated>
-    <summary>ENS is pronounced "E N S" (/ˌiː ɛn ˈɛs/). Letters "E-N-S". Ethereum Name Service.</summary>
+    <title>Meltdown — melt down</title>
+    <link href="https://pronounce.renlab.ai/word/meltdown"/>
+    <id>https://pronounce.renlab.ai/word/meltdown</id>
+    <updated>2026-05-19T10:29:17Z</updated>
+    <summary>Meltdown is pronounced "melt down" (/ˈmɛlt daʊn/). "melt-down". CPU vuln paired with Spectre.</summary>
   </entry>
   <entry>
-    <title>SLA — S L A</title>
-    <link href="https://pronounce.renlab.ai/word/sla"/>
-    <id>https://pronounce.renlab.ai/word/sla</id>
-    <updated>2026-05-18T13:53:37Z</updated>
-    <summary>SLA is pronounced "S L A" (/ˌɛs ɛl ˈeɪ/). Letters "S-L-A". Service Level Agreement.</summary>
+    <title>Druid — DROO id</title>
+    <link href="https://pronounce.renlab.ai/word/druid"/>
+    <id>https://pronounce.renlab.ai/word/druid</id>
+    <updated>2026-05-19T10:29:17Z</updated>
+    <summary>Druid is pronounced "DROO id" (/ˈdruː ɪd/). "DROO-id". Real-time analytics DB.</summary>
   </entry>
   <entry>
-    <title>SLO — S L O</title>
-    <link href="https://pronounce.renlab.ai/word/slo"/>
-    <id>https://pronounce.renlab.ai/word/slo</id>
-    <updated>2026-05-18T13:53:37Z</updated>
-    <summary>SLO is pronounced "S L O" (/ˌɛs ɛl ˈoʊ/). Letters "S-L-O". Service Level Objective.</summary>
+    <title>Pinot — PEE noh</title>
+    <link href="https://pronounce.renlab.ai/word/pinot"/>
+    <id>https://pronounce.renlab.ai/word/pinot</id>
+    <updated>2026-05-19T10:29:17Z</updated>
+    <summary>Pinot is pronounced "PEE noh" (/ˈpiː noʊ/). "PEE-noh" (like the wine). Real-time OLAP store.</summary>
   </entry>
   <entry>
-    <title>SLI — S L I</title>
-    <link href="https://pronounce.renlab.ai/word/sli"/>
-    <id>https://pronounce.renlab.ai/word/sli</id>
-    <updated>2026-05-18T13:53:37Z</updated>
-    <summary>SLI is pronounced "S L I" (/ˌɛs ɛl ˈaɪ/). Letters "S-L-I". Service Level Indicator.</summary>
+    <title>TiDB — T I D B</title>
+    <link href="https://pronounce.renlab.ai/word/tidb"/>
+    <id>https://pronounce.renlab.ai/word/tidb</id>
+    <updated>2026-05-19T10:29:17Z</updated>
+    <summary>TiDB is pronounced "T I D B" (/ˌtiː aɪ diː ˈbiː/). Letters "T-I-D-B". Hybrid SQL by PingCAP.</summary>
   </entry>
   <entry>
-    <title>KPI — K P I</title>
-    <link href="https://pronounce.renlab.ai/word/kpi"/>
-    <id>https://pronounce.renlab.ai/word/kpi</id>
-    <updated>2026-05-18T13:53:37Z</updated>
-    <summary>KPI is pronounced "K P I" (/ˌkeɪ piː ˈaɪ/). Letters "K-P-I".</summary>
+    <title>YugabyteDB — YOO guh bite D B</title>
+    <link href="https://pronounce.renlab.ai/word/yugabytedb"/>
+    <id>https://pronounce.renlab.ai/word/yugabytedb</id>
+    <updated>2026-05-19T10:29:17Z</updated>
+    <summary>YugabyteDB is pronounced "YOO guh bite D B" (/ˈjuː ɡə baɪt diː biː/). "YOO-guh-bite-D-B". Distributed SQL.</summary>
   </entry>
   <entry>
-    <title>MTTR — M T T R</title>
-    <link href="https://pronounce.renlab.ai/word/mttr"/>
-    <id>https://pronounce.renlab.ai/word/mttr</id>
-    <updated>2026-05-18T13:53:37Z</updated>
-    <summary>MTTR is pronounced "M T T R" (/ˌɛm tiː tiː ˈɑːr/). Letters "M-T-T-R". Mean Time To Recovery.</summary>
+    <title>StarRocks — star rocks</title>
+    <link href="https://pronounce.renlab.ai/word/starrocks"/>
+    <id>https://pronounce.renlab.ai/word/starrocks</id>
+    <updated>2026-05-19T10:29:17Z</updated>
+    <summary>StarRocks is pronounced "star rocks" (/ˈstɑːr rɒks/). "star-rocks". OLAP database.</summary>
   </entry>
   <entry>
-    <title>MTBF — M T B F</title>
-    <link href="https://pronounce.renlab.ai/word/mtbf"/>
-    <id>https://pronounce.renlab.ai/word/mtbf</id>
-    <updated>2026-05-18T13:53:37Z</updated>
-    <summary>MTBF is pronounced "M T B F" (/ˌɛm tiː biː ˈɛf/). Letters "M-T-B-F". Mean Time Between Failures.</summary>
+    <title>Doris — DOR is</title>
+    <link href="https://pronounce.renlab.ai/word/doris"/>
+    <id>https://pronounce.renlab.ai/word/doris</id>
+    <updated>2026-05-19T10:29:17Z</updated>
+    <summary>Doris is pronounced "DOR is" (/ˈdɔːr ɪs/). "DOR-is". MPP analytical DB.</summary>
   </entry>
   <entry>
-    <title>uvicorn — yoo vee corn</title>
-    <link href="https://pronounce.renlab.ai/word/uvicorn"/>
-    <id>https://pronounce.renlab.ai/word/uvicorn</id>
-    <updated>2026-05-18T13:53:37Z</updated>
-    <summary>uvicorn is pronounced "yoo vee corn" (/ˌjuː viː ˈkɔːrn/). "yoo-vee-CORN". Python ASGI server.</summary>
+    <title>Hardhat — hard hat</title>
+    <link href="https://pronounce.renlab.ai/word/hardhat"/>
+    <id>https://pronounce.renlab.ai/word/hardhat</id>
+    <updated>2026-05-19T10:29:17Z</updated>
+    <summary>Hardhat is pronounced "hard hat" (/ˈhɑːrd hæt/). "hard-hat". Ethereum development environment.</summary>
   </entry>
   <entry>
-    <title>gunicorn — GUN i corn</title>
-    <link href="https://pronounce.renlab.ai/word/gunicorn"/>
-    <id>https://pronounce.renlab.ai/word/gunicorn</id>
-    <updated>2026-05-18T13:53:37Z</updated>
-    <summary>gunicorn is pronounced "GUN i corn" (/ˈɡʌn i kɔːrn/). "GUN-uh-corn" — like a unicorn with a gun. Green Unicorn.</summary>
+    <title>Foundry — FOUN dree</title>
+    <link href="https://pronounce.renlab.ai/word/foundry"/>
+    <id>https://pronounce.renlab.ai/word/foundry</id>
+    <updated>2026-05-19T10:29:17Z</updated>
+    <summary>Foundry is pronounced "FOUN dree" (/ˈfaʊn dri/). "FOUN-dree". Solidity smart contract toolkit.</summary>
   </entry>
   <entry>
-    <title>WSGI — WIZ gee</title>
-    <link href="https://pronounce.renlab.ai/word/wsgi"/>
-    <id>https://pronounce.renlab.ai/word/wsgi</id>
-    <updated>2026-05-18T13:53:37Z</updated>
-    <summary>WSGI is pronounced "WIZ gee" (/ˈwɪz ɡi/). "WIZ-gee" common; letter-by-letter also heard. Web Server Gateway Interface.</summary>
+    <title>Anvil — AN vil</title>
+    <link href="https://pronounce.renlab.ai/word/anvil"/>
+    <id>https://pronounce.renlab.ai/word/anvil</id>
+    <updated>2026-05-19T10:29:17Z</updated>
+    <summary>Anvil is pronounced "AN vil" (/ˈæn vɪl/). "AN-vil". Foundry local Ethereum node.</summary>
   </entry>
   <entry>
-    <title>WebKit — web kit</title>
-    <link href="https://pronounce.renlab.ai/word/webkit"/>
-    <id>https://pronounce.renlab.ai/word/webkit</id>
-    <updated>2026-05-18T13:53:37Z</updated>
-    <summary>WebKit is pronounced "web kit" (/ˈwɛb kɪt/). "web-KIT". Apple browser engine.</summary>
+    <title>Solana — suh LAH nuh</title>
+    <link href="https://pronounce.renlab.ai/word/solana"/>
+    <id>https://pronounce.renlab.ai/word/solana</id>
+    <updated>2026-05-19T10:29:17Z</updated>
+    <summary>Solana is pronounced "suh LAH nuh" (/səˈlɑː nə/). "suh-LAH-nuh". L1 blockchain.</summary>
   </entry>
   <entry>
-    <title>Big-O — big oh</title>
-    <link href="https://pronounce.renlab.ai/word/big-o"/>
-    <id>https://pronounce.renlab.ai/word/big-o</id>
-    <updated>2026-05-18T13:53:37Z</updated>
-    <summary>Big-O is pronounced "big oh" (/ˌbɪɡ ˈoʊ/). "big-OH". Asymptotic upper bound notation.</summary>
+    <title>WHATWG — WAT wig</title>
+    <link href="https://pronounce.renlab.ai/word/whatwg"/>
+    <id>https://pronounce.renlab.ai/word/whatwg</id>
+    <updated>2026-05-19T10:29:17Z</updated>
+    <summary>WHATWG is pronounced "WAT wig" (/ˈwɒt wɪɡ/). "WHAT-wig" common; letter-by-letter also heard. Web Hypertext Application Technology Working Group.</summary>
   </entry>
   <entry>
-    <title>pub/sub — pub sub</title>
-    <link href="https://pronounce.renlab.ai/word/pub-sub"/>
-    <id>https://pronounce.renlab.ai/word/pub-sub</id>
-    <updated>2026-05-18T13:53:37Z</updated>
-    <summary>pub/sub is pronounced "pub sub" (/ˈpʌb sʌb/). "pub-SUB". Publish/Subscribe pattern.</summary>
+    <title>ECMA — EK ma</title>
+    <link href="https://pronounce.renlab.ai/word/ecma"/>
+    <id>https://pronounce.renlab.ai/word/ecma</id>
+    <updated>2026-05-19T10:29:17Z</updated>
+    <summary>ECMA is pronounced "EK ma" (/ˈɛk mə/). "EK-ma" (one word) is the org's own usage; letter-by-letter also common. European Computer Manufacturers Association (legacy name).</summary>
   </entry>
   <entry>
-    <title>OOM — O O M</title>
-    <link href="https://pronounce.renlab.ai/word/oom"/>
-    <id>https://pronounce.renlab.ai/word/oom</id>
-    <updated>2026-05-18T13:53:37Z</updated>
-    <summary>OOM is pronounced "O O M" (/ˌoʊ oʊ ˈɛm/). Letters dominant; "oom" rare. Out Of Memory.</summary>
+    <title>IETF — I E T F</title>
+    <link href="https://pronounce.renlab.ai/word/ietf"/>
+    <id>https://pronounce.renlab.ai/word/ietf</id>
+    <updated>2026-05-19T10:29:17Z</updated>
+    <summary>IETF is pronounced "I E T F" (/ˌaɪ iː tiː ˈɛf/). Letters "I-E-T-F". Internet Engineering Task Force.</summary>
   </entry>
 </feed>

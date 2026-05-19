@@ -1,0 +1,12 @@
+{
+  "word": "Spectre",
+  "ipa": "/ˈspɛk tər/",
+  "respelling_us": "SPEK ter",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://spectreattack.com/",
+  "source_label": "spectreattack.com",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "\"SPEK-ter\". CPU side-channel vuln (2018)."
+}

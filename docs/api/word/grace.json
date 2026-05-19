@@ -1,0 +1,12 @@
+{
+  "word": "Grace",
+  "ipa": "/ɡreɪs/",
+  "respelling_us": "grace",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.nvidia.com/en-us/data-center/grace-cpu/",
+  "source_label": "NVIDIA Grace",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"grace\" the word. NVIDIA ARM CPU, named after Grace Hopper."
+}
