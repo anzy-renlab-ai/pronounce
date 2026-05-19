@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.3.0 — 2026-05-19
+
+**Cross-platform — Linux + Windows backends.** No longer macOS-only.
+
+- New TTS backend detection in `src/speak.ts`:
+  - macOS: `/usr/bin/say` (unchanged)
+  - Linux: `espeak-ng` (install via `sudo apt install espeak-ng` / `brew install espeak-ng` / `pacman -S espeak-ng`)
+  - Legacy Linux: `espeak`
+  - Windows: PowerShell `System.Speech.Synthesis.SpeechSynthesizer` (built into modern Windows)
+- Backend autodetection runs once at first speak; result cached.
+- Speech rate is translated for each backend (wpm for `say`/`espeak`/`espeak-ng`; -10..+10 scale for PowerShell).
+- Voice setting still applies to `say`; on espeak/PowerShell it falls back to the default English voice.
+- Keybinding generalized: `⌘⇧'` on Mac, `Ctrl+Shift+'` on Linux/Windows.
+- Error message now lists install commands per OS when no backend is found.
+
 ## 0.2.2 — 2026-05-19
 
 - **Dictionary grows 817 → 851 (+34).** New: numeronyms (i18n, l10n, a11y, e2e, m17n, s11n, p13n, g11n), GPU/CPU codenames (Hopper, Blackwell, Lovelace, Ampere, Volta, Pascal, Grace, Turing), security vulns (Heartbleed, Shellshock, Log4Shell, Spectre, Meltdown), more databases (Druid, Pinot, TiDB, YugabyteDB, StarRocks, Doris), web3 tooling (Hardhat, Foundry, Anvil, Solana), and standards bodies (WHATWG, ECMA, IETF).

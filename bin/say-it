@@ -38,6 +38,73 @@ else
   C_YELLOW=""; C_BLUE=""; C_MAGENTA=""; C_CYAN=""; C_WHITE=""; C_ORANGE=""
 fi
 
+# --- platform-aware TTS abstraction ---------------------------------------
+# Detect the best available text-to-speech backend.
+#   say         macOS built-in (best quality)
+#   espeak-ng   Linux/BSD/anywhere via the espeak-ng package
+#   espeak      legacy espeak fallback
+#   powershell  Windows (cygwin/msys2/git-bash via powershell.exe)
+if command -v say >/dev/null 2>&1; then TTS_BACKEND=say
+elif command -v espeak-ng >/dev/null 2>&1; then TTS_BACKEND=espeak-ng
+elif command -v espeak >/dev/null 2>&1; then TTS_BACKEND=espeak
+elif command -v powershell.exe >/dev/null 2>&1; then TTS_BACKEND=powershell
+else TTS_BACKEND=""
+fi
+
+# tts_speak <text> [rate-wpm]
+# Speaks the text using the detected backend at the given rate (default $RATE).
+tts_speak() {
+  local _text="$1" _rate="${2:-$RATE}"
+  case "$TTS_BACKEND" in
+    say)        say -v "$VOICE" -r "$_rate" "$_text" 2>/dev/null ;;
+    espeak-ng)  espeak-ng -v en-us -s "$_rate" "$_text" 2>/dev/null ;;
+    espeak)     espeak -v en-us -s "$_rate" "$_text" 2>/dev/null ;;
+    powershell)
+      # PowerShell rate is -10..10; map wpm (~80–500) into that range
+      local _ps_rate=$(( (_rate - 175) / 25 ))
+      [[ $_ps_rate -lt -10 ]] && _ps_rate=-10
+      [[ $_ps_rate -gt 10 ]] && _ps_rate=10
+      local _esc; _esc=$(printf '%s' "$_text" | sed "s/'/''/g")
+      powershell.exe -NoProfile -Command "Add-Type -AssemblyName System.Speech; \$s = New-Object System.Speech.Synthesis.SpeechSynthesizer; \$s.Rate = $_ps_rate; \$s.Speak('$_esc')" 2>/dev/null
+      ;;
+    "")
+      echo "say-it: no TTS backend found. Install one:" >&2
+      echo "  macOS:    built-in (\`say\`)" >&2
+      echo "  Linux:    \`sudo apt install espeak-ng\` (or yum/pacman/brew)" >&2
+      echo "  Windows:  PowerShell (built into modern Windows)" >&2
+      return 1 ;;
+  esac
+}
+
+# tts_save <text> <output-file>
+# Saves the rendered audio to a file. AIFF on macOS, WAV elsewhere.
+tts_save() {
+  local _text="$1" _out="$2"
+  case "$TTS_BACKEND" in
+    say)        say -v "$VOICE" -r "$RATE" -o "$_out" "$_text" 2>/dev/null ;;
+    espeak-ng)  espeak-ng -v en-us -s "$RATE" -w "$_out" "$_text" 2>/dev/null ;;
+    espeak)     espeak -v en-us -s "$RATE" -w "$_out" "$_text" 2>/dev/null ;;
+    *)
+      echo "say-it: --output not supported on this TTS backend." >&2
+      return 1 ;;
+  esac
+}
+
+# audio_play <file>  — play a previously-rendered audio file.
+audio_play() {
+  local _f="$1"
+  if command -v afplay >/dev/null 2>&1; then afplay "$_f" 2>/dev/null
+  elif command -v paplay >/dev/null 2>&1; then paplay "$_f" 2>/dev/null
+  elif command -v aplay >/dev/null 2>&1; then aplay -q "$_f" 2>/dev/null
+  elif command -v play >/dev/null 2>&1; then play -q "$_f" 2>/dev/null
+  elif command -v ffplay >/dev/null 2>&1; then ffplay -nodisp -autoexit "$_f" >/dev/null 2>&1
+  else
+    echo "say-it: no audio player found (need afplay/paplay/aplay/play/ffplay)." >&2
+    return 1
+  fi
+}
+
+
 usage() {
   cat <<EOF
 ${C_BOLD}say-it${C_RESET} — speak project / product / jargon names the way engineers actually say them.
@@ -245,7 +312,7 @@ case "${1:-}" in
     ' | while IFS=$'\t' read -r word resp; do
       echo "  ▶ $word"
       [[ -z "$resp" ]] && resp="$word"
-      say -v "$VOICE" -r "$RATE" "$resp." 2>/dev/null
+      tts_speak "$resp."
     done
     exit 0
     ;;
@@ -256,9 +323,9 @@ case "${1:-}" in
       if eval "$2" >/dev/null 2>&1; then printf "  ${C_GREEN}✓${C_RESET} %s\n" "$1"; ok=$((ok+1))
       else printf "  ${C_RED}✗${C_RESET} %s\n" "$1"; bad=$((bad+1)); fi
     }
-    check "macOS detected"               "[[ \$(uname -s) == Darwin ]]"
-    check "\`say\` command present"       "command -v say"
-    check "\`afplay\` command present"    "command -v afplay"
+    check "TTS backend: ${TTS_BACKEND:-none}"  "[[ -n \"$TTS_BACKEND\" ]]"
+    check "audio player available"           "command -v afplay || command -v paplay || command -v aplay || command -v play || command -v ffplay"
+    check "host platform = $(uname -s)"       "true"
     check "dictionary file readable"     "[[ -r '$DICT' ]]"
     check "cache dir writable"           "[[ -d '$CACHE_DIR' && -w '$CACHE_DIR' ]] || mkdir -p '$CACHE_DIR'"
     check "PATH contains ~/.local/bin"   "echo \":\$PATH:\" | grep -q ':[^:]*/.local/bin:'"
@@ -456,7 +523,7 @@ MD
       resp=$(awk -F'\t' -v w="$(printf '%s' "$w" | tr '[:upper:]' '[:lower:]')" '!/^#/ && tolower($1)==w {print $3; exit}' "$DICT")
       [[ -z "$resp" ]] && resp="$w"
       echo "  ${C_CYAN}▶${C_RESET} $w  →  $resp"
-      say -v "$VOICE" -r "$RATE" "$resp. [[slnc 400]] $resp." 2>/dev/null
+      tts_speak "$resp. [[slnc 400]] $resp."
       sleep 0.4
     done
     exit 0
@@ -476,7 +543,7 @@ MD
       elapsed=$((now - start))
       remain=$((60 - elapsed))
       printf "  ${C_DIM}[%2ds]${C_RESET} ${C_CYAN}%-22s${C_RESET}  %s\n" "$remain" "$word" "$resp"
-      say -v "$VOICE" -r "$RATE" "$resp. [[slnc 300]] $resp." 2>/dev/null
+      tts_speak "$resp. [[slnc 300]] $resp."
     done
     echo ""
     echo "${C_GREEN}Done.${C_RESET} ${count} words in 60s."
@@ -573,7 +640,7 @@ EOF
     echo "  ${C_GREEN}$word1${C_RESET}  →  $r1"
     echo "  ${C_ORANGE}$word2${C_RESET}  →  $r2"
     BODY="$r1. [[slnc 400]] $r1. [[slnc 700]] $r2. [[slnc 400]] $r2."
-    say -v "$VOICE" -r "$RATE" "$BODY"
+    tts_speak "$BODY"
     exit 0
     ;;
   teach)
@@ -588,16 +655,16 @@ EOF
     fi
     echo "${C_BOLD}Teaching mode for ${word}${C_RESET}"
     echo "${C_DIM}1. The whole word, slowly${C_RESET}"
-    say -v "$VOICE" -r 110 "$resp." 2>/dev/null
+    tts_speak "$resp." 110
     echo "${C_DIM}2. Each syllable${C_RESET}"
     # Treat each space-separated piece as a syllable
     for syl in $resp; do
       printf "  ${C_CYAN}%s${C_RESET}\n" "$syl"
-      say -v "$VOICE" -r 90 "$syl." 2>/dev/null
+      tts_speak "$syl." 90
       sleep 0.3
     done
     echo "${C_DIM}3. Normal speed, twice${C_RESET}"
-    say -v "$VOICE" -r 175 "$resp. [[slnc 500]] $resp." 2>/dev/null
+    tts_speak "$resp. [[slnc 500]] $resp." 175
     exit 0
     ;;
   quiz)
@@ -613,7 +680,7 @@ EOF
       echo ""
       echo "${C_DIM}#$rounds — ${C_RESET}${C_CYAN}plays in 3, 2, 1…${C_RESET}"
       sleep 0.7
-      say -v "$VOICE" -r "$RATE" "$resp. $resp. $resp." 2>/dev/null
+      tts_speak "$resp. $resp. $resp."
       printf "  guess (or type the actual word): ${C_BOLD}"
       read -r guess
       printf "${C_RESET}"
@@ -649,7 +716,12 @@ while [[ $# -gt 0 ]]; do
     --md|--markdown) OUTPUT_MD=1; QUIET=1; shift ;;
     --copy)        COPY_CLIP=1; shift ;;
     -q|--quiet)    QUIET=1; shift ;;
-    -l|--list)     say -v "?"; exit 0 ;;
+    -l|--list)
+      if [[ "$TTS_BACKEND" == "say" ]]; then say -v "?"; 
+      elif [[ "$TTS_BACKEND" == "espeak-ng" ]]; then espeak-ng --voices=en;
+      elif [[ "$TTS_BACKEND" == "espeak" ]]; then espeak --voices=en;
+      else echo "say-it: no TTS backend; nothing to list." >&2; fi
+      exit 0 ;;
     -h|--help)     usage; exit 0 ;;
     -V|--version)  echo "say-it $VERSION"; exit 0 ;;
     --)            shift; break ;;
@@ -901,10 +973,10 @@ if [[ "$SUBCMD" == "compare" ]]; then
     done
   fi
   if [[ -n "$SAVE" ]]; then
-    say -v "$VOICE" -r "$RATE" -o "$SAVE" "$BODY"
+    tts_save "$BODY" "$SAVE"
     echo "Saved: $SAVE"
   else
-    say -v "$VOICE" -r "$RATE" "$BODY"
+    tts_speak "$BODY"
   fi
   exit 0
 fi
@@ -912,19 +984,19 @@ fi
 # --- play / save with cache ---------------------------------------------------
 BODY="$(build_audible_body)"
 if [[ -n "$SAVE" ]]; then
-  say -v "$VOICE" -r "$RATE" -o "$SAVE" "$BODY"
+  tts_save "$BODY" "$SAVE"
   echo "Saved: $SAVE"
 else
   mkdir -p "$CACHE_DIR" 2>/dev/null || true
   CACHED="$(cache_path "$BODY")"
   if [[ -f "$CACHED" && -s "$CACHED" ]]; then
-    afplay "$CACHED" 2>/dev/null
+    audio_play "$CACHED"
   else
     if [[ -d "$CACHE_DIR" && -w "$CACHE_DIR" ]]; then
-      say -v "$VOICE" -r "$RATE" -o "$CACHED" "$BODY"
-      afplay "$CACHED" 2>/dev/null
+      tts_save "$BODY" "$CACHED"
+      audio_play "$CACHED"
     else
-      say -v "$VOICE" -r "$RATE" "$BODY"
+      tts_speak "$BODY"
     fi
   fi
 fi

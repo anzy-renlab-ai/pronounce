@@ -1,8 +1,8 @@
 {
   "name": "pronounce",
   "displayName": "Pronounce — Tech Word Pronunciation",
-  "description": "Hover over kubectl, nginx, GIF, YAML, Ghostty, wagmi — hear how each is actually pronounced. 851-entry sourced dictionary; macOS `say`-backed. Works in VS Code, Cursor, Windsurf, VSCodium, Zed.",
-  "version": "0.2.2",
+  "description": "Hover any tech word — hear how it's actually pronounced. 851-entry sourced dictionary. Cross-platform: macOS `say`, Linux `espeak-ng`, Windows PowerShell. Works in VS Code, Cursor, Windsurf, VSCodium, Zed.",
+  "version": "0.3.0",
   "publisher": "sayit",
   "license": "MIT",
   "icon": "icon.png",
@@ -93,7 +93,10 @@
       {
         "command": "pronounce.speakSelection",
         "key": "cmd+shift+'",
-        "when": "editorHasSelection && isMac"
+        "mac": "cmd+shift+'",
+        "linux": "ctrl+shift+'",
+        "win": "ctrl+shift+'",
+        "when": "editorHasSelection"
       }
     ],
     "configuration": {
@@ -139,7 +142,7 @@
       {
         "id": "pronounce.welcome",
         "title": "Welcome to Pronounce",
-        "description": "Hover any tech word → hear how engineers actually say it. 817 sourced entries. Mac-only v0.2.",
+        "description": "Hover any tech word → hear how engineers actually say it. 851 sourced entries. Cross-platform (macOS / Linux / Windows) as of v0.3.",
         "steps": [
           {
             "id": "pronounce.welcome.try",

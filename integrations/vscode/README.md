@@ -26,7 +26,7 @@ code --install-extension sayit.pronounce
 
 > **VS Code (Microsoft Marketplace) coming soon.** Track it at [github.com/anzy-renlab-ai/pronounce/issues](https://github.com/anzy-renlab-ai/pronounce/issues).
 >
-> **macOS only in v0.2.** Uses the built-in `say` voice. Linux/Windows backends are on the roadmap.
+> **Cross-platform as of v0.3.** macOS uses the built-in `say`; Linux uses `espeak-ng` (`sudo apt install espeak-ng` / `brew install espeak-ng`); Windows uses PowerShell's built-in `System.Speech.Synthesis`. macOS quality is best; the others are functional.
 
 ## Why
 

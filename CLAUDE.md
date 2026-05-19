@@ -27,7 +27,7 @@ No build, no lint config, no test suite — changes are validated by running `./
 
 ## Conventions when editing
 
-- **macOS-only today.** `say-it` exits 3 with a roadmap message on non-Darwin. Don't add silent no-op fallbacks; the Linux/Windows backends listed in README §Roadmap are unimplemented on purpose.
+- **Cross-platform as of v0.3** (CLI and VS Code extension). macOS → `say`, Linux → `espeak-ng` (preferred) or `espeak`, Windows → PowerShell `System.Speech.Synthesis`. macOS quality stays the gold standard; the rest are functional best-effort. All TTS goes through the `tts_speak` / `tts_save` / `audio_play` helpers in `bin/say-it` — don't reintroduce direct `say` / `afplay` calls or platform gates.
 - **Opinionated defaults are load-bearing.** 3 repetitions, voice `Samantha`, rate 200 wpm. README §Contributing calls these out explicitly — change with care.
 - **Voice presets** (`Samantha`/`Daniel`/`Karen`/`Moira`/`Tessa`) are documented in README and SKILL.md. If you add/rename one, update both.
 - **CLI ↔ skill drift is the main hazard.** Flag changes in `bin/say-it` must be mirrored in `skills/pronounce-word/SKILL.md` (the skill calls `say-it <word>`, `say-it -o`, `say-it -r`).

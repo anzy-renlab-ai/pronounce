@@ -38,7 +38,7 @@ say-it kubectl
 
 ![say-it CLI demo — kubectl, YAML, TOML, Ghostty](pitch/say-it-cli-demo.gif)
 
-That's it. Now try `say-it GIF`, `say-it nginx`, `say-it Pydantic`, `say-it --why JSON`, or `say-it quiz` for a 10-question challenge. Not on macOS? The dictionary works in the browser at **[pronounce.renlab.ai](https://pronounce.renlab.ai)** — same audio, no install.
+That's it. Now try `say-it GIF`, `say-it nginx`, `say-it Pydantic`, `say-it --why JSON`, or `say-it quiz` for a 10-question challenge. **Linux** users: install `espeak-ng` (`sudo apt install espeak-ng`) and the CLI just works. **Windows**: same CLI under WSL or git-bash + PowerShell. Or skip install and use the browser at **[pronounce.renlab.ai](https://pronounce.renlab.ai)**.
 
 > ⭐ If `say-it kubectl` saves you one cringey standup moment — **[star the repo](https://github.com/anzy-renlab-ai/pronounce)**. It nudges more devs to contribute their favorite mispronounced project name.
 
@@ -98,7 +98,7 @@ The "Try it in 30 seconds" block above has the full install. `./install.sh` drop
 - the pronunciation dictionary at `~/.local/share/say-it/pronunciations.tsv`,
 - if you use [Claude Code](https://claude.com/claude-code), a `pronounce-word` skill at `~/.claude/skills/pronounce-word/` so any "how do you say X?" prompt to your AI gets answered with **audio** instead of IPA.
 
-Make sure `~/.local/bin` is on your `$PATH`. Not on macOS? Use the browser version at **[pronounce.renlab.ai](https://pronounce.renlab.ai)** — same dictionary, same audio.
+Make sure `~/.local/bin` is on your `$PATH`. **Linux** also works — install `espeak-ng` (`sudo apt install espeak-ng` / `brew install espeak-ng`). **Windows**: WSL or git-bash + PowerShell. Or skip install entirely with the browser version at **[pronounce.renlab.ai](https://pronounce.renlab.ai)**.
 
 ## Usage
 
@@ -160,7 +160,7 @@ VS Code (Microsoft Marketplace) coming soon.
 - **Welcome walkthrough** — 4-step onboarding on first install.
 - **`Pronounce: Search dictionary…`** — fuzzy-find all 851 entries.
 
-Source: [`integrations/vscode/`](integrations/vscode/). Mac-only v0.2 (uses `say`); cross-platform on roadmap.
+Source: [`integrations/vscode/`](integrations/vscode/). **Cross-platform as of v0.3** — macOS `say`, Linux `espeak-ng`, Windows PowerShell.
 
 ## How the dictionary works
 
