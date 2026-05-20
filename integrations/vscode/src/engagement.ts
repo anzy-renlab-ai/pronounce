@@ -4,15 +4,15 @@ const COUNT_KEY = 'pronounce.speakCount';
 const PROMPTED_KEY = 'pronounce.promptedMilestones';
 const SILENCED_KEY = 'pronounce.silenced';
 const REPO_URL = 'https://github.com/anzy-renlab-ai/pronounce';
+const KOFI_URL = 'https://ko-fi.com/alvinanziyan';
 
-// Milestones at which the star prompt fires (once each).
-// Picked so engaged users see one prompt early, one after they're hooked, and
-// one for super-users — but never spam.
+// Milestones at which the prompt fires (once each). Engaged users see one
+// prompt early, one after they're hooked, and one for super-users.
 const MILESTONES = [5, 30, 150];
 
 /**
- * Increment the speak counter and, if we just hit a milestone, ask the user
- * to star the repo. No-op if the user has silenced future prompts.
+ * Increment the speak counter and, on milestone hits, offer two ways to
+ * support — star (free) and Ko-fi (paid). No-op if user silenced.
  */
 export async function recordSpeak(ctx: vscode.ExtensionContext): Promise<void> {
   if (ctx.globalState.get<boolean>(SILENCED_KEY)) return;
@@ -23,17 +23,19 @@ export async function recordSpeak(ctx: vscode.ExtensionContext): Promise<void> {
   if (prompted.includes(n)) return;
   await ctx.globalState.update(PROMPTED_KEY, [...prompted, n]);
 
-  const star = '★ Star on GitHub';
-  const later = 'Maybe later';
+  const star = '★ Star';
+  const coffee = '☕ Buy me a coffee';
   const silence = "Don't ask again";
   const choice = await vscode.window.showInformationMessage(
-    `Pronounce played ${n} words for you. A GitHub star keeps the dictionary growing — already 892 entries, every one with a citation.`,
+    `Pronounce played ${n} words for you. 892 sourced entries; every one cited. Two ways to support:`,
     star,
-    later,
+    coffee,
     silence,
   );
   if (choice === star) {
     void vscode.env.openExternal(vscode.Uri.parse(REPO_URL));
+  } else if (choice === coffee) {
+    void vscode.env.openExternal(vscode.Uri.parse(KOFI_URL));
   } else if (choice === silence) {
     await ctx.globalState.update(SILENCED_KEY, true);
   }

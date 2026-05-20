@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.3.4 — 2026-05-20
+
+- **Dictionary 892 → 918 (+26).** Greek letters used in code (alpha, beta, delta, epsilon, mu, sigma, pi, theta, kappa — beta and theta marked contested for US/UK); modern CLI tools (zoxide, bat, hyperfine, tokei, tealdeer, difftastic, jq, yq); L1 blockchains (Cosmos, Polkadot, Cardano, Avalanche, Aptos, Sui, Optimism, Arbitrum — marked contested); Wasmtime.
+- Marketplace `description` updated to "918-entry".
+
+## 0.3.3 — 2026-05-20
+
+- **Ko-fi donations** wired through the extension:
+  - New command `Pronounce: ☕ Buy me a coffee (Ko-fi)`.
+  - `sponsor.url` in `package.json` now points to ko-fi.com/alvinanziyan, so the Marketplace listing's "Sponsor" link goes straight to the tip jar.
+  - Status-bar tooltip card adds a `☕ Ko-fi` link beside `★ Star`.
+  - Walkthrough step 4 ("Like it? Support") rewritten with two CTAs — Star (free) and Ko-fi (paid).
+  - Engagement-gated milestone prompt now offers `★ Star` / `☕ Buy me a coffee` / `Don't ask again` (was Star / Later / Don't ask again).
+
 ## 0.3.2 — 2026-05-19
 
 - **Policy: creator-clarified entries no longer surface an "or:" alternate.** Once a project's creator has settled the reading on record, the dictionary teaches *that* reading — not the also-heard ones. Cleared `alt_ipa` + `alt_respelling_us` on 14 rows: GIF, etcd, PostgreSQL, MySQL, LaTeX, Godot, QUIC, YAML, HTTPie, Dijkstra, Tcl, awk, scrypt, io_uring. The hover popup, CLI, and web app all stop offering the alternates for these.

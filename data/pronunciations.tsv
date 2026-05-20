@@ -949,3 +949,29 @@ o3	/ˌoʊ ˈθriː/	O three			https://openai.com/o3/	OpenAI o3	product	community
 Sonnet	/ˈsɒn ɪt/	SON it			https://www.anthropic.com/claude	Anthropic Claude	product	community-consensus	"SON-it" — like the poem. Anthropic's mid-tier Claude.
 Opus	/ˈoʊ pəs/	OH pus			https://www.anthropic.com/claude	Anthropic Claude	product	community-consensus	"OH-pus" — Latin for "work". Anthropic's frontier tier.
 Haiku	/ˈhaɪ kuː/	HIGH koo			https://www.anthropic.com/claude	Anthropic Claude	product	community-consensus	"HIGH-koo" — Japanese poetic form. Anthropic's fast tier.
+alpha	/ˈæl fə/	AL fuh					cs-term	community-consensus	"AL-fuh". Greek α. Standard release-channel naming + math.
+beta	/ˈbeɪ tə/	BAY tuh	/ˈbiː tə/	BEE tuh			cs-term	contested	US: "BAY-tuh". UK: "BEE-tuh". Greek β. Release channel + Bayes notation.
+delta	/ˈdɛl tə/	DEL tuh					cs-term	community-consensus	"DEL-tuh". Greek δ. Diff/change semantics + git-delta pager.
+epsilon	/ˈɛp sə lɒn/	EP suh lon					cs-term	community-consensus	"EP-suh-lon". Greek ε. Floating-point epsilon, ε-greedy.
+mu	/mjuː/	myoo					cs-term	community-consensus	"myoo". Greek μ. Statistical mean.
+sigma	/ˈsɪɡ mə/	SIG muh					cs-term	community-consensus	"SIG-muh". Greek σ. Standard deviation, sum operator.
+pi	/paɪ/	pye					cs-term	community-consensus	"pye". Greek π. 3.14159… Also Raspberry Pi.
+theta	/ˈθeɪ tə/	THAY tuh	/ˈθiː tə/	THEE tuh			cs-term	contested	US: "THAY-tuh". UK: "THEE-tuh". Greek θ. Angles + ML params.
+kappa	/ˈkæp ə/	KAP uh					cs-term	community-consensus	"KAP-uh". Greek κ. Twitch chat meme + Cohen's kappa.
+zoxide	/ˈzoʊk saɪd/	ZOAK side			https://github.com/ajeetdsouza/zoxide	ajeetdsouza/zoxide	cli-tool	community-consensus	"ZOAK-side" — like zinc oxide. Smarter `cd`.
+bat	/bæt/	bat			https://github.com/sharkdp/bat	sharkdp/bat	cli-tool	community-consensus	English "bat". cat clone with syntax highlighting.
+hyperfine	/ˈhaɪ pər faɪn/	HYPER fyne			https://github.com/sharkdp/hyperfine	sharkdp/hyperfine	cli-tool	community-consensus	"HYPER-fyne". CLI benchmarking tool.
+tokei	/toʊˈkeɪ/	toh KAY			https://github.com/XAMPPRocky/tokei	XAMPPRocky/tokei	cli-tool	community-consensus	"toh-KAY". Japanese 時計 (clock). Counts lines of code.
+tealdeer	/ˈtiːl dɪər/	TEAL deer			https://dbrgn.github.io/tealdeer/	tealdeer docs	cli-tool	community-consensus	"TEAL-deer". tldr client written in Rust.
+difftastic	/dɪfˈtæs tɪk/	diff TAS tik			https://difftastic.wilfred.me.uk/	difftastic docs	cli-tool	community-consensus	"diff-TAS-tik". Structural diff.
+jq	/ˌdʒeɪ ˈkjuː/	J Q			https://jqlang.org/	jq docs	cli-tool	community-consensus	Letters "J-Q". JSON processor.
+yq	/ˌwaɪ ˈkjuː/	Y Q			https://github.com/mikefarah/yq	mikefarah/yq	cli-tool	community-consensus	Letters "Y-Q". YAML/JSON/XML processor (jq spinoff).
+Cosmos	/ˈkɒz məs/	COZ mus			https://cosmos.network/	cosmos.network	product	community-consensus	"KOZ-mus". L1 blockchain.
+Polkadot	/ˈpoʊl kə dɒt/	POLE kuh dot			https://polkadot.network/	polkadot.network	product	community-consensus	"POLE-kuh-dot" — the dance/pattern.
+Cardano	/kɑːrˈdɑː noʊ/	kar DAH no			https://cardano.org/	cardano.org	product	community-consensus	"kar-DAH-no". After Gerolamo Cardano (mathematician).
+Avalanche	/ˈæv ə læntʃ/	AV uh lanch			https://www.avax.network/	avalanche	product	community-consensus	"AV-uh-lanch". L1 blockchain.
+Aptos	/ˈæp tɒs/	AP toss			https://aptos.dev/	aptos.dev	product	community-consensus	"AP-toss". Move-based L1.
+Sui	/swiː/	swee			https://sui.io/	sui.io	product	community-consensus	"swee" — like the wind. Move-based L1.
+Optimism	/ˈɒp tə mɪz əm/	OP tih miz um			https://www.optimism.io/	optimism.io	product	community-consensus	"OP-tih-miz-um". Ethereum L2 rollup.
+Arbitrum	/ˈɑːr bɪ trəm/	AR bih trum	/ɑːrˈbɪ trəm/	ar BIT rum	https://arbitrum.io/	arbitrum.io	product	contested	"AR-bih-trum" (Offchain Labs) common; "ar-BIT-rum" also heard.
+Wasmtime	/ˈwɒz əm taɪm/	WOZ um time			https://wasmtime.dev/	wasmtime.dev	product	community-consensus	"WOZ-um-time" — wasm + time. WebAssembly runtime.

@@ -7,6 +7,7 @@ import { recordSpeak } from './engagement';
 const FIRST_RUN_KEY = 'pronounce.firstRunCompleted';
 const REPO_URL = 'https://github.com/anzy-renlab-ai/pronounce';
 const SITE_URL = 'https://pronounce.renlab.ai/';
+const SPONSOR_URL = 'https://ko-fi.com/alvinanziyan';
 
 export function activate(ctx: vscode.ExtensionContext): void {
   const root = ctx.extensionPath;
@@ -62,6 +63,10 @@ export function activate(ctx: vscode.ExtensionContext): void {
       void vscode.env.openExternal(vscode.Uri.parse(REPO_URL));
     }),
 
+    vscode.commands.registerCommand('pronounce.sponsor', () => {
+      void vscode.env.openExternal(vscode.Uri.parse(SPONSOR_URL));
+    }),
+
     vscode.commands.registerCommand('pronounce.openWalkthrough', () => {
       void vscode.commands.executeCommand(
         'workbench.action.openWalkthrough',
@@ -85,8 +90,9 @@ export function activate(ctx: vscode.ExtensionContext): void {
       `**Pronounce** · 892 sourced dictionary entries\n\n` +
       `Click to speak the current selection.  \n` +
       `[★ Star on GitHub](command:pronounce.starOnGitHub) · ` +
-      `[Search dictionary](command:pronounce.search) · ` +
-      `[Open website](command:pronounce.openWebsite)`,
+      `[☕ Ko-fi](command:pronounce.sponsor) · ` +
+      `[Search](command:pronounce.search) · ` +
+      `[Website](command:pronounce.openWebsite)`,
     );
     tip.isTrusted = true;
     bar.tooltip = tip;

@@ -1,8 +1,8 @@
 {
   "name": "pronounce",
   "displayName": "Pronounce — Tech Word Pronunciation",
-  "description": "Hover any tech word — hear how it's actually pronounced. 892-entry sourced dictionary. Cross-platform: macOS `say`, Linux `espeak-ng`, Windows PowerShell. Works in VS Code, Cursor, Windsurf, VSCodium, Zed.",
-  "version": "0.3.2",
+  "description": "Hover any tech word — hear how it's actually pronounced. 918-entry sourced dictionary. Cross-platform: macOS `say`, Linux `espeak-ng`, Windows PowerShell. Works in VS Code, Cursor, Windsurf, VSCodium, Zed.",
+  "version": "0.3.4",
   "publisher": "sayit",
   "license": "MIT",
   "icon": "icon.png",
@@ -17,7 +17,7 @@
   },
   "qna": "https://github.com/anzy-renlab-ai/pronounce/discussions",
   "sponsor": {
-    "url": "https://github.com/anzy-renlab-ai/pronounce"
+    "url": "https://ko-fi.com/alvinanziyan"
   },
   "galleryBanner": {
     "color": "#14100c",
@@ -81,6 +81,11 @@
       {
         "command": "pronounce.starOnGitHub",
         "title": "Pronounce: ★ Star on GitHub",
+        "category": "Pronounce"
+      },
+      {
+        "command": "pronounce.sponsor",
+        "title": "Pronounce: ☕ Buy me a coffee (Ko-fi)",
         "category": "Pronounce"
       },
       {
@@ -170,8 +175,8 @@
           },
           {
             "id": "pronounce.welcome.star",
-            "title": "Like it? Star the repo · 1-click",
-            "description": "This extension is MIT, the dictionary is community-built. If it saves you one cringey standup moment, a star on GitHub keeps it growing.\n\n[★ Star on GitHub](command:pronounce.starOnGitHub)\n[Visit pronounce.renlab.ai](command:pronounce.openWebsite)",
+            "title": "Like it? Star · Sponsor · 1-click",
+            "description": "This extension is MIT, the dictionary is community-built. Two ways to support if it saves you one cringey standup moment:\n\n[★ Star on GitHub](command:pronounce.starOnGitHub)\n[☕ Buy me a coffee on Ko-fi](command:pronounce.sponsor)\n[Visit pronounce.renlab.ai](command:pronounce.openWebsite)",
             "media": {
               "markdown": "media/walkthrough-star.md"
             }
