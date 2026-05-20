@@ -1,0 +1,12 @@
+{
+  "word": "jq",
+  "ipa": "/ˌdʒeɪ ˈkjuː/",
+  "respelling_us": "J Q",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://jqlang.org/",
+  "source_label": "jq docs",
+  "category": "cli-tool",
+  "confidence": "community-consensus",
+  "notes": "Letters \"J-Q\". JSON processor."
+}

@@ -1,0 +1,12 @@
+{
+  "word": "bat",
+  "ipa": "/bæt/",
+  "respelling_us": "bat",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/sharkdp/bat",
+  "source_label": "sharkdp/bat",
+  "category": "cli-tool",
+  "confidence": "community-consensus",
+  "notes": "English \"bat\". cat clone with syntax highlighting."
+}

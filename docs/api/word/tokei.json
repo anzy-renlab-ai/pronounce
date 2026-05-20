@@ -1,0 +1,12 @@
+{
+  "word": "tokei",
+  "ipa": "/toʊˈkeɪ/",
+  "respelling_us": "toh KAY",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/XAMPPRocky/tokei",
+  "source_label": "XAMPPRocky/tokei",
+  "category": "cli-tool",
+  "confidence": "community-consensus",
+  "notes": "\"toh-KAY\". Japanese 時計 (clock). Counts lines of code."
+}

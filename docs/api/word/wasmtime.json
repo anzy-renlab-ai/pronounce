@@ -1,0 +1,12 @@
+{
+  "word": "Wasmtime",
+  "ipa": "/ˈwɒz əm taɪm/",
+  "respelling_us": "WOZ um time",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://wasmtime.dev/",
+  "source_label": "wasmtime.dev",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"WOZ-um-time\" — wasm + time. WebAssembly runtime."
+}

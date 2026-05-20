@@ -1,0 +1,12 @@
+{
+  "word": "hyperfine",
+  "ipa": "/ˈhaɪ pər faɪn/",
+  "respelling_us": "HYPER fyne",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/sharkdp/hyperfine",
+  "source_label": "sharkdp/hyperfine",
+  "category": "cli-tool",
+  "confidence": "community-consensus",
+  "notes": "\"HYPER-fyne\". CLI benchmarking tool."
+}

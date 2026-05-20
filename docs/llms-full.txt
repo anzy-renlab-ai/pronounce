@@ -894,3 +894,29 @@ o3 | /ˌoʊ ˈθriː/ | O three | product | community-consensus | https://openai
 Sonnet | /ˈsɒn ɪt/ | SON it | product | community-consensus | https://www.anthropic.com/claude
 Opus | /ˈoʊ pəs/ | OH pus | product | community-consensus | https://www.anthropic.com/claude
 Haiku | /ˈhaɪ kuː/ | HIGH koo | product | community-consensus | https://www.anthropic.com/claude
+alpha | /ˈæl fə/ | AL fuh | cs-term | community-consensus | (no source)
+beta | /ˈbeɪ tə/ | BAY tuh | cs-term | contested | (no source)
+delta | /ˈdɛl tə/ | DEL tuh | cs-term | community-consensus | (no source)
+epsilon | /ˈɛp sə lɒn/ | EP suh lon | cs-term | community-consensus | (no source)
+mu | /mjuː/ | myoo | cs-term | community-consensus | (no source)
+sigma | /ˈsɪɡ mə/ | SIG muh | cs-term | community-consensus | (no source)
+pi | /paɪ/ | pye | cs-term | community-consensus | (no source)
+theta | /ˈθeɪ tə/ | THAY tuh | cs-term | contested | (no source)
+kappa | /ˈkæp ə/ | KAP uh | cs-term | community-consensus | (no source)
+zoxide | /ˈzoʊk saɪd/ | ZOAK side | cli-tool | community-consensus | https://github.com/ajeetdsouza/zoxide
+bat | /bæt/ | bat | cli-tool | community-consensus | https://github.com/sharkdp/bat
+hyperfine | /ˈhaɪ pər faɪn/ | HYPER fyne | cli-tool | community-consensus | https://github.com/sharkdp/hyperfine
+tokei | /toʊˈkeɪ/ | toh KAY | cli-tool | community-consensus | https://github.com/XAMPPRocky/tokei
+tealdeer | /ˈtiːl dɪər/ | TEAL deer | cli-tool | community-consensus | https://dbrgn.github.io/tealdeer/
+difftastic | /dɪfˈtæs tɪk/ | diff TAS tik | cli-tool | community-consensus | https://difftastic.wilfred.me.uk/
+jq | /ˌdʒeɪ ˈkjuː/ | J Q | cli-tool | community-consensus | https://jqlang.org/
+yq | /ˌwaɪ ˈkjuː/ | Y Q | cli-tool | community-consensus | https://github.com/mikefarah/yq
+Cosmos | /ˈkɒz məs/ | COZ mus | product | community-consensus | https://cosmos.network/
+Polkadot | /ˈpoʊl kə dɒt/ | POLE kuh dot | product | community-consensus | https://polkadot.network/
+Cardano | /kɑːrˈdɑː noʊ/ | kar DAH no | product | community-consensus | https://cardano.org/
+Avalanche | /ˈæv ə læntʃ/ | AV uh lanch | product | community-consensus | https://www.avax.network/
+Aptos | /ˈæp tɒs/ | AP toss | product | community-consensus | https://aptos.dev/
+Sui | /swiː/ | swee | product | community-consensus | https://sui.io/
+Optimism | /ˈɒp tə mɪz əm/ | OP tih miz um | product | community-consensus | https://www.optimism.io/
+Arbitrum | /ˈɑːr bɪ trəm/ | AR bih trum | product | contested | https://arbitrum.io/
+Wasmtime | /ˈwɒz əm taɪm/ | WOZ um time | product | community-consensus | https://wasmtime.dev/

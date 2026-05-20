@@ -1,0 +1,12 @@
+{
+  "word": "zoxide",
+  "ipa": "/ˈzoʊk saɪd/",
+  "respelling_us": "ZOAK side",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/ajeetdsouza/zoxide",
+  "source_label": "ajeetdsouza/zoxide",
+  "category": "cli-tool",
+  "confidence": "community-consensus",
+  "notes": "\"ZOAK-side\" — like zinc oxide. Smarter `cd`."
+}

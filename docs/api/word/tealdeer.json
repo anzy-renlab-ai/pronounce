@@ -1,0 +1,12 @@
+{
+  "word": "tealdeer",
+  "ipa": "/ˈtiːl dɪər/",
+  "respelling_us": "TEAL deer",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://dbrgn.github.io/tealdeer/",
+  "source_label": "tealdeer docs",
+  "category": "cli-tool",
+  "confidence": "community-consensus",
+  "notes": "\"TEAL-deer\". tldr client written in Rust."
+}

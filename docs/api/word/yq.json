@@ -1,0 +1,12 @@
+{
+  "word": "yq",
+  "ipa": "/ˌwaɪ ˈkjuː/",
+  "respelling_us": "Y Q",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/mikefarah/yq",
+  "source_label": "mikefarah/yq",
+  "category": "cli-tool",
+  "confidence": "community-consensus",
+  "notes": "Letters \"Y-Q\". YAML/JSON/XML processor (jq spinoff)."
+}

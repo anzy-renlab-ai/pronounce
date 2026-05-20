@@ -4,181 +4,181 @@
   <link href="https://pronounce.renlab.ai/feed.atom" rel="self"/>
   <link href="https://pronounce.renlab.ai/"/>
   <id>https://pronounce.renlab.ai/</id>
-  <updated>2026-05-19T13:30:00Z</updated>
+  <updated>2026-05-20T01:02:36Z</updated>
   <subtitle>How engineers actually pronounce project / product / jargon names. Community-maintained.</subtitle>
   <entry>
-    <title>bcrypt — B crypt</title>
-    <link href="https://pronounce.renlab.ai/word/bcrypt"/>
-    <id>https://pronounce.renlab.ai/word/bcrypt</id>
-    <updated>2026-05-19T13:30:00Z</updated>
-    <summary>bcrypt is pronounced "B crypt" (/ˈbiː krɪpt/). "B-crypt" — B for Blowfish + crypt.</summary>
+    <title>beta — BAY tuh</title>
+    <link href="https://pronounce.renlab.ai/word/beta"/>
+    <id>https://pronounce.renlab.ai/word/beta</id>
+    <updated>2026-05-20T01:02:36Z</updated>
+    <summary>beta is pronounced "BAY tuh" (/ˈbeɪ tə/). US: "BAY-tuh". UK: "BEE-tuh". Greek β. Release channel + Bayes notation.</summary>
   </entry>
   <entry>
-    <title>EC2 — E two C</title>
-    <link href="https://pronounce.renlab.ai/word/ec2"/>
-    <id>https://pronounce.renlab.ai/word/ec2</id>
-    <updated>2026-05-19T13:30:00Z</updated>
-    <summary>EC2 is pronounced "E two C" (/ˌiː tuː ˈsiː/). "E-two-C". Elastic Compute Cloud.</summary>
+    <title>delta — DEL tuh</title>
+    <link href="https://pronounce.renlab.ai/word/delta"/>
+    <id>https://pronounce.renlab.ai/word/delta</id>
+    <updated>2026-05-20T01:02:36Z</updated>
+    <summary>delta is pronounced "DEL tuh" (/ˈdɛl tə/). "DEL-tuh". Greek δ. Diff/change semantics + git-delta pager.</summary>
   </entry>
   <entry>
-    <title>S3 — S three</title>
-    <link href="https://pronounce.renlab.ai/word/s3"/>
-    <id>https://pronounce.renlab.ai/word/s3</id>
-    <updated>2026-05-19T13:30:00Z</updated>
-    <summary>S3 is pronounced "S three" (/ˌɛs ˈθriː/). "S-three". Simple Storage Service.</summary>
+    <title>epsilon — EP suh lon</title>
+    <link href="https://pronounce.renlab.ai/word/epsilon"/>
+    <id>https://pronounce.renlab.ai/word/epsilon</id>
+    <updated>2026-05-20T01:02:36Z</updated>
+    <summary>epsilon is pronounced "EP suh lon" (/ˈɛp sə lɒn/). "EP-suh-lon". Greek ε. Floating-point epsilon, ε-greedy.</summary>
   </entry>
   <entry>
-    <title>RDS — R D S</title>
-    <link href="https://pronounce.renlab.ai/word/rds"/>
-    <id>https://pronounce.renlab.ai/word/rds</id>
-    <updated>2026-05-19T13:30:00Z</updated>
-    <summary>RDS is pronounced "R D S" (/ˌɑːr diː ˈɛs/). Letters "R-D-S". Relational Database Service.</summary>
+    <title>mu — myoo</title>
+    <link href="https://pronounce.renlab.ai/word/mu"/>
+    <id>https://pronounce.renlab.ai/word/mu</id>
+    <updated>2026-05-20T01:02:36Z</updated>
+    <summary>mu is pronounced "myoo" (/mjuː/). "myoo". Greek μ. Statistical mean.</summary>
   </entry>
   <entry>
-    <title>IAM — I A M</title>
-    <link href="https://pronounce.renlab.ai/word/iam"/>
-    <id>https://pronounce.renlab.ai/word/iam</id>
-    <updated>2026-05-19T13:30:00Z</updated>
-    <summary>IAM is pronounced "I A M" (/ˌaɪ eɪ ˈɛm/). Letters "I-A-M". Identity and Access Management.</summary>
+    <title>sigma — SIG muh</title>
+    <link href="https://pronounce.renlab.ai/word/sigma"/>
+    <id>https://pronounce.renlab.ai/word/sigma</id>
+    <updated>2026-05-20T01:02:36Z</updated>
+    <summary>sigma is pronounced "SIG muh" (/ˈsɪɡ mə/). "SIG-muh". Greek σ. Standard deviation, sum operator.</summary>
   </entry>
   <entry>
-    <title>KMS — K M S</title>
-    <link href="https://pronounce.renlab.ai/word/kms"/>
-    <id>https://pronounce.renlab.ai/word/kms</id>
-    <updated>2026-05-19T13:30:00Z</updated>
-    <summary>KMS is pronounced "K M S" (/ˌkeɪ ɛm ˈɛs/). Letters "K-M-S". Key Management Service.</summary>
+    <title>pi — pye</title>
+    <link href="https://pronounce.renlab.ai/word/pi"/>
+    <id>https://pronounce.renlab.ai/word/pi</id>
+    <updated>2026-05-20T01:02:36Z</updated>
+    <summary>pi is pronounced "pye" (/paɪ/). "pye". Greek π. 3.14159… Also Raspberry Pi.</summary>
   </entry>
   <entry>
-    <title>EKS — E K S</title>
-    <link href="https://pronounce.renlab.ai/word/eks"/>
-    <id>https://pronounce.renlab.ai/word/eks</id>
-    <updated>2026-05-19T13:30:00Z</updated>
-    <summary>EKS is pronounced "E K S" (/ˌiː keɪ ˈɛs/). Letters "E-K-S". AWS managed Kubernetes.</summary>
+    <title>theta — THAY tuh</title>
+    <link href="https://pronounce.renlab.ai/word/theta"/>
+    <id>https://pronounce.renlab.ai/word/theta</id>
+    <updated>2026-05-20T01:02:36Z</updated>
+    <summary>theta is pronounced "THAY tuh" (/ˈθeɪ tə/). US: "THAY-tuh". UK: "THEE-tuh". Greek θ. Angles + ML params.</summary>
   </entry>
   <entry>
-    <title>ECS — E C S</title>
-    <link href="https://pronounce.renlab.ai/word/ecs"/>
-    <id>https://pronounce.renlab.ai/word/ecs</id>
-    <updated>2026-05-19T13:30:00Z</updated>
-    <summary>ECS is pronounced "E C S" (/ˌiː siː ˈɛs/). Letters "E-C-S". Elastic Container Service.</summary>
+    <title>kappa — KAP uh</title>
+    <link href="https://pronounce.renlab.ai/word/kappa"/>
+    <id>https://pronounce.renlab.ai/word/kappa</id>
+    <updated>2026-05-20T01:02:36Z</updated>
+    <summary>kappa is pronounced "KAP uh" (/ˈkæp ə/). "KAP-uh". Greek κ. Twitch chat meme + Cohen's kappa.</summary>
   </entry>
   <entry>
-    <title>GKE — G K E</title>
-    <link href="https://pronounce.renlab.ai/word/gke"/>
-    <id>https://pronounce.renlab.ai/word/gke</id>
-    <updated>2026-05-19T13:30:00Z</updated>
-    <summary>GKE is pronounced "G K E" (/ˌdʒiː keɪ ˈiː/). Letters "G-K-E". Google Kubernetes Engine.</summary>
+    <title>zoxide — ZOAK side</title>
+    <link href="https://pronounce.renlab.ai/word/zoxide"/>
+    <id>https://pronounce.renlab.ai/word/zoxide</id>
+    <updated>2026-05-20T01:02:36Z</updated>
+    <summary>zoxide is pronounced "ZOAK side" (/ˈzoʊk saɪd/). "ZOAK-side" — like zinc oxide. Smarter `cd`.</summary>
   </entry>
   <entry>
-    <title>AKS — A K S</title>
-    <link href="https://pronounce.renlab.ai/word/aks"/>
-    <id>https://pronounce.renlab.ai/word/aks</id>
-    <updated>2026-05-19T13:30:00Z</updated>
-    <summary>AKS is pronounced "A K S" (/ˌeɪ keɪ ˈɛs/). Letters "A-K-S". Azure Kubernetes Service.</summary>
+    <title>bat — bat</title>
+    <link href="https://pronounce.renlab.ai/word/bat"/>
+    <id>https://pronounce.renlab.ai/word/bat</id>
+    <updated>2026-05-20T01:02:36Z</updated>
+    <summary>bat is pronounced "bat" (/bæt/). English "bat". cat clone with syntax highlighting.</summary>
   </entry>
   <entry>
-    <title>Route53 — root fifty-three</title>
-    <link href="https://pronounce.renlab.ai/word/route53"/>
-    <id>https://pronounce.renlab.ai/word/route53</id>
-    <updated>2026-05-19T13:30:00Z</updated>
-    <summary>Route53 is pronounced "root fifty-three" (/ruːt ˌfɪf ti ˈθriː/). US tech "root"; UK / general "rowt". Port 53 = DNS.</summary>
+    <title>hyperfine — HYPER fyne</title>
+    <link href="https://pronounce.renlab.ai/word/hyperfine"/>
+    <id>https://pronounce.renlab.ai/word/hyperfine</id>
+    <updated>2026-05-20T01:02:36Z</updated>
+    <summary>hyperfine is pronounced "HYPER fyne" (/ˈhaɪ pər faɪn/). "HYPER-fyne". CLI benchmarking tool.</summary>
   </entry>
   <entry>
-    <title>io_uring — I O ring</title>
-    <link href="https://pronounce.renlab.ai/word/io_uring"/>
-    <id>https://pronounce.renlab.ai/word/io_uring</id>
-    <updated>2026-05-19T13:30:00Z</updated>
-    <summary>io_uring is pronounced "I O ring" (/ˌaɪ oʊ ˈrɪŋ/). Jens Axboe (creator): "I-O ring" — letters I and O then the word "ring". The underscore is silent; the "u" is the start of "uring" → "ring". Async I/O syscall API.</summary>
+    <title>tokei — toh KAY</title>
+    <link href="https://pronounce.renlab.ai/word/tokei"/>
+    <id>https://pronounce.renlab.ai/word/tokei</id>
+    <updated>2026-05-20T01:02:36Z</updated>
+    <summary>tokei is pronounced "toh KAY" (/toʊˈkeɪ/). "toh-KAY". Japanese 時計 (clock). Counts lines of code.</summary>
   </entry>
   <entry>
-    <title>Btrfs — BUTTER F S</title>
-    <link href="https://pronounce.renlab.ai/word/btrfs"/>
-    <id>https://pronounce.renlab.ai/word/btrfs</id>
-    <updated>2026-05-19T13:30:00Z</updated>
-    <summary>Btrfs is pronounced "BUTTER F S" (/ˈbʌt ər ɛf ɛs/). Chris Mason / kernel folks: "butter-F-S" (B-Tree File System). Letter-by-letter also common.</summary>
+    <title>tealdeer — TEAL deer</title>
+    <link href="https://pronounce.renlab.ai/word/tealdeer"/>
+    <id>https://pronounce.renlab.ai/word/tealdeer</id>
+    <updated>2026-05-20T01:02:36Z</updated>
+    <summary>tealdeer is pronounced "TEAL deer" (/ˈtiːl dɪər/). "TEAL-deer". tldr client written in Rust.</summary>
   </entry>
   <entry>
-    <title>ZFS — Z F S</title>
-    <link href="https://pronounce.renlab.ai/word/zfs"/>
-    <id>https://pronounce.renlab.ai/word/zfs</id>
-    <updated>2026-05-19T13:30:00Z</updated>
-    <summary>ZFS is pronounced "Z F S" (/ˌziː ɛf ˈɛs/). Letters "Z-F-S". Originally Zettabyte File System.</summary>
+    <title>difftastic — diff TAS tik</title>
+    <link href="https://pronounce.renlab.ai/word/difftastic"/>
+    <id>https://pronounce.renlab.ai/word/difftastic</id>
+    <updated>2026-05-20T01:02:36Z</updated>
+    <summary>difftastic is pronounced "diff TAS tik" (/dɪfˈtæs tɪk/). "diff-TAS-tik". Structural diff.</summary>
   </entry>
   <entry>
-    <title>cgroups — C groups</title>
-    <link href="https://pronounce.renlab.ai/word/cgroups"/>
-    <id>https://pronounce.renlab.ai/word/cgroups</id>
-    <updated>2026-05-19T13:30:00Z</updated>
-    <summary>cgroups is pronounced "C groups" (/ˈsiː ɡruːps/). "C-groups". Control groups — Linux resource isolation.</summary>
+    <title>jq — J Q</title>
+    <link href="https://pronounce.renlab.ai/word/jq"/>
+    <id>https://pronounce.renlab.ai/word/jq</id>
+    <updated>2026-05-20T01:02:36Z</updated>
+    <summary>jq is pronounced "J Q" (/ˌdʒeɪ ˈkjuː/). Letters "J-Q". JSON processor.</summary>
   </entry>
   <entry>
-    <title>strace — S trace</title>
-    <link href="https://pronounce.renlab.ai/word/strace"/>
-    <id>https://pronounce.renlab.ai/word/strace</id>
-    <updated>2026-05-19T13:30:00Z</updated>
-    <summary>strace is pronounced "S trace" (/ˌɛs ˈtreɪs/). "S-trace" — system call trace.</summary>
+    <title>yq — Y Q</title>
+    <link href="https://pronounce.renlab.ai/word/yq"/>
+    <id>https://pronounce.renlab.ai/word/yq</id>
+    <updated>2026-05-20T01:02:36Z</updated>
+    <summary>yq is pronounced "Y Q" (/ˌwaɪ ˈkjuː/). Letters "Y-Q". YAML/JSON/XML processor (jq spinoff).</summary>
   </entry>
   <entry>
-    <title>ltrace — L trace</title>
-    <link href="https://pronounce.renlab.ai/word/ltrace"/>
-    <id>https://pronounce.renlab.ai/word/ltrace</id>
-    <updated>2026-05-19T13:30:00Z</updated>
-    <summary>ltrace is pronounced "L trace" (/ˌɛl ˈtreɪs/). "L-trace" — library-call trace.</summary>
+    <title>Cosmos — COZ mus</title>
+    <link href="https://pronounce.renlab.ai/word/cosmos"/>
+    <id>https://pronounce.renlab.ai/word/cosmos</id>
+    <updated>2026-05-20T01:02:36Z</updated>
+    <summary>Cosmos is pronounced "COZ mus" (/ˈkɒz məs/). "KOZ-mus". L1 blockchain.</summary>
   </entry>
   <entry>
-    <title>syscall — SIS call</title>
-    <link href="https://pronounce.renlab.ai/word/syscall"/>
-    <id>https://pronounce.renlab.ai/word/syscall</id>
-    <updated>2026-05-19T13:30:00Z</updated>
-    <summary>syscall is pronounced "SIS call" (/ˈsɪs kɔːl/). "SIS-call". System call.</summary>
+    <title>Polkadot — POLE kuh dot</title>
+    <link href="https://pronounce.renlab.ai/word/polkadot"/>
+    <id>https://pronounce.renlab.ai/word/polkadot</id>
+    <updated>2026-05-20T01:02:36Z</updated>
+    <summary>Polkadot is pronounced "POLE kuh dot" (/ˈpoʊl kə dɒt/). "POLE-kuh-dot" — the dance/pattern.</summary>
   </entry>
   <entry>
-    <title>DeepSeek-R1 — deep seek R one</title>
-    <link href="https://pronounce.renlab.ai/word/deepseek-r1"/>
-    <id>https://pronounce.renlab.ai/word/deepseek-r1</id>
-    <updated>2026-05-19T13:30:00Z</updated>
-    <summary>DeepSeek-R1 is pronounced "deep seek R one" (/ˌdiːp siːk ˌɑːr ˈwʌn/). "deep-seek R-one". DeepSeek's reasoning model.</summary>
+    <title>Cardano — kar DAH no</title>
+    <link href="https://pronounce.renlab.ai/word/cardano"/>
+    <id>https://pronounce.renlab.ai/word/cardano</id>
+    <updated>2026-05-20T01:02:36Z</updated>
+    <summary>Cardano is pronounced "kar DAH no" (/kɑːrˈdɑː noʊ/). "kar-DAH-no". After Gerolamo Cardano (mathematician).</summary>
   </entry>
   <entry>
-    <title>R1 — R one</title>
-    <link href="https://pronounce.renlab.ai/word/r1"/>
-    <id>https://pronounce.renlab.ai/word/r1</id>
-    <updated>2026-05-19T13:30:00Z</updated>
-    <summary>R1 is pronounced "R one" (/ˌɑːr ˈwʌn/). "R-one". Generic short form, usually DeepSeek-R1.</summary>
+    <title>Avalanche — AV uh lanch</title>
+    <link href="https://pronounce.renlab.ai/word/avalanche"/>
+    <id>https://pronounce.renlab.ai/word/avalanche</id>
+    <updated>2026-05-20T01:02:36Z</updated>
+    <summary>Avalanche is pronounced "AV uh lanch" (/ˈæv ə læntʃ/). "AV-uh-lanch". L1 blockchain.</summary>
   </entry>
   <entry>
-    <title>o1 — O one</title>
-    <link href="https://pronounce.renlab.ai/word/o1"/>
-    <id>https://pronounce.renlab.ai/word/o1</id>
-    <updated>2026-05-19T13:30:00Z</updated>
-    <summary>o1 is pronounced "O one" (/ˌoʊ ˈwʌn/). "O-one". OpenAI reasoning model.</summary>
+    <title>Aptos — AP toss</title>
+    <link href="https://pronounce.renlab.ai/word/aptos"/>
+    <id>https://pronounce.renlab.ai/word/aptos</id>
+    <updated>2026-05-20T01:02:36Z</updated>
+    <summary>Aptos is pronounced "AP toss" (/ˈæp tɒs/). "AP-toss". Move-based L1.</summary>
   </entry>
   <entry>
-    <title>o3 — O three</title>
-    <link href="https://pronounce.renlab.ai/word/o3"/>
-    <id>https://pronounce.renlab.ai/word/o3</id>
-    <updated>2026-05-19T13:30:00Z</updated>
-    <summary>o3 is pronounced "O three" (/ˌoʊ ˈθriː/). "O-three". OpenAI reasoning model.</summary>
+    <title>Sui — swee</title>
+    <link href="https://pronounce.renlab.ai/word/sui"/>
+    <id>https://pronounce.renlab.ai/word/sui</id>
+    <updated>2026-05-20T01:02:36Z</updated>
+    <summary>Sui is pronounced "swee" (/swiː/). "swee" — like the wind. Move-based L1.</summary>
   </entry>
   <entry>
-    <title>Sonnet — SON it</title>
-    <link href="https://pronounce.renlab.ai/word/sonnet"/>
-    <id>https://pronounce.renlab.ai/word/sonnet</id>
-    <updated>2026-05-19T13:30:00Z</updated>
-    <summary>Sonnet is pronounced "SON it" (/ˈsɒn ɪt/). "SON-it" — like the poem. Anthropic's mid-tier Claude.</summary>
+    <title>Optimism — OP tih miz um</title>
+    <link href="https://pronounce.renlab.ai/word/optimism"/>
+    <id>https://pronounce.renlab.ai/word/optimism</id>
+    <updated>2026-05-20T01:02:36Z</updated>
+    <summary>Optimism is pronounced "OP tih miz um" (/ˈɒp tə mɪz əm/). "OP-tih-miz-um". Ethereum L2 rollup.</summary>
   </entry>
   <entry>
-    <title>Opus — OH pus</title>
-    <link href="https://pronounce.renlab.ai/word/opus"/>
-    <id>https://pronounce.renlab.ai/word/opus</id>
-    <updated>2026-05-19T13:30:00Z</updated>
-    <summary>Opus is pronounced "OH pus" (/ˈoʊ pəs/). "OH-pus" — Latin for "work". Anthropic's frontier tier.</summary>
+    <title>Arbitrum — AR bih trum</title>
+    <link href="https://pronounce.renlab.ai/word/arbitrum"/>
+    <id>https://pronounce.renlab.ai/word/arbitrum</id>
+    <updated>2026-05-20T01:02:36Z</updated>
+    <summary>Arbitrum is pronounced "AR bih trum" (/ˈɑːr bɪ trəm/). "AR-bih-trum" (Offchain Labs) common; "ar-BIT-rum" also heard.</summary>
   </entry>
   <entry>
-    <title>Haiku — HIGH koo</title>
-    <link href="https://pronounce.renlab.ai/word/haiku"/>
-    <id>https://pronounce.renlab.ai/word/haiku</id>
-    <updated>2026-05-19T13:30:00Z</updated>
-    <summary>Haiku is pronounced "HIGH koo" (/ˈhaɪ kuː/). "HIGH-koo" — Japanese poetic form. Anthropic's fast tier.</summary>
+    <title>Wasmtime — WOZ um time</title>
+    <link href="https://pronounce.renlab.ai/word/wasmtime"/>
+    <id>https://pronounce.renlab.ai/word/wasmtime</id>
+    <updated>2026-05-20T01:02:36Z</updated>
+    <summary>Wasmtime is pronounced "WOZ um time" (/ˈwɒz əm taɪm/). "WOZ-um-time" — wasm + time. WebAssembly runtime.</summary>
   </entry>
 </feed>
