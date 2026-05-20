@@ -27,3 +27,7 @@ export function lookup(extensionPath: string, word: string): Entry | null {
   const dict = loadDict(extensionPath);
   return dict[word.toLowerCase()] ?? null;
 }
+
+export function dictSize(extensionPath: string): number {
+  return Object.keys(loadDict(extensionPath)).length;
+}

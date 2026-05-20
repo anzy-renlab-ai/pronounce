@@ -57,7 +57,12 @@ function renderMarkdown(word: string, entry: Entry | null): vscode.MarkdownStrin
     md.appendMarkdown(`  ·  **[★ Star on GitHub](command:pronounce.starOnGitHub)**`);
     if (entry.source_url) md.appendMarkdown(`  ·  [source](${entry.source_url})`);
   } else {
+    const requestUrl =
+      `https://github.com/anzy-renlab-ai/pronounce/issues/new` +
+      `?template=add-pronunciation.yml` +
+      `&title=${encodeURIComponent(`Add pronunciation entry: ${word}`)}`;
     md.appendMarkdown(`**${word}**  \n[🔊 Play (TTS letter-to-sound)](${playLink})`);
+    md.appendMarkdown(`  ·  [➕ Request entry](${requestUrl})`);
     md.appendMarkdown(`  ·  **[★ Star this dictionary](command:pronounce.starOnGitHub)**`);
   }
   return md;

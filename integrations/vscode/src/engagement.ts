@@ -1,4 +1,5 @@
 import * as vscode from 'vscode';
+import { dictSize } from './dict';
 
 const COUNT_KEY = 'pronounce.speakCount';
 const PROMPTED_KEY = 'pronounce.promptedMilestones';
@@ -26,8 +27,9 @@ export async function recordSpeak(ctx: vscode.ExtensionContext): Promise<void> {
   const star = '★ Star on GitHub';
   const coffee = '☕ Coffee (optional)';
   const silence = "Don't ask again";
+  const size = dictSize(ctx.extensionPath);
   const choice = await vscode.window.showInformationMessage(
-    `Pronounce played ${n} words for you. A GitHub star is the single best way to keep the dictionary growing — 918 sourced entries and counting.`,
+    `Pronounce played ${n} words for you. A GitHub star is the single best way to keep the dictionary growing — ${size} sourced entries and counting.`,
     star,
     coffee,
     silence,

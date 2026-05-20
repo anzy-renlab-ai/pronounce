@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.6 — 2026-05-20
+
+- **Unknown-word hover now offers `➕ Request entry`.** Hovering a word that isn't in the dictionary already showed Play + Star; now also a one-click link that opens the GitHub `add-pronunciation.yml` issue template pre-filled with the word. Turns "huh, no entry" curiosity into a contribution path.
+- **Dictionary count no longer hardcoded.** Engagement milestone prompt and status-bar tooltip now read the live entry count via `dictSize()` instead of the literal string "918", so future dictionary growth never silently drifts these surfaces out of date.
+
 ## 0.3.5 — 2026-05-20
 
 - **Star promoted everywhere; Ko-fi demoted to "optional".** The single highest-leverage user action is a GitHub star — donations are downstream. UI changes:

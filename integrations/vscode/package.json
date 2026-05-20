@@ -2,7 +2,7 @@
   "name": "pronounce",
   "displayName": "Pronounce — Tech Word Pronunciation",
   "description": "Hover any tech word — hear how it's actually pronounced. 918-entry sourced dictionary. Cross-platform: macOS `say`, Linux `espeak-ng`, Windows PowerShell. Works in VS Code, Cursor, Windsurf, VSCodium, Zed.",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "publisher": "sayit",
   "license": "MIT",
   "icon": "icon.png",
