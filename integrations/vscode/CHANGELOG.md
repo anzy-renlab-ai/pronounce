@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.3.5 — 2026-05-20
+
+- **Star promoted everywhere; Ko-fi demoted to "optional".** The single highest-leverage user action is a GitHub star — donations are downstream. UI changes:
+  - **Engagement-gated milestone prompt** (5/30/150 speaks): copy rewritten to lead with the star ask; Ko-fi button relabeled "☕ Coffee (optional)".
+  - **Walkthrough step 4**: title `★ Star it · keeps the dictionary growing` (was "Like it? Star · Sponsor"). Description leads with the star CTA; Ko-fi moved to a single trailing "Optional: …" line.
+  - **Status bar tooltip**: ★ Star on GitHub is now on its own line in bold; coffee tucked at the end of the secondary row.
+  - **Hover popup**: action row reordered to `🔊 Play · ★ Star · source` (was `… source · ★ star`). For unknown words the popup now also includes the Star link.
+  - **Root README**: "💚 Support" → "⭐ Support — start with a star"; Star CTA bolded and standalone; Ko-fi/Sponsors are listed as optional follow-ups.
+- **walkthrough-star.md** rewritten end-to-end with Star as the headline action and Ko-fi as an optional footer.
+
 ## 0.3.4 — 2026-05-20
 
 - **Dictionary 892 → 918 (+26).** Greek letters used in code (alpha, beta, delta, epsilon, mu, sigma, pi, theta, kappa — beta and theta marked contested for US/UK); modern CLI tools (zoxide, bat, hyperfine, tokei, tealdeer, difftastic, jq, yq); L1 blockchains (Cosmos, Polkadot, Cardano, Avalanche, Aptos, Sui, Optimism, Arbitrum — marked contested); Wasmtime.

@@ -216,15 +216,18 @@ Two things we want most:
 
 Keep it tiny. Keep it dep-free where possible. Keep the defaults opinionated (3 reps, GenAm, Samantha voice).
 
-## 💚 Support
+## ⭐ Support — start with a star
 
-The dictionary is free and MIT. If it's saved you a standup-cringe moment, two ways to chip in:
+The dictionary is free and MIT. **The single highest-leverage thing you can do is star the repo** — it's the signal that pulls in more contributors, more PRs, more creator-clarified entries.
 
-- **⭐ [Star on GitHub](https://github.com/anzy-renlab-ai/pronounce)** — costs nothing, nudges more devs to contribute their favorite mispronounced project.
-- **☕ [Buy me a coffee on Ko-fi](https://ko-fi.com/alvinanziyan)** — fastest path; pays for one new entry per cup.
-- **💚 [Sponsor on GitHub](https://github.com/sponsors/anzy-renlab-ai)** — recurring tier (pending GH Sponsors approval).
+- **⭐ [Star on GitHub →](https://github.com/anzy-renlab-ai/pronounce)** — one click, no signup, biggest effect.
 
-Every dollar goes to: hosting (Vercel/Cloudflare/Open VSX), domain renewals, MiniMax narration credits for promo videos, and time to track down creator citations for new entries.
+Optional, if it's saved you real standup pain:
+
+- ☕ [Coffee on Ko-fi](https://ko-fi.com/alvinanziyan) — pays for one new entry per cup.
+- 💚 [Sponsor on GitHub](https://github.com/sponsors/anzy-renlab-ai) — recurring tier (pending Sponsors approval).
+
+Dollars cover hosting (Vercel/Cloudflare/Open VSX), domain renewals, MiniMax narration credits for promo videos, and time to track down creator citations for new entries.
 
 ## Contributors
 

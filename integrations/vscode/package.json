@@ -2,7 +2,7 @@
   "name": "pronounce",
   "displayName": "Pronounce — Tech Word Pronunciation",
   "description": "Hover any tech word — hear how it's actually pronounced. 918-entry sourced dictionary. Cross-platform: macOS `say`, Linux `espeak-ng`, Windows PowerShell. Works in VS Code, Cursor, Windsurf, VSCodium, Zed.",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "publisher": "sayit",
   "license": "MIT",
   "icon": "icon.png",
@@ -175,8 +175,8 @@
           },
           {
             "id": "pronounce.welcome.star",
-            "title": "Like it? Star · Sponsor · 1-click",
-            "description": "This extension is MIT, the dictionary is community-built. Two ways to support if it saves you one cringey standup moment:\n\n[★ Star on GitHub](command:pronounce.starOnGitHub)\n[☕ Buy me a coffee on Ko-fi](command:pronounce.sponsor)\n[Visit pronounce.renlab.ai](command:pronounce.openWebsite)",
+            "title": "★ Star it · keeps the dictionary growing",
+            "description": "If Pronounce just saved you one cringey standup moment, **one star is the single best way to keep the dictionary growing** — more devs find it, more PRs land, more entries get creator-clarified.\n\n[★ Star on GitHub](command:pronounce.starOnGitHub)\n[Visit pronounce.renlab.ai](command:pronounce.openWebsite)\n\nOptional: [☕ Coffee on Ko-fi](command:pronounce.sponsor) — pays for one new entry per cup.",
             "media": {
               "markdown": "media/walkthrough-star.md"
             }

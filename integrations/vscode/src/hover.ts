@@ -54,10 +54,11 @@ function renderMarkdown(word: string, entry: Entry | null): vscode.MarkdownStrin
     }
     if (entry.notes) md.appendMarkdown(`\n${entry.notes}\n\n`);
     md.appendMarkdown(`[🔊 Play](${playLink})`);
+    md.appendMarkdown(`  ·  **[★ Star on GitHub](command:pronounce.starOnGitHub)**`);
     if (entry.source_url) md.appendMarkdown(`  ·  [source](${entry.source_url})`);
-    md.appendMarkdown(`  ·  [★ star this dictionary](command:pronounce.starOnGitHub)`);
   } else {
     md.appendMarkdown(`**${word}**  \n[🔊 Play (TTS letter-to-sound)](${playLink})`);
+    md.appendMarkdown(`  ·  **[★ Star this dictionary](command:pronounce.starOnGitHub)**`);
   }
   return md;
 }

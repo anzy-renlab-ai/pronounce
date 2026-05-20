@@ -87,12 +87,12 @@ export function activate(ctx: vscode.ExtensionContext): void {
     const bar = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 50);
     bar.text = '$(unmute) sayit';
     const tip = new vscode.MarkdownString(
-      `**Pronounce** · 892 sourced dictionary entries\n\n` +
+      `**Pronounce** · 918 sourced dictionary entries\n\n` +
       `Click to speak the current selection.  \n` +
-      `[★ Star on GitHub](command:pronounce.starOnGitHub) · ` +
-      `[☕ Ko-fi](command:pronounce.sponsor) · ` +
+      `**[★ Star on GitHub](command:pronounce.starOnGitHub)** — keeps the dictionary growing  \n` +
       `[Search](command:pronounce.search) · ` +
-      `[Website](command:pronounce.openWebsite)`,
+      `[Website](command:pronounce.openWebsite) · ` +
+      `[☕ Coffee](command:pronounce.sponsor)`,
     );
     tip.isTrusted = true;
     bar.tooltip = tip;
