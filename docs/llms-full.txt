@@ -20,7 +20,7 @@ Terraform | /ˈtɛrəˌfɔːrm/ | terra form | tool | community-consensus | http
 Argo | /ˈɑːrɡoʊ/ | ar go | product | community-consensus | https://argoproj.github.io/
 Knative | /ˈkeɪˌneɪtɪv/ | kay native | product | community-consensus | https://knative.dev/
 Cassandra | /kəˈsændrə/ | kuh sandra | product | community-consensus | https://cassandra.apache.org/
-Redis | /ˈrɛdɪs/ | red iss | product | community-consensus | https://redis.io/
+Redis | /ˈrɛdɪs/ | red iss | product | community-consensus | https://en.wikipedia.org/wiki/Redis
 Ceph | /sɛf/ | seff | product | community-consensus | https://ceph.io/en/
 etcd | /ˌɛt siː ˈdiː/ | et C D | product | creator-clarified | https://etcd.io/docs/v3.5/faq/
 containerd | /kənˈteɪnər diː/ | container D | product | community-consensus | https://containerd.io/
@@ -40,8 +40,8 @@ Ubuntu | /ʊˈbʊntuː/ | oo boon too | product | community-consensus | https://
 Arch | /ɑːrtʃ/ | arch | product | community-consensus | https://archlinux.org/
 Nix | /nɪks/ | nicks | product | community-consensus | https://nixos.org/
 Django | /ˈdʒæŋɡoʊ/ | jang go | product | creator-clarified | https://www.djangoproject.com/foundation/faq/
-Vue | /vjuː/ | view | product | community-consensus | https://vuejs.org/
-Vite | /viːt/ | veet | product | community-consensus | https://vitejs.dev/
+Vue | /vjuː/ | view | product | creator-clarified | https://github.com/vuejs/vue#readme
+Vite | /viːt/ | veet | product | creator-clarified | https://github.com/vitejs/vite#readme
 Pydantic | /paɪˈdæntɪk/ | pie dantick | product | community-consensus | https://docs.pydantic.dev/
 Bun | /bʌn/ | bun | product | community-consensus | https://bun.sh/
 Deno | /ˈdiːnoʊ/ | dee no | product | community-consensus | https://deno.com/

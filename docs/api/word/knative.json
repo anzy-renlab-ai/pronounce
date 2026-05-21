@@ -5,8 +5,8 @@
   "alt_ipa": [],
   "alt_respelling_us": [],
   "source_url": "https://knative.dev/",
-  "source_label": "Knative docs",
+  "source_label": "knative.dev",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"KAY-native\" — the K is voiced. (Heard from project maintainers in talks; needs a citable source.)"
+  "notes": "\"KAY-native\" — the K is voiced, like saying the letter K then \"native\". Maintainer usage in talks (CNCF / KubeCon sessions); no official FAQ entry on knative.dev as of this writing."
 }

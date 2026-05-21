@@ -4,9 +4,9 @@
   "respelling_us": "red iss",
   "alt_ipa": [],
   "alt_respelling_us": [],
-  "source_url": "https://redis.io/",
-  "source_label": "Redis site",
+  "source_url": "https://en.wikipedia.org/wiki/Redis",
+  "source_label": "Wikipedia § Redis",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"RED-iss\". (Heard from Salvatore Sanfilippo in interviews; citable source TBD.)"
+  "notes": "\"RED-iss\". Wikipedia opens with 'Redis (/ˈrɛdɪs/)' citing the Redis FAQ; Salvatore Sanfilippo (antirez, creator) uses the same reading in screencasts."
 }

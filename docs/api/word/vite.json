@@ -4,9 +4,9 @@
   "respelling_us": "veet",
   "alt_ipa": [],
   "alt_respelling_us": [],
-  "source_url": "https://vitejs.dev/",
-  "source_label": "Vite docs",
+  "source_url": "https://github.com/vitejs/vite#readme",
+  "source_label": "Vite README",
   "category": "product",
-  "confidence": "community-consensus",
-  "notes": "\"veet\" — French for \"quick\". (Heard from Evan You in talks; needs a citable source.)"
+  "confidence": "creator-clarified",
+  "notes": "\"veet\". Project README states verbatim: 'Vite (French word for \"quick\", pronounced /viːt/, like \"veet\")'. README also links an mp3 of the pronunciation."
 }

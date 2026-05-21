@@ -8,5 +8,5 @@
   "source_label": "Pydantic docs",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"pie-DAN-tic\". (Heard from Samuel Colvin in podcasts; needs a citable source.)"
+  "notes": "\"pie-DAN-tic\" — \"py\" pronounced \"pie\" (as in Python), then \"dantic\". Heard from Samuel Colvin (creator) in Talk Python To Me / FastAPI talks; no official FAQ entry on docs.pydantic.dev as of this writing."
 }
