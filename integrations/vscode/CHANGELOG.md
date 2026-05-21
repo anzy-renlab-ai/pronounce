@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.7 — 2026-05-21
+
+- **Dictionary 918 → 993 (+75).** Two waves:
+  - **14 missing tech projects** (closes open GitHub issues): Snowpack, WireMock, Trino, Skopeo, Buildah (creator-clarified — Dan Walsh's Boston-accent "BIL-duh"), cert-manager, Verdaccio, Tika, Vagrant, KEDA, Theia, Plausible, Pinokio, Aviary.
+  - **61 cross-functional vocab entries** for the conversations tech folks have with product / marketing / sales / finance / legal: GTM, PLG, SLG, prosumer, TAM, SOM, CAC, LTV, ARR, MRR, NRR, GRR, ICP, NPS, OKR, ROI, DAU, MAU, B2B, B2C, D2C, B2B2C, IaaS, freemium, churn, cohort, funnel, scrum, kanban, sprint, backlog, retro, standup, epic, QBR, PoC, PoV, ABM, moat, flywheel, COGS, CRM, ERP, EBITDA, SOC2, SOX, SEO, SEM, CTR, CPC, CPM, ROAS, MoM, YoY, QoQ, NDA, MSA, SOW, RFP, NLP, PII. Acronyms with a single dominant reading are `community-consensus`; ones with real split (TAM word vs letters, ROAS, CAC, IaaS, ERP, PoC, PII, etc.) are `contested` with both readings shown.
+- Marketplace `description` updated to "993-entry" and now mentions the cross-functional vocab explicitly so PMs/marketers searching the marketplace can find it.
+
 ## 0.3.6 — 2026-05-20
 
 - **Unknown-word hover now offers `➕ Request entry`.** Hovering a word that isn't in the dictionary already showed Play + Star; now also a one-click link that opens the GitHub `add-pronunciation.yml` issue template pre-filled with the word. Turns "huh, no entry" curiosity into a contribution path.

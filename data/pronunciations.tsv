@@ -975,3 +975,82 @@ Sui	/swiː/	swee			https://sui.io/	sui.io	product	community-consensus	"swee" —
 Optimism	/ˈɒp tə mɪz əm/	OP tih miz um			https://www.optimism.io/	optimism.io	product	community-consensus	"OP-tih-miz-um". Ethereum L2 rollup.
 Arbitrum	/ˈɑːr bɪ trəm/	AR bih trum	/ɑːrˈbɪ trəm/	ar BIT rum	https://arbitrum.io/	arbitrum.io	product	contested	"AR-bih-trum" (Offchain Labs) common; "ar-BIT-rum" also heard.
 Wasmtime	/ˈwɒz əm taɪm/	WOZ um time			https://wasmtime.dev/	wasmtime.dev	product	community-consensus	"WOZ-um-time" — wasm + time. WebAssembly runtime.
+
+# --- Projects (closes open issues 3,4,5,6,8,9,12,15,16,17,19,20,21,22,27) ---
+Snowpack	/ˈsnoʊ pæk/	SNOW pak			https://www.snowpack.dev/	snowpack.dev	product	community-consensus	"SNOW-pak". ESM build tool (now archived but vocabulary lives on).
+WireMock	/ˈwaɪər mɒk/	WYE er mok			https://wiremock.org/	wiremock.org	product	community-consensus	"WIRE-mok". HTTP API mocking server.
+Trino	/ˈtriː noʊ/	TREE noh			https://trino.io/	trino.io	product	community-consensus	"TREE-noh". Forked from PrestoSQL in 2020.
+Skopeo	/skoʊˈpeɪ oʊ/	skoh PAY oh			https://github.com/containers/skopeo	containers/skopeo	cli-tool	community-consensus	"skoh-PAY-oh". From Greek σκοπέω "to look at". OCI image inspector.
+Buildah	/ˈbɪl də/	BIL duh			https://buildah.io/	buildah.io	cli-tool	creator-clarified	"BIL-duh" — Boston-accent "builder". Dan Walsh (creator) has confirmed in multiple talks.
+cert-manager	/sɜːrt ˈmæn ə dʒər/	sert MAN uh jer			https://cert-manager.io/	cert-manager.io	product	community-consensus	"sert MAN-uh-jer". K8s X.509 cert lifecycle. CNCF graduated.
+Verdaccio	/vɛrˈdɑː tʃoʊ/	ver DAH cho			https://verdaccio.org/	verdaccio.org	product	community-consensus	"ver-DAH-cho" — Italian. Named after the verdaccio fresco green-grey underpainting. npm registry proxy.
+Tika	/ˈtiː kə/	TEE kuh			https://tika.apache.org/	tika.apache.org	product	community-consensus	"TEE-kuh". Apache content-extraction toolkit.
+Vagrant	/ˈveɪ ɡrənt/	VAY grunt			https://www.vagrantup.com/	HashiCorp	product	community-consensus	"VAY-grunt" — the English word. HashiCorp VM dev environments.
+KEDA	/ˈkeɪ də/	KAY duh			https://keda.sh/	keda.sh	product	community-consensus	"KAY-duh". Kubernetes Event-Driven Autoscaling. CNCF graduated.
+Theia	/ˈθiː ə/	THEE uh			https://theia-ide.org/	theia-ide.org	product	community-consensus	"THEE-uh" — Greek titaness. Eclipse cloud IDE framework.
+Plausible	/ˈplɔː zə bəl/	PLAW zuh bul			https://plausible.io/	plausible.io	product	community-consensus	"PLAW-zuh-bul" — the English word. Privacy-respecting web analytics.
+Pinokio	/pɪˈnoʊ ki oʊ/	pih NO kee oh			https://pinokio.computer/	pinokio.computer	product	community-consensus	"pih-NO-kee-oh" — like Pinocchio (the puppet) but spelled with k. Local AI app launcher.
+Aviary	/ˈeɪ vi ɛr i/	AY vee air ee			https://aviary.fun/	aviary.fun	product	community-consensus	"AY-vee-air-ee" — the English word for a bird enclosure.
+
+# --- Cross-functional vocab (PM / marketing / sales / finance / legal / agile) — tech ↔ biz ---
+GTM	/ˌdʒiː tiː ˈɛm/	G T M			https://en.wikipedia.org/wiki/Go-to-market_strategy	Wikipedia	acronym	community-consensus	Letters "G-T-M". Go-To-Market.
+PLG	/ˌpiː ɛl ˈdʒiː/	P L G			https://en.wikipedia.org/wiki/Product-led_growth	Wikipedia	acronym	community-consensus	Letters "P-L-G". Product-Led Growth.
+SLG	/ˌɛs ɛl ˈdʒiː/	S L G					acronym	community-consensus	Letters "S-L-G". Sales-Led Growth.
+prosumer	/proʊˈsuː mər/	proh SOO mer			https://en.wikipedia.org/wiki/Prosumer	Wikipedia	cs-term	community-consensus	"proh-SOO-mer". Portmanteau of professional + consumer.
+TAM	/tæm/	tam	/ˌtiː eɪ ˈɛm/	T A M	https://en.wikipedia.org/wiki/Total_addressable_market	Wikipedia	acronym	contested	"tam" (rhymes with ham) is standard in VC/PM; some say "T-A-M". Total Addressable Market.
+SOM	/sɒm/	som	/ˌɛs oʊ ˈɛm/	S O M	https://en.wikipedia.org/wiki/Total_addressable_market	Wikipedia	acronym	contested	"som" (rhymes with bomb) common; some say "S-O-M". Serviceable Obtainable Market.
+CAC	/ˌsiː eɪ ˈsiː/	C A C	/kæk/	cack	https://en.wikipedia.org/wiki/Customer_acquisition_cost	Wikipedia	acronym	contested	"C-A-C" letter-by-letter dominant in tech; "cack" (rhymes with back) sometimes heard. Customer Acquisition Cost.
+LTV	/ˌɛl tiː ˈviː/	L T V			https://en.wikipedia.org/wiki/Customer_lifetime_value	Wikipedia	acronym	community-consensus	Letters "L-T-V". Lifetime Value.
+ARR	/ˌeɪ ɑːr ˈɑːr/	A R R					acronym	community-consensus	Letters "A-R-R". Annual Recurring Revenue.
+MRR	/ˌɛm ɑːr ˈɑːr/	M R R					acronym	community-consensus	Letters "M-R-R". Monthly Recurring Revenue.
+NRR	/ˌɛn ɑːr ˈɑːr/	N R R					acronym	community-consensus	Letters "N-R-R". Net Revenue Retention.
+GRR	/ˌdʒiː ɑːr ˈɑːr/	G R R					acronym	community-consensus	Letters "G-R-R". Gross Revenue Retention.
+ICP	/ˌaɪ siː ˈpiː/	I C P					acronym	community-consensus	Letters "I-C-P". Ideal Customer Profile.
+NPS	/ˌɛn piː ˈɛs/	N P S			https://en.wikipedia.org/wiki/Net_promoter_score	Wikipedia	acronym	community-consensus	Letters "N-P-S". Net Promoter Score.
+OKR	/ˌoʊ keɪ ˈɑːr/	O K R			https://en.wikipedia.org/wiki/Objectives_and_key_results	Wikipedia	acronym	community-consensus	Letters "O-K-R". Objectives and Key Results.
+ROI	/ˌɑːr oʊ ˈaɪ/	R O I					acronym	community-consensus	Letters "R-O-I". Return On Investment.
+DAU	/ˌdiː eɪ ˈjuː/	D A U	/daʊ/	dow			acronym	contested	"D-A-U" letter-by-letter most common in West; "dow" (rhymes with cow) heard in some East Asian / consumer-app circles. Daily Active Users.
+MAU	/ˌɛm eɪ ˈjuː/	M A U	/maʊ/	mow			acronym	contested	"M-A-U" letters dominant; "mow" (rhymes with cow) heard. Monthly Active Users.
+B2B	/ˌbiː tə ˈbiː/	B to B					acronym	community-consensus	"B-to-B". Business-to-Business.
+B2C	/ˌbiː tə ˈsiː/	B to C					acronym	community-consensus	"B-to-C". Business-to-Consumer.
+D2C	/ˌdiː tə ˈsiː/	D to C					acronym	community-consensus	"D-to-C". Direct-to-Consumer.
+B2B2C	/ˌbiː tə ˌbiː tə ˈsiː/	B to B to C					acronym	community-consensus	"B-to-B-to-C". Business sells to business that sells to consumer.
+IaaS	/ˈaɪ ɑːz/	EYE az	/ˌaɪ eɪ eɪ ˈɛs/	I A A S			acronym	contested	"EYE-az" common; "I-A-A-S" also heard. Infrastructure as a Service.
+freemium	/ˈfriː mi əm/	FREE mee um			https://en.wikipedia.org/wiki/Freemium	Wikipedia	cs-term	community-consensus	"FREE-mee-um". Free + premium pricing.
+churn	/tʃɜːrn/	chern					cs-term	community-consensus	"chern" — rhymes with burn. Customer attrition rate.
+cohort	/ˈkoʊ hɔːrt/	KOH hort					cs-term	community-consensus	"KOH-hort". A group of users tracked together over time.
+funnel	/ˈfʌn əl/	FUH nul					cs-term	community-consensus	"FUH-nul". Visitor → user → paying customer conversion stages.
+scrum	/skrʌm/	scrum			https://en.wikipedia.org/wiki/Scrum_(software_development)	Wikipedia	cs-term	community-consensus	"scrum" — borrowed from rugby (scrummage). Iterative dev framework.
+kanban	/ˈkɑːn bɑːn/	KAHN bahn			https://en.wikipedia.org/wiki/Kanban_(development)	Wikipedia	cs-term	community-consensus	"KAHN-bahn" — Japanese 看板 (signboard). Visual workflow management.
+sprint	/sprɪnt/	sprint					cs-term	community-consensus	"sprint" — fixed-length scrum iteration (typically 1-4 weeks).
+backlog	/ˈbæk lɔːɡ/	BAK log					cs-term	community-consensus	"BAK-log". Prioritized list of work items.
+retro	/ˈrɛ troʊ/	REH troh					cs-term	community-consensus	"REH-troh". Short for "retrospective" — end-of-sprint review.
+standup	/ˈstænd ʌp/	STAND up					cs-term	community-consensus	"STAND-up". Daily 15-min team sync.
+epic	/ˈɛp ɪk/	EH pik					cs-term	community-consensus	"EH-pik" — multi-sprint feature container in Jira/Linear.
+QBR	/ˌkjuː biː ˈɑːr/	Q B R					acronym	community-consensus	Letters "Q-B-R". Quarterly Business Review.
+PoC	/ˌpiː oʊ ˈsiː/	P O C	/pɒk/	pock			acronym	contested	"P-O-C" letter-by-letter common; "pock" (rhymes with rock) heard in sales/SE. Proof of Concept.
+PoV	/ˌpiː oʊ ˈviː/	P O V					acronym	community-consensus	Letters "P-O-V". Proof of Value (a deeper, contract-stage PoC).
+ABM	/ˌeɪ biː ˈɛm/	A B M			https://en.wikipedia.org/wiki/Account-based_marketing	Wikipedia	acronym	community-consensus	Letters "A-B-M". Account-Based Marketing.
+moat	/moʊt/	moht					cs-term	community-consensus	"moht" — rhymes with boat. Sustainable competitive advantage (Warren Buffett).
+flywheel	/ˈflaɪ wiːl/	FLY wheel					cs-term	community-consensus	"FLY-wheel". Self-reinforcing growth loop (Jim Collins / Bezos).
+COGS	/kɒɡz/	kogs			https://en.wikipedia.org/wiki/Cost_of_goods_sold	Wikipedia	acronym	community-consensus	"kogs" — rhymes with logs. Cost of Goods Sold.
+CRM	/ˌsiː ɑːr ˈɛm/	C R M					acronym	community-consensus	Letters "C-R-M". Customer Relationship Management.
+ERP	/ˌiː ɑːr ˈpiː/	E R P	/ɜːrp/	urp			acronym	contested	"E-R-P" letter-by-letter standard; "urp" (rhymes with burp) heard in some industries. Enterprise Resource Planning.
+EBITDA	/ˈiː bɪt dɑː/	EE bit dah			https://en.wikipedia.org/wiki/EBITDA	Wikipedia	acronym	community-consensus	"EE-bit-dah". Earnings Before Interest, Taxes, Depreciation, Amortization.
+SOC2	/ˌsɒk ˈtuː/	sock two			https://en.wikipedia.org/wiki/System_and_Organization_Controls	Wikipedia	acronym	community-consensus	"sock-two". AICPA service-organization audit standard.
+SOX	/sɒks/	sox			https://en.wikipedia.org/wiki/Sarbanes%E2%80%93Oxley_Act	Wikipedia	acronym	community-consensus	"sox" — rhymes with box. Sarbanes-Oxley Act (US public-company compliance).
+SEO	/ˌɛs iː ˈoʊ/	S E O					acronym	community-consensus	Letters "S-E-O". Search Engine Optimization.
+SEM	/ˌɛs iː ˈɛm/	S E M					acronym	community-consensus	Letters "S-E-M". Search Engine Marketing (paid ads).
+CTR	/ˌsiː tiː ˈɑːr/	C T R					acronym	community-consensus	Letters "C-T-R". Click-Through Rate.
+CPC	/ˌsiː piː ˈsiː/	C P C					acronym	community-consensus	Letters "C-P-C". Cost Per Click.
+CPM	/ˌsiː piː ˈɛm/	C P M					acronym	community-consensus	Letters "C-P-M". Cost Per Mille (per 1000 impressions).
+ROAS	/ˈroʊ æs/	ROW ass	/ˌɑːr oʊ eɪ ˈɛs/	R O A S			acronym	contested	"ROW-as" most common in performance marketing; some spell out. Return On Ad Spend.
+MoM	/ˌɛm oʊ ˈɛm/	M O M	/mɒm/	mom			acronym	contested	"M-O-M" letters common in dashboards; "mom" (rhymes with bomb) sometimes spoken. Month-over-Month.
+YoY	/ˌwaɪ oʊ ˈwaɪ/	Y O Y					acronym	community-consensus	Letters "Y-O-Y". Year-over-Year.
+QoQ	/ˌkjuː oʊ ˈkjuː/	Q O Q					acronym	community-consensus	Letters "Q-O-Q". Quarter-over-Quarter.
+NDA	/ˌɛn diː ˈeɪ/	N D A					acronym	community-consensus	Letters "N-D-A". Non-Disclosure Agreement.
+MSA	/ˌɛm ɛs ˈeɪ/	M S A					acronym	community-consensus	Letters "M-S-A". Master Service Agreement.
+SOW	/saʊ/	sow	/ˌɛs oʊ ˈdʌb əl juː/	S O W			acronym	contested	"sow" (rhymes with cow) — standard in consulting/sales. Some spell out. Statement of Work.
+RFP	/ˌɑːr ɛf ˈpiː/	R F P					acronym	community-consensus	Letters "R-F-P". Request For Proposal.
+NLP	/ˌɛn ɛl ˈpiː/	N L P					acronym	community-consensus	Letters "N-L-P". Natural Language Processing (also Neuro-Linguistic Programming, same pronunciation).
+PII	/ˌpiː aɪ ˈaɪ/	P I I	/paɪ/	pie			acronym	contested	"P-I-I" letter-by-letter standard in compliance/legal; "pie" sometimes heard casually. Personally Identifiable Information.

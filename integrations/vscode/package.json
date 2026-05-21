@@ -1,8 +1,8 @@
 {
   "name": "pronounce",
   "displayName": "Pronounce — Tech Word Pronunciation",
-  "description": "Hover any tech word — hear how it's actually pronounced. 918-entry sourced dictionary. Cross-platform: macOS `say`, Linux `espeak-ng`, Windows PowerShell. Works in VS Code, Cursor, Windsurf, VSCodium, Zed.",
-  "version": "0.3.6",
+  "description": "Hover any tech word — hear how it's actually pronounced. 993-entry sourced dictionary covering products, CLI tools, CS terms, and the cross-functional vocab (GTM, PLG, ARR, OKR, scrum, kanban …) tech folks use with product, marketing, sales, and finance. Cross-platform: macOS `say`, Linux `espeak-ng`, Windows PowerShell. Works in VS Code, Cursor, Windsurf, VSCodium, Zed.",
+  "version": "0.3.7",
   "publisher": "sayit",
   "license": "MIT",
   "icon": "icon.png",
