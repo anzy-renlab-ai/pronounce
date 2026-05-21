@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.3.8 — 2026-05-21
+
+- **Source upgrades** for 5 long-standing "find a real creator citation" issues (closes #28–#32):
+  - **Vite** → `creator-clarified`. Project README now cited verbatim: 'Vite (French word for "quick", pronounced /viːt/, like "veet")'. README even links an mp3 of the pronunciation. Hover popup now shows the ✅ badge.
+  - **Vue** → `creator-clarified`. Vue 2 README cited verbatim: 'Vue (pronounced /vjuː/, like view)'. Hover popup now shows the ✅ badge.
+  - **Redis** — source URL upgraded from generic `redis.io` to `en.wikipedia.org/wiki/Redis`, which carries the IPA `/ˈrɛdɪs/` citing the Redis FAQ. Stays `community-consensus` (Wikipedia is editorial, not creator-authored).
+  - **Knative** / **Pydantic** — no FAQ entry exists on either project's official docs as of this writing; notes rewritten to be honest about that (instead of saying "needs a citable source TBD") and record where the reading actually comes from (CNCF/KubeCon talks; Talk Python To Me / FastAPI sessions).
+- No code, schema, or activation changes.
+
 ## 0.3.7 — 2026-05-21
 
 - **Dictionary 918 → 993 (+75).** Two waves:

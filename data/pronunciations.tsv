@@ -41,9 +41,9 @@ Prometheus	/prəˈmiːθiəs/	pro mee thee us			https://prometheus.io/	Prometheu
 Grafana	/ɡrəˈfɑːnə/	gra fah na			https://grafana.com/	Grafana site	product	community-consensus	"gra-FAH-na" is the most common community reading.
 Terraform	/ˈtɛrəˌfɔːrm/	terra form			https://www.terraform.io/	HashiCorp docs	tool	community-consensus	"TERR-uh-form".
 Argo	/ˈɑːrɡoʊ/	ar go			https://argoproj.github.io/	Argo project	product	community-consensus	"AR-go".
-Knative	/ˈkeɪˌneɪtɪv/	kay native			https://knative.dev/	Knative docs	product	community-consensus	"KAY-native" — the K is voiced. (Heard from project maintainers in talks; needs a citable source.)
+Knative	/ˈkeɪˌneɪtɪv/	kay native			https://knative.dev/	knative.dev	product	community-consensus	"KAY-native" — the K is voiced, like saying the letter K then "native". Maintainer usage in talks (CNCF / KubeCon sessions); no official FAQ entry on knative.dev as of this writing.
 Cassandra	/kəˈsændrə/	kuh sandra			https://cassandra.apache.org/	Apache Cassandra	product	community-consensus	"kuh-SAN-druh".
-Redis	/ˈrɛdɪs/	red iss			https://redis.io/	Redis site	product	community-consensus	"RED-iss". (Heard from Salvatore Sanfilippo in interviews; citable source TBD.)
+Redis	/ˈrɛdɪs/	red iss			https://en.wikipedia.org/wiki/Redis	Wikipedia § Redis	product	community-consensus	"RED-iss". Wikipedia opens with 'Redis (/ˈrɛdɪs/)' citing the Redis FAQ; Salvatore Sanfilippo (antirez, creator) uses the same reading in screencasts.
 Ceph	/sɛf/	seff			https://ceph.io/en/	Ceph docs	product	community-consensus	One syllable: "seff".
 etcd	/ˌɛt siː ˈdiː/	et C D			https://etcd.io/docs/v3.5/faq/	etcd FAQ	product	creator-clarified	Project FAQ documents "et-cetera-distributed".
 containerd	/kənˈteɪnər diː/	container D			https://containerd.io/	containerd	product	community-consensus	"container-D" (the D is for "daemon").
@@ -63,9 +63,9 @@ Ubuntu	/ʊˈbʊntuː/	oo boon too			https://ubuntu.com/	Ubuntu	product	community
 Arch	/ɑːrtʃ/	arch			https://archlinux.org/	Arch Linux	product	community-consensus	"arch" (one syllable).
 Nix	/nɪks/	nicks			https://nixos.org/	NixOS	product	community-consensus	"nicks".
 Django	/ˈdʒæŋɡoʊ/	jang go			https://www.djangoproject.com/foundation/faq/	Django FAQ	product	creator-clarified	FAQ documents "JANG-go" — silent D, like jazz guitarist Django Reinhardt.
-Vue	/vjuː/	view			https://vuejs.org/	Vue docs	product	community-consensus	"view" — one syllable. (Heard from Evan You in talks; needs a citable source.)
-Vite	/viːt/	veet			https://vitejs.dev/	Vite docs	product	community-consensus	"veet" — French for "quick". (Heard from Evan You in talks; needs a citable source.)
-Pydantic	/paɪˈdæntɪk/	pie dantick			https://docs.pydantic.dev/	Pydantic docs	product	community-consensus	"pie-DAN-tic". (Heard from Samuel Colvin in podcasts; needs a citable source.)
+Vue	/vjuː/	view			https://github.com/vuejs/vue#readme	Vue README	product	creator-clarified	"view". Vue 2 project README states verbatim: 'Vue (pronounced /vjuː/, like view)'. Same reading echoed on en.wikipedia.org/wiki/Vue.js.
+Vite	/viːt/	veet			https://github.com/vitejs/vite#readme	Vite README	product	creator-clarified	"veet". Project README states verbatim: 'Vite (French word for "quick", pronounced /viːt/, like "veet")'. README also links an mp3 of the pronunciation.
+Pydantic	/paɪˈdæntɪk/	pie dantick			https://docs.pydantic.dev/	Pydantic docs	product	community-consensus	"pie-DAN-tic" — "py" pronounced "pie" (as in Python), then "dantic". Heard from Samuel Colvin (creator) in Talk Python To Me / FastAPI talks; no official FAQ entry on docs.pydantic.dev as of this writing.
 Bun	/bʌn/	bun			https://bun.sh/	Bun docs	product	community-consensus	"bun" — like the bread.
 Deno	/ˈdiːnoʊ/	dee no			https://deno.com/	Deno docs	product	community-consensus	"DEE-no".
 Hugo	/ˈhjuːɡoʊ/	hue go			https://gohugo.io/	Hugo	product	community-consensus	"HUE-go".
