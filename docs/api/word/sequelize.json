@@ -1,0 +1,12 @@
+{
+  "word": "sequelize",
+  "ipa": "/ˈsiːkwəlaɪz/",
+  "respelling_us": "see kwul ize",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "Node.js ORM; \"sequel-ize\"."
+}

@@ -1,0 +1,12 @@
+{
+  "word": "nuget",
+  "ipa": "/ˈnuː ɡɛt/",
+  "respelling_us": "new get",
+  "alt_ipa": ["/ˈnʌɡɪt/"],
+  "alt_respelling_us": ["nugget"],
+  "source_url": "https://learn.microsoft.com/nuget/",
+  "source_label": "Microsoft",
+  "category": "tool",
+  "confidence": "contested",
+  "notes": ".NET package manager; Microsoft says \"New Get\", but \"nugget\" is widespread."
+}

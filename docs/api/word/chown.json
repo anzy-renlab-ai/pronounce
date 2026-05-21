@@ -1,0 +1,12 @@
+{
+  "word": "chown",
+  "ipa": "/tʃaʊn/",
+  "respelling_us": "choun",
+  "alt_ipa": ["/ˌtʃ ˈoʊn/"],
+  "alt_respelling_us": ["ch own"],
+  "source_url": "",
+  "source_label": "",
+  "category": "cli-tool",
+  "confidence": "contested",
+  "notes": "\"change owner\"; rhymes-with-\"clown\" or spelled \"CH-own\"."
+}

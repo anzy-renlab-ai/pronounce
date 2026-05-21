@@ -1,0 +1,12 @@
+{
+  "word": "conda",
+  "ipa": "/ˈkɑːndə/",
+  "respelling_us": "kon duh",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "Python package/env manager; \"KON-duh\"."
+}

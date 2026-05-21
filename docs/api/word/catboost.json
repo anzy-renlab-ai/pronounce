@@ -1,0 +1,12 @@
+{
+  "word": "catboost",
+  "ipa": "/ˈkæt buːst/",
+  "respelling_us": "cat boost",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "Gradient boosting library; \"cat-boost\" (categorical boosting)."
+}

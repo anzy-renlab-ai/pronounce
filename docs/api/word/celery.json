@@ -1,0 +1,12 @@
+{
+  "word": "celery",
+  "ipa": "/ˈsɛləri/",
+  "respelling_us": "sell er ee",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "Python distributed task queue; like the vegetable."
+}

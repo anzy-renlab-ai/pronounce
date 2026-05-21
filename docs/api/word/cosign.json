@@ -1,0 +1,12 @@
+{
+  "word": "cosign",
+  "ipa": "/ˈkoʊ saɪn/",
+  "respelling_us": "co sine",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "Sigstore signing tool; \"co-sign\"."
+}

@@ -1,0 +1,12 @@
+{
+  "word": "einops",
+  "ipa": "/ˈaɪnɒps/",
+  "respelling_us": "eyen ops",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "Tensor-rearrangement library; \"EIN-ops\" (Einstein ops)."
+}

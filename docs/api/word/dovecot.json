@@ -1,0 +1,12 @@
+{
+  "word": "dovecot",
+  "ipa": "/ˈdʌvkɒt/",
+  "respelling_us": "duv cot",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "IMAP/POP3 server; \"DUV-cot\" (dove + cote)."
+}

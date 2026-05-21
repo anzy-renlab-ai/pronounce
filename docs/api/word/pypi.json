@@ -1,0 +1,12 @@
+{
+  "word": "pypi",
+  "ipa": "/ˈpaɪ piː ˈaɪ/",
+  "respelling_us": "pie pee eye",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://pypi.org/",
+  "source_label": "PyPI",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Python Package Index; \"Pie-P-I\", not \"pie-pie\" (avoids clash with PyPy)."
+}

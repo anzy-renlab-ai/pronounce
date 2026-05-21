@@ -1,0 +1,12 @@
+{
+  "word": "quay",
+  "ipa": "/kiː/",
+  "respelling_us": "key",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://quay.io/",
+  "source_label": "Red Hat Quay",
+  "category": "product",
+  "confidence": "creator-clarified",
+  "notes": "Container registry; pronounced \"key\" (like the dock)."
+}

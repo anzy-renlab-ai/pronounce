@@ -1,0 +1,12 @@
+{
+  "word": "sed",
+  "ipa": "/sɛd/",
+  "respelling_us": "sed",
+  "alt_ipa": ["/ˌɛs iː ˈdiː/"],
+  "alt_respelling_us": ["ess ee dee"],
+  "source_url": "",
+  "source_label": "",
+  "category": "cli-tool",
+  "confidence": "contested",
+  "notes": "Stream editor; \"sed\" (said) common, also \"S-E-D\"."
+}

@@ -1,0 +1,12 @@
+{
+  "word": "flax",
+  "ipa": "/flæks/",
+  "respelling_us": "flaks",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "JAX neural-network library; like the plant \"flax\"."
+}

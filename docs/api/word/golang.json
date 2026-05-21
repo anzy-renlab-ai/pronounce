@@ -1,0 +1,12 @@
+{
+  "word": "golang",
+  "ipa": "/ˈɡoʊlæŋ/",
+  "respelling_us": "go lang",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://go.dev/",
+  "source_label": "Go project",
+  "category": "project",
+  "confidence": "community-consensus",
+  "notes": "The Go language; \"go-lang\". Officially just \"Go\"."
+}

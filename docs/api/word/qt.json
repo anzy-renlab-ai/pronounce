@@ -1,0 +1,12 @@
+{
+  "word": "qt",
+  "ipa": "/kjuːt/",
+  "respelling_us": "cute",
+  "alt_ipa": ["/ˌkjuː ˈtiː/"],
+  "alt_respelling_us": ["cue tee"],
+  "source_url": "https://www.qt.io/",
+  "source_label": "Qt Company",
+  "category": "tool",
+  "confidence": "creator-clarified",
+  "notes": "GUI framework; officially \"cute\", though many say \"Q-T\"."
+}

@@ -1,0 +1,12 @@
+{
+  "word": "psql",
+  "ipa": "/ˌpiː ɛs kjuː ˈɛl/",
+  "respelling_us": "pee ess cue ell",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "cli-tool",
+  "confidence": "community-consensus",
+  "notes": "Postgres CLI; usually letters \"P-S-Q-L\"."
+}

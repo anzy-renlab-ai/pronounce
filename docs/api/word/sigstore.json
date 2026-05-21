@@ -1,0 +1,12 @@
+{
+  "word": "sigstore",
+  "ipa": "/ˈsɪɡ stɔːr/",
+  "respelling_us": "sig store",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "Software signing project; \"sig-store\"."
+}

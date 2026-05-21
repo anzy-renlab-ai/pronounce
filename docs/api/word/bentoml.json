@@ -1,0 +1,12 @@
+{
+  "word": "bentoml",
+  "ipa": "/ˈbɛntoʊ ɛm ɛl/",
+  "respelling_us": "bento em ell",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "Model serving framework; \"Bento-M-L\"."
+}

@@ -1,0 +1,12 @@
+{
+  "word": "piper",
+  "ipa": "/ˈpaɪpər/",
+  "respelling_us": "pipe er",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "Fast local neural TTS; \"PIPE-er\"."
+}

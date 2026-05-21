@@ -1,0 +1,12 @@
+{
+  "word": "rancher",
+  "ipa": "/ˈræntʃər/",
+  "respelling_us": "ran cher",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Kubernetes management platform; like a cattle \"rancher\"."
+}

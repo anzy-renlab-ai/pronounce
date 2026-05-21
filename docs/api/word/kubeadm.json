@@ -1,0 +1,12 @@
+{
+  "word": "kubeadm",
+  "ipa": "/ˌkuːb ˈædmɪn/",
+  "respelling_us": "koob admin",
+  "alt_ipa": ["/ˌkuːb eɪ diː ɛ ˈɛm/"],
+  "alt_respelling_us": ["koob ay dee ee em"],
+  "source_url": "",
+  "source_label": "",
+  "category": "cli-tool",
+  "confidence": "contested",
+  "notes": "K8s bootstrap tool; \"kube-admin\" or \"kube-A-D-M\"."
+}

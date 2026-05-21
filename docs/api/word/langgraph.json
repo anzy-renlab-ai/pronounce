@@ -1,0 +1,12 @@
+{
+  "word": "langgraph",
+  "ipa": "/ˈlæŋ ɡræf/",
+  "respelling_us": "lang graf",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "LangChain stateful agent framework; \"lang-graph\"."
+}

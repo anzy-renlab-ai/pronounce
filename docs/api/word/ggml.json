@@ -1,0 +1,12 @@
+{
+  "word": "ggml",
+  "ipa": "/ˌdʒiː dʒiː ɛm ˈɛl/",
+  "respelling_us": "jee jee em ell",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "Tensor library behind llama.cpp; letters \"G-G-M-L\"."
+}
