@@ -1,0 +1,12 @@
+{
+  "word": "WireMock",
+  "ipa": "/ˈwaɪər mɒk/",
+  "respelling_us": "WYE er mok",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://wiremock.org/",
+  "source_label": "wiremock.org",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"WIRE-mok\". HTTP API mocking server."
+}

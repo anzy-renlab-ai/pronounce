@@ -920,3 +920,78 @@ Sui | /swiː/ | swee | product | community-consensus | https://sui.io/
 Optimism | /ˈɒp tə mɪz əm/ | OP tih miz um | product | community-consensus | https://www.optimism.io/
 Arbitrum | /ˈɑːr bɪ trəm/ | AR bih trum | product | contested | https://arbitrum.io/
 Wasmtime | /ˈwɒz əm taɪm/ | WOZ um time | product | community-consensus | https://wasmtime.dev/
+Snowpack | /ˈsnoʊ pæk/ | SNOW pak | product | community-consensus | https://www.snowpack.dev/
+WireMock | /ˈwaɪər mɒk/ | WYE er mok | product | community-consensus | https://wiremock.org/
+Trino | /ˈtriː noʊ/ | TREE noh | product | community-consensus | https://trino.io/
+Skopeo | /skoʊˈpeɪ oʊ/ | skoh PAY oh | cli-tool | community-consensus | https://github.com/containers/skopeo
+Buildah | /ˈbɪl də/ | BIL duh | cli-tool | creator-clarified | https://buildah.io/
+cert-manager | /sɜːrt ˈmæn ə dʒər/ | sert MAN uh jer | product | community-consensus | https://cert-manager.io/
+Verdaccio | /vɛrˈdɑː tʃoʊ/ | ver DAH cho | product | community-consensus | https://verdaccio.org/
+Tika | /ˈtiː kə/ | TEE kuh | product | community-consensus | https://tika.apache.org/
+Vagrant | /ˈveɪ ɡrənt/ | VAY grunt | product | community-consensus | https://www.vagrantup.com/
+KEDA | /ˈkeɪ də/ | KAY duh | product | community-consensus | https://keda.sh/
+Theia | /ˈθiː ə/ | THEE uh | product | community-consensus | https://theia-ide.org/
+Plausible | /ˈplɔː zə bəl/ | PLAW zuh bul | product | community-consensus | https://plausible.io/
+Pinokio | /pɪˈnoʊ ki oʊ/ | pih NO kee oh | product | community-consensus | https://pinokio.computer/
+Aviary | /ˈeɪ vi ɛr i/ | AY vee air ee | product | community-consensus | https://aviary.fun/
+GTM | /ˌdʒiː tiː ˈɛm/ | G T M | acronym | community-consensus | https://en.wikipedia.org/wiki/Go-to-market_strategy
+PLG | /ˌpiː ɛl ˈdʒiː/ | P L G | acronym | community-consensus | https://en.wikipedia.org/wiki/Product-led_growth
+SLG | /ˌɛs ɛl ˈdʒiː/ | S L G | acronym | community-consensus | (no source)
+prosumer | /proʊˈsuː mər/ | proh SOO mer | cs-term | community-consensus | https://en.wikipedia.org/wiki/Prosumer
+TAM | /tæm/ | tam | acronym | contested | https://en.wikipedia.org/wiki/Total_addressable_market
+SOM | /sɒm/ | som | acronym | contested | https://en.wikipedia.org/wiki/Total_addressable_market
+CAC | /ˌsiː eɪ ˈsiː/ | C A C | acronym | contested | https://en.wikipedia.org/wiki/Customer_acquisition_cost
+LTV | /ˌɛl tiː ˈviː/ | L T V | acronym | community-consensus | https://en.wikipedia.org/wiki/Customer_lifetime_value
+ARR | /ˌeɪ ɑːr ˈɑːr/ | A R R | acronym | community-consensus | (no source)
+MRR | /ˌɛm ɑːr ˈɑːr/ | M R R | acronym | community-consensus | (no source)
+NRR | /ˌɛn ɑːr ˈɑːr/ | N R R | acronym | community-consensus | (no source)
+GRR | /ˌdʒiː ɑːr ˈɑːr/ | G R R | acronym | community-consensus | (no source)
+ICP | /ˌaɪ siː ˈpiː/ | I C P | acronym | community-consensus | (no source)
+NPS | /ˌɛn piː ˈɛs/ | N P S | acronym | community-consensus | https://en.wikipedia.org/wiki/Net_promoter_score
+OKR | /ˌoʊ keɪ ˈɑːr/ | O K R | acronym | community-consensus | https://en.wikipedia.org/wiki/Objectives_and_key_results
+ROI | /ˌɑːr oʊ ˈaɪ/ | R O I | acronym | community-consensus | (no source)
+DAU | /ˌdiː eɪ ˈjuː/ | D A U | acronym | contested | (no source)
+MAU | /ˌɛm eɪ ˈjuː/ | M A U | acronym | contested | (no source)
+B2B | /ˌbiː tə ˈbiː/ | B to B | acronym | community-consensus | (no source)
+B2C | /ˌbiː tə ˈsiː/ | B to C | acronym | community-consensus | (no source)
+D2C | /ˌdiː tə ˈsiː/ | D to C | acronym | community-consensus | (no source)
+B2B2C | /ˌbiː tə ˌbiː tə ˈsiː/ | B to B to C | acronym | community-consensus | (no source)
+IaaS | /ˈaɪ ɑːz/ | EYE az | acronym | contested | (no source)
+freemium | /ˈfriː mi əm/ | FREE mee um | cs-term | community-consensus | https://en.wikipedia.org/wiki/Freemium
+churn | /tʃɜːrn/ | chern | cs-term | community-consensus | (no source)
+cohort | /ˈkoʊ hɔːrt/ | KOH hort | cs-term | community-consensus | (no source)
+funnel | /ˈfʌn əl/ | FUH nul | cs-term | community-consensus | (no source)
+scrum | /skrʌm/ | scrum | cs-term | community-consensus | https://en.wikipedia.org/wiki/Scrum_(software_development)
+kanban | /ˈkɑːn bɑːn/ | KAHN bahn | cs-term | community-consensus | https://en.wikipedia.org/wiki/Kanban_(development)
+sprint | /sprɪnt/ | sprint | cs-term | community-consensus | (no source)
+backlog | /ˈbæk lɔːɡ/ | BAK log | cs-term | community-consensus | (no source)
+retro | /ˈrɛ troʊ/ | REH troh | cs-term | community-consensus | (no source)
+standup | /ˈstænd ʌp/ | STAND up | cs-term | community-consensus | (no source)
+epic | /ˈɛp ɪk/ | EH pik | cs-term | community-consensus | (no source)
+QBR | /ˌkjuː biː ˈɑːr/ | Q B R | acronym | community-consensus | (no source)
+PoC | /ˌpiː oʊ ˈsiː/ | P O C | acronym | contested | (no source)
+PoV | /ˌpiː oʊ ˈviː/ | P O V | acronym | community-consensus | (no source)
+ABM | /ˌeɪ biː ˈɛm/ | A B M | acronym | community-consensus | https://en.wikipedia.org/wiki/Account-based_marketing
+moat | /moʊt/ | moht | cs-term | community-consensus | (no source)
+flywheel | /ˈflaɪ wiːl/ | FLY wheel | cs-term | community-consensus | (no source)
+COGS | /kɒɡz/ | kogs | acronym | community-consensus | https://en.wikipedia.org/wiki/Cost_of_goods_sold
+CRM | /ˌsiː ɑːr ˈɛm/ | C R M | acronym | community-consensus | (no source)
+ERP | /ˌiː ɑːr ˈpiː/ | E R P | acronym | contested | (no source)
+EBITDA | /ˈiː bɪt dɑː/ | EE bit dah | acronym | community-consensus | https://en.wikipedia.org/wiki/EBITDA
+SOC2 | /ˌsɒk ˈtuː/ | sock two | acronym | community-consensus | https://en.wikipedia.org/wiki/System_and_Organization_Controls
+SOX | /sɒks/ | sox | acronym | community-consensus | https://en.wikipedia.org/wiki/Sarbanes%E2%80%93Oxley_Act
+SEO | /ˌɛs iː ˈoʊ/ | S E O | acronym | community-consensus | (no source)
+SEM | /ˌɛs iː ˈɛm/ | S E M | acronym | community-consensus | (no source)
+CTR | /ˌsiː tiː ˈɑːr/ | C T R | acronym | community-consensus | (no source)
+CPC | /ˌsiː piː ˈsiː/ | C P C | acronym | community-consensus | (no source)
+CPM | /ˌsiː piː ˈɛm/ | C P M | acronym | community-consensus | (no source)
+ROAS | /ˈroʊ æs/ | ROW ass | acronym | contested | (no source)
+MoM | /ˌɛm oʊ ˈɛm/ | M O M | acronym | contested | (no source)
+YoY | /ˌwaɪ oʊ ˈwaɪ/ | Y O Y | acronym | community-consensus | (no source)
+QoQ | /ˌkjuː oʊ ˈkjuː/ | Q O Q | acronym | community-consensus | (no source)
+NDA | /ˌɛn diː ˈeɪ/ | N D A | acronym | community-consensus | (no source)
+MSA | /ˌɛm ɛs ˈeɪ/ | M S A | acronym | community-consensus | (no source)
+SOW | /saʊ/ | sow | acronym | contested | (no source)
+RFP | /ˌɑːr ɛf ˈpiː/ | R F P | acronym | community-consensus | (no source)
+NLP | /ˌɛn ɛl ˈpiː/ | N L P | acronym | community-consensus | (no source)
+PII | /ˌpiː aɪ ˈaɪ/ | P I I | acronym | contested | (no source)

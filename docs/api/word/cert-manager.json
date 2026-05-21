@@ -1,0 +1,12 @@
+{
+  "word": "cert-manager",
+  "ipa": "/sɜːrt ˈmæn ə dʒər/",
+  "respelling_us": "sert MAN uh jer",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://cert-manager.io/",
+  "source_label": "cert-manager.io",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"sert MAN-uh-jer\". K8s X.509 cert lifecycle. CNCF graduated."
+}

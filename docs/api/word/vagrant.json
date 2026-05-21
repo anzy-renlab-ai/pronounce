@@ -1,0 +1,12 @@
+{
+  "word": "Vagrant",
+  "ipa": "/ˈveɪ ɡrənt/",
+  "respelling_us": "VAY grunt",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.vagrantup.com/",
+  "source_label": "HashiCorp",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"VAY-grunt\" — the English word. HashiCorp VM dev environments."
+}

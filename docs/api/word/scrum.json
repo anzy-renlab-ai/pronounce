@@ -1,0 +1,12 @@
+{
+  "word": "scrum",
+  "ipa": "/skrʌm/",
+  "respelling_us": "scrum",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://en.wikipedia.org/wiki/Scrum_(software_development)",
+  "source_label": "Wikipedia",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "\"scrum\" — borrowed from rugby (scrummage). Iterative dev framework."
+}

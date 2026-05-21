@@ -1,0 +1,12 @@
+{
+  "word": "KEDA",
+  "ipa": "/ˈkeɪ də/",
+  "respelling_us": "KAY duh",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://keda.sh/",
+  "source_label": "keda.sh",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"KAY-duh\". Kubernetes Event-Driven Autoscaling. CNCF graduated."
+}

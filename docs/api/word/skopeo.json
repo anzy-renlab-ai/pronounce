@@ -1,0 +1,12 @@
+{
+  "word": "Skopeo",
+  "ipa": "/skoʊˈpeɪ oʊ/",
+  "respelling_us": "skoh PAY oh",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/containers/skopeo",
+  "source_label": "containers/skopeo",
+  "category": "cli-tool",
+  "confidence": "community-consensus",
+  "notes": "\"skoh-PAY-oh\". From Greek σκοπέω \"to look at\". OCI image inspector."
+}

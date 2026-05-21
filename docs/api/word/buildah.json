@@ -1,0 +1,12 @@
+{
+  "word": "Buildah",
+  "ipa": "/ˈbɪl də/",
+  "respelling_us": "BIL duh",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://buildah.io/",
+  "source_label": "buildah.io",
+  "category": "cli-tool",
+  "confidence": "creator-clarified",
+  "notes": "\"BIL-duh\" — Boston-accent \"builder\". Dan Walsh (creator) has confirmed in multiple talks."
+}
