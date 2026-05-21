@@ -24,12 +24,12 @@ export async function recordSpeak(ctx: vscode.ExtensionContext): Promise<void> {
   if (prompted.includes(n)) return;
   await ctx.globalState.update(PROMPTED_KEY, [...prompted, n]);
 
-  const star = '★ Star on GitHub';
-  const coffee = '☕ Coffee (optional)';
-  const silence = "Don't ask again";
+  const star = vscode.l10n.t('★ Star on GitHub');
+  const coffee = vscode.l10n.t('☕ Coffee (optional)');
+  const silence = vscode.l10n.t("Don't ask again");
   const size = dictSize(ctx.extensionPath);
   const choice = await vscode.window.showInformationMessage(
-    `Pronounce played ${n} words for you. A GitHub star is the single best way to keep the dictionary growing — ${size} sourced entries and counting.`,
+    vscode.l10n.t('Pronounce played {0} words for you. A GitHub star is the single best way to keep the dictionary growing — {1} sourced entries and counting.', n, size),
     star,
     coffee,
     silence,

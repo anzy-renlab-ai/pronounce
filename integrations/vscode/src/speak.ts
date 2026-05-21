@@ -42,10 +42,12 @@ export function speak(extensionPath: string, word: string): void {
   const backend = detectBackend();
   if (!backend) {
     vscode.window.showErrorMessage(
-      'Pronounce: no TTS backend found. Install one:\n' +
-      '  macOS: built-in (`say`)\n' +
-      '  Linux: `sudo apt install espeak-ng` (or yum/pacman/brew)\n' +
-      '  Windows: PowerShell (built into modern Windows)',
+      vscode.l10n.t(
+        'Pronounce: no TTS backend found. Install one:\n' +
+        '  macOS: built-in (`say`)\n' +
+        '  Linux: `sudo apt install espeak-ng` (or yum/pacman/brew)\n' +
+        '  Windows: PowerShell (built into modern Windows)',
+      ),
     );
     return;
   }
@@ -75,7 +77,7 @@ export function speak(extensionPath: string, word: string): void {
     running = spawn(cmd, args);
     running.on('exit', next);
     running.on('error', (err) => {
-      vscode.window.showErrorMessage(`Pronounce (${backend}): ${err.message}`);
+      vscode.window.showErrorMessage(vscode.l10n.t('Pronounce ({0}): {1}', backend, err.message));
       running = null;
     });
   };

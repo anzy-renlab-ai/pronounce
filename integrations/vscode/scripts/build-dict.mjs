@@ -36,4 +36,36 @@ for (const line of lines) {
 
 mkdirSync(dirname(outPath), { recursive: true });
 writeFileSync(outPath, JSON.stringify(entries, null, 0));
-console.log(`built dictionary: ${Object.keys(entries).length} entries → ${outPath}`);
+const COUNT = Object.keys(entries).length;
+console.log(`built dictionary: ${COUNT} entries → ${outPath}`);
+
+// Keep every "<N> entries" claim across docs in lockstep with the real count.
+// Stale, contradictory counts (e.g. one page says 993, another 817) read as
+// abandonware on the Marketplace listing — so this is part of the build, not a
+// manual chore. Matches prose ("993 entries", "918 sourced entries",
+// "918-entry browser", "918+ entries") and the URL-encoded shields badge.
+const PROSE = /\b\d{3,4}\+?((?:[ \-]sourced)?[ \-]entr(?:y|ies))/gi;
+const BADGE = /\b\d{3,4}(?:%2B)?%20entries/gi;
+const CJK = /\d{3,4}(?=\s*条)/g; // Chinese: "1212 条" / "1212 条词条"
+const docFiles = [
+  ['integrations', 'vscode', 'package.json'],
+  ['integrations', 'vscode', 'package.nls.json'],
+  ['integrations', 'vscode', 'package.nls.zh-cn.json'],
+  ['integrations', 'vscode', 'README.md'],
+  ['integrations', 'vscode', 'media', 'walkthrough-hover.md'],
+  ['integrations', 'vscode', 'media', 'walkthrough-search.md'],
+  ['README.md'],
+];
+for (const parts of docFiles) {
+  const p = join(repoRoot, ...parts);
+  let text;
+  try { text = readFileSync(p, 'utf8'); } catch { continue; }
+  const next = text
+    .replace(PROSE, `${COUNT}$1`)
+    .replace(BADGE, `${COUNT}%20entries`)
+    .replace(CJK, `${COUNT}`);
+  if (next !== text) {
+    writeFileSync(p, next);
+    console.log(`synced count → ${parts.join('/')}`);
+  }
+}

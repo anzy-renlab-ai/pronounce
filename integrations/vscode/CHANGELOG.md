@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.4.0 — 2026-05-21
+
+- **Dictionary 993 → 1212 (+219).** Three waves:
+  - **+103 commonly-mispronounced & hard-to-read terms**: tuple, daemon, cron, deque, malloc, schema, niche, segue, kernel, queue, char, sed, fsck, chown, chroot, plus genuinely hard names — `quay` ("key"), `guix` ("geeks"), `qt` ("cute"), `fooocus` ("focus"), `slsa` ("salsa"), sphinx, jaeger, cilium, gentoo, suse, vulkan, wayland, mesos, scylla, thanos, and more.
+  - **+41 trending projects + tech people**: strapi, kysely, knex, zapier, sequelize, sveltekit, mongoose, bulma, directus — and the surnames devs say wrong: Torvalds, Knuth, Stroustrup, Hejlsberg, Kernighan, Liskov, Cerf, Hykes, de Raadt, Poettering, Bellard, Heinemeier, Matsumoto, Nakamoto.
+  - **+75 AI/ML focus** (per request): models & tools — llamafile, safetensors, tokenizers, diffusers, mamba, olmo, pythia, deberta, roberta, einops, ggml/gguf, mlx, kaggle, colab, wandb, xgboost, lightgbm, catboost, spacy, gensim, seaborn, plotly, bokeh, altair, lancedb, pgvector, openvino, coreml — and researchers: Altman, Amodei, Hinton, LeCun, Bengio, Sutskever, Hassabis, Goodfellow, Vaswani, Chollet, Schmidhuber, Hochreiter, Krizhevsky, Szegedy, Uszkoreit, Mikolov, Kingma, Vinyals, Huang, Ng, and more. New `person` category.
+- **🌐 Localization (i18n).** Extension UI now speaks **Chinese (`zh-cn`)** when VS Code's display language is Simplified Chinese: command titles, settings descriptions, the 4-step welcome walkthrough, hover labels (`read:` / `or:` / `Play` / `source`), the status-bar tooltip, and the milestone star prompt all switch. English remains the default. Implemented via `package.nls.json` / `package.nls.zh-cn.json` and a `vscode.l10n` bundle.
+- **Marketplace SEO pass.** Fixed inconsistent entry counts across the listing (description / walkthrough / search step had drifted to 817 / 851 / 918); the build now auto-syncs every count from the real dictionary so they never drift again. Keywords expanded (`how to pronounce`, `text to speech`, `voice`, `screen reader`, `windsurf`, `zed`, …). README hook front-loads the pain + editor compatibility.
+
 ## 0.3.8 — 2026-05-21
 
 - **Source upgrades** for 5 long-standing "find a real creator citation" issues (closes #28–#32):

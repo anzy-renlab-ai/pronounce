@@ -22,7 +22,7 @@ export function activate(ctx: vscode.ExtensionContext): void {
     vscode.commands.registerCommand('pronounce.speak', (arg?: string | { word?: string }) => {
       const word = typeof arg === 'string' ? arg : arg?.word;
       if (!word) {
-        vscode.window.showWarningMessage('Pronounce: no word provided.');
+        vscode.window.showWarningMessage(vscode.l10n.t('Pronounce: no word provided.'));
         return;
       }
       speakAndRecord(word);
@@ -34,7 +34,7 @@ export function activate(ctx: vscode.ExtensionContext): void {
       const sel = ed.document.getText(ed.selection).trim();
       const word = sel || ed.document.getText(ed.document.getWordRangeAtPosition(ed.selection.active) ?? new vscode.Range(0, 0, 0, 0));
       if (!word) {
-        vscode.window.showWarningMessage('Pronounce: nothing selected.');
+        vscode.window.showWarningMessage(vscode.l10n.t('Pronounce: nothing selected.'));
         return;
       }
       speakAndRecord(word);
@@ -50,7 +50,7 @@ export function activate(ctx: vscode.ExtensionContext): void {
       const pick = await vscode.window.showQuickPick(items, {
         matchOnDescription: true,
         matchOnDetail: true,
-        placeHolder: `Search ${items.length} pronunciations · ⌘⇧P → "Star" to support the dictionary`,
+        placeHolder: vscode.l10n.t('Search {0} pronunciations · ⌘⇧P → "Star" to support the dictionary', items.length),
       });
       if (pick) speakAndRecord(pick.label);
     }),
@@ -87,12 +87,12 @@ export function activate(ctx: vscode.ExtensionContext): void {
     const bar = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 50);
     bar.text = '$(unmute) sayit';
     const tip = new vscode.MarkdownString(
-      `**Pronounce** · ${dictSize(root)} sourced dictionary entries\n\n` +
-      `Click to speak the current selection.  \n` +
-      `**[★ Star on GitHub](command:pronounce.starOnGitHub)** — keeps the dictionary growing  \n` +
-      `[Search](command:pronounce.search) · ` +
-      `[Website](command:pronounce.openWebsite) · ` +
-      `[☕ Coffee](command:pronounce.sponsor)`,
+      `${vscode.l10n.t('**Pronounce** · {0} sourced dictionary entries', dictSize(root))}\n\n` +
+      `${vscode.l10n.t('Click to speak the current selection.')}  \n` +
+      `**[${vscode.l10n.t('★ Star on GitHub')}](command:pronounce.starOnGitHub)** — ${vscode.l10n.t('keeps the dictionary growing')}  \n` +
+      `[${vscode.l10n.t('Search')}](command:pronounce.search) · ` +
+      `[${vscode.l10n.t('Website')}](command:pronounce.openWebsite) · ` +
+      `[${vscode.l10n.t('☕ Coffee')}](command:pronounce.sponsor)`,
     );
     tip.isTrusted = true;
     bar.tooltip = tip;

@@ -1,8 +1,9 @@
 {
   "name": "pronounce",
-  "displayName": "Pronounce — Tech Word Pronunciation",
-  "description": "Hover any tech word — hear how it's actually pronounced. 993-entry sourced dictionary covering products, CLI tools, CS terms, and the cross-functional vocab (GTM, PLG, ARR, OKR, scrum, kanban …) tech folks use with product, marketing, sales, and finance. Cross-platform: macOS `say`, Linux `espeak-ng`, Windows PowerShell. Works in VS Code, Cursor, Windsurf, VSCodium, Zed.",
-  "version": "0.3.8",
+  "displayName": "%displayName%",
+  "description": "%description%",
+  "l10n": "./l10n",
+  "version": "0.4.0",
   "publisher": "sayit",
   "license": "MIT",
   "icon": "icon.png",
@@ -33,12 +34,22 @@
   "keywords": [
     "pronunciation",
     "pronounce",
+    "how to pronounce",
+    "text to speech",
     "tts",
     "speak",
+    "say",
+    "voice",
     "audio",
     "speech",
     "ipa",
     "phonetic",
+    "phonetics",
+    "screen reader",
+    "accessibility",
+    "developer tools",
+    "tech terms",
+    "onboarding",
     "kubectl",
     "kubernetes",
     "nginx",
@@ -46,11 +57,10 @@
     "toml",
     "ghostty",
     "wagmi",
-    "developer tools",
-    "tech terms",
-    "accessibility",
     "cursor",
-    "vscodium"
+    "windsurf",
+    "vscodium",
+    "zed"
   ],
   "activationEvents": [
     "onStartupFinished"
@@ -60,37 +70,37 @@
     "commands": [
       {
         "command": "pronounce.speak",
-        "title": "Pronounce: Speak word",
+        "title": "%cmd.speak.title%",
         "category": "Pronounce"
       },
       {
         "command": "pronounce.speakSelection",
-        "title": "Pronounce: Speak current selection",
+        "title": "%cmd.speakSelection.title%",
         "category": "Pronounce"
       },
       {
         "command": "pronounce.search",
-        "title": "Pronounce: Search dictionary…",
+        "title": "%cmd.search.title%",
         "category": "Pronounce"
       },
       {
         "command": "pronounce.openWebsite",
-        "title": "Pronounce: Open dictionary website",
+        "title": "%cmd.openWebsite.title%",
         "category": "Pronounce"
       },
       {
         "command": "pronounce.starOnGitHub",
-        "title": "Pronounce: ★ Star on GitHub",
+        "title": "%cmd.star.title%",
         "category": "Pronounce"
       },
       {
         "command": "pronounce.sponsor",
-        "title": "Pronounce: ☕ Buy me a coffee (Ko-fi)",
+        "title": "%cmd.sponsor.title%",
         "category": "Pronounce"
       },
       {
         "command": "pronounce.openWalkthrough",
-        "title": "Pronounce: Show welcome / how to use",
+        "title": "%cmd.openWalkthrough.title%",
         "category": "Pronounce"
       }
     ],
@@ -110,73 +120,73 @@
         "pronounce.voice": {
           "type": "string",
           "default": "Samantha",
-          "description": "macOS `say` voice. Run `say -v '?'` for full list. Recommended: Samantha, Daniel, Karen, Moira, Tessa."
+          "description": "%config.voice.desc%"
         },
         "pronounce.rate": {
           "type": "number",
           "default": 200,
           "minimum": 80,
           "maximum": 500,
-          "description": "Speech rate in words per minute."
+          "description": "%config.rate.desc%"
         },
         "pronounce.repetitions": {
           "type": "number",
           "default": 1,
           "minimum": 1,
           "maximum": 5,
-          "description": "Times to repeat the word. CLI default is 3; hover is more annoying when repeated, so default here is 1."
+          "description": "%config.repetitions.desc%"
         },
         "pronounce.hoverEnabled": {
           "type": "boolean",
           "default": true,
-          "description": "Show pronunciation popup on hover for known tech words."
+          "description": "%config.hoverEnabled.desc%"
         },
         "pronounce.hoverOnlyKnownWords": {
           "type": "boolean",
           "default": true,
-          "description": "Only show hover for words in the dictionary. Disable to also hover unknown words (uses TTS letter-to-sound, lower quality)."
+          "description": "%config.hoverOnlyKnownWords.desc%"
         },
         "pronounce.statusBar": {
           "type": "boolean",
           "default": true,
-          "description": "Show a 🔊 Pronounce item in the status bar (click to speak the current selection)."
+          "description": "%config.statusBar.desc%"
         }
       }
     },
     "walkthroughs": [
       {
         "id": "pronounce.welcome",
-        "title": "Welcome to Pronounce",
-        "description": "Hover any tech word → hear how engineers actually say it. 851 sourced entries. Cross-platform (macOS / Linux / Windows) as of v0.3.",
+        "title": "%walkthrough.title%",
+        "description": "%walkthrough.description%",
         "steps": [
           {
             "id": "pronounce.welcome.try",
-            "title": "Hear it — try kubectl, nginx, or YAML",
-            "description": "Run `Pronounce: Speak word` to hear any dictionary entry. The fastest way: highlight a word in any file and press **⌘⇧'** (or run `Pronounce: Speak current selection`).\n\n[Hear `kubectl` now](command:pronounce.speak?%22kubectl%22)",
+            "title": "%walkthrough.try.title%",
+            "description": "%walkthrough.try.description%",
             "media": {
               "markdown": "media/walkthrough-speak.md"
             }
           },
           {
             "id": "pronounce.welcome.hover",
-            "title": "Hover any tech word",
-            "description": "Hover over `kubectl`, `nginx`, `GIF`, `YAML`, `Ghostty`, `wagmi`, `JSON` etc. in any file — a tooltip shows the IPA, the English-style respelling, the source citation, and a 🔊 Play button. Works in **any** language file.\n\n[Open a sample file](command:pronounce.openWalkthrough)",
+            "title": "%walkthrough.hover.title%",
+            "description": "%walkthrough.hover.description%",
             "media": {
               "markdown": "media/walkthrough-hover.md"
             }
           },
           {
             "id": "pronounce.welcome.search",
-            "title": "Search all 817 entries",
-            "description": "Run `Pronounce: Search dictionary…` from the command palette (⌘⇧P / Ctrl+Shift+P) and fuzzy-find any word.\n\n[Open search now](command:pronounce.search)",
+            "title": "%walkthrough.search.title%",
+            "description": "%walkthrough.search.description%",
             "media": {
               "markdown": "media/walkthrough-search.md"
             }
           },
           {
             "id": "pronounce.welcome.star",
-            "title": "★ Star it · keeps the dictionary growing",
-            "description": "If Pronounce just saved you one cringey standup moment, **one star is the single best way to keep the dictionary growing** — more devs find it, more PRs land, more entries get creator-clarified.\n\n[★ Star on GitHub](command:pronounce.starOnGitHub)\n[Visit pronounce.renlab.ai](command:pronounce.openWebsite)\n\nOptional: [☕ Coffee on Ko-fi](command:pronounce.sponsor) — pays for one new entry per cup.",
+            "title": "%walkthrough.star.title%",
+            "description": "%walkthrough.star.description%",
             "media": {
               "markdown": "media/walkthrough-star.md"
             }
