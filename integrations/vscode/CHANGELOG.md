@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.2 — 2026-05-22
+
+- **More Chinese marketplace discoverability.** The Marketplace indexes the default `description` for search (not the localized nls), so appended Chinese query terms to it — 程序员单词怎么读 / 英文技术词发音 / 读音词典 — covering far more Chinese searches than the 30-tag keyword cap allows. Also swapped the niche `wagmi` keyword for `英语发音`.
+
 ## 0.4.1 — 2026-05-22
 
 - **Discoverability for Chinese-speaking editor users.** v0.4.0 already localized the in-editor display (Chinese `displayName` / description / UI when VS Code's language is `zh-cn`); this makes the extension *findable* by Chinese search too. Added Chinese marketplace keywords (`发音`, `怎么读`, `读音`, `程序员发音`) so a zh-cn user searching the Extensions panel in Chinese hits it, and added a `中文说明` section to the README for conversion. Dropped three redundant English keywords (`say`, `audio`, `phonetics`) to stay within the 30-tag limit.
