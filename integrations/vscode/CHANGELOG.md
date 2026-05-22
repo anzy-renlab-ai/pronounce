@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.1 — 2026-05-22
+
+- **Discoverability for Chinese-speaking editor users.** v0.4.0 already localized the in-editor display (Chinese `displayName` / description / UI when VS Code's language is `zh-cn`); this makes the extension *findable* by Chinese search too. Added Chinese marketplace keywords (`发音`, `怎么读`, `读音`, `程序员发音`) so a zh-cn user searching the Extensions panel in Chinese hits it, and added a `中文说明` section to the README for conversion. Dropped three redundant English keywords (`say`, `audio`, `phonetics`) to stay within the 30-tag limit.
+
 ## 0.4.0 — 2026-05-21
 
 - **Dictionary 993 → 1212 (+219).** Three waves:

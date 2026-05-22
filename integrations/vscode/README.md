@@ -41,6 +41,12 @@ Or click through:
 
 Engineers mispronounce tools all day — `kube-cuddle`, `engine-eks`, `Gee-son`, `yaymul`, `LOG-sek`. Webster doesn't cover them; this does. Creator-clarified where possible (Wilhite on GIF, Crockford on JSON, GNU Project's own FAQ, Tom Preston-Werner on TOML, yaml.org's FAQ on YAML, IETF RFC 9000 on QUIC, Mitchell Hashimoto on Ghostty, EWD archive on Dijkstra) and community-consensus otherwise. The extension surfaces all that inline.
 
+## 中文说明
+
+**程序员单词怎么读？** 在 VS Code / Cursor / Windsurf 里**悬停**任意技术词 — `kubectl`、`nginx`、`YAML`、`Pydantic`、`Ollama` … — 直接听到工程师实际的读法，附 IPA、英式拼读和**来源引用**。1212 条社区维护词条，覆盖产品名、命令行工具、AI/ML 项目与研究者。
+
+VS Code 显示语言设为简体中文时，**插件界面（命令、设置、欢迎页、悬停标签）自动切换为中文**。安装：在扩展面板搜 `Pronounce`，或运行 `code --install-extension sayit.pronounce`。完整中文词典：[pronounce.renlab.ai/zh.html](https://pronounce.renlab.ai/zh.html)。
+
 ## Settings
 
 | Setting | Default | Purpose |
