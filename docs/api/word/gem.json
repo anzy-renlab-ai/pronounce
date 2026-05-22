@@ -1,0 +1,12 @@
+{
+  "word": "gem",
+  "ipa": "/dʒɛm/",
+  "respelling_us": "jem",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "cli-tool",
+  "confidence": "community-consensus",
+  "notes": "RubyGems CLI; like \"gem\" (jewel)."
+}

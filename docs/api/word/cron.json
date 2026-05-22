@@ -1,0 +1,12 @@
+{
+  "word": "cron",
+  "ipa": "/krɑːn/",
+  "respelling_us": "kron",
+  "alt_ipa": ["/kroʊn/"],
+  "alt_respelling_us": ["krohn"],
+  "source_url": "",
+  "source_label": "",
+  "category": "cli-tool",
+  "confidence": "contested",
+  "notes": "Scheduler; \"kron\" (rhymes \"on\") common, some \"krohn\". From Greek chronos."
+}

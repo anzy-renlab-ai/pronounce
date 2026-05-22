@@ -1,0 +1,12 @@
+{
+  "word": "mmap",
+  "ipa": "/ˈɛm mæp/",
+  "respelling_us": "em map",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "Memory map syscall; \"em-map\"."
+}

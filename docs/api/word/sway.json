@@ -1,0 +1,12 @@
+{
+  "word": "sway",
+  "ipa": "/sweɪ/",
+  "respelling_us": "sway",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "i3-compatible Wayland window manager; \"sway\"."
+}

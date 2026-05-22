@@ -49,7 +49,7 @@ function Hero({ onWordClick, registerEgg }) {
     <section className="hero shell">
       <div className="eyebrow">
         <span className="live"></span>
-        <span>v2.5.0 · 817 entries · MIT</span>
+        <span>{DICT_ALL.length} entries · MIT · VS Code · Cursor · Windsurf</span>
       </div>
 
       <div className="hero-grid">
@@ -69,8 +69,11 @@ function Hero({ onWordClick, registerEgg }) {
             <span style={{ color: 'var(--accent)', fontStyle: 'italic' }}>with sources.</span>
           </p>
           <div className="cta-row">
-            <a href="#dictionary" className="btn primary">
-              Browse 817 words <span className="arrow">→</span>
+            <a href="https://marketplace.visualstudio.com/items?itemName=sayit.pronounce" className="btn primary">
+              Install for VS Code <span className="arrow">→</span>
+            </a>
+            <a href="#dictionary" className="btn">
+              Browse {DICT_ALL.length} words
             </a>
             <a href="#quiz" className="btn">
               Take the quiz
@@ -102,9 +105,9 @@ function Hero({ onWordClick, registerEgg }) {
       </div>
 
       <div className="metrics">
-        <div className="metric"><div className="n">8<em>17</em></div><div className="l">Entries</div></div>
-        <div className="metric"><div className="n">2<em>43</em></div><div className="l">Sources cited</div></div>
-        <div className="metric"><div className="n"><em>41</em></div><div className="l">Contested readings</div></div>
+        <div className="metric"><div className="n">{DICT_ALL.length}</div><div className="l">Entries</div></div>
+        <div className="metric"><div className="n">{DICT_ALL.filter(d => d.url).length}</div><div className="l">Sources cited</div></div>
+        <div className="metric"><div className="n">{DICT_ALL.filter(d => d.conf === 'contested').length}</div><div className="l">Contested readings</div></div>
         <div className="metric"><div className="n">~<em>250</em></div><div className="l">Lines of bash</div></div>
       </div>
     </section>
@@ -181,7 +184,7 @@ function WordGrid({ registerEgg }) {
       </div>
 
       <div style={{ textAlign: 'center', marginTop: 36 }}>
-        <a href="/browse.html" className="btn">See all 817 entries <span className="arrow">→</span></a>
+        <a href="/browse.html" className="btn">See all {DICT_ALL.length} entries <span className="arrow">→</span></a>
       </div>
     </section>
   );

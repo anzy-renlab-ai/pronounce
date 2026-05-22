@@ -1,0 +1,12 @@
+{
+  "word": "coreml",
+  "ipa": "/ˈkɔːr ɛm ɛl/",
+  "respelling_us": "core em ell",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "Apple on-device ML framework; \"Core-M-L\"."
+}

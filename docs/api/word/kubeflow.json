@@ -1,0 +1,12 @@
+{
+  "word": "kubeflow",
+  "ipa": "/ˈkuːb floʊ/",
+  "respelling_us": "koob flow",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "ML toolkit on Kubernetes; \"kube-flow\"."
+}

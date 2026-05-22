@@ -1,0 +1,12 @@
+{
+  "word": "mesos",
+  "ipa": "/ˈmiːsoʊs/",
+  "respelling_us": "mee sose",
+  "alt_ipa": ["/ˈmɛsoʊs/"],
+  "alt_respelling_us": ["mess ose"],
+  "source_url": "",
+  "source_label": "",
+  "category": "product",
+  "confidence": "contested",
+  "notes": "Apache cluster manager; \"MEE-sose\" vs \"MEH-sose\"."
+}

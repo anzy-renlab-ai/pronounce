@@ -63,7 +63,7 @@ window.Terminal = Terminal;
 // ========== Features ==========
 function Features() {
   const items = [
-    { n: '01', title: '817+ entries, source-cited', desc: 'Project names, products, programmer jargon. Every entry tagged with confidence and linked to a real source.', chips: ['--why', '--solo', '--alt'] },
+    { n: '01', title: `${DICT_ALL.length} entries, source-cited`, desc: 'Project names, products, programmer jargon, AI/ML projects and researchers. Every entry tagged with confidence and linked to a real source.', chips: ['--why', '--solo', '--alt'] },
     { n: '02', title: 'Multi-reading audio awareness', desc: 'When a word is contested — GIF, SQL, GUI, kubectl — the CLI audibly chains the alternates ("…or: gif").', chips: ['--all'] },
     { n: '03', title: 'Claude Code skill included', desc: 'Ask Claude "how do you pronounce X?" — it replies with audio, IPA, and a source citation, not a phonetic guess.', chips: ['mcp-server'] },
     { n: '04', title: 'Zero deps, ~250 lines of bash', desc: 'Wraps the macOS say engine you already have. No npm, no sudo, no surprises.', chips: ['brew install sayit'] },
@@ -215,6 +215,7 @@ function Footer({ registerEgg }) {
           </div>
           <div>
             <h6>Use</h6>
+            <a href="https://marketplace.visualstudio.com/items?itemName=sayit.pronounce">Install for VS Code</a>
             <a href="#dictionary">Browse</a>
             <a href="#quiz">Quiz</a>
             <a href="#famous">Hall of Fame</a>
@@ -231,7 +232,7 @@ function Footer({ registerEgg }) {
             <h6>Pair</h6>
             <a href="https://github.com/anzy-renlab-ai/pronounce/tree/main/skills/pronounce-word">Claude Code skill</a>
             <a href="https://github.com/anzy-renlab-ai/pronounce/tree/main/mcp-server">MCP server</a>
-            <a href="https://open-vsx.org/extension/sayit/pronounce">VS Code extension</a>
+            <a href="https://open-vsx.org/extension/sayit/pronounce">Open VSX (Cursor/Zed)</a>
             <a href="https://github.com/anzy-renlab-ai/pronounce/tree/main/integrations/raycast">Raycast</a>
           </div>
         </div>

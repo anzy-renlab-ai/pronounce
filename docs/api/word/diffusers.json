@@ -1,0 +1,12 @@
+{
+  "word": "diffusers",
+  "ipa": "/dɪˈfjuːzərz/",
+  "respelling_us": "dih fyoo zers",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "Hugging Face diffusion-models library."
+}

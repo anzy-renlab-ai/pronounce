@@ -1,0 +1,12 @@
+{
+  "word": "rake",
+  "ipa": "/reɪk/",
+  "respelling_us": "rake",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "cli-tool",
+  "confidence": "community-consensus",
+  "notes": "Ruby build tool; like a garden rake."
+}

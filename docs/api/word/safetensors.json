@@ -1,0 +1,12 @@
+{
+  "word": "safetensors",
+  "ipa": "/ˈseɪf tɛnsərz/",
+  "respelling_us": "safe tensors",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "Safe model-weight serialization format; \"safe-tensors\"."
+}

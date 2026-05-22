@@ -1,0 +1,12 @@
+{
+  "word": "guix",
+  "ipa": "/ɡiːks/",
+  "respelling_us": "geeks",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://guix.gnu.org/",
+  "source_label": "GNU Guix",
+  "category": "product",
+  "confidence": "creator-clarified",
+  "notes": "GNU package manager; pronounced \"geeks\"."
+}

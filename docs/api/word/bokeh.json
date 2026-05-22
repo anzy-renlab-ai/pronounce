@@ -1,0 +1,12 @@
+{
+  "word": "bokeh",
+  "ipa": "/ˈboʊkeɪ/",
+  "respelling_us": "boh kay",
+  "alt_ipa": ["/ˈboʊkə/"],
+  "alt_respelling_us": ["boh kuh"],
+  "source_url": "",
+  "source_label": "",
+  "category": "tool",
+  "confidence": "contested",
+  "notes": "Python interactive viz library; from the photography term (Japanese)."
+}

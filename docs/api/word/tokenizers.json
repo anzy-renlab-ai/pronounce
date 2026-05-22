@@ -1,0 +1,12 @@
+{
+  "word": "tokenizers",
+  "ipa": "/ˈtoʊkənaɪzərz/",
+  "respelling_us": "toke en eye zers",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "Hugging Face fast-tokenizers library."
+}

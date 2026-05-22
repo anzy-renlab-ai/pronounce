@@ -1,0 +1,12 @@
+{
+  "word": "pulseaudio",
+  "ipa": "/ˈpʌls ˌɔːdi oʊ/",
+  "respelling_us": "pulse audio",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Linux sound server; \"pulse-audio\"."
+}

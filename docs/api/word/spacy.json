@@ -1,0 +1,12 @@
+{
+  "word": "spacy",
+  "ipa": "/ˈspeɪsi/",
+  "respelling_us": "spay see",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "Industrial NLP library; \"spay-see\" (spaCy)."
+}

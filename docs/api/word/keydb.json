@@ -1,0 +1,12 @@
+{
+  "word": "keydb",
+  "ipa": "/ˈkiː diː biː/",
+  "respelling_us": "key dee bee",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Multithreaded Redis fork; \"Key-D-B\"."
+}

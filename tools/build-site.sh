@@ -110,6 +110,8 @@ header.hero { margin-bottom: 48px; text-align: center; }
 .hero .cta a.secondary { background: var(--card); color: var(--fg); border: 1px solid var(--border); }
 .hero .cta a:hover { filter: brightness(1.08); }
 .hero .install code { display: inline-block; background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 14px 18px; font-size: 14px; color: var(--accent-2); text-align: left; max-width: 100%; overflow-x: auto; }
+.hero .install .install-note { display: block; margin: 12px auto 0; max-width: 620px; font-size: 13px; color: var(--muted); line-height: 1.6; }
+.hero .install .install-note code.inline { display: inline; padding: 1px 6px; font-size: 12px; border-radius: 4px; }
 .demo { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 24px 28px; margin-bottom: 56px; font-family: var(--mono); font-size: 14.5px; line-height: 1.7; }
 .demo .prompt { color: var(--muted); }
 .demo .out { color: var(--accent-2); }
@@ -234,6 +236,16 @@ header.hero { margin-bottom: 48px; text-align: center; }
 .word-page .related ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
 .word-page .related li a { display: inline-block; padding: 7px 14px; background: var(--card); border: 1px solid var(--border); border-radius: 999px; text-decoration: none; color: var(--muted-strong); font-family: var(--mono); font-size: 14px; }
 .word-page .related li a:hover { border-color: var(--accent); color: var(--accent); background: var(--card-2); }
+
+/* Editor-install CTA — shown at the peak-intent moment, right after the answer */
+.editor-cta { background: var(--card-2); border: 1px solid var(--accent); border-radius: 14px; padding: 24px 26px; margin: 32px 0; }
+.editor-cta h2 { margin: 0 0 8px; font-size: 21px; }
+.editor-cta p { color: var(--muted-strong); margin: 0 0 18px; font-size: 15px; line-height: 1.55; }
+.editor-cta .cta-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.editor-cta a.btn { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: var(--bg); padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 15px; }
+.editor-cta a.btn.secondary { background: transparent; color: var(--fg); border: 1px solid var(--border); }
+.editor-cta a.btn:hover { filter: brightness(1.08); }
+.editor-cta .editors { color: var(--muted); font-size: 13px; margin-left: 4px; }
 
 footer.footer { margin-top: 64px; padding: 24px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; text-align: center; }
 footer.footer a { color: var(--link); text-decoration: none; }
@@ -911,12 +923,14 @@ cat > "$DOCS/v1.html" <<EOF
         <div id="hero-suggest" class="hero-suggest" role="listbox" hidden></div>
       </div>
       <div class="cta">
-        <a href="./browse.html">Browse ${ENTRY_COUNT:-236} words →</a>
+        <a href="https://marketplace.visualstudio.com/items?itemName=sayit.pronounce">Install for VS Code →</a>
+        <a class="secondary" href="./browse.html">Browse ${ENTRY_COUNT:-236} words</a>
         <a class="secondary" href="./quiz.html">🎯 Take the quiz</a>
         <a class="secondary" href="https://github.com/${GH_REPO}">GitHub</a>
       </div>
       <div class="install">
-        <code>git clone https://github.com/${GH_REPO}.git &amp;&amp; cd pronounce &amp;&amp; ./install.sh</code>
+        <code>code --install-extension sayit.pronounce</code>
+        <span class="install-note">Hover any tech word in your editor → hear it. Works in VS Code · Cursor · Windsurf · VSCodium · Zed. Prefer the terminal? <code class="inline">git clone https://github.com/${GH_REPO}.git &amp;&amp; ./install.sh</code></span>
       </div>
       <p class="stats-bar"><strong>${ENTRY_COUNT:-236}</strong> entries · sourced from creator interviews, project FAQs, and Wikipedia · MIT licensed</p>
     </header>
@@ -1116,12 +1130,14 @@ cat > "$DOCS/zh.html" <<EOF
         <div id="hero-suggest" class="hero-suggest" role="listbox" hidden></div>
       </div>
       <div class="cta">
-        <a href="./browse.html">浏览全部 ${ENTRY_COUNT:-544} 条词条 →</a>
+        <a href="https://marketplace.visualstudio.com/items?itemName=sayit.pronounce">安装 VS Code 插件 →</a>
+        <a class="secondary" href="./browse.html">浏览全部 ${ENTRY_COUNT:-544} 条词条</a>
         <a class="secondary" href="./quiz.html">🎯 来做个测验</a>
         <a class="secondary" href="https://github.com/${GH_REPO}">GitHub</a>
       </div>
       <div class="install">
-        <code>git clone https://github.com/${GH_REPO}.git &amp;&amp; cd pronounce &amp;&amp; ./install.sh</code>
+        <code>code --install-extension sayit.pronounce</code>
+        <span class="install-note">在编辑器里悬停任意技术词 → 直接听。支持 VS Code · Cursor · Windsurf · VSCodium · Zed，界面自动切中文。喜欢命令行？<code class="inline">git clone https://github.com/${GH_REPO}.git &amp;&amp; ./install.sh</code></span>
       </div>
       <p class="stats-bar"><strong>${ENTRY_COUNT:-544}</strong> 条词条 · 来源覆盖创作者访谈、项目 FAQ、Wikipedia · MIT 许可</p>
     </header>
@@ -1624,6 +1640,16 @@ HTML
   cat >> "$fn" <<HTML
       <p>Pronouncing project and product names correctly avoids the small but persistent friction of being gently corrected during standups, conference Q&amp;As, and team calls. Hearing the word a few times locks in the right reading better than reading IPA ever will. <strong>$BRAND</strong> is a community-maintained dictionary — every entry tagged with a confidence level and (where possible) a citable source.</p>
     </section>
+
+    <aside class="editor-cta">
+      <h2>Don't look it up twice — hear it in your editor</h2>
+      <p>Install the <strong>Pronounce</strong> extension and just <strong>hover</strong> $word_esc — or any of $ENTRY_COUNT tech words — to hear it, with IPA and the cited source, without leaving your code.</p>
+      <div class="cta-row">
+        <a class="btn" href="https://marketplace.visualstudio.com/items?itemName=sayit.pronounce">Install for VS Code</a>
+        <a class="btn secondary" href="https://open-vsx.org/extension/sayit/pronounce">Open VSX</a>
+        <span class="editors">also Cursor · Windsurf · VSCodium · Zed</span>
+      </div>
+    </aside>
 
     <h2>Hear it from the command line</h2>
     <div class="cli-howto">

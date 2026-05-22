@@ -1,0 +1,12 @@
+{
+  "word": "clang",
+  "ipa": "/klæŋ/",
+  "respelling_us": "klang",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "LLVM C/C++ compiler; rhymes with the sound \"clang\"."
+}

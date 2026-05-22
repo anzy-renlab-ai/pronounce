@@ -1,0 +1,12 @@
+{
+  "word": "kaniko",
+  "ipa": "/kəˈniːkoʊ/",
+  "respelling_us": "kah nee ko",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "In-cluster image builder; \"kah-NEE-ko\"."
+}

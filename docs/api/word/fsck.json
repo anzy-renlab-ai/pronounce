@@ -1,0 +1,12 @@
+{
+  "word": "fsck",
+  "ipa": "/ˌɛf ɛs siː ˈkeɪ/",
+  "respelling_us": "eff ess see kay",
+  "alt_ipa": ["/fsʌk/"],
+  "alt_respelling_us": ["fsuck"],
+  "source_url": "",
+  "source_label": "",
+  "category": "cli-tool",
+  "confidence": "contested",
+  "notes": "Filesystem check; spelled out, or the infamous \"F-suck\" joke."
+}

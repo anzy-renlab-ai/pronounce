@@ -1,0 +1,12 @@
+{
+  "word": "openshift",
+  "ipa": "/ˈoʊpən ʃɪft/",
+  "respelling_us": "open shift",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Red Hat Kubernetes platform; \"open-shift\"."
+}

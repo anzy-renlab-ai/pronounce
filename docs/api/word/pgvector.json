@@ -1,0 +1,12 @@
+{
+  "word": "pgvector",
+  "ipa": "/ˌpiː dʒiː ˈvɛktər/",
+  "respelling_us": "pee jee vector",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "Postgres vector-search extension; \"P-G-vector\"."
+}

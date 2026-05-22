@@ -55,6 +55,8 @@ header.hero { margin-bottom: 48px; text-align: center; }
 .hero .cta a.secondary { background: var(--card); color: var(--fg); border: 1px solid var(--border); }
 .hero .cta a:hover { filter: brightness(1.08); }
 .hero .install code { display: inline-block; background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 14px 18px; font-size: 14px; color: var(--accent-2); text-align: left; max-width: 100%; overflow-x: auto; }
+.hero .install .install-note { display: block; margin: 12px auto 0; max-width: 620px; font-size: 13px; color: var(--muted); line-height: 1.6; }
+.hero .install .install-note code.inline { display: inline; padding: 1px 6px; font-size: 12px; border-radius: 4px; }
 .demo { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 24px 28px; margin-bottom: 56px; font-family: var(--mono); font-size: 14.5px; line-height: 1.7; }
 .demo .prompt { color: var(--muted); }
 .demo .out { color: var(--accent-2); }
@@ -179,6 +181,16 @@ header.hero { margin-bottom: 48px; text-align: center; }
 .word-page .related ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
 .word-page .related li a { display: inline-block; padding: 7px 14px; background: var(--card); border: 1px solid var(--border); border-radius: 999px; text-decoration: none; color: var(--muted-strong); font-family: var(--mono); font-size: 14px; }
 .word-page .related li a:hover { border-color: var(--accent); color: var(--accent); background: var(--card-2); }
+
+/* Editor-install CTA — shown at the peak-intent moment, right after the answer */
+.editor-cta { background: var(--card-2); border: 1px solid var(--accent); border-radius: 14px; padding: 24px 26px; margin: 32px 0; }
+.editor-cta h2 { margin: 0 0 8px; font-size: 21px; }
+.editor-cta p { color: var(--muted-strong); margin: 0 0 18px; font-size: 15px; line-height: 1.55; }
+.editor-cta .cta-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.editor-cta a.btn { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: var(--bg); padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 15px; }
+.editor-cta a.btn.secondary { background: transparent; color: var(--fg); border: 1px solid var(--border); }
+.editor-cta a.btn:hover { filter: brightness(1.08); }
+.editor-cta .editors { color: var(--muted); font-size: 13px; margin-left: 4px; }
 
 footer.footer { margin-top: 64px; padding: 24px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; text-align: center; }
 footer.footer a { color: var(--link); text-decoration: none; }

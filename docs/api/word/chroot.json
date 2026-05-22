@@ -1,0 +1,12 @@
+{
+  "word": "chroot",
+  "ipa": "/ˈtʃruːt/",
+  "respelling_us": "ch root",
+  "alt_ipa": ["/ˌtʃeɪndʒ ruːt/"],
+  "alt_respelling_us": ["change root"],
+  "source_url": "",
+  "source_label": "",
+  "category": "cli-tool",
+  "confidence": "contested",
+  "notes": "\"change root\"; \"ch-root\" or said as \"change-root\"."
+}

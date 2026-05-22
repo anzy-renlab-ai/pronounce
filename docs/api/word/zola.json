@@ -1,0 +1,12 @@
+{
+  "word": "zola",
+  "ipa": "/ˈzoʊlə/",
+  "respelling_us": "zoh luh",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "Rust static site generator; \"ZOH-luh\"."
+}

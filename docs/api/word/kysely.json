@@ -1,0 +1,12 @@
+{
+  "word": "kysely",
+  "ipa": "/ˈkiːsəli/",
+  "respelling_us": "kee suh lee",
+  "alt_ipa": ["/kaɪˈsɛli/"],
+  "alt_respelling_us": ["kai sell ee"],
+  "source_url": "",
+  "source_label": "",
+  "category": "tool",
+  "confidence": "contested",
+  "notes": "TypeScript query builder; Finnish for \"query\". Readings vary."
+}

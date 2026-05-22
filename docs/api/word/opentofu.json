@@ -1,0 +1,12 @@
+{
+  "word": "opentofu",
+  "ipa": "/ˈoʊpən toʊfuː/",
+  "respelling_us": "open tofu",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "Terraform fork; \"open-tofu\"."
+}
