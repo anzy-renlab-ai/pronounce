@@ -1,0 +1,12 @@
+{
+  "word": "nitro",
+  "ipa": "/ˈnaɪtroʊ/",
+  "respelling_us": "ny tro",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "UnJS server engine (powers Nuxt); \"NY-tro\"."
+}

@@ -1273,3 +1273,29 @@ vaswani	/vəˈswɑːni/	vuh swah nee					person	community-consensus	Ashish Vaswa
 vinyals	/viˈɲals/	vin yals					person	community-consensus	Oriol ("oh-ree-OL") Vinyals, DeepMind (Seq2Seq, AlphaStar). Catalan.
 wojciech	/ˈvɔɪtɛx/	voy tekh					person	community-consensus	Polish first name (e.g. Wojciech Zaremba, OpenAI); "VOY-tekh".
 zaremba	/zəˈrɛmbə/	zuh rem buh					person	community-consensus	Wojciech Zaremba, co-founder of OpenAI. Polish.
+glm	/ˌdʒiː ɛl ˈɛm/	jee ell em					product	community-consensus	Zhipu AI's General Language Model family; letters "G-L-M".
+zhipu	/ˈdʒiː puː/	jee poo	/ˈʒiː puː/	zhee poo			product	contested	Zhipu AI (智谱), maker of GLM/ChatGLM; pinyin "Zhì-pǔ", roughly "jee-poo".
+ernie	/ˈɜːrni/	er nee					product	community-consensus	Baidu's ERNIE LLM; "ER-nee", a play on BERT (Bert & Ernie).
+internlm	/ˌɪntɜːrn ɛl ˈɛm/	intern ell em					product	community-consensus	Shanghai AI Lab's open LLM; "intern-L-M".
+moonshot	/ˈmuːnʃɒt/	moon shot					product	community-consensus	Moonshot AI (月之暗面), maker of Kimi; "moon-shot".
+openhands	/ˈoʊpən hændz/	open hands					product	community-consensus	Open-source coding agent (formerly OpenDevin); "open-hands".
+opendevin	/ˈoʊpən ˌdɛvɪn/	open dev in					product	community-consensus	Former name of OpenHands; "open-DEV-in".
+goose	/ɡuːs/	goose					tool	community-consensus	Block's open-source AI agent; like the bird.
+serde	/sɜːrˈdiː/	sir dee	/ˈsɜːrdi/	ser dee			tool	contested	Rust serialization framework; "sir-DEE" (serialize/deserialize), some say "SER-dee".
+yew	/juː/	you					tool	community-consensus	Rust/WASM front-end framework; "you", like the yew tree.
+clap	/klæp/	clap					tool	community-consensus	Rust Command Line Argument Parser; "clap", like applause.
+rayon	/ˈreɪɒn/	ray on					tool	community-consensus	Rust data-parallelism library; "RAY-on", like the fabric.
+wasmer	/ˈwɑːzmər/	wahz mer	/ˈwæzmər/	waz mer			product	contested	WebAssembly runtime; "WAHZ-mer" (wasm + -er).
+elysia	/ɛˈlɪziə/	eh lih zee uh					tool	community-consensus	Bun web framework; "eh-LIH-zee-uh".
+effect	/ɪˈfɛkt/	ih fekt					tool	community-consensus	Effect-TS library; just "effect".
+nitro	/ˈnaɪtroʊ/	ny tro					tool	community-consensus	UnJS server engine (powers Nuxt); "NY-tro".
+valibot	/ˈvælɪbɒt/	val ih bot					tool	community-consensus	Schema validation library; "VAL-ih-bot".
+million	/ˈmɪljən/	mill yun					tool	community-consensus	Million.js — React optimizing compiler; "MIL-yun".
+rolldown	/ˈroʊldaʊn/	roll down					tool	community-consensus	Rust-based bundler (Vite's future core); "roll-down".
+convex	/ˈkɒnvɛks/	kon veks					product	community-consensus	Reactive backend platform; "KON-veks".
+xata	/ˈzɑːtə/	zah tah					product	community-consensus	Serverless database platform; "ZAH-tah".
+axiom	/ˈæksiəm/	ak see um					product	community-consensus	Log/event analytics platform; "AK-see-um".
+quickwit	/ˈkwɪkwɪt/	quick wit					product	community-consensus	Search engine for logs; "quick-wit".
+reflex	/ˈriːflɛks/	ree fleks					tool	community-consensus	Python full-stack framework (formerly Pynecone); "REE-fleks".
+zstd	/ˌziː ˈstændərd/	zee standard	/ˌziː ɛs tiː ˈdiː/	zee ess tee dee			abbreviation	contested	Zstandard compression; "Z-standard" or spelled "Z-S-T-D".
+warp	/wɔːrp/	warp					product	community-consensus	Rust-based terminal (and a Rust web framework); "warp".

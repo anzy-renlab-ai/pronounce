@@ -4,181 +4,181 @@
   <link href="https://pronounce.renlab.ai/feed.atom" rel="self"/>
   <link href="https://pronounce.renlab.ai/"/>
   <id>https://pronounce.renlab.ai/</id>
-  <updated>2026-05-22T01:04:16Z</updated>
+  <updated>2026-05-23T12:45:58Z</updated>
   <subtitle>How engineers actually pronounce project / product / jargon names. Community-maintained.</subtitle>
   <entry>
-    <title>bahdanau — bah dah now</title>
-    <link href="https://pronounce.renlab.ai/word/bahdanau"/>
-    <id>https://pronounce.renlab.ai/word/bahdanau</id>
-    <updated>2026-05-22T01:04:16Z</updated>
-    <summary>bahdanau is pronounced "bah dah now" (/ˌbɑːdɑːˈnaʊ/). Dzmitry Bahdanau, co-author of neural attention.</summary>
+    <title>zhipu — jee poo</title>
+    <link href="https://pronounce.renlab.ai/word/zhipu"/>
+    <id>https://pronounce.renlab.ai/word/zhipu</id>
+    <updated>2026-05-23T12:45:58Z</updated>
+    <summary>zhipu is pronounced "jee poo" (/ˈdʒiː puː/). Zhipu AI (智谱), maker of GLM/ChatGLM; pinyin "Zhì-pǔ", roughly "jee-poo".</summary>
   </entry>
   <entry>
-    <title>brockman — brock mun</title>
-    <link href="https://pronounce.renlab.ai/word/brockman"/>
-    <id>https://pronounce.renlab.ai/word/brockman</id>
-    <updated>2026-05-22T01:04:16Z</updated>
-    <summary>brockman is pronounced "brock mun" (/ˈbrɒkmən/). Greg Brockman, co-founder &amp; president of OpenAI.</summary>
+    <title>ernie — er nee</title>
+    <link href="https://pronounce.renlab.ai/word/ernie"/>
+    <id>https://pronounce.renlab.ai/word/ernie</id>
+    <updated>2026-05-23T12:45:58Z</updated>
+    <summary>ernie is pronounced "er nee" (/ˈɜːrni/). Baidu's ERNIE LLM; "ER-nee", a play on BERT (Bert &amp; Ernie).</summary>
   </entry>
   <entry>
-    <title>chollet — show lay</title>
-    <link href="https://pronounce.renlab.ai/word/chollet"/>
-    <id>https://pronounce.renlab.ai/word/chollet</id>
-    <updated>2026-05-22T01:04:16Z</updated>
-    <summary>chollet is pronounced "show lay" (/ʃɔːˈleɪ/). François Chollet, creator of Keras; "show-LAY". French.</summary>
+    <title>internlm — intern ell em</title>
+    <link href="https://pronounce.renlab.ai/word/internlm"/>
+    <id>https://pronounce.renlab.ai/word/internlm</id>
+    <updated>2026-05-23T12:45:58Z</updated>
+    <summary>internlm is pronounced "intern ell em" (/ˌɪntɜːrn ɛl ˈɛm/). Shanghai AI Lab's open LLM; "intern-L-M".</summary>
   </entry>
   <entry>
-    <title>devlin — dev lin</title>
-    <link href="https://pronounce.renlab.ai/word/devlin"/>
-    <id>https://pronounce.renlab.ai/word/devlin</id>
-    <updated>2026-05-22T01:04:16Z</updated>
-    <summary>devlin is pronounced "dev lin" (/ˈdɛvlɪn/). Jacob Devlin, lead author of BERT.</summary>
+    <title>moonshot — moon shot</title>
+    <link href="https://pronounce.renlab.ai/word/moonshot"/>
+    <id>https://pronounce.renlab.ai/word/moonshot</id>
+    <updated>2026-05-23T12:45:58Z</updated>
+    <summary>moonshot is pronounced "moon shot" (/ˈmuːnʃɒt/). Moonshot AI (月之暗面), maker of Kimi; "moon-shot".</summary>
   </entry>
   <entry>
-    <title>goodfellow — good fellow</title>
-    <link href="https://pronounce.renlab.ai/word/goodfellow"/>
-    <id>https://pronounce.renlab.ai/word/goodfellow</id>
-    <updated>2026-05-22T01:04:16Z</updated>
-    <summary>goodfellow is pronounced "good fellow" (/ˈɡʊdfɛloʊ/). Ian Goodfellow, inventor of GANs.</summary>
+    <title>openhands — open hands</title>
+    <link href="https://pronounce.renlab.ai/word/openhands"/>
+    <id>https://pronounce.renlab.ai/word/openhands</id>
+    <updated>2026-05-23T12:45:58Z</updated>
+    <summary>openhands is pronounced "open hands" (/ˈoʊpən hændz/). Open-source coding agent (formerly OpenDevin); "open-hands".</summary>
   </entry>
   <entry>
-    <title>hochreiter — hoke ry ter</title>
-    <link href="https://pronounce.renlab.ai/word/hochreiter"/>
-    <id>https://pronounce.renlab.ai/word/hochreiter</id>
-    <updated>2026-05-22T01:04:16Z</updated>
-    <summary>hochreiter is pronounced "hoke ry ter" (/ˈhɔːxraɪtər/). Sepp Hochreiter, co-inventor of LSTM. German.</summary>
+    <title>opendevin — open dev in</title>
+    <link href="https://pronounce.renlab.ai/word/opendevin"/>
+    <id>https://pronounce.renlab.ai/word/opendevin</id>
+    <updated>2026-05-23T12:45:58Z</updated>
+    <summary>opendevin is pronounced "open dev in" (/ˈoʊpən ˌdɛvɪn/). Former name of OpenHands; "open-DEV-in".</summary>
   </entry>
   <entry>
-    <title>howard — how erd</title>
-    <link href="https://pronounce.renlab.ai/word/howard"/>
-    <id>https://pronounce.renlab.ai/word/howard</id>
-    <updated>2026-05-22T01:04:16Z</updated>
-    <summary>howard is pronounced "how erd" (/ˈhaʊərd/). Jeremy Howard, co-founder of fast.ai.</summary>
+    <title>goose — goose</title>
+    <link href="https://pronounce.renlab.ai/word/goose"/>
+    <id>https://pronounce.renlab.ai/word/goose</id>
+    <updated>2026-05-23T12:45:58Z</updated>
+    <summary>goose is pronounced "goose" (/ɡuːs/). Block's open-source AI agent; like the bird.</summary>
   </entry>
   <entry>
-    <title>huang — hwang</title>
-    <link href="https://pronounce.renlab.ai/word/huang"/>
-    <id>https://pronounce.renlab.ai/word/huang</id>
-    <updated>2026-05-22T01:04:16Z</updated>
-    <summary>huang is pronounced "hwang" (/hwɑːŋ/). Jensen Huang, co-founder &amp; CEO of NVIDIA; "hwang".</summary>
+    <title>serde — sir dee</title>
+    <link href="https://pronounce.renlab.ai/word/serde"/>
+    <id>https://pronounce.renlab.ai/word/serde</id>
+    <updated>2026-05-23T12:45:58Z</updated>
+    <summary>serde is pronounced "sir dee" (/sɜːrˈdiː/). Rust serialization framework; "sir-DEE" (serialize/deserialize), some say "SER-dee".</summary>
   </entry>
   <entry>
-    <title>kingma — king muh</title>
-    <link href="https://pronounce.renlab.ai/word/kingma"/>
-    <id>https://pronounce.renlab.ai/word/kingma</id>
-    <updated>2026-05-22T01:04:16Z</updated>
-    <summary>kingma is pronounced "king muh" (/ˈkɪŋmə/). Diederik Kingma, co-author of Adam and the VAE.</summary>
+    <title>yew — you</title>
+    <link href="https://pronounce.renlab.ai/word/yew"/>
+    <id>https://pronounce.renlab.ai/word/yew</id>
+    <updated>2026-05-23T12:45:58Z</updated>
+    <summary>yew is pronounced "you" (/juː/). Rust/WASM front-end framework; "you", like the yew tree.</summary>
   </entry>
   <entry>
-    <title>krizhevsky — krih zhef skee</title>
-    <link href="https://pronounce.renlab.ai/word/krizhevsky"/>
-    <id>https://pronounce.renlab.ai/word/krizhevsky</id>
-    <updated>2026-05-22T01:04:16Z</updated>
-    <summary>krizhevsky is pronounced "krih zhef skee" (/krɪˈʒɛfski/). Alex Krizhevsky, lead author of AlexNet.</summary>
+    <title>clap — clap</title>
+    <link href="https://pronounce.renlab.ai/word/clap"/>
+    <id>https://pronounce.renlab.ai/word/clap</id>
+    <updated>2026-05-23T12:45:58Z</updated>
+    <summary>clap is pronounced "clap" (/klæp/). Rust Command Line Argument Parser; "clap", like applause.</summary>
   </entry>
   <entry>
-    <title>mikolov — mee koh lof</title>
-    <link href="https://pronounce.renlab.ai/word/mikolov"/>
-    <id>https://pronounce.renlab.ai/word/mikolov</id>
-    <updated>2026-05-22T01:04:16Z</updated>
-    <summary>mikolov is pronounced "mee koh lof" (/ˈmiːkəlɒf/). Tomáš Mikolov, creator of word2vec. Czech.</summary>
+    <title>rayon — ray on</title>
+    <link href="https://pronounce.renlab.ai/word/rayon"/>
+    <id>https://pronounce.renlab.ai/word/rayon</id>
+    <updated>2026-05-23T12:45:58Z</updated>
+    <summary>rayon is pronounced "ray on" (/ˈreɪɒn/). Rust data-parallelism library; "RAY-on", like the fabric.</summary>
   </entry>
   <entry>
-    <title>mnih — muh nee</title>
-    <link href="https://pronounce.renlab.ai/word/mnih"/>
-    <id>https://pronounce.renlab.ai/word/mnih</id>
-    <updated>2026-05-22T01:04:16Z</updated>
-    <summary>mnih is pronounced "muh nee" (/məˈniː/). Volodymyr Mnih, lead author of the DQN / Atari paper.</summary>
+    <title>wasmer — wahz mer</title>
+    <link href="https://pronounce.renlab.ai/word/wasmer"/>
+    <id>https://pronounce.renlab.ai/word/wasmer</id>
+    <updated>2026-05-23T12:45:58Z</updated>
+    <summary>wasmer is pronounced "wahz mer" (/ˈwɑːzmər/). WebAssembly runtime; "WAHZ-mer" (wasm + -er).</summary>
   </entry>
   <entry>
-    <title>ng — ing</title>
-    <link href="https://pronounce.renlab.ai/word/ng"/>
-    <id>https://pronounce.renlab.ai/word/ng</id>
-    <updated>2026-05-22T01:04:16Z</updated>
-    <summary>ng is pronounced "ing" (/ɪŋ/). Andrew Ng (Coursera, deeplearning.ai); roughly "ng/ing", often spelled "N-G".</summary>
+    <title>elysia — eh lih zee uh</title>
+    <link href="https://pronounce.renlab.ai/word/elysia"/>
+    <id>https://pronounce.renlab.ai/word/elysia</id>
+    <updated>2026-05-23T12:45:58Z</updated>
+    <summary>elysia is pronounced "eh lih zee uh" (/ɛˈlɪziə/). Bun web framework; "eh-LIH-zee-uh".</summary>
   </entry>
   <entry>
-    <title>polosukhin — po lo soo kin</title>
-    <link href="https://pronounce.renlab.ai/word/polosukhin"/>
-    <id>https://pronounce.renlab.ai/word/polosukhin</id>
-    <updated>2026-05-22T01:04:16Z</updated>
-    <summary>polosukhin is pronounced "po lo soo kin" (/ˌpɒloʊˈsuːkɪn/). Illia Polosukhin, co-author of "Attention Is All You Need".</summary>
+    <title>effect — ih fekt</title>
+    <link href="https://pronounce.renlab.ai/word/effect"/>
+    <id>https://pronounce.renlab.ai/word/effect</id>
+    <updated>2026-05-23T12:45:58Z</updated>
+    <summary>effect is pronounced "ih fekt" (/ɪˈfɛkt/). Effect-TS library; just "effect".</summary>
   </entry>
   <entry>
-    <title>raffel — raf ul</title>
-    <link href="https://pronounce.renlab.ai/word/raffel"/>
-    <id>https://pronounce.renlab.ai/word/raffel</id>
-    <updated>2026-05-22T01:04:16Z</updated>
-    <summary>raffel is pronounced "raf ul" (/ˈræfəl/). Colin Raffel, lead author of T5.</summary>
+    <title>nitro — ny tro</title>
+    <link href="https://pronounce.renlab.ai/word/nitro"/>
+    <id>https://pronounce.renlab.ai/word/nitro</id>
+    <updated>2026-05-23T12:45:58Z</updated>
+    <summary>nitro is pronounced "ny tro" (/ˈnaɪtroʊ/). UnJS server engine (powers Nuxt); "NY-tro".</summary>
   </entry>
   <entry>
-    <title>ramesh — rah mesh</title>
-    <link href="https://pronounce.renlab.ai/word/ramesh"/>
-    <id>https://pronounce.renlab.ai/word/ramesh</id>
-    <updated>2026-05-22T01:04:16Z</updated>
-    <summary>ramesh is pronounced "rah mesh" (/ˈrɑːmɛʃ/). Aditya Ramesh, creator of DALL·E.</summary>
+    <title>valibot — val ih bot</title>
+    <link href="https://pronounce.renlab.ai/word/valibot"/>
+    <id>https://pronounce.renlab.ai/word/valibot</id>
+    <updated>2026-05-23T12:45:58Z</updated>
+    <summary>valibot is pronounced "val ih bot" (/ˈvælɪbɒt/). Schema validation library; "VAL-ih-bot".</summary>
   </entry>
   <entry>
-    <title>rombach — rom bahk</title>
-    <link href="https://pronounce.renlab.ai/word/rombach"/>
-    <id>https://pronounce.renlab.ai/word/rombach</id>
-    <updated>2026-05-22T01:04:16Z</updated>
-    <summary>rombach is pronounced "rom bahk" (/ˈrɒmbɑːx/). Robin Rombach, lead author of Stable Diffusion / latent diffusion. German.</summary>
+    <title>million — mill yun</title>
+    <link href="https://pronounce.renlab.ai/word/million"/>
+    <id>https://pronounce.renlab.ai/word/million</id>
+    <updated>2026-05-23T12:45:58Z</updated>
+    <summary>million is pronounced "mill yun" (/ˈmɪljən/). Million.js — React optimizing compiler; "MIL-yun".</summary>
   </entry>
   <entry>
-    <title>schmidhuber — shmit hoo ber</title>
-    <link href="https://pronounce.renlab.ai/word/schmidhuber"/>
-    <id>https://pronounce.renlab.ai/word/schmidhuber</id>
-    <updated>2026-05-22T01:04:16Z</updated>
-    <summary>schmidhuber is pronounced "shmit hoo ber" (/ˈʃmɪthuːbər/). Jürgen Schmidhuber, co-inventor of LSTM. German.</summary>
+    <title>rolldown — roll down</title>
+    <link href="https://pronounce.renlab.ai/word/rolldown"/>
+    <id>https://pronounce.renlab.ai/word/rolldown</id>
+    <updated>2026-05-23T12:45:58Z</updated>
+    <summary>rolldown is pronounced "roll down" (/ˈroʊldaʊn/). Rust-based bundler (Vite's future core); "roll-down".</summary>
   </entry>
   <entry>
-    <title>shazeer — shuh zeer</title>
-    <link href="https://pronounce.renlab.ai/word/shazeer"/>
-    <id>https://pronounce.renlab.ai/word/shazeer</id>
-    <updated>2026-05-22T01:04:16Z</updated>
-    <summary>shazeer is pronounced "shuh zeer" (/ʃəˈzɪər/). Noam ("NOH-um") Shazeer, Transformer co-author, founder of Character.AI.</summary>
+    <title>convex — kon veks</title>
+    <link href="https://pronounce.renlab.ai/word/convex"/>
+    <id>https://pronounce.renlab.ai/word/convex</id>
+    <updated>2026-05-23T12:45:58Z</updated>
+    <summary>convex is pronounced "kon veks" (/ˈkɒnvɛks/). Reactive backend platform; "KON-veks".</summary>
   </entry>
   <entry>
-    <title>szegedy — seg eh dee</title>
-    <link href="https://pronounce.renlab.ai/word/szegedy"/>
-    <id>https://pronounce.renlab.ai/word/szegedy</id>
-    <updated>2026-05-22T01:04:16Z</updated>
-    <summary>szegedy is pronounced "seg eh dee" (/ˈsɛɡɛdi/). Christian Szegedy (Inception, adversarial examples). Hungarian.</summary>
+    <title>xata — zah tah</title>
+    <link href="https://pronounce.renlab.ai/word/xata"/>
+    <id>https://pronounce.renlab.ai/word/xata</id>
+    <updated>2026-05-23T12:45:58Z</updated>
+    <summary>xata is pronounced "zah tah" (/ˈzɑːtə/). Serverless database platform; "ZAH-tah".</summary>
   </entry>
   <entry>
-    <title>uszkoreit — oosh kor ite</title>
-    <link href="https://pronounce.renlab.ai/word/uszkoreit"/>
-    <id>https://pronounce.renlab.ai/word/uszkoreit</id>
-    <updated>2026-05-22T01:04:16Z</updated>
-    <summary>uszkoreit is pronounced "oosh kor ite" (/ˈuːʃkɔːraɪt/). Jakob Uszkoreit, co-author of the Transformer. German.</summary>
+    <title>axiom — ak see um</title>
+    <link href="https://pronounce.renlab.ai/word/axiom"/>
+    <id>https://pronounce.renlab.ai/word/axiom</id>
+    <updated>2026-05-23T12:45:58Z</updated>
+    <summary>axiom is pronounced "ak see um" (/ˈæksiəm/). Log/event analytics platform; "AK-see-um".</summary>
   </entry>
   <entry>
-    <title>vaswani — vuh swah nee</title>
-    <link href="https://pronounce.renlab.ai/word/vaswani"/>
-    <id>https://pronounce.renlab.ai/word/vaswani</id>
-    <updated>2026-05-22T01:04:16Z</updated>
-    <summary>vaswani is pronounced "vuh swah nee" (/vəˈswɑːni/). Ashish Vaswani, lead author of "Attention Is All You Need".</summary>
+    <title>quickwit — quick wit</title>
+    <link href="https://pronounce.renlab.ai/word/quickwit"/>
+    <id>https://pronounce.renlab.ai/word/quickwit</id>
+    <updated>2026-05-23T12:45:58Z</updated>
+    <summary>quickwit is pronounced "quick wit" (/ˈkwɪkwɪt/). Search engine for logs; "quick-wit".</summary>
   </entry>
   <entry>
-    <title>vinyals — vin yals</title>
-    <link href="https://pronounce.renlab.ai/word/vinyals"/>
-    <id>https://pronounce.renlab.ai/word/vinyals</id>
-    <updated>2026-05-22T01:04:16Z</updated>
-    <summary>vinyals is pronounced "vin yals" (/viˈɲals/). Oriol ("oh-ree-OL") Vinyals, DeepMind (Seq2Seq, AlphaStar). Catalan.</summary>
+    <title>reflex — ree fleks</title>
+    <link href="https://pronounce.renlab.ai/word/reflex"/>
+    <id>https://pronounce.renlab.ai/word/reflex</id>
+    <updated>2026-05-23T12:45:58Z</updated>
+    <summary>reflex is pronounced "ree fleks" (/ˈriːflɛks/). Python full-stack framework (formerly Pynecone); "REE-fleks".</summary>
   </entry>
   <entry>
-    <title>wojciech — voy tekh</title>
-    <link href="https://pronounce.renlab.ai/word/wojciech"/>
-    <id>https://pronounce.renlab.ai/word/wojciech</id>
-    <updated>2026-05-22T01:04:16Z</updated>
-    <summary>wojciech is pronounced "voy tekh" (/ˈvɔɪtɛx/). Polish first name (e.g. Wojciech Zaremba, OpenAI); "VOY-tekh".</summary>
+    <title>zstd — zee standard</title>
+    <link href="https://pronounce.renlab.ai/word/zstd"/>
+    <id>https://pronounce.renlab.ai/word/zstd</id>
+    <updated>2026-05-23T12:45:58Z</updated>
+    <summary>zstd is pronounced "zee standard" (/ˌziː ˈstændərd/). Zstandard compression; "Z-standard" or spelled "Z-S-T-D".</summary>
   </entry>
   <entry>
-    <title>zaremba — zuh rem buh</title>
-    <link href="https://pronounce.renlab.ai/word/zaremba"/>
-    <id>https://pronounce.renlab.ai/word/zaremba</id>
-    <updated>2026-05-22T01:04:16Z</updated>
-    <summary>zaremba is pronounced "zuh rem buh" (/zəˈrɛmbə/). Wojciech Zaremba, co-founder of OpenAI. Polish.</summary>
+    <title>warp — warp</title>
+    <link href="https://pronounce.renlab.ai/word/warp"/>
+    <id>https://pronounce.renlab.ai/word/warp</id>
+    <updated>2026-05-23T12:45:58Z</updated>
+    <summary>warp is pronounced "warp" (/wɔːrp/). Rust-based terminal (and a Rust web framework); "warp".</summary>
   </entry>
 </feed>

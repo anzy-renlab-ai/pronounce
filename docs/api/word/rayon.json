@@ -1,0 +1,12 @@
+{
+  "word": "rayon",
+  "ipa": "/ˈreɪɒn/",
+  "respelling_us": "ray on",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "Rust data-parallelism library; \"RAY-on\", like the fabric."
+}

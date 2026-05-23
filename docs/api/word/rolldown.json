@@ -1,0 +1,12 @@
+{
+  "word": "rolldown",
+  "ipa": "/ˈroʊldaʊn/",
+  "respelling_us": "roll down",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "Rust-based bundler (Vite's future core); \"roll-down\"."
+}

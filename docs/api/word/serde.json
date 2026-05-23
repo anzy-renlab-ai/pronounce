@@ -1,0 +1,12 @@
+{
+  "word": "serde",
+  "ipa": "/sɜːrˈdiː/",
+  "respelling_us": "sir dee",
+  "alt_ipa": ["/ˈsɜːrdi/"],
+  "alt_respelling_us": ["ser dee"],
+  "source_url": "",
+  "source_label": "",
+  "category": "tool",
+  "confidence": "contested",
+  "notes": "Rust serialization framework; \"sir-DEE\" (serialize/deserialize), some say \"SER-dee\"."
+}

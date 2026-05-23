@@ -3,7 +3,7 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "outputDirectory": "docs",
-  "buildCommand": "tools/build-site.sh",
+  "buildCommand": "echo 'prebuilt — docs/ is generated + committed in CI; Vercel serves it as-is'",
   "headers": [
     {
       "source": "/api/(.*)",

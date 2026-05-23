@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.3 — 2026-05-23
+
+- **Dictionary 1212 → 1238 (+26).** AI labs & models (GLM, Zhipu, ERNIE, InternLM, Moonshot), AI coding agents (OpenHands / OpenDevin, Goose), the Rust ecosystem's tricky names (`serde` "sir-DEE", `yew` "you", `clap`, `rayon` "RAY-on", `wasmer`), modern JS tooling (Elysia, Effect, Nitro, Valibot, Million, Rolldown), and dev platforms (Convex, Xata "ZAH-tah", Axiom, Quickwit, Reflex, `zstd`, Warp).
+
 ## 0.4.2 — 2026-05-22
 
 - **More Chinese marketplace discoverability.** The Marketplace indexes the default `description` for search (not the localized nls), so appended Chinese query terms to it — 程序员单词怎么读 / 英文技术词发音 / 读音词典 — covering far more Chinese searches than the 30-tag keyword cap allows. Also swapped the niche `wagmi` keyword for `英语发音`.

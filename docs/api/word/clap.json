@@ -1,0 +1,12 @@
+{
+  "word": "clap",
+  "ipa": "/klæp/",
+  "respelling_us": "clap",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "Rust Command Line Argument Parser; \"clap\", like applause."
+}

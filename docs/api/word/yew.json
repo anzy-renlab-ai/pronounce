@@ -1,0 +1,12 @@
+{
+  "word": "yew",
+  "ipa": "/juː/",
+  "respelling_us": "you",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "Rust/WASM front-end framework; \"you\", like the yew tree."
+}
