@@ -28,15 +28,22 @@ fi
 KEY="$(tr -d '[:space:]' < "$KEY_FILE")"
 KEY_URL="$SITE_URL/$KEY.txt"
 
-SITEMAP="$ROOT/docs/sitemap.xml"
-[[ -f "$SITEMAP" ]] || { echo "ERROR: $SITEMAP missing." >&2; exit 2; }
+# Submit every page sitemap, not just sitemap.xml — the Chinese per-word pages
+# (/zh/word/) live in sitemap-seo.xml, so reading only sitemap.xml silently
+# dropped ~1200 zh URLs from every IndexNow run. Skip sitemap-index.xml: its
+# <loc>s point at other sitemaps, not pages.
+SITEMAPS=()
+for sm in "$ROOT"/docs/sitemap.xml "$ROOT"/docs/sitemap-seo.xml; do
+  [[ -f "$sm" ]] && SITEMAPS+=("$sm")
+done
+[[ ${#SITEMAPS[@]} -gt 0 ]] || { echo "ERROR: no page sitemaps under $ROOT/docs." >&2; exit 2; }
 
 STATE_DIR="$ROOT/.indexnow"
 mkdir -p "$STATE_DIR"
 LAST_SUBMITTED="$STATE_DIR/last-submitted.txt"
 
-# Extract all <loc>…</loc> URLs
-ALL_URLS="$(grep -oE '<loc>[^<]+</loc>' "$SITEMAP" | sed -e 's|<loc>||g' -e 's|</loc>||g')"
+# Extract all <loc>…</loc> URLs across every page sitemap, deduped.
+ALL_URLS="$(grep -hoE '<loc>[^<]+</loc>' "${SITEMAPS[@]}" | sed -e 's|<loc>||g' -e 's|</loc>||g' | sort -u)"
 
 # Filter to "only new" if asked
 if [[ "${1:-}" == "--only-new" && -f "$LAST_SUBMITTED" ]]; then
