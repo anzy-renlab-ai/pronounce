@@ -1,0 +1,12 @@
+{
+  "word": "inference",
+  "ipa": "/ˈɪnfərəns/",
+  "respelling_us": "in fer uns",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "Running a trained model on new data; \"IN-fer-uns\"."
+}

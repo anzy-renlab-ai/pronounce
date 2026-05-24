@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.5 — 2026-05-24
+
+- **Dictionary 1289 → 1329 (+40) — ML / math vocabulary.** Training & optimization (`distill`/`distillation`, `quantize`/`quantization`, `logits` "LOH-jits", `epoch`, `stochastic`, `ablation` "uh-BLAY-shun", `annealing`, `backprop`, `inference`, `embedding`, `latent`, `ensemble` "on-SOM-bul", `entropy`, `hyperparameter`, `sigmoid`, `tokenization`), linear algebra (`eigen`/`eigenvalue` "EYE-gun", `scalar`, `determinant`, `covariance`, `manifold`, `centroid`, `cosine`, `corpus`/`corpora`), and the mathematicians everyone mispronounces (`euler` "OY-ler", `gaussian` "GOW-see-un", `bayesian`, `jacobian`, `hessian`, `lagrange`/`lagrangian`, `riemann`, `laplace`/`laplacian`, `asymptotic`).
+
 ## 0.4.4 — 2026-05-24
 
 - **Dictionary 1238 → 1289 (+51).** Greek letters used as code/ML symbols (`eta`, `nu`, `psi`, `xi` "zye", `rho`, `tau`, `zeta`, `omega`, `omicron`, `upsilon` — the ones everyone argues about), AWS/GCP services (Athena, Aurora, Bedrock, BigQuery, CloudFront, Cognito, Fargate, Kinesis, Redshift, SageMaker, SQS, SNS, VPC, Pub/Sub, Firebase), file formats (AVIF, HEIC, WebP, FLAC, OGG, MKV, SVG, JPEG, ICO, WOFF), and long-mispronounced CS/English words (`facade`, `paradigm`, `heuristic`, `mnemonic`, `ephemeral`, `pseudo`, `quasi`, `verbose`). Plus PyCharm, WebStorm, Spring, OpenGL, DirectX, Metal, Three.js.

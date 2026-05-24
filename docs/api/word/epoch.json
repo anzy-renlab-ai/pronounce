@@ -1,0 +1,12 @@
+{
+  "word": "epoch",
+  "ipa": "/ˈɛpək/",
+  "respelling_us": "ep uk",
+  "alt_ipa": ["/ˈiːpɒk/"],
+  "alt_respelling_us": ["ee pok"],
+  "source_url": "",
+  "source_label": "",
+  "category": "cs-term",
+  "confidence": "contested",
+  "notes": "One full pass over the training data; US \"EP-uk\", also \"EE-pok\"."
+}

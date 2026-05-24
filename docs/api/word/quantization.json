@@ -1,0 +1,12 @@
+{
+  "word": "quantization",
+  "ipa": "/ˌkwɒntɪˈzeɪʃən/",
+  "respelling_us": "kwon tih zay shun",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "Compressing weights to lower precision; \"kwon-tih-ZAY-shun\"."
+}

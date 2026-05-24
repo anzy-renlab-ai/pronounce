@@ -1,0 +1,12 @@
+{
+  "word": "distill",
+  "ipa": "/dɪˈstɪl/",
+  "respelling_us": "dih still",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "Knowledge distillation: train a small model to mimic a big one; \"dih-STILL\"."
+}

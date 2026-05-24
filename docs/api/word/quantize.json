@@ -1,0 +1,12 @@
+{
+  "word": "quantize",
+  "ipa": "/ˈkwɒntaɪz/",
+  "respelling_us": "kwon tize",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "Reduce numeric precision (model quantization); \"KWON-tize\"."
+}

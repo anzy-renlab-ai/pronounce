@@ -1,0 +1,12 @@
+{
+  "word": "logits",
+  "ipa": "/ˈloʊdʒɪts/",
+  "respelling_us": "loh jits",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "Raw pre-softmax outputs; \"LOH-jits\" (soft g)."
+}

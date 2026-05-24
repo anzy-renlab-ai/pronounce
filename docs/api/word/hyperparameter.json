@@ -1,0 +1,12 @@
+{
+  "word": "hyperparameter",
+  "ipa": "/ˈhaɪpərpəˌræmɪtər/",
+  "respelling_us": "hyper puh ram ih ter",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "A setting chosen before training (lr, batch size); \"hyper-puh-RAM-ih-ter\"."
+}
