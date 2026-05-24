@@ -1,0 +1,12 @@
+{
+  "word": "fargate",
+  "ipa": "/ˈfɑːrɡeɪt/",
+  "respelling_us": "far gate",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "AWS Fargate (serverless containers); \"FAR-gate\"."
+}

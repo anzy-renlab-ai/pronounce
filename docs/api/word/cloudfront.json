@@ -1,0 +1,12 @@
+{
+  "word": "cloudfront",
+  "ipa": "/ˈklaʊd frʌnt/",
+  "respelling_us": "cloud frunt",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "AWS CloudFront CDN; \"cloud-front\"."
+}

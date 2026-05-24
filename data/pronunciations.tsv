@@ -1299,3 +1299,54 @@ quickwit	/ˈkwɪkwɪt/	quick wit					product	community-consensus	Search engine f
 reflex	/ˈriːflɛks/	ree fleks					tool	community-consensus	Python full-stack framework (formerly Pynecone); "REE-fleks".
 zstd	/ˌziː ˈstændərd/	zee standard	/ˌziː ɛs tiː ˈdiː/	zee ess tee dee			abbreviation	contested	Zstandard compression; "Z-standard" or spelled "Z-S-T-D".
 warp	/wɔːrp/	warp					product	community-consensus	Rust-based terminal (and a Rust web framework); "warp".
+eta	/ˈeɪtə/	ay tuh	/ˈiːtə/	ee tuh			cs-term	contested	Greek letter η (learning rate); US math "AY-tuh", also "EE-tuh".
+nu	/njuː/	new	/nuː/	noo			cs-term	community-consensus	Greek letter ν; "new"/"noo". Not to be confused with mu.
+psi	/saɪ/	sigh	/psaɪ/	p sigh			cs-term	contested	Greek letter ψ (wavefunction); US "sigh", some "p-sigh".
+xi	/zaɪ/	zye	/ksaɪ/	k sigh			cs-term	contested	Greek letter ξ; readings vary wildly — "zye", "k-sigh", "ksee".
+rho	/roʊ/	roh					cs-term	community-consensus	Greek letter ρ (correlation, density); "roh".
+tau	/taʊ/	tow	/tɔː/	taw			cs-term	contested	Greek letter τ; "tow" (rhymes cow) vs "taw".
+zeta	/ˈzeɪtə/	zay tuh	/ˈziːtə/	zee tuh			cs-term	contested	Greek letter ζ; US "ZAY-tuh", also "ZEE-tuh".
+omega	/oʊˈmeɪɡə/	oh may guh					cs-term	community-consensus	Greek letter ω; "oh-MAY-guh".
+omicron	/ˈɒmɪkrɒn/	om ih kron	/ˈoʊmɪkrɒn/	oh mih kron			cs-term	contested	Greek letter ο; "OM-ih-kron" vs "OH-mih-kron".
+upsilon	/ˈʌpsɪlɒn/	up sih lon	/juːpˈsaɪlən/	yoop sigh lun			cs-term	contested	Greek letter υ; "UP-sih-lon" vs "yoop-SY-lun".
+athena	/əˈθiːnə/	uh thee nuh					product	community-consensus	AWS Athena (serverless query); "uh-THEE-nuh", the goddess.
+aurora	/ɔːˈrɔːrə/	uh ror uh					product	community-consensus	AWS Aurora database; "uh-ROR-uh".
+bedrock	/ˈbɛdrɒk/	bed rock					product	community-consensus	AWS Bedrock (managed LLMs); "bed-rock".
+bigquery	/ˈbɪɡ ˌkwɪri/	big kweer ee					product	community-consensus	Google BigQuery; "big-QUERY".
+cloudfront	/ˈklaʊd frʌnt/	cloud frunt					product	community-consensus	AWS CloudFront CDN; "cloud-front".
+cognito	/kɒɡˈniːtoʊ/	kog nee toh					product	community-consensus	AWS Cognito (auth); "kog-NEE-toh" (from incognito).
+fargate	/ˈfɑːrɡeɪt/	far gate					product	community-consensus	AWS Fargate (serverless containers); "FAR-gate".
+kinesis	/kɪˈniːsɪs/	kih nee sis					product	community-consensus	AWS Kinesis (streaming); "kih-NEE-sis".
+redshift	/ˈrɛdʃɪft/	red shift					product	community-consensus	AWS Redshift warehouse; "red-shift".
+sagemaker	/ˈseɪdʒmeɪkər/	sage maker					product	community-consensus	AWS SageMaker (ML); "sage-maker".
+sqs	/ˌɛs kjuː ˈɛs/	ess cue ess					abbreviation	community-consensus	AWS Simple Queue Service; letters "S-Q-S".
+sns	/ˌɛs ɛn ˈɛs/	ess en ess					abbreviation	community-consensus	AWS Simple Notification Service; letters "S-N-S".
+vpc	/ˌviː piː ˈsiː/	vee pee see					abbreviation	community-consensus	Virtual Private Cloud; letters "V-P-C".
+pubsub	/ˈpʌbsʌb/	pub sub					product	community-consensus	Google Pub/Sub messaging; "pub-sub".
+firebase	/ˈfaɪərbeɪs/	fire base					product	community-consensus	Google Firebase platform; "fire-base".
+metamask	/ˈmɛtəmɑːsk/	met uh mask					product	community-consensus	Ethereum wallet; "META-mask".
+avif	/ˈeɪvɪf/	ay vif					abbreviation	community-consensus	AV1 Image Format; "AY-vif".
+heic	/ˌeɪtʃ iː aɪ ˈsiː/	aitch ee eye see	/heɪk/	hake			abbreviation	contested	Apple High-Efficiency image; spelled "H-E-I-C", some say "hake".
+webp	/ˌwɛb ˈpiː/	web pee					abbreviation	community-consensus	Google image format; "web-P".
+flac	/flæk/	flak					abbreviation	community-consensus	Free Lossless Audio Codec; "flak".
+ogg	/ɒɡ/	og					abbreviation	community-consensus	Ogg audio container; "og".
+mkv	/ˌɛm keɪ ˈviː/	em kay vee					abbreviation	community-consensus	Matroska video container; letters "M-K-V".
+svg	/ˌɛs viː ˈdʒiː/	ess vee jee					abbreviation	community-consensus	Scalable Vector Graphics; letters "S-V-G".
+jpeg	/ˈdʒeɪpɛɡ/	jay peg					abbreviation	community-consensus	Joint Photographic Experts Group; "JAY-peg".
+ico	/ˈaɪkoʊ/	eye koh	/ˌaɪ siː ˈoʊ/	eye see oh			abbreviation	contested	Windows icon format; "EYE-koh" or letters "I-C-O".
+woff	/wɒf/	woff					abbreviation	community-consensus	Web Open Font Format; "woff".
+facade	/fəˈsɑːd/	fuh sahd					cs-term	community-consensus	Design pattern; "fuh-SAHD" (the ç/c is soft).
+paradigm	/ˈpærədaɪm/	pa ruh dime					cs-term	community-consensus	"PA-ruh-dime"; the g is silent.
+heuristic	/hjʊˈrɪstɪk/	hyoo riss tik					cs-term	community-consensus	"hyoo-RISS-tik".
+mnemonic	/nɪˈmɒnɪk/	nih mon ik					cs-term	community-consensus	"nih-MON-ik"; the m is silent.
+ephemeral	/ɪˈfɛmərəl/	ih fem er ul					cs-term	community-consensus	Short-lived (ephemeral storage/ports); "ih-FEM-er-ul".
+pseudo	/ˈsuːdoʊ/	soo doh					cs-term	community-consensus	"SOO-doh"; the p is silent. Not the same as `sudo`.
+quasi	/ˈkweɪzaɪ/	kway zye	/ˈkwɑːzi/	kwah zee			cs-term	contested	"KWAY-zye" (US) vs "KWAH-zee".
+verbose	/vɜːrˈboʊs/	ver bohss					cs-term	community-consensus	As in --verbose; "ver-BOHSS".
+pycharm	/ˈpaɪtʃɑːrm/	pie charm					product	community-consensus	JetBrains Python IDE; "PIE-charm".
+webstorm	/ˈwɛbstɔːrm/	web storm					product	community-consensus	JetBrains JS IDE; "web-storm".
+spring	/sprɪŋ/	spring					product	community-consensus	Java framework; "spring", like the season.
+opengl	/ˌoʊpən dʒiː ˈɛl/	open jee ell					abbreviation	community-consensus	Graphics API; "open-G-L".
+directx	/dɪˈrɛkt ɛks/	dih rekt eks					product	community-consensus	Microsoft graphics API; "Direct-X".
+metal	/ˈmɛtəl/	met ul					product	community-consensus	Apple graphics API; "metal", like the material.
+threejs	/ˌθriː dʒeɪ ˈɛs/	three jay ess					product	community-consensus	Three.js WebGL library; "three-J-S".

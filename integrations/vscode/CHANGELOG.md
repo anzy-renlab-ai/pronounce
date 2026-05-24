@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.4 — 2026-05-24
+
+- **Dictionary 1238 → 1289 (+51).** Greek letters used as code/ML symbols (`eta`, `nu`, `psi`, `xi` "zye", `rho`, `tau`, `zeta`, `omega`, `omicron`, `upsilon` — the ones everyone argues about), AWS/GCP services (Athena, Aurora, Bedrock, BigQuery, CloudFront, Cognito, Fargate, Kinesis, Redshift, SageMaker, SQS, SNS, VPC, Pub/Sub, Firebase), file formats (AVIF, HEIC, WebP, FLAC, OGG, MKV, SVG, JPEG, ICO, WOFF), and long-mispronounced CS/English words (`facade`, `paradigm`, `heuristic`, `mnemonic`, `ephemeral`, `pseudo`, `quasi`, `verbose`). Plus PyCharm, WebStorm, Spring, OpenGL, DirectX, Metal, Three.js.
+
 ## 0.4.3 — 2026-05-23
 
 - **Dictionary 1212 → 1238 (+26).** AI labs & models (GLM, Zhipu, ERNIE, InternLM, Moonshot), AI coding agents (OpenHands / OpenDevin, Goose), the Rust ecosystem's tricky names (`serde` "sir-DEE", `yew` "you", `clap`, `rayon` "RAY-on", `wasmer`), modern JS tooling (Elysia, Effect, Nitro, Valibot, Million, Rolldown), and dev platforms (Convex, Xata "ZAH-tah", Axiom, Quickwit, Reflex, `zstd`, Warp).
