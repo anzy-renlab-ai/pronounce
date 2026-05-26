@@ -1331,3 +1331,126 @@ manifold | /ˈmænɪfoʊld/ | man ih fold | cs-term | community-consensus | (no 
 scalar | /ˈskeɪlər/ | skay ler | cs-term | community-consensus | (no source)
 sigmoid | /ˈsɪɡmɔɪd/ | sig moyd | cs-term | community-consensus | (no source)
 tokenization | /ˌtoʊkənaɪˈzeɪʃən/ | toh kun eye zay shun | cs-term | community-consensus | (no source)
+dreamer | /ˈdriːmər/ | dree mer | product | community-consensus | (no source)
+dreamerv3 | /ˈdriːmər viː ˈθriː/ | dree mer vee three | product | community-consensus | (no source)
+muzero | /ˈmjuː ˌzɪroʊ/ | mew zee roh | product | community-consensus | (no source)
+alphazero | /ˈælfə ˌzɪroʊ/ | al fuh zee roh | product | community-consensus | (no source)
+alphago | /ˈælfə ɡoʊ/ | al fuh go | product | community-consensus | (no source)
+alphafold | /ˈælfə foʊld/ | al fuh fold | product | community-consensus | (no source)
+alphastar | /ˈælfə stɑːr/ | al fuh star | product | community-consensus | (no source)
+jepa | /ˈdʒɛpə/ | jep uh | cs-term | community-consensus | (no source)
+gato | /ˈɡɑːtoʊ/ | gah toh | product | community-consensus | (no source)
+rssm | /ˌɑːr ɛs ɛs ˈɛm/ | ar ess ess em | abbreviation | community-consensus | (no source)
+tdmpc | /ˌtiː diː ɛm piː ˈsiː/ | tee dee em pee see | abbreviation | community-consensus | (no source)
+octo | /ˈɒktoʊ/ | ok toh | product | community-consensus | (no source)
+openvla | /ˈoʊpən viː ɛl ˈeɪ/ | open vee ell ay | product | community-consensus | (no source)
+mujoco | /ˈmjuːdʒoʊkoʊ/ | mew jo co | product | creator-clarified | https://mujoco.org/
+isaac | /ˈaɪzək/ | eye zik | product | community-consensus | (no source)
+habitat | /ˈhæbɪtæt/ | hab ih tat | product | community-consensus | (no source)
+gymnasium | /dʒɪmˈneɪziəm/ | jim nay zee um | product | community-consensus | (no source)
+brax | /bræks/ | bracks | product | community-consensus | (no source)
+pybullet | /ˈpaɪˌbʊlɪt/ | pie bullet | product | community-consensus | (no source)
+gazebo | /ɡəˈziːboʊ/ | guh zee boh | product | community-consensus | (no source)
+webots | /ˈwɛbɒts/ | web ots | product | community-consensus | (no source)
+carla | /ˈkɑːrlə/ | kar luh | product | community-consensus | (no source)
+airsim | /ˈɛərsɪm/ | air sim | product | community-consensus | (no source)
+omniverse | /ˈɒmnɪvɜːrs/ | om nih verse | product | community-consensus | (no source)
+groot | /ɡruːt/ | groot | product | community-consensus | (no source)
+maniskill | /ˈmænɪskɪl/ | man ih skill | product | community-consensus | (no source)
+aloha | /əˈloʊhɑː/ | uh loh hah | product | community-consensus | (no source)
+atari | /əˈtɑːri/ | uh tar ee | product | community-consensus | (no source)
+crafter | /ˈkræftər/ | craf ter | product | community-consensus | (no source)
+minerl | /ˌmaɪn ɑːr ˈɛl/ | mine ar ell | product | community-consensus | (no source)
+minedojo | /ˈmaɪn doʊdʒoʊ/ | mine doh joh | product | community-consensus | (no source)
+procgen | /ˈprɒkdʒɛn/ | prock jen | product | community-consensus | (no source)
+trpo | /ˈtɜːrpoʊ/ | ter po | abbreviation | community-consensus | (no source)
+ddpg | /ˌdiː diː piː ˈdʒiː/ | dee dee pee jee | abbreviation | community-consensus | (no source)
+sac | /sæk/ | sack | abbreviation | contested | (no source)
+impala | /ɪmˈpɑːlə/ | im pah luh | product | community-consensus | (no source)
+bellman | /ˈbɛlmən/ | bell mun | cs-term | community-consensus | (no source)
+markov | /ˈmɑːrkɒf/ | mar koff | cs-term | community-consensus | (no source)
+mdp | /ˌɛm diː ˈpiː/ | em dee pee | abbreviation | community-consensus | (no source)
+pomdp | /ˌpiː oʊ ɛm diː ˈpiː/ | pee oh em dee pee | abbreviation | contested | (no source)
+ergodic | /ɜːrˈɡɒdɪk/ | er god ik | cs-term | community-consensus | (no source)
+quaternion | /kwəˈtɜːrniən/ | kwuh ter nee un | cs-term | community-consensus | (no source)
+odometry | /oʊˈdɒmɪtri/ | oh dom uh tree | cs-term | community-consensus | (no source)
+lidar | /ˈlaɪdɑːr/ | lye dar | cs-term | community-consensus | (no source)
+proprioception | /ˌproʊprioʊˈsɛpʃən/ | pro pree oh sep shun | cs-term | community-consensus | (no source)
+geodesic | /ˌdʒiːoʊˈdɛsɪk/ | jee oh dess ik | cs-term | community-consensus | (no source)
+holonomic | /ˌhɒləˈnɒmɪk/ | hol uh nom ik | cs-term | community-consensus | (no source)
+kinematics | /ˌkɪnəˈmætɪks/ | kin uh mat iks | cs-term | community-consensus | (no source)
+slam | /slæm/ | slam | cs-term | community-consensus | (no source)
+rollout | /ˈroʊlaʊt/ | roll out | cs-term | community-consensus | (no source)
+trajectory | /trəˈdʒɛktəri/ | truh jek tuh ree | cs-term | community-consensus | (no source)
+embodied | /ɪmˈbɒdid/ | im bod eed | cs-term | community-consensus | (no source)
+egocentric | /ˌiːɡoʊˈsɛntrɪk/ | ee go sen trik | cs-term | community-consensus | (no source)
+allocentric | /ˌæloʊˈsɛntrɪk/ | al oh sen trik | cs-term | community-consensus | (no source)
+CEO | /ˌsiː iː ˈoʊ/ | see ee oh | acronym | community-consensus | https://en.wikipedia.org/wiki/Chief_executive_officer
+CTO | /ˌsiː tiː ˈoʊ/ | see tee oh | acronym | community-consensus | https://en.wikipedia.org/wiki/Chief_technology_officer
+CFO | /ˌsiː ɛf ˈoʊ/ | see eff oh | acronym | community-consensus | https://en.wikipedia.org/wiki/Chief_financial_officer
+COO | /ˌsiː oʊ ˈoʊ/ | see oh oh | acronym | community-consensus | https://en.wikipedia.org/wiki/Chief_operating_officer
+CMO | /ˌsiː ɛm ˈoʊ/ | see em oh | acronym | community-consensus | https://en.wikipedia.org/wiki/Chief_marketing_officer
+CPO | /ˌsiː piː ˈoʊ/ | see pee oh | acronym | community-consensus | https://en.wikipedia.org/wiki/Chief_product_officer
+CRO | /ˌsiː ɑːr ˈoʊ/ | see ar oh | acronym | community-consensus | https://en.wikipedia.org/wiki/Chief_revenue_officer
+CIO | /ˌsiː aɪ ˈoʊ/ | see eye oh | acronym | community-consensus | https://en.wikipedia.org/wiki/Chief_information_officer
+CISO | /ˈsiːsoʊ/ | see soh | acronym | contested | https://en.wikipedia.org/wiki/Chief_information_security_officer
+CSO | /ˌsiː ɛs ˈoʊ/ | see ess oh | acronym | community-consensus | https://en.wikipedia.org/wiki/Chief_security_officer
+CHRO | /ˌsiː eɪtʃ ɑːr ˈoʊ/ | see aitch ar oh | acronym | community-consensus | https://en.wikipedia.org/wiki/Chief_human_resources_officer
+CDO | /ˌsiː diː ˈoʊ/ | see dee oh | acronym | community-consensus | https://en.wikipedia.org/wiki/Chief_data_officer
+CCO | /ˌsiː siː ˈoʊ/ | see see oh | acronym | community-consensus | https://en.wikipedia.org/wiki/Chief_commercial_officer
+VP | /ˌviː ˈpiː/ | vee pee | acronym | community-consensus | https://en.wikipedia.org/wiki/Vice_president
+SVP | /ˌɛs viː ˈpiː/ | ess vee pee | acronym | community-consensus | (no source)
+EVP | /ˌiː viː ˈpiː/ | ee vee pee | acronym | community-consensus | (no source)
+AVP | /ˌeɪ viː ˈpiː/ | ay vee pee | acronym | community-consensus | (no source)
+GM | /ˌdʒiː ˈɛm/ | jee em | acronym | community-consensus | (no source)
+COS | /ˌsiː oʊ ˈɛs/ | see oh ess | acronym | community-consensus | (no source)
+EM | /ˌiː ˈɛm/ | ee em | acronym | community-consensus | (no source)
+TLM | /ˌtiː ɛl ˈɛm/ | tee ell em | acronym | community-consensus | (no source)
+TL | /ˌtiː ˈɛl/ | tee ell | acronym | community-consensus | (no source)
+IC | /ˌaɪ ˈsiː/ | eye see | acronym | community-consensus | https://en.wikipedia.org/wiki/Individual_contributor
+DRI | /ˌdiː ɑːr ˈaɪ/ | dee ar eye | acronym | community-consensus | https://en.wikipedia.org/wiki/DRI
+MTS | /ˌɛm tiː ˈɛs/ | em tee ess | acronym | community-consensus | (no source)
+SWE | /ˌɛs ˌdʌbəl juː ˈiː/ | ess double yoo ee | acronym | contested | https://en.wikipedia.org/wiki/Software_engineering
+MLE | /ˌɛm ɛl ˈiː/ | em ell ee | acronym | community-consensus | (no source)
+RE | /ˌɑːr ˈiː/ | ar ee | acronym | community-consensus | (no source)
+RS | /ˌɑːr ˈɛs/ | ar ess | acronym | community-consensus | (no source)
+FDE | /ˌɛf diː ˈiː/ | eff dee ee | acronym | community-consensus | https://en.wikipedia.org/wiki/Forward_deployed_engineer
+FE | /ˌɛf ˈiː/ | eff ee | acronym | community-consensus | (no source)
+BE | /ˌbiː ˈiː/ | bee ee | acronym | community-consensus | (no source)
+FSE | /ˌɛf ɛs ˈiː/ | eff ess ee | acronym | community-consensus | (no source)
+PE | /ˌpiː ˈiː/ | pee ee | acronym | community-consensus | (no source)
+QA | /ˌkjuː ˈeɪ/ | kew ay | acronym | community-consensus | https://en.wikipedia.org/wiki/Quality_assurance
+QE | /ˌkjuː ˈiː/ | kew ee | acronym | community-consensus | (no source)
+PM | /ˌpiː ˈɛm/ | pee em | acronym | community-consensus | https://en.wikipedia.org/wiki/Product_manager
+TPM | /ˌtiː piː ˈɛm/ | tee pee em | acronym | community-consensus | (no source)
+PgM | /ˌpiː dʒiː ˈɛm/ | pee jee em | acronym | community-consensus | (no source)
+GPM | /ˌdʒiː piː ˈɛm/ | jee pee em | acronym | community-consensus | (no source)
+APM | /ˌeɪ piː ˈɛm/ | ay pee em | acronym | community-consensus | (no source)
+PMM | /ˌpiː ɛm ˈɛm/ | pee em em | acronym | community-consensus | (no source)
+UX | /ˌjuː ˈɛks/ | yoo ex | acronym | community-consensus | https://en.wikipedia.org/wiki/User_experience
+UI | /ˌjuː ˈaɪ/ | yoo eye | acronym | community-consensus | https://en.wikipedia.org/wiki/User_interface
+UXR | /ˌjuː ɛks ˈɑːr/ | yoo ex ar | acronym | community-consensus | (no source)
+UXE | /ˌjuː ɛks ˈiː/ | yoo ex ee | acronym | community-consensus | (no source)
+DS | /ˌdiː ˈɛs/ | dee ess | acronym | community-consensus | (no source)
+DA | /ˌdiː ˈeɪ/ | dee ay | acronym | community-consensus | (no source)
+DE | /ˌdiː ˈiː/ | dee ee | acronym | community-consensus | (no source)
+DBA | /ˌdiː biː ˈeɪ/ | dee bee ay | acronym | community-consensus | https://en.wikipedia.org/wiki/Database_administrator
+BIE | /ˌbiː aɪ ˈiː/ | bee eye ee | acronym | community-consensus | (no source)
+AE | /ˌeɪ ˈiː/ | ay ee | acronym | community-consensus | (no source)
+AM | /ˌeɪ ˈɛm/ | ay em | acronym | community-consensus | (no source)
+SE | /ˌɛs ˈiː/ | ess ee | acronym | community-consensus | (no source)
+SA | /ˌɛs ˈeɪ/ | ess ay | acronym | community-consensus | (no source)
+CSM | /ˌsiː ɛs ˈɛm/ | see ess em | acronym | community-consensus | (no source)
+CS | /ˌsiː ˈɛs/ | see ess | acronym | community-consensus | (no source)
+SDR | /ˌɛs diː ˈɑːr/ | ess dee ar | acronym | community-consensus | (no source)
+BDR | /ˌbiː diː ˈɑːr/ | bee dee ar | acronym | community-consensus | (no source)
+BD | /ˌbiː ˈdiː/ | bee dee | acronym | community-consensus | (no source)
+BizOps | /ˈbɪz ɒps/ | biz ops | acronym | community-consensus | (no source)
+RevOps | /ˈrɛv ɒps/ | rev ops | acronym | community-consensus | (no source)
+PeopleOps | /ˈpiːpəl ɒps/ | pee pul ops | acronym | community-consensus | (no source)
+HRBP | /ˌeɪtʃ ɑːr biː ˈpiː/ | aitch ar bee pee | acronym | community-consensus | (no source)
+KR | /ˌkeɪ ˈɑːr/ | kay ar | acronym | community-consensus | (no source)
+RACI | /ˈreɪsi/ | ray see | acronym | community-consensus | https://en.wikipedia.org/wiki/Responsibility_assignment_matrix
+EBR | /ˌiː biː ˈɑːr/ | ee bee ar | acronym | community-consensus | (no source)
+MBR | /ˌɛm biː ˈɑːr/ | em bee ar | acronym | community-consensus | (no source)
+MoTS | /ˌɛm oʊ tiː ˈɛs/ | em oh tee ess | acronym | contested | (no source)

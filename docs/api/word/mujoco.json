@@ -1,0 +1,12 @@
+{
+  "word": "mujoco",
+  "ipa": "/ˈmjuːdʒoʊkoʊ/",
+  "respelling_us": "mew jo co",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://mujoco.org/",
+  "source_label": "MuJoCo",
+  "category": "product",
+  "confidence": "creator-clarified",
+  "notes": "Multi-Joint dynamics with Contact physics engine; \"MEW-jo-co\"."
+}

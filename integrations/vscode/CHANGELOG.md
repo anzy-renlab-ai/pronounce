@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.4.7 — 2026-05-26
+
+- **Dictionary 1383 → 1452 (+69) — AI-native company roles.** C-suite (CEO/CTO/CFO/COO/CMO/CPO/CRO/CIO/CISO "SEE-soh"/CSO/CHRO/CDO/CCO), VP tier (VP/SVP/EVP/AVP/GM/COS), eng management & IC track (EM, TLM, TL, IC "eye-see", DRI "dee-ar-eye", MTS), eng specialties (SWE/MLE/RE/RS/FDE/FE/BE/FSE/PE/QA/QE), product/program (PM/TPM/PgM/GPM/APM/PMM), design & research (UX/UI/UXR/UXE), data (DS/DA/DE/DBA/BIE), GTM (AE/AM/SE/SA/CSM/CS/SDR/BDR/BD), ops (BizOps/RevOps/PeopleOps/HRBP), process (KR, RACI "RAY-see", EBR/MBR). The ones every AI-native company uses on day one.
+
+## 0.4.6 — 2026-05-25
+
+- **Dictionary 1329 → 1383 (+54) — world models, RL & embodied AI.** World-model agents (Dreamer/DreamerV3, MuZero "MEW-zee-roh", AlphaZero/Go/Fold/Star, JEPA "JEP-uh", Gato "GAH-toh", RSSM, TD-MPC, Octo, OpenVLA), robotics simulators (MuJoCo "MEW-jo-co" — creator-clarified, NVIDIA Isaac "EYE-zik", Habitat, Gymnasium, Brax, PyBullet, Gazebo "guh-ZEE-boh", CARLA "KAR-luh", AirSim, Omniverse, GR00T "groot", ManiSkill, ALOHA, Atari, Crafter, MineRL, MineDojo, ProcGen), RL algorithms (TRPO, DDPG, SAC, IMPALA), and control/robotics theory (Bellman, Markov, MDP/POMDP, ergodic, quaternion "kwuh-TER-nee-un", odometry, LiDAR "LYE-dar", proprioception, geodesic, holonomic, kinematics, SLAM, rollout, trajectory, embodied, egocentric/allocentric).
+
 ## 0.4.5 — 2026-05-24
 
 - **Dictionary 1289 → 1329 (+40) — ML / math vocabulary.** Training & optimization (`distill`/`distillation`, `quantize`/`quantization`, `logits` "LOH-jits", `epoch`, `stochastic`, `ablation` "uh-BLAY-shun", `annealing`, `backprop`, `inference`, `embedding`, `latent`, `ensemble` "on-SOM-bul", `entropy`, `hyperparameter`, `sigmoid`, `tokenization`), linear algebra (`eigen`/`eigenvalue` "EYE-gun", `scalar`, `determinant`, `covariance`, `manifold`, `centroid`, `cosine`, `corpus`/`corpora`), and the mathematicians everyone mispronounces (`euler` "OY-ler", `gaussian` "GOW-see-un", `bayesian`, `jacobian`, `hessian`, `lagrange`/`lagrangian`, `riemann`, `laplace`/`laplacian`, `asymptotic`).

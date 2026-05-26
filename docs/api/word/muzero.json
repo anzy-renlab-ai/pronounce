@@ -1,0 +1,12 @@
+{
+  "word": "muzero",
+  "ipa": "/ˈmjuː ˌzɪroʊ/",
+  "respelling_us": "mew zee roh",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "DeepMind model-based RL (learns the model); \"MEW-zee-roh\"."
+}
