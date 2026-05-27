@@ -1,0 +1,12 @@
+{
+  "word": "Chinchilla",
+  "ipa": "/tʃɪnˈtʃɪlə/",
+  "respelling_us": "chin chill uh",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2203.15556",
+  "source_label": "Hoffmann et al. 2022",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "DeepMind compute-optimal LM (the \"Chinchilla scaling laws\"); \"chin-CHIL-uh\"."
+}

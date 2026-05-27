@@ -1,0 +1,12 @@
+{
+  "word": "HyDE",
+  "ipa": "/haɪd/",
+  "respelling_us": "hide",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2212.10496",
+  "source_label": "Gao et al. 2022",
+  "category": "acronym",
+  "confidence": "community-consensus",
+  "notes": "Hypothetical Document Embeddings; pronounced \"hide\"."
+}

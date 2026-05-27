@@ -1,0 +1,12 @@
+{
+  "word": "ALBERT",
+  "ipa": "/ælˈbɜːrt/",
+  "respelling_us": "al bert",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/1909.11942",
+  "source_label": "Lan et al. 2019",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "A Lite BERT; pronounced like the name \"al-BERT\"."
+}

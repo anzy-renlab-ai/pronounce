@@ -1,0 +1,12 @@
+{
+  "word": "EfficientNet",
+  "ipa": "/ɪˈfɪʃəntˌnɛt/",
+  "respelling_us": "eh fish unt net",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/1905.11946",
+  "source_label": "Tan & Le 2019",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Compound-scaling CNN family; \"ef-FISH-unt-net\"."
+}

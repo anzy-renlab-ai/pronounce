@@ -1,0 +1,12 @@
+{
+  "word": "METEOR",
+  "ipa": "/ˈmiːtiər/",
+  "respelling_us": "mee tee er",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://aclanthology.org/W05-0909/",
+  "source_label": "Banerjee & Lavie 2005",
+  "category": "acronym",
+  "confidence": "community-consensus",
+  "notes": "MT eval metric; like the meteor in the sky."
+}

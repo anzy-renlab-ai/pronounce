@@ -1,0 +1,12 @@
+{
+  "word": "XLNet",
+  "ipa": "/ˌɛks ɛl ˈnɛt/",
+  "respelling_us": "ex ell net",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/1906.08237",
+  "source_label": "Yang et al. 2019",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Permutation language-modeling pre-train; \"X-L-net\"."
+}

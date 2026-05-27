@@ -1,0 +1,12 @@
+{
+  "word": "ViT",
+  "ipa": "/ˌviː aɪ ˈtiː/",
+  "respelling_us": "vee eye tee",
+  "alt_ipa": ["/vɪt/"],
+  "alt_respelling_us": ["vit"],
+  "source_url": "https://arxiv.org/abs/2010.11929",
+  "source_label": "Dosovitskiy et al. 2020",
+  "category": "acronym",
+  "confidence": "contested",
+  "notes": "Vision Transformer; letters dominant, \"vit\" used informally."
+}

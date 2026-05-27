@@ -1,0 +1,12 @@
+{
+  "word": "Gopher",
+  "ipa": "/ˈɡoʊfər/",
+  "respelling_us": "goh fer",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2112.11446",
+  "source_label": "Rae et al. 2021",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "DeepMind 280B LM; \"GOH-fer\" like the animal."
+}

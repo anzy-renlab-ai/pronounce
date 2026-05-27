@@ -1,0 +1,12 @@
+{
+  "word": "GraphRAG",
+  "ipa": "/ˈɡræfˌræɡ/",
+  "respelling_us": "graf rag",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2404.16130",
+  "source_label": "Microsoft 2024",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Graph-based RAG; \"GRAF-rag\"."
+}

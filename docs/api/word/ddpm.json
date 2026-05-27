@@ -1,0 +1,12 @@
+{
+  "word": "DDPM",
+  "ipa": "/ˌdiː diː piː ˈɛm/",
+  "respelling_us": "dee dee pee em",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2006.11239",
+  "source_label": "Ho et al. 2020",
+  "category": "acronym",
+  "confidence": "community-consensus",
+  "notes": "Denoising Diffusion Probabilistic Models; letters \"D-D-P-M\"."
+}

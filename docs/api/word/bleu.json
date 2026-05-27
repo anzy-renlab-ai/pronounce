@@ -1,0 +1,12 @@
+{
+  "word": "BLEU",
+  "ipa": "/bluː/",
+  "respelling_us": "blue",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://aclanthology.org/P02-1040/",
+  "source_label": "Papineni 2002",
+  "category": "acronym",
+  "confidence": "creator-clarified",
+  "notes": "Bilingual Evaluation Understudy; pronounced \"blue\" per the original paper."
+}

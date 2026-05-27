@@ -1454,3 +1454,99 @@ RACI | /ˈreɪsi/ | ray see | acronym | community-consensus | https://en.wikiped
 EBR | /ˌiː biː ˈɑːr/ | ee bee ar | acronym | community-consensus | (no source)
 MBR | /ˌɛm biː ˈɑːr/ | em bee ar | acronym | community-consensus | (no source)
 MoTS | /ˌɛm oʊ tiː ˈɛs/ | em oh tee ess | acronym | contested | (no source)
+arxiv | /ˈɑːrkaɪv/ | ar kive | product | creator-clarified | https://info.arxiv.org/help/faq/whatisarxiv.html
+preprint | /ˈpriːˌprɪnt/ | pree print | cs-term | community-consensus | (no source)
+NeurIPS | /ˈnʊrɪps/ | noor ips | acronym | community-consensus | https://neurips.cc/
+ICML | /ˌaɪ siː ɛm ˈɛl/ | eye see em ell | acronym | community-consensus | https://icml.cc/
+ICLR | /ˌaɪ siː ɛl ˈɑːr/ | eye see ell ar | acronym | community-consensus | https://iclr.cc/
+CVPR | /ˌsiː viː piː ˈɑːr/ | see vee pee ar | acronym | community-consensus | https://cvpr.thecvf.com/
+AAAI | /ˌtrɪpəl eɪ ˈaɪ/ | triple ay eye | acronym | contested | https://aaai.org/
+ACL | /ˌeɪ siː ˈɛl/ | ay see ell | acronym | community-consensus | https://www.aclweb.org/
+EMNLP | /ˌiː ɛm ɛn ɛl ˈpiː/ | ee em en ell pee | acronym | community-consensus | https://2024.emnlp.org/
+KDD | /ˌkeɪ diː ˈdiː/ | kay dee dee | acronym | community-consensus | https://kdd.org/
+AISTATS | /ˈeɪ stæts/ | ay stats | acronym | community-consensus | https://aistats.org/
+COLT | /koʊlt/ | colt | acronym | community-consensus | https://learningtheory.org/
+IJCAI | /ˌaɪ dʒeɪ siː eɪ ˈaɪ/ | eye jay see ay eye | acronym | contested | https://www.ijcai.org/
+SIGGRAPH | /ˈsɪɡɡræf/ | sig graf | acronym | community-consensus | https://www.siggraph.org/
+OpenReview | /ˈoʊpən rɪˌvjuː/ | open re view | product | community-consensus | https://openreview.net/
+BLEU | /bluː/ | blue | acronym | creator-clarified | https://aclanthology.org/P02-1040/
+ROUGE | /ruːʒ/ | roozh | acronym | creator-clarified | https://aclanthology.org/W04-1013/
+METEOR | /ˈmiːtiər/ | mee tee er | acronym | community-consensus | https://aclanthology.org/W05-0909/
+CIDEr | /ˈsaɪdər/ | side er | acronym | community-consensus | https://arxiv.org/abs/1411.5726
+IoU | /ˌaɪ oʊ ˈjuː/ | eye oh you | acronym | community-consensus | https://en.wikipedia.org/wiki/Jaccard_index
+mAP | /ˌɛm eɪ ˈpiː/ | em ay pee | acronym | contested | (no source)
+AUC | /ˌeɪ juː ˈsiː/ | ay you see | acronym | community-consensus | https://en.wikipedia.org/wiki/Receiver_operating_characteristic#Area_under_the_curve
+NDCG | /ˌɛn diː siː ˈdʒiː/ | en dee see jee | acronym | community-consensus | https://en.wikipedia.org/wiki/Discounted_cumulative_gain
+F1 | /ˌɛf ˈwʌn/ | eff one | cs-term | community-consensus | https://en.wikipedia.org/wiki/F-score
+FID | /ˌɛf aɪ ˈdiː/ | eff eye dee | acronym | contested | https://arxiv.org/abs/1706.08500
+ELBO | /ˈɛlboʊ/ | el bow | acronym | community-consensus | https://en.wikipedia.org/wiki/Evidence_lower_bound
+ECE | /ˌiː siː ˈiː/ | ee see ee | acronym | community-consensus | https://arxiv.org/abs/1706.04599
+KL | /ˌkeɪ ˈɛl/ | kay ell | abbreviation | community-consensus | https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence
+JSD | /ˌdʒeɪ ɛs ˈdiː/ | jay ess dee | acronym | community-consensus | https://en.wikipedia.org/wiki/Jensen%E2%80%93Shannon_divergence
+Wasserstein | /ˈvɑːsərʃtaɪn/ | vah ser shtine | person | contested | https://en.wikipedia.org/wiki/Wasserstein_metric
+Fréchet | /freɪˈʃeɪ/ | fray shay | person | community-consensus | https://en.wikipedia.org/wiki/Maurice_Ren%C3%A9_Fr%C3%A9chet
+NLL | /ˌɛn ɛl ˈɛl/ | en ell ell | acronym | community-consensus | (no source)
+ResNet | /ˈrɛznɛt/ | rez net | product | community-consensus | https://arxiv.org/abs/1512.03385
+DenseNet | /ˈdɛnsˌnɛt/ | dense net | product | community-consensus | https://arxiv.org/abs/1608.06993
+EfficientNet | /ɪˈfɪʃəntˌnɛt/ | eh fish unt net | product | community-consensus | https://arxiv.org/abs/1905.11946
+MobileNet | /ˈmoʊbaɪlˌnɛt/ | moh bile net | product | community-consensus | https://arxiv.org/abs/1704.04861
+ConvNeXt | /ˈkɒnvˌnɛkst/ | konv next | product | community-consensus | https://arxiv.org/abs/2201.03545
+AlexNet | /ˈæləksˌnɛt/ | al eks net | product | community-consensus | https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html
+VGG | /ˌviː dʒiː ˈdʒiː/ | vee jee jee | acronym | community-consensus | https://arxiv.org/abs/1409.1556
+GoogLeNet | /ˈɡuːɡəlˌnɛt/ | goo gul net | product | community-consensus | https://arxiv.org/abs/1409.4842
+Inception | /ɪnˈsɛpʃən/ | in sep shun | product | community-consensus | https://arxiv.org/abs/1409.4842
+U-Net | /ˈjuː ˌnɛt/ | yoo net | product | community-consensus | https://arxiv.org/abs/1505.04597
+ViT | /ˌviː aɪ ˈtiː/ | vee eye tee | acronym | contested | https://arxiv.org/abs/2010.11929
+DiT | /ˌdiː aɪ ˈtiː/ | dee eye tee | acronym | community-consensus | https://arxiv.org/abs/2212.09748
+Swin | /swɪn/ | swin | product | community-consensus | https://arxiv.org/abs/2103.14030
+ELECTRA | /ɪˈlɛktrə/ | uh lek truh | product | community-consensus | https://arxiv.org/abs/2003.10555
+XLNet | /ˌɛks ɛl ˈnɛt/ | ex ell net | product | community-consensus | https://arxiv.org/abs/1906.08237
+ALBERT | /ælˈbɜːrt/ | al bert | product | community-consensus | https://arxiv.org/abs/1909.11942
+ELMo | /ˈɛlmoʊ/ | el mo | product | community-consensus | https://arxiv.org/abs/1802.05365
+BART | /bɑːrt/ | bart | product | community-consensus | https://arxiv.org/abs/1910.13461
+Chinchilla | /tʃɪnˈtʃɪlə/ | chin chill uh | product | community-consensus | https://arxiv.org/abs/2203.15556
+Gopher | /ˈɡoʊfər/ | goh fer | product | community-consensus | https://arxiv.org/abs/2112.11446
+Hyena | /haɪˈiːnə/ | hi ee nuh | product | community-consensus | https://arxiv.org/abs/2302.10866
+CoT | /ˌsiː oʊ ˈtiː/ | see oh tee | acronym | community-consensus | https://arxiv.org/abs/2201.11903
+ToT | /ˌtiː oʊ ˈtiː/ | tee oh tee | acronym | community-consensus | https://arxiv.org/abs/2305.10601
+ICL | /ˌaɪ siː ˈɛl/ | eye see ell | acronym | community-consensus | https://arxiv.org/abs/2005.14165
+SFT | /ˌɛs ɛf ˈtiː/ | ess eff tee | acronym | community-consensus | (no source)
+KTO | /ˌkeɪ tiː ˈoʊ/ | kay tee oh | acronym | community-consensus | https://arxiv.org/abs/2402.01306
+IPO | /ˌaɪ piː ˈoʊ/ | eye pee oh | acronym | community-consensus | https://arxiv.org/abs/2310.12036
+ORPO | /ˈɔːrpoʊ/ | or poh | acronym | contested | https://arxiv.org/abs/2403.07691
+SimPO | /ˈsɪmpoʊ/ | sim poh | acronym | community-consensus | https://arxiv.org/abs/2405.14734
+HyDE | /haɪd/ | hide | acronym | community-consensus | https://arxiv.org/abs/2212.10496
+GraphRAG | /ˈɡræfˌræɡ/ | graf rag | product | community-consensus | https://arxiv.org/abs/2404.16130
+DoRA | /ˈdɔːrə/ | dor uh | acronym | community-consensus | https://arxiv.org/abs/2402.09353
+IA3 | /ˌaɪ eɪ ˈθriː/ | eye ay three | acronym | community-consensus | https://arxiv.org/abs/2205.05638
+p-tuning | /ˌpiː ˈtjuːnɪŋ/ | pee tooning | cs-term | community-consensus | https://arxiv.org/abs/2103.10385
+DDPM | /ˌdiː diː piː ˈɛm/ | dee dee pee em | acronym | community-consensus | https://arxiv.org/abs/2006.11239
+DDIM | /ˌdiː diː aɪ ˈɛm/ | dee dee eye em | acronym | contested | https://arxiv.org/abs/2010.02502
+EDM | /ˌiː diː ˈɛm/ | ee dee em | acronym | community-consensus | https://arxiv.org/abs/2206.00364
+diffusion | /dɪˈfjuːʒən/ | dih fyoo zhun | cs-term | community-consensus | https://en.wikipedia.org/wiki/Diffusion_model
+CFG | /ˌsiː ɛf ˈdʒiː/ | see eff jee | acronym | community-consensus | https://arxiv.org/abs/2207.12598
+ANOVA | /əˈnoʊvə/ | uh noh vuh | acronym | community-consensus | https://en.wikipedia.org/wiki/Analysis_of_variance
+MANOVA | /məˈnoʊvə/ | muh noh vuh | acronym | community-consensus | https://en.wikipedia.org/wiki/Multivariate_analysis_of_variance
+t-test | /ˈtiː ˌtɛst/ | tee test | cs-term | community-consensus | https://en.wikipedia.org/wiki/Student%27s_t-test
+chi-squared | /ˌkaɪ ˈskwɛərd/ | kye squared | cs-term | community-consensus | https://en.wikipedia.org/wiki/Chi-squared_test
+nabla | /ˈnɑːblə/ | nahb luh | cs-term | contested | https://en.wikipedia.org/wiki/Nabla_symbol
+KKT | /ˌkeɪ keɪ ˈtiː/ | kay kay tee | acronym | community-consensus | https://en.wikipedia.org/wiki/Karush%E2%80%93Kuhn%E2%80%93Tucker_conditions
+MCMC | /ˌɛm siː ɛm ˈsiː/ | em see em see | acronym | community-consensus | https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo
+HMM | /ˌeɪtʃ ɛm ˈɛm/ | aitch em em | acronym | community-consensus | https://en.wikipedia.org/wiki/Hidden_Markov_model
+SVM | /ˌɛs viː ˈɛm/ | ess vee em | acronym | community-consensus | https://en.wikipedia.org/wiki/Support_vector_machine
+KNN | /ˌkeɪ ɛn ˈɛn/ | kay en en | acronym | community-consensus | https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm
+PCA | /ˌpiː siː ˈeɪ/ | pee see ay | acronym | community-consensus | https://en.wikipedia.org/wiki/Principal_component_analysis
+ICA | /ˌaɪ siː ˈeɪ/ | eye see ay | acronym | community-consensus | https://en.wikipedia.org/wiki/Independent_component_analysis
+t-SNE | /ˌtiː ɛs ɛn ˈiː/ | tee ess en ee | acronym | contested | https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding
+UMAP | /ˈjuːmæp/ | yoo map | acronym | community-consensus | https://arxiv.org/abs/1802.03426
+sutton | /ˈsʌtən/ | suht un | person | community-consensus | https://incompleteideas.net/
+silver | /ˈsɪlvər/ | sil ver | person | community-consensus | https://www.davidsilver.uk/
+barto | /ˈbɑːrtoʊ/ | bar toh | person | community-consensus | https://www-anw.cs.umass.edu/~barto/
+vapnik | /ˈvæpnɪk/ | vap nik | person | community-consensus | https://en.wikipedia.org/wiki/Vladimir_Vapnik
+bottou | /buːˈtuː/ | boo too | person | community-consensus | https://leon.bottou.org/
+rumelhart | /ˈruːməlˌhɑːrt/ | roo mul hart | person | community-consensus | https://en.wikipedia.org/wiki/David_Rumelhart
+hopfield | /ˈhɒpfiːld/ | hop feeld | person | community-consensus | https://en.wikipedia.org/wiki/John_Hopfield
+judea-pearl | /dʒuːˈdiːə ˈpɜːrl/ | joo dee uh purl | person | community-consensus | https://en.wikipedia.org/wiki/Judea_Pearl
+boltzmann | /ˈboʊltsmən/ | bohlts mun | person | community-consensus | https://en.wikipedia.org/wiki/Ludwig_Boltzmann
+schölkopf | /ˈʃɜːlkɒpf/ | shurl kopf | person | contested | https://en.wikipedia.org/wiki/Bernhard_Sch%C3%B6lkopf
+tegmark | /ˈtɛɡmɑːrk/ | teg mark | person | community-consensus | https://space.mit.edu/home/tegmark/

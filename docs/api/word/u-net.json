@@ -1,0 +1,12 @@
+{
+  "word": "U-Net",
+  "ipa": "/ˈjuː ˌnɛt/",
+  "respelling_us": "yoo net",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/1505.04597",
+  "source_label": "Ronneberger et al. 2015",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "U-shaped encoder-decoder for segmentation; \"YOO-net\"."
+}

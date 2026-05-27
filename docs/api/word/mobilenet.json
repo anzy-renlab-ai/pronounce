@@ -1,0 +1,12 @@
+{
+  "word": "MobileNet",
+  "ipa": "/ˈmoʊbaɪlˌnɛt/",
+  "respelling_us": "moh bile net",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/1704.04861",
+  "source_label": "Howard et al. 2017",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Mobile-friendly CNN family; \"MOH-byle-net\"."
+}

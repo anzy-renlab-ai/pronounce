@@ -5808,4 +5808,388 @@
     <image:image><image:loc>https://pronounce.renlab.ai/og/mots.png</image:loc><image:caption>How to pronounce MoTS — OG card</image:caption></image:image>
     <image:image><image:loc>https://pronounce.renlab.ai/badge/mots.svg</image:loc><image:caption>Pronunciation badge for MoTS</image:caption></image:image>
   </url>
+  <url><loc>https://pronounce.renlab.ai/word/arxiv.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/arxiv.png</image:loc><image:caption>How to pronounce arxiv — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/arxiv.svg</image:loc><image:caption>Pronunciation badge for arxiv</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/preprint.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/preprint.png</image:loc><image:caption>How to pronounce preprint — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/preprint.svg</image:loc><image:caption>Pronunciation badge for preprint</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/neurips.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/neurips.png</image:loc><image:caption>How to pronounce NeurIPS — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/neurips.svg</image:loc><image:caption>Pronunciation badge for NeurIPS</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/icml.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/icml.png</image:loc><image:caption>How to pronounce ICML — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/icml.svg</image:loc><image:caption>Pronunciation badge for ICML</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/iclr.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/iclr.png</image:loc><image:caption>How to pronounce ICLR — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/iclr.svg</image:loc><image:caption>Pronunciation badge for ICLR</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/cvpr.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/cvpr.png</image:loc><image:caption>How to pronounce CVPR — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/cvpr.svg</image:loc><image:caption>Pronunciation badge for CVPR</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/aaai.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/aaai.png</image:loc><image:caption>How to pronounce AAAI — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/aaai.svg</image:loc><image:caption>Pronunciation badge for AAAI</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/acl.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/acl.png</image:loc><image:caption>How to pronounce ACL — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/acl.svg</image:loc><image:caption>Pronunciation badge for ACL</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/emnlp.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/emnlp.png</image:loc><image:caption>How to pronounce EMNLP — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/emnlp.svg</image:loc><image:caption>Pronunciation badge for EMNLP</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/kdd.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/kdd.png</image:loc><image:caption>How to pronounce KDD — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/kdd.svg</image:loc><image:caption>Pronunciation badge for KDD</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/aistats.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/aistats.png</image:loc><image:caption>How to pronounce AISTATS — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/aistats.svg</image:loc><image:caption>Pronunciation badge for AISTATS</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/colt.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/colt.png</image:loc><image:caption>How to pronounce COLT — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/colt.svg</image:loc><image:caption>Pronunciation badge for COLT</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/ijcai.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/ijcai.png</image:loc><image:caption>How to pronounce IJCAI — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/ijcai.svg</image:loc><image:caption>Pronunciation badge for IJCAI</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/siggraph.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/siggraph.png</image:loc><image:caption>How to pronounce SIGGRAPH — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/siggraph.svg</image:loc><image:caption>Pronunciation badge for SIGGRAPH</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/openreview.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/openreview.png</image:loc><image:caption>How to pronounce OpenReview — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/openreview.svg</image:loc><image:caption>Pronunciation badge for OpenReview</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/bleu.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/bleu.png</image:loc><image:caption>How to pronounce BLEU — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/bleu.svg</image:loc><image:caption>Pronunciation badge for BLEU</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/rouge.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/rouge.png</image:loc><image:caption>How to pronounce ROUGE — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/rouge.svg</image:loc><image:caption>Pronunciation badge for ROUGE</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/meteor.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/meteor.png</image:loc><image:caption>How to pronounce METEOR — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/meteor.svg</image:loc><image:caption>Pronunciation badge for METEOR</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/cider.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/cider.png</image:loc><image:caption>How to pronounce CIDEr — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/cider.svg</image:loc><image:caption>Pronunciation badge for CIDEr</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/iou.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/iou.png</image:loc><image:caption>How to pronounce IoU — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/iou.svg</image:loc><image:caption>Pronunciation badge for IoU</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/map.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/map.png</image:loc><image:caption>How to pronounce mAP — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/map.svg</image:loc><image:caption>Pronunciation badge for mAP</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/auc.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/auc.png</image:loc><image:caption>How to pronounce AUC — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/auc.svg</image:loc><image:caption>Pronunciation badge for AUC</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/ndcg.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/ndcg.png</image:loc><image:caption>How to pronounce NDCG — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/ndcg.svg</image:loc><image:caption>Pronunciation badge for NDCG</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/f1.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/f1.png</image:loc><image:caption>How to pronounce F1 — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/f1.svg</image:loc><image:caption>Pronunciation badge for F1</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/fid.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/fid.png</image:loc><image:caption>How to pronounce FID — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/fid.svg</image:loc><image:caption>Pronunciation badge for FID</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/elbo.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/elbo.png</image:loc><image:caption>How to pronounce ELBO — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/elbo.svg</image:loc><image:caption>Pronunciation badge for ELBO</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/ece.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/ece.png</image:loc><image:caption>How to pronounce ECE — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/ece.svg</image:loc><image:caption>Pronunciation badge for ECE</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/kl.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/kl.png</image:loc><image:caption>How to pronounce KL — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/kl.svg</image:loc><image:caption>Pronunciation badge for KL</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/jsd.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/jsd.png</image:loc><image:caption>How to pronounce JSD — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/jsd.svg</image:loc><image:caption>Pronunciation badge for JSD</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/wasserstein.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/wasserstein.png</image:loc><image:caption>How to pronounce Wasserstein — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/wasserstein.svg</image:loc><image:caption>Pronunciation badge for Wasserstein</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/fr-chet.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/fr-chet.png</image:loc><image:caption>How to pronounce Fréchet — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/fr-chet.svg</image:loc><image:caption>Pronunciation badge for Fréchet</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/nll.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/nll.png</image:loc><image:caption>How to pronounce NLL — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/nll.svg</image:loc><image:caption>Pronunciation badge for NLL</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/resnet.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/resnet.png</image:loc><image:caption>How to pronounce ResNet — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/resnet.svg</image:loc><image:caption>Pronunciation badge for ResNet</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/densenet.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/densenet.png</image:loc><image:caption>How to pronounce DenseNet — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/densenet.svg</image:loc><image:caption>Pronunciation badge for DenseNet</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/efficientnet.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/efficientnet.png</image:loc><image:caption>How to pronounce EfficientNet — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/efficientnet.svg</image:loc><image:caption>Pronunciation badge for EfficientNet</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/mobilenet.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/mobilenet.png</image:loc><image:caption>How to pronounce MobileNet — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/mobilenet.svg</image:loc><image:caption>Pronunciation badge for MobileNet</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/convnext.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/convnext.png</image:loc><image:caption>How to pronounce ConvNeXt — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/convnext.svg</image:loc><image:caption>Pronunciation badge for ConvNeXt</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/alexnet.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/alexnet.png</image:loc><image:caption>How to pronounce AlexNet — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/alexnet.svg</image:loc><image:caption>Pronunciation badge for AlexNet</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/vgg.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/vgg.png</image:loc><image:caption>How to pronounce VGG — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/vgg.svg</image:loc><image:caption>Pronunciation badge for VGG</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/googlenet.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/googlenet.png</image:loc><image:caption>How to pronounce GoogLeNet — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/googlenet.svg</image:loc><image:caption>Pronunciation badge for GoogLeNet</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/inception.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/inception.png</image:loc><image:caption>How to pronounce Inception — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/inception.svg</image:loc><image:caption>Pronunciation badge for Inception</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/u-net.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/u-net.png</image:loc><image:caption>How to pronounce U-Net — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/u-net.svg</image:loc><image:caption>Pronunciation badge for U-Net</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/vit.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/vit.png</image:loc><image:caption>How to pronounce ViT — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/vit.svg</image:loc><image:caption>Pronunciation badge for ViT</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/dit.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/dit.png</image:loc><image:caption>How to pronounce DiT — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/dit.svg</image:loc><image:caption>Pronunciation badge for DiT</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/swin.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/swin.png</image:loc><image:caption>How to pronounce Swin — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/swin.svg</image:loc><image:caption>Pronunciation badge for Swin</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/electra.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/electra.png</image:loc><image:caption>How to pronounce ELECTRA — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/electra.svg</image:loc><image:caption>Pronunciation badge for ELECTRA</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/xlnet.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/xlnet.png</image:loc><image:caption>How to pronounce XLNet — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/xlnet.svg</image:loc><image:caption>Pronunciation badge for XLNet</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/albert.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/albert.png</image:loc><image:caption>How to pronounce ALBERT — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/albert.svg</image:loc><image:caption>Pronunciation badge for ALBERT</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/elmo.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/elmo.png</image:loc><image:caption>How to pronounce ELMo — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/elmo.svg</image:loc><image:caption>Pronunciation badge for ELMo</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/bart.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/bart.png</image:loc><image:caption>How to pronounce BART — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/bart.svg</image:loc><image:caption>Pronunciation badge for BART</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/chinchilla.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/chinchilla.png</image:loc><image:caption>How to pronounce Chinchilla — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/chinchilla.svg</image:loc><image:caption>Pronunciation badge for Chinchilla</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/gopher.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/gopher.png</image:loc><image:caption>How to pronounce Gopher — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/gopher.svg</image:loc><image:caption>Pronunciation badge for Gopher</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/hyena.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/hyena.png</image:loc><image:caption>How to pronounce Hyena — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/hyena.svg</image:loc><image:caption>Pronunciation badge for Hyena</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/cot.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/cot.png</image:loc><image:caption>How to pronounce CoT — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/cot.svg</image:loc><image:caption>Pronunciation badge for CoT</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/tot.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/tot.png</image:loc><image:caption>How to pronounce ToT — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/tot.svg</image:loc><image:caption>Pronunciation badge for ToT</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/icl.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/icl.png</image:loc><image:caption>How to pronounce ICL — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/icl.svg</image:loc><image:caption>Pronunciation badge for ICL</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/sft.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/sft.png</image:loc><image:caption>How to pronounce SFT — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/sft.svg</image:loc><image:caption>Pronunciation badge for SFT</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/kto.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/kto.png</image:loc><image:caption>How to pronounce KTO — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/kto.svg</image:loc><image:caption>Pronunciation badge for KTO</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/ipo.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/ipo.png</image:loc><image:caption>How to pronounce IPO — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/ipo.svg</image:loc><image:caption>Pronunciation badge for IPO</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/orpo.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/orpo.png</image:loc><image:caption>How to pronounce ORPO — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/orpo.svg</image:loc><image:caption>Pronunciation badge for ORPO</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/simpo.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/simpo.png</image:loc><image:caption>How to pronounce SimPO — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/simpo.svg</image:loc><image:caption>Pronunciation badge for SimPO</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/hyde.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/hyde.png</image:loc><image:caption>How to pronounce HyDE — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/hyde.svg</image:loc><image:caption>Pronunciation badge for HyDE</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/graphrag.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/graphrag.png</image:loc><image:caption>How to pronounce GraphRAG — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/graphrag.svg</image:loc><image:caption>Pronunciation badge for GraphRAG</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/dora.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/dora.png</image:loc><image:caption>How to pronounce DoRA — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/dora.svg</image:loc><image:caption>Pronunciation badge for DoRA</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/ia3.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/ia3.png</image:loc><image:caption>How to pronounce IA3 — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/ia3.svg</image:loc><image:caption>Pronunciation badge for IA3</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/p-tuning.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/p-tuning.png</image:loc><image:caption>How to pronounce p-tuning — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/p-tuning.svg</image:loc><image:caption>Pronunciation badge for p-tuning</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/ddpm.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/ddpm.png</image:loc><image:caption>How to pronounce DDPM — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/ddpm.svg</image:loc><image:caption>Pronunciation badge for DDPM</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/ddim.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/ddim.png</image:loc><image:caption>How to pronounce DDIM — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/ddim.svg</image:loc><image:caption>Pronunciation badge for DDIM</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/edm.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/edm.png</image:loc><image:caption>How to pronounce EDM — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/edm.svg</image:loc><image:caption>Pronunciation badge for EDM</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/diffusion.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/diffusion.png</image:loc><image:caption>How to pronounce diffusion — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/diffusion.svg</image:loc><image:caption>Pronunciation badge for diffusion</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/cfg.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/cfg.png</image:loc><image:caption>How to pronounce CFG — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/cfg.svg</image:loc><image:caption>Pronunciation badge for CFG</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/anova.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/anova.png</image:loc><image:caption>How to pronounce ANOVA — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/anova.svg</image:loc><image:caption>Pronunciation badge for ANOVA</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/manova.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/manova.png</image:loc><image:caption>How to pronounce MANOVA — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/manova.svg</image:loc><image:caption>Pronunciation badge for MANOVA</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/t-test.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/t-test.png</image:loc><image:caption>How to pronounce t-test — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/t-test.svg</image:loc><image:caption>Pronunciation badge for t-test</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/chi-squared.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/chi-squared.png</image:loc><image:caption>How to pronounce chi-squared — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/chi-squared.svg</image:loc><image:caption>Pronunciation badge for chi-squared</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/nabla.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/nabla.png</image:loc><image:caption>How to pronounce nabla — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/nabla.svg</image:loc><image:caption>Pronunciation badge for nabla</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/kkt.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/kkt.png</image:loc><image:caption>How to pronounce KKT — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/kkt.svg</image:loc><image:caption>Pronunciation badge for KKT</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/mcmc.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/mcmc.png</image:loc><image:caption>How to pronounce MCMC — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/mcmc.svg</image:loc><image:caption>Pronunciation badge for MCMC</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/hmm.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/hmm.png</image:loc><image:caption>How to pronounce HMM — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/hmm.svg</image:loc><image:caption>Pronunciation badge for HMM</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/svm.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/svm.png</image:loc><image:caption>How to pronounce SVM — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/svm.svg</image:loc><image:caption>Pronunciation badge for SVM</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/knn.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/knn.png</image:loc><image:caption>How to pronounce KNN — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/knn.svg</image:loc><image:caption>Pronunciation badge for KNN</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/pca.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/pca.png</image:loc><image:caption>How to pronounce PCA — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/pca.svg</image:loc><image:caption>Pronunciation badge for PCA</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/ica.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/ica.png</image:loc><image:caption>How to pronounce ICA — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/ica.svg</image:loc><image:caption>Pronunciation badge for ICA</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/t-sne.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/t-sne.png</image:loc><image:caption>How to pronounce t-SNE — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/t-sne.svg</image:loc><image:caption>Pronunciation badge for t-SNE</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/umap.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/umap.png</image:loc><image:caption>How to pronounce UMAP — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/umap.svg</image:loc><image:caption>Pronunciation badge for UMAP</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/sutton.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/sutton.png</image:loc><image:caption>How to pronounce sutton — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/sutton.svg</image:loc><image:caption>Pronunciation badge for sutton</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/silver.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/silver.png</image:loc><image:caption>How to pronounce silver — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/silver.svg</image:loc><image:caption>Pronunciation badge for silver</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/barto.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/barto.png</image:loc><image:caption>How to pronounce barto — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/barto.svg</image:loc><image:caption>Pronunciation badge for barto</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/vapnik.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/vapnik.png</image:loc><image:caption>How to pronounce vapnik — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/vapnik.svg</image:loc><image:caption>Pronunciation badge for vapnik</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/bottou.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/bottou.png</image:loc><image:caption>How to pronounce bottou — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/bottou.svg</image:loc><image:caption>Pronunciation badge for bottou</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/rumelhart.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/rumelhart.png</image:loc><image:caption>How to pronounce rumelhart — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/rumelhart.svg</image:loc><image:caption>Pronunciation badge for rumelhart</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/hopfield.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/hopfield.png</image:loc><image:caption>How to pronounce hopfield — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/hopfield.svg</image:loc><image:caption>Pronunciation badge for hopfield</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/judea-pearl.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/judea-pearl.png</image:loc><image:caption>How to pronounce judea-pearl — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/judea-pearl.svg</image:loc><image:caption>Pronunciation badge for judea-pearl</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/boltzmann.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/boltzmann.png</image:loc><image:caption>How to pronounce boltzmann — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/boltzmann.svg</image:loc><image:caption>Pronunciation badge for boltzmann</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/sch-lkopf.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/sch-lkopf.png</image:loc><image:caption>How to pronounce schölkopf — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/sch-lkopf.svg</image:loc><image:caption>Pronunciation badge for schölkopf</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/tegmark.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/tegmark.png</image:loc><image:caption>How to pronounce tegmark — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/tegmark.svg</image:loc><image:caption>Pronunciation badge for tegmark</image:caption></image:image>
+  </url>
 </urlset>

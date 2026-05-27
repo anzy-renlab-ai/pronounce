@@ -1,0 +1,12 @@
+{
+  "word": "GoogLeNet",
+  "ipa": "/ˈɡuːɡəlˌnɛt/",
+  "respelling_us": "goo gul net",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/1409.4842",
+  "source_label": "Szegedy et al. 2014",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "The Inception-based ImageNet 2014 winner; \"GOO-gul-net\"."
+}

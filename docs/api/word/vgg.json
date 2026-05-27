@@ -1,0 +1,12 @@
+{
+  "word": "VGG",
+  "ipa": "/ˌviː dʒiː ˈdʒiː/",
+  "respelling_us": "vee jee jee",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/1409.1556",
+  "source_label": "Simonyan & Zisserman 2014",
+  "category": "acronym",
+  "confidence": "community-consensus",
+  "notes": "Visual Geometry Group net; letters \"V-G-G\"."
+}

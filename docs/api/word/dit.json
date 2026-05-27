@@ -1,0 +1,12 @@
+{
+  "word": "DiT",
+  "ipa": "/ˌdiː aɪ ˈtiː/",
+  "respelling_us": "dee eye tee",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2212.09748",
+  "source_label": "Peebles & Xie 2022",
+  "category": "acronym",
+  "confidence": "community-consensus",
+  "notes": "Diffusion Transformer (Sora-style); letters \"D-i-T\"."
+}

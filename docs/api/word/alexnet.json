@@ -1,0 +1,12 @@
+{
+  "word": "AlexNet",
+  "ipa": "/ˈæləksˌnɛt/",
+  "respelling_us": "al eks net",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html",
+  "source_label": "Krizhevsky et al. 2012",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "The 2012 ImageNet winner; \"AL-eks-net\"."
+}

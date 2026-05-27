@@ -1,0 +1,12 @@
+{
+  "word": "UMAP",
+  "ipa": "/ˈjuːmæp/",
+  "respelling_us": "yoo map",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/1802.03426",
+  "source_label": "McInnes et al. 2018",
+  "category": "acronym",
+  "confidence": "community-consensus",
+  "notes": "Uniform Manifold Approximation and Projection; \"YOO-map\"."
+}

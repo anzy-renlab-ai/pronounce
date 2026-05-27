@@ -1,0 +1,12 @@
+{
+  "word": "p-tuning",
+  "ipa": "/ˌpiː ˈtjuːnɪŋ/",
+  "respelling_us": "pee tooning",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2103.10385",
+  "source_label": "Liu et al. 2021",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "Continuous-prompt tuning; \"P-tuning\"."
+}

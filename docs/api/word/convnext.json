@@ -1,0 +1,12 @@
+{
+  "word": "ConvNeXt",
+  "ipa": "/ˈkɒnvˌnɛkst/",
+  "respelling_us": "konv next",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2201.03545",
+  "source_label": "Liu et al. 2022",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Modernized ConvNet; \"CONV-next\"."
+}

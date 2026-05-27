@@ -1,0 +1,12 @@
+{
+  "word": "CFG",
+  "ipa": "/ˌsiː ɛf ˈdʒiː/",
+  "respelling_us": "see eff jee",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2207.12598",
+  "source_label": "Ho & Salimans 2022",
+  "category": "acronym",
+  "confidence": "community-consensus",
+  "notes": "Classifier-Free Guidance (also Context-Free Grammar in NLP); letters \"C-F-G\"."
+}

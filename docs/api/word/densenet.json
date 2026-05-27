@@ -1,0 +1,12 @@
+{
+  "word": "DenseNet",
+  "ipa": "/ˈdɛnsˌnɛt/",
+  "respelling_us": "dense net",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/1608.06993",
+  "source_label": "Huang et al. 2016",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Densely Connected Network; \"DENSE-net\"."
+}

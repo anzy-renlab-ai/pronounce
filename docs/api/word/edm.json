@@ -1,0 +1,12 @@
+{
+  "word": "EDM",
+  "ipa": "/ˌiː diː ˈɛm/",
+  "respelling_us": "ee dee em",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2206.00364",
+  "source_label": "Karras et al. 2022",
+  "category": "acronym",
+  "confidence": "community-consensus",
+  "notes": "Elucidating the Design Space of Diffusion Models; letters \"E-D-M\"."
+}

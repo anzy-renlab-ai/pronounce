@@ -1,0 +1,12 @@
+{
+  "word": "Swin",
+  "ipa": "/swɪn/",
+  "respelling_us": "swin",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2103.14030",
+  "source_label": "Liu et al. 2021",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Shifted-window Transformer; \"swin\" rhymes with \"win\"."
+}

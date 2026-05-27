@@ -1,0 +1,12 @@
+{
+  "word": "ResNet",
+  "ipa": "/ˈrɛznɛt/",
+  "respelling_us": "rez net",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/1512.03385",
+  "source_label": "He et al. 2015",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Residual Network; \"REZ-net\"."
+}

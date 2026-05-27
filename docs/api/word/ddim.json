@@ -1,0 +1,12 @@
+{
+  "word": "DDIM",
+  "ipa": "/ˌdiː diː aɪ ˈɛm/",
+  "respelling_us": "dee dee eye em",
+  "alt_ipa": ["/ˈdiːdɪm/"],
+  "alt_respelling_us": ["dee dim"],
+  "source_url": "https://arxiv.org/abs/2010.02502",
+  "source_label": "Song et al. 2020",
+  "category": "acronym",
+  "confidence": "contested",
+  "notes": "Denoising Diffusion Implicit Models; letters or \"dee-dim\"."
+}

@@ -1,0 +1,12 @@
+{
+  "word": "OpenReview",
+  "ipa": "/ˈoʊpən rɪˌvjuː/",
+  "respelling_us": "open re view",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://openreview.net/",
+  "source_label": "OpenReview",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Peer-review platform used by ICLR/NeurIPS; \"open-re-view\"."
+}

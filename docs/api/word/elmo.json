@@ -1,0 +1,12 @@
+{
+  "word": "ELMo",
+  "ipa": "/ˈɛlmoʊ/",
+  "respelling_us": "el mo",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/1802.05365",
+  "source_label": "Peters et al. 2018",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Embeddings from Language Models; \"EL-mo\" like the Sesame Street character."
+}

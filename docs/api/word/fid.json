@@ -1,0 +1,12 @@
+{
+  "word": "FID",
+  "ipa": "/ˌɛf aɪ ˈdiː/",
+  "respelling_us": "eff eye dee",
+  "alt_ipa": ["/fɪd/"],
+  "alt_respelling_us": ["fid"],
+  "source_url": "https://arxiv.org/abs/1706.08500",
+  "source_label": "Heusel et al. 2017",
+  "category": "acronym",
+  "confidence": "contested",
+  "notes": "Fréchet Inception Distance; letters dominant, \"fid\" sometimes."
+}

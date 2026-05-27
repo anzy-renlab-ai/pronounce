@@ -1,0 +1,12 @@
+{
+  "word": "ELECTRA",
+  "ipa": "/ɪˈlɛktrə/",
+  "respelling_us": "uh lek truh",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2003.10555",
+  "source_label": "Clark et al. 2020",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Pre-train via replaced-token detection; \"uh-LEK-truh\"."
+}

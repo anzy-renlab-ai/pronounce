@@ -1,0 +1,12 @@
+{
+  "word": "ICL",
+  "ipa": "/ˌaɪ siː ˈɛl/",
+  "respelling_us": "eye see ell",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2005.14165",
+  "source_label": "Brown et al. 2020",
+  "category": "acronym",
+  "confidence": "community-consensus",
+  "notes": "In-Context Learning (few-shot from prompt); letters \"I-C-L\"."
+}

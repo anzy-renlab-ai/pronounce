@@ -1,0 +1,12 @@
+{
+  "word": "F1",
+  "ipa": "/ˌɛf ˈwʌn/",
+  "respelling_us": "eff one",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://en.wikipedia.org/wiki/F-score",
+  "source_label": "Wikipedia",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "Harmonic mean of precision & recall; \"F-one\"."
+}

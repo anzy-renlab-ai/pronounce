@@ -1,0 +1,12 @@
+{
+  "word": "NeurIPS",
+  "ipa": "/ˈnʊrɪps/",
+  "respelling_us": "noor ips",
+  "alt_ipa": ["/ˈnɔːrɪps/"],
+  "alt_respelling_us": ["nor ips"],
+  "source_url": "https://neurips.cc/",
+  "source_label": "NeurIPS official",
+  "category": "acronym",
+  "confidence": "community-consensus",
+  "notes": "Neural Information Processing Systems; renamed from NIPS in 2018; \"NUR-ips\" or \"NOR-ips\"."
+}

@@ -1,0 +1,12 @@
+{
+  "word": "DoRA",
+  "ipa": "/ˈdɔːrə/",
+  "respelling_us": "dor uh",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2402.09353",
+  "source_label": "Liu et al. 2024",
+  "category": "acronym",
+  "confidence": "community-consensus",
+  "notes": "Weight-Decomposed LoRA; \"DOR-uh\"."
+}
