@@ -189,7 +189,7 @@ Kotlin	/ˈkɒtlɪn/	cot lin			https://kotlinlang.org/	Kotlin	product	community-c
 Julia	/ˈdʒuːliə/	joo lia			https://julialang.org/	Julia	product	community-consensus	"JOO-lee-uh".
 Clojure	/ˈkloʊʒər/	closure			https://clojure.org/	Clojure	product	community-consensus	Rich Hickey has said it sounds like "closure". Community reading.
 OCaml	/oʊˈkæməl/	oh camel			https://ocaml.org/	OCaml	product	community-consensus	"OH-camel".
-Lua	/ˈluːə/	loo ah			https://www.lua.org/about/	Lua about	product	creator-clarified	"LOO-ah" — Portuguese for "moon". Documented on the about page.
+Lua	/ˈluːə/	loo ah			https://www.lua.org/about.html	Lua about	product	creator-clarified	"LOO-ah" — Portuguese for "moon". Documented on the about page.
 Zig	/zɪɡ/	zig			https://ziglang.org/	Zig	product	community-consensus	"zig" — one syllable.
 # --- Package / build tools ---
 uv	/ˌjuː ˈviː/	you V			https://github.com/astral-sh/uv	Astral	tool	community-consensus	"U-V" — Astral's Python installer/resolver.
@@ -234,7 +234,7 @@ CIDR	/ˈsaɪdər/	cider			https://en.wikipedia.org/wiki/Classless_Inter-Domain_R
 Gleam	/ɡliːm/	gleem			https://gleam.run/	Gleam	product	community-consensus	"gleem" — one syllable, like the verb.
 Roc	/rɒk/	rock			https://www.roc-lang.org/	Roc	product	community-consensus	"rock" — one syllable, named after the mythical bird.
 Carbon	/ˈkɑːrbən/	carbon			https://github.com/carbon-language	Carbon	product	community-consensus	"CAR-bun" — like the element.
-V	/viː/	V			https://vlang.io/	V (vlang)	product	community-consensus	"V" — just the letter.
+V	/viː/	V			https://github.com/vlang/v	V (vlang) repo	product	community-consensus	"V" — just the letter.
 Odin	/ˈoʊdɪn/	oh din			https://odin-lang.org/	Odin	product	community-consensus	"OH-din" — like the Norse god.
 Racket	/ˈrækɪt/	rack et			https://racket-lang.org/	Racket	product	community-consensus	"RACK-et" — like the tennis equipment.
 # --- Build / package tools ---
@@ -622,7 +622,7 @@ cognition	/kɒɡ ˈnɪ ʃən/	kog NISH un			https://www.cognition.ai/	Cognition 
 magic.dev	/ˈmæ dʒɪk dɛv/	MAJ ik dev			https://magic.dev/	Magic Dev	project	community-consensus	Long-context code-model lab. Same as the English word + dev.
 augment	/ɔːɡ ˈmɛnt/	awg MENT			https://www.augmentcode.com/	Augment Code	project	community-consensus	AI coding assistant. Stress on second syllable.
 supermaven	/ˌsuː pər ˈmeɪ vən/	soo per MAY vun			https://supermaven.com/	Supermaven	project	community-consensus	Fast code completion. "soo-per-MAY-vun" (maven = expert).
-plandex	/ˈplæn dɛks/	PLAN deks			https://plandex.ai/	Plandex	project	community-consensus	Terminal AI coding agent. "PLAN-deks."
+plandex	/ˈplæn dɛks/	PLAN deks			https://github.com/plandex-ai/plandex	Plandex repo	project	community-consensus	Terminal AI coding agent. "PLAN-deks."
 void	/vɔɪd/	void			https://voideditor.com/	Void Editor	project	community-consensus	Open-source Cursor alternative. Standard "VOYD."
 composio	/kəm ˈpoʊ zi oʊ/	kum POE zee oh			https://composio.dev/	Composio	project	community-consensus	Tool-use platform for AI agents. "kum-POE-zee-oh."
 e2b	/ˌiː tuː ˈbiː/	E two B			https://e2b.dev/	E2B	project	community-consensus	AI code-execution sandboxes. "E-two-B."
@@ -667,7 +667,7 @@ posthog	/ˈpoʊst hɒɡ/	POST hog			https://posthog.com/	PostHog	tool	community-
 sglang	/ˌɛs dʒiː ˈlæŋ/	S G lang			https://github.com/sgl-project/sglang	SGLang GitHub	tool	community-consensus	Fast LLM serving runtime. "S-G-lang" (structured-generation language).
 trae	/treɪ/	tray			https://www.trae.ai/	Trae	product	community-consensus	ByteDance's AI code IDE. Single syllable "TRAY."
 dia	/ˈdiː ə/	DEE uh			https://www.diabrowser.com/	The Browser Company	product	community-consensus	The Browser Company's AI browser. "DEE-uh."
-tome	/toʊm/	tome			https://tome.app/	Tome	product	community-consensus	AI presentation builder. "TOHM" — rhymes with home.
+tome	/toʊm/	tome					product	community-consensus	AI presentation builder (consumer product wound down 2024-2025). "TOHM" — rhymes with home.
 gamma	/ˈɡæ mə/	GAM uh			https://gamma.app/	Gamma	product	community-consensus	AI deck/site builder. Greek letter γ — "GAM-uh."
 descript	/dɪ ˈskrɪpt/	dih SKRIPT			https://www.descript.com/	Descript	product	community-consensus	AI audio/video editor. "dih-SKRIPT" — stress on second syllable.
 figma	/ˈfɪɡ mə/	FIG muh			https://www.figma.com/	Figma	product	community-consensus	Design tool. "FIG-muh" (hard G). Not "FEE-gma."
@@ -690,7 +690,7 @@ QUIC	/kwɪk/	quick			https://datatracker.ietf.org/doc/html/rfc9000	IETF RFC 9000
 CORS	/kɔːrz/	cores	/ˌsiː oʊ ɑːr ˈɛs/	C O R S	https://fetch.spec.whatwg.org/	WHATWG Fetch	acronym	community-consensus	"cores"; rhymes with "doors". Cross-Origin Resource Sharing.
 CSRF	/ˈsiː sɜːrf/	sea surf	/ˌsiː ɛs ɑːr ˈɛf/	C S R F	https://owasp.org/www-community/attacks/csrf	OWASP	acronym	contested	OWASP-favored "sea-surf"; letter-by-letter common too.
 XSS	/ˌɛks ɛs ˈɛs/	X S S					acronym	community-consensus	Letters "X-S-S". Cross-Site Scripting.
-YAML	/ˈjæməl/	yam ul			https://yaml.org/faq.html	yaml.org FAQ	acronym	creator-clarified	yaml.org FAQ: "rhymes with camel". YAM-uhl.
+YAML	/ˈjæməl/	yam ul			https://yaml.org/	yaml.org	acronym	creator-clarified	yaml.org tagline historically read "YAML Ain't Markup Language" and FAQ stated "rhymes with camel". "YAM-uhl".
 TOML	/toʊml/	tohml			https://toml.io/	toml.io	acronym	creator-clarified	Tom Preston-Werner (creator): "rhymes with knoll/troll/roll".
 SDK	/ˌɛs diː ˈkeɪ/	S D K					acronym	community-consensus	Letters "S-D-K". Software Development Kit.
 CLI	/ˌsiː ɛl ˈaɪ/	C L I					acronym	community-consensus	Letters "C-L-I". Command Line Interface.
