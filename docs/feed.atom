@@ -4,181 +4,181 @@
   <link href="https://pronounce.renlab.ai/feed.atom" rel="self"/>
   <link href="https://pronounce.renlab.ai/"/>
   <id>https://pronounce.renlab.ai/</id>
-  <updated>2026-05-28T13:58:39Z</updated>
+  <updated>2026-05-28T14:05:55Z</updated>
   <subtitle>How engineers actually pronounce project / product / jargon names. Community-maintained.</subtitle>
   <entry>
     <title>prefix-tuning — pree fix tooning</title>
     <link href="https://pronounce.renlab.ai/word/prefix-tuning"/>
     <id>https://pronounce.renlab.ai/word/prefix-tuning</id>
-    <updated>2026-05-28T13:58:39Z</updated>
+    <updated>2026-05-28T14:05:55Z</updated>
     <summary>prefix-tuning is pronounced "pree fix tooning" (/ˈpriːfɪks ˌtjuːnɪŋ/). Tune a learned prefix prepended to each layer's keys/values.</summary>
   </entry>
   <entry>
     <title>instruct — in strukt</title>
     <link href="https://pronounce.renlab.ai/word/instruct"/>
     <id>https://pronounce.renlab.ai/word/instruct</id>
-    <updated>2026-05-28T13:58:39Z</updated>
+    <updated>2026-05-28T14:05:55Z</updated>
     <summary>instruct is pronounced "in strukt" (/ɪnˈstrʌkt/). "in-STRUKT" — short for instruction-tuned (GPT-3.5 Instruct, Llama-2-Instruct, etc.).</summary>
   </entry>
   <entry>
     <title>few-shot — few shot</title>
     <link href="https://pronounce.renlab.ai/word/few-shot"/>
     <id>https://pronounce.renlab.ai/word/few-shot</id>
-    <updated>2026-05-28T13:58:39Z</updated>
+    <updated>2026-05-28T14:05:55Z</updated>
     <summary>few-shot is pronounced "few shot" (/ˌfjuː ˈʃɒt/). "FEW-shot" — solve a task from k examples in the prompt; no weight updates.</summary>
   </entry>
   <entry>
     <title>zero-shot — zee roh shot</title>
     <link href="https://pronounce.renlab.ai/word/zero-shot"/>
     <id>https://pronounce.renlab.ai/word/zero-shot</id>
-    <updated>2026-05-28T13:58:39Z</updated>
+    <updated>2026-05-28T14:05:55Z</updated>
     <summary>zero-shot is pronounced "zee roh shot" (/ˌzɪroʊ ˈʃɒt/). "ZEE-roh-shot" — solve a task with no in-context examples.</summary>
   </entry>
   <entry>
     <title>transfer-learning — trans fer ler ning</title>
     <link href="https://pronounce.renlab.ai/word/transfer-learning"/>
     <id>https://pronounce.renlab.ai/word/transfer-learning</id>
-    <updated>2026-05-28T13:58:39Z</updated>
+    <updated>2026-05-28T14:05:55Z</updated>
     <summary>transfer-learning is pronounced "trans fer ler ning" (/ˈtrænsfər ˌlɜːrnɪŋ/). Reuse representations learned on one task for another; the parent concept of fine-tuning.</summary>
   </entry>
   <entry>
     <title>continual-learning — kun tin yoo ul ler ning</title>
     <link href="https://pronounce.renlab.ai/word/continual-learning"/>
     <id>https://pronounce.renlab.ai/word/continual-learning</id>
-    <updated>2026-05-28T13:58:39Z</updated>
+    <updated>2026-05-28T14:05:55Z</updated>
     <summary>continual-learning is pronounced "kun tin yoo ul ler ning" (/kənˈtɪnjuəl ˌlɜːrnɪŋ/). Sequential training across tasks without catastrophic forgetting; "kun-TIN-yoo-ul learning".</summary>
   </entry>
   <entry>
     <title>curriculum-learning — kuh rik yu lum ler ning</title>
     <link href="https://pronounce.renlab.ai/word/curriculum-learning"/>
     <id>https://pronounce.renlab.ai/word/curriculum-learning</id>
-    <updated>2026-05-28T13:58:39Z</updated>
+    <updated>2026-05-28T14:05:55Z</updated>
     <summary>curriculum-learning is pronounced "kuh rik yu lum ler ning" (/kəˈrɪkjələm ˌlɜːrnɪŋ/). Train on easy examples first, then harder; "kuh-RIK-yu-lum learning".</summary>
   </entry>
   <entry>
     <title>scaling-laws — skay ling lawz</title>
     <link href="https://pronounce.renlab.ai/word/scaling-laws"/>
     <id>https://pronounce.renlab.ai/word/scaling-laws</id>
-    <updated>2026-05-28T13:58:39Z</updated>
+    <updated>2026-05-28T14:05:55Z</updated>
     <summary>scaling-laws is pronounced "skay ling lawz" (/ˈskeɪlɪŋ ˌlɔːz/). Power-law relations between compute / data / params and loss; "SKAY-ling laws".</summary>
   </entry>
   <entry>
     <title>downstream — down streem</title>
     <link href="https://pronounce.renlab.ai/word/downstream"/>
     <id>https://pronounce.renlab.ai/word/downstream</id>
-    <updated>2026-05-28T13:58:39Z</updated>
+    <updated>2026-05-28T14:05:55Z</updated>
     <summary>downstream is pronounced "down streem" (/ˌdaʊnˈstriːm/). "DOWN-STREEM" — the application/eval task that a pretrained model is adapted to.</summary>
   </entry>
   <entry>
     <title>alignment — uh lyne munt</title>
     <link href="https://pronounce.renlab.ai/word/alignment"/>
     <id>https://pronounce.renlab.ai/word/alignment</id>
-    <updated>2026-05-28T13:58:39Z</updated>
+    <updated>2026-05-28T14:05:55Z</updated>
     <summary>alignment is pronounced "uh lyne munt" (/əˈlaɪnmənt/). "uh-LYNE-munt" — making model behavior match human intent and values.</summary>
   </entry>
   <entry>
     <title>jailbreak — jayl brake</title>
     <link href="https://pronounce.renlab.ai/word/jailbreak"/>
     <id>https://pronounce.renlab.ai/word/jailbreak</id>
-    <updated>2026-05-28T13:58:39Z</updated>
+    <updated>2026-05-28T14:05:55Z</updated>
     <summary>jailbreak is pronounced "jayl brake" (/ˈdʒeɪlˌbreɪk/). "JAYL-brake" — prompt or attack that bypasses an LM's safety policies.</summary>
   </entry>
   <entry>
     <title>red-teaming — red teeming</title>
     <link href="https://pronounce.renlab.ai/word/red-teaming"/>
     <id>https://pronounce.renlab.ai/word/red-teaming</id>
-    <updated>2026-05-28T13:58:39Z</updated>
+    <updated>2026-05-28T14:05:55Z</updated>
     <summary>red-teaming is pronounced "red teeming" (/ˈrɛd ˌtiːmɪŋ/). "RED-teeming" — adversarial probing of an LM to find unsafe outputs.</summary>
   </entry>
   <entry>
     <title>reward-model — rih ward mod ul</title>
     <link href="https://pronounce.renlab.ai/word/reward-model"/>
     <id>https://pronounce.renlab.ai/word/reward-model</id>
-    <updated>2026-05-28T13:58:39Z</updated>
+    <updated>2026-05-28T14:05:55Z</updated>
     <summary>reward-model is pronounced "rih ward mod ul" (/rɪˈwɔːrd ˌmɒdəl/). RM in RLHF — scores responses to drive PPO/DPO; "rih-WARD model".</summary>
   </entry>
   <entry>
     <title>preference — pref er uns</title>
     <link href="https://pronounce.renlab.ai/word/preference"/>
     <id>https://pronounce.renlab.ai/word/preference</id>
-    <updated>2026-05-28T13:58:39Z</updated>
+    <updated>2026-05-28T14:05:55Z</updated>
     <summary>preference is pronounced "pref er uns" (/ˈprɛfərəns/). "PREF-er-uns" — pairwise (A &gt; B) judgements collected for preference learning.</summary>
   </entry>
   <entry>
     <title>HHH — aitch aitch aitch</title>
     <link href="https://pronounce.renlab.ai/word/hhh"/>
     <id>https://pronounce.renlab.ai/word/hhh</id>
-    <updated>2026-05-28T13:58:39Z</updated>
+    <updated>2026-05-28T14:05:55Z</updated>
     <summary>HHH is pronounced "aitch aitch aitch" (/ˌeɪtʃ eɪtʃ ˈeɪtʃ/). Helpful, Honest, Harmless — Anthropic's alignment goal triad; letters "H-H-H".</summary>
   </entry>
   <entry>
     <title>grounding — grown ding</title>
     <link href="https://pronounce.renlab.ai/word/grounding"/>
     <id>https://pronounce.renlab.ai/word/grounding</id>
-    <updated>2026-05-28T13:58:39Z</updated>
+    <updated>2026-05-28T14:05:55Z</updated>
     <summary>grounding is pronounced "grown ding" (/ˈɡraʊndɪŋ/). "GROWN-ding" — tying generations to verifiable evidence (retrieved docs, tool output).</summary>
   </entry>
   <entry>
     <title>hallucination — huh loo sih nay shun</title>
     <link href="https://pronounce.renlab.ai/word/hallucination"/>
     <id>https://pronounce.renlab.ai/word/hallucination</id>
-    <updated>2026-05-28T13:58:39Z</updated>
+    <updated>2026-05-28T14:05:55Z</updated>
     <summary>hallucination is pronounced "huh loo sih nay shun" (/həˌluːsɪˈneɪʃən/). "huh-LOO-sih-NAY-shun" — an LM's confident but ungrounded fabrications.</summary>
   </entry>
   <entry>
     <title>hallucinate — huh loo sih nate</title>
     <link href="https://pronounce.renlab.ai/word/hallucinate"/>
     <id>https://pronounce.renlab.ai/word/hallucinate</id>
-    <updated>2026-05-28T13:58:39Z</updated>
+    <updated>2026-05-28T14:05:55Z</updated>
     <summary>hallucinate is pronounced "huh loo sih nate" (/həˈluːsɪˌneɪt/). "huh-LOO-sih-nate" — verb form.</summary>
   </entry>
   <entry>
     <title>agent — ay junt</title>
     <link href="https://pronounce.renlab.ai/word/agent"/>
     <id>https://pronounce.renlab.ai/word/agent</id>
-    <updated>2026-05-28T13:58:39Z</updated>
+    <updated>2026-05-28T14:05:55Z</updated>
     <summary>agent is pronounced "ay junt" (/ˈeɪdʒənt/). "AY-junt" — an LM-driven loop that perceives, plans, calls tools, and acts.</summary>
   </entry>
   <entry>
     <title>agentic — ay jen tik</title>
     <link href="https://pronounce.renlab.ai/word/agentic"/>
     <id>https://pronounce.renlab.ai/word/agentic</id>
-    <updated>2026-05-28T13:58:39Z</updated>
+    <updated>2026-05-28T14:05:55Z</updated>
     <summary>agentic is pronounced "ay jen tik" (/eɪˈdʒɛntɪk/). "ay-JEN-tik" — adjective; capable of multi-step autonomous action.</summary>
   </entry>
   <entry>
     <title>tool-use — tool yoos</title>
     <link href="https://pronounce.renlab.ai/word/tool-use"/>
     <id>https://pronounce.renlab.ai/word/tool-use</id>
-    <updated>2026-05-28T13:58:39Z</updated>
+    <updated>2026-05-28T14:05:55Z</updated>
     <summary>tool-use is pronounced "tool yoos" (/ˈtuːl ˌjuːs/). "TOOL-YOOS" — LM-invoked external functions (search, code exec, calc).</summary>
   </entry>
   <entry>
     <title>function-calling — funk shun call ing</title>
     <link href="https://pronounce.renlab.ai/word/function-calling"/>
     <id>https://pronounce.renlab.ai/word/function-calling</id>
-    <updated>2026-05-28T13:58:39Z</updated>
+    <updated>2026-05-28T14:05:55Z</updated>
     <summary>function-calling is pronounced "funk shun call ing" (/ˈfʌŋkʃən ˌkɔːlɪŋ/). OpenAI/JSON-schema-style tool invocation API; "FUNK-shun calling".</summary>
   </entry>
   <entry>
     <title>prompt — prompt</title>
     <link href="https://pronounce.renlab.ai/word/prompt"/>
     <id>https://pronounce.renlab.ai/word/prompt</id>
-    <updated>2026-05-28T13:58:39Z</updated>
+    <updated>2026-05-28T14:05:55Z</updated>
     <summary>prompt is pronounced "prompt" (/prɒmpt/). "PROMPT" — the input string fed to an LM.</summary>
   </entry>
   <entry>
     <title>prompting — prompt ing</title>
     <link href="https://pronounce.renlab.ai/word/prompting"/>
     <id>https://pronounce.renlab.ai/word/prompting</id>
-    <updated>2026-05-28T13:58:39Z</updated>
+    <updated>2026-05-28T14:05:55Z</updated>
     <summary>prompting is pronounced "prompt ing" (/ˈprɒmptɪŋ/). "PROMPT-ing" — the noun form.</summary>
   </entry>
   <entry>
     <title>reasoning — ree zun ing</title>
     <link href="https://pronounce.renlab.ai/word/reasoning"/>
     <id>https://pronounce.renlab.ai/word/reasoning</id>
-    <updated>2026-05-28T13:58:39Z</updated>
+    <updated>2026-05-28T14:05:55Z</updated>
     <summary>reasoning is pronounced "ree zun ing" (/ˈriːzənɪŋ/). "REE-zun-ing" — multi-step inference; also the name of the model class (o1, R1, etc.).</summary>
   </entry>
 </feed>
