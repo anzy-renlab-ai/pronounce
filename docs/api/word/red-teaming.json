@@ -1,0 +1,12 @@
+{
+  "word": "red-teaming",
+  "ipa": "/ˈrɛd ˌtiːmɪŋ/",
+  "respelling_us": "red teeming",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "\"RED-teeming\" — adversarial probing of an LM to find unsafe outputs."
+}

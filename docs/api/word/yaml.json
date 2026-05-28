@@ -4,9 +4,9 @@
   "respelling_us": "yam ul",
   "alt_ipa": [],
   "alt_respelling_us": [],
-  "source_url": "https://yaml.org/faq.html",
-  "source_label": "yaml.org FAQ",
+  "source_url": "https://yaml.org/",
+  "source_label": "yaml.org",
   "category": "acronym",
   "confidence": "creator-clarified",
-  "notes": "yaml.org FAQ: \"rhymes with camel\". YAM-uhl."
+  "notes": "yaml.org tagline historically read \"YAML Ain't Markup Language\" and FAQ stated \"rhymes with camel\". \"YAM-uhl\"."
 }

@@ -1,0 +1,12 @@
+{
+  "word": "prefix-tuning",
+  "ipa": "/ˈpriːfɪks ˌtjuːnɪŋ/",
+  "respelling_us": "pree fix tooning",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2101.00190",
+  "source_label": "Li & Liang 2021",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "Tune a learned prefix prepended to each layer's keys/values."
+}

@@ -1,0 +1,12 @@
+{
+  "word": "instruct",
+  "ipa": "/ɪnˈstrʌkt/",
+  "respelling_us": "in strukt",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "\"in-STRUKT\" — short for instruction-tuned (GPT-3.5 Instruct, Llama-2-Instruct, etc.)."
+}

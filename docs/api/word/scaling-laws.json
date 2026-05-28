@@ -1,0 +1,12 @@
+{
+  "word": "scaling-laws",
+  "ipa": "/ˈskeɪlɪŋ ˌlɔːz/",
+  "respelling_us": "skay ling lawz",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2001.08361",
+  "source_label": "Kaplan et al. 2020",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "Power-law relations between compute / data / params and loss; \"SKAY-ling laws\"."
+}

@@ -1,0 +1,12 @@
+{
+  "word": "curriculum-learning",
+  "ipa": "/kəˈrɪkjələm ˌlɜːrnɪŋ/",
+  "respelling_us": "kuh rik yu lum ler ning",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://dl.acm.org/doi/10.1145/1553374.1553380",
+  "source_label": "Bengio et al. 2009",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "Train on easy examples first, then harder; \"kuh-RIK-yu-lum learning\"."
+}

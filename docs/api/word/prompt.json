@@ -1,0 +1,12 @@
+{
+  "word": "prompt",
+  "ipa": "/prɒmpt/",
+  "respelling_us": "prompt",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "\"PROMPT\" — the input string fed to an LM."
+}

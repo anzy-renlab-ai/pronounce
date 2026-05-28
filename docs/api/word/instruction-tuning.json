@@ -1,0 +1,12 @@
+{
+  "word": "instruction-tuning",
+  "ipa": "/ɪnˈstrʌkʃən ˌtjuːnɪŋ/",
+  "respelling_us": "in struk shun tooning",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2109.01652",
+  "source_label": "Wei et al. 2021 (FLAN)",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "SFT on instruction-style (prompt, response) pairs; the step that turns a base LM into an instruct model."
+}

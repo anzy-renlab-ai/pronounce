@@ -4,8 +4,8 @@
   "respelling_us": "PLAN deks",
   "alt_ipa": [],
   "alt_respelling_us": [],
-  "source_url": "https://plandex.ai/",
-  "source_label": "Plandex",
+  "source_url": "https://github.com/plandex-ai/plandex",
+  "source_label": "Plandex repo",
   "category": "project",
   "confidence": "community-consensus",
   "notes": "Terminal AI coding agent. \"PLAN-deks.\""

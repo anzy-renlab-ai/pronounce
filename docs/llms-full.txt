@@ -159,7 +159,7 @@ Kotlin | /ˈkɒtlɪn/ | cot lin | product | community-consensus | https://kotlin
 Julia | /ˈdʒuːliə/ | joo lia | product | community-consensus | https://julialang.org/
 Clojure | /ˈkloʊʒər/ | closure | product | community-consensus | https://clojure.org/
 OCaml | /oʊˈkæməl/ | oh camel | product | community-consensus | https://ocaml.org/
-Lua | /ˈluːə/ | loo ah | product | creator-clarified | https://www.lua.org/about/
+Lua | /ˈluːə/ | loo ah | product | creator-clarified | https://www.lua.org/about.html
 Zig | /zɪɡ/ | zig | product | community-consensus | https://ziglang.org/
 uv | /ˌjuː ˈviː/ | you V | tool | community-consensus | https://github.com/astral-sh/uv
 ruff | /rʌf/ | ruff | tool | community-consensus | https://docs.astral.sh/ruff/
@@ -199,7 +199,7 @@ CIDR | /ˈsaɪdər/ | cider | acronym | creator-clarified | https://en.wikipedia
 Gleam | /ɡliːm/ | gleem | product | community-consensus | https://gleam.run/
 Roc | /rɒk/ | rock | product | community-consensus | https://www.roc-lang.org/
 Carbon | /ˈkɑːrbən/ | carbon | product | community-consensus | https://github.com/carbon-language
-V | /viː/ | V | product | community-consensus | https://vlang.io/
+V | /viː/ | V | product | community-consensus | https://github.com/vlang/v
 Odin | /ˈoʊdɪn/ | oh din | product | community-consensus | https://odin-lang.org/
 Racket | /ˈrækɪt/ | rack et | product | community-consensus | https://racket-lang.org/
 Webpack | /ˈwɛbˌpæk/ | web pack | tool | community-consensus | https://webpack.js.org/
@@ -567,7 +567,7 @@ cognition | /kɒɡ ˈnɪ ʃən/ | kog NISH un | project | community-consensus | 
 magic.dev | /ˈmæ dʒɪk dɛv/ | MAJ ik dev | project | community-consensus | https://magic.dev/
 augment | /ɔːɡ ˈmɛnt/ | awg MENT | project | community-consensus | https://www.augmentcode.com/
 supermaven | /ˌsuː pər ˈmeɪ vən/ | soo per MAY vun | project | community-consensus | https://supermaven.com/
-plandex | /ˈplæn dɛks/ | PLAN deks | project | community-consensus | https://plandex.ai/
+plandex | /ˈplæn dɛks/ | PLAN deks | project | community-consensus | https://github.com/plandex-ai/plandex
 void | /vɔɪd/ | void | project | community-consensus | https://voideditor.com/
 composio | /kəm ˈpoʊ zi oʊ/ | kum POE zee oh | project | community-consensus | https://composio.dev/
 e2b | /ˌiː tuː ˈbiː/ | E two B | project | community-consensus | https://e2b.dev/
@@ -612,7 +612,7 @@ posthog | /ˈpoʊst hɒɡ/ | POST hog | tool | community-consensus | https://pos
 sglang | /ˌɛs dʒiː ˈlæŋ/ | S G lang | tool | community-consensus | https://github.com/sgl-project/sglang
 trae | /treɪ/ | tray | product | community-consensus | https://www.trae.ai/
 dia | /ˈdiː ə/ | DEE uh | product | community-consensus | https://www.diabrowser.com/
-tome | /toʊm/ | tome | product | community-consensus | https://tome.app/
+tome | /toʊm/ | tome | product | community-consensus | (no source)
 gamma | /ˈɡæ mə/ | GAM uh | product | community-consensus | https://gamma.app/
 descript | /dɪ ˈskrɪpt/ | dih SKRIPT | product | community-consensus | https://www.descript.com/
 figma | /ˈfɪɡ mə/ | FIG muh | product | community-consensus | https://www.figma.com/
@@ -635,7 +635,7 @@ QUIC | /kwɪk/ | quick | acronym | creator-clarified | https://datatracker.ietf.
 CORS | /kɔːrz/ | cores | acronym | community-consensus | https://fetch.spec.whatwg.org/
 CSRF | /ˈsiː sɜːrf/ | sea surf | acronym | contested | https://owasp.org/www-community/attacks/csrf
 XSS | /ˌɛks ɛs ˈɛs/ | X S S | acronym | community-consensus | (no source)
-YAML | /ˈjæməl/ | yam ul | acronym | creator-clarified | https://yaml.org/faq.html
+YAML | /ˈjæməl/ | yam ul | acronym | creator-clarified | https://yaml.org/
 TOML | /toʊml/ | tohml | acronym | creator-clarified | https://toml.io/
 SDK | /ˌɛs diː ˈkeɪ/ | S D K | acronym | community-consensus | (no source)
 CLI | /ˌsiː ɛl ˈaɪ/ | C L I | acronym | community-consensus | (no source)
@@ -1550,3 +1550,35 @@ judea-pearl | /dʒuːˈdiːə ˈpɜːrl/ | joo dee uh purl | person | community-
 boltzmann | /ˈboʊltsmən/ | bohlts mun | person | community-consensus | https://en.wikipedia.org/wiki/Ludwig_Boltzmann
 schölkopf | /ˈʃɜːlkɒpf/ | shurl kopf | person | contested | https://en.wikipedia.org/wiki/Bernhard_Sch%C3%B6lkopf
 tegmark | /ˈtɛɡmɑːrk/ | teg mark | person | community-consensus | https://space.mit.edu/home/tegmark/
+fine-tune | /ˌfaɪn ˈtjuːn/ | fyne toon | cs-term | community-consensus | (no source)
+fine-tuning | /ˌfaɪn ˈtjuːnɪŋ/ | fyne tooning | cs-term | community-consensus | (no source)
+pretrain | /ˌpriːˈtreɪn/ | pree train | cs-term | community-consensus | (no source)
+pretraining | /ˌpriːˈtreɪnɪŋ/ | pree training | cs-term | community-consensus | (no source)
+adapter | /əˈdæptər/ | uh dap ter | cs-term | community-consensus | https://arxiv.org/abs/1902.00751
+instruction-tuning | /ɪnˈstrʌkʃən ˌtjuːnɪŋ/ | in struk shun tooning | cs-term | community-consensus | https://arxiv.org/abs/2109.01652
+prompt-tuning | /ˈprɒmpt ˌtjuːnɪŋ/ | prompt tooning | cs-term | community-consensus | https://arxiv.org/abs/2104.08691
+prefix-tuning | /ˈpriːfɪks ˌtjuːnɪŋ/ | pree fix tooning | cs-term | community-consensus | https://arxiv.org/abs/2101.00190
+instruct | /ɪnˈstrʌkt/ | in strukt | cs-term | community-consensus | (no source)
+few-shot | /ˌfjuː ˈʃɒt/ | few shot | cs-term | community-consensus | https://arxiv.org/abs/2005.14165
+zero-shot | /ˌzɪroʊ ˈʃɒt/ | zee roh shot | cs-term | community-consensus | (no source)
+transfer-learning | /ˈtrænsfər ˌlɜːrnɪŋ/ | trans fer ler ning | cs-term | community-consensus | (no source)
+continual-learning | /kənˈtɪnjuəl ˌlɜːrnɪŋ/ | kun tin yoo ul ler ning | cs-term | community-consensus | (no source)
+curriculum-learning | /kəˈrɪkjələm ˌlɜːrnɪŋ/ | kuh rik yu lum ler ning | cs-term | community-consensus | https://dl.acm.org/doi/10.1145/1553374.1553380
+scaling-laws | /ˈskeɪlɪŋ ˌlɔːz/ | skay ling lawz | cs-term | community-consensus | https://arxiv.org/abs/2001.08361
+downstream | /ˌdaʊnˈstriːm/ | down streem | cs-term | community-consensus | (no source)
+alignment | /əˈlaɪnmənt/ | uh lyne munt | cs-term | community-consensus | (no source)
+jailbreak | /ˈdʒeɪlˌbreɪk/ | jayl brake | cs-term | community-consensus | (no source)
+red-teaming | /ˈrɛd ˌtiːmɪŋ/ | red teeming | cs-term | community-consensus | (no source)
+reward-model | /rɪˈwɔːrd ˌmɒdəl/ | rih ward mod ul | cs-term | community-consensus | (no source)
+preference | /ˈprɛfərəns/ | pref er uns | cs-term | community-consensus | (no source)
+HHH | /ˌeɪtʃ eɪtʃ ˈeɪtʃ/ | aitch aitch aitch | acronym | community-consensus | https://arxiv.org/abs/2112.00861
+grounding | /ˈɡraʊndɪŋ/ | grown ding | cs-term | community-consensus | (no source)
+hallucination | /həˌluːsɪˈneɪʃən/ | huh loo sih nay shun | cs-term | community-consensus | (no source)
+hallucinate | /həˈluːsɪˌneɪt/ | huh loo sih nate | cs-term | community-consensus | (no source)
+agent | /ˈeɪdʒənt/ | ay junt | cs-term | community-consensus | (no source)
+agentic | /eɪˈdʒɛntɪk/ | ay jen tik | cs-term | community-consensus | (no source)
+tool-use | /ˈtuːl ˌjuːs/ | tool yoos | cs-term | community-consensus | (no source)
+function-calling | /ˈfʌŋkʃən ˌkɔːlɪŋ/ | funk shun call ing | cs-term | community-consensus | https://platform.openai.com/docs/guides/function-calling
+prompt | /prɒmpt/ | prompt | cs-term | community-consensus | (no source)
+prompting | /ˈprɒmptɪŋ/ | prompt ing | cs-term | community-consensus | (no source)
+reasoning | /ˈriːzənɪŋ/ | ree zun ing | cs-term | community-consensus | (no source)

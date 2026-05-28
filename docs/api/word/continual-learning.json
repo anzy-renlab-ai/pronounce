@@ -1,0 +1,12 @@
+{
+  "word": "continual-learning",
+  "ipa": "/kənˈtɪnjuəl ˌlɜːrnɪŋ/",
+  "respelling_us": "kun tin yoo ul ler ning",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "Sequential training across tasks without catastrophic forgetting; \"kun-TIN-yoo-ul learning\"."
+}

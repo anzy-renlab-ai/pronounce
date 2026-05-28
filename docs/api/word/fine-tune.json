@@ -1,0 +1,12 @@
+{
+  "word": "fine-tune",
+  "ipa": "/ˌfaɪn ˈtjuːn/",
+  "respelling_us": "fyne toon",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "\"FYNE-toon\" — continue training a pretrained model on task data. Verb + compound."
+}

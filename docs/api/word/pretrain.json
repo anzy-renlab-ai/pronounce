@@ -1,0 +1,12 @@
+{
+  "word": "pretrain",
+  "ipa": "/ˌpriːˈtreɪn/",
+  "respelling_us": "pree train",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "\"pree-TRAIN\" — train from scratch on a large unlabeled corpus (the base step before fine-tuning)."
+}

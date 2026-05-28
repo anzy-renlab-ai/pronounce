@@ -1,0 +1,12 @@
+{
+  "word": "adapter",
+  "ipa": "/əˈdæptər/",
+  "respelling_us": "uh dap ter",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/1902.00751",
+  "source_label": "Houlsby et al. 2019",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "\"uh-DAP-ter\" — small bottleneck layer injected into a frozen backbone (LoRA, IA³, etc. are adapter methods)."
+}

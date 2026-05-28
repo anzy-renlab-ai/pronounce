@@ -1,0 +1,12 @@
+{
+  "word": "reward-model",
+  "ipa": "/rɪˈwɔːrd ˌmɒdəl/",
+  "respelling_us": "rih ward mod ul",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "RM in RLHF — scores responses to drive PPO/DPO; \"rih-WARD model\"."
+}

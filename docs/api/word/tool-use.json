@@ -1,0 +1,12 @@
+{
+  "word": "tool-use",
+  "ipa": "/ˈtuːl ˌjuːs/",
+  "respelling_us": "tool yoos",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "\"TOOL-YOOS\" — LM-invoked external functions (search, code exec, calc)."
+}

@@ -1,0 +1,12 @@
+{
+  "word": "function-calling",
+  "ipa": "/ˈfʌŋkʃən ˌkɔːlɪŋ/",
+  "respelling_us": "funk shun call ing",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://platform.openai.com/docs/guides/function-calling",
+  "source_label": "OpenAI docs",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "OpenAI/JSON-schema-style tool invocation API; \"FUNK-shun calling\"."
+}

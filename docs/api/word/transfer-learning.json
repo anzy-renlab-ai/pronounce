@@ -1,0 +1,12 @@
+{
+  "word": "transfer-learning",
+  "ipa": "/ˈtrænsfər ˌlɜːrnɪŋ/",
+  "respelling_us": "trans fer ler ning",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "",
+  "source_label": "",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "Reuse representations learned on one task for another; the parent concept of fine-tuning."
+}

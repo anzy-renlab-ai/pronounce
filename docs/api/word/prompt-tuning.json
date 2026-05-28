@@ -1,0 +1,12 @@
+{
+  "word": "prompt-tuning",
+  "ipa": "/ˈprɒmpt ˌtjuːnɪŋ/",
+  "respelling_us": "prompt tooning",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2104.08691",
+  "source_label": "Lester et al. 2021",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "Learn a soft-prompt embedding while the model stays frozen."
+}
