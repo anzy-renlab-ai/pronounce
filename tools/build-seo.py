@@ -410,6 +410,7 @@ def head_common(title: str, desc: str, canonical: str, lang: str = "en",
         f'  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">',
         f'  <link rel="apple-touch-icon" href="/apple-touch-icon.png">',
         f'  <link rel="stylesheet" href="{style_prefix}/style.css">',
+        f'  <script defer src="/_vercel/insights/script.js"></script>',
     ]
     return "\n".join(lines)
 

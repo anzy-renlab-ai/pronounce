@@ -881,6 +881,7 @@ cat > "$DOCS/v1.html" <<EOF
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="./style.css">
+  <script defer src="/_vercel/insights/script.js"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -1087,6 +1088,7 @@ cat > "$DOCS/zh.html" <<EOF
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="./style.css">
+  <script defer src="/_vercel/insights/script.js"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -1289,6 +1291,7 @@ cat > "$DOCS/browse.html" <<EOF
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="./style.css">
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
   <div class="gh-banner">⭐ <a href="https://github.com/${GH_REPO}">Star on GitHub</a> — open source, MIT, every dictionary entry is a community PR</div>
@@ -1569,6 +1572,7 @@ while IFS="$SEP" read -r word ipa resp alt_ipa alt_resp src_url src_label cat co
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="../style.css">
+  <script defer src="/_vercel/insights/script.js"></script>
   <script type="application/ld+json">$jsonld_main</script>
 HTML
 
@@ -2143,6 +2147,7 @@ for ((d = DAYS_BACK; d >= 0; d--)); do
   <meta name="theme-color" content="#ff6a3d">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="stylesheet" href="/style.css">
+  <script defer src="/_vercel/insights/script.js"></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"$daydate — pronunciation of the day: $d_word_esc","datePublished":"${daydate}T00:00:00Z","author":{"@type":"Organization","name":"$BRAND"},"image":"$SITE_URL/og/$d_slug.png","url":"$SITE_URL/daily/$daydate.html","mainEntityOfPage":"$SITE_URL/daily/$daydate.html","description":"$d_word_esc pronunciation for $daydate."}</script>
 </head>
 <body>
@@ -2194,7 +2199,7 @@ done
 <link rel="canonical" href="$SITE_URL/daily/">
 <meta property="og:image" content="$SITE_URL/og.png"><meta name="theme-color" content="#ff6a3d">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="stylesheet" href="/style.css"></head>
+<link rel="stylesheet" href="/style.css"><script defer src="/_vercel/insights/script.js"></script></head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
 <div class="gh-banner">⭐ <a href="https://github.com/$GH_REPO">Star on GitHub</a></div>
@@ -2323,6 +2328,7 @@ cat > "$DOCS/stats.html" <<EOF
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="${SITE_URL}/og.png">
   <link rel="stylesheet" href="./style.css">
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
   <div class="gh-banner">⭐ <a href="https://github.com/${GH_REPO}">Star on GitHub</a> · community-maintained pronunciation dictionary</div>
@@ -2440,6 +2446,7 @@ awk -F'\t' '!/^#/ && NF>=8 && $1 != "" && $1 != "word" { print $8 }' "$DICT" | s
     printf '  <link rel="canonical" href="%s/category/%s.html">\n' "$SITE_URL" "$catname"
     printf '  <meta property="og:image" content="%s/og.png">\n' "$SITE_URL"
     printf '  <link rel="stylesheet" href="/style.css">\n'
+    printf '  <script defer src="/_vercel/insights/script.js"></script>\n'
     printf '</head>\n<body>\n'
     printf '  <div class="gh-banner">⭐ <a href="https://github.com/%s">Star on GitHub</a></div>\n' "$GH_REPO"
     printf '  <nav class="topbar"><div class="brand"><a href="/">🔊 %s</a></div>\n' "$BRAND"
@@ -2530,6 +2537,7 @@ cat > "$DOCS/about.html" <<EOF
   <link rel="canonical" href="${SITE_URL}/about.html">
   <meta property="og:image" content="${SITE_URL}/og.png">
   <link rel="stylesheet" href="/style.css">
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
   <div class="gh-banner">⭐ <a href="https://github.com/${GH_REPO}">Star on GitHub</a> — open source, MIT</div>
@@ -2618,6 +2626,7 @@ cat > "$DOCS/404.html" <<EOF
   <meta name="description" content="That word isn't in the Pronounce dictionary yet. Browse 310+ entries or open a PR to add it.">
   <meta property="og:image" content="${SITE_URL}/og.png">
   <link rel="stylesheet" href="/style.css">
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
   <nav class="topbar">

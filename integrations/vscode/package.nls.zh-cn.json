@@ -1,6 +1,6 @@
 {
   "displayName": "Pronounce — 程序员发音词典",
-  "description": "悬停任意技术词 — 听它到底怎么读。1329 条带来源引用的发音词库，覆盖产品名、命令行工具、计算机术语、AI/ML 项目与研究者，以及技术人跨职能高频词（GTM、PLG、ARR、OKR、scrum、kanban……）。跨平台：macOS `say`、Linux `espeak-ng`、Windows PowerShell。支持 VS Code、Cursor、Windsurf、VSCodium、Zed。",
+  "description": "悬停任意技术词 — 听它到底怎么读。1548 条带来源引用的发音词库，覆盖产品名、命令行工具、计算机术语、AI/ML 项目与研究者，以及技术人跨职能高频词（GTM、PLG、ARR、OKR、scrum、kanban……）。跨平台：macOS `say`、Linux `espeak-ng`、Windows PowerShell。支持 VS Code、Cursor、Windsurf、VSCodium、Zed。",
   "cmd.speak.title": "朗读单词",
   "cmd.speakSelection.title": "朗读当前选区",
   "cmd.search.title": "搜索发音词典…",
@@ -15,12 +15,12 @@
   "config.hoverOnlyKnownWords.desc": "仅对词库中的词显示悬停。关闭后也会对未知词悬停（使用 TTS 字母转音，质量较低）。",
   "config.statusBar.desc": "在状态栏显示 🔊 Pronounce 项（点击朗读当前选区）。",
   "walkthrough.title": "欢迎使用 Pronounce",
-  "walkthrough.description": "悬停任意技术词 → 听工程师实际怎么读。1329 条带来源词条。自 v0.3 起跨平台（macOS / Linux / Windows）。",
+  "walkthrough.description": "悬停任意技术词 → 听工程师实际怎么读。1548 条带来源词条。自 v0.3 起跨平台（macOS / Linux / Windows）。",
   "walkthrough.try.title": "听一下 — 试试 kubectl、nginx 或 YAML",
   "walkthrough.try.description": "运行 `Pronounce: Speak word` 朗读任意词条。最快方式：在任意文件中选中一个词，按 **⌘⇧'**（或运行 `Pronounce: Speak current selection`）。\n\n[现在听 `kubectl`](command:pronounce.speak?%22kubectl%22)",
   "walkthrough.hover.title": "悬停任意技术词",
   "walkthrough.hover.description": "在任意文件中悬停 `kubectl`、`nginx`、`GIF`、`YAML`、`Ghostty`、`wagmi`、`JSON` 等 — 弹窗显示 IPA、英式拼读、来源引用，以及 🔊 播放按钮。适用于**任意**语言的文件。\n\n[打开示例文件](command:pronounce.openWalkthrough)",
-  "walkthrough.search.title": "搜索全部 1329 条词条",
+  "walkthrough.search.title": "搜索全部 1548 条词条",
   "walkthrough.search.description": "从命令面板（⌘⇧P / Ctrl+Shift+P）运行 `Pronounce: Search dictionary…`，模糊查找任意词。\n\n[现在打开搜索](command:pronounce.search)",
   "walkthrough.star.title": "★ 点个星 · 让词典持续生长",
   "walkthrough.star.description": "如果 Pronounce 帮你省下了一次站会的尴尬，**点一个星就是让词典持续生长的最好方式** — 更多开发者发现它、更多 PR 合入、更多词条得到作者澄清。\n\n[★ 在 GitHub 点星](command:pronounce.starOnGitHub)\n[访问 pronounce.renlab.ai](command:pronounce.openWebsite)\n\n可选：[☕ Ko-fi 上请杯咖啡](command:pronounce.sponsor) — 一杯咖啡资助一个新词条。"
