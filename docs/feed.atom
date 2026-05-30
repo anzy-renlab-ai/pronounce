@@ -4,181 +4,181 @@
   <link href="https://pronounce.renlab.ai/feed.atom" rel="self"/>
   <link href="https://pronounce.renlab.ai/"/>
   <id>https://pronounce.renlab.ai/</id>
-  <updated>2026-05-30T10:34:08Z</updated>
+  <updated>2026-05-30T10:40:48Z</updated>
   <subtitle>How engineers actually pronounce project / product / jargon names. Community-maintained.</subtitle>
   <entry>
     <title>agentless — ay jent less</title>
     <link href="https://pronounce.renlab.ai/word/agentless"/>
     <id>https://pronounce.renlab.ai/word/agentless</id>
-    <updated>2026-05-30T10:34:08Z</updated>
+    <updated>2026-05-30T10:40:48Z</updated>
     <summary>agentless is pronounced "ay jent less" (/ˈeɪdʒəntləs/). Coined in the OpenAutoCoder/SWE-bench paper for an approach that solves coding tasks WITHOUT an autonomous agent loop — the deliberate antonym of "agentic". STRESS stays on the first syllable: AY-jent-less, not uh-JENT-less.</summary>
   </entry>
   <entry>
     <title>nccl — nik uhl</title>
     <link href="https://pronounce.renlab.ai/word/nccl"/>
     <id>https://pronounce.renlab.ai/word/nccl</id>
-    <updated>2026-05-30T10:34:08Z</updated>
+    <updated>2026-05-30T10:40:48Z</updated>
     <summary>nccl is pronounced "nik uhl" (/ˈnɪkəl/). NVIDIA Collective Communications Library — GPU collective comms (all-reduce, all-gather) for distributed ML training. Official docs: "NCCL, pronounced 'Nickel'". Said like the coin/metal: NIK-uhl, stress on first syllable. Non-obvious from the letters N-C-C-L.</summary>
   </entry>
   <entry>
     <title>pythagora — pih thag uh ruh</title>
     <link href="https://pronounce.renlab.ai/word/pythagora"/>
     <id>https://pronounce.renlab.ai/word/pythagora</id>
-    <updated>2026-05-30T10:34:08Z</updated>
+    <updated>2026-05-30T10:40:48Z</updated>
     <summary>pythagora is pronounced "pih thag uh ruh" (/pɪˈθæɡərə/). AI dev platform / VS Code + Cursor extension and company (YC W24) behind GPT Pilot. Name = the Greek mathematician Pythagoras (/pɪˈθæɡərəs/) minus the final -s. STRESS on second syllable: pih-THAG-uh-ruh. First syllable is short 'pih' in the US reading; the long-'pie' first syllable (alt) mirrors the standard British reading of Pythagoras. No creator-documented pronunciation found — inferred from the established English reading of Pythagoras.</summary>
   </entry>
   <entry>
     <title>ZeRO — zeer oh</title>
     <link href="https://pronounce.renlab.ai/word/zero"/>
     <id>https://pronounce.renlab.ai/word/zero</id>
-    <updated>2026-05-30T10:34:08Z</updated>
+    <updated>2026-05-30T10:40:48Z</updated>
     <summary>ZeRO is pronounced "zeer oh" (/ˈzɪroʊ/). DeepSpeed's ZeRO = "ZEro Redundancy Optimizer" (Microsoft, arXiv:1910.02054). Stylized capitalization (capital Z and O) signals it reads as the English word "zero" — identical to the number, NOT spelled out Z-E-R-O. STRESS: ZEER-oh. Stages are ZeRO-1/2/3 ("zero one/two/three"). Distinct from existing "zero-shot".</summary>
   </entry>
   <entry>
     <title>MQA — em kyoo ay</title>
     <link href="https://pronounce.renlab.ai/word/mqa"/>
     <id>https://pronounce.renlab.ai/word/mqa</id>
-    <updated>2026-05-30T10:34:08Z</updated>
+    <updated>2026-05-30T10:40:48Z</updated>
     <summary>MQA is pronounced "em kyoo ay" (/ˌɛm ˌkjuː ˈeɪ/). Multi-Query Attention — the single-KV-head attention variant that GQA generalizes; referenced in serving docs like TensorRT-LLM. Initialism read letter-by-letter, not as a word: STRESS final letter, em-kyoo-AY, exactly parallel to GQA. The expansion 'multi-query attention' is never pronounced.</summary>
   </entry>
   <entry>
     <title>pixi — pik see</title>
     <link href="https://pronounce.renlab.ai/word/pixi"/>
     <id>https://pronounce.renlab.ai/word/pixi</id>
-    <updated>2026-05-30T10:34:08Z</updated>
+    <updated>2026-05-30T10:40:48Z</updated>
     <summary>pixi is pronounced "pik see" (/ˈpɪksi/). Rust-based cross-platform conda/PyPI package &amp; environment manager from prefix.dev (rising 2025-2026 Python/data-science workflow tool). Reads as the English word "pixie" — STRESS first syllable: PIK-see, rhymes with "fixie." Not "pix-eye." No official creator pronunciation quote located; based on the unambiguous English reading of the spelling. CLI invoked lowercase as `pixi`.</summary>
   </entry>
   <entry>
     <title>chezmoi — shay mwa</title>
     <link href="https://pronounce.renlab.ai/word/chezmoi"/>
     <id>https://pronounce.renlab.ai/word/chezmoi</id>
-    <updated>2026-05-30T10:34:08Z</updated>
+    <updated>2026-05-30T10:40:48Z</updated>
     <summary>chezmoi is pronounced "shay mwa" (/ʃeɪ mwa/). CLI dotfiles manager. Name = French "chez moi" ("at my house"). Official FAQ documents the pronunciation as /ʃeɪ mwa/ "shay-mwa". Non-obvious because the spelling looks English/German; the "z" is silent and "oi" is the French [wa], not English "oy".</summary>
   </entry>
   <entry>
     <title>exl2 — ee eks el too</title>
     <link href="https://pronounce.renlab.ai/word/exl2"/>
     <id>https://pronounce.renlab.ai/word/exl2</id>
-    <updated>2026-05-30T10:34:08Z</updated>
+    <updated>2026-05-30T10:40:48Z</updated>
     <summary>exl2 is pronounced "ee eks el too" (/ˌiː ɛks ɛl ˈtuː/). Mixed-bitrate quantization format native to the ExLlamaV2 (turboderp) local-LLM inference library; the name is a contraction of ExLlamaV2 (EX-L + 2). Spelled out letter-by-letter "E-X-L-TWO" in local-LLM communities, not read as "excel-two". STRESS on TWO. File extension/suffix seen as .exl2 on Hugging Face quants.</summary>
   </entry>
   <entry>
     <title>codestral — koh dess truhl</title>
     <link href="https://pronounce.renlab.ai/word/codestral"/>
     <id>https://pronounce.renlab.ai/word/codestral</id>
-    <updated>2026-05-30T10:34:08Z</updated>
+    <updated>2026-05-30T10:40:48Z</updated>
     <summary>codestral is pronounced "koh dess truhl" (/koʊˈdɛstrəl/). Mistral's 22B code-generation model (released May 2024) with a fill-in-the-middle endpoint, widely used in IDE autocomplete (Continue.dev, Tabnine). The name is reported to be inspired by "orchestral" (the model harmonizing coding tasks), blended with "code" + the company name "Mistral." STRESS: koh-DESS-truhl — primary stress on the second syllable, by analogy with orchestral (or-KESS-truhl). A code-forward first-syllable reading KOH-duh-struhl (keeping the embedded "code" audible, echoing MISS-truhl) is also heard. Official docs give no phonetic guidance.</summary>
   </entry>
   <entry>
     <title>koka — koh kuh</title>
     <link href="https://pronounce.renlab.ai/word/koka"/>
     <id>https://pronounce.renlab.ai/word/koka</id>
-    <updated>2026-05-30T10:34:08Z</updated>
+    <updated>2026-05-30T10:40:48Z</updated>
     <summary>koka is pronounced "koh kuh" (/ˈkoʊkə/). Microsoft Research functional language with algebraic effect handlers (Daan Leijen). Name from Japanese 効果 (kōka) "effect/effectiveness" — matching its effect-typing focus. STRESS first syllable: KOH-kuh, long-o then schwa. Japanese-faithful variant is KOH-kah (koh kah).</summary>
   </entry>
   <entry>
     <title>mentat — men tat</title>
     <link href="https://pronounce.renlab.ai/word/mentat"/>
     <id>https://pronounce.renlab.ai/word/mentat</id>
-    <updated>2026-05-30T10:34:08Z</updated>
+    <updated>2026-05-30T10:40:48Z</updated>
     <summary>mentat is pronounced "men tat" (/ˈmɛntæt/). AI coding tool by AbanteAI — currently MentatBot, a GitHub-native coding agent (earlier archived CLI shared the name). Name borrowed from the "Mentats" (human computers) of Frank Herbert's Dune, from Latin mentis / mentation. STRESS-pattern: MEN-tat (first syllable). "tat" rhymes with "cat"; "men" rhymes with "ten".</summary>
   </entry>
   <entry>
     <title>nvlink — en vee link</title>
     <link href="https://pronounce.renlab.ai/word/nvlink"/>
     <id>https://pronounce.renlab.ai/word/nvlink</id>
-    <updated>2026-05-30T10:34:08Z</updated>
+    <updated>2026-05-30T10:40:48Z</updated>
     <summary>nvlink is pronounced "en vee link" (/ˌɛnˈviː lɪŋk/). NVIDIA's GPU-to-GPU interconnect (constant in GB200/H100 cluster talk). The "NV" prefix is the NVIDIA initialism, read as the letters N-V ("en-vee"), then plain "link": en-vee-LINK. Same NV-prefix pattern as NVSwitch. NOT "nuv-link" or "en-vid-ee-uh link" — a common non-native slip. STRESS: en-vee-LINK. No official FAQ documents the pronunciation; letter-initialism reading is universal in the community.</summary>
   </entry>
   <entry>
     <title>cutlass — kut luhs</title>
     <link href="https://pronounce.renlab.ai/word/cutlass"/>
     <id>https://pronounce.renlab.ai/word/cutlass</id>
-    <updated>2026-05-30T10:34:08Z</updated>
+    <updated>2026-05-30T10:40:48Z</updated>
     <summary>cutlass is pronounced "kut luhs" (/ˈkʌtləs/). NVIDIA's CUDA C++ GEMM/linear-algebra template library; kernel backend behind vLLM, FlashInfer, and many 2025 LLM-serving stacks. The name is an acronym (CUDA Templates for Linear Algebra Subroutines and Solvers) deliberately landing on the sword 'cutlass' — say it exactly like that word. STRESS first syllable: KUT-luhs. NOT 'CUDA-lass' or 'cut-LASS'. Dictionary IPA /ˈkʌtləs/ (Oxford/Cambridge/Collins, same in BrE and AmE).</summary>
   </entry>
   <entry>
     <title>rmsnorm — ar em ess norm</title>
     <link href="https://pronounce.renlab.ai/word/rmsnorm"/>
     <id>https://pronounce.renlab.ai/word/rmsnorm</id>
-    <updated>2026-05-30T10:34:08Z</updated>
+    <updated>2026-05-30T10:40:48Z</updated>
     <summary>rmsnorm is pronounced "ar em ess norm" (/ˌɑːr ɛm ɛs ˈnɔːrm/). RMSNorm = Root Mean Square (Layer) Normalization, the normalization used in Llama/Mistral and most modern LLMs. Spoken as a compound: the "RMS" part is spelled out letter-by-letter (ar-em-ess), then "norm" said as the word. STRESS on NORM: "ar-em-ess NORM". No source documents an explicit creator pronunciation, but the letter-spelled-acronym + "norm" reading is universal in talks and writeups, hence community-consensus.</summary>
   </entry>
   <entry>
     <title>PagedAttention — payjd uh ten shun</title>
     <link href="https://pronounce.renlab.ai/word/pagedattention"/>
     <id>https://pronounce.renlab.ai/word/pagedattention</id>
-    <updated>2026-05-30T10:34:08Z</updated>
+    <updated>2026-05-30T10:40:48Z</updated>
     <summary>PagedAttention is pronounced "payjd uh ten shun" (/ˈpeɪdʒd əˈtɛnʃən/). vLLM's core attention algorithm, named after OS virtual-memory PAGING. Two parts: "paged" + "attention". STRESS: PAYJD uh-TEN-shun. The hazard is "paged" — it is /peɪdʒd/ (rhymes with "caged", one syllable, voiced -jd cluster), NOT two-syllable "page-ed". From the verb "to page" the KV cache into fixed-size blocks. Common in inference-infra discussion 2023-2026.</summary>
   </entry>
   <entry>
     <title>maturin — mat uh rin</title>
     <link href="https://pronounce.renlab.ai/word/maturin"/>
     <id>https://pronounce.renlab.ai/word/maturin</id>
-    <updated>2026-05-30T10:34:08Z</updated>
+    <updated>2026-05-30T10:40:48Z</updated>
     <summary>maturin is pronounced "mat uh rin" (/ˈmætʊrɪn/). STRESS first syllable: MAT-uh-rin (short 'a' as in 'mat', NOT ma-TUR-in). PyO3's official CLI to build &amp; publish Rust-based Python wheels (used by polars, pydantic-core, etc.; pip-installable). The README doesn't document a pronunciation, but 'Maturin' is a real French Huguenot given name (cf. Stephen Maturin in O'Brian's Aubrey–Maturin novels), and references consistently put the stress on the FIRST syllable. A yod variant 'MAT-yuh-rin' also occurs.</summary>
   </entry>
   <entry>
     <title>krea — kree uh</title>
     <link href="https://pronounce.renlab.ai/word/krea"/>
     <id>https://pronounce.renlab.ai/word/krea</id>
-    <updated>2026-05-30T10:34:08Z</updated>
+    <updated>2026-05-30T10:40:48Z</updated>
     <summary>krea is pronounced "kree uh" (/ˈkriːə/). AI creative suite (image/video/3D generation) and the FLUX.1 Krea open model co-developed with Black Forest Labs (2025). Two-syllable name: KREE-uh — first syllable rhymes with "free," second is a schwa. STRESS on first syllable: KREE-uh. Common ESL trap: KRAY-uh; accepted reading is KREE-uh.</summary>
   </entry>
   <entry>
     <title>veo — vee oh</title>
     <link href="https://pronounce.renlab.ai/word/veo"/>
     <id>https://pronounce.renlab.ai/word/veo</id>
-    <updated>2026-05-30T10:34:08Z</updated>
+    <updated>2026-05-30T10:40:48Z</updated>
     <summary>veo is pronounced "vee oh" (/ˈviːoʊ/). Google DeepMind's text-to-video model (Veo 3 / 3.1, 2025), used inside Gemini and Flow. Dominant English reading is VEE-oh; HowToPronounce gives /ˈviːoʊ/. A VAY-oh variant exists, echoing Spanish "veo" (I see). No official creator pronunciation is documented, hence contested. STRESS: VEE-oh.</summary>
   </entry>
   <entry>
     <title>oxlint — ox lint</title>
     <link href="https://pronounce.renlab.ai/word/oxlint"/>
     <id>https://pronounce.renlab.ai/word/oxlint</id>
-    <updated>2026-05-30T10:34:08Z</updated>
+    <updated>2026-05-30T10:40:48Z</updated>
     <summary>oxlint is pronounced "ox lint" (/ˈɒksˌlɪnt/). "OX-lint" — the oxc-based linter; ox like the animal, not the letters O-X.</summary>
   </entry>
   <entry>
     <title>pixtral — piks trahl</title>
     <link href="https://pronounce.renlab.ai/word/pixtral"/>
     <id>https://pronounce.renlab.ai/word/pixtral</id>
-    <updated>2026-05-30T10:34:08Z</updated>
+    <updated>2026-05-30T10:40:48Z</updated>
     <summary>pixtral is pronounced "piks trahl" (/ˈpɪks trɑːl/). Mistral AI's multimodal model family (Pixtral 12B, Pixtral Large). Blend of 'pixel' + 'Mistral,' so '-tral' rhymes with sibling Mistral/Mixtral entries (TRAHL, long ah). Front-loaded stress PIKS-trahl is most common; second-syllable piks-TRAHL (matching some Mixtral speakers) also heard. No creator pronunciation guide published.</summary>
   </entry>
   <entry>
     <title>ChatGLM — chat jee ell em</title>
     <link href="https://pronounce.renlab.ai/word/chatglm"/>
     <id>https://pronounce.renlab.ai/word/chatglm</id>
-    <updated>2026-05-30T10:34:08Z</updated>
+    <updated>2026-05-30T10:40:48Z</updated>
     <summary>ChatGLM is pronounced "chat jee ell em" (/ˌtʃæt dʒiː ɛl ˈɛm/). Zhipu AI / Tsinghua KEG open bilingual model series. Name = "Chat" + GLM, where GLM is an initialism for "General Language Model" spoken letter-by-letter: chat-G-L-M, NOT read as a word "glim". STRESS: chat-jee-ell-EM (final letter takes the beat). Bare "GLM" is already in the dict; this is the searched product name.</summary>
   </entry>
   <entry>
     <title>nemotron — nee moh tron</title>
     <link href="https://pronounce.renlab.ai/word/nemotron"/>
     <id>https://pronounce.renlab.ai/word/nemotron</id>
-    <updated>2026-05-30T10:34:08Z</updated>
+    <updated>2026-05-30T10:40:48Z</updated>
     <summary>nemotron is pronounced "nee moh tron" (/ˈniːmoʊˌtrɑːn/). NVIDIA's flagship open LLM family (Nemotron 3: Nano/Super/Ultra, 2025-2026), hybrid Mamba-Transformer MoE for agentic reasoning. Coined name = NVIDIA's NeMo framework ("NEural MOdules", said NEE-mo) + the -tron suffix, so the prevailing reading is first-syllable-stressed NEE-moh-tron. Some devs mis-read it as nem-oh-TRON / nuh-MOT-ron; the NeMo etymology favors NEE-moh-tron. No official creator-documented pronunciation in text. STRESS: NEE-moh-tron.</summary>
   </entry>
   <entry>
     <title>recraft — ree kraft</title>
     <link href="https://pronounce.renlab.ai/word/recraft"/>
     <id>https://pronounce.renlab.ai/word/recraft</id>
-    <updated>2026-05-30T10:34:08Z</updated>
+    <updated>2026-05-30T10:40:48Z</updated>
     <summary>recraft is pronounced "ree kraft" (/riˈkræft/). Recraft V3 (Oct 2024), a 20B text-to-image model that topped the Artificial Analysis leaderboard for months. Name is the transparent compound re- + craft. STRESS on the root: re-CRAFT (ree-KRAFT), same pattern as the verb 'to recraft' — not RE-craft. No official creator pronunciation documented; natural English reading of the re- prefix compound.</summary>
   </entry>
   <entry>
     <title>knip — kuh nip</title>
     <link href="https://pronounce.renlab.ai/word/knip"/>
     <id>https://pronounce.renlab.ai/word/knip</id>
-    <updated>2026-05-30T10:34:08Z</updated>
+    <updated>2026-05-30T10:40:48Z</updated>
     <summary>knip is pronounced "kuh nip" (/ˈknɪp/). JS/TS unused files/exports/deps detector by Lars Kappert (webpro). README states: "/ˈknɪp/ means '(to) cut' and is pronounced with a hard K" (Dutch). The K is NOT silent — say it "k-nip", NOT English "nip". Single short-i syllable as in "nip". macOS `say` silences the K on raw "knip", so the respelling uses a light schwa ("kuh nip") to force a hard-K onset — closest `say` gets to a true /kn/ cluster.</summary>
   </entry>
   <entry>
     <title>ultracode — ul truh code</title>
     <link href="https://pronounce.renlab.ai/word/ultracode"/>
     <id>https://pronounce.renlab.ai/word/ultracode</id>
-    <updated>2026-05-30T10:34:08Z</updated>
+    <updated>2026-05-30T10:40:48Z</updated>
     <summary>ultracode is pronounced "ul truh code" (/ˈʌltrəˌkoʊd/). "UL-truh-code" — Claude Code max-effort mode (/effort) that fans work out across many subagents. Plain ultra + code.</summary>
   </entry>
 </feed>
