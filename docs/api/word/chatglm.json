@@ -1,0 +1,12 @@
+{
+  "word": "ChatGLM",
+  "ipa": "/ˌtʃæt dʒiː ɛl ˈɛm/",
+  "respelling_us": "chat jee ell em",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/THUDM/ChatGLM-6B",
+  "source_label": "THUDM/ChatGLM-6B GitHub README",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Zhipu AI / Tsinghua KEG open bilingual model series. Name = \"Chat\" + GLM, where GLM is an initialism for \"General Language Model\" spoken letter-by-letter: chat-G-L-M, NOT read as a word \"glim\". STRESS: chat-jee-ell-EM (final letter takes the beat). Bare \"GLM\" is already in the dict; this is the searched product name."
+}

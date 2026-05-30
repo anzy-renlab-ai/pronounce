@@ -1,0 +1,12 @@
+{
+  "word": "ALiBi",
+  "ipa": "/ˈæləbaɪ/",
+  "respelling_us": "al uh by",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2108.12409",
+  "source_label": "arXiv 2108.12409 — Train Short, Test Long: Attention with Linear Biases (ALiBi), Press et al., ICLR 2022",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "ALiBi = Attention with Linear Biases, a transformer position method used in BLOOM and MPT. The camelCase ALiBi cues that it reads as the everyday English word \"alibi\" (STRESS: AL-uh-by, first syllable) — not spelled out A-L-I-B-I, and the \"-bi\" is long-i (\"by\"), not \"bee\". Paper/GitHub don't document the pronunciation, so community-consensus, but the wordplay is unambiguous."
+}

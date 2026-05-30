@@ -1,0 +1,12 @@
+{
+  "word": "oxlint",
+  "ipa": "/ˈɒksˌlɪnt/",
+  "respelling_us": "ox lint",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://oxc.rs/docs/guide/usage/linter.html",
+  "source_label": "Oxlint official docs (oxc.rs)",
+  "category": "cli-tool",
+  "confidence": "creator-clarified",
+  "notes": "\"OX-lint\" — the oxc-based linter; ox like the animal, not the letters O-X."
+}

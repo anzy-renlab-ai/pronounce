@@ -1,0 +1,12 @@
+{
+  "word": "exl2",
+  "ipa": "/ˌiː ɛks ɛl ˈtuː/",
+  "respelling_us": "ee eks el too",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/turboderp-org/exllamav2",
+  "source_label": "turboderp-org/exllamav2 (GitHub README)",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Mixed-bitrate quantization format native to the ExLlamaV2 (turboderp) local-LLM inference library; the name is a contraction of ExLlamaV2 (EX-L + 2). Spelled out letter-by-letter \"E-X-L-TWO\" in local-LLM communities, not read as \"excel-two\". STRESS on TWO. File extension/suffix seen as .exl2 on Hugging Face quants."
+}

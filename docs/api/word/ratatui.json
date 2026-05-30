@@ -1,0 +1,12 @@
+{
+  "word": "ratatui",
+  "ipa": "/ˌræ.təˈtu.i/",
+  "respelling_us": "rat uh too ee",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/ratatui/ratatui",
+  "source_label": "ratatui GitHub README (official)",
+  "category": "tool",
+  "confidence": "creator-clarified",
+  "notes": "Dominant Rust terminal-UI crate (powers gitui and many TUIs); community fork of tui-rs (2023). Official README documents the IPA ˌræ.təˈtu.i; named after the dish/Pixar film Ratatouille. STRESS: rat-uh-TOO-ee (primary stress on TOO)."
+}

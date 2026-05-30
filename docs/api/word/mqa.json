@@ -1,0 +1,12 @@
+{
+  "word": "MQA",
+  "ipa": "/ˌɛm ˌkjuː ˈeɪ/",
+  "respelling_us": "em kyoo ay",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2305.13245",
+  "source_label": "arXiv 2305.13245 (GQA paper, defines/compares MQA)",
+  "category": "acronym",
+  "confidence": "community-consensus",
+  "notes": "Multi-Query Attention — the single-KV-head attention variant that GQA generalizes; referenced in serving docs like TensorRT-LLM. Initialism read letter-by-letter, not as a word: STRESS final letter, em-kyoo-AY, exactly parallel to GQA. The expansion 'multi-query attention' is never pronounced."
+}

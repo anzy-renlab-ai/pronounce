@@ -1,0 +1,12 @@
+{
+  "word": "seedance",
+  "ipa": "/ˈsiːdæns/",
+  "respelling_us": "seed dance",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://seed.bytedance.com/en/seedance",
+  "source_label": "ByteDance Seed — Seedance official page",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "ByteDance's AI video-generation model family (Seedance 1.0 / 2.0, 2026); the video-side sibling of the Seedream image model, both under ByteDance's \"Seed\" foundation-model brand. Portmanteau of Seed + dance. STRESS: SEED-dance — say \"seed\" then \"dance\", NOT \"see-dance\". No documented creator pronunciation quote, but the Seed-prefix branding makes the split unambiguous across docs."
+}

@@ -1,0 +1,12 @@
+{
+  "word": "codebuff",
+  "ipa": "/ˈkoʊdbʌf/",
+  "respelling_us": "kohd buhf",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/CodebuffAI/codebuff",
+  "source_label": "CodebuffAI GitHub repository (CodebuffAI/codebuff)",
+  "category": "cli-tool",
+  "confidence": "community-consensus",
+  "notes": "Open-source multi-agent terminal coding agent by CodebuffAI; benchmarks against Claude Code. Name is \"code\" + \"buff\" (buffed-up / enhanced). STRESS first syllable: CODE-buff. \"buff\" rhymes with \"stuff\"/\"rough\" (NOT \"byoof\"). No creator-documented pronunciation found, but both halves are everyday English words so the reading is unambiguous. Formerly named Manicode."
+}

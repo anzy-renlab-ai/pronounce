@@ -1,0 +1,12 @@
+{
+  "word": "knip",
+  "ipa": "/ˈknɪp/",
+  "respelling_us": "kuh nip",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/webpro-nl/knip",
+  "source_label": "Knip official GitHub README (webpro-nl/knip)",
+  "category": "tool",
+  "confidence": "creator-clarified",
+  "notes": "JS/TS unused files/exports/deps detector by Lars Kappert (webpro). README states: \"/ˈknɪp/ means '(to) cut' and is pronounced with a hard K\" (Dutch). The K is NOT silent — say it \"k-nip\", NOT English \"nip\". Single short-i syllable as in \"nip\". macOS `say` silences the K on raw \"knip\", so the respelling uses a light schwa (\"kuh nip\") to force a hard-K onset — closest `say` gets to a true /kn/ cluster."
+}

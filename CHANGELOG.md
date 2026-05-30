@@ -1,5 +1,14 @@
 # Changelog
 
+## v2.7.0 — 2026-05-30
+
+### Added
+- **Dictionary 1452 → 1640 (+188) across three batches.** arXiv paper vocabulary (batch 9), ML training/alignment/agent basics (batch 10), and agentic-coding & AI-tooling terms (batch 11): FlashAttention, PagedAttention, GQA/MQA/MLA, GPTQ/AWQ/NF4, FSDP, ZeRO, NCCL ("nickel"), CodeAct, Reflexion, Toolformer, subagent, vibe-coding, ultracode, Codestral, Pixtral, Nemotron, EXAONE, mise ("meez"), oxlint, ratatui, chezmoi ("shay-mwa"), and more. Batch 11 was discovered + adversarially source-verified via a multi-agent workflow, then hand-reviewed.
+- **VS Code / Cursor extension v0.4.9** ships the full 1640-entry dictionary.
+
+### Changed
+- **Site-wide analytics.** Tokenless Vercel Web Analytics beacon on every page so SEO traffic is finally measurable (every word page, category, collection, compare, daily, and root page).
+
 ## v2.6.0 — 2026-05-18
 
 ### Added

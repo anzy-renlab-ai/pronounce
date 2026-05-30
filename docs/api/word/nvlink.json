@@ -1,0 +1,12 @@
+{
+  "word": "nvlink",
+  "ipa": "/ˌɛnˈviː lɪŋk/",
+  "respelling_us": "en vee link",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://en.wikipedia.org/wiki/NVLink",
+  "source_label": "Wikipedia — NVLink",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "NVIDIA's GPU-to-GPU interconnect (constant in GB200/H100 cluster talk). The \"NV\" prefix is the NVIDIA initialism, read as the letters N-V (\"en-vee\"), then plain \"link\": en-vee-LINK. Same NV-prefix pattern as NVSwitch. NOT \"nuv-link\" or \"en-vid-ee-uh link\" — a common non-native slip. STRESS: en-vee-LINK. No official FAQ documents the pronunciation; letter-initialism reading is universal in the community."
+}

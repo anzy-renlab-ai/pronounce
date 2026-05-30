@@ -1,0 +1,12 @@
+{
+  "word": "awq",
+  "ipa": "/ɔk/",
+  "respelling_us": "awk",
+  "alt_ipa": ["/ˌeɪ ˌdʌb əl juː ˈkjuː/"],
+  "alt_respelling_us": ["ay duh bul yoo kyoo"],
+  "source_url": "https://arxiv.org/abs/2306.00978",
+  "source_label": "arXiv 2306.00978 — AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration (MIT HAN Lab)",
+  "category": "acronym",
+  "confidence": "contested",
+  "notes": "Activation-aware Weight Quantization. Spoken \"awk\" (like the unix tool) or spelled out A-W-Q."
+}

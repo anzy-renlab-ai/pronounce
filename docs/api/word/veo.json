@@ -1,0 +1,12 @@
+{
+  "word": "veo",
+  "ipa": "/ˈviːoʊ/",
+  "respelling_us": "vee oh",
+  "alt_ipa": ["/ˈveɪoʊ/"],
+  "alt_respelling_us": ["vay oh"],
+  "source_url": "https://deepmind.google/models/veo/",
+  "source_label": "Google DeepMind — Veo",
+  "category": "product",
+  "confidence": "contested",
+  "notes": "Google DeepMind's text-to-video model (Veo 3 / 3.1, 2025), used inside Gemini and Flow. Dominant English reading is VEE-oh; HowToPronounce gives /ˈviːoʊ/. A VAY-oh variant exists, echoing Spanish \"veo\" (I see). No official creator pronunciation is documented, hence contested. STRESS: VEE-oh."
+}

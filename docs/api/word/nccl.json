@@ -1,0 +1,12 @@
+{
+  "word": "nccl",
+  "ipa": "/ˈnɪkəl/",
+  "respelling_us": "nik uhl",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/overview.html",
+  "source_label": "NVIDIA NCCL Developer Guide — Overview",
+  "category": "product",
+  "confidence": "creator-clarified",
+  "notes": "NVIDIA Collective Communications Library — GPU collective comms (all-reduce, all-gather) for distributed ML training. Official docs: \"NCCL, pronounced 'Nickel'\". Said like the coin/metal: NIK-uhl, stress on first syllable. Non-obvious from the letters N-C-C-L."
+}

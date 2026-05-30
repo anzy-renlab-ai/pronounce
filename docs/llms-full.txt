@@ -1582,3 +1582,63 @@ function-calling | /ˈfʌŋkʃən ˌkɔːlɪŋ/ | funk shun call ing | cs-term |
 prompt | /prɒmpt/ | prompt | cs-term | community-consensus | (no source)
 prompting | /ˈprɒmptɪŋ/ | prompt ing | cs-term | community-consensus | (no source)
 reasoning | /ˈriːzənɪŋ/ | ree zun ing | cs-term | community-consensus | (no source)
+rdma | /ˌɑːr ˌdiː ˌɛm ˈeɪ/ | ar dee em ay | acronym | community-consensus | https://en.wikipedia.org/wiki/Remote_direct_memory_access
+Molmo | /ˈmɑlmoʊ/ | mahl moh | product | community-consensus | https://github.com/allenai/molmo
+flashinfer | /ˈflæʃˌɪnfɜːr/ | flash in fur | project | community-consensus | https://github.com/flashinfer-ai/flashinfer
+vibe-coding | /ˈvaɪb ˌkoʊdɪŋ/ | vybe koh ding | cs-term | community-consensus | https://en.wikipedia.org/wiki/Vibe_coding
+cartesia | /kɑrˈtiʒə/ | kar tee zhuh | product | community-consensus | https://docs.cartesia.ai/build-with-cartesia/sonic-3/custom-pronunciations
+bitsandbytes | /ˌbɪts.ən.ˈbaɪts/ | bits and bytes | tool | community-consensus | https://github.com/bitsandbytes-foundation/bitsandbytes
+codebuff | /ˈkoʊdbʌf/ | kohd buhf | cli-tool | community-consensus | https://github.com/CodebuffAI/codebuff
+toolformer | /ˈtuːlˌfɔːrmər/ | tool for mur | project | community-consensus | https://arxiv.org/abs/2302.04761
+MLA | /ˌɛm ˌɛl ˈeɪ/ | em el ay | acronym | community-consensus | https://arxiv.org/abs/2405.04434
+awq | /ɔk/ | awk | acronym | contested | https://arxiv.org/abs/2306.00978
+ratatui | /ˌræ.təˈtu.i/ | rat uh too ee | tool | creator-clarified | https://github.com/ratatui/ratatui
+CodeAct | /ˈkoʊdˌækt/ | code act | cs-term | community-consensus | https://arxiv.org/abs/2402.01030
+subagent | /ˈsʌbˌeɪdʒənt/ | sub ay jent | cs-term | community-consensus | https://code.claude.com/docs/en/sub-agents
+tongyi | /ˈtʊŋˈji/ | tohng yee | product | community-consensus | https://en.wikipedia.org/wiki/Qwen
+watchexec | /ˈwɒtʃ.ɛɡˌzɛk/ | wotch eg zek | cli-tool | community-consensus | https://github.com/watchexec/watchexec
+NF4 | /ˌɛn ɛf ˈfɔːr/ | en eff four | acronym | community-consensus | https://arxiv.org/abs/2305.14314
+reflexion | /rɪˈflɛkʃən/ | rih flek shun | cs-term | community-consensus | https://www.oxfordlearnersdictionaries.com/us/definition/english/reflexion
+FlashAttention | /ˌflæʃ əˈtɛnʃən/ | flash uh ten shun | project | community-consensus | https://arxiv.org/abs/2205.14135
+exaone | /ˈɛks.eɪ.wʌn/ | ex ay wun | product | community-consensus | https://huggingface.co/LGAI-EXAONE
+RadixAttention | /ˈreɪdɪks əˌtɛnʃən/ | ray diks uh ten shun | cs-term | community-consensus | https://www.lmsys.org/blog/2024-01-17-sglang/
+mise | /miːz/ | meez | cli-tool | creator-clarified | https://mise.jdx.dev/about.html
+reka | /ˈrɛkə/ | reck uh | product | contested | https://arxiv.org/abs/2404.12387
+swe-agent | /ˈswiː ˌeɪdʒənt/ | swee ay jent | project | contested | https://arxiv.org/abs/2405.15793
+GQA | /ˌdʒiː kjuː ˈeɪ/ | jee kyoo ay | acronym | community-consensus | https://arxiv.org/abs/2305.13245
+egui | /ˈiːɡuːi/ | ee gooey | project | creator-clarified | https://github.com/emilk/egui/blob/main/README.md
+seedream | /ˈsiːdriːm/ | seed reem | product | community-consensus | https://seed.bytedance.com/en/seedream4_5
+mastra | /ˈmæstrə/ | mass truh | project | community-consensus | https://github.com/mastra-ai/mastra
+ALiBi | /ˈæləbaɪ/ | al uh by | cs-term | community-consensus | https://arxiv.org/abs/2108.12409
+aya | /ˈɑːjə/ | ah yah | product | community-consensus | https://cohere.com/research/aya
+fsdp | /ˌɛf ˌɛs ˌdiː ˈpiː/ | eff ess dee pee | acronym | community-consensus | https://docs.pytorch.org/tutorials/intermediate/FSDP_tutorial.html
+deepgemm | /ˈdiːp ˌdʒɛm/ | deep jem | project | contested | https://github.com/deepseek-ai/DeepGEMM
+hailuo | /ˈhaɪˌlwɔ/ | high lwaw | product | community-consensus | https://en.wiktionary.org/wiki/%E6%B5%B7%E8%9E%BA
+GPTQ | /ˌdʒiː piː tiː ˈkjuː/ | jee pee tee kyoo | acronym | community-consensus | https://arxiv.org/abs/2210.17323
+hedra | /ˈhɛdrə/ | hed ruh | product | contested | https://www.hedra.com/company
+seedance | /ˈsiːdæns/ | seed dance | product | community-consensus | https://seed.bytedance.com/en/seedance
+agentless | /ˈeɪdʒəntləs/ | ay jent less | cs-term | community-consensus | https://arxiv.org/abs/2407.01489
+nccl | /ˈnɪkəl/ | nik uhl | product | creator-clarified | https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/overview.html
+pythagora | /pɪˈθæɡərə/ | pih thag uh ruh | product | community-consensus | https://www.pythagora.ai/
+ZeRO | /ˈzɪroʊ/ | zeer oh | acronym | community-consensus | https://www.deepspeed.ai/tutorials/zero/
+MQA | /ˌɛm ˌkjuː ˈeɪ/ | em kyoo ay | acronym | community-consensus | https://arxiv.org/abs/2305.13245
+pixi | /ˈpɪksi/ | pik see | cli-tool | community-consensus | https://github.com/prefix-dev/pixi
+chezmoi | /ʃeɪ mwa/ | shay mwa | cli-tool | creator-clarified | https://www.chezmoi.io/user-guide/frequently-asked-questions/design/
+exl2 | /ˌiː ɛks ɛl ˈtuː/ | ee eks el too | product | community-consensus | https://github.com/turboderp-org/exllamav2
+codestral | /koʊˈdɛstrəl/ | koh dess truhl | product | community-consensus | https://mistral.ai/news/codestral/
+koka | /ˈkoʊkə/ | koh kuh | project | community-consensus | https://koka-lang.github.io/koka/doc/book.html
+mentat | /ˈmɛntæt/ | men tat | tool | community-consensus | https://mentat.ai/
+nvlink | /ˌɛnˈviː lɪŋk/ | en vee link | product | community-consensus | https://en.wikipedia.org/wiki/NVLink
+cutlass | /ˈkʌtləs/ | kut luhs | project | community-consensus | https://github.com/NVIDIA/cutlass
+rmsnorm | /ˌɑːr ɛm ɛs ˈnɔːrm/ | ar em ess norm | cs-term | community-consensus | https://arxiv.org/abs/1910.07467
+PagedAttention | /ˈpeɪdʒd əˈtɛnʃən/ | payjd uh ten shun | cs-term | community-consensus | https://arxiv.org/abs/2309.06180
+maturin | /ˈmætʊrɪn/ | mat uh rin | cli-tool | community-consensus | https://github.com/PyO3/maturin
+krea | /ˈkriːə/ | kree uh | product | community-consensus | https://www.krea.ai/
+veo | /ˈviːoʊ/ | vee oh | product | contested | https://deepmind.google/models/veo/
+oxlint | /ˈɒksˌlɪnt/ | ox lint | cli-tool | creator-clarified | https://oxc.rs/docs/guide/usage/linter.html
+pixtral | /ˈpɪks trɑːl/ | piks trahl | product | community-consensus | https://arxiv.org/abs/2410.07073
+ChatGLM | /ˌtʃæt dʒiː ɛl ˈɛm/ | chat jee ell em | product | community-consensus | https://github.com/THUDM/ChatGLM-6B
+nemotron | /ˈniːmoʊˌtrɑːn/ | nee moh tron | product | community-consensus | https://en.wikipedia.org/wiki/Nemotron
+recraft | /riˈkræft/ | ree kraft | product | community-consensus | https://www.recraft.ai/docs/recraft-models/recraft-V3
+knip | /ˈknɪp/ | kuh nip | tool | creator-clarified | https://github.com/webpro-nl/knip
+ultracode | /ˈʌltrəˌkoʊd/ | ul truh code | cs-term | community-consensus | (no source)

@@ -1,0 +1,12 @@
+{
+  "word": "egui",
+  "ipa": "/ˈiːɡuːi/",
+  "respelling_us": "ee gooey",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/emilk/egui/blob/main/README.md",
+  "source_label": "egui official README (emilk/egui)",
+  "category": "project",
+  "confidence": "creator-clarified",
+  "notes": "Rust immediate-mode GUI library by Emil Ernerfeldt (@emilk). README states verbatim: \"pronounced as 'e-gooey'. Please don't write it as 'EGUI'.\" Lowercase, like \"e\" + the word \"gooey\". STRESS: EE-gooey (first syllable). Often mispronounced \"ee-gwee\" or spelled out E-G-U-I."
+}

@@ -1,0 +1,12 @@
+{
+  "word": "bitsandbytes",
+  "ipa": "/ˌbɪts.ən.ˈbaɪts/",
+  "respelling_us": "bits and bytes",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/bitsandbytes-foundation/bitsandbytes",
+  "source_label": "bitsandbytes GitHub (bitsandbytes-foundation)",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "k-bit quantization library for PyTorch underpinning 8-bit optimizers, LLM.int8() and 4-bit/NF4 QLoRA. Written as one lowercase token but spoken as three words: BITS-and-BYTES — STRESS on first and last, middle 'and' reduced to schwa. The spelling is the pronunciation; only the concatenation obscures the word boundaries."
+}

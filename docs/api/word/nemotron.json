@@ -1,0 +1,12 @@
+{
+  "word": "nemotron",
+  "ipa": "/ˈniːmoʊˌtrɑːn/",
+  "respelling_us": "nee moh tron",
+  "alt_ipa": ["/ˈnɛməˌtrɑːn/"],
+  "alt_respelling_us": ["nem oh tron"],
+  "source_url": "https://en.wikipedia.org/wiki/Nemotron",
+  "source_label": "Wikipedia — Nemotron",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "NVIDIA's flagship open LLM family (Nemotron 3: Nano/Super/Ultra, 2025-2026), hybrid Mamba-Transformer MoE for agentic reasoning. Coined name = NVIDIA's NeMo framework (\"NEural MOdules\", said NEE-mo) + the -tron suffix, so the prevailing reading is first-syllable-stressed NEE-moh-tron. Some devs mis-read it as nem-oh-TRON / nuh-MOT-ron; the NeMo etymology favors NEE-moh-tron. No official creator-documented pronunciation in text. STRESS: NEE-moh-tron."
+}

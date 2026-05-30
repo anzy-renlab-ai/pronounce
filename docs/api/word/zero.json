@@ -1,0 +1,12 @@
+{
+  "word": "ZeRO",
+  "ipa": "/ˈzɪroʊ/",
+  "respelling_us": "zeer oh",
+  "alt_ipa": ["/ˈziːroʊ/"],
+  "alt_respelling_us": ["zee roh"],
+  "source_url": "https://www.deepspeed.ai/tutorials/zero/",
+  "source_label": "DeepSpeed — Zero Redundancy Optimizer (ZeRO) tutorial",
+  "category": "acronym",
+  "confidence": "community-consensus",
+  "notes": "DeepSpeed's ZeRO = \"ZEro Redundancy Optimizer\" (Microsoft, arXiv:1910.02054). Stylized capitalization (capital Z and O) signals it reads as the English word \"zero\" — identical to the number, NOT spelled out Z-E-R-O. STRESS: ZEER-oh. Stages are ZeRO-1/2/3 (\"zero one/two/three\"). Distinct from existing \"zero-shot\"."
+}

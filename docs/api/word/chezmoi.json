@@ -1,0 +1,12 @@
+{
+  "word": "chezmoi",
+  "ipa": "/ʃeɪ mwa/",
+  "respelling_us": "shay mwa",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.chezmoi.io/user-guide/frequently-asked-questions/design/",
+  "source_label": "chezmoi official FAQ (Design)",
+  "category": "cli-tool",
+  "confidence": "creator-clarified",
+  "notes": "CLI dotfiles manager. Name = French \"chez moi\" (\"at my house\"). Official FAQ documents the pronunciation as /ʃeɪ mwa/ \"shay-mwa\". Non-obvious because the spelling looks English/German; the \"z\" is silent and \"oi\" is the French [wa], not English \"oy\"."
+}

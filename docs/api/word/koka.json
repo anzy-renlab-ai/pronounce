@@ -1,0 +1,12 @@
+{
+  "word": "koka",
+  "ipa": "/ˈkoʊkə/",
+  "respelling_us": "koh kuh",
+  "alt_ipa": ["/ˈkoʊkɑː/"],
+  "alt_respelling_us": ["koh kah"],
+  "source_url": "https://koka-lang.github.io/koka/doc/book.html",
+  "source_label": "The Koka Programming Language (official book/docs)",
+  "category": "project",
+  "confidence": "community-consensus",
+  "notes": "Microsoft Research functional language with algebraic effect handlers (Daan Leijen). Name from Japanese 効果 (kōka) \"effect/effectiveness\" — matching its effect-typing focus. STRESS first syllable: KOH-kuh, long-o then schwa. Japanese-faithful variant is KOH-kah (koh kah)."
+}

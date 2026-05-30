@@ -1,0 +1,12 @@
+{
+  "word": "pixi",
+  "ipa": "/ˈpɪksi/",
+  "respelling_us": "pik see",
+  "alt_ipa": [],
+  "alt_respelling_us": ["pixie"],
+  "source_url": "https://github.com/prefix-dev/pixi",
+  "source_label": "prefix-dev/pixi GitHub README",
+  "category": "cli-tool",
+  "confidence": "community-consensus",
+  "notes": "Rust-based cross-platform conda/PyPI package & environment manager from prefix.dev (rising 2025-2026 Python/data-science workflow tool). Reads as the English word \"pixie\" — STRESS first syllable: PIK-see, rhymes with \"fixie.\" Not \"pix-eye.\" No official creator pronunciation quote located; based on the unambiguous English reading of the spelling. CLI invoked lowercase as `pixi`."
+}

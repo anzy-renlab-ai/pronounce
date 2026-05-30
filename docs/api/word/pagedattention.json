@@ -1,0 +1,12 @@
+{
+  "word": "PagedAttention",
+  "ipa": "/ˈpeɪdʒd əˈtɛnʃən/",
+  "respelling_us": "payjd uh ten shun",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2309.06180",
+  "source_label": "arXiv 2309.06180 — Efficient Memory Management for Large Language Model Serving with PagedAttention",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "vLLM's core attention algorithm, named after OS virtual-memory PAGING. Two parts: \"paged\" + \"attention\". STRESS: PAYJD uh-TEN-shun. The hazard is \"paged\" — it is /peɪdʒd/ (rhymes with \"caged\", one syllable, voiced -jd cluster), NOT two-syllable \"page-ed\". From the verb \"to page\" the KV cache into fixed-size blocks. Common in inference-infra discussion 2023-2026."
+}

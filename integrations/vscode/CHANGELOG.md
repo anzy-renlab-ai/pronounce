@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.4.9 — 2026-05-30
+
+- **Dictionary 1548 → 1640 (+92) — agentic-coding & AI-tooling vocabulary.** The terms that show up in 2025–2026 papers, repos, and model cards but get mispronounced:
+  - **ML-systems internals**: FlashAttention, PagedAttention, RadixAttention, GQA, MQA, MLA, GPTQ, AWQ ("awk"), NF4, bitsandbytes, FSDP, ZeRO ("zero"), NCCL ("nickel"), NVLink, RDMA, RMSNorm, ALiBi, CUTLASS, FlashInfer, DeepGEMM, EXL2.
+  - **Coding agents & eval**: CodeAct, Reflexion, Toolformer, subagent, swe-agent, agentless, vibe-coding, ultracode, mastra, koka.
+  - **Models & products**: Codestral, Pixtral, Nemotron, EXAONE ("ex-ay-wun"), Aya, ChatGLM, Tongyi, Recraft, Krea, Veo, Hailuo, Seedance, Seedream, Reka, Molmo, Cartesia ("kar-TEE-zhuh"), Hedra, Pythagora, Mentat, Codebuff.
+  - **Modern dev tooling**: mise ("meez"), pixi, oxlint, ratatui, watchexec, chezmoi ("shay-mwa"), knip, maturin, egui ("e-gooey").
+  - Every entry discovered + adversarially source-verified via a multi-agent workflow, then hand-reviewed (11 over-generic candidates cut, sources fact-checked against creator docs).
+- Also rolls in the prior batch of ML training/alignment/agent basics (fine-tune, pretrain, alignment, RLHF terms, etc.) that landed on the site after 0.4.8.
+
 ## 0.4.8 — 2026-05-27
 
 - **Dictionary 1452 → 1548 (+96) — arXiv paper vocabulary.** Venues & process (`arxiv` "AR-kive" — the X is Greek chi, `preprint`, NeurIPS "NUR-ips", ICML/ICLR/CVPR/AAAI "Triple-A-I"/ACL/EMNLP/KDD/AISTATS "AY-stats"/COLT/IJCAI/SIGGRAPH "SIG-graf"/OpenReview), eval metrics (BLEU "blue", ROUGE "roozh", METEOR, CIDEr "SIDE-er", IoU, mAP, AUC, NDCG, F1, FID, ELBO "EL-bow", ECE, KL, JSD, Wasserstein "VAH-sur-shtine", Fréchet "fray-SHAY", NLL), architectures (ResNet, DenseNet, EfficientNet, MobileNet, ConvNeXt, AlexNet, VGG, GoogLeNet, Inception, U-Net, ViT, DiT, Swin, ELECTRA "uh-LEK-truh", XLNet, ALBERT, ELMo, BART, Chinchilla, Gopher, Hyena), training/alignment (CoT/ToT/ICL/SFT/KTO/IPO/ORPO/SimPO/DDPM/DDIM/EDM/CFG, HyDE "hide", GraphRAG, DoRA "DOR-uh", IA³, p-tuning, diffusion), statistics (ANOVA "uh-NO-vuh", MANOVA, t-test, chi-squared "kye-squared", nabla, KKT, MCMC, HMM, SVM, KNN, PCA, ICA, t-SNE, UMAP "YOO-map"), and the researchers everyone names wrong (Sutton, Silver, Barto, Vapnik "VAP-nik", Bottou "boo-TOO", Rumelhart, Hopfield, Judea Pearl, Boltzmann, Schölkopf "SHURL-kopf", Tegmark).

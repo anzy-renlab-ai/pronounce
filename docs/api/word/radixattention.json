@@ -1,0 +1,12 @@
+{
+  "word": "RadixAttention",
+  "ipa": "/ˈreɪdɪks əˌtɛnʃən/",
+  "respelling_us": "ray diks uh ten shun",
+  "alt_ipa": ["/ˈrædɪks əˌtɛnʃən/"],
+  "alt_respelling_us": ["rad iks uh ten shun"],
+  "source_url": "https://www.lmsys.org/blog/2024-01-17-sglang/",
+  "source_label": "LMSYS Org Blog — \"Fast and Expressive LLM Inference with RadixAttention and SGLang\"",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "SGLang's automatic KV-cache reuse mechanism — a radix tree over the KV cache for prefix sharing; coined by LMSYS (2024). Compound of \"radix\" + \"attention\". STRESS: RAY-diks-uh-TEN-shun (primary on RAY, secondary on TEN). \"radix\" is /ˈreɪdɪks/ (RAY-diks, the standard dictionary form per Wiktionary/Cambridge), NOT \"ra-dicks\" or \"ra-tix\"; final cluster is \"-ks\" not \"-tx\". Often mispronounced by non-native devs as \"ratix\"/\"radicks\". Alt /ˈrædɪks/ (RAD-iks) is a secondary variant."
+}

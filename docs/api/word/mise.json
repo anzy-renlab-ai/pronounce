@@ -1,0 +1,12 @@
+{
+  "word": "mise",
+  "ipa": "/miːz/",
+  "respelling_us": "meez",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://mise.jdx.dev/about.html",
+  "source_label": "mise official docs — About page",
+  "category": "cli-tool",
+  "confidence": "creator-clarified",
+  "notes": "Rust polyglot version manager + task runner by Jeff Dickey (jdx); the asdf successor. Name is short for the French culinary term \"mise-en-place.\" Official docs: `mise` (pronounced \"meez\"), rhymes with \"cheese.\" One syllable, voiced final z. Common wrong guesses: \"my-z\", \"mice\", \"miz.\""
+}

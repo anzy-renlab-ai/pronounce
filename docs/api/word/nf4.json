@@ -1,0 +1,12 @@
+{
+  "word": "NF4",
+  "ipa": "/ˌɛn ɛf ˈfɔːr/",
+  "respelling_us": "en eff four",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2305.14314",
+  "source_label": "QLoRA: Efficient Finetuning of Quantized LLMs (arXiv 2305.14314)",
+  "category": "acronym",
+  "confidence": "community-consensus",
+  "notes": "4-bit NormalFloat, the information-theoretically-optimal 4-bit datatype introduced in the QLoRA paper (Dettmers et al., 2023) and shipped in bitsandbytes for quantized fine-tuning. Read as an initialism plus the digit: N-F-FOUR. \"NF\" = NormalFloat, \"4\" = 4-bit. Main stress on FOUR. Not \"niff-four\"."
+}

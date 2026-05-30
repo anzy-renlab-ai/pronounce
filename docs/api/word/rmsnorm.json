@@ -1,0 +1,12 @@
+{
+  "word": "rmsnorm",
+  "ipa": "/ˌɑːr ɛm ɛs ˈnɔːrm/",
+  "respelling_us": "ar em ess norm",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/1910.07467",
+  "source_label": "Zhang & Sennrich, \"Root Mean Square Layer Normalization\", arXiv:1910.07467",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "RMSNorm = Root Mean Square (Layer) Normalization, the normalization used in Llama/Mistral and most modern LLMs. Spoken as a compound: the \"RMS\" part is spelled out letter-by-letter (ar-em-ess), then \"norm\" said as the word. STRESS on NORM: \"ar-em-ess NORM\". No source documents an explicit creator pronunciation, but the letter-spelled-acronym + \"norm\" reading is universal in talks and writeups, hence community-consensus."
+}

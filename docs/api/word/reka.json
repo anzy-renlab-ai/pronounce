@@ -1,0 +1,12 @@
+{
+  "word": "reka",
+  "ipa": "/ˈrɛkə/",
+  "respelling_us": "reck uh",
+  "alt_ipa": ["/ˈriːkə/"],
+  "alt_respelling_us": ["ree kuh"],
+  "source_url": "https://arxiv.org/abs/2404.12387",
+  "source_label": "Reka Core, Flash, and Edge technical report (arXiv 2404.12387)",
+  "category": "product",
+  "confidence": "contested",
+  "notes": "Reka AI — multimodal frontier-model lab (Reka Core / Flash / Edge). Reka publishes no official pronunciation, so usage is genuinely split. The name evokes the word for 'river' in two languages that pronounce it differently: South Slavic река gives REK-uh (short e), while Hungarian Réka gives REE-kuh (long ee); English speakers also default to REE-kuh. STRESS on first syllable: REK-uh or REE-kuh."
+}

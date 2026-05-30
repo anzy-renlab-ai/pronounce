@@ -3,7 +3,7 @@
   "displayName": "%displayName%",
   "description": "%description%",
   "l10n": "./l10n",
-  "version": "0.4.8",
+  "version": "0.4.9",
   "publisher": "sayit",
   "license": "MIT",
   "icon": "icon.png",

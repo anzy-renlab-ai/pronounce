@@ -1,0 +1,12 @@
+{
+  "word": "agentless",
+  "ipa": "/ˈeɪdʒəntləs/",
+  "respelling_us": "ay jent less",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2407.01489",
+  "source_label": "arXiv 2407.01489 — \"Agentless: Demystifying LLM-based Software Engineering Agents\"",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "Coined in the OpenAutoCoder/SWE-bench paper for an approach that solves coding tasks WITHOUT an autonomous agent loop — the deliberate antonym of \"agentic\". STRESS stays on the first syllable: AY-jent-less, not uh-JENT-less."
+}

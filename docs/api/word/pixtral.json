@@ -1,0 +1,12 @@
+{
+  "word": "pixtral",
+  "ipa": "/ˈpɪks trɑːl/",
+  "respelling_us": "piks trahl",
+  "alt_ipa": ["/pɪks ˈtrɑːl/"],
+  "alt_respelling_us": ["piks trahl"],
+  "source_url": "https://arxiv.org/abs/2410.07073",
+  "source_label": "Mistral AI (Pixtral 12B paper)",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Mistral AI's multimodal model family (Pixtral 12B, Pixtral Large). Blend of 'pixel' + 'Mistral,' so '-tral' rhymes with sibling Mistral/Mixtral entries (TRAHL, long ah). Front-loaded stress PIKS-trahl is most common; second-syllable piks-TRAHL (matching some Mixtral speakers) also heard. No creator pronunciation guide published."
+}

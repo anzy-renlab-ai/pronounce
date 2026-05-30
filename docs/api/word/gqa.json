@@ -1,0 +1,12 @@
+{
+  "word": "GQA",
+  "ipa": "/ˌdʒiː kjuː ˈeɪ/",
+  "respelling_us": "jee kyoo ay",
+  "alt_ipa": [],
+  "alt_respelling_us": ["gee kyoo ay"],
+  "source_url": "https://arxiv.org/abs/2305.13245",
+  "source_label": "arXiv: GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints",
+  "category": "acronym",
+  "confidence": "community-consensus",
+  "notes": "Grouped-Query Attention — the default attention in Llama 2/3, Qwen, Gemma, GPT-OSS. Read as an initialism, letter by letter: G-Q-A, jee-kyoo-AY, STRESS on the final letter. Said-as-a-word never caught on because the Q has no following vowel, so spelling it out is the dominant convention in papers, model cards, and talks."
+}

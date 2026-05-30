@@ -1,0 +1,12 @@
+{
+  "word": "flashinfer",
+  "ipa": "/ˈflæʃˌɪnfɜːr/",
+  "respelling_us": "flash in fur",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/flashinfer-ai/flashinfer",
+  "source_label": "FlashInfer GitHub repository (flashinfer-ai/flashinfer)",
+  "category": "project",
+  "confidence": "community-consensus",
+  "notes": "Portmanteau of flash + inference; a high-performance GPU kernel/attention library for LLM serving (MLSys 2025, arXiv 2501.01005), a default backend in vLLM/SGLang/TensorRT-LLM. The infer element is from inference and is said like the verb infer (in-FUR), not in-fur as guessed from spelling. STRESS: primary on first syllable, FLASH-in-fur. No creator-quoted pronunciation found, so community-consensus."
+}

@@ -1,0 +1,12 @@
+{
+  "word": "reflexion",
+  "ipa": "/rɪˈflɛkʃən/",
+  "respelling_us": "rih flek shun",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.oxfordlearnersdictionaries.com/us/definition/english/reflexion",
+  "source_label": "Oxford Learner's Dictionaries — reflexion",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "Reflexion is a foundational LLM-agent self-reflection technique (Shinn et al., 2023, \"Reflexion: Language Agents with Verbal Reinforcement Learning\", arXiv:2303.11366), cited across agent frameworks. Despite the 'x' spelling it is pronounced exactly like \"reflection\": rih-FLEK-shun. STRESS on second syllable (FLEK). The 'x' here is /kʃ/, not /ks/ + separate vowel — do not say \"re-FLEX-ion\"; non-natives sometimes second-guess against \"reflection\" but the two are homophones — \"reflexion\" is just the older British orthography. IPA per Oxford Learner's Dictionary /rɪˈflekʃn/."
+}
