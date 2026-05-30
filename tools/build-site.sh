@@ -858,7 +858,7 @@ cat > "$DOCS/v1.html" <<EOF
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>How to pronounce kubectl, nginx, GIF, JSON — ${BRAND}</title>
-  <meta name="description" content="A community-maintained pronunciation dictionary — 440+ entries — for the project, product, and programmer-jargon names developers actually use. kubectl, nginx, GIF, JSON, Pydantic, Knative, LaTeX, Postgres, and many more. With sources. Interactive quiz, voice search, MCP server, and a Claude Code skill included.">
+  <meta name="description" content="A community-maintained pronunciation dictionary — ${ENTRY_COUNT}+ entries — for the project, product, and programmer-jargon names developers actually use. kubectl, nginx, GIF, JSON, Pydantic, Knative, LaTeX, Postgres, and many more. With sources. Interactive quiz, voice search, MCP server, and a Claude Code skill included.">
   <meta name="keywords" content="how to pronounce kubectl, how to pronounce nginx, how to pronounce GIF, how to pronounce JSON, project name pronunciation, developer pronunciation guide">
   <link rel="canonical" href="${SITE_URL}/">
   <link rel="alternate" hreflang="en" href="${SITE_URL}/">
@@ -1683,7 +1683,7 @@ $prev_next_html
     <section class="share" style="margin-top: 36px; text-align: center;">
       <h2>Share this</h2>
       <p style="color: var(--muted-strong); font-size: 14.5px;">Help one more dev stop saying "$word_esc" wrong.</p>
-      <a class="share-btn share-twitter" href="https://twitter.com/intent/tweet?text=$(printf '%s' "TIL: $word is pronounced \"$resp\". Receipts + 170 more @ pronounce.renlab.ai" | python3 -c 'import sys, urllib.parse; print(urllib.parse.quote(sys.stdin.read()))')&url=$SITE_URL/word/$slug" target="_blank" rel="noopener">𝕏 Share on X / Twitter</a>
+      <a class="share-btn share-twitter" href="https://twitter.com/intent/tweet?text=$(printf '%s' "TIL: $word is pronounced \"$resp\". Receipts + ${ENTRY_COUNT} more @ pronounce.renlab.ai" | python3 -c 'import sys, urllib.parse; print(urllib.parse.quote(sys.stdin.read()))')&url=$SITE_URL/word/$slug" target="_blank" rel="noopener">𝕏 Share on X / Twitter</a>
       <a class="share-btn share-hn" href="https://news.ycombinator.com/submitlink?u=$SITE_URL/word/$slug&t=$(printf '%s' "How to pronounce $word" | python3 -c 'import sys, urllib.parse; print(urllib.parse.quote(sys.stdin.read()))')" target="_blank" rel="noopener">Submit to HN</a>
       <a class="share-btn share-reddit" href="https://www.reddit.com/submit?url=$SITE_URL/word/$slug&title=$(printf '%s' "How to pronounce $word (with source)" | python3 -c 'import sys, urllib.parse; print(urllib.parse.quote(sys.stdin.read()))')" target="_blank" rel="noopener">Reddit</a>
     </section>
@@ -2623,7 +2623,7 @@ cat > "$DOCS/404.html" <<EOF
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Word not in the dictionary — ${BRAND}</title>
-  <meta name="description" content="That word isn't in the Pronounce dictionary yet. Browse 310+ entries or open a PR to add it.">
+  <meta name="description" content="That word isn't in the Pronounce dictionary yet. Browse ${ENTRY_COUNT}+ entries or open a PR to add it.">
   <meta property="og:image" content="${SITE_URL}/og.png">
   <link rel="stylesheet" href="/style.css">
   <script defer src="/_vercel/insights/script.js"></script>
