@@ -1,5 +1,25 @@
 # Changelog
 
+## v2.8.0 — 2026-05-31
+
+A correctness + consistency release from a full 6-surface product review (CLI, VS Code extension, website, MCP server, skill, roadmap).
+
+### Fixed
+- **CLI works cross-platform on the main path.** `say-it <word>` now speaks on Linux/Windows when `espeak-ng`/PowerShell is present — a stale macOS-`say`-only gate had been blocking the primary command (and even text-only `--json`/`--md`/`--why`) despite the cross-platform backends added back in v0.3. The gate now keys on the detected backend and runs only when audio is actually needed.
+- **`say-it --json` no longer crashes** on entries whose fields contain an apostrophe (e.g. source label "Oxford Learner's Dictionaries"). Fields are passed to Python via the environment instead of being interpolated into the program source.
+- **MCP server: `pronounce("C++")` returned the C# entry.** The slug regex collapsed `++` into a single `-`; it now matches the site's 1:1 slug scheme exactly, so `C++` resolves correctly.
+- **VS Code hover** vanished on sentence-final words (`kubectl.`, `YAML.`); it now trims trailing punctuation (still resolving `next.js` first).
+- **Flag-argument validation.** `say-it -v` (flag with no value) and `say-it -n abc` (non-numeric) now error clearly instead of exiting silently / mis-speaking.
+- Brittle `say-it import` header copy (`head -27`) replaced with a content-driven copy that survives header changes.
+
+### Changed
+- **Killed CLI↔skill drift** (the project's flagged #1 hazard): the skill no longer claims an "Apple Speech Synthesis phoneme" mechanism the CLI explicitly rejects, now states the correct **175 wpm** default, and describes the real auto-detected backends (macOS say / Linux espeak / Windows PowerShell). Documented `--json`/`--md`/`--copy`.
+- CLI `-h` now lists previously-undiscoverable subcommands: `doctor`, `export`, `stream`, `playlist`, `minute`, `benchmark`, `cheatsheet`, `repl`.
+- **Homepage install command** now shows the real `git clone … && ./install.sh` (it was advertising a non-existent `brew install sayit` while copying a different command).
+- Fixed stale hardcoded entry counts: browse-page meta description, homepage meta (1212→live), MCP docstrings/README (918→1,600+). VS Code voice setting now notes it's macOS-only.
+- Accessibility: the browse-page search input gained an `aria-label`.
+- VS Code extension → **v0.5.0**; CLI `VERSION` → **0.5.0** (was stuck at 0.4.0).
+
 ## v2.7.0 — 2026-05-30
 
 ### Added

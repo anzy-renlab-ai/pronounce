@@ -3,7 +3,7 @@
   "displayName": "%displayName%",
   "description": "%description%",
   "l10n": "./l10n",
-  "version": "0.4.9",
+  "version": "0.5.0",
   "publisher": "sayit",
   "license": "MIT",
   "icon": "icon.png",
@@ -26,6 +26,15 @@
   },
   "engines": {
     "vscode": "^1.85.0"
+  },
+  "capabilities": {
+    "virtualWorkspaces": {
+      "supported": false,
+      "description": "Pronounce needs a local TTS engine (macOS say / espeak-ng / PowerShell) and can't speak in virtual workspaces like vscode.dev or github.dev."
+    },
+    "untrustedWorkspaces": {
+      "supported": true
+    }
   },
   "categories": [
     "Education",

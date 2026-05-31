@@ -8,7 +8,7 @@
   "cmd.star.title": "★ 在 GitHub 点星",
   "cmd.sponsor.title": "☕ 请我喝杯咖啡 (Ko-fi)",
   "cmd.openWalkthrough.title": "查看欢迎页 / 使用说明",
-  "config.voice.desc": "macOS `say` 语音。运行 `say -v '?'` 查看完整列表。推荐：Samantha、Daniel、Karen、Moira、Tessa。",
+  "config.voice.desc": "macOS `say` 后端使用的语音（仅 macOS 生效；Linux espeak / Windows PowerShell 使用系统默认语音）。运行 `say -v '?'` 查看完整列表。推荐：Samantha、Daniel、Karen、Moira、Tessa。",
   "config.rate.desc": "语速，单位：词每分钟 (wpm)。",
   "config.repetitions.desc": "单词重复次数。CLI 默认 3 次；悬停时重复较烦，故此处默认 1 次。",
   "config.hoverEnabled.desc": "对词库内的技术词显示悬停发音弹窗。",

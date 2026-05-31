@@ -8,7 +8,7 @@
   "cmd.star.title": "★ Star on GitHub",
   "cmd.sponsor.title": "☕ Buy me a coffee (Ko-fi)",
   "cmd.openWalkthrough.title": "Show welcome / how to use",
-  "config.voice.desc": "macOS `say` voice. Run `say -v '?'` for full list. Recommended: Samantha, Daniel, Karen, Moira, Tessa.",
+  "config.voice.desc": "Voice for the macOS `say` backend (macOS only — Linux espeak / Windows PowerShell use the platform default voice). Run `say -v '?'` for the full list. Recommended: Samantha, Daniel, Karen, Moira, Tessa.",
   "config.rate.desc": "Speech rate in words per minute.",
   "config.repetitions.desc": "Times to repeat the word. CLI default is 3; hover is more annoying when repeated, so default here is 1.",
   "config.hoverEnabled.desc": "Show pronunciation popup on hover for known tech words.",

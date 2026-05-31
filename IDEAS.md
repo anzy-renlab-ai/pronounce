@@ -88,9 +88,11 @@ Press <kbd>/</kbd> anywhere on the site → focus the search bar → fuzzy match
 
 ## Notes on prioritization
 
-If a contributor asks "what should I work on first?":
+**Already shipped** (don't re-do these — improve them instead): per-word SEO pages (#14), OG image generation (#8), public JSON API (#9), embed widget (#13), VS Code/Cursor extension (#5), browser extension (#6), search-as-you-type (#19), quiz mode (#4), stats page (#15, partial — totals/categories done, no recent-additions/contributors yet), light theme + a11y (#16, on the SEO/word pages; the v2 homepage is still dark-only), localized prose (#18, zh-CN). The CLI also already has `quiz`, `diff`, `teach`, `playlist`, `minute`, `stream`, `export`, `doctor`, `benchmark`, and more.
 
-- **Highest leverage right now:** real creator audio clips (#1), per-word SEO pages (#14), OG image generation (#8). All directly attack the credibility-and-shareability bottleneck the project is built to solve.
-- **Lowest-effort wins:** Slack bot (#7), search-as-you-type (#19), light theme (#16), Twitter bot (#12).
-- **Bigger lifts (multi-week):** VS Code extension (#5), cloud TTS (#10), pronunciation diff (#11), mobile extension (#17).
-- **Defer:** crowdsourced audio (#3) until moderation pipeline is real; pronunciation diff (#11) is fun but niche.
+If a contributor asks "what should I work on first?" — the genuinely-open, credential-free wins:
+
+- **Highest leverage:** real creator audio clips via YouTube-timestamp links (#1) — sidesteps the licensing blocker by linking, not rehosting; finish the stats leaderboard (#15) from free git data (recent additions, top contributors).
+- **Lowest-effort:** light theme on the v2 homepage (#16 — it lags the rest of the site); npm / Homebrew packaging (#20) to kill the `git clone` install step.
+- **Needs API keys / backends (out of the zero-dep scope for now):** Slack bot (#7), cloud TTS (#10), pronunciation diff (#11), Twitter/Mastodon bot (#12, though the /daily + feed.atom substrate is already built and could run on a credential-free cron).
+- **Defer:** crowdsourced audio (#3) until a moderation pipeline is real.

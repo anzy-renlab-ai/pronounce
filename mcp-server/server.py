@@ -21,7 +21,11 @@ mcp = FastMCP("pronounce")
 
 
 def _slugify(word: str) -> str:
-    return re.sub(r"[^a-z0-9._-]+", "-", word.lower())
+    # Must match the site/API generator EXACTLY (1:1 char replacement, no `+`).
+    # With a trailing `+`, runs of disallowed chars collapse to one `-`, so
+    # "C++" -> "c-" which is C#'s slug — a silent wrong answer. Keep it 1:1 so
+    # "C++" -> "c--" matches the deployed /api/word/c--.json.
+    return re.sub(r"[^a-z0-9._-]", "-", word.lower())
 
 
 def _get(path: str) -> Any:
@@ -69,25 +73,28 @@ def search_pronunciations(query: str, limit: int = 20) -> list[dict]:
     and `confidence`. Use this when the exact spelling is unknown or
     when browsing entries by category.
     """
+    q = query.strip().lower()
+    if not q:
+        return []
     words = _get("/api/words.json")
-    q = query.lower()
     matches = [w for w in words if q in w["word"].lower() or q in w.get("category", "").lower()]
     return matches[: max(1, min(limit, 100))]
 
 
 @mcp.tool()
-def list_pronunciations(category: str | None = None) -> list[dict]:
+def list_pronunciations(category: str | None = None, limit: int = 100) -> list[dict]:
     """List dictionary entries, optionally filtered by category.
 
     Categories include: product, project, cli-tool, tool, cs-term,
-    acronym, abbreviation. Without a category, returns every entry
-    (~310 as of this release).
+    acronym, abbreviation, person. The dictionary holds well over 1500
+    entries and grows continuously, so the unfiltered list is large —
+    pass `category` and/or `limit` to keep the result focused.
     """
     words = _get("/api/words.json")
     if category:
         cat = category.lower()
         words = [w for w in words if w.get("category", "").lower() == cat]
-    return words
+    return words[: max(1, min(limit, 1000))]
 
 
 @mcp.resource("pronounce://browse")

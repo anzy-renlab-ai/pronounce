@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.5.0 — 2026-05-31
+
+### Fixed
+- **Hover no longer vanishes on sentence-final words.** A word ending a sentence — `kubectl.`, `YAML.` — was matched together with its trailing dot and missed the dictionary, so the hover silently disappeared at the single most common spot you'd hover a tech word in prose. The exact token is still tried first, so dotted entries like `next.js` / `three.js` keep working.
+- **Declared virtual-workspace support.** The extension spawns a local TTS process, so it can't work on vscode.dev / github.dev — it now declares `virtualWorkspaces: false` (clear "unavailable here" badge instead of every Play click erroring) and `untrustedWorkspaces: true` (safe — it only runs fixed TTS commands).
+
+### Changed
+- The `pronounce.voice` setting description now states it applies to the macOS `say` backend only; Linux (espeak) and Windows (PowerShell) use the platform default voice.
+
 ## 0.4.9 — 2026-05-30
 
 - **Dictionary 1548 → 1640 (+92) — agentic-coding & AI-tooling vocabulary.** The terms that show up in 2025–2026 papers, repos, and model cards but get mispronounced:

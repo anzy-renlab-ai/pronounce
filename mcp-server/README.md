@@ -54,7 +54,7 @@ This MCP server gives the LLM a deterministic source: the dictionary is communit
 
 ## Source data
 
-The dictionary is at <https://github.com/anzy-renlab-ai/pronounce/blob/main/data/pronunciations.tsv> — 918 entries across cloud / DevOps, frontend & backend frameworks, AI/ML platforms, databases, languages, editors, companies, programmer jargon, and acronyms.
+The dictionary is at <https://github.com/anzy-renlab-ai/pronounce/blob/main/data/pronunciations.tsv> — 1,600+ entries (and growing) across cloud / DevOps, frontend & backend frameworks, AI/ML platforms and research, databases, languages, editors, companies, programmer jargon, and acronyms.
 
 Each entry has 10 columns: `word | ipa | respelling_us | alt_ipa | alt_respelling_us | source_url | source_label | category | confidence | notes`.
 

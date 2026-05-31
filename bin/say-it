@@ -11,7 +11,7 @@
 # text. Respelling rides the TTS's built-in letter-to-sound rules.
 set -e
 
-VERSION="0.4.0"
+VERSION="0.5.0"
 VOICE="Samantha"
 TIMES=3
 RATE=175
@@ -141,10 +141,19 @@ ${C_BOLD}Subcommands:${C_RESET}
   say-it history                 your recent lookups + streak
   say-it me                      pronounce your git user.name
   say-it import <file.tsv>       merge a file into your local override dict
+  say-it playlist <w1> <w2> …    speak several words back to back
+  say-it stream                  speak each line read from stdin as it arrives
+  say-it minute                  60-second random-word pronunciation drill
+  say-it export [json|csv|md]    bulk-export the whole dictionary
+  say-it benchmark               time dictionary lookups
+  say-it doctor                  diagnose the TTS backend + optional deps
+  say-it cheatsheet              print the full command cheatsheet
+  say-it repl   (or -i)          interactive prompt — type words to hear them
   say-it stats                   print dictionary statistics
   say-it config                  print resolved paths / version
   say-it update                  pull the latest dict and CLI from upstream
-  say-it -l                      list every macOS voice
+  say-it -l                      list every voice the backend supports
+  say-it -V                      print the version
   say-it -h                      this help
 
 ${C_BOLD}Examples:${C_RESET}
@@ -258,7 +267,7 @@ case "${1:-}" in
     ;;
   -i|--interactive|repl)
     [[ -z "$DICT" ]] && { echo "say-it: dictionary not found" >&2; exit 4; }
-    if ! command -v say >/dev/null 2>&1; then echo "say-it: macOS \`say\` required" >&2; exit 3; fi
+    [[ -z "$TTS_BACKEND" ]] && { echo "say-it: no TTS backend found (install espeak-ng / say / PowerShell)" >&2; exit 3; }
     echo "${C_BOLD}🔊 say-it interactive${C_RESET} ${C_DIM}(type a word + enter to play; '?' for help; ctrl-D to quit)${C_RESET}"
     while IFS= read -r -e -p "$(printf '%s>%s ' "${C_ACCENT_FG:-$C_ORANGE}" "$C_RESET")" line; do
       line="$(echo "$line" | sed 's/^ *//;s/ *$//')"
@@ -421,8 +430,10 @@ print(json.dumps(out, indent=2, ensure_ascii=False))
     local_dict="$HOME/.config/say-it/pronunciations.local.tsv"
     mkdir -p "$(dirname "$local_dict")"
     if [[ ! -f "$local_dict" ]]; then
-      # Copy header from main dict
-      head -27 "$DICT" > "$local_dict"
+      [[ -z "$DICT" ]] && { echo "say-it import: no base dictionary found to seed the header" >&2; exit 4; }
+      # Copy the comment block through the header row (the line starting "word\t").
+      # Content-driven so it survives the header comment block growing/shrinking.
+      awk '{ print } /^word\t/ { exit }' "$DICT" > "$local_dict"
     fi
     appended=0
     while IFS= read -r line; do
@@ -669,7 +680,7 @@ EOF
     ;;
   quiz)
     [[ -z "$DICT" ]] && { echo "say-it: dictionary not found" >&2; exit 4; }
-    if ! command -v say >/dev/null 2>&1; then echo "say-it: macOS \`say\` required for quiz" >&2; exit 3; fi
+    [[ -z "$TTS_BACKEND" ]] && { echo "say-it: no TTS backend found for quiz (install espeak-ng / say / PowerShell)" >&2; exit 3; }
     echo "${C_BOLD}🔊 say-it quiz${C_RESET} — listen and type the respelling. ctrl-C to quit."
     score=0; rounds=0
     while :; do
@@ -698,12 +709,13 @@ EOF
 esac
 
 # --- flag parsing -------------------------------------------------------------
+need_arg() { [[ $# -ge 2 ]] || { echo "say-it: $1 requires an argument" >&2; exit 2; }; }
 while [[ $# -gt 0 ]]; do
   case "$1" in
-    -v|--voice)    VOICE="$2"; shift 2 ;;
-    -n|--times)    TIMES="$2"; shift 2 ;;
-    -r|--rate)     RATE="$2"; shift 2 ;;
-    -o|--output)   SAVE="$2"; shift 2 ;;
+    -v|--voice)    need_arg "$@"; VOICE="$2"; shift 2 ;;
+    -n|--times)    need_arg "$@"; TIMES="$2"; shift 2 ;;
+    -r|--rate)     need_arg "$@"; RATE="$2"; shift 2 ;;
+    -o|--output)   need_arg "$@"; SAVE="$2"; shift 2 ;;
     --alt)
                    USE_ALT=1
                    if [[ "${2:-}" =~ ^[0-9]+$ ]]; then ALT_IDX="$2"; shift 2
@@ -730,6 +742,10 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
+# validate numeric flags so a typo fails loudly instead of silently mis-speaking
+[[ "$TIMES" =~ ^[0-9]+$ && "$TIMES" -ge 1 ]] || { echo "say-it: -n/--times needs a positive integer (got '$TIMES')" >&2; exit 2; }
+[[ "$RATE" =~ ^[0-9]+$ ]] || { echo "say-it: -r/--rate needs a number in wpm (got '$RATE')" >&2; exit 2; }
+
 # compare and tweet subcommands need a word arg from positional
 SUBCMD=""
 if [[ "${1:-}" == "compare" || "${1:-}" == "tweet" ]]; then
@@ -738,10 +754,6 @@ if [[ "${1:-}" == "compare" || "${1:-}" == "tweet" ]]; then
 fi
 
 [[ $# -eq 0 ]] && { usage; exit 2; }
-if ! command -v say >/dev/null 2>&1; then
-  echo "say-it: macOS \`say\` not found. Windows/Linux backends are on the roadmap." >&2
-  exit 3
-fi
 
 WORD="$*"
 
@@ -789,28 +801,34 @@ fi
 # --- output modes (early exit for --json/--md, must precede speaking) ---------
 
 emit_json() {
-  python3 -c "
-import json, sys, urllib.parse
+  # Pass fields via the environment, NOT interpolated into Python source — a
+  # value containing a single quote (e.g. source_label "Oxford Learner's
+  # Dictionaries") would otherwise terminate the string literal and crash.
+  WORD="$WORD" IPA="$IPA" RESP="$RESP" ALT_IPA="$ALT_IPA" ALT_RESP="$ALT_RESP" \
+  SRC_URL="$SRC_URL" SRC_LABEL="$SRC_LABEL" CATEGORY="$CATEGORY" \
+  CONFIDENCE="$CONFIDENCE" NOTES="$NOTES" python3 -c '
+import json, os
 def alt_list(s):
-    return [x for x in s.split('|') if x] if s else []
-word = '$WORD'
-slug = ''.join(c if c.isalnum() or c in '._-' else '-' for c in word.lower())
+    return [x for x in s.split("|") if x] if s else []
+word = os.environ.get("WORD", "")
+resp = os.environ.get("RESP", "")
+slug = "".join(c if c.isalnum() or c in "._-" else "-" for c in word.lower())
 out = {
-  'word': word,
-  'ipa': '$IPA',
-  'respelling_us': '$RESP',
-  'alt_ipa': alt_list('$ALT_IPA'),
-  'alt_respelling_us': alt_list('$ALT_RESP'),
-  'source_url': '$SRC_URL',
-  'source_label': '$SRC_LABEL',
-  'category': '$CATEGORY',
-  'confidence': '$CONFIDENCE',
-  'notes': '''$NOTES''',
-  'url': f'https://pronounce.renlab.ai/word/{slug}' if word else None,
-  'in_dict': bool('$RESP'),
+  "word": word,
+  "ipa": os.environ.get("IPA", ""),
+  "respelling_us": resp,
+  "alt_ipa": alt_list(os.environ.get("ALT_IPA", "")),
+  "alt_respelling_us": alt_list(os.environ.get("ALT_RESP", "")),
+  "source_url": os.environ.get("SRC_URL", ""),
+  "source_label": os.environ.get("SRC_LABEL", ""),
+  "category": os.environ.get("CATEGORY", ""),
+  "confidence": os.environ.get("CONFIDENCE", ""),
+  "notes": os.environ.get("NOTES", ""),
+  "url": ("https://pronounce.renlab.ai/word/" + slug) if word else None,
+  "in_dict": bool(resp),
 }
 print(json.dumps(out, indent=2, ensure_ascii=False))
-"
+'
 }
 
 emit_md() {
@@ -900,6 +918,19 @@ print_why() {
 }
 
 [[ $SHOW_WHY -eq 1 ]] && print_why
+
+# Everything past here produces audio. Text-only modes (--json/--md/tweet)
+# already exited above, and --why has printed. If no TTS backend was detected
+# (macOS say / Linux espeak-ng / Windows PowerShell), stop with install hints
+# instead of failing obscurely deeper in the speak path.
+if [[ -z "$TTS_BACKEND" ]]; then
+  echo "say-it: no TTS backend found. Install one to hear pronunciations:" >&2
+  echo "  macOS:    built-in (\`say\`)" >&2
+  echo "  Linux:    \`sudo apt install espeak-ng\` (or yum/pacman/brew)" >&2
+  echo "  Windows:  PowerShell (built into modern Windows)" >&2
+  echo "  (text-only modes work without a backend: --why, --json, --md)" >&2
+  exit 3
+fi
 
 # --- decide what to speak -----------------------------------------------------
 PAUSE_INTRA="[[slnc 400]]"

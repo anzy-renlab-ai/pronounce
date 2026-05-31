@@ -1279,7 +1279,7 @@ cat > "$DOCS/browse.html" <<EOF
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pronunciation dictionary · ${BRAND}</title>
-  <meta name="description" content="Browse the full ${BRAND} dictionary: 130+ project, product, and programmer-jargon pronunciations. Search, filter by category, hear each reading.">
+  <meta name="description" content="Browse the full ${BRAND} dictionary: ${ENTRY_COUNT}+ project, product, and programmer-jargon pronunciations. Search, filter by category, hear each reading.">
   <link rel="canonical" href="${SITE_URL}/browse.html">
   <link rel="alternate" hreflang="en" href="${SITE_URL}/browse.html">
   <link rel="alternate" hreflang="x-default" href="${SITE_URL}/browse.html">
@@ -1317,7 +1317,7 @@ cat > "$DOCS/browse.html" <<EOF
     </div>
 
     <div class="controls">
-      <input type="search" id="search" placeholder="Search: kubectl, gif, postgres…  (press / to focus)" autocomplete="off">
+      <input type="search" id="search" placeholder="Search: kubectl, gif, postgres…  (press / to focus)" autocomplete="off" aria-label="Search the pronunciation dictionary">
       <div class="chips">
         <button class="chip active" data-cat="all">all</button>
         <button class="chip" data-cat="product">product</button>

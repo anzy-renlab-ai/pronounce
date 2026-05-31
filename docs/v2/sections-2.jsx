@@ -27,7 +27,7 @@ function Terminal({ registerEgg }) {
           </p>
           <div className="install" onClick={copy}>
             <span className="dollar">$</span>
-            <span>brew install sayit</span>
+            <span>git clone https://github.com/anzy-renlab-ai/pronounce.git &amp;&amp; cd pronounce &amp;&amp; ./install.sh</span>
             <span className="copy-state">{copied ? '✓ copied' : 'click to copy'}</span>
           </div>
         </div>
@@ -66,7 +66,7 @@ function Features() {
     { n: '01', title: `${DICT_ALL.length} entries, source-cited`, desc: 'Project names, products, programmer jargon, AI/ML projects and researchers. Every entry tagged with confidence and linked to a real source.', chips: ['--why', '--solo', '--alt'] },
     { n: '02', title: 'Multi-reading audio awareness', desc: 'When a word is contested — GIF, SQL, GUI, kubectl — the CLI audibly chains the alternates ("…or: gif").', chips: ['--all'] },
     { n: '03', title: 'Claude Code skill included', desc: 'Ask Claude "how do you pronounce X?" — it replies with audio, IPA, and a source citation, not a phonetic guess.', chips: ['mcp-server'] },
-    { n: '04', title: 'Zero deps, ~250 lines of bash', desc: 'Wraps the macOS say engine you already have. No npm, no sudo, no surprises.', chips: ['brew install sayit'] },
+    { n: '04', title: 'Zero deps, pure bash', desc: 'Wraps the TTS engine you already have — macOS say, Linux espeak-ng, or Windows PowerShell. No npm, no sudo, no surprises.', chips: ['./install.sh'] },
     { n: '05', title: 'Pluggable alternates', desc: '--alt for the rival reading, --all for every variant, --solo to skip the chain, --why for the entry with source URL.', chips: ['--alt', '--all'] },
     { n: '06', title: 'Community-owned', desc: 'The dictionary is a TSV file you can edit. Open a PR with your favorite mispronounced project.', chips: ['data/pronunciations.tsv'] },
   ];

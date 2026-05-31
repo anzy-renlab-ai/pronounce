@@ -12,13 +12,32 @@ export function makeHoverProvider(extensionPath: string): vscode.HoverProvider {
 
       const range = doc.getWordRangeAtPosition(pos, WORD_RE);
       if (!range) return null;
-      const word = doc.getText(range);
-      if (!word) return null;
+      const rawWord = doc.getText(range);
+      if (!rawWord) return null;
 
-      const entry = lookup(extensionPath, word);
+      // Try the exact token first so dotted entries (next.js, three.js) resolve.
+      // If that misses, retry with trailing punctuation stripped — a sentence-
+      // final "kubectl." / "YAML." otherwise matches the whole token and misses
+      // the dictionary key, making the hover silently vanish (the single most
+      // common place a dev hovers a tech word in prose).
+      let word = rawWord;
+      let entry = lookup(extensionPath, rawWord);
+      let hoverRange = range;
+      if (!entry) {
+        const trimmed = rawWord.replace(/[.\-+#_]+$/, '');
+        if (trimmed && trimmed !== rawWord) {
+          const trimmedEntry = lookup(extensionPath, trimmed);
+          if (trimmedEntry) {
+            entry = trimmedEntry;
+            word = trimmed;
+            hoverRange = new vscode.Range(range.start, range.start.translate(0, trimmed.length));
+          }
+        }
+      }
+
       if (!entry && onlyKnown) return null;
 
-      return new vscode.Hover(renderMarkdown(word, entry), range);
+      return new vscode.Hover(renderMarkdown(word, entry), hoverRange);
     },
   };
 }
