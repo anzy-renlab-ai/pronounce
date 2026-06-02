@@ -1,5 +1,18 @@
 # Changelog
 
+## v2.9.0 — 2026-06-02
+
+Two deferred product improvements from the v0.5.0 review, plus two slug fixes an adversarial regression pass surfaced.
+
+### Added
+- **Light theme on the homepage.** The v2 landing page was dark-only while every other page already honored `prefers-color-scheme`. It now flips to a warm-paper light palette on a light OS (token-driven `@media`, WCAG-AA contrast-checked). Dark mode is unchanged. The terminal mock and karaoke focus overlay stay intentionally dark (their tokens are re-scoped so text doesn't go dark-on-dark).
+- **Stats page leaderboard.** `/stats.html` now shows **Recently added** (the 12 newest entries, newest-first) and a **settled vs contested** headline (1512 / 128). Both computed at build time from the TSV — no analytics, no external calls.
+
+### Fixed
+- **CLI `--json` URL slug** used Python's Unicode-aware `isalnum()`, so accented entries got a 404 URL (`Fréchet` → `/word/fréchet` instead of the real `/word/fr-chet`). Now uses the same ASCII slug as the site/API/MCP.
+- **`--md` / `tweet` URLs** only lowercased the word (no char replacement), producing wrong URLs for names with spaces/symbols (`C++`, `Weights & Biases`). Now slugified consistently.
+- CLI `VERSION` → 0.5.1.
+
 ## v2.8.0 — 2026-05-31
 
 A correctness + consistency release from a full 6-surface product review (CLI, VS Code extension, website, MCP server, skill, roadmap).

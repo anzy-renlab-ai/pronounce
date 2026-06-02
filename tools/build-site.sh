@@ -175,6 +175,11 @@ header.hero { margin-bottom: 48px; text-align: center; }
 .cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
 .cat-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; text-decoration: none; color: var(--fg); display: block; transition: transform 0.15s; }
 .cat-card:hover { transform: translateY(-2px); border-color: var(--accent); }
+.recent-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+.recent-card { display: inline-flex; align-items: baseline; gap: 8px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px; text-decoration: none; background: var(--card); transition: border-color 0.15s; }
+.recent-card:hover { border-color: var(--accent); }
+.recent-word { font-family: var(--mono); font-weight: 600; color: var(--fg); }
+.recent-cat { font-size: 12px; color: var(--muted-strong); }
 .cat-name { font-family: var(--mono); font-size: 16px; color: var(--accent); margin-bottom: 4px; }
 .cat-count { color: var(--muted); font-size: 13px; }
 
@@ -2294,6 +2299,11 @@ STATS_JS="$(awk -F'\t' '
     # First-letter for A-Z dist
     fl = toupper(substr($1, 1, 1))
     letters[fl]++
+    # Contested vs settled (settled = creator-clarified + community-consensus)
+    if ($9 == "contested") contested++; else settled++
+    # Keep word+category so the tail (= newest, append-only) can be emitted
+    rw[total] = $1
+    rc[total] = $8
   }
   END {
     printf "const STATS = {\n  total: %d,\n  withSource: %d,\n  cats: {", total, with_src
@@ -2305,7 +2315,15 @@ STATS_JS="$(awk -F'\t' '
     printf "},\n  letters: {"
     sep = ""
     for (l in letters) { printf "%s\"%s\": %d", sep, l, letters[l]; sep = "," }
-    printf "}\n};\n"
+    printf "},\n  contested: %d,\n  settled: %d,\n  recent: [", contested+0, settled+0
+    sep = ""
+    start = total - 11; if (start < 1) start = 1
+    for (i = total; i >= start; i--) {
+      w = rw[i]; gsub(/\\/, "\\\\", w); gsub(/"/, "\\\"", w)
+      c = rc[i]; gsub(/\\/, "\\\\", c); gsub(/"/, "\\\"", c)
+      printf "%s{\"w\":\"%s\",\"c\":\"%s\"}", sep, w, c; sep = ","
+    }
+    printf "]\n};\n"
   }
 ' "$DICT")"
 
@@ -2356,6 +2374,9 @@ cat > "$DOCS/stats.html" <<EOF
     <div class="section-title">By confidence</div>
     <div class="bars" id="bars-confs"></div>
 
+    <div class="section-title">Recently added</div>
+    <div class="recent-grid" id="recent-grid"></div>
+
     <div class="section-title">First letter distribution (A → Z)</div>
     <div class="alphabet" id="bars-letters"></div>
 
@@ -2379,6 +2400,7 @@ function init() {
     <div class="bn-card"><div class="bn-num">\${STATS.withSource}</div><div class="bn-label">with source URL</div></div>
     <div class="bn-card"><div class="bn-num">\${Object.keys(STATS.cats).length}</div><div class="bn-label">categories</div></div>
     <div class="bn-card"><div class="bn-num">\${Math.round(100 * STATS.withSource / STATS.total)}%</div><div class="bn-label">cited</div></div>
+    <div class="bn-card"><div class="bn-num">\${STATS.settled}<span style="color: var(--muted-strong); font-weight: 400;"> / \${STATS.contested}</span></div><div class="bn-label">settled vs contested</div></div>
   \`;
 
   function renderBars(target, data, totalKey, color) {
@@ -2394,6 +2416,16 @@ function init() {
   }
   renderBars('bars-cats', STATS.cats, 'total', 'orange');
   renderBars('bars-confs', STATS.confs, 'total', 'green');
+
+  // Recently added (tail of the TSV = newest, emitted newest-first)
+  const rg = document.getElementById('recent-grid');
+  if (rg) {
+    rg.innerHTML = (STATS.recent || []).map(({w, c}) => \`
+      <a class="recent-card" href="/word/\${w.toLowerCase().replace(/[^a-z0-9._-]/g, '-')}.html">
+        <span class="recent-word">\${w}</span>
+        <span class="recent-cat">\${c}</span>
+      </a>\`).join('');
+  }
 
   // A-Z grid
   const az = document.getElementById('bars-letters');

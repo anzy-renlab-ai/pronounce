@@ -11,7 +11,7 @@
 # text. Respelling rides the TTS's built-in letter-to-sound rules.
 set -e
 
-VERSION="0.5.0"
+VERSION="0.5.1"
 VOICE="Samantha"
 TIMES=3
 RATE=175
@@ -807,12 +807,15 @@ emit_json() {
   WORD="$WORD" IPA="$IPA" RESP="$RESP" ALT_IPA="$ALT_IPA" ALT_RESP="$ALT_RESP" \
   SRC_URL="$SRC_URL" SRC_LABEL="$SRC_LABEL" CATEGORY="$CATEGORY" \
   CONFIDENCE="$CONFIDENCE" NOTES="$NOTES" python3 -c '
-import json, os
+import json, os, re
 def alt_list(s):
     return [x for x in s.split("|") if x] if s else []
 word = os.environ.get("WORD", "")
 resp = os.environ.get("RESP", "")
-slug = "".join(c if c.isalnum() or c in "._-" else "-" for c in word.lower())
+# ASCII-class slug, matching the site/API + MCP generator exactly. Pythons
+# str.isalnum() is Unicode-aware and would keep accents (Fréchet -> "fréchet"),
+# producing a 404 URL; the live page slug is "fr-chet".
+slug = re.sub(r"[^a-z0-9._-]", "-", word.lower())
 out = {
   "word": word,
   "ipa": os.environ.get("IPA", ""),
@@ -853,7 +856,7 @@ MD
     echo "📎 [${SRC_LABEL:-source}]($SRC_URL)"
   fi
   echo ""
-  echo "🔊 \`say-it $WORD\`  ·  🌐 https://pronounce.renlab.ai/word/$(echo "$WORD" | tr '[:upper:]' '[:lower:]')"
+  echo "🔊 \`say-it $WORD\`  ·  🌐 https://pronounce.renlab.ai/word/$(echo "$WORD" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9._-]/-/g')"
 }
 
 emit_tweet() {
@@ -863,7 +866,7 @@ emit_tweet() {
     [[ -n "$ALT_RESP" ]] && text="$text (or \"${ALT_RESP%%|*}\")"
     text="$text 🔊"
     [[ -n "$SRC_LABEL" ]] && text="$text — ${SRC_LABEL}"
-    text="$text · https://pronounce.renlab.ai/word/$(echo "$WORD" | tr '[:upper:]' '[:lower:]')"
+    text="$text · https://pronounce.renlab.ai/word/$(echo "$WORD" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9._-]/-/g')"
   else
     text="How do you pronounce $WORD? https://pronounce.renlab.ai"
   fi

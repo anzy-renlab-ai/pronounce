@@ -137,3 +137,81 @@ button.word-card {
   width: 100%;
 }
 .moment[role="button"] { cursor: pointer; }
+
+/* ========== light theme (honors OS prefers-color-scheme) ========== */
+/* The v2 design system is token-driven: overriding the core tokens flips
+   nearly the whole page. Only the hardcoded dark-tuned EFFECTS below
+   (grain / glow / scrims / shadows) need explicit retuning. The terminal
+   mock and karaoke "lights-off" overlay are intentionally kept dark — their
+   dark tokens are re-scoped at the bottom so their text doesn't go dark-on-dark. */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #fbf8f1;
+    --bg-2: #f3eee2;
+    --bg-3: #ece5d4;
+    --ink: #2a2118;
+    --ink-2: #544a39;
+    --ink-3: #7a7058;
+    --line: rgba(42, 33, 24, 0.12);
+    --line-2: rgba(42, 33, 24, 0.20);
+    --accent: #2a7d45;
+    --accent-2: #1f6b39;
+    --accent-soft: rgba(42, 125, 69, 0.12);
+    --good: #2a7d45;
+    --warn: #8a5e10;
+    --bad: #b23a2b;
+  }
+
+  /* Body radial glow: dark mode layered a green light-bloom on near-black.
+     On paper that bloom turns muddy — soften and re-tint to a faint wash. */
+  body {
+    background-image:
+      radial-gradient(ellipse 80% 60% at 50% -10%, rgba(42,125,69,0.06), transparent 60%),
+      radial-gradient(ellipse 60% 50% at 100% 100%, rgba(42,125,69,0.04), transparent 60%);
+  }
+
+  /* Film grain: the dark texture is a WHITE noise field on mix-blend overlay,
+     which is invisible (and can wash highlights) on a light bg. Switch to a
+     subtle multiply of dark noise so the paper grain reads, and drop opacity. */
+  body::before {
+    opacity: .03;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' seed='5'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+
+  /* Sticky topbar backdrop was a dark translucent slab. */
+  .topbar { background: rgba(251,248,241,.80); }
+
+  /* Brand dot glow: the green halo rings are tuned for a black field. */
+  .brand .dot {
+    box-shadow: 0 0 0 4px rgba(42,125,69,0.14), 0 0 18px rgba(42,125,69,.28);
+  }
+
+  /* Overlays / scrims: dark page used a near-black scrim. On light, a soft
+     warm-dark scrim + lighter, less-heavy drop shadows read correctly. */
+  .palette-mask { background: rgba(42,33,24,0.32); }
+  .palette {
+    box-shadow: 0 40px 80px -30px rgba(42,33,24,.28), 0 0 0 1px rgba(42,125,69,.18);
+  }
+  .egg-hud {
+    background: rgba(251,248,241,.94);
+    box-shadow: 0 20px 40px -12px rgba(42,33,24,.22);
+  }
+  .toast {
+    box-shadow: 0 20px 40px -12px rgba(42,33,24,.22), 0 0 0 1px var(--accent-soft);
+  }
+
+  /* "Lights-off" chrome stays dark in both themes (terminal mock + karaoke
+     focus overlay). Re-scope the dark token values onto these subtrees so
+     their var(--ink*)/var(--accent*) text + borders don't flip to dark-on-dark. */
+  .terminal, .karaoke {
+    --ink: #f4ecde;
+    --ink-2: #c9bfa9;
+    --ink-3: #8a8270;
+    --accent: #8fd694;
+    --accent-2: #b8e7bb;
+    --good: #8fd694;
+    --line: rgba(244,236,222,0.10);
+    --line-2: rgba(244,236,222,0.16);
+  }
+}

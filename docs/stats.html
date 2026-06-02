@@ -44,6 +44,9 @@
     <div class="section-title">By confidence</div>
     <div class="bars" id="bars-confs"></div>
 
+    <div class="section-title">Recently added</div>
+    <div class="recent-grid" id="recent-grid"></div>
+
     <div class="section-title">First letter distribution (A → Z)</div>
     <div class="alphabet" id="bars-letters"></div>
 
@@ -63,7 +66,10 @@ const STATS = {
   withSource: 1028,
   cats: {"project": 45,"acronym": 345,"person": 71,"cs-term": 222,"tool": 198,"product": 665,"abbreviation": 52,"cli-tool": 42},
   confs: {"contested": 128,"creator-clarified": 60,"community-consensus": 1452},
-  letters: {"2": 1,"A": 104,"B": 64,"C": 145,"D": 82,"E": 72,"F": 60,"G": 76,"H": 62,"I": 41,"J": 26,"K": 50,"L": 63,"M": 106,"N": 48,"O": 46,"P": 109,"Q": 21,"R": 88,"S": 154,"T": 81,"U": 20,"V": 44,"W": 39,"X": 10,"Y": 10,"Z": 18}
+  letters: {"2": 1,"A": 104,"B": 64,"C": 145,"D": 82,"E": 72,"F": 60,"G": 76,"H": 62,"I": 41,"J": 26,"K": 50,"L": 63,"M": 106,"N": 48,"O": 46,"P": 109,"Q": 21,"R": 88,"S": 154,"T": 81,"U": 20,"V": 44,"W": 39,"X": 10,"Y": 10,"Z": 18},
+  contested: 128,
+  settled: 1512,
+  recent: [{"w":"ultracode","c":"cs-term"},{"w":"knip","c":"tool"},{"w":"recraft","c":"product"},{"w":"nemotron","c":"product"},{"w":"ChatGLM","c":"product"},{"w":"pixtral","c":"product"},{"w":"oxlint","c":"cli-tool"},{"w":"veo","c":"product"},{"w":"krea","c":"product"},{"w":"maturin","c":"cli-tool"},{"w":"PagedAttention","c":"cs-term"},{"w":"rmsnorm","c":"cs-term"}]
 };
 
 function init() {
@@ -73,6 +79,7 @@ function init() {
     <div class="bn-card"><div class="bn-num">${STATS.withSource}</div><div class="bn-label">with source URL</div></div>
     <div class="bn-card"><div class="bn-num">${Object.keys(STATS.cats).length}</div><div class="bn-label">categories</div></div>
     <div class="bn-card"><div class="bn-num">${Math.round(100 * STATS.withSource / STATS.total)}%</div><div class="bn-label">cited</div></div>
+    <div class="bn-card"><div class="bn-num">${STATS.settled}<span style="color: var(--muted-strong); font-weight: 400;"> / ${STATS.contested}</span></div><div class="bn-label">settled vs contested</div></div>
   `;
 
   function renderBars(target, data, totalKey, color) {
@@ -88,6 +95,16 @@ function init() {
   }
   renderBars('bars-cats', STATS.cats, 'total', 'orange');
   renderBars('bars-confs', STATS.confs, 'total', 'green');
+
+  // Recently added (tail of the TSV = newest, emitted newest-first)
+  const rg = document.getElementById('recent-grid');
+  if (rg) {
+    rg.innerHTML = (STATS.recent || []).map(({w, c}) => `
+      <a class="recent-card" href="/word/${w.toLowerCase().replace(/[^a-z0-9._-]/g, '-')}.html">
+        <span class="recent-word">${w}</span>
+        <span class="recent-cat">${c}</span>
+      </a>`).join('');
+  }
 
   // A-Z grid
   const az = document.getElementById('bars-letters');

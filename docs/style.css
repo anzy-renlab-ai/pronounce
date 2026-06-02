@@ -120,6 +120,11 @@ header.hero { margin-bottom: 48px; text-align: center; }
 .cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
 .cat-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; text-decoration: none; color: var(--fg); display: block; transition: transform 0.15s; }
 .cat-card:hover { transform: translateY(-2px); border-color: var(--accent); }
+.recent-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+.recent-card { display: inline-flex; align-items: baseline; gap: 8px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px; text-decoration: none; background: var(--card); transition: border-color 0.15s; }
+.recent-card:hover { border-color: var(--accent); }
+.recent-word { font-family: var(--mono); font-weight: 600; color: var(--fg); }
+.recent-cat { font-size: 12px; color: var(--muted-strong); }
 .cat-name { font-family: var(--mono); font-size: 16px; color: var(--accent); margin-bottom: 4px; }
 .cat-count { color: var(--muted); font-size: 13px; }
 
