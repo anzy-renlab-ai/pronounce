@@ -1,6 +1,6 @@
 {
   "displayName": "Pronounce — Tech Word Pronunciation",
-  "description": "Hover any tech word — hear how it's actually pronounced. 1640-entry sourced dictionary covering products, CLI tools, CS terms, AI/ML projects and researchers, and the cross-functional vocab (GTM, PLG, ARR, OKR, scrum, kanban …) tech folks use. Cross-platform: macOS `say`, Linux `espeak-ng`, Windows PowerShell. Works in VS Code, Cursor, Windsurf, VSCodium, Zed. 中文界面：程序员单词怎么读、英文技术词发音、读音词典 — 悬停即听 kubectl、nginx、Ollama 等读法。",
+  "description": "Hover any tech word — hear how it's actually pronounced. 1650-entry sourced dictionary covering products, CLI tools, CS terms, AI/ML projects and researchers, and the cross-functional vocab (GTM, PLG, ARR, OKR, scrum, kanban …) tech folks use. Cross-platform: macOS `say`, Linux `espeak-ng`, Windows PowerShell. Works in VS Code, Cursor, Windsurf, VSCodium, Zed. 中文界面：程序员单词怎么读、英文技术词发音、读音词典 — 悬停即听 kubectl、nginx、Ollama 等读法。",
   "cmd.speak.title": "Speak word",
   "cmd.speakSelection.title": "Speak current selection",
   "cmd.search.title": "Search dictionary…",
@@ -15,12 +15,12 @@
   "config.hoverOnlyKnownWords.desc": "Only show hover for words in the dictionary. Disable to also hover unknown words (uses TTS letter-to-sound, lower quality).",
   "config.statusBar.desc": "Show a 🔊 Pronounce item in the status bar (click to speak the current selection).",
   "walkthrough.title": "Welcome to Pronounce",
-  "walkthrough.description": "Hover any tech word → hear how engineers actually say it. 1640 sourced entries. Cross-platform (macOS / Linux / Windows) as of v0.3.",
+  "walkthrough.description": "Hover any tech word → hear how engineers actually say it. 1650 sourced entries. Cross-platform (macOS / Linux / Windows) as of v0.3.",
   "walkthrough.try.title": "Hear it — try kubectl, nginx, or YAML",
   "walkthrough.try.description": "Run `Pronounce: Speak word` to hear any dictionary entry. The fastest way: highlight a word in any file and press **⌘⇧'** (or run `Pronounce: Speak current selection`).\n\n[Hear `kubectl` now](command:pronounce.speak?%22kubectl%22)",
   "walkthrough.hover.title": "Hover any tech word",
   "walkthrough.hover.description": "Hover over `kubectl`, `nginx`, `GIF`, `YAML`, `Ghostty`, `wagmi`, `JSON` etc. in any file — a tooltip shows the IPA, the English-style respelling, the source citation, and a 🔊 Play button. Works in **any** language file.\n\n[Open a sample file](command:pronounce.openWalkthrough)",
-  "walkthrough.search.title": "Search all 1640 entries",
+  "walkthrough.search.title": "Search all 1650 entries",
   "walkthrough.search.description": "Run `Pronounce: Search dictionary…` from the command palette (⌘⇧P / Ctrl+Shift+P) and fuzzy-find any word.\n\n[Open search now](command:pronounce.search)",
   "walkthrough.star.title": "★ Star it · keeps the dictionary growing",
   "walkthrough.star.description": "If Pronounce just saved you one cringey standup moment, **one star is the single best way to keep the dictionary growing** — more devs find it, more PRs land, more entries get creator-clarified.\n\n[★ Star on GitHub](command:pronounce.starOnGitHub)\n[Visit pronounce.renlab.ai](command:pronounce.openWebsite)\n\nOptional: [☕ Coffee on Ko-fi](command:pronounce.sponsor) — pays for one new entry per cup."

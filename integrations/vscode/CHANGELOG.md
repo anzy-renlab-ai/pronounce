@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.6.0 — 2026-06-07
+
+### Changed
+- **Default speech rate is now 130 wpm (was 200).** A pronunciation tool should default to slow-and-clear — the old default rushed unfamiliar words. Adjust anytime via the `pronounce.rate` setting.
+
+### Added
+- **Dictionary +10** — current AI/ML names with non-obvious pronunciation: Muon (MYOO-on), Janus, Mochi, ColPali, Nunchaku, SVDQuant, ModernBERT, Genie, Medusa, FLUX.1 Kontext.
+
 ## 0.5.0 — 2026-05-31
 
 ### Fixed

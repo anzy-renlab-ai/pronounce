@@ -1,0 +1,12 @@
+{
+  "word": "ModernBERT",
+  "ipa": "/ˈmɒdərnbɜːrt/",
+  "respelling_us": "MOD ern bert",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2412.13663",
+  "source_label": "ModernBERT paper (arXiv 2412.13663)",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "2024 modernized BERT-style encoder (8k context, RoPE, FlashAttention, GeGLU). Spoken MOD-ern-BERT — \"BERT\" as the single word \"bert\", never spelled out B-E-R-T."
+}

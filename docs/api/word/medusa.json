@@ -1,0 +1,12 @@
+{
+  "word": "Medusa",
+  "ipa": "/məˈduːsə/",
+  "respelling_us": "muh DOO suh",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2401.10774",
+  "source_label": "Medusa paper (arXiv 2401.10774)",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "Speculative-decoding method that adds multiple extra decoding \"heads\" so a model drafts several future tokens itself (no separate draft model). Named after the Gorgon Medusa with many snake-heads: muh-DOO-suh."
+}

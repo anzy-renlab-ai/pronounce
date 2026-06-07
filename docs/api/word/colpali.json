@@ -1,0 +1,12 @@
+{
+  "word": "ColPali",
+  "ipa": "/koʊlˈpɑːli/",
+  "respelling_us": "kol PAH lee",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2407.01449",
+  "source_label": "ColPali paper (arXiv 2407.01449)",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "Late-interaction visual document retrieval: ColBERT-style multi-vector matching over PaliGemma image patches. Said kol-PAH-lee — \"Col\" from ColBERT, \"Pali\" from PaliGemma (PAH-lee, the Buddhist canonical language)."
+}

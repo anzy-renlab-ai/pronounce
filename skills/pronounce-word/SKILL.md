@@ -34,7 +34,7 @@ If the target token is ambiguous (multiple candidates in the message), ask which
 
    The CLI looks the word up in the dictionary and, if found, sends the dictionary's English-like respelling (e.g. "koob control") to the TTS engine so the pronunciation is the *intended* community reading — not whatever the engine would have guessed from the spelling alone. (macOS `say` does not parse IPA / `[[inpt PHON]]` / SSML `<phoneme>` markup — it reads them literally — so the dictionary stores respellings that ride the engine's built-in letter-to-sound rules.) If the word isn't in the dictionary, the CLI speaks the raw spelling.
 
-   Defaults: voice `Samantha` (General American), rate 175 wpm, 3 repetitions. This blocks until the audio finishes; the user hears it through the speakers.
+   Defaults: voice `Samantha` (General American), rate 130 wpm, 3 repetitions. This blocks until the audio finishes; the user hears it through the speakers.
 
 2. **Reply with one short line of text alongside the audio.** Always include:
 
@@ -97,7 +97,7 @@ Reply:
 | `--copy` | Copy the respelling to the clipboard after speaking. |
 | `--no-dict` | Bypass the dictionary; let the TTS engine interpret the raw spelling. |
 | `-n 5` | Repeat 5 times instead of 3. |
-| `-r 130` | Slower rate (130 wpm; default is 175). |
+| `-r 110` | Slower rate (110 wpm; default is 130). |
 | `-o /tmp/word.aiff` | Save to file instead of playing. |
 
 **Why the default chains alternates.** Multi-reading words (`GIF`, `SQL`, `GUI`, `kubectl`, `char`, ...) carry useful context: the user should know there's debate. Chaining alternates audibly with `"or:"` makes that perceptible without forcing them to read the terminal. Use `--solo` when the user has already grasped the multi-reading status and just wants the primary again.

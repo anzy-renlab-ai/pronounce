@@ -1638,5 +1638,15 @@
   {"word": "nemotron", "slug": "nemotron", "category": "product", "confidence": "community-consensus"},
   {"word": "recraft", "slug": "recraft", "category": "product", "confidence": "community-consensus"},
   {"word": "knip", "slug": "knip", "category": "tool", "confidence": "creator-clarified"},
-  {"word": "ultracode", "slug": "ultracode", "category": "cs-term", "confidence": "community-consensus"}
+  {"word": "ultracode", "slug": "ultracode", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "muon", "slug": "muon", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "Janus", "slug": "janus", "category": "product", "confidence": "community-consensus"},
+  {"word": "Mochi", "slug": "mochi", "category": "product", "confidence": "community-consensus"},
+  {"word": "ColPali", "slug": "colpali", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "Nunchaku", "slug": "nunchaku", "category": "tool", "confidence": "community-consensus"},
+  {"word": "SVDQuant", "slug": "svdquant", "category": "acronym", "confidence": "community-consensus"},
+  {"word": "ModernBERT", "slug": "modernbert", "category": "product", "confidence": "community-consensus"},
+  {"word": "Genie", "slug": "genie", "category": "product", "confidence": "community-consensus"},
+  {"word": "Medusa", "slug": "medusa", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "Kontext", "slug": "kontext", "category": "product", "confidence": "community-consensus"}
 ]

@@ -1642,3 +1642,13 @@ nemotron | /ˈniːmoʊˌtrɑːn/ | nee moh tron | product | community-consensus 
 recraft | /riˈkræft/ | ree kraft | product | community-consensus | https://www.recraft.ai/docs/recraft-models/recraft-V3
 knip | /ˈknɪp/ | kuh nip | tool | creator-clarified | https://github.com/webpro-nl/knip
 ultracode | /ˈʌltrəˌkoʊd/ | ul truh code | cs-term | community-consensus | (no source)
+muon | /ˈmjuːɒn/ | MYOO on | cs-term | community-consensus | https://kellerjordan.github.io/posts/muon/
+Janus | /ˈdʒeɪnəs/ | JAY nuhs | product | community-consensus | https://arxiv.org/abs/2410.13848
+Mochi | /ˈmoʊtʃi/ | MOH chee | product | community-consensus | https://www.genmo.ai/blog/mochi-1
+ColPali | /koʊlˈpɑːli/ | kol PAH lee | cs-term | community-consensus | https://arxiv.org/abs/2407.01449
+Nunchaku | /ˈnʌntʃɑːkuː/ | NUN chah koo | tool | community-consensus | https://github.com/mit-han-lab/nunchaku
+SVDQuant | /ˌɛsviːdiːˈkwɑːnt/ | ess vee dee kwant | acronym | community-consensus | https://arxiv.org/abs/2411.05007
+ModernBERT | /ˈmɒdərnbɜːrt/ | MOD ern bert | product | community-consensus | https://arxiv.org/abs/2412.13663
+Genie | /ˈdʒiːni/ | JEE nee | product | community-consensus | https://arxiv.org/abs/2402.15391
+Medusa | /məˈduːsə/ | muh DOO suh | cs-term | community-consensus | https://arxiv.org/abs/2401.10774
+Kontext | /ˈkɒntɛkst/ | KON text | product | community-consensus | https://bfl.ai/announcements/flux-1-kontext

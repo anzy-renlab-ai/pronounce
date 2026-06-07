@@ -1,0 +1,12 @@
+{
+  "word": "muon",
+  "ipa": "/ˈmjuːɒn/",
+  "respelling_us": "MYOO on",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://kellerjordan.github.io/posts/muon/",
+  "source_label": "Keller Jordan — \"Muon optimizer\"",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "Hidden-layer optimizer (MomentUm Orthogonalized by Newton-schulz) by Keller Jordan, used to set NanoGPT speedrun records and in large-scale pretraining. Pronounced like the subatomic particle: MYOO-on (two syllables), not \"moo-on\" or spelled out M-U-on."
+}

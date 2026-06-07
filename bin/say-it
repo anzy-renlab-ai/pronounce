@@ -11,10 +11,10 @@
 # text. Respelling rides the TTS's built-in letter-to-sound rules.
 set -e
 
-VERSION="0.5.1"
+VERSION="0.6.0"
 VOICE="Samantha"
 TIMES=3
-RATE=175
+RATE=130
 SAVE=""
 USE_ALT=0
 ALT_IDX=1
@@ -113,7 +113,7 @@ ${C_BOLD}Usage:${C_RESET}
   say-it <word>                  speak 3 times using the community dict if known
   say-it -v <voice> <word>       any macOS voice (default: Samantha, GenAm)
   say-it -n 5 <word>             repeat N times instead of 3
-  say-it -r 130 <word>           slower rate (default 175 wpm)
+  say-it -r 110 <word>           slower rate (default 130 wpm)
   say-it -o out.aiff <word>      save to file instead of playing
   say-it --alt <word>            speak the first alternate reading only
   say-it --alt N <word>          speak the Nth alternate only (1-indexed)
@@ -675,7 +675,7 @@ EOF
       sleep 0.3
     done
     echo "${C_DIM}3. Normal speed, twice${C_RESET}"
-    tts_speak "$resp. [[slnc 500]] $resp." 175
+    tts_speak "$resp. [[slnc 500]] $resp." "$RATE"
     exit 0
     ;;
   quiz)

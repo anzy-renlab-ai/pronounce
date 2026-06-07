@@ -1,0 +1,12 @@
+{
+  "word": "Kontext",
+  "ipa": "/ˈkɒntɛkst/",
+  "respelling_us": "KON text",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://bfl.ai/announcements/flux-1-kontext",
+  "source_label": "Black Forest Labs — FLUX.1 Kontext",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Black Forest Labs' in-context image generation+editing model (FLUX.1 Kontext). \"Kontext\" is German for \"context\"; said KON-text, stress on the first syllable."
+}

@@ -1,5 +1,16 @@
 # Changelog
 
+## v2.10.0 — 2026-06-07
+
+A speech-default change plus a small, current dictionary batch.
+
+### Changed
+- **Default speech rate 175 → 130 wpm**, across the CLI and the VS Code extension (the extension default was an even faster 200). Pronunciation is the whole use case, and the old default rushed unfamiliar words — slow-and-clear is the right default for *hearing* a name. `-r` (CLI) and the `pronounce.rate` setting (extension) still override; the documented "slower" example is now `-r 110`. The `(rate-175)/25` PowerShell→SAPI mapping is unchanged (it's a scale anchor, not the default).
+
+### Added
+- **Dictionary +10** — current AI/ML names whose pronunciation isn't obvious from the spelling: **Muon** (MYOO-on), **Janus** (JAY-nuhs), **Mochi** (MOH-chee), **ColPali** (kol-PAH-lee), **Nunchaku**, **SVDQuant** (S-V-D-quant), **ModernBERT**, **Genie** (JEE-nee), **Medusa** (muh-DOO-suh), **FLUX.1 Kontext** (KON-text).
+- CLI `VERSION` → 0.6.0; VS Code extension → 0.6.0.
+
 ## v2.9.0 — 2026-06-02
 
 Two deferred product improvements from the v0.5.0 review, plus two slug fixes an adversarial regression pass surfaced.

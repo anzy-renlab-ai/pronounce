@@ -1,0 +1,12 @@
+{
+  "word": "Nunchaku",
+  "ipa": "/ˈnʌntʃɑːkuː/",
+  "respelling_us": "NUN chah koo",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/mit-han-lab/nunchaku",
+  "source_label": "MIT Han Lab — nunchaku GitHub",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "MIT Han Lab's 4-bit inference engine that runs SVDQuant-compressed diffusion models. Named after the martial-arts weapon (nunchucks): NUN-chah-koo."
+}

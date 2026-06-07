@@ -1,0 +1,12 @@
+{
+  "word": "SVDQuant",
+  "ipa": "/ˌɛsviːdiːˈkwɑːnt/",
+  "respelling_us": "ess vee dee kwant",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2411.05007",
+  "source_label": "SVDQuant paper (arXiv 2411.05007)",
+  "category": "acronym",
+  "confidence": "community-consensus",
+  "notes": "4-bit post-training quantization for diffusion models that shunts weight+activation outliers into a low-rank branch. SVD = Singular Value Decomposition, read letter-by-letter then \"quant\": ess-vee-dee-KWANT."
+}
