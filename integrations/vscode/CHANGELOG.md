@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.6.1 — 2026-06-07
+
+### Added
+- **Dictionary +4 — Rust toolchain**: crate (KRAYT, rhymes with "great"), rustc (RUST-see), clippy (KLIP-ee), rustup (RUST-up). Prompted by a community pronunciation request.
+
 ## 0.6.0 — 2026-06-07
 
 ### Changed

@@ -1,0 +1,12 @@
+{
+  "word": "rustup",
+  "ipa": "/ˈrʌstʌp/",
+  "respelling_us": "rust up",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://rust-lang.github.io/rustup/",
+  "source_label": "rustup book (rust-lang.github.io/rustup)",
+  "category": "cli-tool",
+  "confidence": "community-consensus",
+  "notes": "The Rust toolchain installer and version manager. Read as the two transparent parts: RUST-up (rust + up), stress on the first syllable. Not \"rus-TUP\"."
+}

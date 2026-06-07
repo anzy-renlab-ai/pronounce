@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.10.1 — 2026-06-07
+
+### Added
+- **Dictionary +4 — Rust toolchain**, prompted by a community question (Discussion #34, @pinage404 — a non-native speaker — asking how to say "crate"): **crate** (KRAYT, one syllable, rhymes with "great"), **rustc** (RUST-see — the "c" is the letter, for compiler), **clippy** (KLIP-ee, like the Office paperclip), **rustup** (RUST-up). `cargo` was already in the dictionary.
+- CLI `VERSION` → 0.6.1; VS Code extension → 0.6.1.
+
 ## v2.10.0 — 2026-06-07
 
 A speech-default change plus a small, current dictionary batch.

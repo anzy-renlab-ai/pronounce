@@ -1,0 +1,12 @@
+{
+  "word": "rustc",
+  "ipa": "/ˈrʌstsiː/",
+  "respelling_us": "rust see",
+  "alt_ipa": ["/ˈrʌstkeɪ/"],
+  "alt_respelling_us": ["rust kay"],
+  "source_url": "https://doc.rust-lang.org/rustc/what-is-rustc.html",
+  "source_label": "rustc book — \"What is rustc?\"",
+  "category": "cli-tool",
+  "confidence": "community-consensus",
+  "notes": "The Rust compiler. The \"c\" is for \"compiler\" and is almost always read as the letter C: RUST-see (rust + C). A minority say \"rust-cee\" identically; \"rustk\" (one syllable) is heard but uncommon. Compare gcc/clang usage where the trailing letter is spoken."
+}

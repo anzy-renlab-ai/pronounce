@@ -1648,5 +1648,9 @@
   {"word": "ModernBERT", "slug": "modernbert", "category": "product", "confidence": "community-consensus"},
   {"word": "Genie", "slug": "genie", "category": "product", "confidence": "community-consensus"},
   {"word": "Medusa", "slug": "medusa", "category": "cs-term", "confidence": "community-consensus"},
-  {"word": "Kontext", "slug": "kontext", "category": "product", "confidence": "community-consensus"}
+  {"word": "Kontext", "slug": "kontext", "category": "product", "confidence": "community-consensus"},
+  {"word": "crate", "slug": "crate", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "rustc", "slug": "rustc", "category": "cli-tool", "confidence": "community-consensus"},
+  {"word": "clippy", "slug": "clippy", "category": "cli-tool", "confidence": "community-consensus"},
+  {"word": "rustup", "slug": "rustup", "category": "cli-tool", "confidence": "community-consensus"}
 ]

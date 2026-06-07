@@ -6600,4 +6600,20 @@
     <image:image><image:loc>https://pronounce.renlab.ai/og/kontext.png</image:loc><image:caption>How to pronounce Kontext — OG card</image:caption></image:image>
     <image:image><image:loc>https://pronounce.renlab.ai/badge/kontext.svg</image:loc><image:caption>Pronunciation badge for Kontext</image:caption></image:image>
   </url>
+  <url><loc>https://pronounce.renlab.ai/word/crate.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/crate.png</image:loc><image:caption>How to pronounce crate — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/crate.svg</image:loc><image:caption>Pronunciation badge for crate</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/rustc.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/rustc.png</image:loc><image:caption>How to pronounce rustc — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/rustc.svg</image:loc><image:caption>Pronunciation badge for rustc</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/clippy.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/clippy.png</image:loc><image:caption>How to pronounce clippy — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/clippy.svg</image:loc><image:caption>Pronunciation badge for clippy</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/rustup.html</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/rustup.png</image:loc><image:caption>How to pronounce rustup — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/rustup.svg</image:loc><image:caption>Pronunciation badge for rustup</image:caption></image:image>
+  </url>
 </urlset>

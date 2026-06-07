@@ -1652,3 +1652,7 @@ ModernBERT | /ˈmɒdərnbɜːrt/ | MOD ern bert | product | community-consensus 
 Genie | /ˈdʒiːni/ | JEE nee | product | community-consensus | https://arxiv.org/abs/2402.15391
 Medusa | /məˈduːsə/ | muh DOO suh | cs-term | community-consensus | https://arxiv.org/abs/2401.10774
 Kontext | /ˈkɒntɛkst/ | KON text | product | community-consensus | https://bfl.ai/announcements/flux-1-kontext
+crate | /kreɪt/ | krayt | cs-term | community-consensus | https://doc.rust-lang.org/book/ch07-01-packages-and-crates.html
+rustc | /ˈrʌstsiː/ | rust see | cli-tool | community-consensus | https://doc.rust-lang.org/rustc/what-is-rustc.html
+clippy | /ˈklɪpi/ | klip ee | cli-tool | community-consensus | https://github.com/rust-lang/rust-clippy
+rustup | /ˈrʌstʌp/ | rust up | cli-tool | community-consensus | https://rust-lang.github.io/rustup/

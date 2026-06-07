@@ -1,0 +1,12 @@
+{
+  "word": "clippy",
+  "ipa": "/ˈklɪpi/",
+  "respelling_us": "klip ee",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/rust-lang/rust-clippy",
+  "source_label": "rust-lang/rust-clippy GitHub",
+  "category": "cli-tool",
+  "confidence": "community-consensus",
+  "notes": "Rust's official linter (run via `cargo clippy`). KLIP-ee — named after Clippy, the Microsoft Office paperclip assistant; same pronunciation as that mascot."
+}
