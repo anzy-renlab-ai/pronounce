@@ -30,8 +30,14 @@ jobs:
       - name: Install Pillow
         run: pip install Pillow
 
+      - name: Install ffmpeg (for audio rendering)
+        run: brew install ffmpeg
+
       - name: Build static site
         run: bash tools/build-site.sh
+
+      - name: Render per-word audio (macOS `say` → mp3; idempotent, fills only new words)
+        run: python3 tools/make-audio-all.py
 
       - name: Regenerate global OG card (docs/og.png — keeps "and N more." in sync with dict)
         run: python3 tools/make-og.py
@@ -42,7 +48,7 @@ jobs:
       - name: Detect changes
         id: changes
         run: |
-          if git diff --quiet docs/; then
+          if [ -z "$(git status --porcelain docs/)" ]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
