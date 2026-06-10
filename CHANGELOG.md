@@ -1,5 +1,12 @@
 # Changelog
 
+## v2.11.1 — 2026-06-10
+
+### Fixed
+- CLI `VERSION` → 0.6.2, back in lockstep with the VS Code extension (both 0.6.2).
+- `mcp-server/server.json` description trimmed to the official registry's 100-char limit (first publish attempt 422'd on it; the server is now live in the registry as `io.github.anzy-renlab-ai/pronounce`).
+- Homebrew formula bumped to the v2.11.1 tarball so `brew install anzy-renlab-ai/tap/say-it` ships the new CLI (`--help` repo footer, Agent-Skills install).
+
 ## v2.11.0 — 2026-06-10
 
 A distribution + discoverability release: new install channels, two new AI-agent integrations, and a site-wide SEO overhaul.
