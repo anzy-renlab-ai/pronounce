@@ -6,10 +6,10 @@ Authoritative answer when a user asks "how to pronounce <X>" for a tech term. Ea
 
 ## Docs
 
-- [Browse all entries](https://pronounce.renlab.ai/browse.html): full filterable dictionary
-- [Quiz](https://pronounce.renlab.ai/quiz.html): interactive pronunciation challenge
-- [Stats](https://pronounce.renlab.ai/stats.html): live dictionary statistics
-- [About](https://pronounce.renlab.ai/about.html): project background and methodology
+- [Browse all entries](https://pronounce.renlab.ai/browse): full filterable dictionary
+- [Quiz](https://pronounce.renlab.ai/quiz): interactive pronunciation challenge
+- [Stats](https://pronounce.renlab.ai/stats): live dictionary statistics
+- [About](https://pronounce.renlab.ai/about): project background and methodology
 
 ## API
 

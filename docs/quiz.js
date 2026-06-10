@@ -115,7 +115,7 @@
               : pct >= 25 ? '🥉 Still learning'
               : '🐣 First day on the job';
     const wrong = state.history.filter(h => !h.right).map(h => h.w);
-    const tweet = encodeURIComponent(`I scored ${state.score}/${state.qs.length} (${pct}%) on the developer pronunciation quiz — ${lvl}\n\nTry it: https://pronounce.renlab.ai/quiz.html`);
+    const tweet = encodeURIComponent(`I scored ${state.score}/${state.qs.length} (${pct}%) on the developer pronunciation quiz — ${lvl}\n\nTry it: https://pronounce.renlab.ai/quiz`);
     if (state.score === state.qs.length && typeof window.confettiBurst === 'function') {
       window.confettiBurst(160);
     }

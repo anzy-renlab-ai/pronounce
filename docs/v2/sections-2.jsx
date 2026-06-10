@@ -151,7 +151,7 @@ function Quiz({ registerEgg }) {
         <div className="qcopy">
           <h3>Stop hedging. <em>Find out.</em></h3>
           <p>Pick what you think people say. We grade against creators (when on record) and the community (when not). Each answer comes with a source you can click through.</p>
-          <a href="/quiz.html" className="btn primary" style={{ alignSelf: 'flex-start' }}>Start full quiz <span className="arrow">→</span></a>
+          <a href="/quiz" className="btn primary" style={{ alignSelf: 'flex-start' }}>Start full quiz <span className="arrow">→</span></a>
         </div>
         <div className="qvis">
           <div className="qcard">

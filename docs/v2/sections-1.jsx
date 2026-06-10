@@ -184,7 +184,7 @@ function WordGrid({ registerEgg }) {
       </div>
 
       <div style={{ textAlign: 'center', marginTop: 36 }}>
-        <a href="/browse.html" className="btn">See all {DICT_ALL.length} entries <span className="arrow">→</span></a>
+        <a href="/browse" className="btn">See all {DICT_ALL.length} entries <span className="arrow">→</span></a>
       </div>
     </section>
   );

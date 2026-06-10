@@ -9,9 +9,9 @@
   <meta name="theme-color" content="#ff6a3d">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="canonical" href="https://pronounce.renlab.ai/stats.html">
-  <link rel="alternate" hreflang="en" href="https://pronounce.renlab.ai/stats.html">
-  <link rel="alternate" hreflang="x-default" href="https://pronounce.renlab.ai/stats.html">
+  <link rel="canonical" href="https://pronounce.renlab.ai/stats">
+  <link rel="alternate" hreflang="en" href="https://pronounce.renlab.ai/stats">
+  <link rel="alternate" hreflang="x-default" href="https://pronounce.renlab.ai/stats">
   <meta property="og:image" content="https://pronounce.renlab.ai/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://pronounce.renlab.ai/og.png">
@@ -24,9 +24,9 @@
     <div class="brand"><a href="./">🔊 Pronounce</a></div>
     <div class="links">
       <a href="./">Home</a>
-      <a href="./browse.html">Browse</a>
-      <a href="./quiz.html">Quiz</a>
-      <a href="./hall-of-shame.html">Top 25</a>
+      <a href="./browse">Browse</a>
+      <a href="./quiz">Quiz</a>
+      <a href="./hall-of-shame">Top 25</a>
       <a href="https://github.com/anzy-renlab-ai/pronounce">GitHub</a>
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button>
     </div>
@@ -88,7 +88,7 @@ function init() {
     const items = Object.entries(data).sort((a, b) => b[1] - a[1]);
     el.innerHTML = items.map(([k, v]) => `
       <div class="bar-row">
-        <div class="bar-label"><a href="${target === 'bars-cats' ? '/category/' + k + '.html' : '#'}">${k}</a></div>
+        <div class="bar-label"><a href="${target === 'bars-cats' ? '/category/' + k : '#'}">${k}</a></div>
         <div class="bar-track"><div class="bar-fill bar-${color}" style="width: ${100 * v / max}%"></div></div>
         <div class="bar-value">${v}</div>
       </div>`).join('');
@@ -100,7 +100,7 @@ function init() {
   const rg = document.getElementById('recent-grid');
   if (rg) {
     rg.innerHTML = (STATS.recent || []).map(({w, c}) => `
-      <a class="recent-card" href="/word/${w.toLowerCase().replace(/[^a-z0-9._-]/g, '-')}.html">
+      <a class="recent-card" href="/word/${w.toLowerCase().replace(/[^a-z0-9._-]/g, '-')}">
         <span class="recent-word">${w}</span>
         <span class="recent-cat">${c}</span>
       </a>`).join('');
@@ -124,7 +124,7 @@ function init() {
   const cg = document.getElementById('cat-grid');
   const cats = Object.entries(STATS.cats).sort((a, b) => b[1] - a[1]);
   cg.innerHTML = cats.map(([c, n]) => `
-    <a class="cat-card" href="/category/${c}.html">
+    <a class="cat-card" href="/category/${c}">
       <div class="cat-name">${c}</div>
       <div class="cat-count">${n} entries</div>
     </a>`).join('');

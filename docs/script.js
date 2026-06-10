@@ -1724,7 +1724,7 @@ function escHTML(s) {
 }
 function badge(text, kind) { return `<span class="badge badge-${kind}">${text}</span>`; }
 function entryHref(word) {
-  return './word/' + word.toLowerCase().replace(/[^a-z0-9._-]/g, '-') + '.html';
+  return './word/' + word.toLowerCase().replace(/[^a-z0-9._-]/g, '-');
 }
 
 function renderEntry(e, idx) {
@@ -1851,14 +1851,14 @@ function initWordPage() {
     if (e.key === 'r' || e.key === 'R') {
       e.preventDefault();
       const pick = ENTRIES[Math.floor(Math.random() * ENTRIES.length)];
-      window.location.href = './' + pick.w.toLowerCase().replace(/[^a-z0-9._-]/g, '-') + '.html';
+      window.location.href = './' + pick.w.toLowerCase().replace(/[^a-z0-9._-]/g, '-');
     } else if (e.key === ' ') {
       e.preventDefault();
       const btn = document.querySelector('.play-primary');
       if (btn) btn.click();
     } else if (e.key === '/') {
       e.preventDefault();
-      window.location.href = '../browse.html';
+      window.location.href = '../browse';
     } else if (e.key === 'c' || e.key === 'C') {
       // copy IPA
       e.preventDefault();
@@ -1904,14 +1904,14 @@ function renderTodaysWord() {
   el.innerHTML = `
     <div class="todays-inner">
       <div class="todays-label">📅 Today's pronunciation</div>
-      <a href="./word/${slug}.html" class="todays-word-link">
+      <a href="./word/${slug}" class="todays-word-link">
         <span class="todays-word">${escHTML(e.w)}</span>
         <span class="todays-resp">${escHTML(e.r)}</span>
         <span class="todays-ipa">${escHTML(e.ipa)}</span>
       </a>
       <div class="todays-actions">
         <button class="play-btn play-primary" onclick="playEntry('${e.w}')" aria-label="Play today's word">▶</button>
-        <a href="./word/${slug}.html" class="todays-cta">See the source →</a>
+        <a href="./word/${slug}" class="todays-cta">See the source →</a>
       </div>
     </div>`;
 }
@@ -1966,7 +1966,7 @@ function initHeroSearch() {
     sug.hidden = false;
     sug.innerHTML = items.map((e, i) => {
       const slug = slugify(e.w);
-      return '<a class="suggest-row" role="option" data-i="' + i + '" href="./word/' + slug + '.html">' +
+      return '<a class="suggest-row" role="option" data-i="' + i + '" href="./word/' + slug + '">' +
         '<span class="suggest-w">' + escapeHtml(e.w) + '</span>' +
         '<span class="suggest-r">' + escapeHtml(e.r || '') + '</span>' +
         '<span class="suggest-i">' + escapeHtml(e.ipa || '') + '</span>' +
@@ -1986,7 +1986,7 @@ function initHeroSearch() {
     else if (e.key === 'Enter' && items.length) {
       e.preventDefault();
       const pick = cur >= 0 ? items[cur] : items[0];
-      window.location.href = './word/' + slugify(pick.w) + '.html';
+      window.location.href = './word/' + slugify(pick.w);
     } else if (e.key === 'Escape') { sug.hidden = true; }
   });
   function highlight() {
@@ -2018,7 +2018,7 @@ function initHeroSearch() {
           render(items);
           if (items.length) {
             // jump straight to top match
-            setTimeout(() => { window.location.href = './word/' + slugify(items[0].w) + '.html'; }, 400);
+            setTimeout(() => { window.location.href = './word/' + slugify(items[0].w); }, 400);
           }
         };
         rec.onend = () => mic.classList.remove('listening');

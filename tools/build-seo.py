@@ -363,11 +363,11 @@ def navbar(prefix: str) -> str:
     return f"""  <nav class="topbar">
     <div class="brand"><a href="{prefix}/">🔊 {BRAND}</a></div>
     <div class="links">
-      <a href="{prefix}/browse.html">Browse all</a>
+      <a href="{prefix}/browse">Browse all</a>
       <a href="{prefix}/collection/">Collections</a>
       <a href="{prefix}/compare/">Compare</a>
-      <a href="{prefix}/quiz.html">Quiz</a>
-      <a href="{prefix}/zh.html" hreflang="zh-Hans" lang="zh-Hans">中文</a>
+      <a href="{prefix}/quiz">Quiz</a>
+      <a href="{prefix}/zh" hreflang="zh-Hans" lang="zh-Hans">中文</a>
       <a href="https://github.com/{GH_REPO}">GitHub</a>
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button>
     </div>
@@ -431,7 +431,8 @@ def footer(prefix: str = "..") -> str:
 # ---------------------------------------------------------------------------
 def emit_collection(coll: dict, by_slug: dict, out_dir: Path) -> None:
     slug = coll["slug"]
-    canonical = f"{SITE_URL}/collection/{slug}.html"
+    # Clean URL (Vercel cleanUrls) — the file on disk is still <slug>.html.
+    canonical = f"{SITE_URL}/collection/{slug}"
     rows = []
     found_words = []
     for w in coll["words"]:
@@ -521,7 +522,7 @@ def emit_collection(coll: dict, by_slug: dict, out_dir: Path) -> None:
     for other in COLLECTIONS:
         if other["slug"] == slug:
             continue
-        html += f'        <li><a href="/collection/{other["slug"]}.html">{esc(other["title"])}</a></li>\n'
+        html += f'        <li><a href="/collection/{other["slug"]}">{esc(other["title"])}</a></li>\n'
     html += """      </ul>
     </section>
   </div>
@@ -549,7 +550,7 @@ def emit_collection_index(out_dir: Path) -> None:
       <ul>
 """
     for c in COLLECTIONS:
-        html += f'        <li style="margin: 14px 0;"><a href="/collection/{c["slug"]}.html"><strong>{esc(c["title"])}</strong></a><br><span style="color: var(--muted);">{esc(c["desc"])}</span></li>\n'
+        html += f'        <li style="margin: 14px 0;"><a href="/collection/{c["slug"]}"><strong>{esc(c["title"])}</strong></a><br><span style="color: var(--muted);">{esc(c["desc"])}</span></li>\n'
     html += """      </ul>
     </section>
   </div>
@@ -568,7 +569,8 @@ def emit_compare(pair_cfg: dict, by_slug: dict, out_dir: Path) -> None:
     if not a or not b:
         return
     pair_slug = f"{a_slug}-vs-{b_slug}"
-    canonical = f"{SITE_URL}/compare/{pair_slug}.html"
+    # Clean URL (Vercel cleanUrls) — the file on disk is still <pair>.html.
+    canonical = f"{SITE_URL}/compare/{pair_slug}"
 
     jsonld = {
         "@context": "https://schema.org",
@@ -656,7 +658,7 @@ def emit_compare(pair_cfg: dict, by_slug: dict, out_dir: Path) -> None:
         oa, ob = other["pair"]
         if (oa, ob) == (a_slug, b_slug):
             continue
-        html += f'        <li><a href="/compare/{oa}-vs-{ob}.html">{esc(other["title"])}</a></li>\n'
+        html += f'        <li><a href="/compare/{oa}-vs-{ob}">{esc(other["title"])}</a></li>\n'
     html += """      </ul>
     </section>
   </div>
@@ -687,7 +689,7 @@ def emit_compare_index(out_dir: Path, by_slug: dict) -> None:
         a_slug, b_slug = cp["pair"]
         if a_slug not in by_slug or b_slug not in by_slug:
             continue
-        html += f'        <li style="margin: 14px 0;"><a href="/compare/{a_slug}-vs-{b_slug}.html"><strong>{esc(cp["title"])}</strong></a></li>\n'
+        html += f'        <li style="margin: 14px 0;"><a href="/compare/{a_slug}-vs-{b_slug}"><strong>{esc(cp["title"])}</strong></a></li>\n'
     html += """      </ul>
     </section>
   </div>
@@ -721,7 +723,8 @@ def _conf_zh(conf: str) -> str:
 
 def emit_zh_word(e: dict, out_dir: Path) -> None:
     slug = e["slug"]
-    canonical = f"{SITE_URL}/zh/word/{slug}.html"
+    # Clean URL (Vercel cleanUrls) — the file on disk is still <slug>.html.
+    canonical = f"{SITE_URL}/zh/word/{slug}"
     en_url = f"{SITE_URL}/word/{slug}"
     title = f"{e['word']} 怎么读 — 中文发音指南"
     desc_parts = [f"{e['word']} 的标准读音是「{e['resp']}」（{e['ipa']}）。"]
@@ -776,7 +779,7 @@ def emit_zh_word(e: dict, out_dir: Path) -> None:
                 "@type": "BreadcrumbList",
                 "itemListElement": [
                     {"@type": "ListItem", "position": 1, "name": BRAND, "item": f"{SITE_URL}/"},
-                    {"@type": "ListItem", "position": 2, "name": "中文", "item": f"{SITE_URL}/zh.html"},
+                    {"@type": "ListItem", "position": 2, "name": "中文", "item": f"{SITE_URL}/zh"},
                     {"@type": "ListItem", "position": 3, "name": e["word"], "item": canonical},
                 ],
             },
@@ -804,8 +807,8 @@ def emit_zh_word(e: dict, out_dir: Path) -> None:
     html += f"""  <nav class="topbar">
     <div class="brand"><a href="../../">🔊 {BRAND}</a></div>
     <div class="links">
-      <a href="../../zh.html">中文首页</a>
-      <a href="../../browse.html" hreflang="en" lang="en">Browse (EN)</a>
+      <a href="../../zh">中文首页</a>
+      <a href="../../browse" hreflang="en" lang="en">Browse (EN)</a>
       <a href="../../collection/" hreflang="en" lang="en">Collections</a>
       <a href="{en_url}" hreflang="en" lang="en">English version</a>
       <a href="https://github.com/{GH_REPO}">GitHub</a>
@@ -878,15 +881,15 @@ def emit_zh_word_index(entries: list, out_dir: Path) -> None:
         lang="zh-CN",
         style_prefix="../..",
         og_image=f"{SITE_URL}/og.png",
-        hreflang_pairs=[("en", f"{SITE_URL}/browse.html"), ("zh-CN", canonical)],
+        hreflang_pairs=[("en", f"{SITE_URL}/browse"), ("zh-CN", canonical)],
     )
     html += "\n</head>\n<body>\n"
     html += f'  <div class="gh-banner">⭐ <a href="https://github.com/{GH_REPO}">在 GitHub 给个 Star</a></div>\n'
     html += f"""  <nav class="topbar">
     <div class="brand"><a href="../../">🔊 {BRAND}</a></div>
     <div class="links">
-      <a href="../../zh.html">中文首页</a>
-      <a href="../../browse.html" hreflang="en" lang="en">Browse (EN)</a>
+      <a href="../../zh">中文首页</a>
+      <a href="../../browse" hreflang="en" lang="en">Browse (EN)</a>
       <a href="https://github.com/{GH_REPO}">GitHub</a>
     </div>
   </nav>
@@ -898,7 +901,7 @@ def emit_zh_word_index(entries: list, out_dir: Path) -> None:
     <ul id="zh-word-list" style="columns: 2; list-style: none; padding: 0;">
 """
     for e in sorted(entries, key=lambda x: x["word"].lower()):
-        html += f'      <li style="break-inside: avoid; padding: 4px 0;"><a href="{e["slug"]}.html" data-word="{esc(e["word"].lower())}">{esc(e["word"])}</a> <span style="color: var(--muted); font-size: 13px;">{esc(e["resp"])}</span></li>\n'
+        html += f'      <li style="break-inside: avoid; padding: 4px 0;"><a href="{e["slug"]}" data-word="{esc(e["word"].lower())}">{esc(e["word"])}</a> <span style="color: var(--muted); font-size: 13px;">{esc(e["resp"])}</span></li>\n'
     html += """    </ul>
     <script>
       const filter = document.getElementById('zh-filter');
@@ -922,17 +925,19 @@ def emit_zh_word_index(entries: list, out_dir: Path) -> None:
 # ---------------------------------------------------------------------------
 def emit_seo_sitemap(entries: list, by_slug: dict, out_path: Path) -> None:
     urls = []
+    # Clean URLs only (Vercel cleanUrls: *.html 308-redirects to the
+    # extensionless twin; sitemaps must never list redirecting URLs).
     urls.append((f"{SITE_URL}/collection/", "0.85", "weekly"))
     for c in COLLECTIONS:
-        urls.append((f"{SITE_URL}/collection/{c['slug']}.html", "0.8", "weekly"))
+        urls.append((f"{SITE_URL}/collection/{c['slug']}", "0.8", "weekly"))
     urls.append((f"{SITE_URL}/compare/", "0.85", "weekly"))
     for cp in COMPARES:
         a, b = cp["pair"]
         if a in by_slug and b in by_slug:
-            urls.append((f"{SITE_URL}/compare/{a}-vs-{b}.html", "0.8", "weekly"))
+            urls.append((f"{SITE_URL}/compare/{a}-vs-{b}", "0.8", "weekly"))
     urls.append((f"{SITE_URL}/zh/word/", "0.85", "weekly"))
     for e in entries:
-        urls.append((f"{SITE_URL}/zh/word/{e['slug']}.html", "0.7", "monthly"))
+        urls.append((f"{SITE_URL}/zh/word/{e['slug']}", "0.7", "monthly"))
     lines = ['<?xml version="1.0" encoding="UTF-8"?>',
              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for loc, prio, cf in urls:

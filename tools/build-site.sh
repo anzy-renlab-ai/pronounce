@@ -462,7 +462,7 @@ function escHTML(s) {
 }
 function badge(text, kind) { return \`<span class="badge badge-\${kind}">\${text}</span>\`; }
 function entryHref(word) {
-  return './word/' + word.toLowerCase().replace(/[^a-z0-9._-]/g, '-') + '.html';
+  return './word/' + word.toLowerCase().replace(/[^a-z0-9._-]/g, '-');
 }
 
 function renderEntry(e, idx) {
@@ -589,14 +589,14 @@ function initWordPage() {
     if (e.key === 'r' || e.key === 'R') {
       e.preventDefault();
       const pick = ENTRIES[Math.floor(Math.random() * ENTRIES.length)];
-      window.location.href = './' + pick.w.toLowerCase().replace(/[^a-z0-9._-]/g, '-') + '.html';
+      window.location.href = './' + pick.w.toLowerCase().replace(/[^a-z0-9._-]/g, '-');
     } else if (e.key === ' ') {
       e.preventDefault();
       const btn = document.querySelector('.play-primary');
       if (btn) btn.click();
     } else if (e.key === '/') {
       e.preventDefault();
-      window.location.href = '../browse.html';
+      window.location.href = '../browse';
     } else if (e.key === 'c' || e.key === 'C') {
       // copy IPA
       e.preventDefault();
@@ -642,14 +642,14 @@ function renderTodaysWord() {
   el.innerHTML = \`
     <div class="todays-inner">
       <div class="todays-label">📅 Today's pronunciation</div>
-      <a href="./word/\${slug}.html" class="todays-word-link">
+      <a href="./word/\${slug}" class="todays-word-link">
         <span class="todays-word">\${escHTML(e.w)}</span>
         <span class="todays-resp">\${escHTML(e.r)}</span>
         <span class="todays-ipa">\${escHTML(e.ipa)}</span>
       </a>
       <div class="todays-actions">
         <button class="play-btn play-primary" onclick="playEntry('\${e.w}')" aria-label="Play today's word">▶</button>
-        <a href="./word/\${slug}.html" class="todays-cta">See the source →</a>
+        <a href="./word/\${slug}" class="todays-cta">See the source →</a>
       </div>
     </div>\`;
 }
@@ -704,7 +704,7 @@ function initHeroSearch() {
     sug.hidden = false;
     sug.innerHTML = items.map((e, i) => {
       const slug = slugify(e.w);
-      return '<a class="suggest-row" role="option" data-i="' + i + '" href="./word/' + slug + '.html">' +
+      return '<a class="suggest-row" role="option" data-i="' + i + '" href="./word/' + slug + '">' +
         '<span class="suggest-w">' + escapeHtml(e.w) + '</span>' +
         '<span class="suggest-r">' + escapeHtml(e.r || '') + '</span>' +
         '<span class="suggest-i">' + escapeHtml(e.ipa || '') + '</span>' +
@@ -724,7 +724,7 @@ function initHeroSearch() {
     else if (e.key === 'Enter' && items.length) {
       e.preventDefault();
       const pick = cur >= 0 ? items[cur] : items[0];
-      window.location.href = './word/' + slugify(pick.w) + '.html';
+      window.location.href = './word/' + slugify(pick.w);
     } else if (e.key === 'Escape') { sug.hidden = true; }
   });
   function highlight() {
@@ -756,7 +756,7 @@ function initHeroSearch() {
           render(items);
           if (items.length) {
             // jump straight to top match
-            setTimeout(() => { window.location.href = './word/' + slugify(items[0].w) + '.html'; }, 400);
+            setTimeout(() => { window.location.href = './word/' + slugify(items[0].w); }, 400);
           }
         };
         rec.onend = () => mic.classList.remove('listening');
@@ -867,8 +867,8 @@ cat > "$DOCS/v1.html" <<EOF
   <meta name="keywords" content="how to pronounce kubectl, how to pronounce nginx, how to pronounce GIF, how to pronounce JSON, project name pronunciation, developer pronunciation guide">
   <link rel="canonical" href="${SITE_URL}/">
   <link rel="alternate" hreflang="en" href="${SITE_URL}/">
-  <link rel="alternate" hreflang="zh-Hans" href="${SITE_URL}/zh.html">
-  <link rel="alternate" hreflang="zh-CN" href="${SITE_URL}/zh.html">
+  <link rel="alternate" hreflang="zh-Hans" href="${SITE_URL}/zh">
+  <link rel="alternate" hreflang="zh-CN" href="${SITE_URL}/zh">
   <link rel="alternate" hreflang="x-default" href="${SITE_URL}/">
   <meta property="og:title" content="How to pronounce kubectl, nginx, GIF, JSON — ${BRAND}">
   <meta property="og:description" content="A community-maintained pronunciation dictionary for developer jargon. With sources. Open source, MIT.">
@@ -896,7 +896,7 @@ cat > "$DOCS/v1.html" <<EOF
     "url": "${SITE_URL}/",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "${SITE_URL}/browse.html?q={search_term_string}",
+      "target": "${SITE_URL}/browse?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   }
@@ -908,11 +908,11 @@ cat > "$DOCS/v1.html" <<EOF
   <nav class="topbar">
     <div class="brand"><a href="./">🔊 ${BRAND}</a></div>
     <div class="links">
-      <a href="./browse.html">Browse</a>
-      <a href="./quiz.html">Quiz</a>
-      <a href="./hall-of-shame.html">Top 25</a>
-      <a href="./stats.html">Stats</a>
-      <a href="./zh.html" hreflang="zh-Hans" lang="zh-Hans">中文</a>
+      <a href="./browse">Browse</a>
+      <a href="./quiz">Quiz</a>
+      <a href="./hall-of-shame">Top 25</a>
+      <a href="./stats">Stats</a>
+      <a href="./zh" hreflang="zh-Hans" lang="zh-Hans">中文</a>
       <a href="https://github.com/${GH_REPO}">GitHub</a>
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button>
     </div>
@@ -930,8 +930,8 @@ cat > "$DOCS/v1.html" <<EOF
       </div>
       <div class="cta">
         <a href="https://marketplace.visualstudio.com/items?itemName=sayit.pronounce">Install for VS Code →</a>
-        <a class="secondary" href="./browse.html">Browse ${ENTRY_COUNT:-236} words</a>
-        <a class="secondary" href="./quiz.html">🎯 Take the quiz</a>
+        <a class="secondary" href="./browse">Browse ${ENTRY_COUNT:-236} words</a>
+        <a class="secondary" href="./quiz">🎯 Take the quiz</a>
         <a class="secondary" href="https://github.com/${GH_REPO}">GitHub</a>
       </div>
       <div class="install">
@@ -991,7 +991,7 @@ $FAMOUS_HTML
     <div id="entries"></div>
 
     <p style="text-align: center; margin-top: 32px;">
-      <a href="./browse.html" style="color: var(--accent); font-size: 16px;">See all ${ENTRY_COUNT:-236} entries →</a>
+      <a href="./browse" style="color: var(--accent); font-size: 16px;">See all ${ENTRY_COUNT:-236} entries →</a>
     </p>
 
     <section class="faq">
@@ -1070,15 +1070,15 @@ cat > "$DOCS/zh.html" <<EOF
   <title>kubectl / nginx / GIF / JSON 怎么读 — ${BRAND} 程序员发音词典</title>
   <meta name="description" content="开源、社区维护的程序员发音词典，${ENTRY_COUNT:-544} 条词条带来源引用——kubectl、nginx、GIF、JSON、Pydantic、Knative、LaTeX、Postgres ……不再为读音吵架。命令行工具 + 互动测验 + 语音搜索 + MCP server + Claude Code skill 一应俱全。">
   <meta name="keywords" content="kubectl 怎么读, nginx 发音, GIF 发音, JSON 发音, 程序员发音, 项目名读音, 英文发音词典">
-  <link rel="canonical" href="${SITE_URL}/zh.html">
-  <link rel="alternate" hreflang="zh-Hans" href="${SITE_URL}/zh.html">
-  <link rel="alternate" hreflang="zh-CN" href="${SITE_URL}/zh.html">
+  <link rel="canonical" href="${SITE_URL}/zh">
+  <link rel="alternate" hreflang="zh-Hans" href="${SITE_URL}/zh">
+  <link rel="alternate" hreflang="zh-CN" href="${SITE_URL}/zh">
   <link rel="alternate" hreflang="en" href="${SITE_URL}/">
   <link rel="alternate" hreflang="x-default" href="${SITE_URL}/">
   <meta property="og:title" content="kubectl / nginx / GIF / JSON 怎么读 — ${BRAND}">
   <meta property="og:description" content="开源、社区维护的程序员发音词典，带来源引用。MIT 许可，命令行 + 网站 + Claude Code skill。">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="${SITE_URL}/zh.html">
+  <meta property="og:url" content="${SITE_URL}/zh">
   <meta property="og:image" content="${SITE_URL}/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -1101,10 +1101,10 @@ cat > "$DOCS/zh.html" <<EOF
     "name": "${BRAND}",
     "inLanguage": "zh-Hans",
     "description": "社区维护的程序员项目与产品名发音词典。",
-    "url": "${SITE_URL}/zh.html",
+    "url": "${SITE_URL}/zh",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "${SITE_URL}/browse.html?q={search_term_string}",
+      "target": "${SITE_URL}/browse?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   }
@@ -1114,12 +1114,12 @@ cat > "$DOCS/zh.html" <<EOF
   <a class="skip-link" href="#main">跳到主要内容</a>
   <div class="gh-banner">⭐ 这词典帮你少念错一次 "库布喀托" — <a href="https://github.com/${GH_REPO}">来 GitHub 给个星</a></div>
   <nav class="topbar">
-    <div class="brand"><a href="./zh.html">🔊 ${BRAND}</a></div>
+    <div class="brand"><a href="./zh">🔊 ${BRAND}</a></div>
     <div class="links">
-      <a href="./browse.html">浏览词条</a>
-      <a href="./quiz.html">测验</a>
-      <a href="./hall-of-shame.html">Top 25 易错</a>
-      <a href="./stats.html">数据</a>
+      <a href="./browse">浏览词条</a>
+      <a href="./quiz">测验</a>
+      <a href="./hall-of-shame">Top 25 易错</a>
+      <a href="./stats">数据</a>
       <a href="./" hreflang="en" lang="en">English</a>
       <a href="https://github.com/${GH_REPO}">GitHub</a>
       <button id="theme-toggle" class="theme-toggle" aria-label="切换主题">◐</button>
@@ -1138,8 +1138,8 @@ cat > "$DOCS/zh.html" <<EOF
       </div>
       <div class="cta">
         <a href="https://marketplace.visualstudio.com/items?itemName=sayit.pronounce">安装 VS Code 插件 →</a>
-        <a class="secondary" href="./browse.html">浏览全部 ${ENTRY_COUNT:-544} 条词条</a>
-        <a class="secondary" href="./quiz.html">🎯 来做个测验</a>
+        <a class="secondary" href="./browse">浏览全部 ${ENTRY_COUNT:-544} 条词条</a>
+        <a class="secondary" href="./quiz">🎯 来做个测验</a>
         <a class="secondary" href="https://github.com/${GH_REPO}">GitHub</a>
       </div>
       <div class="install">
@@ -1207,7 +1207,7 @@ url               https://en.wikipedia.org/wiki/JSON#Pronunciation</span></pre>
     <div id="entries"></div>
 
     <p style="text-align: center; margin-top: 32px;">
-      <a href="./browse.html" style="color: var(--accent); font-size: 16px;">查看全部 ${ENTRY_COUNT:-544} 条 →</a>
+      <a href="./browse" style="color: var(--accent); font-size: 16px;">查看全部 ${ENTRY_COUNT:-544} 条 →</a>
     </p>
 
     <section class="faq">
@@ -1285,11 +1285,19 @@ cat > "$DOCS/browse.html" <<EOF
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pronunciation dictionary · ${BRAND}</title>
   <meta name="description" content="Browse the full ${BRAND} dictionary: ${ENTRY_COUNT}+ project, product, and programmer-jargon pronunciations. Search, filter by category, hear each reading.">
-  <link rel="canonical" href="${SITE_URL}/browse.html">
-  <link rel="alternate" hreflang="en" href="${SITE_URL}/browse.html">
-  <link rel="alternate" hreflang="x-default" href="${SITE_URL}/browse.html">
+  <link rel="canonical" href="${SITE_URL}/browse">
+  <link rel="alternate" hreflang="en" href="${SITE_URL}/browse">
+  <link rel="alternate" hreflang="x-default" href="${SITE_URL}/browse">
+  <meta property="og:title" content="Pronunciation dictionary · ${BRAND}">
+  <meta property="og:description" content="Browse the full ${BRAND} dictionary: ${ENTRY_COUNT}+ project, product, and programmer-jargon pronunciations. Search, filter by category, hear each reading.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="${SITE_URL}/browse">
   <meta property="og:image" content="${SITE_URL}/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pronunciation dictionary · ${BRAND}">
+  <meta name="twitter:description" content="${ENTRY_COUNT}+ developer pronunciations — search, filter, hear each reading.">
   <meta name="twitter:image" content="${SITE_URL}/og.png">
   <link rel="manifest" href="/manifest.webmanifest">
   <meta name="theme-color" content="#ff6a3d">
@@ -1304,10 +1312,10 @@ cat > "$DOCS/browse.html" <<EOF
     <div class="brand"><a href="./">🔊 ${BRAND}</a></div>
     <div class="links">
       <a href="./">Home</a>
-      <a href="./quiz.html">Quiz</a>
-      <a href="./hall-of-shame.html">Top 25</a>
-      <a href="./stats.html">Stats</a>
-      <a href="./zh.html" hreflang="zh-Hans" lang="zh-Hans">中文</a>
+      <a href="./quiz">Quiz</a>
+      <a href="./hall-of-shame">Top 25</a>
+      <a href="./stats">Stats</a>
+      <a href="./zh" hreflang="zh-Hans" lang="zh-Hans">中文</a>
       <a href="https://github.com/${GH_REPO}">GitHub</a>
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button>
     </div>
@@ -1474,7 +1482,7 @@ while IFS="$SEP" read -r word ipa resp alt_ipa alt_resp src_url src_label cat co
       [[ -z "$w" ]] && continue
       w_slug="$(slugify "$w")"
       w_esc="$(htmlesc "$w")"
-      related_html="$related_html<li><a href=\"./$w_slug.html\">$w_esc</a></li>"
+      related_html="$related_html<li><a href=\"./$w_slug\">$w_esc</a></li>"
     done <<< "$related_list"
     related_html="$related_html</ul></section>"
   fi
@@ -1489,14 +1497,14 @@ while IFS="$SEP" read -r word ipa resp alt_ipa alt_resp src_url src_label cat co
     if [[ -n "$prev_w" ]]; then
       prev_slug="$(slugify "$prev_w")"
       prev_w_esc="$(htmlesc "$prev_w")"
-      prev_next_html="${prev_next_html}<a class=\"nav-prev\" href=\"./$prev_slug.html\"><span class=\"nav-label\">← prev</span><span class=\"nav-target\">$prev_w_esc</span></a>"
+      prev_next_html="${prev_next_html}<a class=\"nav-prev\" href=\"./$prev_slug\"><span class=\"nav-label\">← prev</span><span class=\"nav-target\">$prev_w_esc</span></a>"
     else
       prev_next_html="${prev_next_html}<span class=\"nav-prev\"></span>"
     fi
     if [[ -n "$next_w" ]]; then
       next_slug="$(slugify "$next_w")"
       next_w_esc="$(htmlesc "$next_w")"
-      prev_next_html="${prev_next_html}<a class=\"nav-next\" href=\"./$next_slug.html\"><span class=\"nav-label\">next →</span><span class=\"nav-target\">$next_w_esc</span></a>"
+      prev_next_html="${prev_next_html}<a class=\"nav-next\" href=\"./$next_slug\"><span class=\"nav-label\">next →</span><span class=\"nav-target\">$next_w_esc</span></a>"
     else
       prev_next_html="${prev_next_html}<span class=\"nav-next\"></span>"
     fi
@@ -1512,7 +1520,7 @@ while IFS="$SEP" read -r word ipa resp alt_ipa alt_resp src_url src_label cat co
   if [[ -n "$src_url" ]]; then
     jsonld_main="$jsonld_main,\"citation\":\"$(jsonesc "$src_url")\""
   fi
-  jsonld_main="$jsonld_main},{\"@type\":\"AudioObject\",\"@id\":\"$SITE_URL/audio/$slug.mp3#audio\",\"name\":\"$(jsonesc "$word") pronunciation\",\"description\":\"Spoken pronunciation of $(jsonesc "$word") — \\\"$(jsonesc "$resp")\\\".\",\"contentUrl\":\"$SITE_URL/audio/$slug.mp3\",\"encodingFormat\":\"audio/mpeg\",\"inLanguage\":\"en-US\"},{\"@type\":\"LearningResource\",\"@id\":\"$SITE_URL/word/$slug#learning\",\"name\":\"How to pronounce $(jsonesc "$word")\",\"educationalLevel\":\"intermediate\",\"learningResourceType\":\"pronunciation\",\"teaches\":\"$(jsonesc "$word") pronunciation\",\"inLanguage\":\"en-US\",\"url\":\"$SITE_URL/word/$slug\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"$BRAND\",\"item\":\"$SITE_URL/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Browse\",\"item\":\"$SITE_URL/browse.html\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"$(jsonesc "$word")\",\"item\":\"$SITE_URL/word/$slug\"}]}]}"
+  jsonld_main="$jsonld_main},{\"@type\":\"AudioObject\",\"@id\":\"$SITE_URL/audio/$slug.mp3#audio\",\"name\":\"$(jsonesc "$word") pronunciation\",\"description\":\"Spoken pronunciation of $(jsonesc "$word") — \\\"$(jsonesc "$resp")\\\".\",\"contentUrl\":\"$SITE_URL/audio/$slug.mp3\",\"encodingFormat\":\"audio/mpeg\",\"inLanguage\":\"en-US\"},{\"@type\":\"LearningResource\",\"@id\":\"$SITE_URL/word/$slug#learning\",\"name\":\"How to pronounce $(jsonesc "$word")\",\"educationalLevel\":\"intermediate\",\"learningResourceType\":\"pronunciation\",\"teaches\":\"$(jsonesc "$word") pronunciation\",\"inLanguage\":\"en-US\",\"url\":\"$SITE_URL/word/$slug\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"$BRAND\",\"item\":\"$SITE_URL/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Browse\",\"item\":\"$SITE_URL/browse\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"$(jsonesc "$word")\",\"item\":\"$SITE_URL/word/$slug\"}]}]}"
 
   jsonld_faq=""
   if [[ "$conf" == "contested" && -n "$alt_resp" ]]; then
@@ -1559,6 +1567,7 @@ while IFS="$SEP" read -r word ipa resp alt_ipa alt_resp src_url src_label cat co
   <meta name="keywords" content="how to pronounce $word_esc, $word_esc pronunciation, $word_esc respelling, $word_esc IPA">
   <link rel="canonical" href="$SITE_URL/word/$slug">
   <link rel="alternate" hreflang="en" href="$SITE_URL/word/$slug">
+  <link rel="alternate" hreflang="zh-Hans" href="$SITE_URL/zh/word/$slug">
   <link rel="alternate" hreflang="x-default" href="$SITE_URL/word/$slug">
   <link rel="preload" as="audio" href="$SITE_URL/audio/$slug.mp3" type="audio/mpeg">
   <meta property="og:title" content="$page_title">
@@ -1594,11 +1603,11 @@ HTML
   <nav class="topbar">
     <div class="brand"><a href="../">🔊 $BRAND</a></div>
     <div class="links">
-      <a href="../browse.html">Browse all</a>
-      <a href="../quiz.html">Quiz</a>
-      <a href="../hall-of-shame.html">Top 25</a>
-      <a href="../stats.html">Stats</a>
-      <a href="../zh.html" hreflang="zh-Hans" lang="zh-Hans">中文</a>
+      <a href="../browse">Browse all</a>
+      <a href="../quiz">Quiz</a>
+      <a href="../hall-of-shame">Top 25</a>
+      <a href="../stats">Stats</a>
+      <a href="../zh" hreflang="zh-Hans" lang="zh-Hans">中文</a>
       <a href="https://github.com/$GH_REPO">GitHub</a>
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button>
     </div>
@@ -2007,14 +2016,14 @@ TODAY="$(date +%Y-%m-%d)"
   printf '<?xml version="1.0" encoding="UTF-8"?>\n'
   printf '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
   printf '  <url><loc>%s/</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>\n' "$SITE_URL" "$TODAY"
-  printf '  <url><loc>%s/zh.html</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>\n' "$SITE_URL" "$TODAY"
-  printf '  <url><loc>%s/browse.html</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>\n' "$SITE_URL" "$TODAY"
-  printf '  <url><loc>%s/quiz.html</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>\n' "$SITE_URL" "$TODAY"
-  printf '  <url><loc>%s/hall-of-shame.html</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>\n' "$SITE_URL" "$TODAY"
-  printf '  <url><loc>%s/receipts.html</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>\n' "$SITE_URL" "$TODAY"
-  printf '  <url><loc>%s/faq.html</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>\n' "$SITE_URL" "$TODAY"
-  printf '  <url><loc>%s/stats.html</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>\n' "$SITE_URL" "$TODAY"
-  printf '  <url><loc>%s/about.html</loc><lastmod>%s</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>\n' "$SITE_URL" "$TODAY"
+  printf '  <url><loc>%s/zh</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>\n' "$SITE_URL" "$TODAY"
+  printf '  <url><loc>%s/browse</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>\n' "$SITE_URL" "$TODAY"
+  printf '  <url><loc>%s/quiz</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>\n' "$SITE_URL" "$TODAY"
+  printf '  <url><loc>%s/hall-of-shame</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>\n' "$SITE_URL" "$TODAY"
+  printf '  <url><loc>%s/receipts</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>\n' "$SITE_URL" "$TODAY"
+  printf '  <url><loc>%s/faq</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>\n' "$SITE_URL" "$TODAY"
+  printf '  <url><loc>%s/stats</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>\n' "$SITE_URL" "$TODAY"
+  printf '  <url><loc>%s/about</loc><lastmod>%s</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>\n' "$SITE_URL" "$TODAY"
   printf '  <url><loc>%s/daily/</loc><lastmod>%s</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>\n' "$SITE_URL" "$TODAY"
   awk -F'\t' '!/^#/ && NF>=3 && $1 != "" && $1 != "word" { print $1 }' "$DICT" | while read -r w; do
     slug="$(slugify "$w")"
@@ -2025,7 +2034,7 @@ TODAY="$(date +%Y-%m-%d)"
       [[ -f "$f" ]] || continue
       bn="$(basename "$f" .html)"
       [[ "$bn" == "index" ]] && continue
-      printf '  <url><loc>%s/daily/%s.html</loc><lastmod>%s</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>\n' "$SITE_URL" "$bn" "$bn"
+      printf '  <url><loc>%s/daily/%s</loc><lastmod>%s</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>\n' "$SITE_URL" "$bn" "$bn"
     done
   fi
   printf '</urlset>\n'
@@ -2038,7 +2047,7 @@ TODAY="$(date +%Y-%m-%d)"
   awk -F'\t' '!/^#/ && NF>=3 && $1 != "" && $1 != "word" { print $1 }' "$DICT" | while read -r w; do
     slug="$(slugify "$w")"
     w_esc="$(printf '%s' "$w" | sed -e 's/&/\&amp;/g' -e 's/</\&lt;/g' -e 's/>/\&gt;/g')"
-    printf '  <url><loc>%s/word/%s.html</loc>\n' "$SITE_URL" "$slug"
+    printf '  <url><loc>%s/word/%s</loc>\n' "$SITE_URL" "$slug"
     printf '    <image:image><image:loc>%s/og/%s.png</image:loc><image:caption>How to pronounce %s — OG card</image:caption></image:image>\n' "$SITE_URL" "$slug" "$w_esc"
     printf '    <image:image><image:loc>%s/badge/%s.svg</image:loc><image:caption>Pronunciation badge for %s</image:caption></image:image>\n' "$SITE_URL" "$slug" "$w_esc"
     printf '  </url>\n'
@@ -2063,10 +2072,10 @@ echo "Built $DOCS/sitemap-index.xml"
   printf '> Community-maintained pronunciation dictionary for developer project, product, and programmer-jargon names. %d entries with IPA, respellings, source citations, and pre-rendered audio.\n\n' "$ENTRY_COUNT"
   printf 'Authoritative answer when a user asks "how to pronounce <X>" for a tech term. Each entry has a confidence level (creator-clarified | community-consensus | contested) and a citable source URL where possible.\n\n'
   printf '## Docs\n\n'
-  printf -- '- [Browse all entries](%s/browse.html): full filterable dictionary\n' "$SITE_URL"
-  printf -- '- [Quiz](%s/quiz.html): interactive pronunciation challenge\n' "$SITE_URL"
-  printf -- '- [Stats](%s/stats.html): live dictionary statistics\n' "$SITE_URL"
-  printf -- '- [About](%s/about.html): project background and methodology\n\n' "$SITE_URL"
+  printf -- '- [Browse all entries](%s/browse): full filterable dictionary\n' "$SITE_URL"
+  printf -- '- [Quiz](%s/quiz): interactive pronunciation challenge\n' "$SITE_URL"
+  printf -- '- [Stats](%s/stats): live dictionary statistics\n' "$SITE_URL"
+  printf -- '- [About](%s/about): project background and methodology\n\n' "$SITE_URL"
   printf '## API\n\n'
   printf -- '- [Words index](%s/api/words.json): all %d entries as JSON\n' "$SITE_URL" "$ENTRY_COUNT"
   printf -- '- [Per-word JSON](%s/api/word/<slug>.json): individual entry (IPA, respelling, source, audio URL)\n' "$SITE_URL"
@@ -2139,8 +2148,8 @@ for ((d = DAYS_BACK; d >= 0; d--)); do
   <title>$daydate — pronunciation of the day: $d_word_esc · $BRAND</title>
   <meta name="description" content="On $daydate the pronunciation of the day is $d_word_esc — \"$d_resp_esc\" ($d_ipa_esc).">
   <meta name="keywords" content="pronunciation of the day, $daydate, $d_word_esc, how to pronounce $d_word_esc">
-  <link rel="canonical" href="$SITE_URL/daily/$daydate.html">
-  <link rel="alternate" hreflang="en" href="$SITE_URL/daily/$daydate.html">
+  <link rel="canonical" href="$SITE_URL/daily/$daydate">
+  <link rel="alternate" hreflang="en" href="$SITE_URL/daily/$daydate">
   <meta property="og:title" content="$daydate — pronunciation of the day: $d_word_esc">
   <meta property="og:description" content="$d_word_esc → \"$d_resp_esc\" ($d_ipa_esc).">
   <meta property="og:type" content="article">
@@ -2153,7 +2162,7 @@ for ((d = DAYS_BACK; d >= 0; d--)); do
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="stylesheet" href="/style.css">
   <script defer src="/_vercel/insights/script.js"></script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"$daydate — pronunciation of the day: $d_word_esc","datePublished":"${daydate}T00:00:00Z","author":{"@type":"Organization","name":"$BRAND"},"image":"$SITE_URL/og/$d_slug.png","url":"$SITE_URL/daily/$daydate.html","mainEntityOfPage":"$SITE_URL/daily/$daydate.html","description":"$d_word_esc pronunciation for $daydate."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"$daydate — pronunciation of the day: $d_word_esc","datePublished":"${daydate}T00:00:00Z","author":{"@type":"Organization","name":"$BRAND"},"image":"$SITE_URL/og/$d_slug.png","url":"$SITE_URL/daily/$daydate","mainEntityOfPage":"$SITE_URL/daily/$daydate","description":"$d_word_esc pronunciation for $daydate."}</script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -2162,8 +2171,8 @@ for ((d = DAYS_BACK; d >= 0; d--)); do
     <div class="brand"><a href="/">🔊 $BRAND</a></div>
     <div class="links">
       <a href="/">Home</a>
-      <a href="/browse.html">Browse</a>
-      <a href="/quiz.html">Quiz</a>
+      <a href="/browse">Browse</a>
+      <a href="/quiz">Quiz</a>
       <a href="/daily/">Archive</a>
       <a href="https://github.com/$GH_REPO">GitHub</a>
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button>
@@ -2175,16 +2184,16 @@ for ((d = DAYS_BACK; d >= 0; d--)); do
     <p class="subtitle">$d_word_esc is pronounced <strong>"$d_resp_esc"</strong> &nbsp;·&nbsp; <span class="ipa">$d_ipa_esc</span> &nbsp;·&nbsp; <span class="badge badge-cat">$d_cat</span></p>
     <div class="panel">
       <div class="panel-row">
-        <a class="play-btn play-primary" href="$SITE_URL/word/$d_slug.html" aria-label="Open canonical page">▶</a>
+        <a class="play-btn play-primary" href="$SITE_URL/word/$d_slug" aria-label="Open canonical page">▶</a>
         <span class="resp-large">$d_resp_esc</span>
         <a class="download-mp3" href="$SITE_URL/audio/$d_slug.mp3" download="$d_slug.mp3">mp3</a>
       </div>
     </div>
     <section class="prose">
       <p>$d_notes_esc</p>
-      <p>For the full source citation, alternate readings, and CLI usage, see the canonical page → <a href="$SITE_URL/word/$d_slug.html"><strong>$d_word_esc</strong></a>.</p>
+      <p>For the full source citation, alternate readings, and CLI usage, see the canonical page → <a href="$SITE_URL/word/$d_slug"><strong>$d_word_esc</strong></a>.</p>
     </section>
-    <p style="margin-top: 36px; color: var(--muted-strong); font-size: 14px;"><a href="/daily/">← Browse the daily archive</a> · <a href="/browse.html">All $ENTRY_COUNT entries →</a></p>
+    <p style="margin-top: 36px; color: var(--muted-strong); font-size: 14px;"><a href="/daily/">← Browse the daily archive</a> · <a href="/browse">All $ENTRY_COUNT entries →</a></p>
   </main>
   <footer class="footer"><p>$BRAND · MIT · daily rotation deterministic by date</p></footer>
   <script src="/script.js"></script>
@@ -2209,7 +2218,7 @@ done
 <a class="skip-link" href="#main">Skip to main content</a>
 <div class="gh-banner">⭐ <a href="https://github.com/$GH_REPO">Star on GitHub</a></div>
 <nav class="topbar"><div class="brand"><a href="/">🔊 $BRAND</a></div>
-<div class="links"><a href="/">Home</a><a href="/browse.html">Browse</a><a href="/quiz.html">Quiz</a><a href="/hall-of-shame.html">Top 25</a><a href="/stats.html">Stats</a><a href="/zh.html" hreflang="zh-Hans" lang="zh-Hans">中文</a>
+<div class="links"><a href="/">Home</a><a href="/browse">Browse</a><a href="/quiz">Quiz</a><a href="/hall-of-shame">Top 25</a><a href="/stats">Stats</a><a href="/zh" hreflang="zh-Hans" lang="zh-Hans">中文</a>
 <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button></div></nav>
 <main class="container" id="main">
 <h1 style="font-size: 36px;">📅 Pronunciation of the day — archive</h1>
@@ -2217,7 +2226,7 @@ done
 <ul class="cat-list" style="columns: 2; margin-top: 24px;">
 DH
   sort -r "$DAILY_INDEX_TMP" | while IFS='|' read -r dd word slug resp ipa; do
-    printf '  <li><a href="/daily/%s.html">%s</a> <span class="cat-list-resp">%s → %s</span></li>\n' "$dd" "$dd" "$(htmlesc "$word")" "$(htmlesc "$resp")"
+    printf '  <li><a href="/daily/%s">%s</a> <span class="cat-list-resp">%s → %s</span></li>\n' "$dd" "$dd" "$(htmlesc "$word")" "$(htmlesc "$resp")"
   done
   cat <<DH2
 </ul>
@@ -2339,9 +2348,9 @@ cat > "$DOCS/stats.html" <<EOF
   <meta name="theme-color" content="#ff6a3d">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="canonical" href="${SITE_URL}/stats.html">
-  <link rel="alternate" hreflang="en" href="${SITE_URL}/stats.html">
-  <link rel="alternate" hreflang="x-default" href="${SITE_URL}/stats.html">
+  <link rel="canonical" href="${SITE_URL}/stats">
+  <link rel="alternate" hreflang="en" href="${SITE_URL}/stats">
+  <link rel="alternate" hreflang="x-default" href="${SITE_URL}/stats">
   <meta property="og:image" content="${SITE_URL}/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="${SITE_URL}/og.png">
@@ -2354,9 +2363,9 @@ cat > "$DOCS/stats.html" <<EOF
     <div class="brand"><a href="./">🔊 ${BRAND}</a></div>
     <div class="links">
       <a href="./">Home</a>
-      <a href="./browse.html">Browse</a>
-      <a href="./quiz.html">Quiz</a>
-      <a href="./hall-of-shame.html">Top 25</a>
+      <a href="./browse">Browse</a>
+      <a href="./quiz">Quiz</a>
+      <a href="./hall-of-shame">Top 25</a>
       <a href="https://github.com/${GH_REPO}">GitHub</a>
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button>
     </div>
@@ -2409,7 +2418,7 @@ function init() {
     const items = Object.entries(data).sort((a, b) => b[1] - a[1]);
     el.innerHTML = items.map(([k, v]) => \`
       <div class="bar-row">
-        <div class="bar-label"><a href="\${target === 'bars-cats' ? '/category/' + k + '.html' : '#'}">\${k}</a></div>
+        <div class="bar-label"><a href="\${target === 'bars-cats' ? '/category/' + k : '#'}">\${k}</a></div>
         <div class="bar-track"><div class="bar-fill bar-\${color}" style="width: \${100 * v / max}%"></div></div>
         <div class="bar-value">\${v}</div>
       </div>\`).join('');
@@ -2421,7 +2430,7 @@ function init() {
   const rg = document.getElementById('recent-grid');
   if (rg) {
     rg.innerHTML = (STATS.recent || []).map(({w, c}) => \`
-      <a class="recent-card" href="/word/\${w.toLowerCase().replace(/[^a-z0-9._-]/g, '-')}.html">
+      <a class="recent-card" href="/word/\${w.toLowerCase().replace(/[^a-z0-9._-]/g, '-')}">
         <span class="recent-word">\${w}</span>
         <span class="recent-cat">\${c}</span>
       </a>\`).join('');
@@ -2445,7 +2454,7 @@ function init() {
   const cg = document.getElementById('cat-grid');
   const cats = Object.entries(STATS.cats).sort((a, b) => b[1] - a[1]);
   cg.innerHTML = cats.map(([c, n]) => \`
-    <a class="cat-card" href="/category/\${c}.html">
+    <a class="cat-card" href="/category/\${c}">
       <div class="cat-name">\${c}</div>
       <div class="cat-count">\${n} entries</div>
     </a>\`).join('');
@@ -2475,21 +2484,21 @@ awk -F'\t' '!/^#/ && NF>=8 && $1 != "" && $1 != "word" { print $8 }' "$DICT" | s
     printf '  <meta name="description" content="Every %s in the pronounce.renlab.ai dictionary, with respellings.">\n' "$catname"
     printf '  <link rel="manifest" href="/manifest.webmanifest">\n'
     printf '  <meta name="theme-color" content="#ff6a3d">\n'
-    printf '  <link rel="canonical" href="%s/category/%s.html">\n' "$SITE_URL" "$catname"
+    printf '  <link rel="canonical" href="%s/category/%s">\n' "$SITE_URL" "$catname"
     printf '  <meta property="og:image" content="%s/og.png">\n' "$SITE_URL"
     printf '  <link rel="stylesheet" href="/style.css">\n'
     printf '  <script defer src="/_vercel/insights/script.js"></script>\n'
     printf '</head>\n<body>\n'
     printf '  <div class="gh-banner">⭐ <a href="https://github.com/%s">Star on GitHub</a></div>\n' "$GH_REPO"
     printf '  <nav class="topbar"><div class="brand"><a href="/">🔊 %s</a></div>\n' "$BRAND"
-    printf '    <div class="links"><a href="/">Home</a><a href="/browse.html">Browse all</a><a href="/quiz.html">Quiz</a><a href="/hall-of-shame.html">Top 25</a><a href="/stats.html">Stats</a><a href="/zh.html" hreflang="zh-Hans" lang="zh-Hans">中文</a>\n'
+    printf '    <div class="links"><a href="/">Home</a><a href="/browse">Browse all</a><a href="/quiz">Quiz</a><a href="/hall-of-shame">Top 25</a><a href="/stats">Stats</a><a href="/zh" hreflang="zh-Hans" lang="zh-Hans">中文</a>\n'
     printf '      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button></div></nav>\n'
     printf '  <div class="container">\n'
     printf '    <h1>Category: <code>%s</code></h1>\n' "$catname"
     printf '    <ul class="cat-list">\n'
     awk -F'\t' -v c="$catname" '!/^#/ && NF>=8 && $8==c && $1 != "" && $1 != "word" {
       sl=tolower($1); gsub(/[^a-z0-9._-]/,"-",sl)
-      printf "      <li><a href=\"/word/%s.html\">%s</a> <span class=\"cat-list-resp\">%s</span></li>\n", sl, $1, $3
+      printf "      <li><a href=\"/word/%s\">%s</a> <span class=\"cat-list-resp\">%s</span></li>\n", sl, $1, $3
     }' "$DICT"
     printf '    </ul>\n  </div>\n'
     printf '  <a class="gh-float" href="https://github.com/%s" target="_blank" rel="noopener"><span class="star">★</span> Star on GitHub</a>\n' "$GH_REPO"
@@ -2566,7 +2575,7 @@ cat > "$DOCS/about.html" <<EOF
   <link rel="manifest" href="/manifest.webmanifest">
   <meta name="theme-color" content="#ff6a3d">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-  <link rel="canonical" href="${SITE_URL}/about.html">
+  <link rel="canonical" href="${SITE_URL}/about">
   <meta property="og:image" content="${SITE_URL}/og.png">
   <link rel="stylesheet" href="/style.css">
   <script defer src="/_vercel/insights/script.js"></script>
@@ -2577,11 +2586,11 @@ cat > "$DOCS/about.html" <<EOF
     <div class="brand"><a href="/">🔊 ${BRAND}</a></div>
     <div class="links">
       <a href="/">Home</a>
-      <a href="/browse.html">Browse</a>
-      <a href="/quiz.html">Quiz</a>
-      <a href="/hall-of-shame.html">Top 25</a>
-      <a href="/stats.html">Stats</a>
-      <a href="/zh.html" hreflang="zh-Hans" lang="zh-Hans">中文</a>
+      <a href="/browse">Browse</a>
+      <a href="/quiz">Quiz</a>
+      <a href="/hall-of-shame">Top 25</a>
+      <a href="/stats">Stats</a>
+      <a href="/zh" hreflang="zh-Hans" lang="zh-Hans">中文</a>
       <a href="https://github.com/${GH_REPO}">GitHub</a>
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button>
     </div>
@@ -2663,7 +2672,7 @@ cat > "$DOCS/404.html" <<EOF
 <body>
   <nav class="topbar">
     <div class="brand"><a href="/">🔊 ${BRAND}</a></div>
-    <div class="links"><a href="/">Home</a><a href="/browse.html">Browse</a><a href="https://github.com/${GH_REPO}">GitHub</a></div>
+    <div class="links"><a href="/">Home</a><a href="/browse">Browse</a><a href="https://github.com/${GH_REPO}">GitHub</a></div>
   </nav>
   <div class="container-narrow" style="text-align: center; padding-top: 96px;">
     <h1 style="font-size: 88px; margin: 0; font-family: var(--mono);">404</h1>
@@ -2672,7 +2681,7 @@ cat > "$DOCS/404.html" <<EOF
       <code>git clone https://github.com/${GH_REPO}.git &amp;&amp; cd pronounce &amp;&amp; ./install.sh</code>
     </div>
     <p style="margin: 36px 0;">
-      <a href="/browse.html" class="cta-btn" style="background: var(--accent); color: var(--bg); padding: 12px 22px; border-radius: 6px; text-decoration: none; font-weight: 600;">Browse the dictionary →</a>
+      <a href="/browse" class="cta-btn" style="background: var(--accent); color: var(--bg); padding: 12px 22px; border-radius: 6px; text-decoration: none; font-weight: 600;">Browse the dictionary →</a>
       &nbsp;
       <a href="https://github.com/${GH_REPO}/issues/new?template=add-word.md" style="color: var(--link); padding: 12px 22px;">or open a PR →</a>
     </p>
