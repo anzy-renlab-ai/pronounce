@@ -7,7 +7,8 @@ pronunciation questions through the `say-it` CLI / `pronounce` MCP server.
 |-------|------|---------|
 | **Claude Code** | [`skills/pronounce-word/SKILL.md`](../skills/pronounce-word/SKILL.md) | `./install.sh` puts it in `~/.claude/skills/pronounce-word/` automatically |
 | **Claude Desktop / Continue / Zed / Cline** (MCP) | [`mcp-server/`](../mcp-server/) | `pip install` + add `mcpServers` entry in client config |
-| **Codex CLI** | [`integrations/codex/AGENTS.md`](codex/AGENTS.md) | Drop into `~/.codex/AGENTS.md` or your project's `AGENTS.md` |
+| **Codex CLI** | [`integrations/codex/`](codex/) | `codex plugin marketplace add anzy-renlab-ai/pronounce` (plugin = skill + MCP server), or copy the skill to `~/.agents/skills/` |
+| **Kiro (IDE + CLI)** | [`integrations/kiro/`](kiro/) | "Add to Kiro" one-click button, or copy the skill to `~/.kiro/skills/` |
 | **Cursor** | [`integrations/cursor/.cursorrules`](cursor/.cursorrules) | Drop into your project root as `.cursorrules` |
 | **Continue.dev** | [`integrations/continue/config.snippet.json`](continue/config.snippet.json) | Merge `customCommands` array into `~/.continue/config.json` — `/pronounce <word>` slash command |
 | **Aider** | run `say-it` directly via Aider's `/run` command, e.g. `/run say-it kubectl` | none |

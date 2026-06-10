@@ -47,6 +47,7 @@ console.log(`built dictionary: ${COUNT} entries → ${outPath}`);
 const PROSE = /\b\d{3,4}\+?((?:[ \-]sourced)?[ \-]entr(?:y|ies))/gi;
 const BADGE = /\b\d{3,4}(?:%2B)?%20entries/gi;
 const CJK = /\d{3,4}(?=\s*条)/g; // Chinese: "1212 条" / "1212 条词条"
+const NAMES = /\b\d{3,4}\+?( developer[ \-]jargon names)/gi; // README hero tagline
 const docFiles = [
   ['integrations', 'vscode', 'package.json'],
   ['integrations', 'vscode', 'package.nls.json'],
@@ -55,6 +56,7 @@ const docFiles = [
   ['integrations', 'vscode', 'media', 'walkthrough-hover.md'],
   ['integrations', 'vscode', 'media', 'walkthrough-search.md'],
   ['README.md'],
+  ['docs', 'index.html'],
 ];
 for (const parts of docFiles) {
   const p = join(repoRoot, ...parts);
@@ -63,7 +65,8 @@ for (const parts of docFiles) {
   const next = text
     .replace(PROSE, `${COUNT}$1`)
     .replace(BADGE, `${COUNT}%20entries`)
-    .replace(CJK, `${COUNT}`);
+    .replace(CJK, `${COUNT}`)
+    .replace(NAMES, `${COUNT}+$1`);
   if (next !== text) {
     writeFileSync(p, next);
     console.log(`synced count → ${parts.join('/')}`);

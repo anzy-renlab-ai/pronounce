@@ -3,7 +3,7 @@
   "displayName": "%displayName%",
   "description": "%description%",
   "l10n": "./l10n",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "publisher": "sayit",
   "license": "MIT",
   "icon": "icon.png",
@@ -13,6 +13,18 @@
     "directory": "integrations/vscode"
   },
   "homepage": "https://pronounce.renlab.ai/",
+  "badges": [
+    {
+      "url": "https://img.shields.io/github/stars/anzy-renlab-ai/pronounce?style=flat&logo=github",
+      "href": "https://github.com/anzy-renlab-ai/pronounce",
+      "description": "Star the dictionary on GitHub"
+    },
+    {
+      "url": "https://img.shields.io/badge/dictionary-1654%20entries-8fd694",
+      "href": "https://pronounce.renlab.ai/browse.html",
+      "description": "Browse all sourced entries"
+    }
+  ],
   "bugs": {
     "url": "https://github.com/anzy-renlab-ai/pronounce/issues"
   },

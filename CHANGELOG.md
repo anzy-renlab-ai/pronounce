@@ -1,5 +1,25 @@
 # Changelog
 
+## v2.11.0 — 2026-06-10
+
+A distribution + discoverability release: new install channels, two new AI-agent integrations, and a site-wide SEO overhaul.
+
+### Added
+- **Homebrew tap** — `brew install anzy-renlab-ai/tap/say-it` (formula in [`anzy-renlab-ai/homebrew-tap`](https://github.com/anzy-renlab-ai/homebrew-tap); installs CLI + dictionary + bash/zsh completions). Kills the git-clone install step.
+- **Codex CLI integration** ([`integrations/codex/`](integrations/codex/)) — the repo now doubles as a Codex plugin (`.codex-plugin/plugin.json` + `.mcp.json`): `codex plugin marketplace add anzy-renlab-ai/pronounce` installs the skill and the MCP server together. The `pronounce-word` SKILL.md is Agent Skills-standard and drops into `~/.agents/skills/` as-is.
+- **Kiro integration** ([`integrations/kiro/`](integrations/kiro/)) — one-click "Add to Kiro" button, `mcp.json` snippet, drop-in skill for `~/.kiro/skills/`, and a self-contained custom agent (`agent.json`).
+- `install.sh` now also installs the skill into `~/.agents/skills/` (Codex) and `~/.kiro/skills/` (Kiro) when those dirs exist.
+- **Official MCP registry pipeline** — `mcp-server/server.json` + a workflow that builds the Docker image to GHCR and publishes to registry.modelcontextprotocol.io via GitHub OIDC (`.github/workflows/mcp-registry.yml`). Plus `glama.json` (maintainer claim) and a `source_repo` field + server instructions in MCP tool responses.
+- **VS Code extension 0.6.2** — marketplace listing now renders GitHub-stars + dictionary badges (`badges` in package.json); README fixes: `pronounce.rate` default corrected to 130, real `cursor --install-extension` line, removed the incorrect Zed-VSIX claim (Zed users → MCP server).
+- CLI `--help` and the `install.sh` epilogue now link the repo (one tasteful star ask).
+
+### Fixed
+- **SEO: clean URLs everywhere.** Vercel `cleanUrls` 308-redirects every `*.html` URL, yet canonicals, og:url, hreflang, JSON-LD, feeds, and all ~1,677 sitemap-seo entries pointed at `.html` variants. Both generators (`tools/build-site.sh`, `tools/build-seo.py`) and all static pages now emit extensionless URLs only.
+- **Reciprocal hreflang** — EN word pages now declare `zh-Hans` alternates back to `/zh/word/<slug>` (Google ignores non-reciprocal hreflang; the 1,654 zh pages were unclustered).
+- `browse.html` was missing og:title/description/url/type — full social card restored.
+- Homepage SPA now has a `<noscript>` fallback (links + blurb) for non-JS crawlers.
+- Entry-count drift: README hero said "1200+", `docs/index.html` meta said "1640" — both now auto-synced by `build-dict.mjs` (1,654 today); GitHub repo description updated from "544+".
+
 ## v2.10.1 — 2026-06-07
 
 ### Added

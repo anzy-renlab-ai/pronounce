@@ -1,6 +1,6 @@
 <h1 align="center">🔊 say-it · Pronounce</h1>
 
-<p align="center"><strong>Stop saying "kub-cuttle". One Bash command pronounces 1200+ developer jargon names — with cited sources.</strong></p>
+<p align="center"><strong>Stop saying "kub-cuttle". One Bash command pronounces 1654+ developer jargon names — with cited sources.</strong></p>
 
 <p align="center">
 <a href="https://github.com/anzy-renlab-ai/pronounce/stargazers"><img src="https://img.shields.io/github/stars/anzy-renlab-ai/pronounce?style=social" alt="GitHub stars"></a>
@@ -94,11 +94,16 @@ Every dictionary entry includes a `source_url`. Run `say-it --why <word>` to see
 
 ## Install (macOS)
 
-The "Try it in 30 seconds" block above has the full install. `./install.sh` drops:
+```bash
+brew install anzy-renlab-ai/tap/say-it   # Homebrew
+```
+
+Or the "Try it in 30 seconds" block above. `./install.sh` drops:
 
 - the CLI at `~/.local/bin/say-it`,
 - the pronunciation dictionary at `~/.local/share/say-it/pronunciations.tsv`,
-- if you use [Claude Code](https://claude.com/claude-code), a `pronounce-word` skill at `~/.claude/skills/pronounce-word/` so any "how do you say X?" prompt to your AI gets answered with **audio** instead of IPA.
+- if you use [Claude Code](https://claude.com/claude-code), a `pronounce-word` skill at `~/.claude/skills/pronounce-word/` so any "how do you say X?" prompt to your AI gets answered with **audio** instead of IPA,
+- the same skill into `~/.agents/skills/` ([Codex CLI](integrations/codex/)) and `~/.kiro/skills/` ([Kiro](integrations/kiro/)) when those dirs exist — it's the cross-tool [Agent Skills](https://agentskills.io) standard.
 
 Make sure `~/.local/bin` is on your `$PATH`. **Linux** also works — install `espeak-ng` (`sudo apt install espeak-ng` / `brew install espeak-ng`). **Windows**: WSL or git-bash + PowerShell. Or skip install entirely with the browser version at **[pronounce.renlab.ai](https://pronounce.renlab.ai)**.
 
@@ -139,6 +144,10 @@ Once installed, the `pronounce-word` skill auto-triggers on:
 - `how do you pronounce X` / `pronounce X` / `how do you say X`
 
 Your AI replies with **sound**, not just a phonetic guess. Skill file: [`skills/pronounce-word/SKILL.md`](skills/pronounce-word/SKILL.md).
+
+**Not on Claude?** Same skill drops into [Codex CLI](integrations/codex/) (`codex plugin marketplace add anzy-renlab-ai/pronounce`) and [Kiro](integrations/kiro/) (`~/.kiro/skills/`), and the [MCP server](mcp-server/) covers Claude Desktop, Cursor, Continue, Zed, Cline & friends — full matrix in [`integrations/`](integrations/).
+
+[![Add to Kiro](https://kiro.dev/images/add-to-kiro.svg)](https://kiro.dev/launch/mcp/add?name=pronounce&config=%7B%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22--from%22%2C%22git%2Bhttps%3A%2F%2Fgithub.com%2Fanzy-renlab-ai%2Fpronounce.git%23subdirectory%3Dmcp-server%22%2C%22pronounce-mcp%22%5D%7D)
 
 ## VS Code extension
 
@@ -194,7 +203,7 @@ Local override: drop a `~/.config/say-it/pronunciations.local.tsv` and it takes 
 - ✅ `--alt [N]`, `--all`, `--solo`, `--why`, `--json`, `--md`, `--no-dict`, `list`, `search`, `quiz`, `repl`, `stream`, `doctor`, `export`, `benchmark`, `badge`, `cheatsheet`.
 - ✅ Claude Code skill + MCP server for AI-side pronunciation questions.
 - ✅ Browser PWA — installable, offline-capable, instant search, voice-mic search, interactive quiz.
-- ✅ Editor integrations — Raycast, Alfred, VS Code, Cursor, Codex, Continue.
+- ✅ Editor integrations — Raycast, Alfred, VS Code, Cursor, Codex, Kiro, Continue.
 - ✅ **🌐 Live site** — [pronounce.renlab.ai](https://pronounce.renlab.ai) (every word browsable, audio, source citation) + [/zh.html](https://pronounce.renlab.ai/zh.html) (Chinese landing).
 
 ## What's coming

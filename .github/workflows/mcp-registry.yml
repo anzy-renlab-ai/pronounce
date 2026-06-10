@@ -1,0 +1,51 @@
+name: Publish MCP server (GHCR + official registry)
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "mcp-v*"
+
+permissions:
+  contents: read
+  packages: write
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push image
+        uses: docker/build-push-action@v6
+        with:
+          context: mcp-server
+          push: true
+          tags: |
+            ghcr.io/anzy-renlab-ai/pronounce-mcp:0.1.0
+            ghcr.io/anzy-renlab-ai/pronounce-mcp:latest
+          labels: |
+            io.modelcontextprotocol.server.name=io.github.anzy-renlab-ai/pronounce
+            org.opencontainers.image.source=https://github.com/anzy-renlab-ai/pronounce
+            org.opencontainers.image.description=Pronounce MCP server — developer-jargon pronunciation dictionary
+            org.opencontainers.image.licenses=MIT
+
+      - name: Install mcp-publisher
+        run: |
+          curl -fsSL https://github.com/modelcontextprotocol/registry/releases/latest/download/mcp-publisher_linux_amd64.tar.gz \
+            | tar xz mcp-publisher
+          sudo mv mcp-publisher /usr/local/bin/
+
+      - name: Publish to official MCP registry (GitHub OIDC)
+        working-directory: mcp-server
+        run: |
+          mcp-publisher login github-oidc
+          mcp-publisher publish

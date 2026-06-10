@@ -44,6 +44,15 @@ else
   echo "      (Set CLAUDE_SKILLS_DIR to override.)"
 fi
 
+# --- Agent Skills standard (Codex CLI, Kiro) — same SKILL.md, drop-in ---------
+for AGENT_SKILLS in "$HOME/.agents/skills" "$HOME/.kiro/skills"; do
+  if [[ -d "$AGENT_SKILLS" ]]; then
+    mkdir -p "$AGENT_SKILLS/pronounce-word"
+    cp "$REPO_ROOT/skills/pronounce-word/SKILL.md" "$AGENT_SKILLS/pronounce-word/SKILL.md"
+    echo "[+]   Agent skill installed       → $AGENT_SKILLS/pronounce-word/SKILL.md"
+  fi
+done
+
 echo
 echo "Done."
 if ! echo ":$PATH:" | grep -q ":$PREFIX/bin:"; then
@@ -54,3 +63,5 @@ echo "Try:"
 echo "  say-it kubectl"
 echo "  say-it --why GIF"
 echo "  say-it list | head"
+echo
+echo "Enjoying it? A ★ helps more devs find it → https://github.com/anzy-renlab-ai/pronounce"

@@ -163,6 +163,8 @@ ${C_BOLD}Examples:${C_RESET}
   say-it --md Pydantic | pbcopy
   say-it tweet kubectl
   say-it quiz
+
+Dictionary + docs: https://github.com/anzy-renlab-ai/pronounce — a ★ helps more devs find it.
 EOF
 }
 

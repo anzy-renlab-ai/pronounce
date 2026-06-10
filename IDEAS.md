@@ -84,6 +84,22 @@ Press <kbd>/</kbd> anywhere on the site → focus the search bar → fuzzy match
 
 `brew install say-it`, `npm install -g say-it`, `pip install say-it`. Lowers install friction from "git clone + run shell script" to "one command". Each ecosystem brings its own SEO + discovery audience.
 
+**Status (2026-06-10):** Homebrew DONE via self-hosted tap — `brew install anzy-renlab-ai/tap/say-it` (formula in `anzy-renlab-ai/homebrew-tap`; bump sha256 on each release). PyPI (`pronounce-mcp`) and npm still open — both blocked on registry tokens.
+
+## 21. Star-gated directory submissions — submit the day thresholds are crossed
+
+These lists rejected/aren't worth a PR yet because of explicit notability bars (repo at 9 stars, created 2026-05-16):
+
+- **awesome-cli-apps** — needs ≥20 stars AND ≥90 days old → eligible **~2026-08-14** if stars ≥20.
+- **awesome-shell** — needs ≥50 stars (self-promo explicitly allowed). PR #710 already open; expect it to sit until then.
+- **homebrew-core** — needs 75 stars (third-party submitter) or 225 (self-submitted). Until then the self-hosted tap covers install UX.
+
+- **travisvn/awesome-claude-skills** — needs ≥10 stars AND explicitly bans AI-assisted PRs → submit BY HAND at ≥10 stars.
+- **hesreallyhim/awesome-claude-code** — web-UI issue form only ("human" checkbox; CLI submissions auto-closed). Submit by hand: https://github.com/hesreallyhim/awesome-claude-code/issues/new?template=recommend-resource.yml — prepared field values live in the 2026-06-10 growth-session report.
+- **appcypher/awesome-mcp-servers** — PR surface platform-broken (all PRs 404, even previously merged ones). Entry staged on fork branch `anzy-renlab-ai/awesome-mcp-servers-appcypher#add-pronounce-mcp`; when PRs work again: `gh pr create --repo appcypher/awesome-mcp-servers --head anzy-renlab-ai:add-pronounce-mcp --base main`.
+
+Check `gh api repos/anzy-renlab-ai/pronounce --jq .stargazers_count` and fire when crossed.
+
 ---
 
 ## Notes on prioritization

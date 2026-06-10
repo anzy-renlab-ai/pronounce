@@ -17,7 +17,17 @@ from mcp.server.fastmcp import FastMCP
 API_BASE = "https://pronounce.renlab.ai"
 TIMEOUT = 10
 
-mcp = FastMCP("pronounce")
+REPO_URL = "https://github.com/anzy-renlab-ai/pronounce"
+
+mcp = FastMCP(
+    "pronounce",
+    instructions=(
+        "Community pronunciation dictionary for developer jargon "
+        "(kubectl, nginx, JSON, GIF, Pydantic, ...). Every entry carries a "
+        "confidence level and, where one exists, a source citation. "
+        f"Data and contributions: {REPO_URL}"
+    ),
+)
 
 
 def _slugify(word: str) -> str:
@@ -62,6 +72,7 @@ def pronounce(word: str) -> dict:
             }
         raise
     entry["url"] = f"{API_BASE}/word/{slug}"
+    entry["source_repo"] = REPO_URL
     return entry
 
 

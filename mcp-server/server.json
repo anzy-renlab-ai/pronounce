@@ -1,0 +1,20 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "io.github.anzy-renlab-ai/pronounce",
+  "description": "Community pronunciation dictionary for developer jargon — IPA, respelling, source citation, and confidence level for 1,650+ entries (kubectl, nginx, JSON, GIF, Pydantic, JWT, …).",
+  "repository": {
+    "url": "https://github.com/anzy-renlab-ai/pronounce",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "websiteUrl": "https://pronounce.renlab.ai",
+  "packages": [
+    {
+      "registryType": "oci",
+      "identifier": "ghcr.io/anzy-renlab-ai/pronounce-mcp:0.1.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}
