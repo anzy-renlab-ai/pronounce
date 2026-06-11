@@ -4,174 +4,174 @@
   <link href="https://pronounce.renlab.ai/feed.atom" rel="self"/>
   <link href="https://pronounce.renlab.ai/"/>
   <id>https://pronounce.renlab.ai/</id>
-  <updated>2026-06-11T12:54:17Z</updated>
+  <updated>2026-06-11T13:14:50Z</updated>
   <subtitle>How engineers actually pronounce project / product / jargon names. Community-maintained.</subtitle>
   <entry>
     <title>Janus — JAY nuhs</title>
     <link href="https://pronounce.renlab.ai/word/janus"/>
     <id>https://pronounce.renlab.ai/word/janus</id>
-    <updated>2026-06-11T12:54:17Z</updated>
+    <updated>2026-06-11T13:14:50Z</updated>
     <summary>Janus is pronounced "JAY nuhs" (/ˈdʒeɪnəs/). DeepSeek's unified multimodal model (Janus / Janus-Pro) that decouples visual encoding for understanding vs generation. Named after the two-faced Roman god of doorways: JAY-nuhs, stress on the first syllable.</summary>
   </entry>
   <entry>
     <title>Mochi — MOH chee</title>
     <link href="https://pronounce.renlab.ai/word/mochi"/>
     <id>https://pronounce.renlab.ai/word/mochi</id>
-    <updated>2026-06-11T12:54:17Z</updated>
+    <updated>2026-06-11T13:14:50Z</updated>
     <summary>Mochi is pronounced "MOH chee" (/ˈmoʊtʃi/). Genmo's open-source text-to-video model (Mochi 1). Pronounced like the Japanese rice cake: MOH-chee, not "MOTCH-ee" or "moh-CHAI".</summary>
   </entry>
   <entry>
     <title>ColPali — kol PAH lee</title>
     <link href="https://pronounce.renlab.ai/word/colpali"/>
     <id>https://pronounce.renlab.ai/word/colpali</id>
-    <updated>2026-06-11T12:54:17Z</updated>
+    <updated>2026-06-11T13:14:50Z</updated>
     <summary>ColPali is pronounced "kol PAH lee" (/koʊlˈpɑːli/). Late-interaction visual document retrieval: ColBERT-style multi-vector matching over PaliGemma image patches. Said kol-PAH-lee — "Col" from ColBERT, "Pali" from PaliGemma (PAH-lee, the Buddhist canonical language).</summary>
   </entry>
   <entry>
     <title>Nunchaku — NUN chah koo</title>
     <link href="https://pronounce.renlab.ai/word/nunchaku"/>
     <id>https://pronounce.renlab.ai/word/nunchaku</id>
-    <updated>2026-06-11T12:54:17Z</updated>
+    <updated>2026-06-11T13:14:50Z</updated>
     <summary>Nunchaku is pronounced "NUN chah koo" (/ˈnʌntʃɑːkuː/). MIT Han Lab's 4-bit inference engine that runs SVDQuant-compressed diffusion models. Named after the martial-arts weapon (nunchucks): NUN-chah-koo.</summary>
   </entry>
   <entry>
     <title>SVDQuant — ess vee dee kwant</title>
     <link href="https://pronounce.renlab.ai/word/svdquant"/>
     <id>https://pronounce.renlab.ai/word/svdquant</id>
-    <updated>2026-06-11T12:54:17Z</updated>
+    <updated>2026-06-11T13:14:50Z</updated>
     <summary>SVDQuant is pronounced "ess vee dee kwant" (/ˌɛsviːdiːˈkwɑːnt/). 4-bit post-training quantization for diffusion models that shunts weight+activation outliers into a low-rank branch. SVD = Singular Value Decomposition, read letter-by-letter then "quant": ess-vee-dee-KWANT.</summary>
   </entry>
   <entry>
     <title>ModernBERT — MOD ern bert</title>
     <link href="https://pronounce.renlab.ai/word/modernbert"/>
     <id>https://pronounce.renlab.ai/word/modernbert</id>
-    <updated>2026-06-11T12:54:17Z</updated>
+    <updated>2026-06-11T13:14:50Z</updated>
     <summary>ModernBERT is pronounced "MOD ern bert" (/ˈmɒdərnbɜːrt/). 2024 modernized BERT-style encoder (8k context, RoPE, FlashAttention, GeGLU). Spoken MOD-ern-BERT — "BERT" as the single word "bert", never spelled out B-E-R-T.</summary>
   </entry>
   <entry>
     <title>Genie — JEE nee</title>
     <link href="https://pronounce.renlab.ai/word/genie"/>
     <id>https://pronounce.renlab.ai/word/genie</id>
-    <updated>2026-06-11T12:54:17Z</updated>
+    <updated>2026-06-11T13:14:50Z</updated>
     <summary>Genie is pronounced "JEE nee" (/ˈdʒiːni/). DeepMind's foundation world model (Genie 1/2/3) that turns a single image or prompt into a playable, interactive environment. Pronounced like the lamp genie: JEE-nee.</summary>
   </entry>
   <entry>
     <title>Medusa — muh DOO suh</title>
     <link href="https://pronounce.renlab.ai/word/medusa"/>
     <id>https://pronounce.renlab.ai/word/medusa</id>
-    <updated>2026-06-11T12:54:17Z</updated>
+    <updated>2026-06-11T13:14:50Z</updated>
     <summary>Medusa is pronounced "muh DOO suh" (/məˈduːsə/). Speculative-decoding method that adds multiple extra decoding "heads" so a model drafts several future tokens itself (no separate draft model). Named after the Gorgon Medusa with many snake-heads: muh-DOO-suh.</summary>
   </entry>
   <entry>
     <title>Kontext — KON text</title>
     <link href="https://pronounce.renlab.ai/word/kontext"/>
     <id>https://pronounce.renlab.ai/word/kontext</id>
-    <updated>2026-06-11T12:54:17Z</updated>
+    <updated>2026-06-11T13:14:50Z</updated>
     <summary>Kontext is pronounced "KON text" (/ˈkɒntɛkst/). Black Forest Labs' in-context image generation+editing model (FLUX.1 Kontext). "Kontext" is German for "context"; said KON-text, stress on the first syllable.</summary>
   </entry>
   <entry>
     <title>crate — krayt</title>
     <link href="https://pronounce.renlab.ai/word/crate"/>
     <id>https://pronounce.renlab.ai/word/crate</id>
-    <updated>2026-06-11T12:54:17Z</updated>
+    <updated>2026-06-11T13:14:50Z</updated>
     <summary>crate is pronounced "krayt" (/kreɪt/). Rust's unit of compilation / the package you publish to crates.io. Pronounced exactly like the wooden box "crate": KRAYT, one syllable, rhymes with "great" and "plate". Not "krah-tay" or "crayt-ee". (Asked by a non-native speaker in Discussion #34.)</summary>
   </entry>
   <entry>
     <title>rustc — rust see</title>
     <link href="https://pronounce.renlab.ai/word/rustc"/>
     <id>https://pronounce.renlab.ai/word/rustc</id>
-    <updated>2026-06-11T12:54:17Z</updated>
+    <updated>2026-06-11T13:14:50Z</updated>
     <summary>rustc is pronounced "rust see" (/ˈrʌstsiː/). The Rust compiler. The "c" is for "compiler" and is almost always read as the letter C: RUST-see (rust + C). A minority say "rust-cee" identically; "rustk" (one syllable) is heard but uncommon. Compare gcc/clang usage where the trailing letter is spoken.</summary>
   </entry>
   <entry>
     <title>clippy — klip ee</title>
     <link href="https://pronounce.renlab.ai/word/clippy"/>
     <id>https://pronounce.renlab.ai/word/clippy</id>
-    <updated>2026-06-11T12:54:17Z</updated>
+    <updated>2026-06-11T13:14:50Z</updated>
     <summary>clippy is pronounced "klip ee" (/ˈklɪpi/). Rust's official linter (run via `cargo clippy`). KLIP-ee — named after Clippy, the Microsoft Office paperclip assistant; same pronunciation as that mascot.</summary>
   </entry>
   <entry>
     <title>rustup — rust up</title>
     <link href="https://pronounce.renlab.ai/word/rustup"/>
     <id>https://pronounce.renlab.ai/word/rustup</id>
-    <updated>2026-06-11T12:54:17Z</updated>
+    <updated>2026-06-11T13:14:50Z</updated>
     <summary>rustup is pronounced "rust up" (/ˈrʌstʌp/). The Rust toolchain installer and version manager. Read as the two transparent parts: RUST-up (rust + up), stress on the first syllable. Not "rus-TUP".</summary>
   </entry>
   <entry>
     <title>simplify — sim pluh fye</title>
     <link href="https://pronounce.renlab.ai/word/simplify"/>
     <id>https://pronounce.renlab.ai/word/simplify</id>
-    <updated>2026-06-11T12:54:17Z</updated>
+    <updated>2026-06-11T13:14:50Z</updated>
     <summary>simplify is pronounced "sim pluh fye" (/ˈsɪmpləfaɪ/). Claude Code /simplify and everyday code review verb; stress the FIRST syllable — "SIM-pluh-fye".</summary>
   </entry>
   <entry>
     <title>compact — kum packt</title>
     <link href="https://pronounce.renlab.ai/word/compact"/>
     <id>https://pronounce.renlab.ai/word/compact</id>
-    <updated>2026-06-11T12:54:17Z</updated>
+    <updated>2026-06-11T13:14:50Z</updated>
     <summary>compact is pronounced "kum packt" (/kəmˈpækt/). The verb (Claude Code /compact — compact the conversation) stresses the SECOND syllable: "kum-PAKT". The adjective/noun ("a compact format") stresses the first: "KAHM-pakt".</summary>
   </entry>
   <entry>
     <title>resume — rih zoom</title>
     <link href="https://pronounce.renlab.ai/word/resume"/>
     <id>https://pronounce.renlab.ai/word/resume</id>
-    <updated>2026-06-11T12:54:17Z</updated>
+    <updated>2026-06-11T13:14:50Z</updated>
     <summary>resume is pronounced "rih zoom" (/rɪˈzuːm/). The verb (claude --resume, resume a session): "rih-ZOOM". Don't confuse with the noun résumé "REZ-uh-may" — different word.</summary>
   </entry>
   <entry>
     <title>init — ih nit</title>
     <link href="https://pronounce.renlab.ai/word/init"/>
     <id>https://pronounce.renlab.ai/word/init</id>
-    <updated>2026-06-11T12:54:17Z</updated>
+    <updated>2026-06-11T13:14:50Z</updated>
     <summary>init is pronounced "ih nit" (/ɪˈnɪt/). Clipped "initialize" (git init, npm init, /init). Most say "ih-NIT"; "IN-it" also common; some spell it out I-N-I-T.</summary>
   </entry>
   <entry>
     <title>exec — ig zek</title>
     <link href="https://pronounce.renlab.ai/word/exec"/>
     <id>https://pronounce.renlab.ai/word/exec</id>
-    <updated>2026-06-11T12:54:17Z</updated>
+    <updated>2026-06-11T13:14:50Z</updated>
     <summary>exec is pronounced "ig zek" (/ɪɡˈzɛk/). Clipped "execute" (codex exec, docker exec, exec()): "ig-ZEK".</summary>
   </entry>
   <entry>
     <title>sandbox — sand bahks</title>
     <link href="https://pronounce.renlab.ai/word/sandbox"/>
     <id>https://pronounce.renlab.ai/word/sandbox</id>
-    <updated>2026-06-11T12:54:17Z</updated>
+    <updated>2026-06-11T13:14:50Z</updated>
     <summary>sandbox is pronounced "sand bahks" (/ˈsændbɑːks/). Isolated execution environment: "SAND-bahks".</summary>
   </entry>
   <entry>
     <title>headless — hed luss</title>
     <link href="https://pronounce.renlab.ai/word/headless"/>
     <id>https://pronounce.renlab.ai/word/headless</id>
-    <updated>2026-06-11T12:54:17Z</updated>
+    <updated>2026-06-11T13:14:50Z</updated>
     <summary>headless is pronounced "hed luss" (/ˈhɛdləs/). Headless browser / headless CMS: "HED-luss".</summary>
   </entry>
   <entry>
     <title>deprecate — dep ruh kayt</title>
     <link href="https://pronounce.renlab.ai/word/deprecate"/>
     <id>https://pronounce.renlab.ai/word/deprecate</id>
-    <updated>2026-06-11T12:54:17Z</updated>
+    <updated>2026-06-11T13:14:50Z</updated>
     <summary>deprecate is pronounced "dep ruh kayt" (/ˈdɛprəkeɪt/). "DEP-ruh-kayt" — three syllables, no "-shee-". Often mixed up with "depreciate" (deh-PREE-shee-ayt), which is a different word.</summary>
   </entry>
   <entry>
     <title>review — rih vyoo</title>
     <link href="https://pronounce.renlab.ai/word/review"/>
     <id>https://pronounce.renlab.ai/word/review</id>
-    <updated>2026-06-11T12:54:17Z</updated>
+    <updated>2026-06-11T13:14:50Z</updated>
     <summary>review is pronounced "rih vyoo" (/rɪˈvjuː/). Code review, /review: "rih-VYOO", stress the second syllable.</summary>
   </entry>
   <entry>
     <title>commit — kuh mit</title>
     <link href="https://pronounce.renlab.ai/word/commit"/>
     <id>https://pronounce.renlab.ai/word/commit</id>
-    <updated>2026-06-11T12:54:17Z</updated>
+    <updated>2026-06-11T13:14:50Z</updated>
     <summary>commit is pronounced "kuh mit" (/kəˈmɪt/). git commit: "kuh-MIT", stress the second syllable.</summary>
   </entry>
   <entry>
     <title>rebase — ree bayss</title>
     <link href="https://pronounce.renlab.ai/word/rebase"/>
     <id>https://pronounce.renlab.ai/word/rebase</id>
-    <updated>2026-06-11T12:54:17Z</updated>
+    <updated>2026-06-11T13:14:50Z</updated>
     <summary>rebase is pronounced "ree bayss" (/ˈriːbeɪs/). git rebase: "REE-bayss".</summary>
   </entry>
 </feed>
