@@ -3,7 +3,7 @@
   "displayName": "%displayName%",
   "description": "%description%",
   "l10n": "./l10n",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "publisher": "sayit",
   "license": "MIT",
   "icon": "icon.png",
@@ -20,8 +20,8 @@
       "description": "Star the dictionary on GitHub"
     },
     {
-      "url": "https://img.shields.io/badge/dictionary-1654%20entries-8fd694",
-      "href": "https://pronounce.renlab.ai/browse.html",
+      "url": "https://img.shields.io/badge/dictionary-1665%20entries-8fd694",
+      "href": "https://pronounce.renlab.ai/browse",
       "description": "Browse all sourced entries"
     }
   ],

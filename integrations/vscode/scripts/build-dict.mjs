@@ -44,10 +44,12 @@ console.log(`built dictionary: ${COUNT} entries → ${outPath}`);
 // abandonware on the Marketplace listing — so this is part of the build, not a
 // manual chore. Matches prose ("993 entries", "918 sourced entries",
 // "918-entry browser", "918+ entries") and the URL-encoded shields badge.
-const PROSE = /\b\d{3,4}\+?((?:[ \-]sourced)?[ \-]entr(?:y|ies))/gi;
+// One prose pattern for every count phrasing ("918 entries", "918+ sourced
+// entries", "1654 developer jargon names"); the captured "+" is preserved so
+// each doc keeps its own style.
+const PROSE = /\b\d{3,4}(\+?)((?:[ \-]sourced)?[ \-](?:entr(?:y|ies)|developer[ \-]jargon names))/gi;
 const BADGE = /\b\d{3,4}(?:%2B)?%20entries/gi;
 const CJK = /\d{3,4}(?=\s*条)/g; // Chinese: "1212 条" / "1212 条词条"
-const NAMES = /\b\d{3,4}\+?( developer[ \-]jargon names)/gi; // README hero tagline
 const docFiles = [
   ['integrations', 'vscode', 'package.json'],
   ['integrations', 'vscode', 'package.nls.json'],
@@ -57,16 +59,17 @@ const docFiles = [
   ['integrations', 'vscode', 'media', 'walkthrough-search.md'],
   ['README.md'],
   ['docs', 'index.html'],
+  ['.codex-plugin', 'plugin.json'],
+  ['mcp-server', 'server.json'],
 ];
 for (const parts of docFiles) {
   const p = join(repoRoot, ...parts);
   let text;
   try { text = readFileSync(p, 'utf8'); } catch { continue; }
   const next = text
-    .replace(PROSE, `${COUNT}$1`)
+    .replace(PROSE, `${COUNT}$1$2`)
     .replace(BADGE, `${COUNT}%20entries`)
-    .replace(CJK, `${COUNT}`)
-    .replace(NAMES, `${COUNT}+$1`);
+    .replace(CJK, `${COUNT}`);
   if (next !== text) {
     writeFileSync(p, next);
     console.log(`synced count → ${parts.join('/')}`);

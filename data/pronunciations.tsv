@@ -1715,3 +1715,15 @@ crate	/kreɪt/	krayt			https://doc.rust-lang.org/book/ch07-01-packages-and-crate
 rustc	/ˈrʌstsiː/	rust see	/ˈrʌstkeɪ/	rust kay	https://doc.rust-lang.org/rustc/what-is-rustc.html	rustc book — "What is rustc?"	cli-tool	community-consensus	The Rust compiler. The "c" is for "compiler" and is almost always read as the letter C: RUST-see (rust + C). A minority say "rust-cee" identically; "rustk" (one syllable) is heard but uncommon. Compare gcc/clang usage where the trailing letter is spoken.
 clippy	/ˈklɪpi/	klip ee			https://github.com/rust-lang/rust-clippy	rust-lang/rust-clippy GitHub	cli-tool	community-consensus	Rust's official linter (run via `cargo clippy`). KLIP-ee — named after Clippy, the Microsoft Office paperclip assistant; same pronunciation as that mascot.
 rustup	/ˈrʌstʌp/	rust up			https://rust-lang.github.io/rustup/	rustup book (rust-lang.github.io/rustup)	cli-tool	community-consensus	The Rust toolchain installer and version manager. Read as the two transparent parts: RUST-up (rust + up), stress on the first syllable. Not "rus-TUP".
+# --- CLI / agent-command vocabulary (Claude Code, Codex, git) ---
+simplify	/ˈsɪmpləfaɪ/	sim pluh fye			https://www.merriam-webster.com/dictionary/simplify	Merriam-Webster	cs-term	community-consensus	Claude Code /simplify and everyday code review verb; stress the FIRST syllable — "SIM-pluh-fye".
+compact	/kəmˈpækt/	kum packt	/ˈkɑːmpækt/	kahm packt	https://www.merriam-webster.com/dictionary/compact	Merriam-Webster	cs-term	community-consensus	The verb (Claude Code /compact — compact the conversation) stresses the SECOND syllable: "kum-PAKT". The adjective/noun ("a compact format") stresses the first: "KAHM-pakt".
+resume	/rɪˈzuːm/	rih zoom			https://www.merriam-webster.com/dictionary/resume	Merriam-Webster	cs-term	community-consensus	The verb (claude --resume, resume a session): "rih-ZOOM". Don't confuse with the noun résumé "REZ-uh-may" — different word.
+init	/ɪˈnɪt/	ih nit	/ˈɪnɪt/	in it			cs-term	contested	Clipped "initialize" (git init, npm init, /init). Most say "ih-NIT"; "IN-it" also common; some spell it out I-N-I-T.
+exec	/ɪɡˈzɛk/	ig zek					cs-term	community-consensus	Clipped "execute" (codex exec, docker exec, exec()): "ig-ZEK".
+sandbox	/ˈsændbɑːks/	sand bahks					cs-term	community-consensus	Isolated execution environment: "SAND-bahks".
+headless	/ˈhɛdləs/	hed luss					cs-term	community-consensus	Headless browser / headless CMS: "HED-luss".
+deprecate	/ˈdɛprəkeɪt/	dep ruh kayt			https://www.merriam-webster.com/dictionary/deprecate	Merriam-Webster	cs-term	community-consensus	"DEP-ruh-kayt" — three syllables, no "-shee-". Often mixed up with "depreciate" (deh-PREE-shee-ayt), which is a different word.
+review	/rɪˈvjuː/	rih vyoo					cs-term	community-consensus	Code review, /review: "rih-VYOO", stress the second syllable.
+commit	/kəˈmɪt/	kuh mit					cs-term	community-consensus	git commit: "kuh-MIT", stress the second syllable.
+rebase	/ˈriːbeɪs/	ree bayss					cs-term	community-consensus	git rebase: "REE-bayss".

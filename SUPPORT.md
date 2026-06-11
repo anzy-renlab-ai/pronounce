@@ -6,11 +6,11 @@ Thanks for using **Pronounce**. Pick the channel that matches what you need.
 
 Start with the [README quick-try](https://github.com/anzy-renlab-ai/pronounce#-try-it-in-30-seconds). It's two commands.
 
-If you'd rather not install, the dictionary is on the web at **[pronounce.renlab.ai](https://pronounce.renlab.ai)** — same audio, same sources, no setup. Chinese landing at **[/zh.html](https://pronounce.renlab.ai/zh.html)**.
+If you'd rather not install, the dictionary is on the web at **[pronounce.renlab.ai](https://pronounce.renlab.ai)** — same audio, same sources, no setup. Chinese landing at **[/zh](https://pronounce.renlab.ai/zh)**.
 
 ## "Is there an entry for X?"
 
-Search the dictionary directly: <https://pronounce.renlab.ai/browse.html>. Hit `/` to focus the search bar, type the word.
+Search the dictionary directly: <https://pronounce.renlab.ai/browse>. Hit `/` to focus the search bar, type the word.
 
 If we don't cover it — see "I want to add a word" below.
 

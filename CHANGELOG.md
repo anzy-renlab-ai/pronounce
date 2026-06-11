@@ -1,5 +1,19 @@
 # Changelog
 
+## v2.12.0 — 2026-06-11
+
+### Added
+- **Dictionary +11 — CLI / agent-command vocabulary**, prompted by a user asking how to say "simplify" (the Claude Code command): **simplify** (SIM-pluh-fye), **compact** (verb kum-PAKT — the `/compact` reading — vs adjective KAHM-pakt), **resume** (rih-ZOOM, not résumé), **init** (ih-NIT vs IN-it, contested), **exec** (ig-ZEK), **sandbox**, **headless**, **deprecate** (DEP-ruh-kayt — not "depreciate"), **review**, **commit**, **rebase**. These are the words non-native devs see daily in Claude Code / Codex / git menus.
+- Per-word audio + OG cards rendered for all 11; entry count auto-synced to 1,665 across every doc surface (now including `.codex-plugin/plugin.json` and `mcp-server/server.json`).
+- **Build guard:** `build-site.sh` now fails the build if any absolute `.html` URL leaks into built output (the clean-URL invariant from v2.11.0 — a regression appeared within a day, so it's enforced now).
+- CLI `VERSION` → 0.6.3; VS Code extension → 0.6.3.
+
+### Fixed
+- Remaining `.html` links in README/SUPPORT and the new marketplace badge now use clean URLs.
+- `mcp-registry.yml` derives the GHCR image tag from `mcp-server/server.json` (single source of truth) and fails loud on mismatch, instead of hard-coding `0.1.0` twice.
+- npm wrapper reads its version from `package.json` instead of duplicating it; UA string derives from it.
+- `build-dict.mjs`: one prose regex (with `+`-style preservation) instead of two divergent ones.
+
 ## v2.11.1 — 2026-06-10
 
 ### Fixed

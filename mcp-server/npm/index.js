@@ -18,7 +18,7 @@ const REPO_URL = "https://github.com/anzy-renlab-ai/pronounce";
 const TIMEOUT_MS = 10_000;
 
 const SERVER_NAME = "pronounce";
-const SERVER_VERSION = "0.1.0";
+const SERVER_VERSION = require("./package.json").version;
 
 // Newest first. If the client asks for a version we know, echo it back;
 // otherwise answer with our latest and let the client decide.
@@ -58,7 +58,7 @@ async function apiGet(path) {
   for (let attempt = 0; ; attempt++) {
     try {
       const res = await fetch(url, {
-        headers: { "User-Agent": "pronounce-mcp/0.1" },
+        headers: { "User-Agent": `pronounce-mcp/${SERVER_VERSION}` },
         signal: AbortSignal.timeout(TIMEOUT_MS),
       });
       if (!res.ok) throw new HttpError(res.status, url);

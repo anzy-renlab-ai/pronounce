@@ -1,21 +1,21 @@
 <h1 align="center">🔊 say-it · Pronounce</h1>
 
-<p align="center"><strong>Stop saying "kub-cuttle". One Bash command pronounces 1654+ developer jargon names — with cited sources.</strong></p>
+<p align="center"><strong>Stop saying "kub-cuttle". One Bash command pronounces 1665+ developer jargon names — with cited sources.</strong></p>
 
 <p align="center">
 <a href="https://github.com/anzy-renlab-ai/pronounce/stargazers"><img src="https://img.shields.io/github/stars/anzy-renlab-ai/pronounce?style=social" alt="GitHub stars"></a>
 <a href="https://pronounce.renlab.ai"><img src="https://img.shields.io/badge/live-pronounce.renlab.ai-7adfbb?logo=safari&logoColor=white" alt="Live site"></a>
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
-<a href="https://pronounce.renlab.ai/browse.html"><img src="https://img.shields.io/badge/dictionary-1654%20entries-8fd694" alt="Entries"></a>
+<a href="https://pronounce.renlab.ai/browse"><img src="https://img.shields.io/badge/dictionary-1665%20entries-8fd694" alt="Entries"></a>
 <a href="https://marketplace.visualstudio.com/items?itemName=sayit.pronounce"><img src="https://img.shields.io/visual-studio-marketplace/v/sayit.pronounce?label=VS%20Code&color=007ACC&logo=visualstudiocode" alt="VS Code Marketplace"></a>
 <a href="https://open-vsx.org/extension/sayit/pronounce"><img src="https://img.shields.io/open-vsx/v/sayit/pronounce?label=Open%20VSX&color=8fd694" alt="Open VSX"></a>
 </p>
 
 <p align="center">
 🌐 <a href="https://pronounce.renlab.ai"><strong>pronounce.renlab.ai</strong></a> ·
-🇨🇳 <a href="https://pronounce.renlab.ai/zh.html" hreflang="zh-Hans">中文</a> ·
-📖 <a href="https://pronounce.renlab.ai/browse.html">Browse</a> ·
-🎯 <a href="https://pronounce.renlab.ai/quiz.html">Quiz</a> ·
+🇨🇳 <a href="https://pronounce.renlab.ai/zh" hreflang="zh-Hans">中文</a> ·
+📖 <a href="https://pronounce.renlab.ai/browse">Browse</a> ·
+🎯 <a href="https://pronounce.renlab.ai/quiz">Quiz</a> ·
 🎤 <a href="https://pronounce.renlab.ai/#hero-search">Voice search</a> ·
 🔌 <a href="mcp-server/">MCP server</a>
 </p>
@@ -24,7 +24,7 @@
 
 <p align="center">
   <a href="https://github.com/anzy-renlab-ai/pronounce/releases/download/v2.5.0/promo.mp4"><strong>▶ Watch the 47-second promo</strong> (with voice)</a> ·
-  <a href="https://pronounce.renlab.ai/quiz.html">🎯 Try the quiz</a> ·
+  <a href="https://pronounce.renlab.ai/quiz">🎯 Try the quiz</a> ·
   <a href="https://pronounce.renlab.ai/#hero-search">🎤 Voice search</a>
 </p>
 
@@ -50,7 +50,7 @@ That's it. Now try `say-it GIF`, `say-it nginx`, `say-it Pydantic`, `say-it --wh
 
 ## What you're actually getting
 
-- **1654 entries, every one sourced.** Confidence-tagged (`creator-clarified` / `community-consensus` / `contested`) with a citable URL where one exists. Wilhite said GIF is "jif" at the 2013 Webby Awards. Crockford says JSON is "JAY-son" (RailsConf 2009). RFC 7519 says JWT is "jot". The dictionary cites them.
+- **1665 entries, every one sourced.** Confidence-tagged (`creator-clarified` / `community-consensus` / `contested`) with a citable URL where one exists. Wilhite said GIF is "jif" at the 2013 Webby Awards. Crockford says JSON is "JAY-son" (RailsConf 2009). RFC 7519 says JWT is "jot". The dictionary cites them.
 - **Multi-reading audio.** For words where the debate is real — GIF, SQL, GUI, char, regex — the CLI chains the alternates after the primary with a spoken "or:" so you *hear* the debate without staring at the terminal. `--solo` skips the tail once you've internalized it.
 - **Zero deps. ~250 lines of Bash.** No npm, no sudo, no surprises. Wraps the `say` engine that's already on your Mac. Ships a [Claude Code skill](skills/pronounce-word/SKILL.md) and an [MCP server](mcp-server/) so your AI answers "how do you pronounce X?" with **audio**, not a phonetic guess.
 
@@ -155,7 +155,7 @@ Your AI replies with **sound**, not just a phonetic guess. Skill file: [`skills/
 
 ![Pronounce demo — kubectl, YAML, Ghostty, wagmi](integrations/vscode/media/demo.gif)
 
-Hover over any tech word in any file — see the IPA, hear the pronunciation. Same 1654-entry dictionary as the CLI, JSON-bundled at build (zero runtime parse cost).
+Hover over any tech word in any file — see the IPA, hear the pronunciation. Same 1665-entry dictionary as the CLI, JSON-bundled at build (zero runtime parse cost).
 
 ```bash
 # Cursor / VSCodium / Zed / Gitpod / Theia / code-server (Open VSX)
@@ -169,13 +169,13 @@ code --install-extension sayit.pronounce
 - **⌘⇧'** — speak selection.
 - **Status bar** `🔊 sayit` — click to speak the current selection.
 - **Welcome walkthrough** — 4-step onboarding on first install.
-- **`Pronounce: Search dictionary…`** — fuzzy-find all 1654 entries.
+- **`Pronounce: Search dictionary…`** — fuzzy-find all 1665 entries.
 
 Source: [`integrations/vscode/`](integrations/vscode/). **Cross-platform as of v0.3** — macOS `say`, Linux `espeak-ng`, Windows PowerShell.
 
 ## Chrome / Edge / Brave extension
 
-Click any tech word on any webpage → popup with IPA + audio. Same 1654-entry dictionary; same Web Speech API as `pronounce.renlab.ai`. **Sideload only for now** (not yet on Chrome Web Store).
+Click any tech word on any webpage → popup with IPA + audio. Same 1665-entry dictionary; same Web Speech API as `pronounce.renlab.ai`. **Sideload only for now** (not yet on Chrome Web Store).
 
 Download `pronounce-chrome-0.1.0.zip` from the [latest release](https://github.com/anzy-renlab-ai/pronounce/releases/latest) → unzip → `chrome://extensions/` → Developer mode → Load unpacked.
 
@@ -183,7 +183,7 @@ Source: [`integrations/chrome/`](integrations/chrome/).
 
 ## How the dictionary works
 
-`data/pronunciations.tsv` is the single source of truth — tab-separated, 1654 entries, covering:
+`data/pronunciations.tsv` is the single source of truth — tab-separated, 1665 entries, covering:
 
 - **Cloud / DevOps:** `kubectl`, `nginx`, `Kubernetes`, `helm`, `Istio`, `Envoy`, `Prometheus`, `Grafana`, `Terraform`, `Argo`, `Knative`, `etcd`, `containerd`, `runc`, `Podman`, ...
 - **Languages / Frameworks:** `Django`, `Vue`, `Vite`, `Pydantic`, `Bun`, `Deno`, `Hugo`, `Hono`, `Caddy`, `Svelte`, `Astro`, `Pinia`, ...
@@ -204,7 +204,7 @@ Local override: drop a `~/.config/say-it/pronunciations.local.tsv` and it takes 
 - ✅ Claude Code skill + MCP server for AI-side pronunciation questions.
 - ✅ Browser PWA — installable, offline-capable, instant search, voice-mic search, interactive quiz.
 - ✅ Editor integrations — Raycast, Alfred, VS Code, Cursor, Codex, Kiro, Continue.
-- ✅ **🌐 Live site** — [pronounce.renlab.ai](https://pronounce.renlab.ai) (every word browsable, audio, source citation) + [/zh.html](https://pronounce.renlab.ai/zh.html) (Chinese landing).
+- ✅ **🌐 Live site** — [pronounce.renlab.ai](https://pronounce.renlab.ai) (every word browsable, audio, source citation) + [/zh](https://pronounce.renlab.ai/zh) (Chinese landing).
 
 ## What's coming
 

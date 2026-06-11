@@ -1652,5 +1652,16 @@
   {"word": "crate", "slug": "crate", "category": "cs-term", "confidence": "community-consensus"},
   {"word": "rustc", "slug": "rustc", "category": "cli-tool", "confidence": "community-consensus"},
   {"word": "clippy", "slug": "clippy", "category": "cli-tool", "confidence": "community-consensus"},
-  {"word": "rustup", "slug": "rustup", "category": "cli-tool", "confidence": "community-consensus"}
+  {"word": "rustup", "slug": "rustup", "category": "cli-tool", "confidence": "community-consensus"},
+  {"word": "simplify", "slug": "simplify", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "compact", "slug": "compact", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "resume", "slug": "resume", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "init", "slug": "init", "category": "cs-term", "confidence": "contested"},
+  {"word": "exec", "slug": "exec", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "sandbox", "slug": "sandbox", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "headless", "slug": "headless", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "deprecate", "slug": "deprecate", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "review", "slug": "review", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "commit", "slug": "commit", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "rebase", "slug": "rebase", "category": "cs-term", "confidence": "community-consensus"}
 ]

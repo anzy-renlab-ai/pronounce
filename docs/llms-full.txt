@@ -1656,3 +1656,14 @@ crate | /kreɪt/ | krayt | cs-term | community-consensus | https://doc.rust-lang
 rustc | /ˈrʌstsiː/ | rust see | cli-tool | community-consensus | https://doc.rust-lang.org/rustc/what-is-rustc.html
 clippy | /ˈklɪpi/ | klip ee | cli-tool | community-consensus | https://github.com/rust-lang/rust-clippy
 rustup | /ˈrʌstʌp/ | rust up | cli-tool | community-consensus | https://rust-lang.github.io/rustup/
+simplify | /ˈsɪmpləfaɪ/ | sim pluh fye | cs-term | community-consensus | https://www.merriam-webster.com/dictionary/simplify
+compact | /kəmˈpækt/ | kum packt | cs-term | community-consensus | https://www.merriam-webster.com/dictionary/compact
+resume | /rɪˈzuːm/ | rih zoom | cs-term | community-consensus | https://www.merriam-webster.com/dictionary/resume
+init | /ɪˈnɪt/ | ih nit | cs-term | contested | (no source)
+exec | /ɪɡˈzɛk/ | ig zek | cs-term | community-consensus | (no source)
+sandbox | /ˈsændbɑːks/ | sand bahks | cs-term | community-consensus | (no source)
+headless | /ˈhɛdləs/ | hed luss | cs-term | community-consensus | (no source)
+deprecate | /ˈdɛprəkeɪt/ | dep ruh kayt | cs-term | community-consensus | https://www.merriam-webster.com/dictionary/deprecate
+review | /rɪˈvjuː/ | rih vyoo | cs-term | community-consensus | (no source)
+commit | /kəˈmɪt/ | kuh mit | cs-term | community-consensus | (no source)
+rebase | /ˈriːbeɪs/ | ree bayss | cs-term | community-consensus | (no source)

@@ -6616,4 +6616,48 @@
     <image:image><image:loc>https://pronounce.renlab.ai/og/rustup.png</image:loc><image:caption>How to pronounce rustup — OG card</image:caption></image:image>
     <image:image><image:loc>https://pronounce.renlab.ai/badge/rustup.svg</image:loc><image:caption>Pronunciation badge for rustup</image:caption></image:image>
   </url>
+  <url><loc>https://pronounce.renlab.ai/word/simplify</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/simplify.png</image:loc><image:caption>How to pronounce simplify — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/simplify.svg</image:loc><image:caption>Pronunciation badge for simplify</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/compact</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/compact.png</image:loc><image:caption>How to pronounce compact — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/compact.svg</image:loc><image:caption>Pronunciation badge for compact</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/resume</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/resume.png</image:loc><image:caption>How to pronounce resume — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/resume.svg</image:loc><image:caption>Pronunciation badge for resume</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/init</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/init.png</image:loc><image:caption>How to pronounce init — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/init.svg</image:loc><image:caption>Pronunciation badge for init</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/exec</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/exec.png</image:loc><image:caption>How to pronounce exec — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/exec.svg</image:loc><image:caption>Pronunciation badge for exec</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/sandbox</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/sandbox.png</image:loc><image:caption>How to pronounce sandbox — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/sandbox.svg</image:loc><image:caption>Pronunciation badge for sandbox</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/headless</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/headless.png</image:loc><image:caption>How to pronounce headless — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/headless.svg</image:loc><image:caption>Pronunciation badge for headless</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/deprecate</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/deprecate.png</image:loc><image:caption>How to pronounce deprecate — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/deprecate.svg</image:loc><image:caption>Pronunciation badge for deprecate</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/review</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/review.png</image:loc><image:caption>How to pronounce review — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/review.svg</image:loc><image:caption>Pronunciation badge for review</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/commit</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/commit.png</image:loc><image:caption>How to pronounce commit — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/commit.svg</image:loc><image:caption>Pronunciation badge for commit</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/rebase</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/rebase.png</image:loc><image:caption>How to pronounce rebase — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/rebase.svg</image:loc><image:caption>Pronunciation badge for rebase</image:caption></image:image>
+  </url>
 </urlset>

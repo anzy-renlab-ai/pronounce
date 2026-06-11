@@ -2711,3 +2711,18 @@ echo "Built $WORD_COUNT per-word pages"
 if command -v python3 >/dev/null 2>&1; then
   python3 "$REPO_ROOT/tools/build-seo.py" || echo "build-seo: failed (non-fatal)" >&2
 fi
+
+# ---------------------------------------------------------------------------
+# Invariant check: Vercel cleanUrls 308-redirects every *.html URL, so no
+# machine-read URL (sitemap <loc>, canonical, og:url, hreflang) may end in
+# .html. Word slugs named "html" (/word/html) are legitimate.
+# ---------------------------------------------------------------------------
+bad=$(grep -rEoh 'https://pronounce\.renlab\.ai[^"<> ]*\.html' "$DOCS" \
+        --include='*.html' --include='*.xml' --include='*.atom' --include='*.txt' \
+        2>/dev/null | sort -u || true)
+if [[ -n "$bad" ]]; then
+  echo "FATAL: absolute .html URLs leaked into built output (Vercel 308s them):" >&2
+  echo "$bad" >&2
+  exit 1
+fi
+echo "Clean-URL invariant check passed"
