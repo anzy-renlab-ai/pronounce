@@ -2153,6 +2153,7 @@ for ((d = DAYS_BACK; d >= 0; d--)); do
   <meta property="og:title" content="$daydate — pronunciation of the day: $d_word_esc">
   <meta property="og:description" content="$d_word_esc → \"$d_resp_esc\" ($d_ipa_esc).">
   <meta property="og:type" content="article">
+  <meta property="og:url" content="$SITE_URL/daily/$daydate">
   <meta property="og:image" content="$SITE_URL/og/$d_slug.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">

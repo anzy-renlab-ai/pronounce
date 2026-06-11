@@ -12,6 +12,23 @@ When a user asks an LLM "how do you pronounce kubectl?", the client invokes `pro
 | `search_pronunciations(query, limit)` | Find entries by partial match on word or category. |
 | `list_pronunciations(category)` | List all entries, optionally filtered by category (`product`, `cli-tool`, `acronym`, ...). |
 
+## Install via npm / npx (coming to npm — package ready in `mcp-server/npm/`)
+
+A zero-dependency Node (>= 18) implementation of the same server lives in [`mcp-server/npm/`](npm/). Once published it will be a one-liner in any MCP client:
+
+```json
+{
+  "mcpServers": {
+    "pronounce": {
+      "command": "npx",
+      "args": ["-y", "pronounce-mcp"]
+    }
+  }
+}
+```
+
+Until it lands on npm, run it straight from a checkout: `node mcp-server/npm/index.js`.
+
 ## Install (Claude Desktop)
 
 ```jsonc

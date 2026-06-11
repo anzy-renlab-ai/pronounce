@@ -1,0 +1,37 @@
+{
+  "name": "pronounce-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for pronounce.renlab.ai — look up how engineers actually pronounce project / product / jargon names from any MCP-aware client.",
+  "license": "MIT",
+  "author": "Pronounce community",
+  "homepage": "https://pronounce.renlab.ai",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anzy-renlab-ai/pronounce.git",
+    "directory": "mcp-server/npm"
+  },
+  "bugs": {
+    "url": "https://github.com/anzy-renlab-ai/pronounce/issues"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "pronunciation",
+    "developer-tools",
+    "claude"
+  ],
+  "bin": {
+    "pronounce-mcp": "index.js"
+  },
+  "files": [
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}

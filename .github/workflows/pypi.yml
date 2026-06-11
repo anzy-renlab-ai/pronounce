@@ -1,0 +1,42 @@
+name: Publish pronounce-mcp to PyPI
+
+# Uses PyPI Trusted Publishing (OIDC) — no token stored anywhere.
+# One-time setup on pypi.org (account → Publishing → "Add a new pending publisher"):
+#   PyPI project name : pronounce-mcp
+#   Owner             : anzy-renlab-ai
+#   Repository        : pronounce
+#   Workflow          : pypi.yml
+#   Environment       : pypi
+# After that, dispatch this workflow (or push a pypi-v* tag) and the package publishes.
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "pypi-v*"
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build sdist + wheel
+        run: |
+          python -m pip install --upgrade build
+          python -m build mcp-server
+
+      - name: Publish to PyPI (trusted publishing)
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: mcp-server/dist
