@@ -1,6 +1,6 @@
 ## Fuzzy search the dictionary
 
-`Pronounce: Search dictionary…` opens a quick-pick over all **1665 entries**.
+`Pronounce: Search dictionary…` opens a quick-pick over all **1702 entries**.
 
 - Type any word → fuzzy match
 - ↑↓ to navigate · Enter to hear
