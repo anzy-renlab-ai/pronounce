@@ -1,5 +1,23 @@
 # Changelog
 
+## v2.13.0 — 2026-06-15
+
+### Added
+- **Dictionary +37 — frontier model names + world-model / diffusion paper jargon.** The high-mispronunciation terms developers hit in world-model, diffusion, SDE, optimal-transport, and stability papers, each web-verified for its General American reading with a real source:
+  - Model names: **Fable** (Anthropic), **Lumiere** (Google), **Kosmos** (Microsoft).
+  - SDE / diffusion surnames: **Langevin** (lahnzh-VAN), **Ito**, **Wiener** (VEE-ner), **Fokker-Planck**, **Schrodinger**, **Ornstein-Uhlenbeck**, **Radon**.
+  - Stability / operators / symmetry: **Lyapunov**, **Noether** (NUR-ter), **Koopman**, **Hamiltonian**, **Helmholtz**, **Planck**.
+  - Divergence / transport: **Gumbel**, **Frobenius**, **Kullback-Leibler** (the "KL"), **Bregman**, **Sinkhorn**, **Tsallis**, **Renyi**.
+  - Geometry / measure spaces: **Riemannian**, **Mahalanobis**, **Lipschitz**, **Hilbert**, **Lebesgue**, **Minkowski**.
+  - Matrix / linear-algebra names: **Chebyshev**, **Hadamard**, **Kronecker**, **Toeplitz**.
+  - Contested ML terms: **logit**, **aleatoric**, **epistemic**, **SiLU**.
+
+  Contested readings carry alternate IPA + respelling; lookup keys are ASCII-typeable (`Ito`, `Schrodinger`, `Renyi`, hyphenated pairs like `Kullback-Leibler`). Entry count auto-synced 1,665 → 1,702 across README, `mcp-server/server.json`, and `.codex-plugin/plugin.json`.
+
+### Changed
+- **CLI perf — single-pass dictionary reads.** `stats` collects total + per-category + per-confidence + source coverage in one awk pass (was four full scans); `minute` / `quiz` load the dictionary once into parallel arrays instead of re-scanning + `sort -R` over ~1,700 rows every round; `badge` / `explain` parse fields in a single awk pass (`\x1f`-joined so empty trailing columns survive `read`). Behavior-identical for the shipped dictionary; independent Codex review passed. Also fixes a latent `stats` crash on a zero-source dictionary (printed `/N (0%)` and threw a bash arithmetic error — now `0/N`).
+- CLI `VERSION` → 0.6.4; VS Code extension → 0.6.4.
+
 ## v2.12.0 — 2026-06-11
 
 ### Added
