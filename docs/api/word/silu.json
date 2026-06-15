@@ -1,0 +1,12 @@
+{
+  "word": "SiLU",
+  "ipa": "/ˈsiːluː/",
+  "respelling_us": "see loo",
+  "alt_ipa": ["/ˌɛsaɪɛlˈjuː/"],
+  "alt_respelling_us": ["ess eye el yoo"],
+  "source_url": "https://www.ultralytics.com/glossary/silu-sigmoid-linear-unit",
+  "source_label": "Ultralytics Glossary",
+  "category": "acronym",
+  "confidence": "contested",
+  "notes": "Sigmoid Linear Unit activation (a.k.a. Swish); usually said as a word 'SEE-loo', sometimes spelled out 'S-I-L-U'."
+}

@@ -1667,3 +1667,40 @@ deprecate | /ˈdɛprəkeɪt/ | dep ruh kayt | cs-term | community-consensus | ht
 review | /rɪˈvjuː/ | rih vyoo | cs-term | community-consensus | (no source)
 commit | /kəˈmɪt/ | kuh mit | cs-term | community-consensus | (no source)
 rebase | /ˈriːbeɪs/ | ree bayss | cs-term | community-consensus | (no source)
+Fable | /ˈfeɪbəl/ | fay bul | product | community-consensus | https://en.wiktionary.org/wiki/fable
+Lumiere | /luːmˈjɛər/ | loom yair | product | community-consensus | https://en.wiktionary.org/wiki/lumi%C3%A8re
+Kosmos | /ˈkɑːzmɑːs/ | kahz mohs | product | community-consensus | https://www.microsoft.com/en-us/research/publication/kosmos-2-grounding-multimodal-large-language-models-to-the-world/
+logit | /ˈloʊdʒɪt/ | loh jit | cs-term | contested | https://en.wiktionary.org/wiki/logit
+aleatoric | /ˌeɪliəˈtɔːrɪk/ | ay lee uh tor ik | cs-term | contested | https://www.oed.com/dictionary/aleatoric_adj
+epistemic | /ˌɛpəˈstiːmɪk/ | ep uh stee mik | cs-term | contested | https://www.oxfordlearnersdictionaries.com/us/definition/american_english/epistemic
+SiLU | /ˈsiːluː/ | see loo | acronym | contested | https://www.ultralytics.com/glossary/silu-sigmoid-linear-unit
+Langevin | /ˌlɑːnʒəˈvæ̃/ | lahnzh van | person | community-consensus | https://en.wikipedia.org/wiki/Langevin_dynamics
+Ito | /ˈiːtoʊ/ | ee toh | person | community-consensus | https://en.wikipedia.org/wiki/It%C3%B4_calculus
+Wiener | /ˈwiːnər/ | wee ner | person | contested | https://en.wikipedia.org/wiki/Talk:Norbert_Wiener
+Fokker-Planck | /ˈfɒkər ˈplɑːŋk/ | fok er plahnk | cs-term | community-consensus | https://en.wikipedia.org/wiki/Fokker%E2%80%93Planck_equation
+Schrodinger | /ˈʃroʊdɪŋər/ | shroh ding er | person | community-consensus | https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
+Ornstein-Uhlenbeck | /ˈɔːrnstaɪn ˈuːlənbɛk/ | orn stine oo len bek | cs-term | community-consensus | https://en.wikipedia.org/wiki/Ornstein%E2%80%93Uhlenbeck_process
+Radon | /ˈreɪdɒn/ | ray don | person | contested | https://en.wikipedia.org/wiki/Johann_Radon
+Lyapunov | /liˈɑːpʊnɒf/ | lee ah puh nof | person | contested | https://en.wikipedia.org/wiki/Aleksandr_Lyapunov
+Noether | /ˈnɜːrtər/ | nur ter | person | community-consensus | https://en.wikipedia.org/wiki/Emmy_Noether
+Koopman | /ˈkoʊpmən/ | kohp mun | person | community-consensus | https://en.wikipedia.org/wiki/Koopman
+Hamiltonian | /ˌhæməlˈtoʊniən/ | ham il toh nee un | cs-term | community-consensus | https://en.wikipedia.org/wiki/William_Rowan_Hamilton
+Helmholtz | /ˈhɛlmhoʊlts/ | helm holts | person | community-consensus | https://en.wikipedia.org/wiki/Hermann_von_Helmholtz
+Planck | /ˈplɑːŋk/ | plahngk | person | community-consensus | https://en.wikipedia.org/wiki/Max_Planck
+Gumbel | /ˈɡʌmbəl/ | gum bul | cs-term | community-consensus | https://en.wikipedia.org/wiki/Emil_Julius_Gumbel
+Frobenius | /froʊˈbeɪniəs/ | froh bay nee us | cs-term | contested | https://en.wikipedia.org/wiki/Ferdinand_Georg_Frobenius
+Kullback-Leibler | /ˈkʊlbæk ˈlaɪblər/ | kool bak ly bler | cs-term | community-consensus | https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence
+Bregman | /ˈbrɛɡmən/ | breg mun | person | community-consensus | https://en.wikipedia.org/wiki/Bregman_divergence
+Sinkhorn | /ˈsɪŋkhɔːrn/ | sink horn | person | community-consensus | https://en.wikipedia.org/wiki/Sinkhorn%27s_theorem
+Tsallis | /ˈsælɪs/ | sal iss | cs-term | contested | https://en.wikipedia.org/wiki/Constantino_Tsallis
+Renyi | /ˈreɪnjiː/ | ray nyee | person | community-consensus | https://en.wikipedia.org/wiki/Alfr%C3%A9d_R%C3%A9nyi
+Riemannian | /riˈmɑːniən/ | ree mah nee un | cs-term | community-consensus | https://en.wikipedia.org/wiki/Bernhard_Riemann
+Mahalanobis | /ˌmɑːhələˈnoʊbɪs/ | mah huh luh noh bis | person | community-consensus | https://en.wikipedia.org/wiki/Prasanta_Chandra_Mahalanobis
+Lipschitz | /ˈlɪpʃɪts/ | lip shits | person | contested | https://en.wikipedia.org/wiki/Lipschitz_continuity
+Hilbert | /ˈhɪlbərt/ | hil bert | person | community-consensus | https://en.wikipedia.org/wiki/David_Hilbert
+Lebesgue | /ləˈbɛɡ/ | luh beg | person | community-consensus | https://en.wiktionary.org/wiki/Lebesgue
+Minkowski | /mɪŋˈkɔːfski/ | ming kawf skee | person | contested | https://en.wikipedia.org/wiki/Hermann_Minkowski
+Chebyshev | /ˈtʃɛbɪʃɔːf/ | cheb ih shoff | person | contested | https://en.wikipedia.org/wiki/Pafnuty_Chebyshev
+Hadamard | /ˌhædəˈmɑːr/ | had uh mar | person | contested | https://en.wikipedia.org/wiki/Jacques_Hadamard
+Kronecker | /ˈkroʊnɛkər/ | kroh neck er | person | community-consensus | https://en.wikipedia.org/wiki/Leopold_Kronecker
+Toeplitz | /ˈtoʊplɪts/ | tope lits | person | contested | https://en.wikipedia.org/wiki/Otto_Toeplitz
