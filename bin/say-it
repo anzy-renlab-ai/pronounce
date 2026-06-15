@@ -242,18 +242,34 @@ case "${1:-}" in
     [[ -z "$DICT" ]] && { echo "say-it: dictionary not found" >&2; exit 4; }
     echo "${C_BOLD}say-it dictionary — stats${C_RESET}"
     echo ""
-    total=$(awk -F'\t' '!/^#/ && NF>=2 && $1 != "" && $1 != "word"' "$DICT" | wc -l | tr -d ' ')
+    # Single pass over the dictionary: collect total, per-category and
+    # per-confidence counts, and source-URL coverage. Emits tagged rows
+    # (already sorted by count desc) for the shell to format.
+    stats_data=$(awk -F'\t' '
+      !/^#/ && NF>=2 && $1 != "" && $1 != "word" {
+        total++
+        if (NF>=8 && $8 != "") cat[$8]++
+        if (NF>=9 && $9 != "") conf[$9]++
+        if (NF>=6 && $6 != "") src++
+      }
+      END {
+        print "TOTAL\t" total+0
+        print "SRC\t" src+0
+        for (c in cat)  print "CAT\t"  cat[c]  "\t" c
+        for (k in conf) print "CONF\t" conf[k] "\t" k
+      }' "$DICT")
+    total=$(printf '%s\n' "$stats_data" | awk -F'\t' '$1=="TOTAL"{print $2}')
+    src=$(printf '%s\n'   "$stats_data" | awk -F'\t' '$1=="SRC"{print $2}')
     echo "  ${C_CYAN}Total entries:${C_RESET} ${C_BOLD}$total${C_RESET}"
     echo ""
     echo "  ${C_CYAN}By category:${C_RESET}"
-    awk -F'\t' '!/^#/ && NF>=8 && $1 != "" && $1 != "word" { print $8 }' "$DICT" | sort | uniq -c | sort -rn | \
-      while read -r n c; do printf "    %-20s ${C_BOLD}%4d${C_RESET}  %s\n" "$c" "$n" "$(printf '█%.0s' $(seq 1 $((n/2))))" ; done
+    printf '%s\n' "$stats_data" | awk -F'\t' '$1=="CAT"{print $2"\t"$3}' | sort -rn | \
+      while IFS=$'\t' read -r n c; do printf "    %-20s ${C_BOLD}%4d${C_RESET}  %s\n" "$c" "$n" "$(printf '█%.0s' $(seq 1 $((n/2))))" ; done
     echo ""
     echo "  ${C_CYAN}By confidence:${C_RESET}"
-    awk -F'\t' '!/^#/ && NF>=9 && $1 != "" && $1 != "word" { print $9 }' "$DICT" | sort | uniq -c | sort -rn | \
-      while read -r n c; do printf "    %-22s ${C_BOLD}%4d${C_RESET}\n" "$c" "$n"; done
+    printf '%s\n' "$stats_data" | awk -F'\t' '$1=="CONF"{print $2"\t"$3}' | sort -rn | \
+      while IFS=$'\t' read -r n c; do printf "    %-22s ${C_BOLD}%4d${C_RESET}\n" "$c" "$n"; done
     echo ""
-    src=$(awk -F'\t' '!/^#/ && NF>=6 && $1 != "" && $1 != "word" && $6 != ""' "$DICT" | wc -l | tr -d ' ')
     echo "  ${C_CYAN}With source URL:${C_RESET} ${C_BOLD}$src${C_RESET}/$total ($((src * 100 / total))%)"
     exit 0
     ;;
@@ -455,12 +471,13 @@ print(json.dumps(out, indent=2, ensure_ascii=False))
     [[ -z "${2:-}" ]] && { echo "say-it: usage: say-it badge <word>" >&2; exit 2; }
     word="$2"
     slug="$(printf '%s' "$word" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9._-]/-/g')"
-    line=$(awk -F'\t' -v w="$(printf '%s' "$word" | tr '[:upper:]' '[:lower:]')" '!/^#/ && tolower($1)==w { print; exit }' "$DICT")
-    if [[ -z "$line" ]]; then
+    sep=$'\x1f'
+    parsed=$(awk -F'\t' -v w="$(printf '%s' "$word" | tr '[:upper:]' '[:lower:]')" -v s="$sep" \
+      '!/^#/ && tolower($1)==w { print $2 s $3; exit }' "$DICT")
+    if [[ -z "$parsed" ]]; then
       echo "say-it badge: '$word' not in dictionary" >&2; exit 4
     fi
-    resp=$(echo "$line" | awk -F'\t' '{print $3}')
-    ipa=$(echo "$line" | awk -F'\t' '{print $2}')
+    IFS="$sep" read -r ipa resp <<< "$parsed"
     cat <<MD
 [![🔊 $word — $resp](https://img.shields.io/badge/🔊-$word%20%E2%86%92%20$(printf '%s' "$resp" | sed 's/ /%20/g')-ff6a3d?style=flat&logo=speakerdeck&logoColor=white)](https://pronounce.renlab.ai/word/$slug)
 MD
@@ -475,19 +492,16 @@ MD
   explain)
     [[ -z "${2:-}" ]] && { echo "say-it: usage: say-it explain <word>" >&2; exit 2; }
     word="$2"
-    line=$(awk -F'\t' -v w="$(printf '%s' "$word" | tr '[:upper:]' '[:lower:]')" '!/^#/ && tolower($1)==w { print; exit }' "$DICT")
-    if [[ -z "$line" ]]; then
+    # Single awk pass extracts every field, joined by \x1f (a non-whitespace
+    # separator so `read` won't collapse empty columns the way a tab would).
+    sep=$'\x1f'
+    parsed=$(awk -F'\t' -v w="$(printf '%s' "$word" | tr '[:upper:]' '[:lower:]')" -v s="$sep" \
+      '!/^#/ && tolower($1)==w { print $2 s $3 s $5 s $6 s $7 s $8 s $9 s $10; exit }' "$DICT")
+    if [[ -z "$parsed" ]]; then
       echo "say-it explain: '$word' not in dictionary" >&2
       exit 4
     fi
-    ipa=$(echo "$line" | awk -F'\t' '{print $2}')
-    resp=$(echo "$line" | awk -F'\t' '{print $3}')
-    alt=$(echo "$line" | awk -F'\t' '{print $5}')
-    src_url=$(echo "$line" | awk -F'\t' '{print $6}')
-    src_label=$(echo "$line" | awk -F'\t' '{print $7}')
-    cat=$(echo "$line" | awk -F'\t' '{print $8}')
-    conf=$(echo "$line" | awk -F'\t' '{print $9}')
-    notes=$(echo "$line" | awk -F'\t' '{print $10}')
+    IFS="$sep" read -r ipa resp alt src_url src_label cat conf notes <<< "$parsed"
     echo "${C_BOLD}$word${C_RESET}"
     echo ""
     echo "${C_DIM}Most engineers say it as${C_RESET} ${C_GREEN}\"$resp\"${C_RESET} ${C_DIM}($ipa)${C_RESET}."
@@ -544,14 +558,20 @@ MD
   minute)
     [[ -z "$DICT" ]] && { echo "say-it: dictionary not found" >&2; exit 4; }
     echo "${C_BOLD}🔊 60-second pronunciation drill${C_RESET}  ${C_DIM}(ctrl-C anytime)${C_RESET}"
+    # Load the dictionary once up front rather than re-scanning per word.
+    MWORDS=(); MRESPS=()
+    while IFS=$'\t' read -r _w _r; do MWORDS+=("$_w"); MRESPS+=("$_r"); done \
+      < <(awk -F'\t' '!/^#/ && NF>=3 && $1 != "" && $1 != "word" { print $1 "\t" $3 }' "$DICT")
+    n_min=${#MWORDS[@]}
+    [[ $n_min -eq 0 ]] && { echo "say-it minute: dictionary is empty" >&2; exit 4; }
     start=$(date +%s)
     count=0
     while :; do
       now=$(date +%s)
       (( now - start >= 60 )) && break
-      line=$(awk -F'\t' '!/^#/ && NF>=3 && $1 != "" && $1 != "word"' "$DICT" | sort -R | head -1)
-      word=$(echo "$line" | awk -F'\t' '{print $1}')
-      resp=$(echo "$line" | awk -F'\t' '{print $3}')
+      idx=$(( RANDOM % n_min ))
+      word="${MWORDS[$idx]}"
+      resp="${MRESPS[$idx]}"
       count=$((count+1))
       elapsed=$((now - start))
       remain=$((60 - elapsed))
@@ -684,12 +704,19 @@ EOF
     [[ -z "$DICT" ]] && { echo "say-it: dictionary not found" >&2; exit 4; }
     [[ -z "$TTS_BACKEND" ]] && { echo "say-it: no TTS backend found for quiz (install espeak-ng / say / PowerShell)" >&2; exit 3; }
     echo "${C_BOLD}🔊 say-it quiz${C_RESET} — listen and type the respelling. ctrl-C to quit."
+    # Load the whole dictionary once instead of scanning + shuffling the file
+    # every round (bash 3.2: parallel indexed arrays, no assoc arrays).
+    QWORDS=(); QRESPS=()
+    while IFS=$'\t' read -r _w _r; do QWORDS+=("$_w"); QRESPS+=("$_r"); done \
+      < <(awk -F'\t' '!/^#/ && NF>=3 && $1 != "" && $1 != "word" { print $1 "\t" $3 }' "$DICT")
+    n_quiz=${#QWORDS[@]}
+    [[ $n_quiz -eq 0 ]] && { echo "say-it quiz: dictionary is empty" >&2; exit 4; }
     score=0; rounds=0
     while :; do
       rounds=$((rounds+1))
-      line=$(awk -F'\t' '!/^#/ && NF>=3 && $1 != "" && $1 != "word"' "$DICT" | sort -R | head -1)
-      word=$(echo "$line" | awk -F'\t' '{print $1}')
-      resp=$(echo "$line" | awk -F'\t' '{print $3}')
+      idx=$(( RANDOM % n_quiz ))
+      word="${QWORDS[$idx]}"
+      resp="${QRESPS[$idx]}"
       echo ""
       echo "${C_DIM}#$rounds — ${C_RESET}${C_CYAN}plays in 3, 2, 1…${C_RESET}"
       sleep 0.7
