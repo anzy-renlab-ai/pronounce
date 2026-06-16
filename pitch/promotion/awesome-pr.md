@@ -9,7 +9,7 @@ For each list below, find the matching section, submit a PR with the bullet belo
 Section: `### Speech` (or `### Other` if Speech missing)
 
 ```markdown
-- [Pronounce](https://open-vsx.org/extension/sayit/pronounce) — hover any tech word in any file to hear how engineers actually say it. 851-entry sourced dictionary, audio via macOS `say`. Cursor / VSCodium / Zed / Gitpod / Theia compatible (Open VSX).
+- [Pronounce](https://open-vsx.org/extension/sayit/pronounce) — hover any tech word in any file to hear how engineers actually say it. 1702-entry sourced dictionary, audio via macOS `say`. Cursor / VSCodium / Zed / Gitpod / Theia compatible (Open VSX).
 ```
 
 ---
@@ -19,7 +19,7 @@ Section: `### Speech` (or `### Other` if Speech missing)
 If they accept extensions:
 
 ```markdown
-- [Pronounce](https://open-vsx.org/extension/sayit/pronounce) — sourced pronunciation dictionary for developer jargon. Hover-to-hear in Cursor. 851 entries.
+- [Pronounce](https://open-vsx.org/extension/sayit/pronounce) — sourced pronunciation dictionary for developer jargon. Hover-to-hear in Cursor. 1702 entries.
 ```
 
 ---
@@ -29,7 +29,7 @@ If they accept extensions:
 Section: `Developer Tools`
 
 ```markdown
-- [say-it](https://github.com/anzy-renlab-ai/pronounce) - Zero-dep Bash CLI for pronouncing developer jargon. 851-entry community dictionary with cited sources. Wraps macOS `say`. ![Open-Source Software][OSS Icon] ![Free][Freeware Icon]
+- [say-it](https://github.com/anzy-renlab-ai/pronounce) - Zero-dep Bash CLI for pronouncing developer jargon. 1702-entry community dictionary with cited sources. Wraps macOS `say`. ![Open-Source Software][OSS Icon] ![Free][Freeware Icon]
 ```
 
 ---
@@ -39,7 +39,7 @@ Section: `Developer Tools`
 Section: `Productivity` or `Just for Fun`
 
 ```markdown
-- [say-it](https://github.com/anzy-renlab-ai/pronounce) - Pronunciation dictionary for developer jargon. 851 entries with cited sources. macOS only.
+- [say-it](https://github.com/anzy-renlab-ai/pronounce) - Pronunciation dictionary for developer jargon. 1702 entries with cited sources. macOS only.
 ```
 
 ---
@@ -59,7 +59,7 @@ Section: `Useful applications`
 Section: `Tools / Skills`
 
 ```markdown
-- [Pronounce skill](https://github.com/anzy-renlab-ai/pronounce/tree/main/skills/pronounce-word) - Claude Code skill that auto-triggers on "how do you pronounce X" and plays real audio instead of confabulating IPA. Backed by an 851-entry sourced dictionary and an MCP server.
+- [Pronounce skill](https://github.com/anzy-renlab-ai/pronounce/tree/main/skills/pronounce-word) - Claude Code skill that auto-triggers on "how do you pronounce X" and plays real audio instead of confabulating IPA. Backed by an 1702-entry sourced dictionary and an MCP server.
 ```
 
 ---
@@ -69,7 +69,7 @@ Section: `Tools / Skills`
 Section: `Education / Reference` or `Misc`
 
 ```markdown
-- [Pronounce MCP](https://github.com/anzy-renlab-ai/pronounce/tree/main/mcp-server) - Pronunciation lookup for developer jargon. 851 cited entries. Tools: `lookup(word)`, `search(query)`. ([GitHub](https://github.com/anzy-renlab-ai/pronounce))
+- [Pronounce MCP](https://github.com/anzy-renlab-ai/pronounce/tree/main/mcp-server) - Pronunciation lookup for developer jargon. 1702 cited entries. Tools: `lookup(word)`, `search(query)`. ([GitHub](https://github.com/anzy-renlab-ai/pronounce))
 ```
 
 ---

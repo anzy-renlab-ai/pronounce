@@ -6,7 +6,7 @@ Total: 10 tweets. Attach `pitch/say-it-cli-demo.gif` to tweet 1 and `integration
 
 **1/** I got tired of hearing "kub-cuttle" on every standup.
 
-So I built a community pronunciation dictionary for the names engineers actually use. 851 entries, every one with a confidence tag and a citable source.
+So I built a community pronunciation dictionary for the names engineers actually use. 1702 entries, every one with a confidence tag and a citable source.
 
 🔗 https://pronounce.renlab.ai
 

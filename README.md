@@ -48,6 +48,39 @@ That's it. Now try `say-it GIF`, `say-it nginx`, `say-it Pydantic`, `say-it --wh
 
 ---
 
+## 🏆 The developer pronunciation scoreboard
+
+**1,702 entries, all sourced** — **60 settled by the creator themselves**, **143 the community still argues about.** The famous ones:
+
+### ✅ Settled — the creator said so
+
+| Word | It's… | …not | Settled by |
+|------|-------|------|-----------|
+| **[GIF](https://pronounce.renlab.ai/word/gif)** | "jif" | "gif" (hard g) | Steve Wilhite (creator), NYT 2013 |
+| **[nginx](https://pronounce.renlab.ai/word/nginx)** | "engine X" | "n-jinx" | NGINX official |
+| **[YAML](https://pronounce.renlab.ai/word/yaml)** | "yam-ul" | "yammel" | yaml.org |
+| **[GNU](https://pronounce.renlab.ai/word/gnu)** | "guh-NEW" (hard g) | "noo" | GNU Project |
+| **[LaTeX](https://pronounce.renlab.ai/word/latex)** | "lay-tek" | "lay-teks" | Lamport / LaTeX project |
+| **[TOML](https://pronounce.renlab.ai/word/toml)** | rhymes with "knoll" | "tom-el" | Tom Preston-Werner (creator) |
+| **[Tcl](https://pronounce.renlab.ai/word/tcl)** | "tickle" | "T-C-L" | John Ousterhout (creator) |
+| **[awk](https://pronounce.renlab.ai/word/awk)** | "auk" (like the bird) | "A-W-K" | Aho / Weinberger / Kernighan |
+
+### ⚔️ Still contested — both readings are in active use
+
+| Word | Camp A | Camp B |
+|------|--------|--------|
+| **[kubectl](https://pronounce.renlab.ai/word/kubectl)** | "koob-control" | "cube-cuddle" |
+| **[SQL](https://pronounce.renlab.ai/word/sql)** | "sequel" | "S-Q-L" |
+| **[JSON](https://pronounce.renlab.ai/word/json)** | "JAY-son" | "JEE-son" |
+| **[GUI](https://pronounce.renlab.ai/word/gui)** | "gooey" | "G-U-I" |
+| **[JWT](https://pronounce.renlab.ai/word/jwt)** | "jot" (per RFC 7519) | "J-W-T" |
+
+Every cell has IPA, audio, and the source. **[Hear all 1,702 →](https://pronounce.renlab.ai/browse)**
+
+> Disagree with one? That's the whole point — [open a PR](CONTRIBUTING.md) with your reading and a source. The argument *is* the dataset.
+
+---
+
 ## What you're actually getting
 
 - **1702 entries, every one sourced.** Confidence-tagged (`creator-clarified` / `community-consensus` / `contested`) with a citable URL where one exists. Wilhite said GIF is "jif" at the 2013 Webby Awards. Crockford says JSON is "JAY-son" (RailsConf 2009). RFC 7519 says JWT is "jot". The dictionary cites them.
