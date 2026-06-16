@@ -29,6 +29,11 @@ fi
 ENTRY_COUNT="$(awk -F'\t' '!/^#/ && NF>=3 && $1 != "" && $1 != "word"' "$DICT" | wc -l | tr -d ' ')"
 export ENTRY_COUNT
 
+# Build date — freshness signal (dateModified/datePublished) for JSON-LD, the
+# per-word API JSON, and the Dataset node. Recency is a top AI-citation gatekeeper.
+TODAY="$(date +%Y-%m-%d)"
+export TODAY
+
 mkdir -p "$DOCS" "$DOCS/word"
 
 # ---------------------------------------------------------------------------
@@ -1305,6 +1310,7 @@ cat > "$DOCS/browse.html" <<EOF
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="./style.css">
   <script defer src="/_vercel/insights/script.js"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Dataset","@id":"${SITE_URL}/#dataset","name":"${BRAND}: developer-jargon pronunciation dictionary","description":"A community-maintained dataset of ${ENTRY_COUNT}+ developer project, product, CLI-tool, CS-term, and acronym pronunciations, each with IPA, an English-like respelling, a confidence level (creator-clarified | community-consensus | contested), a citable source URL, and pre-rendered audio.","url":"${SITE_URL}/browse","license":"https://opensource.org/licenses/MIT","isAccessibleForFree":true,"keywords":["pronunciation","IPA","developer jargon","tech terms","respelling"],"creator":{"@type":"Organization","name":"${BRAND}","url":"${SITE_URL}/"},"dateModified":"${TODAY}","distribution":[{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"${SITE_URL}/api/words.json"},{"@type":"DataDownload","encodingFormat":"text/tab-separated-values","contentUrl":"https://github.com/${GH_REPO}/blob/main/data/pronunciations.tsv"}]},{"@type":"DefinedTermSet","@id":"${SITE_URL}/#dictionary","name":"${BRAND} — developer-jargon pronunciation dictionary","description":"How engineers actually pronounce ${ENTRY_COUNT}+ developer project, product, and jargon names.","url":"${SITE_URL}/browse"}]}</script>
 </head>
 <body>
   <div class="gh-banner">⭐ <a href="https://github.com/${GH_REPO}">Star on GitHub</a> — open source, MIT, every dictionary entry is a community PR</div>
@@ -1516,20 +1522,37 @@ while IFS="$SEP" read -r word ipa resp alt_ipa alt_resp src_url src_label cat co
   # AudioObject → enables audio rich result + Google Podcast-style surfacing
   # LearningResource → Google Search "Learning" rich results
   # BreadcrumbList → search snippet shows Home › Browse › word
-  jsonld_main="{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"$SITE_URL/word/$slug#webpage\",\"name\":\"How to pronounce $(jsonesc "$word")\",\"description\":\"$(jsonesc "$word") is most commonly pronounced \\\"$(jsonesc "$resp")\\\" ($(jsonesc "$ipa")).\",\"url\":\"$SITE_URL/word/$slug\",\"inLanguage\":\"en-US\",\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"$BRAND\",\"url\":\"$SITE_URL/\"},\"speakable\":{\"@type\":\"SpeakableSpecification\",\"cssSelector\":[\".resp-large\",\".prose p:first-child\"]}"
+  jsonld_main="{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"$SITE_URL/word/$slug#webpage\",\"name\":\"How to pronounce $(jsonesc "$word")\",\"description\":\"$(jsonesc "$word") is most commonly pronounced \\\"$(jsonesc "$resp")\\\" ($(jsonesc "$ipa")).\",\"url\":\"$SITE_URL/word/$slug\",\"inLanguage\":\"en-US\",\"isPartOf\":{\"@type\":\"WebSite\",\"name\":\"$BRAND\",\"url\":\"$SITE_URL/\"},\"speakable\":{\"@type\":\"SpeakableSpecification\",\"cssSelector\":[\".resp-large\",\".prose p:first-child\"]},\"dateModified\":\"$TODAY\",\"datePublished\":\"$TODAY\""
   if [[ -n "$src_url" ]]; then
     jsonld_main="$jsonld_main,\"citation\":\"$(jsonesc "$src_url")\""
   fi
-  jsonld_main="$jsonld_main},{\"@type\":\"AudioObject\",\"@id\":\"$SITE_URL/audio/$slug.mp3#audio\",\"name\":\"$(jsonesc "$word") pronunciation\",\"description\":\"Spoken pronunciation of $(jsonesc "$word") — \\\"$(jsonesc "$resp")\\\".\",\"contentUrl\":\"$SITE_URL/audio/$slug.mp3\",\"encodingFormat\":\"audio/mpeg\",\"inLanguage\":\"en-US\"},{\"@type\":\"LearningResource\",\"@id\":\"$SITE_URL/word/$slug#learning\",\"name\":\"How to pronounce $(jsonesc "$word")\",\"educationalLevel\":\"intermediate\",\"learningResourceType\":\"pronunciation\",\"teaches\":\"$(jsonesc "$word") pronunciation\",\"inLanguage\":\"en-US\",\"url\":\"$SITE_URL/word/$slug\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"$BRAND\",\"item\":\"$SITE_URL/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Browse\",\"item\":\"$SITE_URL/browse\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"$(jsonesc "$word")\",\"item\":\"$SITE_URL/word/$slug\"}]}]}"
+  jsonld_main="$jsonld_main},{\"@type\":\"AudioObject\",\"@id\":\"$SITE_URL/audio/$slug.mp3#audio\",\"name\":\"$(jsonesc "$word") pronunciation\",\"description\":\"Spoken pronunciation of $(jsonesc "$word") — \\\"$(jsonesc "$resp")\\\".\",\"contentUrl\":\"$SITE_URL/audio/$slug.mp3\",\"encodingFormat\":\"audio/mpeg\",\"inLanguage\":\"en-US\"},{\"@type\":\"LearningResource\",\"@id\":\"$SITE_URL/word/$slug#learning\",\"name\":\"How to pronounce $(jsonesc "$word")\",\"educationalLevel\":\"intermediate\",\"learningResourceType\":\"pronunciation\",\"teaches\":\"$(jsonesc "$word") pronunciation\",\"inLanguage\":\"en-US\",\"url\":\"$SITE_URL/word/$slug\"},{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"$BRAND\",\"item\":\"$SITE_URL/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Browse\",\"item\":\"$SITE_URL/browse\"},{\"@type\":\"ListItem\",\"position\":3,\"name\":\"$(jsonesc "$word")\",\"item\":\"$SITE_URL/word/$slug\"}]},{\"@type\":\"DefinedTerm\",\"@id\":\"$SITE_URL/word/$slug#term\",\"name\":\"$(jsonesc "$word")\",\"termCode\":\"$slug\",\"description\":\"$(jsonesc "$word") is pronounced \\\"$(jsonesc "$resp")\\\" ($(jsonesc "$ipa")).\",\"inDefinedTermSet\":{\"@type\":\"DefinedTermSet\",\"@id\":\"$SITE_URL/#dictionary\",\"name\":\"$BRAND — developer-jargon pronunciation dictionary\",\"url\":\"$SITE_URL/browse\"}}]}"
 
-  jsonld_faq=""
+  # FAQ — built for EVERY entry (FAQ/Q&A schema is the strongest AI-citation
+  # signal: ~4x AI-Overview citation vs none). Canonical "how do you pronounce"
+  # + IPA questions for all entries; alternate-reading questions for contested.
+  # Mirrored as a visible <section class="faq"> ($faq_visible_html) so both
+  # JSON-LD-aware and text-extraction crawlers get self-contained answers.
+  faq_main_q="How do you pronounce $(jsonesc "$word")?"
+  faq_main_a="$(jsonesc "$word") is pronounced \\\"$(jsonesc "$resp")\\\" ($(jsonesc "$ipa"))."
+  [[ -n "$notes" ]] && faq_main_a="$faq_main_a $(jsonesc "$notes")"
+  [[ -n "$src_url" ]] && faq_main_a="$faq_main_a Source: $(jsonesc "$src_label")."
+  faq_items="{\"@type\":\"Question\",\"name\":\"$faq_main_q\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"$faq_main_a\"}}"
+
+  faq_ipa_q="What is the IPA for $(jsonesc "$word")?"
+  faq_ipa_a="The IPA for $(jsonesc "$word") is $(jsonesc "$ipa"), respelled \\\"$(jsonesc "$resp")\\\"."
+  faq_items="$faq_items,{\"@type\":\"Question\",\"name\":\"$faq_ipa_q\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"$faq_ipa_a\"}}"
+
+  faq_extra=""
+  [[ -n "$notes" ]] && faq_extra=" $notes_esc"
+  [[ -n "$src_url" ]] && faq_extra="$faq_extra Source: <a href=\"$src_url_esc\" target=\"_blank\" rel=\"noopener\">$src_label_esc</a>."
+  faq_visible_html="    <section class=\"faq\">
+      <h2>How do you pronounce $word_esc?</h2>
+      <p><strong>$word_esc</strong> is pronounced <strong>&quot;$resp_esc&quot;</strong> ($ipa_esc).$faq_extra</p>
+      <h2>What is the IPA for $word_esc?</h2>
+      <p>The IPA for <strong>$word_esc</strong> is $ipa_esc, respelled &quot;$resp_esc&quot;.</p>"
+
   if [[ "$conf" == "contested" && -n "$alt_resp" ]]; then
-    # First question: the canonical answer. Then one per alt.
-    faq_main_q="How is $(jsonesc "$word") pronounced?"
-    faq_main_a="$(jsonesc "$word") is most commonly pronounced \\\"$(jsonesc "$resp")\\\" ($(jsonesc "$ipa"))."
-    [[ -n "$notes" ]] && faq_main_a="$faq_main_a $(jsonesc "$notes")"
-    faq_items="{\"@type\":\"Question\",\"name\":\"$faq_main_q\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"$faq_main_a\"}}"
-
     IFS='|' read -ra alts_array2 <<< "$alt_resp"
     IFS='|' read -ra alt_ipa_array2 <<< "$alt_ipa"
     j=0
@@ -1537,12 +1560,18 @@ while IFS="$SEP" read -r word ipa resp alt_ipa alt_resp src_url src_label cat co
       [[ -z "$a" ]] && continue
       a_ipa="${alt_ipa_array2[$j]:-}"
       faq_q="Is $(jsonesc "$word") sometimes pronounced \\\"$(jsonesc "$a")\\\"?"
-      faq_a="Yes — \\\"$(jsonesc "$a")\\\"${a_ipa:+ ($(jsonesc "$a_ipa"))} is one of the alternate readings in active use."
+      faq_a="Yes — \\\"$(jsonesc "$a")\\\"${a_ipa:+ ($(jsonesc "$a_ipa"))} is one of the alternate readings of $(jsonesc "$word") in active use."
       faq_items="$faq_items,{\"@type\":\"Question\",\"name\":\"$faq_q\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"$faq_a\"}}"
+      a_esc="$(htmlesc "$a")"; a_ipa_esc="$(htmlesc "$a_ipa")"
+      faq_visible_html="$faq_visible_html
+      <h2>Is $word_esc sometimes pronounced &quot;$a_esc&quot;?</h2>
+      <p>Yes — &quot;$a_esc&quot;${a_ipa:+ ($a_ipa_esc)} is one of the alternate readings of $word_esc in active use.</p>"
       j=$((j+1))
     done
-    jsonld_faq="{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[$faq_items]}"
   fi
+  faq_visible_html="$faq_visible_html
+    </section>"
+  jsonld_faq="{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[$faq_items]}"
 
   # Page title (long-tail keyword friendly)
   if [[ "$conf" == "contested" ]]; then
@@ -1659,6 +1688,8 @@ HTML
       <p>Pronouncing project and product names correctly avoids the small but persistent friction of being gently corrected during standups, conference Q&amp;As, and team calls. Hearing the word a few times locks in the right reading better than reading IPA ever will. <strong>$BRAND</strong> is a community-maintained dictionary — every entry tagged with a confidence level and (where possible) a citable source.</p>
     </section>
 
+$faq_visible_html
+
     <aside class="editor-cta">
       <h2>Don't look it up twice — hear it in your editor</h2>
       <p>Install the <strong>Pronounce</strong> extension and just <strong>hover</strong> $word_esc — or any of $ENTRY_COUNT tech words — to hear it, with IPA and the cited source, without leaving your code.</p>
@@ -1769,13 +1800,16 @@ awk -F'\t' '
     printf "  \"source_label\": \"%s\",\n", jesc(src_label) >> out
     printf "  \"category\": \"%s\",\n", jesc(cat) >> out
     printf "  \"confidence\": \"%s\",\n", jesc(conf) >> out
-    printf "  \"notes\": \"%s\"\n", jesc(notes) >> out
+    printf "  \"notes\": \"%s\",\n", jesc(notes) >> out
+    printf "  \"audio_url\": \"%s/audio/%s.mp3\",\n", site, slug(word) >> out
+    printf "  \"url\": \"%s/word/%s\",\n", site, slug(word) >> out
+    printf "  \"date_modified\": \"%s\"\n", today >> out
     print "}" >> out
     close(out)
     count++
   }
   END { print "Built " count " JSON API entries." }
-' outdir="$DOCS/api/word" "$DICT"
+' outdir="$DOCS/api/word" site="$SITE_URL" today="$TODAY" "$DICT"
 
 # Index JSON — list of all words for discovery
 {
@@ -2249,7 +2283,6 @@ cat > "$DOCS/robots.txt" <<EOF
 
 User-agent: *
 Allow: /
-Disallow: /api/openapi.json\$
 
 # AI training / retrieval crawlers — explicitly welcomed.
 # This site is community-curated, MIT-licensed, and meant to be the

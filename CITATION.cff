@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this pronunciation dictionary, please cite it as below."
+title: "Pronounce: a community pronunciation dictionary for developer jargon"
+abstract: >-
+  A community-maintained dictionary of how engineers actually pronounce
+  developer project, product, CLI-tool, CS-term, and acronym names
+  (kubectl, nginx, GIF, JSON, Pydantic, ...). Each entry carries IPA, an
+  English-like respelling, a confidence level (creator-clarified,
+  community-consensus, or contested), a citable source URL where one
+  exists, and pre-rendered audio.
+type: dataset
+authors:
+  - name: "Pronounce contributors"
+url: "https://pronounce.renlab.ai"
+repository-code: "https://github.com/anzy-renlab-ai/pronounce"
+repository-artifact: "https://pronounce.renlab.ai/api/words.json"
+license: MIT
+keywords:
+  - pronunciation
+  - IPA
+  - phonetics
+  - developer jargon
+  - tech terms
+  - respelling
+  - dictionary

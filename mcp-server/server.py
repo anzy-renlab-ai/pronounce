@@ -50,8 +50,8 @@ def pronounce(word: str) -> dict:
     """Look up the canonical pronunciation of a developer-related word.
 
     Returns the IPA, a respelling that approximates how engineers actually
-    say the word, optional alternate readings, the source citation when
-    available, and editorial notes. Use this for project names like
+    say the word, a playable MP3 `audio_url`, optional alternate readings,
+    the source citation when available, and editorial notes. Use this for project names like
     `kubectl`, `nginx`, `GIF`, `JSON`, `Pydantic`, `Knative`, programmer
     jargon, and tech acronyms. Returns an error dict if the word is not
     in the dictionary; for general English vocabulary, fall back to your
@@ -72,6 +72,7 @@ def pronounce(word: str) -> dict:
             }
         raise
     entry["url"] = f"{API_BASE}/word/{slug}"
+    entry.setdefault("audio_url", f"{API_BASE}/audio/{slug}.mp3")
     entry["source_repo"] = REPO_URL
     return entry
 

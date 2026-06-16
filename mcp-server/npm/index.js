@@ -163,6 +163,7 @@ const TOOL_HANDLERS = {
       throw err;
     }
     entry.url = `${API_BASE}/word/${slug}`;
+    if (entry.audio_url === undefined) entry.audio_url = `${API_BASE}/audio/${slug}.mp3`;
     entry.source_repo = REPO_URL;
     return entry;
   },
