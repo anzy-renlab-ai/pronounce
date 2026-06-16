@@ -8,5 +8,8 @@
   "source_label": "Forgejo",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "Esperanto-style; \"for-JAY-yo\". Gitea fork."
+  "notes": "Esperanto-style; \"for-JAY-yo\". Gitea fork.",
+  "audio_url": "https://pronounce.renlab.ai/audio/forgejo.mp3",
+  "url": "https://pronounce.renlab.ai/word/forgejo",
+  "date_modified": "2026-06-16"
 }

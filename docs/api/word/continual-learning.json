@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "cs-term",
   "confidence": "community-consensus",
-  "notes": "Sequential training across tasks without catastrophic forgetting; \"kun-TIN-yoo-ul learning\"."
+  "notes": "Sequential training across tasks without catastrophic forgetting; \"kun-TIN-yoo-ul learning\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/continual-learning.mp3",
+  "url": "https://pronounce.renlab.ai/word/continual-learning",
+  "date_modified": "2026-06-16"
 }

@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "acronym",
   "confidence": "contested",
-  "notes": "\"dag\" common in pipeline tools (Airflow, dagster); letter-by-letter \"D-A-G\" in CS papers."
+  "notes": "\"dag\" common in pipeline tools (Airflow, dagster); letter-by-letter \"D-A-G\" in CS papers.",
+  "audio_url": "https://pronounce.renlab.ai/audio/dag.mp3",
+  "url": "https://pronounce.renlab.ai/word/dag",
+  "date_modified": "2026-06-16"
 }

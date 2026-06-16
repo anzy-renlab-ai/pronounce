@@ -8,5 +8,8 @@
   "source_label": "AWS EC2",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"E-two-C\". Elastic Compute Cloud."
+  "notes": "\"E-two-C\". Elastic Compute Cloud.",
+  "audio_url": "https://pronounce.renlab.ai/audio/ec2.mp3",
+  "url": "https://pronounce.renlab.ai/word/ec2",
+  "date_modified": "2026-06-16"
 }

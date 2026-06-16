@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "tool",
   "confidence": "community-consensus",
-  "notes": "Topic-modeling library; \"JEN-sim\"."
+  "notes": "Topic-modeling library; \"JEN-sim\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/gensim.mp3",
+  "url": "https://pronounce.renlab.ai/word/gensim",
+  "date_modified": "2026-06-16"
 }

@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "cs-term",
   "confidence": "community-consensus",
-  "notes": "Knowledge distillation: train a small model to mimic a big one; \"dih-STILL\"."
+  "notes": "Knowledge distillation: train a small model to mimic a big one; \"dih-STILL\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/distill.mp3",
+  "url": "https://pronounce.renlab.ai/word/distill",
+  "date_modified": "2026-06-16"
 }

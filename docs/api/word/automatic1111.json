@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "Stable Diffusion WebUI; \"automatic-eleven-eleven\"."
+  "notes": "Stable Diffusion WebUI; \"automatic-eleven-eleven\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/automatic1111.mp3",
+  "url": "https://pronounce.renlab.ai/word/automatic1111",
+  "date_modified": "2026-06-16"
 }

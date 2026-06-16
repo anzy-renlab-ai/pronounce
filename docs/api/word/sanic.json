@@ -8,5 +8,8 @@
   "source_label": "Sanic",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"SON-ick\" — Python async framework."
+  "notes": "\"SON-ick\" — Python async framework.",
+  "audio_url": "https://pronounce.renlab.ai/audio/sanic.mp3",
+  "url": "https://pronounce.renlab.ai/word/sanic",
+  "date_modified": "2026-06-16"
 }

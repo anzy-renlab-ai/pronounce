@@ -8,5 +8,8 @@
   "source_label": "Starship",
   "category": "cli-tool",
   "confidence": "community-consensus",
-  "notes": "Cross-shell prompt. Standard compound \"star-ship.\""
+  "notes": "Cross-shell prompt. Standard compound \"star-ship.\"",
+  "audio_url": "https://pronounce.renlab.ai/audio/starship.mp3",
+  "url": "https://pronounce.renlab.ai/word/starship",
+  "date_modified": "2026-06-16"
 }

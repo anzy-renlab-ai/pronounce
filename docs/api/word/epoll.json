@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "cs-term",
   "confidence": "community-consensus",
-  "notes": "Linux I/O event notification; \"e-poll\"."
+  "notes": "Linux I/O event notification; \"e-poll\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/epoll.mp3",
+  "url": "https://pronounce.renlab.ai/word/epoll",
+  "date_modified": "2026-06-16"
 }

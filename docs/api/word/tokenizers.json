@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "tool",
   "confidence": "community-consensus",
-  "notes": "Hugging Face fast-tokenizers library."
+  "notes": "Hugging Face fast-tokenizers library.",
+  "audio_url": "https://pronounce.renlab.ai/audio/tokenizers.mp3",
+  "url": "https://pronounce.renlab.ai/word/tokenizers",
+  "date_modified": "2026-06-16"
 }

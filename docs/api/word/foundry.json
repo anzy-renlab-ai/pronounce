@@ -8,5 +8,8 @@
   "source_label": "Foundry",
   "category": "tool",
   "confidence": "community-consensus",
-  "notes": "\"FOUN-dree\". Solidity smart contract toolkit."
+  "notes": "\"FOUN-dree\". Solidity smart contract toolkit.",
+  "audio_url": "https://pronounce.renlab.ai/audio/foundry.mp3",
+  "url": "https://pronounce.renlab.ai/word/foundry",
+  "date_modified": "2026-06-16"
 }

@@ -8,5 +8,8 @@
   "source_label": "AWS ECS",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "Letters \"E-C-S\". Elastic Container Service."
+  "notes": "Letters \"E-C-S\". Elastic Container Service.",
+  "audio_url": "https://pronounce.renlab.ai/audio/ecs.mp3",
+  "url": "https://pronounce.renlab.ai/word/ecs",
+  "date_modified": "2026-06-16"
 }

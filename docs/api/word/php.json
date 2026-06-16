@@ -8,5 +8,8 @@
   "source_label": "PHP.net",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "Letters \"P-H-P\"."
+  "notes": "Letters \"P-H-P\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/php.mp3",
+  "url": "https://pronounce.renlab.ai/word/php",
+  "date_modified": "2026-06-16"
 }

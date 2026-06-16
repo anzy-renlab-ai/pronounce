@@ -8,5 +8,8 @@
   "source_label": "ENS",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "Letters \"E-N-S\". Ethereum Name Service."
+  "notes": "Letters \"E-N-S\". Ethereum Name Service.",
+  "audio_url": "https://pronounce.renlab.ai/audio/ens.mp3",
+  "url": "https://pronounce.renlab.ai/word/ens",
+  "date_modified": "2026-06-16"
 }

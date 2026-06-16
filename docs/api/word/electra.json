@@ -8,5 +8,8 @@
   "source_label": "Clark et al. 2020",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "Pre-train via replaced-token detection; \"uh-LEK-truh\"."
+  "notes": "Pre-train via replaced-token detection; \"uh-LEK-truh\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/electra.mp3",
+  "url": "https://pronounce.renlab.ai/word/electra",
+  "date_modified": "2026-06-16"
 }

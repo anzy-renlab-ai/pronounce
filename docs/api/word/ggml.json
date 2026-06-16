@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "tool",
   "confidence": "community-consensus",
-  "notes": "Tensor library behind llama.cpp; letters \"G-G-M-L\"."
+  "notes": "Tensor library behind llama.cpp; letters \"G-G-M-L\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/ggml.mp3",
+  "url": "https://pronounce.renlab.ai/word/ggml",
+  "date_modified": "2026-06-16"
 }

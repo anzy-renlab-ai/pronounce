@@ -8,5 +8,8 @@
   "source_label": "EdgeDB",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"EDGE-D-B\"."
+  "notes": "\"EDGE-D-B\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/edgedb.mp3",
+  "url": "https://pronounce.renlab.ai/word/edgedb",
+  "date_modified": "2026-06-16"
 }

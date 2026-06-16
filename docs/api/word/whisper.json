@@ -8,5 +8,8 @@
   "source_label": "OpenAI",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "English word \"whisper\". OpenAI speech-to-text."
+  "notes": "English word \"whisper\". OpenAI speech-to-text.",
+  "audio_url": "https://pronounce.renlab.ai/audio/whisper.mp3",
+  "url": "https://pronounce.renlab.ai/word/whisper",
+  "date_modified": "2026-06-16"
 }

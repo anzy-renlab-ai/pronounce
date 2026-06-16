@@ -8,5 +8,8 @@
   "source_label": "Li & Liang 2021",
   "category": "cs-term",
   "confidence": "community-consensus",
-  "notes": "Tune a learned prefix prepended to each layer's keys/values."
+  "notes": "Tune a learned prefix prepended to each layer's keys/values.",
+  "audio_url": "https://pronounce.renlab.ai/audio/prefix-tuning.mp3",
+  "url": "https://pronounce.renlab.ai/word/prefix-tuning",
+  "date_modified": "2026-06-16"
 }

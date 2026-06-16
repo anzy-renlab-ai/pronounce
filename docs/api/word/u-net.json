@@ -8,5 +8,8 @@
   "source_label": "Ronneberger et al. 2015",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "U-shaped encoder-decoder for segmentation; \"YOO-net\"."
+  "notes": "U-shaped encoder-decoder for segmentation; \"YOO-net\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/u-net.mp3",
+  "url": "https://pronounce.renlab.ai/word/u-net",
+  "date_modified": "2026-06-16"
 }

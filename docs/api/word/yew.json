@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "tool",
   "confidence": "community-consensus",
-  "notes": "Rust/WASM front-end framework; \"you\", like the yew tree."
+  "notes": "Rust/WASM front-end framework; \"you\", like the yew tree.",
+  "audio_url": "https://pronounce.renlab.ai/audio/yew.mp3",
+  "url": "https://pronounce.renlab.ai/word/yew",
+  "date_modified": "2026-06-16"
 }

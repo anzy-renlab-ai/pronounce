@@ -8,5 +8,8 @@
   "source_label": "DuckDB",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"DUCK-D-B\"."
+  "notes": "\"DUCK-D-B\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/duckdb.mp3",
+  "url": "https://pronounce.renlab.ai/word/duckdb",
+  "date_modified": "2026-06-16"
 }

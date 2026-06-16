@@ -8,5 +8,8 @@
   "source_label": "NVIDIA CUDA",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"KOO-duh\"."
+  "notes": "\"KOO-duh\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/cuda.mp3",
+  "url": "https://pronounce.renlab.ai/word/cuda",
+  "date_modified": "2026-06-16"
 }

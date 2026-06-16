@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "Stable Diffusion creative toolkit; \"Invoke-A-I\"."
+  "notes": "Stable Diffusion creative toolkit; \"Invoke-A-I\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/invokeai.mp3",
+  "url": "https://pronounce.renlab.ai/word/invokeai",
+  "date_modified": "2026-06-16"
 }

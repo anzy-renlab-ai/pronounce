@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "cs-term",
   "confidence": "community-consensus",
-  "notes": "\"pree-TRAIN\" — train from scratch on a large unlabeled corpus (the base step before fine-tuning)."
+  "notes": "\"pree-TRAIN\" — train from scratch on a large unlabeled corpus (the base step before fine-tuning).",
+  "audio_url": "https://pronounce.renlab.ai/audio/pretrain.mp3",
+  "url": "https://pronounce.renlab.ai/word/pretrain",
+  "date_modified": "2026-06-16"
 }

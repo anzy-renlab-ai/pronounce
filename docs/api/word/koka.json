@@ -8,5 +8,8 @@
   "source_label": "The Koka Programming Language (official book/docs)",
   "category": "project",
   "confidence": "community-consensus",
-  "notes": "Microsoft Research functional language with algebraic effect handlers (Daan Leijen). Name from Japanese 効果 (kōka) \"effect/effectiveness\" — matching its effect-typing focus. STRESS first syllable: KOH-kuh, long-o then schwa. Japanese-faithful variant is KOH-kah (koh kah)."
+  "notes": "Microsoft Research functional language with algebraic effect handlers (Daan Leijen). Name from Japanese 効果 (kōka) \"effect/effectiveness\" — matching its effect-typing focus. STRESS first syllable: KOH-kuh, long-o then schwa. Japanese-faithful variant is KOH-kah (koh kah).",
+  "audio_url": "https://pronounce.renlab.ai/audio/koka.mp3",
+  "url": "https://pronounce.renlab.ai/word/koka",
+  "date_modified": "2026-06-16"
 }

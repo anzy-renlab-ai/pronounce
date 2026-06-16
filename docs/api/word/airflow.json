@@ -8,5 +8,8 @@
   "source_label": "Apache Airflow",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"AIR-flow\"."
+  "notes": "\"AIR-flow\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/airflow.mp3",
+  "url": "https://pronounce.renlab.ai/word/airflow",
+  "date_modified": "2026-06-16"
 }

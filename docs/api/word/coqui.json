@@ -8,5 +8,8 @@
   "source_label": "Coqui",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "Puerto Rican coquí frog; \"KO-kee\". Open TTS."
+  "notes": "Puerto Rican coquí frog; \"KO-kee\". Open TTS.",
+  "audio_url": "https://pronounce.renlab.ai/audio/coqui.mp3",
+  "url": "https://pronounce.renlab.ai/word/coqui",
+  "date_modified": "2026-06-16"
 }

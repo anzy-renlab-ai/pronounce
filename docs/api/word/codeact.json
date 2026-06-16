@@ -8,5 +8,8 @@
   "source_label": "arXiv 2402.01030 — \"Executable Code Actions Elicit Better LLM Agents\" (Wang et al., ICML 2024)",
   "category": "cs-term",
   "confidence": "community-consensus",
-  "notes": "Coined compound of \"Code\" + \"Act(ion)\" from the ICML 2024 paper; the agent framework that lets LLMs emit executable Python as their action space (underpins OpenHands / CodeActAgent). Two plain English words; STRESS first syllable: CODE-act (noun-compound stress), not code-ACT."
+  "notes": "Coined compound of \"Code\" + \"Act(ion)\" from the ICML 2024 paper; the agent framework that lets LLMs emit executable Python as their action space (underpins OpenHands / CodeActAgent). Two plain English words; STRESS first syllable: CODE-act (noun-compound stress), not code-ACT.",
+  "audio_url": "https://pronounce.renlab.ai/audio/codeact.mp3",
+  "url": "https://pronounce.renlab.ai/word/codeact",
+  "date_modified": "2026-06-16"
 }

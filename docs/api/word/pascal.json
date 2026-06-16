@@ -8,5 +8,8 @@
   "source_label": "NVIDIA Pascal",
   "category": "product",
   "confidence": "contested",
-  "notes": "Programming-language origin \"PAS-kuhl\"; NVIDIA uses \"pas-KAL\" in talks. After Blaise Pascal."
+  "notes": "Programming-language origin \"PAS-kuhl\"; NVIDIA uses \"pas-KAL\" in talks. After Blaise Pascal.",
+  "audio_url": "https://pronounce.renlab.ai/audio/pascal.mp3",
+  "url": "https://pronounce.renlab.ai/word/pascal",
+  "date_modified": "2026-06-16"
 }

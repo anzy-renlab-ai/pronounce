@@ -8,5 +8,8 @@
   "source_label": "Krizhevsky et al. 2012",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "The 2012 ImageNet winner; \"AL-eks-net\"."
+  "notes": "The 2012 ImageNet winner; \"AL-eks-net\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/alexnet.mp3",
+  "url": "https://pronounce.renlab.ai/word/alexnet",
+  "date_modified": "2026-06-16"
 }

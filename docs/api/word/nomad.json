@@ -8,5 +8,8 @@
   "source_label": "HashiCorp Nomad",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"NO-mad\"."
+  "notes": "\"NO-mad\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/nomad.mp3",
+  "url": "https://pronounce.renlab.ai/word/nomad",
+  "date_modified": "2026-06-16"
 }

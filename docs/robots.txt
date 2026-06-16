@@ -3,7 +3,6 @@
 
 User-agent: *
 Allow: /
-Disallow: /api/openapi.json$
 
 # AI training / retrieval crawlers — explicitly welcomed.
 # This site is community-curated, MIT-licensed, and meant to be the

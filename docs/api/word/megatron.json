@@ -8,5 +8,8 @@
   "source_label": "NVIDIA Megatron",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"MEG-uh-tron\" — large-scale training framework."
+  "notes": "\"MEG-uh-tron\" — large-scale training framework.",
+  "audio_url": "https://pronounce.renlab.ai/audio/megatron.mp3",
+  "url": "https://pronounce.renlab.ai/word/megatron",
+  "date_modified": "2026-06-16"
 }

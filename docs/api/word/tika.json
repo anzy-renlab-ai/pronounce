@@ -8,5 +8,8 @@
   "source_label": "tika.apache.org",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"TEE-kuh\". Apache content-extraction toolkit."
+  "notes": "\"TEE-kuh\". Apache content-extraction toolkit.",
+  "audio_url": "https://pronounce.renlab.ai/audio/tika.mp3",
+  "url": "https://pronounce.renlab.ai/word/tika",
+  "date_modified": "2026-06-16"
 }

@@ -8,5 +8,8 @@
   "source_label": "NVIDIA Grace",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"grace\" the word. NVIDIA ARM CPU, named after Grace Hopper."
+  "notes": "\"grace\" the word. NVIDIA ARM CPU, named after Grace Hopper.",
+  "audio_url": "https://pronounce.renlab.ai/audio/grace.mp3",
+  "url": "https://pronounce.renlab.ai/word/grace",
+  "date_modified": "2026-06-16"
 }

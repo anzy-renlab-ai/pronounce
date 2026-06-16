@@ -8,5 +8,8 @@
   "source_label": "Google Spanner",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"SPAN-er\" — Google's global SQL DB."
+  "notes": "\"SPAN-er\" — Google's global SQL DB.",
+  "audio_url": "https://pronounce.renlab.ai/audio/spanner.mp3",
+  "url": "https://pronounce.renlab.ai/word/spanner",
+  "date_modified": "2026-06-16"
 }

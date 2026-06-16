@@ -8,5 +8,8 @@
   "source_label": "Docker",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"DOCK-er\" — like the dock worker."
+  "notes": "\"DOCK-er\" — like the dock worker.",
+  "audio_url": "https://pronounce.renlab.ai/audio/docker.mp3",
+  "url": "https://pronounce.renlab.ai/word/docker",
+  "date_modified": "2026-06-16"
 }

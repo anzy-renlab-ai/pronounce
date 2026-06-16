@@ -8,5 +8,8 @@
   "source_label": "LMSYS",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "South American camelid; \"vih-KOON-yah\". LMSYS fine-tune."
+  "notes": "South American camelid; \"vih-KOON-yah\". LMSYS fine-tune.",
+  "audio_url": "https://pronounce.renlab.ai/audio/vicuna.mp3",
+  "url": "https://pronounce.renlab.ai/word/vicuna",
+  "date_modified": "2026-06-16"
 }

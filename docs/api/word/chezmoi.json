@@ -8,5 +8,8 @@
   "source_label": "chezmoi official FAQ (Design)",
   "category": "cli-tool",
   "confidence": "creator-clarified",
-  "notes": "CLI dotfiles manager. Name = French \"chez moi\" (\"at my house\"). Official FAQ documents the pronunciation as /ʃeɪ mwa/ \"shay-mwa\". Non-obvious because the spelling looks English/German; the \"z\" is silent and \"oi\" is the French [wa], not English \"oy\"."
+  "notes": "CLI dotfiles manager. Name = French \"chez moi\" (\"at my house\"). Official FAQ documents the pronunciation as /ʃeɪ mwa/ \"shay-mwa\". Non-obvious because the spelling looks English/German; the \"z\" is silent and \"oi\" is the French [wa], not English \"oy\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/chezmoi.mp3",
+  "url": "https://pronounce.renlab.ai/word/chezmoi",
+  "date_modified": "2026-06-16"
 }

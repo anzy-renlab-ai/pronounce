@@ -8,5 +8,8 @@
   "source_label": "raft.github.io",
   "category": "cs-term",
   "confidence": "creator-clarified",
-  "notes": "\"raft\" the word. Consensus algorithm by Diego Ongaro + John Ousterhout, intended as \"more understandable than Paxos\"."
+  "notes": "\"raft\" the word. Consensus algorithm by Diego Ongaro + John Ousterhout, intended as \"more understandable than Paxos\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/raft.mp3",
+  "url": "https://pronounce.renlab.ai/word/raft",
+  "date_modified": "2026-06-16"
 }

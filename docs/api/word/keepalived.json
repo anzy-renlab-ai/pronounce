@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "VRRP/load-balance daemon; \"keep-alive-d\"."
+  "notes": "VRRP/load-balance daemon; \"keep-alive-d\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/keepalived.mp3",
+  "url": "https://pronounce.renlab.ai/word/keepalived",
+  "date_modified": "2026-06-16"
 }

@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "cli-tool",
   "confidence": "community-consensus",
-  "notes": "Postgres CLI; usually letters \"P-S-Q-L\"."
+  "notes": "Postgres CLI; usually letters \"P-S-Q-L\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/psql.mp3",
+  "url": "https://pronounce.renlab.ai/word/psql",
+  "date_modified": "2026-06-16"
 }

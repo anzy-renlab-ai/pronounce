@@ -8,5 +8,8 @@
   "source_label": "Rancher",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"K-three-S\" (lightweight K8s)."
+  "notes": "\"K-three-S\" (lightweight K8s).",
+  "audio_url": "https://pronounce.renlab.ai/audio/k3s.mp3",
+  "url": "https://pronounce.renlab.ai/word/k3s",
+  "date_modified": "2026-06-16"
 }

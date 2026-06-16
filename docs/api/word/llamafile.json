@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "tool",
   "confidence": "community-consensus",
-  "notes": "Single-file LLM executable; \"llama-file\"."
+  "notes": "Single-file LLM executable; \"llama-file\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/llamafile.mp3",
+  "url": "https://pronounce.renlab.ai/word/llamafile",
+  "date_modified": "2026-06-16"
 }

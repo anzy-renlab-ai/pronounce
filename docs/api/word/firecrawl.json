@@ -8,5 +8,8 @@
   "source_label": "Firecrawl",
   "category": "project",
   "confidence": "community-consensus",
-  "notes": "Web-crawling API for LLMs. Compound \"fire-crawl.\""
+  "notes": "Web-crawling API for LLMs. Compound \"fire-crawl.\"",
+  "audio_url": "https://pronounce.renlab.ai/audio/firecrawl.mp3",
+  "url": "https://pronounce.renlab.ai/word/firecrawl",
+  "date_modified": "2026-06-16"
 }

@@ -8,5 +8,8 @@
   "source_label": "NVIDIA TensorRT",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"TENSOR-R-T\"."
+  "notes": "\"TENSOR-R-T\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/tensorrt.mp3",
+  "url": "https://pronounce.renlab.ai/word/tensorrt",
+  "date_modified": "2026-06-16"
 }

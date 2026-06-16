@@ -8,5 +8,8 @@
   "source_label": "Sapling SCM",
   "category": "cli-tool",
   "confidence": "community-consensus",
-  "notes": "Meta's VCS. Same as the young tree."
+  "notes": "Meta's VCS. Same as the young tree.",
+  "audio_url": "https://pronounce.renlab.ai/audio/sapling.mp3",
+  "url": "https://pronounce.renlab.ai/word/sapling",
+  "date_modified": "2026-06-16"
 }

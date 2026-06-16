@@ -8,5 +8,8 @@
   "source_label": "Wikipedia § Pronunciation",
   "category": "acronym",
   "confidence": "contested",
-  "notes": "ANSI: \"S-Q-L\"; practitioner: \"sequel\" (heir to IBM SEQUEL)."
+  "notes": "ANSI: \"S-Q-L\"; practitioner: \"sequel\" (heir to IBM SEQUEL).",
+  "audio_url": "https://pronounce.renlab.ai/audio/sql.mp3",
+  "url": "https://pronounce.renlab.ai/word/sql",
+  "date_modified": "2026-06-16"
 }

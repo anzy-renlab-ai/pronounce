@@ -8,5 +8,8 @@
   "source_label": "AWS IAM",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "Letters \"I-A-M\". Identity and Access Management."
+  "notes": "Letters \"I-A-M\". Identity and Access Management.",
+  "audio_url": "https://pronounce.renlab.ai/audio/iam.mp3",
+  "url": "https://pronounce.renlab.ai/word/iam",
+  "date_modified": "2026-06-16"
 }

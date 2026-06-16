@@ -8,5 +8,8 @@
   "source_label": "SQLite docs",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"S-Q-L-ite\" preferred (per project lore)."
+  "notes": "\"S-Q-L-ite\" preferred (per project lore).",
+  "audio_url": "https://pronounce.renlab.ai/audio/sqlite.mp3",
+  "url": "https://pronounce.renlab.ai/word/sqlite",
+  "date_modified": "2026-06-16"
 }

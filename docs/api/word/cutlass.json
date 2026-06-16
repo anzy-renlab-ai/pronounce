@@ -8,5 +8,8 @@
   "source_label": "NVIDIA/cutlass GitHub repo",
   "category": "project",
   "confidence": "community-consensus",
-  "notes": "NVIDIA's CUDA C++ GEMM/linear-algebra template library; kernel backend behind vLLM, FlashInfer, and many 2025 LLM-serving stacks. The name is an acronym (CUDA Templates for Linear Algebra Subroutines and Solvers) deliberately landing on the sword 'cutlass' — say it exactly like that word. STRESS first syllable: KUT-luhs. NOT 'CUDA-lass' or 'cut-LASS'. Dictionary IPA /ˈkʌtləs/ (Oxford/Cambridge/Collins, same in BrE and AmE)."
+  "notes": "NVIDIA's CUDA C++ GEMM/linear-algebra template library; kernel backend behind vLLM, FlashInfer, and many 2025 LLM-serving stacks. The name is an acronym (CUDA Templates for Linear Algebra Subroutines and Solvers) deliberately landing on the sword 'cutlass' — say it exactly like that word. STRESS first syllable: KUT-luhs. NOT 'CUDA-lass' or 'cut-LASS'. Dictionary IPA /ˈkʌtləs/ (Oxford/Cambridge/Collins, same in BrE and AmE).",
+  "audio_url": "https://pronounce.renlab.ai/audio/cutlass.mp3",
+  "url": "https://pronounce.renlab.ai/word/cutlass",
+  "date_modified": "2026-06-16"
 }

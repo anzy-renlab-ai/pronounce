@@ -8,5 +8,8 @@
   "source_label": "microservices.io",
   "category": "cs-term",
   "confidence": "community-consensus",
-  "notes": "\"SAH-guh\". Long-running distributed transaction pattern."
+  "notes": "\"SAH-guh\". Long-running distributed transaction pattern.",
+  "audio_url": "https://pronounce.renlab.ai/audio/saga.mp3",
+  "url": "https://pronounce.renlab.ai/word/saga",
+  "date_modified": "2026-06-16"
 }

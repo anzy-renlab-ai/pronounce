@@ -8,5 +8,8 @@
   "source_label": "Microsoft 2024",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "Graph-based RAG; \"GRAF-rag\"."
+  "notes": "Graph-based RAG; \"GRAF-rag\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/graphrag.mp3",
+  "url": "https://pronounce.renlab.ai/word/graphrag",
+  "date_modified": "2026-06-16"
 }

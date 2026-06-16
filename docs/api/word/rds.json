@@ -8,5 +8,8 @@
   "source_label": "AWS RDS",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "Letters \"R-D-S\". Relational Database Service."
+  "notes": "Letters \"R-D-S\". Relational Database Service.",
+  "audio_url": "https://pronounce.renlab.ai/audio/rds.mp3",
+  "url": "https://pronounce.renlab.ai/word/rds",
+  "date_modified": "2026-06-16"
 }

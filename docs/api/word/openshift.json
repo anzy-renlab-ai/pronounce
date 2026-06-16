@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "Red Hat Kubernetes platform; \"open-shift\"."
+  "notes": "Red Hat Kubernetes platform; \"open-shift\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/openshift.mp3",
+  "url": "https://pronounce.renlab.ai/word/openshift",
+  "date_modified": "2026-06-16"
 }

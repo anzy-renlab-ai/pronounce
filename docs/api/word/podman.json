@@ -8,5 +8,8 @@
   "source_label": "Podman site",
   "category": "tool",
   "confidence": "community-consensus",
-  "notes": "\"POD-man\"."
+  "notes": "\"POD-man\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/podman.mp3",
+  "url": "https://pronounce.renlab.ai/word/podman",
+  "date_modified": "2026-06-16"
 }

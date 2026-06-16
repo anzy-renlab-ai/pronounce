@@ -8,5 +8,8 @@
   "source_label": "NVIDIA NCCL Developer Guide — Overview",
   "category": "product",
   "confidence": "creator-clarified",
-  "notes": "NVIDIA Collective Communications Library — GPU collective comms (all-reduce, all-gather) for distributed ML training. Official docs: \"NCCL, pronounced 'Nickel'\". Said like the coin/metal: NIK-uhl, stress on first syllable. Non-obvious from the letters N-C-C-L."
+  "notes": "NVIDIA Collective Communications Library — GPU collective comms (all-reduce, all-gather) for distributed ML training. Official docs: \"NCCL, pronounced 'Nickel'\". Said like the coin/metal: NIK-uhl, stress on first syllable. Non-obvious from the letters N-C-C-L.",
+  "audio_url": "https://pronounce.renlab.ai/audio/nccl.mp3",
+  "url": "https://pronounce.renlab.ai/word/nccl",
+  "date_modified": "2026-06-16"
 }

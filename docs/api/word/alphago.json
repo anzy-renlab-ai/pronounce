@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "DeepMind Go agent; \"AL-fuh-go\"."
+  "notes": "DeepMind Go agent; \"AL-fuh-go\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/alphago.mp3",
+  "url": "https://pronounce.renlab.ai/word/alphago",
+  "date_modified": "2026-06-16"
 }

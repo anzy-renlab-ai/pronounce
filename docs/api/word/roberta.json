@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "Robustly-optimized BERT; \"ro-BER-tuh\"."
+  "notes": "Robustly-optimized BERT; \"ro-BER-tuh\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/roberta.mp3",
+  "url": "https://pronounce.renlab.ai/word/roberta",
+  "date_modified": "2026-06-16"
 }

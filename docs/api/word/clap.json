@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "tool",
   "confidence": "community-consensus",
-  "notes": "Rust Command Line Argument Parser; \"clap\", like applause."
+  "notes": "Rust Command Line Argument Parser; \"clap\", like applause.",
+  "audio_url": "https://pronounce.renlab.ai/audio/clap.mp3",
+  "url": "https://pronounce.renlab.ai/word/clap",
+  "date_modified": "2026-06-16"
 }

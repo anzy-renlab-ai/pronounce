@@ -8,5 +8,8 @@
   "source_label": "Anthropic Claude",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"HIGH-koo\" — Japanese poetic form. Anthropic's fast tier."
+  "notes": "\"HIGH-koo\" — Japanese poetic form. Anthropic's fast tier.",
+  "audio_url": "https://pronounce.renlab.ai/audio/haiku.mp3",
+  "url": "https://pronounce.renlab.ai/word/haiku",
+  "date_modified": "2026-06-16"
 }

@@ -8,5 +8,8 @@
   "source_label": "ComfyUI",
   "category": "tool",
   "confidence": "community-consensus",
-  "notes": "Node-based UI for Stable Diffusion. \"KUM-fee U-I\" (letters for UI)."
+  "notes": "Node-based UI for Stable Diffusion. \"KUM-fee U-I\" (letters for UI).",
+  "audio_url": "https://pronounce.renlab.ai/audio/comfyui.mp3",
+  "url": "https://pronounce.renlab.ai/word/comfyui",
+  "date_modified": "2026-06-16"
 }

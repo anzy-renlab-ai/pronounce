@@ -8,5 +8,8 @@
   "source_label": "CentOS",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"cent-O-S\"."
+  "notes": "\"cent-O-S\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/centos.mp3",
+  "url": "https://pronounce.renlab.ai/word/centos",
+  "date_modified": "2026-06-16"
 }

@@ -8,5 +8,8 @@
   "source_label": "Fedora",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"fuh-DOR-uh\"."
+  "notes": "\"fuh-DOR-uh\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/fedora.mp3",
+  "url": "https://pronounce.renlab.ai/word/fedora",
+  "date_modified": "2026-06-16"
 }

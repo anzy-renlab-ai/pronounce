@@ -8,5 +8,8 @@
   "source_label": "Lewis et al. 2019",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "Denoising seq2seq pre-train; \"bart\" like the name."
+  "notes": "Denoising seq2seq pre-train; \"bart\" like the name.",
+  "audio_url": "https://pronounce.renlab.ai/audio/bart.mp3",
+  "url": "https://pronounce.renlab.ai/word/bart",
+  "date_modified": "2026-06-16"
 }

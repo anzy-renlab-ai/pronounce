@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "cs-term",
   "confidence": "community-consensus",
-  "notes": "\"PROMPT\" — the input string fed to an LM."
+  "notes": "\"PROMPT\" — the input string fed to an LM.",
+  "audio_url": "https://pronounce.renlab.ai/audio/prompt.mp3",
+  "url": "https://pronounce.renlab.ai/word/prompt",
+  "date_modified": "2026-06-16"
 }

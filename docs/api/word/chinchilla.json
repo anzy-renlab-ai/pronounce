@@ -8,5 +8,8 @@
   "source_label": "Hoffmann et al. 2022",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "DeepMind compute-optimal LM (the \"Chinchilla scaling laws\"); \"chin-CHIL-uh\"."
+  "notes": "DeepMind compute-optimal LM (the \"Chinchilla scaling laws\"); \"chin-CHIL-uh\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/chinchilla.mp3",
+  "url": "https://pronounce.renlab.ai/word/chinchilla",
+  "date_modified": "2026-06-16"
 }

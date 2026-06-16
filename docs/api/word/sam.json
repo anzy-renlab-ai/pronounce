@@ -8,5 +8,8 @@
   "source_label": "Meta SAM",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"sam\" — name. Segment Anything Model."
+  "notes": "\"sam\" — name. Segment Anything Model.",
+  "audio_url": "https://pronounce.renlab.ai/audio/sam.mp3",
+  "url": "https://pronounce.renlab.ai/word/sam",
+  "date_modified": "2026-06-16"
 }

@@ -8,5 +8,8 @@
   "source_label": "HuggingFace smolagents",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"SMOL-agents\" — Hugging Face tiny agent lib."
+  "notes": "\"SMOL-agents\" — Hugging Face tiny agent lib.",
+  "audio_url": "https://pronounce.renlab.ai/audio/smolagents.mp3",
+  "url": "https://pronounce.renlab.ai/word/smolagents",
+  "date_modified": "2026-06-16"
 }

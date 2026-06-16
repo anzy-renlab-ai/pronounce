@@ -8,5 +8,8 @@
   "source_label": "Wireshark",
   "category": "tool",
   "confidence": "community-consensus",
-  "notes": "\"WIRE-shark\"."
+  "notes": "\"WIRE-shark\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/wireshark.mp3",
+  "url": "https://pronounce.renlab.ai/word/wireshark",
+  "date_modified": "2026-06-16"
 }

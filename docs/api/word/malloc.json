@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "cs-term",
   "confidence": "contested",
-  "notes": "Memory allocate; \"MAL-ock\" common."
+  "notes": "Memory allocate; \"MAL-ock\" common.",
+  "audio_url": "https://pronounce.renlab.ai/audio/malloc.mp3",
+  "url": "https://pronounce.renlab.ai/word/malloc",
+  "date_modified": "2026-06-16"
 }

@@ -8,5 +8,8 @@
   "source_label": "RFC 8017",
   "category": "acronym",
   "confidence": "contested",
-  "notes": "Letter-by-letter dominant; some crypto folks say \"WAY-ep\". Optimal Asymmetric Encryption Padding."
+  "notes": "Letter-by-letter dominant; some crypto folks say \"WAY-ep\". Optimal Asymmetric Encryption Padding.",
+  "audio_url": "https://pronounce.renlab.ai/audio/oaep.mp3",
+  "url": "https://pronounce.renlab.ai/word/oaep",
+  "date_modified": "2026-06-16"
 }

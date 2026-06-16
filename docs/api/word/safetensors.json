@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "tool",
   "confidence": "community-consensus",
-  "notes": "Safe model-weight serialization format; \"safe-tensors\"."
+  "notes": "Safe model-weight serialization format; \"safe-tensors\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/safetensors.mp3",
+  "url": "https://pronounce.renlab.ai/word/safetensors",
+  "date_modified": "2026-06-16"
 }

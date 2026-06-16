@@ -8,5 +8,8 @@
   "source_label": "OpenAI o1",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"O-one\". OpenAI reasoning model."
+  "notes": "\"O-one\". OpenAI reasoning model.",
+  "audio_url": "https://pronounce.renlab.ai/audio/o1.mp3",
+  "url": "https://pronounce.renlab.ai/word/o1",
+  "date_modified": "2026-06-16"
 }

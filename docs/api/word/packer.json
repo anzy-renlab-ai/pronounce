@@ -8,5 +8,8 @@
   "source_label": "HashiCorp Packer",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"PACK-er\"."
+  "notes": "\"PACK-er\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/packer.mp3",
+  "url": "https://pronounce.renlab.ai/word/packer",
+  "date_modified": "2026-06-16"
 }

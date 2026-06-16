@@ -8,5 +8,8 @@
   "source_label": "Bengio et al. 2009",
   "category": "cs-term",
   "confidence": "community-consensus",
-  "notes": "Train on easy examples first, then harder; \"kuh-RIK-yu-lum learning\"."
+  "notes": "Train on easy examples first, then harder; \"kuh-RIK-yu-lum learning\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/curriculum-learning.mp3",
+  "url": "https://pronounce.renlab.ai/word/curriculum-learning",
+  "date_modified": "2026-06-16"
 }

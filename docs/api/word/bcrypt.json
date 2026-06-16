@@ -8,5 +8,8 @@
   "source_label": "Provos & Mazières 1999",
   "category": "cs-term",
   "confidence": "community-consensus",
-  "notes": "\"B-crypt\" — B for Blowfish + crypt."
+  "notes": "\"B-crypt\" — B for Blowfish + crypt.",
+  "audio_url": "https://pronounce.renlab.ai/audio/bcrypt.mp3",
+  "url": "https://pronounce.renlab.ai/word/bcrypt",
+  "date_modified": "2026-06-16"
 }

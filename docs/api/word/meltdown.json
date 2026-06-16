@@ -8,5 +8,8 @@
   "source_label": "meltdownattack.com",
   "category": "cs-term",
   "confidence": "community-consensus",
-  "notes": "\"melt-down\". CPU vuln paired with Spectre."
+  "notes": "\"melt-down\". CPU vuln paired with Spectre.",
+  "audio_url": "https://pronounce.renlab.ai/audio/meltdown.mp3",
+  "url": "https://pronounce.renlab.ai/word/meltdown",
+  "date_modified": "2026-06-16"
 }

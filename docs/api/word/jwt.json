@@ -8,5 +8,8 @@
   "source_label": "IETF RFC 7519",
   "category": "acronym",
   "confidence": "contested",
-  "notes": "\"jot\" (RFC pronunciation per Section 1) — but letter-by-letter \"J-W-T\" dominates in spoken practice."
+  "notes": "\"jot\" (RFC pronunciation per Section 1) — but letter-by-letter \"J-W-T\" dominates in spoken practice.",
+  "audio_url": "https://pronounce.renlab.ai/audio/jwt.mp3",
+  "url": "https://pronounce.renlab.ai/word/jwt",
+  "date_modified": "2026-06-16"
 }

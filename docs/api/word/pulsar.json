@@ -8,5 +8,8 @@
   "source_label": "Apache Pulsar",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"PUL-sar\"."
+  "notes": "\"PUL-sar\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/pulsar.mp3",
+  "url": "https://pronounce.renlab.ai/word/pulsar",
+  "date_modified": "2026-06-16"
 }

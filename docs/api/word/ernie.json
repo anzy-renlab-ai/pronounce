@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "Baidu's ERNIE LLM; \"ER-nee\", a play on BERT (Bert & Ernie)."
+  "notes": "Baidu's ERNIE LLM; \"ER-nee\", a play on BERT (Bert & Ernie).",
+  "audio_url": "https://pronounce.renlab.ai/audio/ernie.mp3",
+  "url": "https://pronounce.renlab.ai/word/ernie",
+  "date_modified": "2026-06-16"
 }

@@ -8,5 +8,8 @@
   "source_label": "jj VCS GitHub",
   "category": "cli-tool",
   "confidence": "community-consensus",
-  "notes": "Git-compatible VCS (jj). Japanese \"gentle art\" — \"joo-JUT-soo.\""
+  "notes": "Git-compatible VCS (jj). Japanese \"gentle art\" — \"joo-JUT-soo.\"",
+  "audio_url": "https://pronounce.renlab.ai/audio/jujutsu.mp3",
+  "url": "https://pronounce.renlab.ai/word/jujutsu",
+  "date_modified": "2026-06-16"
 }

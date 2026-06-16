@@ -8,5 +8,8 @@
   "source_label": "Microsoft Research",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "Microsoft's multimodal model; Greek 'kosmos' (world/order), said like English 'cosmos' = 'KOZ-mos'."
+  "notes": "Microsoft's multimodal model; Greek 'kosmos' (world/order), said like English 'cosmos' = 'KOZ-mos'.",
+  "audio_url": "https://pronounce.renlab.ai/audio/kosmos.mp3",
+  "url": "https://pronounce.renlab.ai/word/kosmos",
+  "date_modified": "2026-06-16"
 }

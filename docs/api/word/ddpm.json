@@ -8,5 +8,8 @@
   "source_label": "Ho et al. 2020",
   "category": "acronym",
   "confidence": "community-consensus",
-  "notes": "Denoising Diffusion Probabilistic Models; letters \"D-D-P-M\"."
+  "notes": "Denoising Diffusion Probabilistic Models; letters \"D-D-P-M\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/ddpm.mp3",
+  "url": "https://pronounce.renlab.ai/word/ddpm",
+  "date_modified": "2026-06-16"
 }

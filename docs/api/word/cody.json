@@ -8,5 +8,8 @@
   "source_label": "Sourcegraph Cody",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"KOH-dee\"."
+  "notes": "\"KOH-dee\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/cody.mp3",
+  "url": "https://pronounce.renlab.ai/word/cody",
+  "date_modified": "2026-06-16"
 }

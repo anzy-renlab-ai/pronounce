@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "tool",
   "confidence": "community-consensus",
-  "notes": "Scalable gradient boosting; \"X-G-boost\"."
+  "notes": "Scalable gradient boosting; \"X-G-boost\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/xgboost.mp3",
+  "url": "https://pronounce.renlab.ai/word/xgboost",
+  "date_modified": "2026-06-16"
 }

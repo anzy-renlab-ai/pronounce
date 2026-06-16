@@ -8,5 +8,8 @@
   "source_label": "Yazi docs",
   "category": "cli-tool",
   "confidence": "community-consensus",
-  "notes": "Chinese 鸭子 (duck). \"YAH-zee\". Terminal file manager."
+  "notes": "Chinese 鸭子 (duck). \"YAH-zee\". Terminal file manager.",
+  "audio_url": "https://pronounce.renlab.ai/audio/yazi.mp3",
+  "url": "https://pronounce.renlab.ai/word/yazi",
+  "date_modified": "2026-06-16"
 }

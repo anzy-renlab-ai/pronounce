@@ -8,5 +8,8 @@
   "source_label": "Mistral AI — Codestral announcement",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "Mistral's 22B code-generation model (released May 2024) with a fill-in-the-middle endpoint, widely used in IDE autocomplete (Continue.dev, Tabnine). The name is reported to be inspired by \"orchestral\" (the model harmonizing coding tasks), blended with \"code\" + the company name \"Mistral.\" STRESS: koh-DESS-truhl — primary stress on the second syllable, by analogy with orchestral (or-KESS-truhl). A code-forward first-syllable reading KOH-duh-struhl (keeping the embedded \"code\" audible, echoing MISS-truhl) is also heard. Official docs give no phonetic guidance."
+  "notes": "Mistral's 22B code-generation model (released May 2024) with a fill-in-the-middle endpoint, widely used in IDE autocomplete (Continue.dev, Tabnine). The name is reported to be inspired by \"orchestral\" (the model harmonizing coding tasks), blended with \"code\" + the company name \"Mistral.\" STRESS: koh-DESS-truhl — primary stress on the second syllable, by analogy with orchestral (or-KESS-truhl). A code-forward first-syllable reading KOH-duh-struhl (keeping the embedded \"code\" audible, echoing MISS-truhl) is also heard. Official docs give no phonetic guidance.",
+  "audio_url": "https://pronounce.renlab.ai/audio/codestral.mp3",
+  "url": "https://pronounce.renlab.ai/word/codestral",
+  "date_modified": "2026-06-16"
 }

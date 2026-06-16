@@ -8,5 +8,8 @@
   "source_label": "Wikipedia",
   "category": "acronym",
   "confidence": "community-consensus",
-  "notes": "\"C-Q-R-S\" — Command Query Responsibility Segregation."
+  "notes": "\"C-Q-R-S\" — Command Query Responsibility Segregation.",
+  "audio_url": "https://pronounce.renlab.ai/audio/cqrs.mp3",
+  "url": "https://pronounce.renlab.ai/word/cqrs",
+  "date_modified": "2026-06-16"
 }

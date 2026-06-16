@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "cs-term",
   "confidence": "community-consensus",
-  "notes": "Memory map syscall; \"em-map\"."
+  "notes": "Memory map syscall; \"em-map\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/mmap.mp3",
+  "url": "https://pronounce.renlab.ai/word/mmap",
+  "date_modified": "2026-06-16"
 }

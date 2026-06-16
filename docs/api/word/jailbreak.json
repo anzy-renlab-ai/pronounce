@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "cs-term",
   "confidence": "community-consensus",
-  "notes": "\"JAYL-brake\" — prompt or attack that bypasses an LM's safety policies."
+  "notes": "\"JAYL-brake\" — prompt or attack that bypasses an LM's safety policies.",
+  "audio_url": "https://pronounce.renlab.ai/audio/jailbreak.mp3",
+  "url": "https://pronounce.renlab.ai/word/jailbreak",
+  "date_modified": "2026-06-16"
 }

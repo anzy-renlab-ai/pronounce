@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "cs-term",
   "confidence": "community-consensus",
-  "notes": "Compressing weights to lower precision; \"kwon-tih-ZAY-shun\"."
+  "notes": "Compressing weights to lower precision; \"kwon-tih-ZAY-shun\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/quantization.mp3",
+  "url": "https://pronounce.renlab.ai/word/quantization",
+  "date_modified": "2026-06-16"
 }

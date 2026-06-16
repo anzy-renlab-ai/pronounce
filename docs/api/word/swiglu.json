@@ -8,5 +8,8 @@
   "source_label": "Shazeer",
   "category": "cs-term",
   "confidence": "community-consensus",
-  "notes": "\"swee-GLOO\". Swish-Gated Linear Unit."
+  "notes": "\"swee-GLOO\". Swish-Gated Linear Unit.",
+  "audio_url": "https://pronounce.renlab.ai/audio/swiglu.mp3",
+  "url": "https://pronounce.renlab.ai/word/swiglu",
+  "date_modified": "2026-06-16"
 }

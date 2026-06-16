@@ -8,5 +8,8 @@
   "source_label": "NVIDIA Triton",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"TRY-ton\" — NVIDIA inference server."
+  "notes": "\"TRY-ton\" — NVIDIA inference server.",
+  "audio_url": "https://pronounce.renlab.ai/audio/triton.mp3",
+  "url": "https://pronounce.renlab.ai/word/triton",
+  "date_modified": "2026-06-16"
 }

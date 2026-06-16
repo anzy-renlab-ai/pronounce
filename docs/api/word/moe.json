@@ -8,5 +8,8 @@
   "source_label": "HuggingFace MoE blog",
   "category": "acronym",
   "confidence": "contested",
-  "notes": "Mixture of Experts. Spelled \"M-O-E\" in papers; some pronounce it \"MOH\" like the Three Stooges character."
+  "notes": "Mixture of Experts. Spelled \"M-O-E\" in papers; some pronounce it \"MOH\" like the Three Stooges character.",
+  "audio_url": "https://pronounce.renlab.ai/audio/moe.mp3",
+  "url": "https://pronounce.renlab.ai/word/moe",
+  "date_modified": "2026-06-16"
 }

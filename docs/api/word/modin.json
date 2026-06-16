@@ -8,5 +8,8 @@
   "source_label": "Modin",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"MO-din\" — drop-in pandas replacement."
+  "notes": "\"MO-din\" — drop-in pandas replacement.",
+  "audio_url": "https://pronounce.renlab.ai/audio/modin.mp3",
+  "url": "https://pronounce.renlab.ai/word/modin",
+  "date_modified": "2026-06-16"
 }

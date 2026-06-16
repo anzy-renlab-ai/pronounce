@@ -8,5 +8,8 @@
   "source_label": "Cobra",
   "category": "tool",
   "confidence": "community-consensus",
-  "notes": "\"KO-bra\" — Go CLI library."
+  "notes": "\"KO-bra\" — Go CLI library.",
+  "audio_url": "https://pronounce.renlab.ai/audio/cobra.mp3",
+  "url": "https://pronounce.renlab.ai/word/cobra",
+  "date_modified": "2026-06-16"
 }

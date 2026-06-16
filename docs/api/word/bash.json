@@ -8,5 +8,8 @@
   "source_label": "GNU Bash",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"bash\" the word. Bourne-Again Shell."
+  "notes": "\"bash\" the word. Bourne-Again Shell.",
+  "audio_url": "https://pronounce.renlab.ai/audio/bash.mp3",
+  "url": "https://pronounce.renlab.ai/word/bash",
+  "date_modified": "2026-06-16"
 }

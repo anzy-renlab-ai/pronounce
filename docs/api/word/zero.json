@@ -8,5 +8,8 @@
   "source_label": "DeepSpeed — Zero Redundancy Optimizer (ZeRO) tutorial",
   "category": "acronym",
   "confidence": "community-consensus",
-  "notes": "DeepSpeed's ZeRO = \"ZEro Redundancy Optimizer\" (Microsoft, arXiv:1910.02054). Stylized capitalization (capital Z and O) signals it reads as the English word \"zero\" — identical to the number, NOT spelled out Z-E-R-O. STRESS: ZEER-oh. Stages are ZeRO-1/2/3 (\"zero one/two/three\"). Distinct from existing \"zero-shot\"."
+  "notes": "DeepSpeed's ZeRO = \"ZEro Redundancy Optimizer\" (Microsoft, arXiv:1910.02054). Stylized capitalization (capital Z and O) signals it reads as the English word \"zero\" — identical to the number, NOT spelled out Z-E-R-O. STRESS: ZEER-oh. Stages are ZeRO-1/2/3 (\"zero one/two/three\"). Distinct from existing \"zero-shot\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/zero.mp3",
+  "url": "https://pronounce.renlab.ai/word/zero",
+  "date_modified": "2026-06-16"
 }

@@ -8,5 +8,8 @@
   "source_label": "SciPy docs",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"SIGH-pie\"."
+  "notes": "\"SIGH-pie\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/scipy.mp3",
+  "url": "https://pronounce.renlab.ai/word/scipy",
+  "date_modified": "2026-06-16"
 }

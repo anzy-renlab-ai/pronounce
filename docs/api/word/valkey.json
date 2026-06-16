@@ -8,5 +8,8 @@
   "source_label": "Valkey",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"VAL-key\"."
+  "notes": "\"VAL-key\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/valkey.mp3",
+  "url": "https://pronounce.renlab.ai/word/valkey",
+  "date_modified": "2026-06-16"
 }

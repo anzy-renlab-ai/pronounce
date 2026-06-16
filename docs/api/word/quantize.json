@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "cs-term",
   "confidence": "community-consensus",
-  "notes": "Reduce numeric precision (model quantization); \"KWON-tize\"."
+  "notes": "Reduce numeric precision (model quantization); \"KWON-tize\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/quantize.mp3",
+  "url": "https://pronounce.renlab.ai/word/quantize",
+  "date_modified": "2026-06-16"
 }

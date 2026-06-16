@@ -8,5 +8,8 @@
   "source_label": "Apache Cassandra",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"kuh-SAN-druh\"."
+  "notes": "\"kuh-SAN-druh\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/cassandra.mp3",
+  "url": "https://pronounce.renlab.ai/word/cassandra",
+  "date_modified": "2026-06-16"
 }

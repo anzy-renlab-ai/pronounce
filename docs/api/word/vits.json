@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "product",
   "confidence": "contested",
-  "notes": "End-to-end TTS model; \"vits\" or spelled out."
+  "notes": "End-to-end TTS model; \"vits\" or spelled out.",
+  "audio_url": "https://pronounce.renlab.ai/audio/vits.mp3",
+  "url": "https://pronounce.renlab.ai/word/vits",
+  "date_modified": "2026-06-16"
 }

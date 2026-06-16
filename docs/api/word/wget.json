@@ -8,5 +8,8 @@
   "source_label": "GNU Wget",
   "category": "tool",
   "confidence": "community-consensus",
-  "notes": "\"W-get\" (double-you-get)."
+  "notes": "\"W-get\" (double-you-get).",
+  "audio_url": "https://pronounce.renlab.ai/audio/wget.mp3",
+  "url": "https://pronounce.renlab.ai/word/wget",
+  "date_modified": "2026-06-16"
 }

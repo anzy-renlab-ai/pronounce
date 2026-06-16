@@ -8,5 +8,8 @@
   "source_label": "Udio",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "AI music app. \"OO-dee-oh.\""
+  "notes": "AI music app. \"OO-dee-oh.\"",
+  "audio_url": "https://pronounce.renlab.ai/audio/udio.mp3",
+  "url": "https://pronounce.renlab.ai/word/udio",
+  "date_modified": "2026-06-16"
 }

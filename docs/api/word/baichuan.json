@@ -8,5 +8,8 @@
   "source_label": "Baichuan AI",
   "category": "project",
   "confidence": "community-consensus",
-  "notes": "Chinese LLM lab 百川. Pinyin bǎi-chuān → \"BYE-chwahn.\""
+  "notes": "Chinese LLM lab 百川. Pinyin bǎi-chuān → \"BYE-chwahn.\"",
+  "audio_url": "https://pronounce.renlab.ai/audio/baichuan.mp3",
+  "url": "https://pronounce.renlab.ai/word/baichuan",
+  "date_modified": "2026-06-16"
 }

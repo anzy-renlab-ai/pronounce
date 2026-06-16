@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "IMAP/POP3 server; \"DUV-cot\" (dove + cote)."
+  "notes": "IMAP/POP3 server; \"DUV-cot\" (dove + cote).",
+  "audio_url": "https://pronounce.renlab.ai/audio/dovecot.mp3",
+  "url": "https://pronounce.renlab.ai/word/dovecot",
+  "date_modified": "2026-06-16"
 }

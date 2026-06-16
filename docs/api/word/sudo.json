@@ -8,5 +8,8 @@
   "source_label": "Wikipedia",
   "category": "cli-tool",
   "confidence": "contested",
-  "notes": "\"soo-doo\" (substitute-user-do, Bourne convention) vs \"soo-doh\"."
+  "notes": "\"soo-doo\" (substitute-user-do, Bourne convention) vs \"soo-doh\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/sudo.mp3",
+  "url": "https://pronounce.renlab.ai/word/sudo",
+  "date_modified": "2026-06-16"
 }

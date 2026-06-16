@@ -8,5 +8,8 @@
   "source_label": "Merriam-Webster",
   "category": "cs-term",
   "confidence": "community-consensus",
-  "notes": "The verb (claude --resume, resume a session): \"rih-ZOOM\". Don't confuse with the noun résumé \"REZ-uh-may\" — different word."
+  "notes": "The verb (claude --resume, resume a session): \"rih-ZOOM\". Don't confuse with the noun résumé \"REZ-uh-may\" — different word.",
+  "audio_url": "https://pronounce.renlab.ai/audio/resume.mp3",
+  "url": "https://pronounce.renlab.ai/word/resume",
+  "date_modified": "2026-06-16"
 }

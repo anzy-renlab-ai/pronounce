@@ -8,5 +8,8 @@
   "source_label": "MySQL docs",
   "category": "product",
   "confidence": "creator-clarified",
-  "notes": "Official: \"my-S-Q-L\". \"my-sequel\" is common informal."
+  "notes": "Official: \"my-S-Q-L\". \"my-sequel\" is common informal.",
+  "audio_url": "https://pronounce.renlab.ai/audio/mysql.mp3",
+  "url": "https://pronounce.renlab.ai/word/mysql",
+  "date_modified": "2026-06-16"
 }

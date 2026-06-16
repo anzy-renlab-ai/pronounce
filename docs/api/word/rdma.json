@@ -8,5 +8,8 @@
   "source_label": "Wikipedia — Remote direct memory access",
   "category": "acronym",
   "confidence": "community-consensus",
-  "notes": "Initialism for Remote Direct Memory Access — read as four separate letters R-D-M-A (ar-dee-em-AY), not as a word. Backbone of multi-node GPU training (GPUDirect RDMA, RoCE, InfiniBand). Note the related RoCE is spoken \"rocky\", but RDMA itself stays letter-by-letter."
+  "notes": "Initialism for Remote Direct Memory Access — read as four separate letters R-D-M-A (ar-dee-em-AY), not as a word. Backbone of multi-node GPU training (GPUDirect RDMA, RoCE, InfiniBand). Note the related RoCE is spoken \"rocky\", but RDMA itself stays letter-by-letter.",
+  "audio_url": "https://pronounce.renlab.ai/audio/rdma.mp3",
+  "url": "https://pronounce.renlab.ai/word/rdma",
+  "date_modified": "2026-06-16"
 }

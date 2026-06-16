@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "AWS Bedrock (managed LLMs); \"bed-rock\"."
+  "notes": "AWS Bedrock (managed LLMs); \"bed-rock\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/bedrock.mp3",
+  "url": "https://pronounce.renlab.ai/word/bedrock",
+  "date_modified": "2026-06-16"
 }

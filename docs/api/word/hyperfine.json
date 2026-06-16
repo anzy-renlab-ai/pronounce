@@ -8,5 +8,8 @@
   "source_label": "sharkdp/hyperfine",
   "category": "cli-tool",
   "confidence": "community-consensus",
-  "notes": "\"HYPER-fyne\". CLI benchmarking tool."
+  "notes": "\"HYPER-fyne\". CLI benchmarking tool.",
+  "audio_url": "https://pronounce.renlab.ai/audio/hyperfine.mp3",
+  "url": "https://pronounce.renlab.ai/word/hyperfine",
+  "date_modified": "2026-06-16"
 }

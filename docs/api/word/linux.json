@@ -8,5 +8,8 @@
   "source_label": "Wikipedia § Pronunciation",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "Linus's own pronunciation is \"LIN-ux\" (short I, schwa). Wikipedia documents the variants."
+  "notes": "Linus's own pronunciation is \"LIN-ux\" (short I, schwa). Wikipedia documents the variants.",
+  "audio_url": "https://pronounce.renlab.ai/audio/linux.mp3",
+  "url": "https://pronounce.renlab.ai/word/linux",
+  "date_modified": "2026-06-16"
 }

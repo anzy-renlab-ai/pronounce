@@ -8,5 +8,8 @@
   "source_label": "wasmtime.dev",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"WOZ-um-time\" — wasm + time. WebAssembly runtime."
+  "notes": "\"WOZ-um-time\" — wasm + time. WebAssembly runtime.",
+  "audio_url": "https://pronounce.renlab.ai/audio/wasmtime.mp3",
+  "url": "https://pronounce.renlab.ai/word/wasmtime",
+  "date_modified": "2026-06-16"
 }

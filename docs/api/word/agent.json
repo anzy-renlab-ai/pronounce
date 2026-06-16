@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "cs-term",
   "confidence": "community-consensus",
-  "notes": "\"AY-junt\" — an LM-driven loop that perceives, plans, calls tools, and acts."
+  "notes": "\"AY-junt\" — an LM-driven loop that perceives, plans, calls tools, and acts.",
+  "audio_url": "https://pronounce.renlab.ai/audio/agent.mp3",
+  "url": "https://pronounce.renlab.ai/word/agent",
+  "date_modified": "2026-06-16"
 }

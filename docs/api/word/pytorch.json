@@ -8,5 +8,8 @@
   "source_label": "PyTorch",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"PIE-torch\"."
+  "notes": "\"PIE-torch\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/pytorch.mp3",
+  "url": "https://pronounce.renlab.ai/word/pytorch",
+  "date_modified": "2026-06-16"
 }

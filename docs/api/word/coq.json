@@ -8,5 +8,8 @@
   "source_label": "Rocq (formerly Coq)",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"kok\" — proof assistant. Now renamed Rocq."
+  "notes": "\"kok\" — proof assistant. Now renamed Rocq.",
+  "audio_url": "https://pronounce.renlab.ai/audio/coq.mp3",
+  "url": "https://pronounce.renlab.ai/word/coq",
+  "date_modified": "2026-06-16"
 }

@@ -8,5 +8,8 @@
   "source_label": "Nushell",
   "category": "cli-tool",
   "confidence": "community-consensus",
-  "notes": "Structured-data shell. \"NOO-shell\" — letter \"Nu\" + shell."
+  "notes": "Structured-data shell. \"NOO-shell\" — letter \"Nu\" + shell.",
+  "audio_url": "https://pronounce.renlab.ai/audio/nushell.mp3",
+  "url": "https://pronounce.renlab.ai/word/nushell",
+  "date_modified": "2026-06-16"
 }

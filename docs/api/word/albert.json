@@ -8,5 +8,8 @@
   "source_label": "Lan et al. 2019",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "A Lite BERT; pronounced like the name \"al-BERT\"."
+  "notes": "A Lite BERT; pronounced like the name \"al-BERT\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/albert.mp3",
+  "url": "https://pronounce.renlab.ai/word/albert",
+  "date_modified": "2026-06-16"
 }

@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "tool",
   "confidence": "community-consensus",
-  "notes": "Intel inference toolkit; \"open-VEE-no\"."
+  "notes": "Intel inference toolkit; \"open-VEE-no\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/openvino.mp3",
+  "url": "https://pronounce.renlab.ai/word/openvino",
+  "date_modified": "2026-06-16"
 }

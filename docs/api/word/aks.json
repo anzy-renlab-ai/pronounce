@@ -8,5 +8,8 @@
   "source_label": "Azure AKS",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "Letters \"A-K-S\". Azure Kubernetes Service."
+  "notes": "Letters \"A-K-S\". Azure Kubernetes Service.",
+  "audio_url": "https://pronounce.renlab.ai/audio/aks.mp3",
+  "url": "https://pronounce.renlab.ai/word/aks",
+  "date_modified": "2026-06-16"
 }

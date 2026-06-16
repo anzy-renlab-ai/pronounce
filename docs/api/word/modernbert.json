@@ -8,5 +8,8 @@
   "source_label": "ModernBERT paper (arXiv 2412.13663)",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "2024 modernized BERT-style encoder (8k context, RoPE, FlashAttention, GeGLU). Spoken MOD-ern-BERT — \"BERT\" as the single word \"bert\", never spelled out B-E-R-T."
+  "notes": "2024 modernized BERT-style encoder (8k context, RoPE, FlashAttention, GeGLU). Spoken MOD-ern-BERT — \"BERT\" as the single word \"bert\", never spelled out B-E-R-T.",
+  "audio_url": "https://pronounce.renlab.ai/audio/modernbert.mp3",
+  "url": "https://pronounce.renlab.ai/word/modernbert",
+  "date_modified": "2026-06-16"
 }

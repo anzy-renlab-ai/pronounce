@@ -8,5 +8,8 @@
   "source_label": "Knuth TAOCP",
   "category": "cs-term",
   "confidence": "contested",
-  "notes": "Knuth (creator): \"tree\" (from \"retrieval\"). Most engineers say \"try\" to disambiguate from binary tree."
+  "notes": "Knuth (creator): \"tree\" (from \"retrieval\"). Most engineers say \"try\" to disambiguate from binary tree.",
+  "audio_url": "https://pronounce.renlab.ai/audio/trie.mp3",
+  "url": "https://pronounce.renlab.ai/word/trie",
+  "date_modified": "2026-06-16"
 }

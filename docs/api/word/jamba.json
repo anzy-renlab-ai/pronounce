@@ -8,5 +8,8 @@
   "source_label": "AI21 Jamba",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "AI21's hybrid SSM-Transformer. \"JAM-buh.\""
+  "notes": "AI21's hybrid SSM-Transformer. \"JAM-buh.\"",
+  "audio_url": "https://pronounce.renlab.ai/audio/jamba.mp3",
+  "url": "https://pronounce.renlab.ai/word/jamba",
+  "date_modified": "2026-06-16"
 }

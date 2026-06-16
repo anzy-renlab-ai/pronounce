@@ -8,5 +8,8 @@
   "source_label": "Wikipedia § Origin of the name",
   "category": "cli-tool",
   "confidence": "creator-clarified",
-  "notes": "\"auk\" — like the seabird, rhymes with \"hawk\". Named after creators' initials (Aho/Weinberger/Kernighan); pronunciation confirmed in original AWK book."
+  "notes": "\"auk\" — like the seabird, rhymes with \"hawk\". Named after creators' initials (Aho/Weinberger/Kernighan); pronunciation confirmed in original AWK book.",
+  "audio_url": "https://pronounce.renlab.ai/audio/awk.mp3",
+  "url": "https://pronounce.renlab.ai/word/awk",
+  "date_modified": "2026-06-16"
 }

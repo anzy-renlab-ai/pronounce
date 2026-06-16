@@ -8,5 +8,8 @@
   "source_label": "Wikipedia — NVLink",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "NVIDIA's GPU-to-GPU interconnect (constant in GB200/H100 cluster talk). The \"NV\" prefix is the NVIDIA initialism, read as the letters N-V (\"en-vee\"), then plain \"link\": en-vee-LINK. Same NV-prefix pattern as NVSwitch. NOT \"nuv-link\" or \"en-vid-ee-uh link\" — a common non-native slip. STRESS: en-vee-LINK. No official FAQ documents the pronunciation; letter-initialism reading is universal in the community."
+  "notes": "NVIDIA's GPU-to-GPU interconnect (constant in GB200/H100 cluster talk). The \"NV\" prefix is the NVIDIA initialism, read as the letters N-V (\"en-vee\"), then plain \"link\": en-vee-LINK. Same NV-prefix pattern as NVSwitch. NOT \"nuv-link\" or \"en-vid-ee-uh link\" — a common non-native slip. STRESS: en-vee-LINK. No official FAQ documents the pronunciation; letter-initialism reading is universal in the community.",
+  "audio_url": "https://pronounce.renlab.ai/audio/nvlink.mp3",
+  "url": "https://pronounce.renlab.ai/word/nvlink",
+  "date_modified": "2026-06-16"
 }

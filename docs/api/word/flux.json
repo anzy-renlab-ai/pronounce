@@ -8,5 +8,8 @@
   "source_label": "Black Forest Labs",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "BFL's image model. Standard English \"FLUKS.\""
+  "notes": "BFL's image model. Standard English \"FLUKS.\"",
+  "audio_url": "https://pronounce.renlab.ai/audio/flux.mp3",
+  "url": "https://pronounce.renlab.ai/word/flux",
+  "date_modified": "2026-06-16"
 }

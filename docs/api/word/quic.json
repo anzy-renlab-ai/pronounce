@@ -8,5 +8,8 @@
   "source_label": "IETF RFC 9000",
   "category": "acronym",
   "confidence": "creator-clarified",
-  "notes": "IETF + Google docs: \"quick\". From \"Quick UDP Internet Connections\"."
+  "notes": "IETF + Google docs: \"quick\". From \"Quick UDP Internet Connections\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/quic.mp3",
+  "url": "https://pronounce.renlab.ai/word/quic",
+  "date_modified": "2026-06-16"
 }

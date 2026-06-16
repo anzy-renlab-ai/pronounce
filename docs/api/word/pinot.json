@@ -8,5 +8,8 @@
   "source_label": "Apache Pinot",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"PEE-noh\" (like the wine). Real-time OLAP store."
+  "notes": "\"PEE-noh\" (like the wine). Real-time OLAP store.",
+  "audio_url": "https://pronounce.renlab.ai/audio/pinot.mp3",
+  "url": "https://pronounce.renlab.ai/word/pinot",
+  "date_modified": "2026-06-16"
 }

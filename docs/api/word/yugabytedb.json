@@ -8,5 +8,8 @@
   "source_label": "Yugabyte",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"YOO-guh-bite-D-B\". Distributed SQL."
+  "notes": "\"YOO-guh-bite-D-B\". Distributed SQL.",
+  "audio_url": "https://pronounce.renlab.ai/audio/yugabytedb.mp3",
+  "url": "https://pronounce.renlab.ai/word/yugabytedb",
+  "date_modified": "2026-06-16"
 }

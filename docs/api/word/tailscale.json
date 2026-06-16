@@ -8,5 +8,8 @@
   "source_label": "Tailscale",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"TAIL-scale\" — mesh VPN."
+  "notes": "\"TAIL-scale\" — mesh VPN.",
+  "audio_url": "https://pronounce.renlab.ai/audio/tailscale.mp3",
+  "url": "https://pronounce.renlab.ai/word/tailscale",
+  "date_modified": "2026-06-16"
 }

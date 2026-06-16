@@ -8,5 +8,8 @@
   "source_label": "Oxlint official docs (oxc.rs)",
   "category": "cli-tool",
   "confidence": "creator-clarified",
-  "notes": "\"OX-lint\" — the oxc-based linter; ox like the animal, not the letters O-X."
+  "notes": "\"OX-lint\" — the oxc-based linter; ox like the animal, not the letters O-X.",
+  "audio_url": "https://pronounce.renlab.ai/audio/oxlint.mp3",
+  "url": "https://pronounce.renlab.ai/word/oxlint",
+  "date_modified": "2026-06-16"
 }

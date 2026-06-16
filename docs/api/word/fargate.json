@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "AWS Fargate (serverless containers); \"FAR-gate\"."
+  "notes": "AWS Fargate (serverless containers); \"FAR-gate\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/fargate.mp3",
+  "url": "https://pronounce.renlab.ai/word/fargate",
+  "date_modified": "2026-06-16"
 }

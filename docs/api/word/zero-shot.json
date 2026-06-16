@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "cs-term",
   "confidence": "community-consensus",
-  "notes": "\"ZEE-roh-shot\" — solve a task with no in-context examples."
+  "notes": "\"ZEE-roh-shot\" — solve a task with no in-context examples.",
+  "audio_url": "https://pronounce.renlab.ai/audio/zero-shot.mp3",
+  "url": "https://pronounce.renlab.ai/word/zero-shot",
+  "date_modified": "2026-06-16"
 }

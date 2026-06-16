@@ -8,5 +8,8 @@
   "source_label": "GNU Guix",
   "category": "product",
   "confidence": "creator-clarified",
-  "notes": "GNU package manager; pronounced \"geeks\"."
+  "notes": "GNU package manager; pronounced \"geeks\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/guix.mp3",
+  "url": "https://pronounce.renlab.ai/word/guix",
+  "date_modified": "2026-06-16"
 }

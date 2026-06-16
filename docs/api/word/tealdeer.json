@@ -8,5 +8,8 @@
   "source_label": "tealdeer docs",
   "category": "cli-tool",
   "confidence": "community-consensus",
-  "notes": "\"TEAL-deer\". tldr client written in Rust."
+  "notes": "\"TEAL-deer\". tldr client written in Rust.",
+  "audio_url": "https://pronounce.renlab.ai/audio/tealdeer.mp3",
+  "url": "https://pronounce.renlab.ai/word/tealdeer",
+  "date_modified": "2026-06-16"
 }

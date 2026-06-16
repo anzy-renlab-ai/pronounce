@@ -8,5 +8,8 @@
   "source_label": "OpenAI Triton",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"TRY-ton\" — Python GPU kernel DSL."
+  "notes": "\"TRY-ton\" — Python GPU kernel DSL.",
+  "audio_url": "https://pronounce.renlab.ai/audio/triton--openai-.mp3",
+  "url": "https://pronounce.renlab.ai/word/triton--openai-",
+  "date_modified": "2026-06-16"
 }

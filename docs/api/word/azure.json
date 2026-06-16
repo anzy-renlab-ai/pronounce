@@ -8,5 +8,8 @@
   "source_label": "Microsoft",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"AZH-er\"."
+  "notes": "\"AZH-er\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/azure.mp3",
+  "url": "https://pronounce.renlab.ai/word/azure",
+  "date_modified": "2026-06-16"
 }

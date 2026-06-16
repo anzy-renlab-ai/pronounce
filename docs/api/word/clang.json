@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "tool",
   "confidence": "community-consensus",
-  "notes": "LLVM C/C++ compiler; rhymes with the sound \"clang\"."
+  "notes": "LLVM C/C++ compiler; rhymes with the sound \"clang\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/clang.mp3",
+  "url": "https://pronounce.renlab.ai/word/clang",
+  "date_modified": "2026-06-16"
 }

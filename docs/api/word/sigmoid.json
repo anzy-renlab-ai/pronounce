@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "cs-term",
   "confidence": "community-consensus",
-  "notes": "S-shaped activation function; \"SIG-moyd\"."
+  "notes": "S-shaped activation function; \"SIG-moyd\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/sigmoid.mp3",
+  "url": "https://pronounce.renlab.ai/word/sigmoid",
+  "date_modified": "2026-06-16"
 }

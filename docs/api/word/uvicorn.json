@@ -8,5 +8,8 @@
   "source_label": "Uvicorn docs",
   "category": "tool",
   "confidence": "community-consensus",
-  "notes": "\"yoo-vee-CORN\". Python ASGI server."
+  "notes": "\"yoo-vee-CORN\". Python ASGI server.",
+  "audio_url": "https://pronounce.renlab.ai/audio/uvicorn.mp3",
+  "url": "https://pronounce.renlab.ai/word/uvicorn",
+  "date_modified": "2026-06-16"
 }

@@ -8,5 +8,8 @@
   "source_label": "Jupyter docs",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"JOO-pi-tur\" — named after Jupiter (planet) + Julia, Python, R."
+  "notes": "\"JOO-pi-tur\" — named after Jupiter (planet) + Julia, Python, R.",
+  "audio_url": "https://pronounce.renlab.ai/audio/jupyter.mp3",
+  "url": "https://pronounce.renlab.ai/word/jupyter",
+  "date_modified": "2026-06-16"
 }

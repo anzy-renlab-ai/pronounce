@@ -8,5 +8,8 @@
   "source_label": "MITRE CVE",
   "category": "acronym",
   "confidence": "community-consensus",
-  "notes": "Letters \"C-V-E\". Common Vulnerabilities and Exposures."
+  "notes": "Letters \"C-V-E\". Common Vulnerabilities and Exposures.",
+  "audio_url": "https://pronounce.renlab.ai/audio/cve.mp3",
+  "url": "https://pronounce.renlab.ai/word/cve",
+  "date_modified": "2026-06-16"
 }

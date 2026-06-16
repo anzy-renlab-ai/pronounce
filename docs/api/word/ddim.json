@@ -8,5 +8,8 @@
   "source_label": "Song et al. 2020",
   "category": "acronym",
   "confidence": "contested",
-  "notes": "Denoising Diffusion Implicit Models; letters or \"dee-dim\"."
+  "notes": "Denoising Diffusion Implicit Models; letters or \"dee-dim\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/ddim.mp3",
+  "url": "https://pronounce.renlab.ai/word/ddim",
+  "date_modified": "2026-06-16"
 }

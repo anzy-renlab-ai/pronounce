@@ -8,5 +8,8 @@
   "source_label": "npm docs",
   "category": "cli-tool",
   "confidence": "community-consensus",
-  "notes": "Letters \"N-P-M\". Officially lowercase, not an acronym."
+  "notes": "Letters \"N-P-M\". Officially lowercase, not an acronym.",
+  "audio_url": "https://pronounce.renlab.ai/audio/npm.mp3",
+  "url": "https://pronounce.renlab.ai/word/npm",
+  "date_modified": "2026-06-16"
 }

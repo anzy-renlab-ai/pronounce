@@ -8,5 +8,8 @@
   "source_label": "PingCAP TiDB",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "Letters \"T-I-D-B\". Hybrid SQL by PingCAP."
+  "notes": "Letters \"T-I-D-B\". Hybrid SQL by PingCAP.",
+  "audio_url": "https://pronounce.renlab.ai/audio/tidb.mp3",
+  "url": "https://pronounce.renlab.ai/word/tidb",
+  "date_modified": "2026-06-16"
 }

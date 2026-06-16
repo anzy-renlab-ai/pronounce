@@ -8,5 +8,8 @@
   "source_label": "arXiv 2309.06180 — Efficient Memory Management for Large Language Model Serving with PagedAttention",
   "category": "cs-term",
   "confidence": "community-consensus",
-  "notes": "vLLM's core attention algorithm, named after OS virtual-memory PAGING. Two parts: \"paged\" + \"attention\". STRESS: PAYJD uh-TEN-shun. The hazard is \"paged\" — it is /peɪdʒd/ (rhymes with \"caged\", one syllable, voiced -jd cluster), NOT two-syllable \"page-ed\". From the verb \"to page\" the KV cache into fixed-size blocks. Common in inference-infra discussion 2023-2026."
+  "notes": "vLLM's core attention algorithm, named after OS virtual-memory PAGING. Two parts: \"paged\" + \"attention\". STRESS: PAYJD uh-TEN-shun. The hazard is \"paged\" — it is /peɪdʒd/ (rhymes with \"caged\", one syllable, voiced -jd cluster), NOT two-syllable \"page-ed\". From the verb \"to page\" the KV cache into fixed-size blocks. Common in inference-infra discussion 2023-2026.",
+  "audio_url": "https://pronounce.renlab.ai/audio/pagedattention.mp3",
+  "url": "https://pronounce.renlab.ai/word/pagedattention",
+  "date_modified": "2026-06-16"
 }

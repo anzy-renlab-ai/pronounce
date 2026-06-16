@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "tool",
   "confidence": "community-consensus",
-  "notes": "GNU Debugger; letters."
+  "notes": "GNU Debugger; letters.",
+  "audio_url": "https://pronounce.renlab.ai/audio/gdb.mp3",
+  "url": "https://pronounce.renlab.ai/word/gdb",
+  "date_modified": "2026-06-16"
 }

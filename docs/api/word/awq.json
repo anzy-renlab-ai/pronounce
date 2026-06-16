@@ -8,5 +8,8 @@
   "source_label": "arXiv 2306.00978 — AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration (MIT HAN Lab)",
   "category": "acronym",
   "confidence": "contested",
-  "notes": "Activation-aware Weight Quantization. Spoken \"awk\" (like the unix tool) or spelled out A-W-Q."
+  "notes": "Activation-aware Weight Quantization. Spoken \"awk\" (like the unix tool) or spelled out A-W-Q.",
+  "audio_url": "https://pronounce.renlab.ai/audio/awq.mp3",
+  "url": "https://pronounce.renlab.ai/word/awq",
+  "date_modified": "2026-06-16"
 }

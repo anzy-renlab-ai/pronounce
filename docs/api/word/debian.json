@@ -8,5 +8,8 @@
   "source_label": "Debian about",
   "category": "product",
   "confidence": "creator-clarified",
-  "notes": "\"DEB-ee-uhn\" — portmanteau of Debra + Ian Murdock, documented on the about page."
+  "notes": "\"DEB-ee-uhn\" — portmanteau of Debra + Ian Murdock, documented on the about page.",
+  "audio_url": "https://pronounce.renlab.ai/audio/debian.mp3",
+  "url": "https://pronounce.renlab.ai/word/debian",
+  "date_modified": "2026-06-16"
 }

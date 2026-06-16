@@ -8,5 +8,8 @@
   "source_label": "PEFT docs",
   "category": "tool",
   "confidence": "community-consensus",
-  "notes": "\"peft\". Parameter-Efficient Fine-Tuning."
+  "notes": "\"peft\". Parameter-Efficient Fine-Tuning.",
+  "audio_url": "https://pronounce.renlab.ai/audio/peft.mp3",
+  "url": "https://pronounce.renlab.ai/word/peft",
+  "date_modified": "2026-06-16"
 }

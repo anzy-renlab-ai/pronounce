@@ -8,5 +8,8 @@
   "source_label": "Neovim",
   "category": "tool",
   "confidence": "community-consensus",
-  "notes": "\"NEE-oh-vim\" is the most common community reading."
+  "notes": "\"NEE-oh-vim\" is the most common community reading.",
+  "audio_url": "https://pronounce.renlab.ai/audio/neovim.mp3",
+  "url": "https://pronounce.renlab.ai/word/neovim",
+  "date_modified": "2026-06-16"
 }

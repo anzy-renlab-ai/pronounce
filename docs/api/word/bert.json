@@ -8,5 +8,8 @@
   "source_label": "BERT paper",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"burt\" — like the name. Bidirectional Encoder Representations from Transformers."
+  "notes": "\"burt\" — like the name. Bidirectional Encoder Representations from Transformers.",
+  "audio_url": "https://pronounce.renlab.ai/audio/bert.mp3",
+  "url": "https://pronounce.renlab.ai/word/bert",
+  "date_modified": "2026-06-16"
 }

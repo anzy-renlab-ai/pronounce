@@ -8,5 +8,8 @@
   "source_label": "NVIDIA Volta",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"VOLE-ta\". V100. Named after Alessandro Volta."
+  "notes": "\"VOLE-ta\". V100. Named after Alessandro Volta.",
+  "audio_url": "https://pronounce.renlab.ai/audio/volta.mp3",
+  "url": "https://pronounce.renlab.ai/word/volta",
+  "date_modified": "2026-06-16"
 }

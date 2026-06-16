@@ -8,5 +8,8 @@
   "source_label": "rsync",
   "category": "tool",
   "confidence": "community-consensus",
-  "notes": "\"R-sync\"."
+  "notes": "\"R-sync\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/rsync.mp3",
+  "url": "https://pronounce.renlab.ai/word/rsync",
+  "date_modified": "2026-06-16"
 }

@@ -8,5 +8,8 @@
   "source_label": "Kaplan et al. 2020",
   "category": "cs-term",
   "confidence": "community-consensus",
-  "notes": "Power-law relations between compute / data / params and loss; \"SKAY-ling laws\"."
+  "notes": "Power-law relations between compute / data / params and loss; \"SKAY-ling laws\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/scaling-laws.mp3",
+  "url": "https://pronounce.renlab.ai/word/scaling-laws",
+  "date_modified": "2026-06-16"
 }

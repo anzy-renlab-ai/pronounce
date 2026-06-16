@@ -8,5 +8,8 @@
   "source_label": "AWS DynamoDB",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"die-NAM-oh-D-B\"."
+  "notes": "\"die-NAM-oh-D-B\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/dynamodb.mp3",
+  "url": "https://pronounce.renlab.ai/word/dynamodb",
+  "date_modified": "2026-06-16"
 }

@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "Red Hat automation; \"AN-si-buhl\", from the sci-fi FTL communicator."
+  "notes": "Red Hat automation; \"AN-si-buhl\", from the sci-fi FTL communicator.",
+  "audio_url": "https://pronounce.renlab.ai/audio/ansible.mp3",
+  "url": "https://pronounce.renlab.ai/word/ansible",
+  "date_modified": "2026-06-16"
 }

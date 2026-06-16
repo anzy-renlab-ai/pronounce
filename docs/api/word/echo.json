@@ -8,5 +8,8 @@
   "source_label": "Echo",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"EK-oh\" — Go framework."
+  "notes": "\"EK-oh\" — Go framework.",
+  "audio_url": "https://pronounce.renlab.ai/audio/echo.mp3",
+  "url": "https://pronounce.renlab.ai/word/echo",
+  "date_modified": "2026-06-16"
 }

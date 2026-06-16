@@ -8,5 +8,8 @@
   "source_label": "Liu et al. 2022",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "Modernized ConvNet; \"CONV-next\"."
+  "notes": "Modernized ConvNet; \"CONV-next\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/convnext.mp3",
+  "url": "https://pronounce.renlab.ai/word/convnext",
+  "date_modified": "2026-06-16"
 }

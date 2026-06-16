@@ -8,5 +8,8 @@
   "source_label": "Rust",
   "category": "tool",
   "confidence": "community-consensus",
-  "notes": "\"CAR-go\" — Rust's package manager."
+  "notes": "\"CAR-go\" — Rust's package manager.",
+  "audio_url": "https://pronounce.renlab.ai/audio/cargo.mp3",
+  "url": "https://pronounce.renlab.ai/word/cargo",
+  "date_modified": "2026-06-16"
 }

@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "cs-term",
   "confidence": "community-consensus",
-  "notes": "Bernstein MAC; usually said \"Polly-thirteen-oh-five\"."
+  "notes": "Bernstein MAC; usually said \"Polly-thirteen-oh-five\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/poly1305.mp3",
+  "url": "https://pronounce.renlab.ai/word/poly1305",
+  "date_modified": "2026-06-16"
 }

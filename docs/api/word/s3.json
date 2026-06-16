@@ -8,5 +8,8 @@
   "source_label": "AWS S3",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"S-three\". Simple Storage Service."
+  "notes": "\"S-three\". Simple Storage Service.",
+  "audio_url": "https://pronounce.renlab.ai/audio/s3.mp3",
+  "url": "https://pronounce.renlab.ai/word/s3",
+  "date_modified": "2026-06-16"
 }

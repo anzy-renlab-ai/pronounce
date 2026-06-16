@@ -8,5 +8,8 @@
   "source_label": "jq docs",
   "category": "cli-tool",
   "confidence": "community-consensus",
-  "notes": "Letters \"J-Q\". JSON processor."
+  "notes": "Letters \"J-Q\". JSON processor.",
+  "audio_url": "https://pronounce.renlab.ai/audio/jq.mp3",
+  "url": "https://pronounce.renlab.ai/word/jq",
+  "date_modified": "2026-06-16"
 }

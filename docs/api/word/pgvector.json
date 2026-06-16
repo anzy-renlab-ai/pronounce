@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "tool",
   "confidence": "community-consensus",
-  "notes": "Postgres vector-search extension; \"P-G-vector\"."
+  "notes": "Postgres vector-search extension; \"P-G-vector\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/pgvector.mp3",
+  "url": "https://pronounce.renlab.ai/word/pgvector",
+  "date_modified": "2026-06-16"
 }

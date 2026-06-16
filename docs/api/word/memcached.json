@@ -8,5 +8,8 @@
   "source_label": "Memcached",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"mem-CASHED\" — past tense of cache."
+  "notes": "\"mem-CASHED\" — past tense of cache.",
+  "audio_url": "https://pronounce.renlab.ai/audio/memcached.mp3",
+  "url": "https://pronounce.renlab.ai/word/memcached",
+  "date_modified": "2026-06-16"
 }

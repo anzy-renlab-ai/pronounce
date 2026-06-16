@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "Python bindings for Bullet physics; \"pie-bullet\"."
+  "notes": "Python bindings for Bullet physics; \"pie-bullet\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/pybullet.mp3",
+  "url": "https://pronounce.renlab.ai/word/pybullet",
+  "date_modified": "2026-06-16"
 }

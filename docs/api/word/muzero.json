@@ -8,5 +8,8 @@
   "source_label": "",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "DeepMind model-based RL (learns the model); \"MEW-zee-roh\"."
+  "notes": "DeepMind model-based RL (learns the model); \"MEW-zee-roh\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/muzero.mp3",
+  "url": "https://pronounce.renlab.ai/word/muzero",
+  "date_modified": "2026-06-16"
 }

@@ -8,5 +8,8 @@
   "source_label": "Attention paper",
   "category": "cs-term",
   "confidence": "community-consensus",
-  "notes": "\"trans-FOR-mer\" — the architecture, not the toy."
+  "notes": "\"trans-FOR-mer\" — the architecture, not the toy.",
+  "audio_url": "https://pronounce.renlab.ai/audio/transformer.mp3",
+  "url": "https://pronounce.renlab.ai/word/transformer",
+  "date_modified": "2026-06-16"
 }

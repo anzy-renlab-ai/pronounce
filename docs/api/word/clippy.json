@@ -8,5 +8,8 @@
   "source_label": "rust-lang/rust-clippy GitHub",
   "category": "cli-tool",
   "confidence": "community-consensus",
-  "notes": "Rust's official linter (run via `cargo clippy`). KLIP-ee — named after Clippy, the Microsoft Office paperclip assistant; same pronunciation as that mascot."
+  "notes": "Rust's official linter (run via `cargo clippy`). KLIP-ee — named after Clippy, the Microsoft Office paperclip assistant; same pronunciation as that mascot.",
+  "audio_url": "https://pronounce.renlab.ai/audio/clippy.mp3",
+  "url": "https://pronounce.renlab.ai/word/clippy",
+  "date_modified": "2026-06-16"
 }

@@ -8,5 +8,8 @@
   "source_label": "Tcl official",
   "category": "product",
   "confidence": "creator-clarified",
-  "notes": "John Ousterhout (creator): \"tickle\". Official Tcl Developer Xchange confirms."
+  "notes": "John Ousterhout (creator): \"tickle\". Official Tcl Developer Xchange confirms.",
+  "audio_url": "https://pronounce.renlab.ai/audio/tcl.mp3",
+  "url": "https://pronounce.renlab.ai/word/tcl",
+  "date_modified": "2026-06-16"
 }

@@ -8,5 +8,8 @@
   "source_label": "SLSA",
   "category": "abbreviation",
   "confidence": "creator-clarified",
-  "notes": "Supply-chain security framework; pronounced \"salsa\"."
+  "notes": "Supply-chain security framework; pronounced \"salsa\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/slsa.mp3",
+  "url": "https://pronounce.renlab.ai/word/slsa",
+  "date_modified": "2026-06-16"
 }

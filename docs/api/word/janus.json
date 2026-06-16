@@ -8,5 +8,8 @@
   "source_label": "DeepSeek — Janus paper (arXiv 2410.13848)",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "DeepSeek's unified multimodal model (Janus / Janus-Pro) that decouples visual encoding for understanding vs generation. Named after the two-faced Roman god of doorways: JAY-nuhs, stress on the first syllable."
+  "notes": "DeepSeek's unified multimodal model (Janus / Janus-Pro) that decouples visual encoding for understanding vs generation. Named after the two-faced Roman god of doorways: JAY-nuhs, stress on the first syllable.",
+  "audio_url": "https://pronounce.renlab.ai/audio/janus.mp3",
+  "url": "https://pronounce.renlab.ai/word/janus",
+  "date_modified": "2026-06-16"
 }

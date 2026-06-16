@@ -8,5 +8,8 @@
   "source_label": "Tigera Calico",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"CAL-i-co\"."
+  "notes": "\"CAL-i-co\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/calico.mp3",
+  "url": "https://pronounce.renlab.ai/word/calico",
+  "date_modified": "2026-06-16"
 }

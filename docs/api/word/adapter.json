@@ -8,5 +8,8 @@
   "source_label": "Houlsby et al. 2019",
   "category": "cs-term",
   "confidence": "community-consensus",
-  "notes": "\"uh-DAP-ter\" — small bottleneck layer injected into a frozen backbone (LoRA, IA³, etc. are adapter methods)."
+  "notes": "\"uh-DAP-ter\" — small bottleneck layer injected into a frozen backbone (LoRA, IA³, etc. are adapter methods).",
+  "audio_url": "https://pronounce.renlab.ai/audio/adapter.mp3",
+  "url": "https://pronounce.renlab.ai/word/adapter",
+  "date_modified": "2026-06-16"
 }

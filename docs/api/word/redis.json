@@ -8,5 +8,8 @@
   "source_label": "Wikipedia § Redis",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"RED-iss\". Wikipedia opens with 'Redis (/ˈrɛdɪs/)' citing the Redis FAQ; Salvatore Sanfilippo (antirez, creator) uses the same reading in screencasts."
+  "notes": "\"RED-iss\". Wikipedia opens with 'Redis (/ˈrɛdɪs/)' citing the Redis FAQ; Salvatore Sanfilippo (antirez, creator) uses the same reading in screencasts.",
+  "audio_url": "https://pronounce.renlab.ai/audio/redis.mp3",
+  "url": "https://pronounce.renlab.ai/word/redis",
+  "date_modified": "2026-06-16"
 }

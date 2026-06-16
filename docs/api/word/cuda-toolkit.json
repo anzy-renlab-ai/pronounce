@@ -8,5 +8,8 @@
   "source_label": "NVIDIA",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"KOO-duh tool-kit\"."
+  "notes": "\"KOO-duh tool-kit\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/cuda-toolkit.mp3",
+  "url": "https://pronounce.renlab.ai/word/cuda-toolkit",
+  "date_modified": "2026-06-16"
 }

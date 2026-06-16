@@ -8,5 +8,8 @@
   "source_label": "Claude Code Docs — Create custom subagents",
   "category": "cs-term",
   "confidence": "community-consensus",
-  "notes": "Compound of \"sub-\" + \"agent\"; a specialized AI assistant that runs in its own context window, used heavily in Claude Code, the Claude Agent SDK, and agentic-coding tooling. STRESS: SUB-ay-jent — primary on \"sub\", \"agent\" keeps its /ˈeɪdʒənt/ (\"ay-jent\"); the \"g\" is soft (j), not hard. Spelled as one word in the official docs."
+  "notes": "Compound of \"sub-\" + \"agent\"; a specialized AI assistant that runs in its own context window, used heavily in Claude Code, the Claude Agent SDK, and agentic-coding tooling. STRESS: SUB-ay-jent — primary on \"sub\", \"agent\" keeps its /ˈeɪdʒənt/ (\"ay-jent\"); the \"g\" is soft (j), not hard. Spelled as one word in the official docs.",
+  "audio_url": "https://pronounce.renlab.ai/audio/subagent.mp3",
+  "url": "https://pronounce.renlab.ai/word/subagent",
+  "date_modified": "2026-06-16"
 }

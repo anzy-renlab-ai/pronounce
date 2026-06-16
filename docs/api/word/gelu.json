@@ -8,5 +8,8 @@
   "source_label": "Hendrycks & Gimpel",
   "category": "cs-term",
   "confidence": "contested",
-  "notes": "\"JELL-oo\" common; \"G-E-L-U\" also heard. Gaussian Error Linear Unit."
+  "notes": "\"JELL-oo\" common; \"G-E-L-U\" also heard. Gaussian Error Linear Unit.",
+  "audio_url": "https://pronounce.renlab.ai/audio/gelu.mp3",
+  "url": "https://pronounce.renlab.ai/word/gelu",
+  "date_modified": "2026-06-16"
 }

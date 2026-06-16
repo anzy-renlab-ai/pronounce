@@ -8,5 +8,8 @@
   "source_label": "Wikipedia",
   "category": "cs-term",
   "confidence": "community-consensus",
-  "notes": "\"PAK-sose\" — after the Greek island. Leslie Lamport's consensus algorithm."
+  "notes": "\"PAK-sose\" — after the Greek island. Leslie Lamport's consensus algorithm.",
+  "audio_url": "https://pronounce.renlab.ai/audio/paxos.mp3",
+  "url": "https://pronounce.renlab.ai/word/paxos",
+  "date_modified": "2026-06-16"
 }

@@ -8,5 +8,8 @@
   "source_label": "Heusel et al. 2017",
   "category": "acronym",
   "confidence": "contested",
-  "notes": "Fréchet Inception Distance; letters dominant, \"fid\" sometimes."
+  "notes": "Fréchet Inception Distance; letters dominant, \"fid\" sometimes.",
+  "audio_url": "https://pronounce.renlab.ai/audio/fid.mp3",
+  "url": "https://pronounce.renlab.ai/word/fid",
+  "date_modified": "2026-06-16"
 }

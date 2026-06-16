@@ -8,5 +8,8 @@
   "source_label": "Linux kernel docs",
   "category": "cs-term",
   "confidence": "community-consensus",
-  "notes": "\"C-groups\". Control groups — Linux resource isolation."
+  "notes": "\"C-groups\". Control groups — Linux resource isolation.",
+  "audio_url": "https://pronounce.renlab.ai/audio/cgroups.mp3",
+  "url": "https://pronounce.renlab.ai/word/cgroups",
+  "date_modified": "2026-06-16"
 }
