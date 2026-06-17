@@ -11,5 +11,5 @@
   "notes": "Portmanteau of flash + inference; a high-performance GPU kernel/attention library for LLM serving (MLSys 2025, arXiv 2501.01005), a default backend in vLLM/SGLang/TensorRT-LLM. The infer element is from inference and is said like the verb infer (in-FUR), not in-fur as guessed from spelling. STRESS: primary on first syllable, FLASH-in-fur. No creator-quoted pronunciation found, so community-consensus.",
   "audio_url": "https://pronounce.renlab.ai/audio/flashinfer.mp3",
   "url": "https://pronounce.renlab.ai/word/flashinfer",
-  "date_modified": "2026-06-16"
+  "date_modified": "2026-06-18"
 }

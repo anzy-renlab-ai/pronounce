@@ -1,14 +1,14 @@
 # Show HN kit — Pronounce
 
-Ready-to-post. Numbers current as of v2.13.0: **1702 entries** (143 contested · 60 creator-clarified · 1499 community-consensus). Be honest about traction: ~26 GitHub stars, ~300 extension installs. Don't inflate either.
+Ready-to-post. Numbers current as of v2.14.0: **1721 entries** (147 contested · 66 creator-clarified · 1508 community-consensus). Be honest about traction: ~26 GitHub stars, ~300 extension installs. Don't inflate either.
 
 ---
 
 ## Title candidates (pick one)
 
 1. **Show HN: Pronounce — a sourced dictionary of how devs actually say kubectl, GIF, and 1700 more**
-2. **Show HN: 143 dev words you're still arguing about, 60 the creators already settled (with citations)**
-3. **Show HN: I cited every pronunciation so we'd stop fighting about GIF on standup (1702 dev terms)**
+2. **Show HN: 147 dev words you're still arguing about, 66 the creators already settled (with citations)**
+3. **Show HN: I cited every pronunciation so we'd stop fighting about GIF on standup (1721 dev terms)**
 
 > **Recommendation: #1.** It leads with the contested-debate hook, names the two terms that reliably start fights (kubectl, GIF), carries a concrete number, and the word "sourced" front-loads the only real differentiator. #2 is the sharpest scoreboard framing and is the strongest *first-comment* line — but as a title it buries the word "pronounce" and reads a hair clickbaity for HN. #3 is the most self-effacing and human; keep it as a backup if #1 feels too tidy. Whichever title wins, open the body with the standup story.
 
@@ -20,7 +20,7 @@ I cringed one too many times on standup hearing "kub-cuttle," so I went looking 
 
 The differentiator is **sourced citations + the contested-debate angle.** Every entry has a confidence tag and, where one exists, a source URL. Three tiers:
 
-- **creator-clarified (60)** — the person who made the thing said so, on the record:
+- **creator-clarified (66)** — the person who made the thing said so, on the record:
   - GIF → "jif" (Steve Wilhite, NYT 2013)
   - nginx → "engine X" (nginx.org)
   - YAML → "yam-ul" (yaml.org FAQ)
@@ -29,16 +29,16 @@ The differentiator is **sourced citations + the contested-debate angle.** Every 
   - TOML → rhymes with knoll (Tom Preston-Werner)
   - Tcl → "tickle" (Ousterhout)
   - awk → "auk," like the seabird (Aho/Weinberger/Kernighan)
-- **contested (143)** — both readings are alive and devs still argue. The dict surfaces *both* and plays them back to back:
+- **contested (147)** — both readings are alive and devs still argue. The dict surfaces *both* and plays them back to back:
   - kubectl → "koob-control" vs "cube-cuttle"
   - SQL → "sequel" vs "S-Q-L"
   - JSON → "jay-son" vs "jee-son"
   - GUI → "gooey" vs "G-U-I"
   - JWT → "jot" (per RFC 7519) vs "J-W-T" (what everyone actually says)
   - plus char, regex, sudo, and ~135 more
-- **community-consensus (1499)** — widely agreed, no single citable authority. The long tail.
+- **community-consensus (1508)** — widely agreed, no single citable authority. The long tail.
 
-The scoreboard is the fun part: **143 words you're still arguing about, 60 the creators already settled.** That's the screenshot.
+The scoreboard is the fun part: **147 words you're still arguing about, 66 the creators already settled.** That's the screenshot.
 
 It's deliberately a small, boring stack — one TSV and a pile of thin consumers:
 
@@ -58,14 +58,14 @@ Being honest about traction: it's ~26 stars and ~300 installs. It's early. What 
 
 - Site: https://pronounce.renlab.ai/
 - Repo: https://github.com/anzy-renlab-ai/pronounce
-- The whole dataset, one file (1702 entries): https://github.com/anzy-renlab-ai/pronounce/blob/main/data/pronunciations.tsv
+- The whole dataset, one file (1721 entries): https://github.com/anzy-renlab-ai/pronounce/blob/main/data/pronunciations.tsv
 - VS Code / Cursor / VSCodium extension: https://open-vsx.org/extension/sayit/pronounce
 
 ### What I'd love feedback on
 
 1. **Words you mispronounce that aren't in here.** Comment the term or open a one-line PR — the dictionary grows from PRs.
 2. **Contested → creator-clarified upgrades.** If you have a citable creator quote (a recorded talk, an official FAQ, an RFC) for anything currently tagged `community-consensus` or `contested`, that's one PR away from a receipt. This is the highest-value contribution.
-3. **Entries I got wrong.** Especially the 143 contested ones — if your team says it a third way, tell me and I'll add the variant rather than pick a winner.
+3. **Entries I got wrong.** Especially the 147 contested ones — if your team says it a third way, tell me and I'll add the variant rather than pick a winner.
 4. **The playback engine off macOS.** macOS `say` is the gold standard; Linux/Windows are functional best-effort. If the espeak-ng output sounds wrong for a term, I want to know.
 
 ---
@@ -76,7 +76,7 @@ Being honest about traction: it's ~26 stars and ~300 installs. It's early. What 
 
 **Post a substantive first comment immediately** — this is yours to make, not a reply. HN rewards an author comment that adds the data angle the title couldn't fit. Suggested:
 
-> Author here. The thing I actually care about isn't picking winners, it's the scoreboard: of 1702 entries, **143 are contested** (both readings active, dict plays both) and **60 are creator-clarified** with a source URL — GIF/jif (Wilhite, NYT 2013), TOML rhymes-with-knoll (Preston-Werner), Tcl/tickle (Ousterhout), awk/auk. The other 1499 are community-consensus, no single citable authority. I'd love the contested list to get *more* contested — if your team says kubectl a way I don't have, comment it and I'll add the variant instead of overruling you. The whole dataset is one TSV you can grep: [link].
+> Author here. The thing I actually care about isn't picking winners, it's the scoreboard: of 1721 entries, **147 are contested** (both readings active, dict plays both) and **66 are creator-clarified** with a source URL — GIF/jif (Wilhite, NYT 2013), TOML rhymes-with-knoll (Preston-Werner), Tcl/tickle (Ousterhout), awk/auk. The other 1508 are community-consensus, no single citable authority. I'd love the contested list to get *more* contested — if your team says kubectl a way I don't have, comment it and I'll add the variant instead of overruling you. The whole dataset is one TSV you can grep: [link].
 
 Then go quiet. Don't reply to your own thread for the first ~30 minutes (looks staged), and answer questions with specifics, not thank-yous.
 

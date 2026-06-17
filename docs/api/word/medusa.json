@@ -11,5 +11,5 @@
   "notes": "Speculative-decoding method that adds multiple extra decoding \"heads\" so a model drafts several future tokens itself (no separate draft model). Named after the Gorgon Medusa with many snake-heads: muh-DOO-suh.",
   "audio_url": "https://pronounce.renlab.ai/audio/medusa.mp3",
   "url": "https://pronounce.renlab.ai/word/medusa",
-  "date_modified": "2026-06-16"
+  "date_modified": "2026-06-18"
 }

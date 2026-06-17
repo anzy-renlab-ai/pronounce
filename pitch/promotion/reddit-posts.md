@@ -86,7 +86,7 @@ pedantic, well-sourced comments — lean into that.
 
 **Title:**
 
-I tagged 143 developer words that engineers still actively argue about, and 60 the creators already settled — with citations
+I tagged 147 developer words that engineers still actively argue about, and 66 the creators already settled — with citations
 
 **Body:**
 
@@ -94,10 +94,10 @@ There's a recurring genre of programming argument — GIF vs JIF, "sequel" vs
 "S-Q-L", kubectl, JSON, GUI — that never resolves because nobody brings
 receipts. So I started keeping receipts.
 
-It's a dictionary of how developer jargon is actually pronounced, 1702 entries,
+It's a dictionary of how developer jargon is actually pronounced, 1721 entries,
 and the only interesting column is the confidence tag:
 
-- **60 creator-clarified** — settled, on the record, by the person who made the
+- **66 creator-clarified** — settled, on the record, by the person who made the
   thing:
   - GIF → "jif" (Steve Wilhite, the creator, NYT 2013)
   - nginx → "engine X" (the project's own FAQ)
@@ -107,7 +107,7 @@ and the only interesting column is the confidence tag:
   - awk → "auk" (Aho, Weinberger, Kernighan — the three authors)
   - LaTeX → "lay-tek", GNU → "guh-new"
 
-- **143 contested** — devs genuinely still split, so the entry records *both*
+- **147 contested** — devs genuinely still split, so the entry records *both*
   readings instead of declaring a winner: kubectl ("koob-control" vs
   "cube-cuttle"), SQL, JSON, GUI, JWT ("jot" vs spelled out), regex, sudo, char.
 
@@ -160,7 +160,7 @@ the cloud-native vocabulary specifically:
 - **QUIC** — "quick", per the IETF (RFC 9000), not spelled out.
 - **CIDR** — "sigh-der" (yes, like the drink). **JWT** — "jot", per the RFC.
 
-It's part of a bigger sourced dictionary (1702 entries total, every one tagged
+It's part of a bigger sourced dictionary (1721 entries total, every one tagged
 consensus / creator-clarified / contested with a citation), but the K8s + infra
 slice is the reason I'm posting here — that's the vocabulary I personally got
 corrected on the most.

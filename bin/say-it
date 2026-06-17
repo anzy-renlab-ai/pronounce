@@ -11,7 +11,7 @@
 # text. Respelling rides the TTS's built-in letter-to-sound rules.
 set -e
 
-VERSION="0.6.4"
+VERSION="0.6.5"
 VOICE="Samantha"
 TIMES=3
 RATE=130

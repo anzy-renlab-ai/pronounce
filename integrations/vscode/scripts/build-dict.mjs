@@ -47,7 +47,10 @@ console.log(`built dictionary: ${COUNT} entries → ${outPath}`);
 // One prose pattern for every count phrasing ("918 entries", "918+ sourced
 // entries", "1654 developer jargon names"); the captured "+" is preserved so
 // each doc keeps its own style.
-const PROSE = /\b\d{3,4}(\+?)((?:[ \-]sourced)?[ \-](?:entr(?:y|ies)|developer[ \-]jargon names))/gi;
+// Number part matches either a comma-grouped form ("1,702") or a bare run
+// ("1702"); the comma branch is tried first so we consume the WHOLE number
+// instead of just the "702" after the comma (which produced "1,1702").
+const PROSE = /\b(\d{1,3}(?:,\d{3})+|\d{3,5})(\+?)((?:[ \-]sourced)?[ \-](?:entr(?:y|ies)|developer[ \-]jargon names))/gi;
 const BADGE = /\b\d{3,4}(?:%2B)?%20entries/gi;
 const CJK = /\d{3,4}(?=\s*条)/g; // Chinese: "1212 条" / "1212 条词条"
 const docFiles = [
@@ -67,7 +70,10 @@ for (const parts of docFiles) {
   let text;
   try { text = readFileSync(p, 'utf8'); } catch { continue; }
   const next = text
-    .replace(PROSE, `${COUNT}$1$2`)
+    // Preserve each doc's own digit style: if the matched number used commas
+    // ("1,702") keep them, otherwise emit the bare count ("1702").
+    .replace(PROSE, (_m, num, plus, tail) =>
+      `${num.includes(',') ? COUNT.toLocaleString('en-US') : COUNT}${plus}${tail}`)
     .replace(BADGE, `${COUNT}%20entries`)
     .replace(CJK, `${COUNT}`);
   if (next !== text) {

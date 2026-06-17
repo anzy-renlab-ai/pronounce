@@ -11,5 +11,5 @@
   "notes": "DeepSeek's FP8/FP4 GEMM kernel library for Hopper/Blackwell, used as a MoE backend by vLLM/SGLang. \"Deep\" + \"GEMM\" (General Matrix Multiply). Pronunciation is genuinely split: most HPC/BLAS practitioners say GEMM as a single word rhyming with \"gem\"/\"hem\" (mirroring how S-GEMM = \"ess-jem\", D-GEMM = \"dee-jem\" are spoken), giving DEEP-jem. Others spell it out, deep-G-E-M-M. README gives no phonetic guidance. STRESS: DEEP-jem.",
   "audio_url": "https://pronounce.renlab.ai/audio/deepgemm.mp3",
   "url": "https://pronounce.renlab.ai/word/deepgemm",
-  "date_modified": "2026-06-16"
+  "date_modified": "2026-06-18"
 }

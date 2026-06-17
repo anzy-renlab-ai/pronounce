@@ -1,5 +1,21 @@
 # Changelog
 
+## v2.14.0 — 2026-06-18
+
+### Added
+- **Dictionary +19 — config-language, cloud-native, model, and classic-math names devs stumble on.** Each web-verified for its General American reading with a real source:
+  - **Config / data languages** (the "is it a word or do I spell it out?" trap): **Pkl** (PICK-uhl — Apple says "pronounced Pickle"), **CUE** (kyoo, = the letter Q, not C-U-E), **KDL** (CUH-duhl), **Jsonnet** (JAY-son-it), **Dhall** (dawl).
+  - **Cloud-native / Kubernetes ecosystem:** **Kuma** (KOO-mah — Japanese "bear", not KYOO-mah), **Karmada** (kar-MAH-duh — "Kubernetes Armada"), **Kustomize** (KUSS-tuh-myze), **Beyla** (BAY-luh — Grafana's eBPF auto-instrumentation).
+  - **AI/ML model & method names:** **QwQ** (kwyoo — the Qwen team's stated /kwjuː/, not the kaomoji), **Tulu** (TOO-loo — AllenAI, a Turkish camel breed), **GaLore** (guh-LOR vs GAL-or, contested), **CoCa** (KOH-kuh — "Contrastive Captioner", homograph of coca).
+  - **Classic math / CS names developers routinely mangle:** **Cholesky** (shuh-LESS-kee), **Poisson** (PWAH-sawn), **Cauchy** (koh-SHEE), **Bezier** (BEZ-ee-ay, silent r), **Voronoi** (VOR-uh-noy vs vor-uh-NOY, contested), **Erdos** (AIR-dursh — Hungarian Erdős).
+
+  Contested readings carry alternate IPA + respelling; lookup keys are ASCII-typeable (`Tulu`, `Bezier`, `Erdos` — the diacritic spelling is preserved in the notes). Generated and adversarially verified (real? sourced? genuinely non-obvious? IPA defensible?) before inclusion. Entry count auto-synced 1,702 → 1,721 across README, the site, the extension, `mcp-server/server.json`, and `.codex-plugin/plugin.json`; per-word audio + pages rendered for all 19. Confidence splits now 1,508 community-consensus · 147 contested · 66 creator-clarified.
+
+### Fixed
+- **`build-dict` count-sync corrupted comma-grouped numbers.** The lockstep entry-count regex matched only the digits *after* a comma (`\b\d{3,4}`), so it rewrote the README scoreboard's "**1,702 entries**" to "**1,1702 entries**". The number pattern now matches the whole comma-grouped form and preserves each doc's own digit style (commas in the README headline, bare digits elsewhere).
+- **Stale entry count in `docs/index.html` meta.** The page's `<meta name="description">` / OpenGraph / Twitter-card counts were never synced at v2.13.0 and still read **1665**; the live site now reports the correct count.
+- CLI `VERSION` → 0.6.5; VS Code extension → 0.6.5.
+
 ## v2.13.0 — 2026-06-15
 
 ### Added

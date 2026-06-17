@@ -1,0 +1,15 @@
+{
+  "word": "CUE",
+  "ipa": "/kjuː/",
+  "respelling_us": "kyoo",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://cuelang.org/docs/reference/spec/",
+  "source_label": "The CUE Language Specification (cuelang.org)",
+  "category": "project",
+  "confidence": "creator-clarified",
+  "notes": "Configuration/validation language (cuelang) by ex-Googler Marcel van Lohuizen, of Borg/GCL lineage. The official language spec opens with the answer verbatim: 'CUE, pronounced cue or Q, is a general-purpose and strongly typed constraint-based language.' So it is ONE syllable, kyoo, a homophone of the letter Q and of 'queue.' The all-caps stylization 'CUE' is widely glossed in the community as the backronym 'Configure Unify Execute' (the spec itself does not define the acronym), and that styling tricks people into spelling it 'C-U-E' as initials, which the project rejects.",
+  "audio_url": "https://pronounce.renlab.ai/audio/cue.mp3",
+  "url": "https://pronounce.renlab.ai/word/cue",
+  "date_modified": "2026-06-18"
+}

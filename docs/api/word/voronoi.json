@@ -1,0 +1,15 @@
+{
+  "word": "Voronoi",
+  "ipa": "/ˈvɔːrənɔɪ/",
+  "respelling_us": "VOR uh noy",
+  "alt_ipa": ["/ˌvɔːrəˈnɔɪ/"],
+  "alt_respelling_us": ["vor uh NOY"],
+  "source_url": "https://en.wikipedia.org/wiki/Voronoi_diagram",
+  "source_label": "Wikipedia — Voronoi diagram (named after Georgy Voronoy)",
+  "category": "cs-term",
+  "confidence": "contested",
+  "notes": "Stress placement is genuinely contested. Named after Russian mathematician Georgy Voronoy (Воронóй). The most commonly documented mainstream English form puts primary stress on the FIRST syllable — VOR-uh-noy, /ˈvɔːrənɔɪ/ (so howtopronounce.com and the dev-community Casual Effects computational-graphics guide). But it competes with a final-stress vor-uh-NOY (ending like 'annoy') and a middle-stress vor-OH-noy — no single anglicization has won. The Russian-accurate rendering is closer to 'vah-rah-NOY', with the unstressed o's reduced toward 'uh/ah'. Pervasive in computational geometry, mesh generation, procedural texturing, and game dev, where 'how do you even say Voronoi?' (usually alongside Delaunay) is a recurring forum thread.",
+  "audio_url": "https://pronounce.renlab.ai/audio/voronoi.mp3",
+  "url": "https://pronounce.renlab.ai/word/voronoi",
+  "date_modified": "2026-06-18"
+}

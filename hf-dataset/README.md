@@ -26,7 +26,7 @@ A community dictionary of how engineers actually pronounce developer jargon: pro
 
 The dataset is the data behind [pronounce.renlab.ai](https://pronounce.renlab.ai). Each entry carries IPA, an English-like respelling, alternative readings, a confidence label, a citable source URL where one exists, and a URL to pre-rendered audio.
 
-- **Entries:** 1702
+- **Entries:** 1721
 - **Language:** English (General American only)
 - **Format:** one JSON object per line (`pronunciations.jsonl`); a flat `pronunciations.csv` is also included
 - **License:** MIT
@@ -38,15 +38,15 @@ Most pronunciation references tell you the "correct" answer. A lot of developer 
 1. records the reading developers actually use, and
 2. labels how settled that reading is.
 
-That second part is the differentiator. The interesting rows are not the ones everybody agrees on. They are the 143 words developers are still arguing about, and the 60 the creators already settled on the record.
+That second part is the differentiator. The interesting rows are not the ones everybody agrees on. They are the 147 words developers are still arguing about, and the 66 the creators already settled on the record.
 
 ## Confidence split
 
 | confidence            | count | meaning                                                                    |
 |-----------------------|-------|----------------------------------------------------------------------------|
-| `community-consensus` | 1499  | one dominant reading, no live dispute                                      |
-| `contested`           | 143   | two or more readings in active use; the debate is real                     |
-| `creator-clarified`   | 60    | settled by the creator or an official FAQ, with a source quote on file     |
+| `community-consensus` | 1508  | one dominant reading, no live dispute                                      |
+| `contested`           | 147   | two or more readings in active use; the debate is real                     |
+| `creator-clarified`   | 66    | settled by the creator or an official FAQ, with a source quote on file     |
 
 ## Column schema
 
@@ -76,7 +76,7 @@ The data is hand-curated, not scraped. Confidence labels are assigned by this ru
 
 - **`creator-clarified`** — used only when `source_url` documents a creator quote or an official FAQ entry stating the pronunciation. Example: the GNU Project hosts a dedicated [pronunciation page](https://www.gnu.org/gnu/pronunciation.html); `nginx.org` documents "engine x". A `creator-clarified` row without a real source is a bug.
 - **`contested`** — assigned when two or more readings are demonstrably in active use among practitioners and no creator/official ruling settles it (or a ruling exists but the community visibly ignores it, like `GIF`). The `notes` field names the competing camps.
-- **`community-consensus`** — the default: one dominant reading with no live dispute. Most of the 1499 such entries are uncontroversial words that just needed an IPA and a respelling.
+- **`community-consensus`** — the default: one dominant reading with no live dispute. Most of the 1508 such entries are uncontroversial words that just needed an IPA and a respelling.
 
 `source_url` is filled in wherever a citable reference exists (official FAQ, project about-page, Wikipedia pronunciation anchor). Where no source exists, it is left empty rather than faked.
 

@@ -1704,3 +1704,22 @@ Chebyshev | /ˈtʃɛbɪʃɔːf/ | cheb ih shoff | person | contested | https://e
 Hadamard | /ˌhædəˈmɑːr/ | had uh mar | person | contested | https://en.wikipedia.org/wiki/Jacques_Hadamard
 Kronecker | /ˈkroʊnɛkər/ | kroh neck er | person | community-consensus | https://en.wikipedia.org/wiki/Leopold_Kronecker
 Toeplitz | /ˈtoʊplɪts/ | tope lits | person | contested | https://en.wikipedia.org/wiki/Otto_Toeplitz
+QwQ | /kwjuː/ | kwyoo | product | creator-clarified | https://qwenlm.github.io/blog/qwq-32b-preview/
+Tulu | /ˈtuːluː/ | TOO loo | project | community-consensus | https://arxiv.org/html/2411.15124v3
+GaLore | /ɡəˈlɔːr/ | guh LOR | cs-term | contested | https://arxiv.org/abs/2403.03507
+CoCa | /ˈkoʊkə/ | KOH kuh | product | contested | https://arxiv.org/abs/2205.01917
+Pkl | /ˈpɪkəl/ | PICK uhl | project | creator-clarified | https://pkl-lang.org/blog/introducing-pkl.html
+CUE | /kjuː/ | kyoo | project | creator-clarified | https://cuelang.org/docs/reference/spec/
+Kuma | /ˈkuːmə/ | KOO mah | project | community-consensus | https://cloudnativenow.com/topics/cloudnativenetworking/introducing-kuma-the-service-mesh-from-kong/
+Karmada | /kɑːrˈmɑːdə/ | kar MAH duh | project | community-consensus | https://github.com/karmada-io/karmada
+Beyla | /ˈbeɪlə/ | BAY luh | tool | community-consensus | https://en.wikipedia.org/wiki/Beyla
+Kustomize | /ˈkʌstəˌmaɪz/ | KUSS tuh myze | tool | community-consensus | https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/
+KDL | /ˈkʌdəl/ | CUH duhl | project | creator-clarified | https://kdl.dev/
+Jsonnet | /ˈdʒeɪ ˌsɑːnɪt/ | JAY son it | project | creator-clarified | https://jsonnet.org/
+Dhall | /dɔl/ | dawl | project | creator-clarified | https://github.com/dhall-lang/dhall-lang/blob/master/README.md
+Cholesky | /ʃəˈlɛski/ | shuh LESS kee | cs-term | contested | https://en.wikipedia.org/wiki/Cholesky_decomposition
+Poisson | /ˈpwɑsɒn/ | PWAH sawn | cs-term | community-consensus | https://en.wiktionary.org/wiki/Poisson
+Cauchy | /koʊˈʃiː/ | koh SHEE | cs-term | community-consensus | https://en.wikipedia.org/wiki/Augustin-Louis_Cauchy
+Bezier | /ˈbɛz.i.eɪ/ | BEZ ee ay | cs-term | community-consensus | https://en.wikipedia.org/wiki/B%C3%A9zier_curve
+Voronoi | /ˈvɔːrənɔɪ/ | VOR uh noy | cs-term | contested | https://en.wikipedia.org/wiki/Voronoi_diagram
+Erdos | /ˈɛrdɜːrʃ/ | AIR dursh | person | community-consensus | https://en.wikipedia.org/wiki/Paul_Erd%C5%91s

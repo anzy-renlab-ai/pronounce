@@ -11,5 +11,5 @@
   "notes": "k-bit quantization library for PyTorch underpinning 8-bit optimizers, LLM.int8() and 4-bit/NF4 QLoRA. Written as one lowercase token but spoken as three words: BITS-and-BYTES — STRESS on first and last, middle 'and' reduced to schwa. The spelling is the pronunciation; only the concatenation obscures the word boundaries.",
   "audio_url": "https://pronounce.renlab.ai/audio/bitsandbytes.mp3",
   "url": "https://pronounce.renlab.ai/word/bitsandbytes",
-  "date_modified": "2026-06-16"
+  "date_modified": "2026-06-18"
 }

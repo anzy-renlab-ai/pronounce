@@ -11,5 +11,5 @@
   "notes": "Fully Sharded Data Parallel — PyTorch's ZeRO-style multi-GPU training strategy that shards parameters, gradients, and optimizer states across ranks. Initialism, spelled out letter-by-letter: EFF-ESS-DEE-PEE (no widely-used word pronunciation). Central to multi-GPU/LLM training docs since 2022; FSDP2 is the current rewrite.",
   "audio_url": "https://pronounce.renlab.ai/audio/fsdp.mp3",
   "url": "https://pronounce.renlab.ai/word/fsdp",
-  "date_modified": "2026-06-16"
+  "date_modified": "2026-06-18"
 }
