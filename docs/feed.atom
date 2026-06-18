@@ -4,181 +4,181 @@
   <link href="https://pronounce.renlab.ai/feed.atom" rel="self"/>
   <link href="https://pronounce.renlab.ai/"/>
   <id>https://pronounce.renlab.ai/</id>
-  <updated>2026-06-17T16:29:24Z</updated>
+  <updated>2026-06-18T01:41:21Z</updated>
   <subtitle>How engineers actually pronounce project / product / jargon names. Community-maintained.</subtitle>
   <entry>
     <title>Lebesgue — luh beg</title>
     <link href="https://pronounce.renlab.ai/word/lebesgue"/>
     <id>https://pronounce.renlab.ai/word/lebesgue</id>
-    <updated>2026-06-17T16:29:24Z</updated>
+    <updated>2026-06-18T01:41:21Z</updated>
     <summary>Lebesgue is pronounced "luh beg" (/ləˈbɛɡ/). French mathematician Henri Lebesgue; silent '-gue' gives 'luh-BEG', not 'luh-BESG'.</summary>
   </entry>
   <entry>
     <title>Minkowski — ming kawf skee</title>
     <link href="https://pronounce.renlab.ai/word/minkowski"/>
     <id>https://pronounce.renlab.ai/word/minkowski</id>
-    <updated>2026-06-17T16:29:24Z</updated>
+    <updated>2026-06-18T01:41:21Z</updated>
     <summary>Minkowski is pronounced "ming kawf skee" (/mɪŋˈkɔːfski/). German mathematician Hermann Minkowski; German 'ming-KAWF-skee' vs common English 'ming-KOW-skee'.</summary>
   </entry>
   <entry>
     <title>Chebyshev — cheb ih shoff</title>
     <link href="https://pronounce.renlab.ai/word/chebyshev"/>
     <id>https://pronounce.renlab.ai/word/chebyshev</id>
-    <updated>2026-06-17T16:29:24Z</updated>
+    <updated>2026-06-18T01:41:21Z</updated>
     <summary>Chebyshev is pronounced "cheb ih shoff" (/ˈtʃɛbɪʃɔːf/). Russian Pafnuty Chebyshev; closest is 'CHEB-ih-shoff' (-off ending), but English math often says 'cheb-ih-SHEV'.</summary>
   </entry>
   <entry>
     <title>Hadamard — had uh mar</title>
     <link href="https://pronounce.renlab.ai/word/hadamard"/>
     <id>https://pronounce.renlab.ai/word/hadamard</id>
-    <updated>2026-06-17T16:29:24Z</updated>
+    <updated>2026-06-18T01:41:21Z</updated>
     <summary>Hadamard is pronounced "had uh mar" (/ˌhædəˈmɑːr/). French Jacques Hadamard, [adamaʁ] (silent final d); English speakers split between 'had-uh-MAR' and anglicized 'HAD-uh-mard'.</summary>
   </entry>
   <entry>
     <title>Kronecker — kroh neck er</title>
     <link href="https://pronounce.renlab.ai/word/kronecker"/>
     <id>https://pronounce.renlab.ai/word/kronecker</id>
-    <updated>2026-06-17T16:29:24Z</updated>
+    <updated>2026-06-18T01:41:21Z</updated>
     <summary>Kronecker is pronounced "kroh neck er" (/ˈkroʊnɛkər/). German Leopold Kronecker, [ˈkʁoːnɛkɐ]; 'KROH-neck-er' with stress on first syllable, not 'kro-NECK-er'.</summary>
   </entry>
   <entry>
     <title>Toeplitz — tope lits</title>
     <link href="https://pronounce.renlab.ai/word/toeplitz"/>
     <id>https://pronounce.renlab.ai/word/toeplitz</id>
-    <updated>2026-06-17T16:29:24Z</updated>
+    <updated>2026-06-18T01:41:21Z</updated>
     <summary>Toeplitz is pronounced "tope lits" (/ˈtoʊplɪts/). German Otto Toeplitz, [ˈtœplɪts] (oe = ö); English usually anglicized 'TOPE-lits', also heard 'TEP-lits'.</summary>
   </entry>
   <entry>
     <title>QwQ — kwyoo</title>
     <link href="https://pronounce.renlab.ai/word/qwq"/>
     <id>https://pronounce.renlab.ai/word/qwq</id>
-    <updated>2026-06-17T16:29:24Z</updated>
+    <updated>2026-06-18T01:41:21Z</updated>
     <summary>QwQ is pronounced "kwyoo" (/kwjuː/). Alibaba's Qwen-team reasoning model (QwQ = 'Qwen with Questions'). The official Qwen blog states verbatim: 'Note: This is the pronunciation of QwQ: /kwjuː/, similar to the word "quill".' So it's a single syllable: a 'kw' onset glued onto the sound of the letter Q (/juː/), i.e. KWYOO — NOT spelled out 'Q-W-Q' and NOT the kaomoji 'qwq' face. The creators' 'similar to quill' is an informal onset hint (shared 'kw-'), not a literal rhyme — /kwjuː/ does not end in an L and does not match quill's short 'i'. Lowercase middle 'w' makes it look like an emoticon, which is exactly why almost nobody guesses the intended sound.</summary>
   </entry>
   <entry>
     <title>Tulu — TOO loo</title>
     <link href="https://pronounce.renlab.ai/word/tulu"/>
     <id>https://pronounce.renlab.ai/word/tulu</id>
-    <updated>2026-06-17T16:29:24Z</updated>
+    <updated>2026-06-18T01:41:21Z</updated>
     <summary>Tulu is pronounced "TOO loo" (/ˈtuːluː/). AllenAI's open post-training model family (Tülu 2, Tülu 3). The Tülu 3 paper footnotes the name: 'A tülu is a hybrid camel bred between Bactrian camel and dromedary' — fitting AllenAI's running camel theme (the predecessor papers 'How Far Can Camels Go?' and 'Camels in a Changing Climate'). It comes from the Turkish word tülü ('hairy/feathered'); the ü is a front rounded vowel (like German ü or French 'tu'). English speakers overwhelmingly settle on TOO-loo with stress on the first syllable. A more faithful-to-Turkish rendering is tew-LOO — note Turkish stresses the FINAL syllable (Wiktionary: /tyˈly/). Common stumble: devs drop the umlaut entirely and say 'tuh-LOO' or 'TUH-luh', or read it as 'tulu' rhyming with 'Zulu'. (The AllenAI model name is spelled 'Tülu' with one ü; the underlying Turkish word is 'tülü'.)</summary>
   </entry>
   <entry>
     <title>GaLore — guh LOR</title>
     <link href="https://pronounce.renlab.ai/word/galore"/>
     <id>https://pronounce.renlab.ai/word/galore</id>
-    <updated>2026-06-17T16:29:24Z</updated>
+    <updated>2026-06-18T01:41:21Z</updated>
     <summary>GaLore is pronounced "guh LOR" (/ɡəˈlɔːr/). Memory-efficient LLM training method = 'GRAdient LOw-Rank projEction' (ICML 2024 oral, jiaweizzhao/GaLore), pitched as a more memory-efficient cousin of LoRA. The casing 'GaLore' reads as a homograph of the English word 'galore' (/ɡəˈlɔːr/, stress on the SECOND syllable, as in 'savings galore') — which strongly suggests the intended reading is guh-LOR, a wink at LoRA. Note: this pun is an inference; the paper and authors don't state the pronunciation. Because the capital L splits it visually into Ga+Lore, many practitioners instead read it as an initialism with FIRST-syllable stress, GAL-or. Genuinely split in practice.</summary>
   </entry>
   <entry>
     <title>CoCa — KOH kuh</title>
     <link href="https://pronounce.renlab.ai/word/coca"/>
     <id>https://pronounce.renlab.ai/word/coca</id>
-    <updated>2026-06-17T16:29:24Z</updated>
+    <updated>2026-06-18T01:41:21Z</updated>
     <summary>CoCa is pronounced "KOH kuh" (/ˈkoʊkə/). Google Research's image-text foundation model; the name packs 'COntrastive CAptioner'. The CoCa casing reads naturally as KOH-kuh — a homograph of 'coca' (Coca-Cola / coca leaf) — which is the most common way it's said. Because it's an acronym, some letter it out C-O-C-A (see-oh-see-AY). Stress on the first syllable: KOH-kuh. No author statement fixes the pronunciation, so usage is unsettled. The hazard: the obvious reading collides with a loaded everyday word, making speakers second-guess and switch to spelling it out.</summary>
   </entry>
   <entry>
     <title>Pkl — PICK uhl</title>
     <link href="https://pronounce.renlab.ai/word/pkl"/>
     <id>https://pronounce.renlab.ai/word/pkl</id>
-    <updated>2026-06-17T16:29:24Z</updated>
+    <updated>2026-06-18T01:41:21Z</updated>
     <summary>Pkl is pronounced "PICK uhl" (/ˈpɪkəl/). Apple's configuration-as-code language, open-sourced Feb 2024. The maintainers settle it explicitly in the launch post: 'We are delighted to announce the open source first release of Pkl (pronounced Pickle)'. So it is PICK-uhl, exactly like the cucumber. Stress on the first (only real) syllable: PICK-uhl. Because the name is spelled as three bare consonants with no vowels, almost everyone's first instinct is to spell it out 'P-K-L' or guess 'puh-KUL' / 'pee-kay-el' — all wrong.</summary>
   </entry>
   <entry>
     <title>CUE — kyoo</title>
     <link href="https://pronounce.renlab.ai/word/cue"/>
     <id>https://pronounce.renlab.ai/word/cue</id>
-    <updated>2026-06-17T16:29:24Z</updated>
+    <updated>2026-06-18T01:41:21Z</updated>
     <summary>CUE is pronounced "kyoo" (/kjuː/). Configuration/validation language (cuelang) by ex-Googler Marcel van Lohuizen, of Borg/GCL lineage. The official language spec opens with the answer verbatim: 'CUE, pronounced cue or Q, is a general-purpose and strongly typed constraint-based language.' So it is ONE syllable, kyoo, a homophone of the letter Q and of 'queue.' The all-caps stylization 'CUE' is widely glossed in the community as the backronym 'Configure Unify Execute' (the spec itself does not define the acronym), and that styling tricks people into spelling it 'C-U-E' as initials, which the project rejects.</summary>
   </entry>
   <entry>
     <title>Kuma — KOO mah</title>
     <link href="https://pronounce.renlab.ai/word/kuma"/>
     <id>https://pronounce.renlab.ai/word/kuma</id>
-    <updated>2026-06-17T16:29:24Z</updated>
+    <updated>2026-06-18T01:41:21Z</updated>
     <summary>Kuma is pronounced "KOO mah" (/ˈkuːmə/). Envoy-based service mesh originally created and donated by Kong, accepted into the CNCF (now a Sandbox project; repo kumahq/kuma, branded with the bear emoji 🐻). The name is the Japanese word for 'bear' (くま / 熊), so the intended pronunciation follows Japanese: KOO-mah — stress on the FIRST syllable, 'oo' as in 'boot'. English speakers who don't know the origin reach for KYOO-mah (rhyming with 'puma'), which is the common mispronunciation. Standard Japanese pronunciation of くま is KOO-mah.</summary>
   </entry>
   <entry>
     <title>Karmada — kar MAH duh</title>
     <link href="https://pronounce.renlab.ai/word/karmada"/>
     <id>https://pronounce.renlab.ai/word/karmada</id>
-    <updated>2026-06-17T16:29:24Z</updated>
+    <updated>2026-06-18T01:41:21Z</updated>
     <summary>Karmada is pronounced "kar MAH duh" (/kɑːrˈmɑːdə/). CNCF multi-cluster Kubernetes orchestrator (incubation project). The README opens with the etymology spelled out: 'Karmada (Kubernetes Armada)…' — a blend of Kubernetes + Armada. So the back half rhymes with 'armada': kar-MAH-duh, stress on the second syllable MAH, with a broad 'ah'. The trap is reading the first four letters as 'karm' (like karma) and saying KAR-ma-da with front stress; a secondary anglicization is kar-MAY-duh (mirroring the older 'ar-MAY-duh' variant of armada). Following the Spanish-rooted 'armada', kar-MAH-duh is the natural fit.</summary>
   </entry>
   <entry>
     <title>Beyla — BAY luh</title>
     <link href="https://pronounce.renlab.ai/word/beyla"/>
     <id>https://pronounce.renlab.ai/word/beyla</id>
-    <updated>2026-06-17T16:29:24Z</updated>
+    <updated>2026-06-18T01:41:21Z</updated>
     <summary>Beyla is pronounced "BAY luh" (/ˈbeɪlə/). Grafana's eBPF auto-instrumentation tool (open-sourced 2023, github.com/grafana/beyla), since donated to OpenTelemetry as OpenTelemetry eBPF Instrumentation (OBI). Grafana Labs names projects after Norse mythology; Beyla is a figure from the Poetic Edda (Lokasenna), a servant of the god Freyr. Say it BAY-luh, stress on the FIRST syllable (first syllable rhymes with 'bay'/'they'). The 'ey' follows the standard English Anglicization of Old Norse names — the Bellows Poetic Edda pronouncing index lists 'Beyl-a' with 'ey as in they.' (Strict Old Norse is closer to [ˈbœylɑ], a front-rounded vowel, but English usage settles on the 'they' vowel.) English readers commonly mis-guess BYE-la (eye sound) or BEE-la, both wrong.</summary>
   </entry>
   <entry>
     <title>Kustomize — KUSS tuh myze</title>
     <link href="https://pronounce.renlab.ai/word/kustomize"/>
     <id>https://pronounce.renlab.ai/word/kustomize</id>
-    <updated>2026-06-17T16:29:24Z</updated>
+    <updated>2026-06-18T01:41:21Z</updated>
     <summary>Kustomize is pronounced "KUSS tuh myze" (/ˈkʌstəˌmaɪz/). Kubernetes-native config management tool (kubernetes-sigs/kustomize), built into kubectl since 1.14 as 'kubectl kustomize' and 'kubectl apply -k'. It is just the word 'customize' with the Kubernetes-style K-for-C swap, so it is said identically to customize: KUSS-tuh-myze, stress firmly on the first syllable. The hazard is purely the spelling — people see the leading 'K' and try to honor it as a hard 'kuh-STOM-ize', or spell-pronounce it letter-by-letter, especially since the sibling term 'Kubernetes' genuinely is hard. The joke is that the K is cosmetic (K8s, kubectl, Kustomize) and the word is said exactly like 'customize'.</summary>
   </entry>
   <entry>
     <title>KDL — CUH duhl</title>
     <link href="https://pronounce.renlab.ai/word/kdl"/>
     <id>https://pronounce.renlab.ai/word/kdl</id>
-    <updated>2026-06-17T16:29:24Z</updated>
+    <updated>2026-06-18T01:41:21Z</updated>
     <summary>KDL is pronounced "CUH duhl" (/ˈkʌdəl/). The KDL Document Language (a config/serialization format, kdl.dev). The official FAQ answers the pronunciation question with simply "Same as 'cuddle'." Stress on CUH. Almost everyone defaults to spelling it out 'K-D-L' on first encounter; the maintainers deliberately want it said like the word cuddle (one implementation is even named 'cuddle'). Created by the kdl-org community (Kat Marchán et al.).</summary>
   </entry>
   <entry>
     <title>Jsonnet — JAY son it</title>
     <link href="https://pronounce.renlab.ai/word/jsonnet"/>
     <id>https://pronounce.renlab.ai/word/jsonnet</id>
-    <updated>2026-06-17T16:29:24Z</updated>
+    <updated>2026-06-18T01:41:21Z</updated>
     <summary>Jsonnet is pronounced "JAY son it" (/ˈdʒeɪ ˌsɑːnɪt/). Google's data-templating / configuration language (common in Kubernetes / infra tooling). The official site states verbatim: "The name Jsonnet is a portmanteau of JSON and sonnet, pronounced 'jay sonnet'." So it's JAY (from JSON's 'jay-son') overlapping into SONNET — three syllables JAY-SON-it, primary stress on JAY (like JSON itself). Note the General American 'sonnet' vowel is /ɑː/, not British /ɒ/. Common mistakes: 'jay-SO-net', 'juh-SON-et', or reading it like the French name 'Jeannette'. The intended reading bakes in JSON (jay-son) + sonnet.</summary>
   </entry>
   <entry>
     <title>Dhall — dawl</title>
     <link href="https://pronounce.renlab.ai/word/dhall"/>
     <id>https://pronounce.renlab.ai/word/dhall</id>
-    <updated>2026-06-17T16:29:24Z</updated>
+    <updated>2026-06-18T01:41:21Z</updated>
     <summary>Dhall is pronounced "dawl" (/dɔl/). A programmable, non-Turing-complete configuration language by Gabriel Gonzalez (an alternative to YAML/JSON). The official README settles it: the name comes from a Dustman in the game Planescape: Torment (NOT author Roald DAHL and NOT the lentil dish 'dal/daal'), and 'rhymes with tall/call/hall — dɔl for a US speaker, dɔːl for a UK speaker.' So General American is DAWL (rhymes with TALL), stress on the single syllable. Despite the ruling, a large slice of the community still says /dɑːl/ ('dahl', like the dish), tracked in GitHub issue #144 which also catalogs /dæl/ (rhymes with 'pal'); the silent-h 'Dh' digraph even tempts a /ð/ ('that') onset.</summary>
   </entry>
   <entry>
     <title>Cholesky — shuh LESS kee</title>
     <link href="https://pronounce.renlab.ai/word/cholesky"/>
     <id>https://pronounce.renlab.ai/word/cholesky</id>
-    <updated>2026-06-17T16:29:24Z</updated>
+    <updated>2026-06-18T01:41:21Z</updated>
     <summary>Cholesky is pronounced "shuh LESS kee" (/ʃəˈlɛski/). Stress on the SECOND syllable: shuh-LESS-kee. Named after French mathematician/military officer André-Louis Cholesky (decomposition posthumously published 1924). Wikipedia gives /ʃəˈlɛski/ — the onset is 'sh', NOT a hard 'k'. The decomposition is everywhere in numerical computing / ML (covariance factorization, linear solvers, Gaussian processes), so the mispronunciation gets repeated constantly. English speakers overwhelmingly default to the spelling-driven 'koh-LESS-kee' (hard C), and many keep that even after being corrected, which is why it's genuinely contested rather than a clean single answer.</summary>
   </entry>
   <entry>
     <title>Poisson — PWAH sawn</title>
     <link href="https://pronounce.renlab.ai/word/poisson"/>
     <id>https://pronounce.renlab.ai/word/poisson</id>
-    <updated>2026-06-17T16:29:24Z</updated>
+    <updated>2026-06-18T01:41:21Z</updated>
     <summary>Poisson is pronounced "PWAH sawn" (/ˈpwɑsɒn/). The 'oi' is French /wa/, so the first syllable is PWAH, not POY: PWAH-sawn. Named after French mathematician Siméon Denis Poisson. Wiktionary gives General American /ˈpwɑ.sɒn/ (no vowel-length mark) and RP /ˈpwɑː.sɒn/ ~ /ˈpwɑː.sɒ̃/ (the ː length and nasalized ending are RP, not GA). The dominant developer/student error is the fully anglicized POY-sun rhyming with 'poison', which is why the term reliably trips people in stats, queueing theory, and event-rate modeling. Educated stats usage converges on PWAH-sawn, so consensus rather than truly contested.</summary>
   </entry>
   <entry>
     <title>Cauchy — koh SHEE</title>
     <link href="https://pronounce.renlab.ai/word/cauchy"/>
     <id>https://pronounce.renlab.ai/word/cauchy</id>
-    <updated>2026-06-17T16:29:24Z</updated>
+    <updated>2026-06-18T01:41:21Z</updated>
     <summary>Cauchy is pronounced "koh SHEE" (/koʊˈʃiː/). Two syllables. The 'ch' is French /ʃ/ (the 'sh' sound) and 'au' = /oʊ/, so it ends '-SHEE', never a hard 'ch' like 'church'. General American puts the stress on the SECOND syllable: koh-SHEE /koʊˈʃiː/ (per Wikipedia's US transcription and Dictionary.com). British English shifts stress to the FIRST syllable: KOH-shee /ˈkoʊʃi/ (the alt form) — so the stress is genuinely contested across dialects even though the consonants are agreed. Named after French mathematician Augustin-Louis Cauchy; English speakers meet it via the Cauchy distribution, Cauchy sequence, and Cauchy-Schwarz inequality. Routinely mangled as 'COW-chee' or 'CAW-chee' with a hard ch — both wrong.</summary>
   </entry>
   <entry>
     <title>Bezier — BEZ ee ay</title>
     <link href="https://pronounce.renlab.ai/word/bezier"/>
     <id>https://pronounce.renlab.ai/word/bezier</id>
-    <updated>2026-06-17T16:29:24Z</updated>
+    <updated>2026-06-18T01:41:21Z</updated>
     <summary>Bezier is pronounced "BEZ ee ay" (/ˈbɛz.i.eɪ/). Three syllables: BEZ-ee-ay, with the final '-ier' as the French /je/ → 'yay/ay' and a SILENT 'r'. Named after French engineer Pierre Bézier (French [bezje]); anglicized to 'BEZ-ee-ay' (Wikipedia also lists 'BEH-zee-ay', /ˈbɛz.i.eɪ/). Hugely common in front-end and graphics work — every CSS author meets cubic-bezier() and SVG path Béziers — yet it's routinely mispronounced 'BEEZ-ee-er' or 'BEZ-yer' with a hard, sounded 'r'. The accent on the é is also dropped in code (cubic-bezier), reinforcing the wrong reading. Stress is on the first syllable (BEZ); the alt form moves emphasis to the final 'AY'.</summary>
   </entry>
   <entry>
     <title>Voronoi — VOR uh noy</title>
     <link href="https://pronounce.renlab.ai/word/voronoi"/>
     <id>https://pronounce.renlab.ai/word/voronoi</id>
-    <updated>2026-06-17T16:29:24Z</updated>
+    <updated>2026-06-18T01:41:21Z</updated>
     <summary>Voronoi is pronounced "VOR uh noy" (/ˈvɔːrənɔɪ/). Stress placement is genuinely contested. Named after Russian mathematician Georgy Voronoy (Воронóй). The most commonly documented mainstream English form puts primary stress on the FIRST syllable — VOR-uh-noy, /ˈvɔːrənɔɪ/ (so howtopronounce.com and the dev-community Casual Effects computational-graphics guide). But it competes with a final-stress vor-uh-NOY (ending like 'annoy') and a middle-stress vor-OH-noy — no single anglicization has won. The Russian-accurate rendering is closer to 'vah-rah-NOY', with the unstressed o's reduced toward 'uh/ah'. Pervasive in computational geometry, mesh generation, procedural texturing, and game dev, where 'how do you even say Voronoi?' (usually alongside Delaunay) is a recurring forum thread.</summary>
   </entry>
   <entry>
     <title>Erdos — AIR dursh</title>
     <link href="https://pronounce.renlab.ai/word/erdos"/>
     <id>https://pronounce.renlab.ai/word/erdos</id>
-    <updated>2026-06-17T16:29:24Z</updated>
+    <updated>2026-06-18T01:41:21Z</updated>
     <summary>Erdos is pronounced "AIR dursh" (/ˈɛrdɜːrʃ/). Hungarian mathematician Paul Erdős; Wikipedia gives the Hungarian IPA [ˈɛrdøːʃ ˈpaːl]. Two things break English speakers: the final 's' is /ʃ/ ('sh'), and 'ő' is a long front-rounded vowel /øː/ that has no English equivalent (nearest is the NURSE vowel in 'bird', or German ö). So it's roughly AIR-dursh — stress on the FIRST syllable — commonly anglicized to AIR-dish or UR-dosh, but never 'ER-doss' or 'ER-doze'. CS folks hit this constantly via the Erdős number and Erdős–Rényi random graphs (Rényi is already in the dict), and almost everyone says the spelling-based 'ER-doss' with a hard final 's'.</summary>
   </entry>
 </feed>
