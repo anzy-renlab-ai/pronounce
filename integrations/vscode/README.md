@@ -8,7 +8,7 @@
 
 🌐 **English** · [🇨🇳 中文说明](https://pronounce.renlab.ai/zh.html) — the extension UI auto-switches to Chinese when VS Code's display language is `zh-cn`.
 
-**Stop guessing how to say `kubectl`, `nginx`, `YAML`, `Ghostty`.** Hover any tech word — hear how engineers actually say it, right in your editor. Backed by the community-curated [Pronounce.ai](https://pronounce.renlab.ai/) dictionary — **1721 sourced entries**, every one tagged with confidence (`creator-clarified` · `community-consensus` · `contested`) and a citable URL.
+**Stop guessing how to say `kubectl`, `nginx`, `YAML`, `Ghostty`.** Hover any tech word — hear how engineers actually say it, right in your editor. Backed by the community-curated [Pronounce.ai](https://pronounce.renlab.ai/) dictionary — **1738 sourced entries**, every one tagged with confidence (`creator-clarified` · `community-consensus` · `contested`) and a citable URL.
 
 > Works in **VS Code · Cursor · Windsurf · VSCodium · Gitpod · code-server** — same extension ID everywhere. (Zed doesn't run VSIX extensions — Zed users: use the [MCP server](https://github.com/anzy-renlab-ai/pronounce/tree/main/mcp-server) instead.)
 
@@ -18,7 +18,7 @@
 
 - **Hover** over `kubectl`, `nginx`, `GIF`, `YAML`, `TOML`, `Ghostty`, `wagmi`, `JSON`, `Affine`, `Logseq` — popup with IPA, English-style respelling, both readings if contested, the source citation, and a 🔊 Play button.
 - **Speak selection** — highlight any word, press `⌘⇧'`, hear it. Works on words not in the dictionary too (lower-quality TTS fallback).
-- **Search dictionary** — fuzzy-find any of the 1721 entries from the command palette (`⌘⇧P` → "Pronounce").
+- **Search dictionary** — fuzzy-find any of the 1738 entries from the command palette (`⌘⇧P` → "Pronounce").
 - **Status bar `🔊 sayit`** — always-visible reminder; click to speak the current selection.
 - **Welcome walkthrough** — on first install, a 4-step tour shows the hover, the search, and one-click hear-kubectl.
 
@@ -45,7 +45,7 @@ Engineers mispronounce tools all day — `kube-cuddle`, `engine-eks`, `Gee-son`,
 
 ## 中文说明
 
-**程序员单词怎么读？** 在 VS Code / Cursor / Windsurf 里**悬停**任意技术词 — `kubectl`、`nginx`、`YAML`、`Pydantic`、`Ollama` … — 直接听到工程师实际的读法，附 IPA、英式拼读和**来源引用**。1721 条社区维护词条，覆盖产品名、命令行工具、AI/ML 项目与研究者。
+**程序员单词怎么读？** 在 VS Code / Cursor / Windsurf 里**悬停**任意技术词 — `kubectl`、`nginx`、`YAML`、`Pydantic`、`Ollama` … — 直接听到工程师实际的读法，附 IPA、英式拼读和**来源引用**。1738 条社区维护词条，覆盖产品名、命令行工具、AI/ML 项目与研究者。
 
 VS Code 显示语言设为简体中文时，**插件界面（命令、设置、欢迎页、悬停标签）自动切换为中文**。安装：在扩展面板搜 `Pronounce`，或运行 `code --install-extension sayit.pronounce`。完整中文词典：[pronounce.renlab.ai/zh.html](https://pronounce.renlab.ai/zh.html)。
 
@@ -69,7 +69,7 @@ brew install anzy-renlab-ai/tap/say-it   # or ./install.sh from the repo
 say-it kubernetes                        # speaks it 3x with cited pronunciation
 ```
 
-- **Web**: [pronounce.renlab.ai](https://pronounce.renlab.ai/) — full 1721-entry browser with Famous Moments + quiz.
+- **Web**: [pronounce.renlab.ai](https://pronounce.renlab.ai/) — full 1738-entry browser with Famous Moments + quiz.
 - **Claude Code skill**: triggers on "how do you pronounce X" / "X 怎么读" — the AI plays sound instead of guessing.
 - **MCP server**: drop into Cursor / Claude / any MCP client.
 - **Raycast / Alfred / Continue**: integrations in [the main repo](https://github.com/anzy-renlab-ai/pronounce/tree/main/integrations).

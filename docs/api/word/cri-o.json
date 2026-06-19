@@ -1,0 +1,15 @@
+{
+  "word": "CRI-O",
+  "ipa": "/ˈkraɪoʊ/",
+  "respelling_us": "CRY oh",
+  "alt_ipa": ["/ˌsiːɑːrˈaɪˌoʊ/"],
+  "alt_respelling_us": ["C R I oh (spelled out)"],
+  "source_url": "https://www.redhat.com/en/blog/introducing-cri-o-10",
+  "source_label": "Red Hat blog — Introducing CRI-O 1.0",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "Lightweight CNCF Kubernetes container runtime; default runtime in OpenShift. The name derives from CRI (Container Runtime Interface) plus OCI (Open Container Initiative) — confirmed by Red Hat's announcement. Common community reading is 'CRY-oh': read 'CRI' as the word 'cry', then 'oh'. Stress on CRY. Common mispronunciations: spelling it out letter-by-letter 'C-R-I-O', or 'CREE-oh'. No official/maintainer doc states the pronunciation, so this is community usage rather than a creator clarification.",
+  "audio_url": "https://pronounce.renlab.ai/audio/cri-o.mp3",
+  "url": "https://pronounce.renlab.ai/word/cri-o",
+  "date_modified": "2026-06-19"
+}

@@ -11,5 +11,5 @@
   "notes": "Jens Axboe (creator): \"I-O ring\" — letters I and O then the word \"ring\". The underscore is silent; the \"u\" is the start of \"uring\" → \"ring\". Async I/O syscall API.",
   "audio_url": "https://pronounce.renlab.ai/audio/io_uring.mp3",
   "url": "https://pronounce.renlab.ai/word/io_uring",
-  "date_modified": "2026-06-18"
+  "date_modified": "2026-06-19"
 }

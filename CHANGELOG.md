@@ -1,5 +1,19 @@
 # Changelog
 
+## v2.15.0 — 2026-06-19
+
+### Added
+- **Dictionary +17 — AI labs, infra/format names, and classic math surnames devs trip on.** Generated + adversarially verified by a Workflow (4 finders → dedup → per-candidate skeptic; 23 kept of 24, then 6 dropped here as already-present — Muon/Traefik/Qdrant/Dapr/skopeo/Cilium). Each web-sourced for its General American reading:
+  - **AI labs / models:** **Kyutai** (KYOO-tye — Paris lab, romanized Japanese 球体 "sphere"), **Moshi** (MOH-shee — not "MOSH-ee"), **Hymba** (HIM-buh — NVIDIA, hybrid+Mamba), **Pangu** (pahn-GOO — Huawei 盘古, not "PANG-goo").
+  - **Infra / formats / protocols:** **CRI-O** (CRY-oh), **Raku** (RAH-koo — the language formerly Perl 6), **Nostr** (NOH-ster), **QOI** (koy), **CBOR** (SEE-bore), **Brotli** (BROHT-lee), **Cap'n Proto** (KAP-uhn PROH-toh).
+  - **Classic math / stats surnames:** **Dirichlet** (deer-ick-LAY, silent t), **Galois** (gal-WAH), **Levenshtein** (LEV-en-shtine), **kurtosis** (ker-TOH-sis), **Weibull** (WHY-bull), **Tikhonov** (TEE-khuh-nawf — Tikhonov regularization / ridge).
+
+  Contested readings carry alternate IPA + respelling. Entry count auto-synced 1,721 → 1,738 across README, the site, the extension, `mcp-server/server.json`, and `.codex-plugin/plugin.json`; per-word audio + pages rendered for all 17. Confidence splits now 1,513 community-consensus · 158 contested · 67 creator-clarified.
+
+### Changed
+- **Distribution:** added the HOL Plugin Scanner to CI (`hol-plugin-scanner.yml`, passing — no high/critical) and submitted the Codex plugin to [`awesome-codex-plugins`](https://github.com/hashgraph-online/awesome-codex-plugins/pull/223) (the #1 Codex marketplace), per community request in #41.
+- CLI `VERSION` → 0.6.6; VS Code extension → 0.6.6.
+
 ## v2.14.0 — 2026-06-18
 
 ### Added

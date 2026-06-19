@@ -1,0 +1,15 @@
+{
+  "word": "Kyutai",
+  "ipa": "/ˈkjuː.taɪ/",
+  "respelling_us": "KYOO tye",
+  "alt_ipa": ["/kjuːˈtaɪ/"],
+  "alt_respelling_us": ["kyoo TYE"],
+  "source_url": "https://www.amplifypartners.com/blog-posts/arming-the-rebels-with-gpus-gradium-kyutai-and-audio-ai",
+  "source_label": "Amplify Partners — \"named for the Japanese word for 'sphere'\"",
+  "category": "product",
+  "confidence": "contested",
+  "notes": "Paris-based open-science AI lab (founded Nov 2023 by Xavier Niel/Iliad, Rodolphe Saadé/CMA CGM, and Eric Schmidt/Schmidt Sciences) behind the Moshi real-time voice model. The name romanizes the Japanese 球体 (kyūtai), meaning 'sphere/orb' — the intended reading is two syllables: KYOO (きゅう, a long vowel like English 'cue'/'queue') + tye (たい, rhyming with 'tie'). English devs routinely mangle it into 3-4 syllables ('kee-YOO-tah-ee') because the vowel cluster looks longer than it sounds. Stress is genuinely contested: Japanese is pitch-accent rather than stressed, so English speakers split between first-syllable KYOO-tye (recommended primary) and second-syllable kyoo-TYE. Note kyutai.org itself does NOT explain the name; the Japanese-sphere etymology is confirmed by Amplify Partners' write-up.",
+  "audio_url": "https://pronounce.renlab.ai/audio/kyutai.mp3",
+  "url": "https://pronounce.renlab.ai/word/kyutai",
+  "date_modified": "2026-06-19"
+}

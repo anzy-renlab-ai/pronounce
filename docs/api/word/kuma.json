@@ -11,5 +11,5 @@
   "notes": "Envoy-based service mesh originally created and donated by Kong, accepted into the CNCF (now a Sandbox project; repo kumahq/kuma, branded with the bear emoji 🐻). The name is the Japanese word for 'bear' (くま / 熊), so the intended pronunciation follows Japanese: KOO-mah — stress on the FIRST syllable, 'oo' as in 'boot'. English speakers who don't know the origin reach for KYOO-mah (rhyming with 'puma'), which is the common mispronunciation. Standard Japanese pronunciation of くま is KOO-mah.",
   "audio_url": "https://pronounce.renlab.ai/audio/kuma.mp3",
   "url": "https://pronounce.renlab.ai/word/kuma",
-  "date_modified": "2026-06-18"
+  "date_modified": "2026-06-19"
 }

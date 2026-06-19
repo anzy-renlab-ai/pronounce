@@ -6,7 +6,7 @@ Doubles as the Hacker News first-comment and the Reddit r/programming body. Keep
 
 **We settled the developer pronunciation wars - here are the receipts**
 
-(alt: "147 dev words you're still arguing about, 66 the creators already settled")
+(alt: "158 dev words you're still arguing about, 67 the creators already settled")
 
 ## Cover image
 
@@ -27,8 +27,8 @@ This happens constantly. We read these words for years before we ever hear them 
 So I built a dictionary of how engineers actually say developer jargon. Not how a dictionary thinks they should, how the community does, with a citation for every reading. Here is the current scoreboard:
 
 - **1,702 entries** total
-- **147 still contested** - devs genuinely argue, and we tag both readings
-- **66 creator-settled** - the person who made the thing told us, on the record
+- **158 still contested** - devs genuinely argue, and we tag both readings
+- **67 creator-settled** - the person who made the thing told us, on the record
 - the remaining **1,499** are community-consensus, the boring ones we agree on
 
 The interesting work is the 203 at the top of that list. Let me show you the receipts.
@@ -45,11 +45,11 @@ These are not opinions. Each one has a source you can click. If you are still sa
 - **Tcl -> "tickle"**. John Ousterhout, the creator. Confirmed on the official Tcl Developer Xchange. Tag: creator-clarified.
 - **awk -> "auk"**, like the seabird, rhymes with hawk. Named after Aho, Weinberger, and Kernighan, the three people who wrote it. Tag: creator-clarified.
 
-A few more from the 66, because they come up: **LaTeX -> "lay-tek"** (the X is a Greek chi /k/, never "lay-teks"), **Dijkstra -> "DIKE-strah,"** **QUIC -> "quick"** (per the IETF RFC, never letter-by-letter), **Ghostty -> "ghost-ee"** (Mitchell Hashimoto).
+A few more from the 67, because they come up: **LaTeX -> "lay-tek"** (the X is a Greek chi /k/, never "lay-teks"), **Dijkstra -> "DIKE-strah,"** **QUIC -> "quick"** (per the IETF RFC, never letter-by-letter), **Ghostty -> "ghost-ee"** (Mitchell Hashimoto).
 
 ## Still contested (we tag both, you pick your side)
 
-These are the 147 where there is no creator ruling, or the creator's ruling lost to practice. We do not pretend there is a winner. We store both readings and the source for the debate.
+These are the 158 where there is no creator ruling, or the creator's ruling lost to practice. We do not pretend there is a winner. We store both readings and the source for the debate.
 
 - **kubectl** - "koob-control" (heard from Kelsey Hightower) vs "cube-cuttle" vs spelling it out "kube-C-T-L." The K8s community genuinely splits on this. No official ruling. Contested.
 - **SQL** - "sequel" (it descends from IBM's SEQUEL) vs "S-Q-L" letter by letter (what ANSI uses). Both are correct depending on who trained you. Contested.
@@ -75,7 +75,7 @@ MIT licensed, zero runtime dependencies. The whole stack exists to serve that on
 
 ## The honest part
 
-This is small. About 26 GitHub stars as I write this. It is a side project that solves a real but minor annoyance, and I am not going to pretend it is changing the industry. What I think is actually good here is the sourcing discipline: 66 entries where I tracked down the creator on the record, and 147 where I resisted the urge to declare a winner and just showed both sides with a link.
+This is small. About 26 GitHub stars as I write this. It is a side project that solves a real but minor annoyance, and I am not going to pretend it is changing the industry. What I think is actually good here is the sourcing discipline: 67 entries where I tracked down the creator on the record, and 158 where I resisted the urge to declare a winner and just showed both sides with a link.
 
 If your team has a word you have quietly been arguing about for years, it is probably already in here, with a receipt.
 

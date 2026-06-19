@@ -11,5 +11,5 @@
   "notes": "Memory-efficient LLM training method = 'GRAdient LOw-Rank projEction' (ICML 2024 oral, jiaweizzhao/GaLore), pitched as a more memory-efficient cousin of LoRA. The casing 'GaLore' reads as a homograph of the English word 'galore' (/ɡəˈlɔːr/, stress on the SECOND syllable, as in 'savings galore') — which strongly suggests the intended reading is guh-LOR, a wink at LoRA. Note: this pun is an inference; the paper and authors don't state the pronunciation. Because the capital L splits it visually into Ga+Lore, many practitioners instead read it as an initialism with FIRST-syllable stress, GAL-or. Genuinely split in practice.",
   "audio_url": "https://pronounce.renlab.ai/audio/galore.mp3",
   "url": "https://pronounce.renlab.ai/word/galore",
-  "date_modified": "2026-06-18"
+  "date_modified": "2026-06-19"
 }

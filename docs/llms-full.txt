@@ -1723,3 +1723,20 @@ Cauchy | /koʊˈʃiː/ | koh SHEE | cs-term | community-consensus | https://en.w
 Bezier | /ˈbɛz.i.eɪ/ | BEZ ee ay | cs-term | community-consensus | https://en.wikipedia.org/wiki/B%C3%A9zier_curve
 Voronoi | /ˈvɔːrənɔɪ/ | VOR uh noy | cs-term | contested | https://en.wikipedia.org/wiki/Voronoi_diagram
 Erdos | /ˈɛrdɜːrʃ/ | AIR dursh | person | community-consensus | https://en.wikipedia.org/wiki/Paul_Erd%C5%91s
+Kyutai | /ˈkjuː.taɪ/ | KYOO tye | product | contested | https://www.amplifypartners.com/blog-posts/arming-the-rebels-with-gpus-gradium-kyutai-and-audio-ai
+Moshi | /ˈmoʊ.ʃi/ | MOH shee | product | contested | https://github.com/kyutai-labs/moshi
+Hymba | /ˈhɪm.bə/ | HIM buh | cs-term | contested | https://developer.nvidia.com/blog/hymba-hybrid-head-architecture-boosts-small-language-model-performance/
+Pangu | /pɑːnˈɡuː/ | pahn GOO | product | contested | https://en.wiktionary.org/wiki/Pangu
+CRI-O | /ˈkraɪoʊ/ | CRY oh | tool | community-consensus | https://www.redhat.com/en/blog/introducing-cri-o-10
+Raku | /ˈrɑː.kuː/ | RAH koo | cs-term | community-consensus | https://www.hackster.io/news/perl-6-is-dead-long-live-raku-perl-5-s-sister-language-gets-a-clean-break-shiny-new-name-3f72ebd298b7
+Nostr | /ˈnoʊ.stər/ | NOH ster | cs-term | contested | https://en.wikipedia.org/wiki/Talk:Nostr
+QOI | /kɔɪ/ | koy | abbreviation | contested | https://en.wikipedia.org/wiki/QOI_(image_format)
+CBOR | /ˈsiːbɔːr/ | SEE bore | acronym | contested | https://datatracker.ietf.org/doc/html/rfc8949
+Brotli | /ˈbroʊt.li/ | BROHT lee | cs-term | community-consensus | https://opensource.googleblog.com/2015/09/introducing-brotli-new-compression.html
+Cap'n Proto | /ˌkæpən ˈproʊtoʊ/ | KAP uhn PROH toh | tool | creator-clarified | https://news.ycombinator.com/item?id=36909537
+Dirichlet | /ˌdɪərɪˈkleɪ/ | deer ick LAY | person | contested | https://en.wikipedia.org/wiki/Talk:Johann_Peter_Gustav_Lejeune_Dirichlet
+Galois | /ɡælˈwɑ/ | gal WAH | person | community-consensus | https://en.wiktionary.org/wiki/Galois
+Levenshtein | /ˈlɛvənˌʃtaɪn/ | LEV en shtine | person | contested | https://en.wikipedia.org/wiki/Levenshtein_distance
+kurtosis | /kɚˈtoʊsɪs/ | ker TOH sis | cs-term | community-consensus | https://en.wiktionary.org/wiki/kurtosis
+Weibull | /ˈwaɪbʊl/ | WHY bull | person | contested | https://en.wikipedia.org/wiki/Weibull_distribution
+Tikhonov | /ˈtiːxənɔf/ | TEE khuh nawf | person | contested | https://en.wikipedia.org/wiki/Andrey_Tikhonov_(mathematician)

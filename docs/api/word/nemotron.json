@@ -11,5 +11,5 @@
   "notes": "NVIDIA's flagship open LLM family (Nemotron 3: Nano/Super/Ultra, 2025-2026), hybrid Mamba-Transformer MoE for agentic reasoning. Coined name = NVIDIA's NeMo framework (\"NEural MOdules\", said NEE-mo) + the -tron suffix, so the prevailing reading is first-syllable-stressed NEE-moh-tron. Some devs mis-read it as nem-oh-TRON / nuh-MOT-ron; the NeMo etymology favors NEE-moh-tron. No official creator-documented pronunciation in text. STRESS: NEE-moh-tron.",
   "audio_url": "https://pronounce.renlab.ai/audio/nemotron.mp3",
   "url": "https://pronounce.renlab.ai/word/nemotron",
-  "date_modified": "2026-06-18"
+  "date_modified": "2026-06-19"
 }

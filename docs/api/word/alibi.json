@@ -11,5 +11,5 @@
   "notes": "ALiBi = Attention with Linear Biases, a transformer position method used in BLOOM and MPT. The camelCase ALiBi cues that it reads as the everyday English word \"alibi\" (STRESS: AL-uh-by, first syllable) — not spelled out A-L-I-B-I, and the \"-bi\" is long-i (\"by\"), not \"bee\". Paper/GitHub don't document the pronunciation, so community-consensus, but the wordplay is unambiguous.",
   "audio_url": "https://pronounce.renlab.ai/audio/alibi.mp3",
   "url": "https://pronounce.renlab.ai/word/alibi",
-  "date_modified": "2026-06-18"
+  "date_modified": "2026-06-19"
 }

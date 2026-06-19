@@ -1,0 +1,15 @@
+{
+  "word": "Tikhonov",
+  "ipa": "/ˈtiːxənɔf/",
+  "respelling_us": "TEE khuh nawf",
+  "alt_ipa": ["/ˌtɪkˈhoʊnɒv/"],
+  "alt_respelling_us": ["tik HOH nov"],
+  "source_url": "https://en.wikipedia.org/wiki/Andrey_Tikhonov_(mathematician)",
+  "source_label": "Wikipedia § Andrey Tikhonov (mathematician)",
+  "category": "person",
+  "confidence": "contested",
+  "notes": "Tikhonov regularization (= ridge regression / L2 penalty; also ill-posed inverse problems) is named after Russian mathematician Andrey Tikhonov. Russian Ти́хонов = [ˈtʲixənəf] (per Wiktionary): stress on the FIRST syllable — TEE-khuh-nawf (the reduced final vowel is closer to 'nuf') — with a guttural 'kh' (/x/, a single throaty sound, not 'k-h') and a final 'v' that devoices toward 'f'. English speakers almost always shift stress to the second syllable, tik-HOH-nov, and say a plain 'k' + 'h'. The name also surfaces transliterated as 'Tychonoff' (Tychonoff's theorem in topology), reinforcing that the 'kh' is one guttural sound.",
+  "audio_url": "https://pronounce.renlab.ai/audio/tikhonov.mp3",
+  "url": "https://pronounce.renlab.ai/word/tikhonov",
+  "date_modified": "2026-06-19"
+}

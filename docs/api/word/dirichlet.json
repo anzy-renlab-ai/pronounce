@@ -1,0 +1,15 @@
+{
+  "word": "Dirichlet",
+  "ipa": "/ˌdɪərɪˈkleɪ/",
+  "respelling_us": "deer ick LAY",
+  "alt_ipa": ["/ˌdɪərɪˈʃleɪ/"],
+  "alt_respelling_us": ["deer ish LAY"],
+  "source_url": "https://en.wikipedia.org/wiki/Talk:Johann_Peter_Gustav_Lejeune_Dirichlet",
+  "source_label": "Wikipedia Talk § Pronunciation (Peter Gustav Lejeune Dirichlet)",
+  "category": "person",
+  "confidence": "contested",
+  "notes": "Named after German mathematician Peter Gustav Lejeune Dirichlet — ubiquitous in ML via the Dirichlet distribution and Latent Dirichlet Allocation (LDA, Blei/Ng/Jordan 2003). The surname LOOKS French (from 'Richelette' in French-speaking Belgium) but he lived in German lands, so two camps exist: the German-style deer-ick-LAY (hard 'k', /kleɪ/) vs the French-style deer-ish-LAY (soft 'sh', /ʃleɪ/). Final stress on -LAY; the 't' is silent in both common readings (though a minority, citing Calabi, insist on a hard final 't'). Wikipedia's own talk page never resolved it — a contributor jokes that saying it 'correctly' makes you sound wrong to most mathematicians. Wikipedia documents the English IPA as the hard-k /ˌdɪərɪˈkleɪ/; many ML practitioners say deer-ish-LAY.",
+  "audio_url": "https://pronounce.renlab.ai/audio/dirichlet.mp3",
+  "url": "https://pronounce.renlab.ai/word/dirichlet",
+  "date_modified": "2026-06-19"
+}

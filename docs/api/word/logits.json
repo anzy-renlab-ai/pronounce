@@ -11,5 +11,5 @@
   "notes": "Raw pre-softmax outputs; \"LOH-jits\" (soft g).",
   "audio_url": "https://pronounce.renlab.ai/audio/logits.mp3",
   "url": "https://pronounce.renlab.ai/word/logits",
-  "date_modified": "2026-06-18"
+  "date_modified": "2026-06-19"
 }

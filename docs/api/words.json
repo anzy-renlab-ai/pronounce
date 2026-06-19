@@ -1719,5 +1719,22 @@
   {"word": "Cauchy", "slug": "cauchy", "category": "cs-term", "confidence": "community-consensus"},
   {"word": "Bezier", "slug": "bezier", "category": "cs-term", "confidence": "community-consensus"},
   {"word": "Voronoi", "slug": "voronoi", "category": "cs-term", "confidence": "contested"},
-  {"word": "Erdos", "slug": "erdos", "category": "person", "confidence": "community-consensus"}
+  {"word": "Erdos", "slug": "erdos", "category": "person", "confidence": "community-consensus"},
+  {"word": "Kyutai", "slug": "kyutai", "category": "product", "confidence": "contested"},
+  {"word": "Moshi", "slug": "moshi", "category": "product", "confidence": "contested"},
+  {"word": "Hymba", "slug": "hymba", "category": "cs-term", "confidence": "contested"},
+  {"word": "Pangu", "slug": "pangu", "category": "product", "confidence": "contested"},
+  {"word": "CRI-O", "slug": "cri-o", "category": "tool", "confidence": "community-consensus"},
+  {"word": "Raku", "slug": "raku", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "Nostr", "slug": "nostr", "category": "cs-term", "confidence": "contested"},
+  {"word": "QOI", "slug": "qoi", "category": "abbreviation", "confidence": "contested"},
+  {"word": "CBOR", "slug": "cbor", "category": "acronym", "confidence": "contested"},
+  {"word": "Brotli", "slug": "brotli", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "Cap'n Proto", "slug": "cap-n-proto", "category": "tool", "confidence": "creator-clarified"},
+  {"word": "Dirichlet", "slug": "dirichlet", "category": "person", "confidence": "contested"},
+  {"word": "Galois", "slug": "galois", "category": "person", "confidence": "community-consensus"},
+  {"word": "Levenshtein", "slug": "levenshtein", "category": "person", "confidence": "contested"},
+  {"word": "kurtosis", "slug": "kurtosis", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "Weibull", "slug": "weibull", "category": "person", "confidence": "contested"},
+  {"word": "Tikhonov", "slug": "tikhonov", "category": "person", "confidence": "contested"}
 ]
