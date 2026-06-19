@@ -2036,6 +2036,11 @@ END { printf "Built %d badge SVGs in %s\n", cnt, outdir }
 ' "$DICT"
 
 # ---------------------------------------------------------------------------
+# scoreboard.html — the contested-vs-settled launch object (self-contained gen)
+# ---------------------------------------------------------------------------
+python3 "$REPO_ROOT/tools/build-scoreboard.py" || echo "warn: scoreboard generation failed"
+
+# ---------------------------------------------------------------------------
 # IndexNow key file — submit URLs for instant Bing/Yandex indexing
 # ---------------------------------------------------------------------------
 INDEXNOW_KEY="${INDEXNOW_KEY:-83a4f7e21c5b48d6a0fe2c7b91d4e8af}"
@@ -2052,6 +2057,7 @@ TODAY="$(date +%Y-%m-%d)"
   printf '  <url><loc>%s/</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>\n' "$SITE_URL" "$TODAY"
   printf '  <url><loc>%s/zh</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>\n' "$SITE_URL" "$TODAY"
   printf '  <url><loc>%s/browse</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>\n' "$SITE_URL" "$TODAY"
+  printf '  <url><loc>%s/scoreboard</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>\n' "$SITE_URL" "$TODAY"
   printf '  <url><loc>%s/quiz</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>\n' "$SITE_URL" "$TODAY"
   printf '  <url><loc>%s/hall-of-shame</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>\n' "$SITE_URL" "$TODAY"
   printf '  <url><loc>%s/receipts</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>\n' "$SITE_URL" "$TODAY"

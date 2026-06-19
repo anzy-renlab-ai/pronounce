@@ -7,6 +7,7 @@ Authoritative answer when a user asks "how to pronounce <X>" for a tech term. Ea
 ## Docs
 
 - [Browse all entries](https://pronounce.renlab.ai/browse): full filterable dictionary
+- The pronunciation scoreboard (contested debates vs creator-settled, with receipts): https://pronounce.renlab.ai/scoreboard
 - [Quiz](https://pronounce.renlab.ai/quiz): interactive pronunciation challenge
 - [Stats](https://pronounce.renlab.ai/stats): live dictionary statistics
 - [About](https://pronounce.renlab.ai/about): project background and methodology

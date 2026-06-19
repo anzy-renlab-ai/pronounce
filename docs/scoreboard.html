@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The developer pronunciation scoreboard — kubectl, GIF, JWT &amp; the fights that won&#x27;t die</title>
+<meta name="description" content="158 developer words engineers still argue about, 67 the creators already settled — with cited receipts and audio. kubectl, SQL, JSON, GIF, JWT, and more.">
+<meta name="keywords" content="how to pronounce kubectl, kubectl pronunciation debate, GIF jif, JWT jot, SQL sequel, developer pronunciation">
+<link rel="canonical" href="https://pronounce.renlab.ai/scoreboard">
+<meta property="og:title" content="The developer pronunciation scoreboard">
+<meta property="og:description" content="158 developer words engineers still argue about, 67 the creators already settled — with cited receipts and audio. kubectl, SQL, JSON, GIF, JWT, and more.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pronounce.renlab.ai/scoreboard">
+<meta property="og:image" content="https://pronounce.renlab.ai/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The developer pronunciation scoreboard">
+<meta name="twitter:description" content="158 developer words engineers still argue about, 67 the creators already settled — with cited receipts and audio. kubectl, SQL, JSON, GIF, JWT, and more.">
+<meta name="twitter:image" content="https://pronounce.renlab.ai/og.png">
+<meta name="theme-color" content="#14100c">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "The developer pronunciation scoreboard", "description": "158 developer words engineers still argue about, 67 the creators already settled — with cited receipts and audio. kubectl, SQL, JSON, GIF, JWT, and more.", "url": "https://pronounce.renlab.ai/scoreboard", "isPartOf": {"@type": "WebSite", "name": "Pronounce", "url": "https://pronounce.renlab.ai/"}, "about": {"@type": "DefinedTermSet", "@id": "https://pronounce.renlab.ai/#dictionary"}}</script>
+<style>
+:root { --bg:#14100c; --panel:#1d1812; --ink:#f3ece1; --dim:#b3a892;
+  --accent:#ff6a3d; --accent2:#8fd694; --line:rgba(243,236,225,.10); }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--ink);
+  font-family:"JetBrains Mono",ui-monospace,monospace; line-height:1.5; }
+a { color:inherit; }
+.wrap { max-width:1080px; margin:0 auto; padding:0 20px; }
+header.top { display:flex; justify-content:space-between; align-items:center;
+  padding:18px 0; border-bottom:1px solid var(--line); }
+header.top a.home { font-family:"Fraunces",serif; font-weight:600; font-size:20px; text-decoration:none; }
+header.top a.home b { color:var(--accent2); }
+header.top nav a { color:var(--dim); text-decoration:none; margin-left:18px; font-size:14px; }
+header.top nav a:hover { color:var(--ink); }
+.hero { padding:56px 0 28px; text-align:center; }
+.hero h1 { font-family:"Fraunces",serif; font-weight:600; font-size:clamp(30px,5vw,52px);
+  line-height:1.08; margin:0 0 16px; }
+.hero h1 .fight { color:var(--accent); }
+.hero h1 .settled { color:var(--accent2); }
+.hero p { color:var(--dim); font-size:17px; max-width:680px; margin:0 auto 24px; }
+.tally { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-bottom:8px; }
+.tally .stat { background:var(--panel); border:1px solid var(--line); border-radius:12px;
+  padding:14px 22px; min-width:120px; }
+.tally .num { font-size:30px; font-weight:700; font-family:"Fraunces",serif; }
+.tally .num.fight { color:var(--accent); }
+.tally .num.settled { color:var(--accent2); }
+.tally .lbl { color:var(--dim); font-size:13px; }
+.cta { margin:26px 0 8px; }
+.cta a { display:inline-block; background:var(--accent2); color:#0c1a10; font-weight:700;
+  text-decoration:none; padding:12px 22px; border-radius:10px; }
+.cta a.ghost { background:transparent; color:var(--ink); border:1px solid var(--line); margin-left:10px; }
+section.board { padding:30px 0; }
+section.board h2 { font-family:"Fraunces",serif; font-weight:600; font-size:26px;
+  margin:0 0 4px; }
+section.board h2 .fight { color:var(--accent); }
+section.board h2 .settled { color:var(--accent2); }
+section.board .sub { color:var(--dim); margin:0 0 20px; font-size:14px; }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:14px; }
+.card { background:var(--panel); border:1px solid var(--line); border-radius:14px;
+  padding:16px 16px 12px; }
+.card.contested { border-left:3px solid var(--accent); }
+.card.settled { border-left:3px solid var(--accent2); }
+.card-head { display:flex; justify-content:space-between; align-items:center; gap:8px; }
+.card .word { font-size:21px; font-weight:700; text-decoration:none; }
+.card .word:hover { text-decoration:underline; }
+.play { background:none; border:1px solid var(--line); color:var(--ink); border-radius:8px;
+  width:34px; height:34px; cursor:pointer; font-size:13px; flex:none; }
+.play:hover { border-color:var(--accent2); color:var(--accent2); }
+.camps { display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin:12px 0 10px; }
+.camp { font-weight:500; padding:4px 9px; border-radius:7px; font-size:14px; }
+.camp-a { background:rgba(255,106,61,.14); color:#ffb59b; }
+.camp-b { background:rgba(143,214,148,.14); color:var(--accent2); }
+.vs { color:var(--dim); font-size:12px; }
+.camp-note { color:var(--dim); font-size:12px; }
+.reading { margin:12px 0 10px; font-size:16px; color:var(--accent2); }
+.more { margin:18px 0 0; }
+.more a { color:var(--accent2); text-decoration:none; font-size:14px; }
+.more a:hover { text-decoration:underline; }
+.card-foot { display:flex; justify-content:space-between; align-items:center; gap:8px;
+  border-top:1px solid var(--line); padding-top:9px; }
+.src { color:var(--dim); font-size:12px; text-decoration:none; max-width:60%;
+  overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.src:hover { color:var(--ink); }
+.copy { background:none; border:1px solid var(--line); color:var(--dim); border-radius:7px;
+  padding:5px 9px; cursor:pointer; font-size:12px; flex:none; }
+.copy:hover { border-color:var(--accent2); color:var(--accent2); }
+.copy.done { color:var(--accent2); border-color:var(--accent2); }
+footer.bottom { border-top:1px solid var(--line); padding:30px 0 50px; color:var(--dim);
+  font-size:14px; text-align:center; }
+footer.bottom a { color:var(--accent2); text-decoration:none; }
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap" style="display:flex;justify-content:space-between;align-items:center;width:100%">
+  <a class="home" href="/">Pro<b>nounce</b></a>
+  <nav><a href="/hall-of-shame">Hall of shame</a><a href="/receipts">Receipts</a><a href="/quiz">Quiz</a><a href="/browse">Browse all</a><a href="https://github.com/anzy-renlab-ai/pronounce">GitHub ★</a></nav>
+</div></header>
+
+<main class="wrap">
+  <div class="hero">
+    <h1>The developer pronunciation <span class="fight">scoreboard</span></h1>
+    <p>Of 1738 sourced terms, <strong>158</strong> are still argued about and <strong>67</strong> were settled by the people who made them. Both readings, the receipts, and the audio — so you can stop fighting on standup (or fight better).</p>
+    <div class="tally">
+      <div class="stat"><div class="num fight">158</div><div class="lbl">still contested</div></div>
+      <div class="stat"><div class="num settled">67</div><div class="lbl">creator-settled</div></div>
+      <div class="stat"><div class="num">1738</div><div class="lbl">total, all sourced</div></div>
+    </div>
+    <div class="cta">
+      <a href="https://github.com/anzy-renlab-ai/pronounce">★ Star on GitHub</a>
+      <a class="ghost" href="/browse">Browse the full dictionary</a>
+    </div>
+  </div>
+
+  <section class="board">
+    <h2>Still <span class="fight">contested</span> — pick your camp</h2>
+    <p class="sub">Both readings are alive. The dictionary records both and plays them back to back. Tap ▶ to hear the primary, "copy debate" to settle it in your team chat.</p>
+    <div class="grid">
+      <article class="card contested">
+        <div class="card-head">
+          <a class="word" href="/word/kubectl">kubectl</a>
+          <button class="play" data-audio="/audio/kubectl.mp3" aria-label="hear kubectl">▶</button>
+        </div>
+        <div class="camps"><span class="camp camp-a">koob control</span><span class="vs">vs</span><span class="camp camp-b">cube cuddle|kube C T L</span></div>
+        <div class="card-foot">
+          <button class="copy" data-share="How do you say &quot;kubectl&quot;? Camp A: koob control. Camp B: cube cuddle|kube C T L. The dict plays both → https://pronounce.renlab.ai/word/kubectl">copy debate</button>
+        </div>
+      </article>
+      <article class="card contested">
+        <div class="card-head">
+          <a class="word" href="/word/sql">SQL</a>
+          <button class="play" data-audio="/audio/sql.mp3" aria-label="hear SQL">▶</button>
+        </div>
+        <div class="camps"><span class="camp camp-a">sequel</span><span class="vs">vs</span><span class="camp camp-b">S Q L</span></div>
+        <div class="card-foot"><a class="src" href="https://en.wikipedia.org/wiki/SQL#Pronunciation" target="_blank" rel="noopener">Wikipedia § Pronunciation</a>
+          <button class="copy" data-share="How do you say &quot;SQL&quot;? Camp A: sequel. Camp B: S Q L. The dict plays both → https://pronounce.renlab.ai/word/sql">copy debate</button>
+        </div>
+      </article>
+      <article class="card contested">
+        <div class="card-head">
+          <a class="word" href="/word/json">JSON</a>
+          <button class="play" data-audio="/audio/json.mp3" aria-label="hear JSON">▶</button>
+        </div>
+        <div class="camps"><span class="camp camp-a">jay son</span><span class="vs">vs</span><span class="camp camp-b">jee son</span></div>
+        <div class="card-foot"><a class="src" href="https://en.wikipedia.org/wiki/JSON#Pronunciation" target="_blank" rel="noopener">Wikipedia § Pronunciation</a>
+          <button class="copy" data-share="How do you say &quot;JSON&quot;? Camp A: jay son. Camp B: jee son. The dict plays both → https://pronounce.renlab.ai/word/json">copy debate</button>
+        </div>
+      </article>
+      <article class="card contested">
+        <div class="card-head">
+          <a class="word" href="/word/gui">GUI</a>
+          <button class="play" data-audio="/audio/gui.mp3" aria-label="hear GUI">▶</button>
+        </div>
+        <div class="camps"><span class="camp camp-a">gooey</span><span class="vs">vs</span><span class="camp camp-b">G U I|gwee</span></div>
+        <div class="card-foot"><a class="src" href="https://en.wikipedia.org/wiki/Graphical_user_interface" target="_blank" rel="noopener">Wikipedia</a>
+          <button class="copy" data-share="How do you say &quot;GUI&quot;? Camp A: gooey. Camp B: G U I|gwee. The dict plays both → https://pronounce.renlab.ai/word/gui">copy debate</button>
+        </div>
+      </article>
+      <article class="card contested">
+        <div class="card-head">
+          <a class="word" href="/word/jwt">JWT</a>
+          <button class="play" data-audio="/audio/jwt.mp3" aria-label="hear JWT">▶</button>
+        </div>
+        <div class="camps"><span class="camp camp-a">jot</span><span class="vs">vs</span><span class="camp camp-b">J W T</span></div>
+        <div class="card-foot"><a class="src" href="https://datatracker.ietf.org/doc/html/rfc7519" target="_blank" rel="noopener">IETF RFC 7519</a>
+          <button class="copy" data-share="How do you say &quot;JWT&quot;? Camp A: jot. Camp B: J W T. The dict plays both → https://pronounce.renlab.ai/word/jwt">copy debate</button>
+        </div>
+      </article>
+      <article class="card contested">
+        <div class="card-head">
+          <a class="word" href="/word/char">char</a>
+          <button class="play" data-audio="/audio/char.mp3" aria-label="hear char">▶</button>
+        </div>
+        <div class="camps"><span class="camp camp-a">char</span><span class="vs">vs</span><span class="camp camp-b">care|car</span></div>
+        <div class="card-foot">
+          <button class="copy" data-share="How do you say &quot;char&quot;? Camp A: char. Camp B: care|car. The dict plays both → https://pronounce.renlab.ai/word/char">copy debate</button>
+        </div>
+      </article>
+      <article class="card contested">
+        <div class="card-head">
+          <a class="word" href="/word/regex">regex</a>
+          <button class="play" data-audio="/audio/regex.mp3" aria-label="hear regex">▶</button>
+        </div>
+        <div class="camps"><span class="camp camp-a">rej eks</span><span class="vs">vs</span><span class="camp camp-b">reg eks</span></div>
+        <div class="card-foot">
+          <button class="copy" data-share="How do you say &quot;regex&quot;? Camp A: rej eks. Camp B: reg eks. The dict plays both → https://pronounce.renlab.ai/word/regex">copy debate</button>
+        </div>
+      </article>
+      <article class="card contested">
+        <div class="card-head">
+          <a class="word" href="/word/sudo">sudo</a>
+          <button class="play" data-audio="/audio/sudo.mp3" aria-label="hear sudo">▶</button>
+        </div>
+        <div class="camps"><span class="camp camp-a">soo doo</span><span class="vs">vs</span><span class="camp camp-b">soo doh</span></div>
+        <div class="card-foot"><a class="src" href="https://en.wikipedia.org/wiki/Sudo" target="_blank" rel="noopener">Wikipedia</a>
+          <button class="copy" data-share="How do you say &quot;sudo&quot;? Camp A: soo doo. Camp B: soo doh. The dict plays both → https://pronounce.renlab.ai/word/sudo">copy debate</button>
+        </div>
+      </article>
+      <article class="card contested">
+        <div class="card-head">
+          <a class="word" href="/word/cron">cron</a>
+          <button class="play" data-audio="/audio/cron.mp3" aria-label="hear cron">▶</button>
+        </div>
+        <div class="camps"><span class="camp camp-a">kron</span><span class="vs">vs</span><span class="camp camp-b">krohn</span></div>
+        <div class="card-foot">
+          <button class="copy" data-share="How do you say &quot;cron&quot;? Camp A: kron. Camp B: krohn. The dict plays both → https://pronounce.renlab.ai/word/cron">copy debate</button>
+        </div>
+      </article>
+      <article class="card contested">
+        <div class="card-head">
+          <a class="word" href="/word/aaai">AAAI</a>
+          <button class="play" data-audio="/audio/aaai.mp3" aria-label="hear AAAI">▶</button>
+        </div>
+        <div class="camps"><span class="camp camp-a">triple ay eye</span><span class="vs">vs</span><span class="camp camp-b">ay ay ay eye</span></div>
+        <div class="card-foot"><a class="src" href="https://aaai.org/" target="_blank" rel="noopener">AAAI</a>
+          <button class="copy" data-share="How do you say &quot;AAAI&quot;? Camp A: triple ay eye. Camp B: ay ay ay eye. The dict plays both → https://pronounce.renlab.ai/word/aaai">copy debate</button>
+        </div>
+      </article>
+      <article class="card contested">
+        <div class="card-head">
+          <a class="word" href="/word/affine">Affine</a>
+          <button class="play" data-audio="/audio/affine.mp3" aria-label="hear Affine">▶</button>
+        </div>
+        <div class="camps"><span class="camp camp-a">uh fine</span><span class="vs">vs</span><span class="camp camp-b">AF fyne</span></div>
+        <div class="card-foot"><a class="src" href="https://affine.pro/" target="_blank" rel="noopener">Affine (Toeverything)</a>
+          <button class="copy" data-share="How do you say &quot;Affine&quot;? Camp A: uh fine. Camp B: AF fyne. The dict plays both → https://pronounce.renlab.ai/word/affine">copy debate</button>
+        </div>
+      </article>
+      <article class="card contested">
+        <div class="card-head">
+          <a class="word" href="/word/aleatoric">aleatoric</a>
+          <button class="play" data-audio="/audio/aleatoric.mp3" aria-label="hear aleatoric">▶</button>
+        </div>
+        <div class="camps"><span class="camp camp-a">ay lee uh tor ik</span><span class="vs">vs</span><span class="camp camp-b">al ee uh tor ik</span></div>
+        <div class="card-foot"><a class="src" href="https://www.oed.com/dictionary/aleatoric_adj" target="_blank" rel="noopener">Oxford English Dictionary</a>
+          <button class="copy" data-share="How do you say &quot;aleatoric&quot;? Camp A: ay lee uh tor ik. Camp B: al ee uh tor ik. The dict plays both → https://pronounce.renlab.ai/word/aleatoric">copy debate</button>
+        </div>
+      </article>
+      <article class="card contested">
+        <div class="card-head">
+          <a class="word" href="/word/altair">altair</a>
+          <button class="play" data-audio="/audio/altair.mp3" aria-label="hear altair">▶</button>
+        </div>
+        <div class="camps"><span class="camp camp-a">al tair</span><span class="vs">vs</span><span class="camp camp-b">al tire</span></div>
+        <div class="card-foot">
+          <button class="copy" data-share="How do you say &quot;altair&quot;? Camp A: al tair. Camp B: al tire. The dict plays both → https://pronounce.renlab.ai/word/altair">copy debate</button>
+        </div>
+      </article>
+      <article class="card contested">
+        <div class="card-head">
+          <a class="word" href="/word/ampere">Ampere</a>
+          <button class="play" data-audio="/audio/ampere.mp3" aria-label="hear Ampere">▶</button>
+        </div>
+        <div class="camps"><span class="camp camp-a">AM peer</span><span class="vs">vs</span><span class="camp camp-b">AM pair</span></div>
+        <div class="card-foot"><a class="src" href="https://en.wikipedia.org/wiki/Ampere_(microarchitecture)" target="_blank" rel="noopener">NVIDIA Ampere</a>
+          <button class="copy" data-share="How do you say &quot;Ampere&quot;? Camp A: AM peer. Camp B: AM pair. The dict plays both → https://pronounce.renlab.ai/word/ampere">copy debate</button>
+        </div>
+      </article>
+      <article class="card contested">
+        <div class="card-head">
+          <a class="word" href="/word/arbitrum">Arbitrum</a>
+          <button class="play" data-audio="/audio/arbitrum.mp3" aria-label="hear Arbitrum">▶</button>
+        </div>
+        <div class="camps"><span class="camp camp-a">AR bih trum</span><span class="vs">vs</span><span class="camp camp-b">ar BIT rum</span></div>
+        <div class="card-foot"><a class="src" href="https://arbitrum.io/" target="_blank" rel="noopener">arbitrum.io</a>
+          <button class="copy" data-share="How do you say &quot;Arbitrum&quot;? Camp A: AR bih trum. Camp B: ar BIT rum. The dict plays both → https://pronounce.renlab.ai/word/arbitrum">copy debate</button>
+        </div>
+      </article>
+      <article class="card contested">
+        <div class="card-head">
+          <a class="word" href="/word/atuin">atuin</a>
+          <button class="play" data-audio="/audio/atuin.mp3" aria-label="hear atuin">▶</button>
+        </div>
+        <div class="camps"><span class="camp camp-a">AY too in</span><span class="vs">vs</span><span class="camp camp-b">uh TOO in</span></div>
+        <div class="card-foot"><a class="src" href="https://atuin.sh/" target="_blank" rel="noopener">Atuin</a>
+          <button class="copy" data-share="How do you say &quot;atuin&quot;? Camp A: AY too in. Camp B: uh TOO in. The dict plays both → https://pronounce.renlab.ai/word/atuin">copy debate</button>
+        </div>
+      </article>
+      <article class="card contested">
+        <div class="card-head">
+          <a class="word" href="/word/awq">awq</a>
+          <button class="play" data-audio="/audio/awq.mp3" aria-label="hear awq">▶</button>
+        </div>
+        <div class="camps"><span class="camp camp-a">awk</span><span class="vs">vs</span><span class="camp camp-b">ay duh bul yoo kyoo</span></div>
+        <div class="card-foot"><a class="src" href="https://arxiv.org/abs/2306.00978" target="_blank" rel="noopener">arXiv 2306.00978 — AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration (MIT HAN Lab)</a>
+          <button class="copy" data-share="How do you say &quot;awq&quot;? Camp A: awk. Camp B: ay duh bul yoo kyoo. The dict plays both → https://pronounce.renlab.ai/word/awq">copy debate</button>
+        </div>
+      </article>
+      <article class="card contested">
+        <div class="card-head">
+          <a class="word" href="/word/bayesian">bayesian</a>
+          <button class="play" data-audio="/audio/bayesian.mp3" aria-label="hear bayesian">▶</button>
+        </div>
+        <div class="camps"><span class="camp camp-a">bay zee un</span><span class="vs">vs</span><span class="camp camp-b">bay zhun</span></div>
+        <div class="card-foot">
+          <button class="copy" data-share="How do you say &quot;bayesian&quot;? Camp A: bay zee un. Camp B: bay zhun. The dict plays both → https://pronounce.renlab.ai/word/bayesian">copy debate</button>
+        </div>
+      </article>
+      <article class="card contested">
+        <div class="card-head">
+          <a class="word" href="/word/beta">beta</a>
+          <button class="play" data-audio="/audio/beta.mp3" aria-label="hear beta">▶</button>
+        </div>
+        <div class="camps"><span class="camp camp-a">BAY tuh</span><span class="vs">vs</span><span class="camp camp-b">BEE tuh</span></div>
+        <div class="card-foot">
+          <button class="copy" data-share="How do you say &quot;beta&quot;? Camp A: BAY tuh. Camp B: BEE tuh. The dict plays both → https://pronounce.renlab.ai/word/beta">copy debate</button>
+        </div>
+      </article>
+      <article class="card contested">
+        <div class="card-head">
+          <a class="word" href="/word/bokeh">bokeh</a>
+          <button class="play" data-audio="/audio/bokeh.mp3" aria-label="hear bokeh">▶</button>
+        </div>
+        <div class="camps"><span class="camp camp-a">boh kay</span><span class="vs">vs</span><span class="camp camp-b">boh kuh</span></div>
+        <div class="card-foot">
+          <button class="copy" data-share="How do you say &quot;bokeh&quot;? Camp A: boh kay. Camp B: boh kuh. The dict plays both → https://pronounce.renlab.ai/word/bokeh">copy debate</button>
+        </div>
+      </article>
+      <article class="card contested">
+        <div class="card-head">
+          <a class="word" href="/word/btrfs">Btrfs</a>
+          <button class="play" data-audio="/audio/btrfs.mp3" aria-label="hear Btrfs">▶</button>
+        </div>
+        <div class="camps"><span class="camp camp-a">BUTTER F S</span><span class="vs">vs</span><span class="camp camp-b">B T R F S</span></div>
+        <div class="card-foot"><a class="src" href="https://btrfs.readthedocs.io/" target="_blank" rel="noopener">Btrfs docs</a>
+          <button class="copy" data-share="How do you say &quot;Btrfs&quot;? Camp A: BUTTER F S. Camp B: B T R F S. The dict plays both → https://pronounce.renlab.ai/word/btrfs">copy debate</button>
+        </div>
+      </article>
+      <article class="card contested">
+        <div class="card-head">
+          <a class="word" href="/word/byzantine">Byzantine</a>
+          <button class="play" data-audio="/audio/byzantine.mp3" aria-label="hear Byzantine">▶</button>
+        </div>
+        <div class="camps"><span class="camp camp-a">biz AN teen</span><span class="vs">vs</span><span class="camp camp-b">BIZ un tine</span></div>
+        <div class="card-foot"><a class="src" href="https://lamport.azurewebsites.net/pubs/byz.pdf" target="_blank" rel="noopener">Lamport 1982</a>
+          <button class="copy" data-share="How do you say &quot;Byzantine&quot;? Camp A: biz AN teen. Camp B: BIZ un tine. The dict plays both → https://pronounce.renlab.ai/word/byzantine">copy debate</button>
+        </div>
+      </article>
+      <article class="card contested">
+        <div class="card-head">
+          <a class="word" href="/word/cac">CAC</a>
+          <button class="play" data-audio="/audio/cac.mp3" aria-label="hear CAC">▶</button>
+        </div>
+        <div class="camps"><span class="camp camp-a">C A C</span><span class="vs">vs</span><span class="camp camp-b">cack</span></div>
+        <div class="card-foot"><a class="src" href="https://en.wikipedia.org/wiki/Customer_acquisition_cost" target="_blank" rel="noopener">Wikipedia</a>
+          <button class="copy" data-share="How do you say &quot;CAC&quot;? Camp A: C A C. Camp B: cack. The dict plays both → https://pronounce.renlab.ai/word/cac">copy debate</button>
+        </div>
+      </article>
+      <article class="card contested">
+        <div class="card-head">
+          <a class="word" href="/word/cbor">CBOR</a>
+          <button class="play" data-audio="/audio/cbor.mp3" aria-label="hear CBOR">▶</button>
+        </div>
+        <div class="camps"><span class="camp camp-a">SEE bore</span><span class="vs">vs</span><span class="camp camp-b">see bee oh AR</span></div>
+        <div class="card-foot"><a class="src" href="https://datatracker.ietf.org/doc/html/rfc8949" target="_blank" rel="noopener">IETF RFC 8949 — Concise Binary Object Representation</a>
+          <button class="copy" data-share="How do you say &quot;CBOR&quot;? Camp A: SEE bore. Camp B: see bee oh AR. The dict plays both → https://pronounce.renlab.ai/word/cbor">copy debate</button>
+        </div>
+      </article>
+    </div>
+    <p class="more"><a href="/hall-of-shame">+ 134 more contested → the hall of shame</a></p>
+  </section>
+
+  <section class="board">
+    <h2>Already <span class="settled">settled</span> — the creator said so</h2>
+    <p class="sub">No more arguing. The person who made the thing put it on the record. Here's the receipt.</p>
+    <div class="grid">
+      <article class="card settled">
+        <div class="card-head">
+          <a class="word" href="/word/gif">GIF</a>
+          <button class="play" data-audio="/audio/gif.mp3" aria-label="hear GIF">▶</button>
+        </div>
+        <div class="reading">jif</div>
+        <div class="card-foot"><a class="src" href="https://www.nytimes.com/2013/05/22/business/media/creator-of-the-gif-says-its-pronounced-jif.html" target="_blank" rel="noopener">Steve Wilhite, NYT (2013)</a></div>
+      </article>
+      <article class="card settled">
+        <div class="card-head">
+          <a class="word" href="/word/nginx">nginx</a>
+          <button class="play" data-audio="/audio/nginx.mp3" aria-label="hear nginx">▶</button>
+        </div>
+        <div class="reading">engine X</div>
+        <div class="card-foot"><a class="src" href="https://nginx.org/en/" target="_blank" rel="noopener">NGINX official</a></div>
+      </article>
+      <article class="card settled">
+        <div class="card-head">
+          <a class="word" href="/word/yaml">YAML</a>
+          <button class="play" data-audio="/audio/yaml.mp3" aria-label="hear YAML">▶</button>
+        </div>
+        <div class="reading">yam ul</div>
+        <div class="card-foot"><a class="src" href="https://yaml.org/" target="_blank" rel="noopener">yaml.org</a></div>
+      </article>
+      <article class="card settled">
+        <div class="card-head">
+          <a class="word" href="/word/gnu">GNU</a>
+          <button class="play" data-audio="/audio/gnu.mp3" aria-label="hear GNU">▶</button>
+        </div>
+        <div class="reading">guh new</div>
+        <div class="card-foot"><a class="src" href="https://www.gnu.org/gnu/pronunciation.html" target="_blank" rel="noopener">GNU Project official</a></div>
+      </article>
+      <article class="card settled">
+        <div class="card-head">
+          <a class="word" href="/word/latex">LaTeX</a>
+          <button class="play" data-audio="/audio/latex.mp3" aria-label="hear LaTeX">▶</button>
+        </div>
+        <div class="reading">lay tek</div>
+        <div class="card-foot"><a class="src" href="https://www.latex-project.org/about/" target="_blank" rel="noopener">LaTeX project</a></div>
+      </article>
+      <article class="card settled">
+        <div class="card-head">
+          <a class="word" href="/word/toml">TOML</a>
+          <button class="play" data-audio="/audio/toml.mp3" aria-label="hear TOML">▶</button>
+        </div>
+        <div class="reading">tohml</div>
+        <div class="card-foot"><a class="src" href="https://toml.io/" target="_blank" rel="noopener">toml.io</a></div>
+      </article>
+      <article class="card settled">
+        <div class="card-head">
+          <a class="word" href="/word/tcl">Tcl</a>
+          <button class="play" data-audio="/audio/tcl.mp3" aria-label="hear Tcl">▶</button>
+        </div>
+        <div class="reading">tickle</div>
+        <div class="card-foot"><a class="src" href="https://www.tcl-lang.org/" target="_blank" rel="noopener">Tcl official</a></div>
+      </article>
+      <article class="card settled">
+        <div class="card-head">
+          <a class="word" href="/word/awk">awk</a>
+          <button class="play" data-audio="/audio/awk.mp3" aria-label="hear awk">▶</button>
+        </div>
+        <div class="reading">auk</div>
+        <div class="card-foot"><a class="src" href="https://en.wikipedia.org/wiki/AWK#Origin_of_the_name" target="_blank" rel="noopener">Wikipedia § Origin of the name</a></div>
+      </article>
+      <article class="card settled">
+        <div class="card-head">
+          <a class="word" href="/word/a11y">a11y</a>
+          <button class="play" data-audio="/audio/a11y.mp3" aria-label="hear a11y">▶</button>
+        </div>
+        <div class="reading">A eleven Y</div>
+        <div class="card-foot"><a class="src" href="https://www.a11yproject.com/" target="_blank" rel="noopener">A11y Project</a></div>
+      </article>
+      <article class="card settled">
+        <div class="card-head">
+          <a class="word" href="/word/arxiv">arxiv</a>
+          <button class="play" data-audio="/audio/arxiv.mp3" aria-label="hear arxiv">▶</button>
+        </div>
+        <div class="reading">ar kive</div>
+        <div class="card-foot"><a class="src" href="https://info.arxiv.org/help/faq/whatisarxiv.html" target="_blank" rel="noopener">arXiv FAQ</a></div>
+      </article>
+      <article class="card settled">
+        <div class="card-head">
+          <a class="word" href="/word/bleu">BLEU</a>
+          <button class="play" data-audio="/audio/bleu.mp3" aria-label="hear BLEU">▶</button>
+        </div>
+        <div class="reading">blue</div>
+        <div class="card-foot"><a class="src" href="https://aclanthology.org/P02-1040/" target="_blank" rel="noopener">Papineni 2002</a></div>
+      </article>
+      <article class="card settled">
+        <div class="card-head">
+          <a class="word" href="/word/buildah">Buildah</a>
+          <button class="play" data-audio="/audio/buildah.mp3" aria-label="hear Buildah">▶</button>
+        </div>
+        <div class="reading">BIL duh</div>
+        <div class="card-foot"><a class="src" href="https://buildah.io/" target="_blank" rel="noopener">buildah.io</a></div>
+      </article>
+      <article class="card settled">
+        <div class="card-head">
+          <a class="word" href="/word/cap-n-proto">Cap&#x27;n Proto</a>
+          <button class="play" data-audio="/audio/cap-n-proto.mp3" aria-label="hear Cap&#x27;n Proto">▶</button>
+        </div>
+        <div class="reading">KAP uhn PROH toh</div>
+        <div class="card-foot"><a class="src" href="https://news.ycombinator.com/item?id=36909537" target="_blank" rel="noopener">Hacker News — Kenton Varda (kentonv, creator) on the name origin</a></div>
+      </article>
+      <article class="card settled">
+        <div class="card-head">
+          <a class="word" href="/word/chezmoi">chezmoi</a>
+          <button class="play" data-audio="/audio/chezmoi.mp3" aria-label="hear chezmoi">▶</button>
+        </div>
+        <div class="reading">shay mwa</div>
+        <div class="card-foot"><a class="src" href="https://www.chezmoi.io/user-guide/frequently-asked-questions/design/" target="_blank" rel="noopener">chezmoi official FAQ (Design)</a></div>
+      </article>
+      <article class="card settled">
+        <div class="card-head">
+          <a class="word" href="/word/cidr">CIDR</a>
+          <button class="play" data-audio="/audio/cidr.mp3" aria-label="hear CIDR">▶</button>
+        </div>
+        <div class="reading">cider</div>
+        <div class="card-foot"><a class="src" href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing" target="_blank" rel="noopener">Wikipedia</a></div>
+      </article>
+      <article class="card settled">
+        <div class="card-head">
+          <a class="word" href="/word/cue">CUE</a>
+          <button class="play" data-audio="/audio/cue.mp3" aria-label="hear CUE">▶</button>
+        </div>
+        <div class="reading">kyoo</div>
+        <div class="card-foot"><a class="src" href="https://cuelang.org/docs/reference/spec/" target="_blank" rel="noopener">The CUE Language Specification (cuelang.org)</a></div>
+      </article>
+    </div>
+    <p class="more"><a href="/receipts">+ 51 more settled, with citations → the receipts</a></p>
+  </section>
+</main>
+
+<footer class="bottom">
+  <p><strong>Pronounce</strong> — a community dictionary of how engineers actually say developer jargon. MIT, zero deps.<br>
+  Found one we got wrong, or a third reading? <a href="https://github.com/anzy-renlab-ai/pronounce/issues/1">Open a one-line PR</a> · <a href="https://github.com/anzy-renlab-ai/pronounce">★ the repo</a></p>
+</footer>
+
+<script>
+document.addEventListener('click', function(e) {
+  var p = e.target.closest('.play');
+  if (p) { try { new Audio(p.dataset.audio).play(); } catch (_) {} return; }
+  var c = e.target.closest('.copy');
+  if (c) {
+    navigator.clipboard.writeText(c.dataset.share).then(function() {
+      var t = c.textContent; c.textContent = 'copied ✓'; c.classList.add('done');
+      setTimeout(function() { c.textContent = t; c.classList.remove('done'); }, 1600);
+    });
+  }
+});
+</script>
+</body>
+</html>
