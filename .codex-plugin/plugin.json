@@ -4,6 +4,12 @@
   "description": "Pronounce developer jargon out loud — 1738+ sourced entries (kubectl, GIF, JSON, JWT, …). Ships the pronounce-word skill and the pronounce MCP server.",
   "author": "anzy-renlab-ai",
   "homepage": "https://pronounce.renlab.ai",
+  "repository": "https://github.com/anzy-renlab-ai/pronounce",
   "license": "MIT",
+  "interface": {
+    "displayName": "Pronounce",
+    "shortDescription": "Hear how developer jargon is actually pronounced",
+    "composerIcon": "./assets/icon.svg"
+  },
   "mcpServers": "./.mcp.json"
 }
