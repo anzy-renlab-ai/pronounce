@@ -4,181 +4,181 @@
   <link href="https://pronounce.renlab.ai/feed.atom" rel="self"/>
   <link href="https://pronounce.renlab.ai/"/>
   <id>https://pronounce.renlab.ai/</id>
-  <updated>2026-06-19T13:25:42Z</updated>
+  <updated>2026-06-24T08:54:13Z</updated>
   <subtitle>How engineers actually pronounce project / product / jargon names. Community-maintained.</subtitle>
-  <entry>
-    <title>Jsonnet — JAY son it</title>
-    <link href="https://pronounce.renlab.ai/word/jsonnet"/>
-    <id>https://pronounce.renlab.ai/word/jsonnet</id>
-    <updated>2026-06-19T13:25:42Z</updated>
-    <summary>Jsonnet is pronounced "JAY son it" (/ˈdʒeɪ ˌsɑːnɪt/). Google's data-templating / configuration language (common in Kubernetes / infra tooling). The official site states verbatim: "The name Jsonnet is a portmanteau of JSON and sonnet, pronounced 'jay sonnet'." So it's JAY (from JSON's 'jay-son') overlapping into SONNET — three syllables JAY-SON-it, primary stress on JAY (like JSON itself). Note the General American 'sonnet' vowel is /ɑː/, not British /ɒ/. Common mistakes: 'jay-SO-net', 'juh-SON-et', or reading it like the French name 'Jeannette'. The intended reading bakes in JSON (jay-son) + sonnet.</summary>
-  </entry>
   <entry>
     <title>Dhall — dawl</title>
     <link href="https://pronounce.renlab.ai/word/dhall"/>
     <id>https://pronounce.renlab.ai/word/dhall</id>
-    <updated>2026-06-19T13:25:42Z</updated>
+    <updated>2026-06-24T08:54:13Z</updated>
     <summary>Dhall is pronounced "dawl" (/dɔl/). A programmable, non-Turing-complete configuration language by Gabriel Gonzalez (an alternative to YAML/JSON). The official README settles it: the name comes from a Dustman in the game Planescape: Torment (NOT author Roald DAHL and NOT the lentil dish 'dal/daal'), and 'rhymes with tall/call/hall — dɔl for a US speaker, dɔːl for a UK speaker.' So General American is DAWL (rhymes with TALL), stress on the single syllable. Despite the ruling, a large slice of the community still says /dɑːl/ ('dahl', like the dish), tracked in GitHub issue #144 which also catalogs /dæl/ (rhymes with 'pal'); the silent-h 'Dh' digraph even tempts a /ð/ ('that') onset.</summary>
   </entry>
   <entry>
     <title>Cholesky — shuh LESS kee</title>
     <link href="https://pronounce.renlab.ai/word/cholesky"/>
     <id>https://pronounce.renlab.ai/word/cholesky</id>
-    <updated>2026-06-19T13:25:42Z</updated>
+    <updated>2026-06-24T08:54:13Z</updated>
     <summary>Cholesky is pronounced "shuh LESS kee" (/ʃəˈlɛski/). Stress on the SECOND syllable: shuh-LESS-kee. Named after French mathematician/military officer André-Louis Cholesky (decomposition posthumously published 1924). Wikipedia gives /ʃəˈlɛski/ — the onset is 'sh', NOT a hard 'k'. The decomposition is everywhere in numerical computing / ML (covariance factorization, linear solvers, Gaussian processes), so the mispronunciation gets repeated constantly. English speakers overwhelmingly default to the spelling-driven 'koh-LESS-kee' (hard C), and many keep that even after being corrected, which is why it's genuinely contested rather than a clean single answer.</summary>
   </entry>
   <entry>
     <title>Poisson — PWAH sawn</title>
     <link href="https://pronounce.renlab.ai/word/poisson"/>
     <id>https://pronounce.renlab.ai/word/poisson</id>
-    <updated>2026-06-19T13:25:42Z</updated>
+    <updated>2026-06-24T08:54:13Z</updated>
     <summary>Poisson is pronounced "PWAH sawn" (/ˈpwɑsɒn/). The 'oi' is French /wa/, so the first syllable is PWAH, not POY: PWAH-sawn. Named after French mathematician Siméon Denis Poisson. Wiktionary gives General American /ˈpwɑ.sɒn/ (no vowel-length mark) and RP /ˈpwɑː.sɒn/ ~ /ˈpwɑː.sɒ̃/ (the ː length and nasalized ending are RP, not GA). The dominant developer/student error is the fully anglicized POY-sun rhyming with 'poison', which is why the term reliably trips people in stats, queueing theory, and event-rate modeling. Educated stats usage converges on PWAH-sawn, so consensus rather than truly contested.</summary>
   </entry>
   <entry>
     <title>Cauchy — koh SHEE</title>
     <link href="https://pronounce.renlab.ai/word/cauchy"/>
     <id>https://pronounce.renlab.ai/word/cauchy</id>
-    <updated>2026-06-19T13:25:42Z</updated>
+    <updated>2026-06-24T08:54:13Z</updated>
     <summary>Cauchy is pronounced "koh SHEE" (/koʊˈʃiː/). Two syllables. The 'ch' is French /ʃ/ (the 'sh' sound) and 'au' = /oʊ/, so it ends '-SHEE', never a hard 'ch' like 'church'. General American puts the stress on the SECOND syllable: koh-SHEE /koʊˈʃiː/ (per Wikipedia's US transcription and Dictionary.com). British English shifts stress to the FIRST syllable: KOH-shee /ˈkoʊʃi/ (the alt form) — so the stress is genuinely contested across dialects even though the consonants are agreed. Named after French mathematician Augustin-Louis Cauchy; English speakers meet it via the Cauchy distribution, Cauchy sequence, and Cauchy-Schwarz inequality. Routinely mangled as 'COW-chee' or 'CAW-chee' with a hard ch — both wrong.</summary>
   </entry>
   <entry>
     <title>Bezier — BEZ ee ay</title>
     <link href="https://pronounce.renlab.ai/word/bezier"/>
     <id>https://pronounce.renlab.ai/word/bezier</id>
-    <updated>2026-06-19T13:25:42Z</updated>
+    <updated>2026-06-24T08:54:13Z</updated>
     <summary>Bezier is pronounced "BEZ ee ay" (/ˈbɛz.i.eɪ/). Three syllables: BEZ-ee-ay, with the final '-ier' as the French /je/ → 'yay/ay' and a SILENT 'r'. Named after French engineer Pierre Bézier (French [bezje]); anglicized to 'BEZ-ee-ay' (Wikipedia also lists 'BEH-zee-ay', /ˈbɛz.i.eɪ/). Hugely common in front-end and graphics work — every CSS author meets cubic-bezier() and SVG path Béziers — yet it's routinely mispronounced 'BEEZ-ee-er' or 'BEZ-yer' with a hard, sounded 'r'. The accent on the é is also dropped in code (cubic-bezier), reinforcing the wrong reading. Stress is on the first syllable (BEZ); the alt form moves emphasis to the final 'AY'.</summary>
   </entry>
   <entry>
     <title>Voronoi — VOR uh noy</title>
     <link href="https://pronounce.renlab.ai/word/voronoi"/>
     <id>https://pronounce.renlab.ai/word/voronoi</id>
-    <updated>2026-06-19T13:25:42Z</updated>
+    <updated>2026-06-24T08:54:13Z</updated>
     <summary>Voronoi is pronounced "VOR uh noy" (/ˈvɔːrənɔɪ/). Stress placement is genuinely contested. Named after Russian mathematician Georgy Voronoy (Воронóй). The most commonly documented mainstream English form puts primary stress on the FIRST syllable — VOR-uh-noy, /ˈvɔːrənɔɪ/ (so howtopronounce.com and the dev-community Casual Effects computational-graphics guide). But it competes with a final-stress vor-uh-NOY (ending like 'annoy') and a middle-stress vor-OH-noy — no single anglicization has won. The Russian-accurate rendering is closer to 'vah-rah-NOY', with the unstressed o's reduced toward 'uh/ah'. Pervasive in computational geometry, mesh generation, procedural texturing, and game dev, where 'how do you even say Voronoi?' (usually alongside Delaunay) is a recurring forum thread.</summary>
   </entry>
   <entry>
     <title>Erdos — AIR dursh</title>
     <link href="https://pronounce.renlab.ai/word/erdos"/>
     <id>https://pronounce.renlab.ai/word/erdos</id>
-    <updated>2026-06-19T13:25:42Z</updated>
+    <updated>2026-06-24T08:54:13Z</updated>
     <summary>Erdos is pronounced "AIR dursh" (/ˈɛrdɜːrʃ/). Hungarian mathematician Paul Erdős; Wikipedia gives the Hungarian IPA [ˈɛrdøːʃ ˈpaːl]. Two things break English speakers: the final 's' is /ʃ/ ('sh'), and 'ő' is a long front-rounded vowel /øː/ that has no English equivalent (nearest is the NURSE vowel in 'bird', or German ö). So it's roughly AIR-dursh — stress on the FIRST syllable — commonly anglicized to AIR-dish or UR-dosh, but never 'ER-doss' or 'ER-doze'. CS folks hit this constantly via the Erdős number and Erdős–Rényi random graphs (Rényi is already in the dict), and almost everyone says the spelling-based 'ER-doss' with a hard final 's'.</summary>
   </entry>
   <entry>
     <title>Kyutai — KYOO tye</title>
     <link href="https://pronounce.renlab.ai/word/kyutai"/>
     <id>https://pronounce.renlab.ai/word/kyutai</id>
-    <updated>2026-06-19T13:25:42Z</updated>
+    <updated>2026-06-24T08:54:13Z</updated>
     <summary>Kyutai is pronounced "KYOO tye" (/ˈkjuː.taɪ/). Paris-based open-science AI lab (founded Nov 2023 by Xavier Niel/Iliad, Rodolphe Saadé/CMA CGM, and Eric Schmidt/Schmidt Sciences) behind the Moshi real-time voice model. The name romanizes the Japanese 球体 (kyūtai), meaning 'sphere/orb' — the intended reading is two syllables: KYOO (きゅう, a long vowel like English 'cue'/'queue') + tye (たい, rhyming with 'tie'). English devs routinely mangle it into 3-4 syllables ('kee-YOO-tah-ee') because the vowel cluster looks longer than it sounds. Stress is genuinely contested: Japanese is pitch-accent rather than stressed, so English speakers split between first-syllable KYOO-tye (recommended primary) and second-syllable kyoo-TYE. Note kyutai.org itself does NOT explain the name; the Japanese-sphere etymology is confirmed by Amplify Partners' write-up.</summary>
   </entry>
   <entry>
     <title>Moshi — MOH shee</title>
     <link href="https://pronounce.renlab.ai/word/moshi"/>
     <id>https://pronounce.renlab.ai/word/moshi</id>
-    <updated>2026-06-19T13:25:42Z</updated>
+    <updated>2026-06-24T08:54:13Z</updated>
     <summary>Moshi is pronounced "MOH shee" (/ˈmoʊ.ʃi/). Kyutai's real-time full-duplex speech-text foundation model (July 2024), built on the Mimi neural audio codec (Mimi = MEE-mee). Say it MOH-shee: stress the first syllable, long 'o' as in 'go', 'sh' as in 'ship' — MOH-shee. The name matches the Japanese word もしもし (moshi moshi), the phrase used to answer the phone; that etymology is widely assumed but is NOT stated in Kyutai's README, the arXiv paper (2410.00037), or kyutai.org, so treat the naming rationale as unconfirmed. Common English mispronunciations are 'MOSH-ee' (rhyming with 'posh') and 'MOSH-eye' — both wrong.</summary>
   </entry>
   <entry>
     <title>Hymba — HIM buh</title>
     <link href="https://pronounce.renlab.ai/word/hymba"/>
     <id>https://pronounce.renlab.ai/word/hymba</id>
-    <updated>2026-06-19T13:25:42Z</updated>
+    <updated>2026-06-24T08:54:13Z</updated>
     <summary>Hymba is pronounced "HIM buh" (/ˈhɪm.bə/). NVIDIA's 1.5B hybrid-head small language model (Nov 2024) that runs Mamba (state-space) and attention heads in parallel within the same layer. The name is widely read as a blend of 'HYbrid' + 'Mamba' (secondary write-ups confirm this; NVIDIA's own blog never states the etymology, so the portmanteau is community inference). That blend implies a short 'y' — HIM-buh, a homophone of the Namibian Himba people — and stress falls on the first syllable. But the 'Hy-' spelling leads many English speakers to default to HYME-buh (long i, like 'hybrid'), so usage is split. No official NVIDIA pronunciation exists.</summary>
   </entry>
   <entry>
     <title>Pangu — pahn GOO</title>
     <link href="https://pronounce.renlab.ai/word/pangu"/>
     <id>https://pronounce.renlab.ai/word/pangu</id>
-    <updated>2026-06-19T13:25:42Z</updated>
+    <updated>2026-06-24T08:54:13Z</updated>
     <summary>Pangu is pronounced "pahn GOO" (/pɑːnˈɡuː/). Huawei's large-model family (盘古大模型, pinyin pángǔ), named for the primordial giant of Chinese creation myth. The two syllables are pan + gu (Mandarin IPA [pʰǎn.kù]), with the 'an' as in 'father'. The attested English pronunciation (Wiktionary) is /pɑːnˈɡuː/ — pahn-GOO — and the 'pan' has a plain /n/, NOT an 'ng'. English speakers very commonly misread 'pan-gu' as PANG-goo, fusing an /ŋ/ that isn't in the original and shifting the syllable boundary to pang|u. Distinct from the unrelated iOS jailbreak tool also called Pangu.</summary>
   </entry>
   <entry>
     <title>CRI-O — CRY oh</title>
     <link href="https://pronounce.renlab.ai/word/cri-o"/>
     <id>https://pronounce.renlab.ai/word/cri-o</id>
-    <updated>2026-06-19T13:25:42Z</updated>
+    <updated>2026-06-24T08:54:13Z</updated>
     <summary>CRI-O is pronounced "CRY oh" (/ˈkraɪoʊ/). Lightweight CNCF Kubernetes container runtime; default runtime in OpenShift. The name derives from CRI (Container Runtime Interface) plus OCI (Open Container Initiative) — confirmed by Red Hat's announcement. Common community reading is 'CRY-oh': read 'CRI' as the word 'cry', then 'oh'. Stress on CRY. Common mispronunciations: spelling it out letter-by-letter 'C-R-I-O', or 'CREE-oh'. No official/maintainer doc states the pronunciation, so this is community usage rather than a creator clarification.</summary>
   </entry>
   <entry>
     <title>Raku — RAH koo</title>
     <link href="https://pronounce.renlab.ai/word/raku"/>
     <id>https://pronounce.renlab.ai/word/raku</id>
-    <updated>2026-06-19T13:25:42Z</updated>
+    <updated>2026-06-24T08:54:13Z</updated>
     <summary>Raku is pronounced "RAH koo" (/ˈrɑː.kuː/). The language formerly known as Perl 6, renamed Raku in Oct 2019 with Larry Wall's blessing for the name. Community pronunciation is RAH-koo — first syllable 'rah' as in cheering 'rah-rah', second 'koo' as in 'cuckoo', stress on RAH. The name honors the Rakudo compiler, a contraction of Japanese Rakuda-dō ('Way of the Camel'), and evokes 楽 raku ('comfort/enjoyment'). English speakers frequently flatten it to RAK-oo (rhyming with 'rack you'), the common Anglicization. Do NOT read it as 'rake-oo'. Note: the cited Hackster.io article covers the rename and etymology but does not itself document the pronunciation.</summary>
   </entry>
   <entry>
     <title>Nostr — NOH ster</title>
     <link href="https://pronounce.renlab.ai/word/nostr"/>
     <id>https://pronounce.renlab.ai/word/nostr</id>
-    <updated>2026-06-19T13:25:42Z</updated>
+    <updated>2026-06-24T08:54:13Z</updated>
     <summary>Nostr is pronounced "NOH ster" (/ˈnoʊ.stər/). Decentralized social protocol; the name is an acronym for 'Notes and Other Stuff Transmitted by Relays' — so it has no vowel and no official spoken form. Two camps: (1) NOH-ster with a long o like 'nose' (matching the 'Notes...' expansion), and (2) NOSS-ter with the short o of 'ostrich'. The ostrich reading is widespread enough that Nostr users nickname themselves 'nostriches', strong community evidence for the short-o variant. Wikipedia's Talk page logs both variants (nōstər, nôstər); creator fiatjaf has explicitly told people to 'invent your own way', so there is no creator decree and it is genuinely contested. Stress on the first syllable either way. (Other heard-in-the-wild forms include No-stir and Naw-ster.)</summary>
   </entry>
   <entry>
     <title>QOI — koy</title>
     <link href="https://pronounce.renlab.ai/word/qoi"/>
     <id>https://pronounce.renlab.ai/word/qoi</id>
-    <updated>2026-06-19T13:25:42Z</updated>
+    <updated>2026-06-24T08:54:13Z</updated>
     <summary>QOI is pronounced "koy" (/kɔɪ/). The 'Quite OK Image' format by Dominic Szablewski (phoboslab), released 2021 — a ~300-line lossless image codec. The widely-held reading is 'koy', identical to the ornamental koi fish: the official logo stylizes the Q into a fish, making the pun explicit (no formal written pronunciation note from the creator exists, so it's inferred from the logo and community usage). Rhymes with 'boy'. Despite this, many developers spell it out letter-by-letter as 'kew-oh-EYE' (Q-O-I) because it reads like a standard acronym. The sibling audio format QOA ('Quite OK Audio') follows the same koi-style joke.</summary>
   </entry>
   <entry>
     <title>CBOR — SEE bore</title>
     <link href="https://pronounce.renlab.ai/word/cbor"/>
     <id>https://pronounce.renlab.ai/word/cbor</id>
-    <updated>2026-06-19T13:25:42Z</updated>
+    <updated>2026-06-24T08:54:13Z</updated>
     <summary>CBOR is pronounced "SEE bore" (/ˈsiːbɔːr/). Concise Binary Object Representation, the binary data format defined in IETF RFC 8949 (used in COSE, WebAuthn attestation, CoAP/IoT). The RFC defines the expansion but gives no spoken form, so usage is split: many say it as one word 'SEE-bore' (C read as the letter, second syllable like 'bore' — roughly 'seaboard' minus the 'd'), while others spell it out 'C-B-O-R'. Compare the related token format CWT, which RFC 8392 explicitly says is pronounced like 'cot' — no such ruling exists for CBOR itself, leaving it genuinely contested. Stress on the first syllable in the word form (SEE-bore); on the final letter in the spelled-out form (see-bee-oh-AR).</summary>
   </entry>
   <entry>
     <title>Brotli — BROHT lee</title>
     <link href="https://pronounce.renlab.ai/word/brotli"/>
     <id>https://pronounce.renlab.ai/word/brotli</id>
-    <updated>2026-06-19T13:25:42Z</updated>
+    <updated>2026-06-24T08:54:13Z</updated>
     <summary>Brotli is pronounced "BROHT lee" (/ˈbroʊt.li/). Google's HTTP compression algorithm (Content-Encoding: br), now supported in all major browsers. Named after the Swiss German word 'Brötli' meaning a small bread roll — sibling to Google's earlier 'Zopfli' (also a Swiss bakery product). Most English speakers say BROHT-lee (stress on BROHT, long o); some say BROT-lee with a short o. Two syllables: BROHT + lee — the 'tli' is one syllable, not 'tuh-lee'. The umlaut 'ö' of the original 'Brötli' is dropped in the ASCII spelling, which is part of what makes the word look harder than it sounds. Common mistakes: broh-TLEE (stress on the wrong syllable) or reading '-tli' as two syllables. Stress is on the first syllable.</summary>
   </entry>
   <entry>
     <title>Cap'n Proto — KAP uhn PROH toh</title>
     <link href="https://pronounce.renlab.ai/word/cap-n-proto"/>
     <id>https://pronounce.renlab.ai/word/cap-n-proto</id>
-    <updated>2026-06-19T13:25:42Z</updated>
+    <updated>2026-06-24T08:54:13Z</updated>
     <summary>Cap'n Proto is pronounced "KAP uhn PROH toh" (/ˌkæpən ˈproʊtoʊ/). Zero-copy data serialization + RPC framework by Kenton Varda, former maintainer of Google's Protocol Buffers. Per Varda himself, the name originally meant 'Capabilities and Protobufs' — NOT a Cap'n Crunch pun; he said the cereal reference 'never occurred to me,' and the 'cerealization protocol' pun was pointed out by someone else and only then added to the logo. Regardless of origin, 'Cap'n' is the ordinary contraction of 'captain', so it's said 'KAP-uhn PROH-toh' — same first word as the cereal mascot Cap'n Crunch — stress on KAP and PROH. Newcomers misread the apostrophe and say the full 'CAPtain Proto', or spell the tool name 'capnp' out as letters C-A-P-N-P. The schema file extension and compiler are 'capnp' ('cap-en-pee').</summary>
   </entry>
   <entry>
     <title>Dirichlet — deer ick LAY</title>
     <link href="https://pronounce.renlab.ai/word/dirichlet"/>
     <id>https://pronounce.renlab.ai/word/dirichlet</id>
-    <updated>2026-06-19T13:25:42Z</updated>
+    <updated>2026-06-24T08:54:13Z</updated>
     <summary>Dirichlet is pronounced "deer ick LAY" (/ˌdɪərɪˈkleɪ/). Named after German mathematician Peter Gustav Lejeune Dirichlet — ubiquitous in ML via the Dirichlet distribution and Latent Dirichlet Allocation (LDA, Blei/Ng/Jordan 2003). The surname LOOKS French (from 'Richelette' in French-speaking Belgium) but he lived in German lands, so two camps exist: the German-style deer-ick-LAY (hard 'k', /kleɪ/) vs the French-style deer-ish-LAY (soft 'sh', /ʃleɪ/). Final stress on -LAY; the 't' is silent in both common readings (though a minority, citing Calabi, insist on a hard final 't'). Wikipedia's own talk page never resolved it — a contributor jokes that saying it 'correctly' makes you sound wrong to most mathematicians. Wikipedia documents the English IPA as the hard-k /ˌdɪərɪˈkleɪ/; many ML practitioners say deer-ish-LAY.</summary>
   </entry>
   <entry>
     <title>Galois — gal WAH</title>
     <link href="https://pronounce.renlab.ai/word/galois"/>
     <id>https://pronounce.renlab.ai/word/galois</id>
-    <updated>2026-06-19T13:25:42Z</updated>
+    <updated>2026-06-24T08:54:13Z</updated>
     <summary>Galois is pronounced "gal WAH" (/ɡælˈwɑ/). Named after French mathematician Évariste Galois (1811–1832), of Galois theory and the finite/Galois field GF(p) that underpins error-correcting codes, AES, and elliptic-curve crypto. English speakers regularly say gal-OYZ or GAL-oyss, treating it like an English word; the accepted reading is gal-WAH — the final 's' is SILENT (French) and stress lands on the second syllable -WAH. Wiktionary gives English /ɡælwɑ/; French is [ɡalwa]. Crypto/TLS engineers who say 'Galois Counter Mode (GCM)' very often mispronounce it.</summary>
   </entry>
   <entry>
     <title>Levenshtein — LEV en shtine</title>
     <link href="https://pronounce.renlab.ai/word/levenshtein"/>
     <id>https://pronounce.renlab.ai/word/levenshtein</id>
-    <updated>2026-06-19T13:25:42Z</updated>
+    <updated>2026-06-24T08:54:13Z</updated>
     <summary>Levenshtein is pronounced "LEV en shtine" (/ˈlɛvənˌʃtaɪn/). Named after Soviet/Russian mathematician Vladimir Levenshtein (Russian: Левенштейн), who defined the edit-distance metric in 1965 — bread-and-butter in NLP, spell-checkers, fuzzy search, and bioinformatics. The German/Yiddish-orthography '-stein' is the trap: the standard English reading rhymes 'stein' with 'mine' (like Einstein), giving LEV-en-shtine — stress on the FIRST syllable, 'sht' cluster kept intact. Many devs instead say LEV-en-STEEN / LEE-ven-steen (sounding the 's' separately, '-steen' like the recurring 'Bernstein' debate) or stress the middle syllable. The 'sh' before the 't' is what most often gets dropped.</summary>
   </entry>
   <entry>
     <title>kurtosis — ker TOH sis</title>
     <link href="https://pronounce.renlab.ai/word/kurtosis"/>
     <id>https://pronounce.renlab.ai/word/kurtosis</id>
-    <updated>2026-06-19T13:25:42Z</updated>
+    <updated>2026-06-24T08:54:13Z</updated>
     <summary>kurtosis is pronounced "ker TOH sis" (/kɚˈtoʊsɪs/). Statistics term for the 'tailedness' of a distribution, from Greek κυρτός (kurtos, 'curved/arching'); coined by Karl Pearson c.1905. Wiktionary GenAm /kɚˈtoʊsɪs/ — primary stress on the second/middle syllable -TOH-, with a long 'oh'. Data scientists frequently flatten it to KUR-toh-sis (stress on first) or say ker-TAH-sis / ker-TOSS-is with a short 'o'. The leading 'ku-' is a plain 'ker-' schwa+r, not 'koor-'. Pairs with 'skewness' in every pandas .describe() conversation, so it's said often and missed often.</summary>
   </entry>
   <entry>
     <title>Weibull — WHY bull</title>
     <link href="https://pronounce.renlab.ai/word/weibull"/>
     <id>https://pronounce.renlab.ai/word/weibull</id>
-    <updated>2026-06-19T13:25:42Z</updated>
+    <updated>2026-06-24T08:54:13Z</updated>
     <summary>Weibull is pronounced "WHY bull" (/ˈwaɪbʊl/). The Weibull distribution (reliability engineering, survival analysis, hazard/lifetime modeling, ML) is named after Swedish engineer Waloddi Weibull (1887–1979). General American speakers overwhelmingly say WHY-bull (/ˈwaɪbʊl/) with a true 'w' — this is the headword pronunciation in English Wikipedia, stress on the first syllable. But because Swedish 'W' is sounded as a 'V', the namesake-correct form is VY-bull (/ˈveɪbʊl/), which purists and many reliability engineers prefer; both are commonly heard in stats/ML talks. Either way the '-bull' is a reduced 'buul' (/-bʊl/), not 'bool'.</summary>
   </entry>
   <entry>
     <title>Tikhonov — TEE khuh nawf</title>
     <link href="https://pronounce.renlab.ai/word/tikhonov"/>
     <id>https://pronounce.renlab.ai/word/tikhonov</id>
-    <updated>2026-06-19T13:25:42Z</updated>
+    <updated>2026-06-24T08:54:13Z</updated>
     <summary>Tikhonov is pronounced "TEE khuh nawf" (/ˈtiːxənɔf/). Tikhonov regularization (= ridge regression / L2 penalty; also ill-posed inverse problems) is named after Russian mathematician Andrey Tikhonov. Russian Ти́хонов = [ˈtʲixənəf] (per Wiktionary): stress on the FIRST syllable — TEE-khuh-nawf (the reduced final vowel is closer to 'nuf') — with a guttural 'kh' (/x/, a single throaty sound, not 'k-h') and a final 'v' that devoices toward 'f'. English speakers almost always shift stress to the second syllable, tik-HOH-nov, and say a plain 'k' + 'h'. The name also surfaces transliterated as 'Tychonoff' (Tychonoff's theorem in topology), reinforcing that the 'kh' is one guttural sound.</summary>
+  </entry>
+  <entry>
+    <title>mythos — MITH oss</title>
+    <link href="https://pronounce.renlab.ai/word/mythos"/>
+    <id>https://pronounce.renlab.ai/word/mythos</id>
+    <updated>2026-06-24T08:54:13Z</updated>
+    <summary>mythos is pronounced "MITH oss" (/ˈmɪθɑs/). GenAm "MITH-ahs" (Merriam-Webster primary). Greek-derived term for a culture's underlying narrative/belief system. One reading pinned per request.</summary>
   </entry>
 </feed>

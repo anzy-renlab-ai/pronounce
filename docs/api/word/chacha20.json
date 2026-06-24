@@ -1,6 +1,6 @@
 {
   "word": "ChaCha20",
-  "ipa": "/ˌtʃɑː tʃɑː ˈtwɛn ti/",
+  "ipa": "/ˈtʃɑː tʃɑː ˌtwɛn ti/",
   "respelling_us": "CHA cha twenty",
   "alt_ipa": [],
   "alt_respelling_us": [],
@@ -11,5 +11,5 @@
   "notes": "\"CHA-cha twenty\". Bernstein stream cipher.",
   "audio_url": "https://pronounce.renlab.ai/audio/chacha20.mp3",
   "url": "https://pronounce.renlab.ai/word/chacha20",
-  "date_modified": "2026-06-19"
+  "date_modified": "2026-06-24"
 }

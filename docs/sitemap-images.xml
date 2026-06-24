@@ -6952,4 +6952,8 @@
     <image:image><image:loc>https://pronounce.renlab.ai/og/tikhonov.png</image:loc><image:caption>How to pronounce Tikhonov — OG card</image:caption></image:image>
     <image:image><image:loc>https://pronounce.renlab.ai/badge/tikhonov.svg</image:loc><image:caption>Pronunciation badge for Tikhonov</image:caption></image:image>
   </url>
+  <url><loc>https://pronounce.renlab.ai/word/mythos</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/mythos.png</image:loc><image:caption>How to pronounce mythos — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/mythos.svg</image:loc><image:caption>Pronunciation badge for mythos</image:caption></image:image>
+  </url>
 </urlset>

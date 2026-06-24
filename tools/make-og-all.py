@@ -55,7 +55,10 @@ font_footer = try_font(SFNS, "/System/Library/Fonts/Helvetica.ttc", size=24)
 font_alt = try_font(SFNS_MONO, MENLO, size=36)
 
 def slugify(word: str) -> str:
-    return re.sub(r"[^a-z0-9._-]+", "-", word.lower())
+    # Per-char replacement (NOT collapsing runs) to match bin/say-it and
+    # build-seo.py — keeps C++ (c--) distinct from C# (c-) and aligned with
+    # the canonical /word/<slug>.html page.
+    return re.sub(r"[^a-z0-9._-]", "-", word.lower())
 
 def fit_font_for_word(word: str, draw: ImageDraw.ImageDraw, max_w: int) -> ImageFont.ImageFont:
     for f in (font_word_huge, font_word_big, font_word_med):

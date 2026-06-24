@@ -54,7 +54,7 @@ export function speak(extensionPath: string, word: string): void {
 
   const cfg = vscode.workspace.getConfiguration('pronounce');
   const voice = cfg.get<string>('voice', 'Samantha');
-  const rate = cfg.get<number>('rate', 200);
+  const rate = cfg.get<number>('rate', 130);
   const reps = cfg.get<number>('repetitions', 1);
 
   const entry = lookup(extensionPath, word);

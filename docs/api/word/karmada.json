@@ -11,5 +11,5 @@
   "notes": "CNCF multi-cluster Kubernetes orchestrator (incubation project). The README opens with the etymology spelled out: 'Karmada (Kubernetes Armada)…' — a blend of Kubernetes + Armada. So the back half rhymes with 'armada': kar-MAH-duh, stress on the second syllable MAH, with a broad 'ah'. The trap is reading the first four letters as 'karm' (like karma) and saying KAR-ma-da with front stress; a secondary anglicization is kar-MAY-duh (mirroring the older 'ar-MAY-duh' variant of armada). Following the Spanish-rooted 'armada', kar-MAH-duh is the natural fit.",
   "audio_url": "https://pronounce.renlab.ai/audio/karmada.mp3",
   "url": "https://pronounce.renlab.ai/word/karmada",
-  "date_modified": "2026-06-19"
+  "date_modified": "2026-06-24"
 }

@@ -1,7 +1,7 @@
 {
   "word": "REPL",
   "ipa": "/ˈrɛpəl/",
-  "respelling_us": "reh pəl",
+  "respelling_us": "reh puhl",
   "alt_ipa": ["/ˌɑːr iː piː ˈɛl/"],
   "alt_respelling_us": ["R E P L"],
   "source_url": "https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop",
@@ -11,5 +11,5 @@
   "notes": "\"REP-uhl\" common in Lisp/Clojure; letter-by-letter common elsewhere. Read-Eval-Print Loop.",
   "audio_url": "https://pronounce.renlab.ai/audio/repl.mp3",
   "url": "https://pronounce.renlab.ai/word/repl",
-  "date_modified": "2026-06-19"
+  "date_modified": "2026-06-24"
 }

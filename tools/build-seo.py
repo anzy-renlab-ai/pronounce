@@ -44,6 +44,14 @@ def esc(s: str) -> str:
     return _html.escape(s or "", quote=True)
 
 
+def js_arg(s: str) -> str:
+    """Escape for a single-quoted JS string inside a double-quoted HTML attribute.
+    Escapes JS specials (\\, ') first, then attribute-breaking HTML chars — but
+    NOT the single-quote (it's the JS delimiter, kept as \\')."""
+    s = (s or "").replace("\\", "\\\\").replace("'", "\\'")
+    return s.replace("&", "&amp;").replace('"', "&quot;").replace("<", "&lt;").replace(">", "&gt;")
+
+
 def load_entries():
     entries = []
     by_slug = {}
@@ -727,10 +735,13 @@ def emit_zh_word(e: dict, out_dir: Path) -> None:
     canonical = f"{SITE_URL}/zh/word/{slug}"
     en_url = f"{SITE_URL}/word/{slug}"
     title = f"{e['word']} 怎么读 — 中文发音指南"
-    desc_parts = [f"{e['word']} 的标准读音是「{e['resp']}」（{e['ipa']}）。"]
-    if e["notes"]:
-        desc_parts.append(e["notes"])
-    desc = " ".join(desc_parts)
+    # Meta description stays Chinese-only. The `notes` field is English editorial
+    # prose; appending it leaked English into the zh <meta>/og/twitter description
+    # (truncated mid-sentence). Keep the description a clean, self-contained zh line.
+    desc = (
+        f"{e['word']} 的标准读音是「{e['resp']}」（{e['ipa']}）。"
+        f"{BRAND} 收录的{_cat_zh(e['cat'])}发音，附音频、IPA 与来源。"
+    )
     if len(desc) > 200:
         desc = desc[:200] + "…"
 
@@ -745,10 +756,12 @@ def emit_zh_word(e: dict, out_dir: Path) -> None:
                 continue
             ai = alt_ipas[i] if i < len(alt_ipas) else ""
             items.append(
-                f'<li><strong>「{esc(a)}」</strong>' + (f' <code>{esc(ai)}</code>' if ai else "") + '</li>'
+                '<li class="alt-row">'
+                f'<button class="play-btn play-alt" onclick="zhSpeak(\'{js_arg(a)}\')" aria-label="播放其他读法">▶</button> '
+                f'<strong>「{esc(a)}」</strong>' + (f' <code>{esc(ai)}</code>' if ai else "") + '</li>'
             )
         if items:
-            alt_html = '<p>其他读法：</p><ul>' + "".join(items) + '</ul>'
+            alt_html = '<p>其他读法：</p><ul class="alt-list">' + "".join(items) + '</ul>'
 
     src_html = ""
     if e["src_url"]:
@@ -821,18 +834,18 @@ def emit_zh_word(e: dict, out_dir: Path) -> None:
     <p class="subtitle"><span class="badge badge-{esc(e['cat'])}">{esc(_cat_zh(e['cat']))}</span> <span class="badge badge-{esc(e['conf'])}">{esc(_conf_zh(e['conf']))}</span></p>
     <div class="panel">
       <div class="panel-row">
-        <button class="play-btn play-primary" onclick="(new Audio('../../audio/{slug}.mp3')).play()" aria-label="播放发音">▶</button>
+        <button class="play-btn play-primary" onclick="zhPlay('{slug}')" aria-label="播放发音（朗读 3 次）">▶</button>
         <span class="resp-large">{esc(e['resp'])}</span>
         <span class="ipa">{esc(e['ipa'])}</span>
+        <button class="copy-ipa" onclick="zhCopy('{js_arg(e['ipa'])}', this)" title="复制 IPA 到剪贴板">⧉ IPA</button>
         <a class="download-mp3" href="../../audio/{slug}.mp3" download="{slug}.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
     <section class="prose">
-      <p><strong>{esc(e['word'])}</strong> 在英语中的标准读法是 <strong>「{esc(e['resp'])}」</strong>（{esc(e['ipa'])}）。"""
+      <p><strong>{esc(e['word'])}</strong> 在英语中的标准读法是 <strong>「{esc(e['resp'])}」</strong>（{esc(e['ipa'])}）。</p>"""
     if e["notes"]:
-        html += f'\n      </p>\n      <p>{esc(e["notes"])}</p>\n      <p>'
+        html += f'\n      <p class="en-note" lang="en">{esc(e["notes"])}</p>'
     html += f"""
-      </p>
       {alt_html}
       {src_html}
       <p>读对项目名只是工程师文化的一部分 — 但开会时被人轻轻纠正、或者在 podcast 上被嘉宾礼貌打断的滋味，并不好受。<strong>{BRAND}</strong> 是一个开源的开发者词汇发音词典，每条都标注来源、信心等级，并且有预渲染的音频可以直接听。</p>
@@ -864,6 +877,12 @@ def emit_zh_word(e: dict, out_dir: Path) -> None:
       <p><a href="../">← 回到中文词条索引</a></p>
     </section>
   </div>
+  <script>
+    // Self-contained audio helpers (no dependency on the global ENTRIES bundle).
+    function zhPlay(s){{var n=0;(function go(){{if(n++>=3)return;var a=new Audio('../../audio/'+s+'.mp3');a.addEventListener('ended',go);a.play().catch(function(){{}});}})();}}
+    function zhSpeak(t){{try{{var u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=0.9;speechSynthesis.cancel();speechSynthesis.speak(u);}}catch(e){{}}}}
+    function zhCopy(t,btn){{if(navigator.clipboard){{navigator.clipboard.writeText(t).then(function(){{if(btn){{var o=btn.textContent;btn.textContent='已复制 ✓';setTimeout(function(){{btn.textContent=o;}},1200);}}}});}}}}
+  </script>
 """
     html += footer("../..")
     out_dir.mkdir(parents=True, exist_ok=True)

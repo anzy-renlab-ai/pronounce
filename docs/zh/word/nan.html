@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>NaN 怎么读 — 中文发音指南 — Pronounce</title>
-  <meta name="description" content="NaN 的标准读音是「nan」（/næn/）。 &quot;nan&quot; (rhymes with &quot;can&quot;) or &quot;N-A-N&quot;.">
+  <meta name="description" content="NaN 的标准读音是「nan」（/næn/）。Pronounce 收录的计算机术语发音，附音频、IPA 与来源。">
   <link rel="canonical" href="https://pronounce.renlab.ai/zh/word/nan">
   <link rel="alternate" hreflang="zh-CN" href="https://pronounce.renlab.ai/zh/word/nan">
   <link rel="alternate" hreflang="zh-Hans" href="https://pronounce.renlab.ai/zh/word/nan">
   <link rel="alternate" hreflang="en" href="https://pronounce.renlab.ai/word/nan">
   <link rel="alternate" hreflang="x-default" href="https://pronounce.renlab.ai/word/nan">
   <meta property="og:title" content="NaN 怎么读 — 中文发音指南">
-  <meta property="og:description" content="NaN 的标准读音是「nan」（/næn/）。 &quot;nan&quot; (rhymes with &quot;can&quot;) or &quot;N-A-N&quot;.">
+  <meta property="og:description" content="NaN 的标准读音是「nan」（/næn/）。Pronounce 收录的计算机术语发音，附音频、IPA 与来源。">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://pronounce.renlab.ai/zh/word/nan">
   <meta property="og:image" content="https://pronounce.renlab.ai/og/nan.png">
@@ -19,7 +19,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="NaN 怎么读 — 中文发音指南">
-  <meta name="twitter:description" content="NaN 的标准读音是「nan」（/næn/）。 &quot;nan&quot; (rhymes with &quot;can&quot;) or &quot;N-A-N&quot;.">
+  <meta name="twitter:description" content="NaN 的标准读音是「nan」（/næn/）。Pronounce 收录的计算机术语发音，附音频、IPA 与来源。">
   <meta name="twitter:image" content="https://pronounce.renlab.ai/og/nan.png">
   <link rel="manifest" href="/manifest.webmanifest">
   <meta name="theme-color" content="#ff6a3d">
@@ -48,19 +48,17 @@
     <p class="subtitle"><span class="badge badge-cs-term">计算机术语</span> <span class="badge badge-contested">存在争议</span></p>
     <div class="panel">
       <div class="panel-row">
-        <button class="play-btn play-primary" onclick="(new Audio('../../audio/nan.mp3')).play()" aria-label="播放发音">▶</button>
+        <button class="play-btn play-primary" onclick="zhPlay('nan')" aria-label="播放发音（朗读 3 次）">▶</button>
         <span class="resp-large">nan</span>
         <span class="ipa">/næn/</span>
+        <button class="copy-ipa" onclick="zhCopy('/næn/', this)" title="复制 IPA 到剪贴板">⧉ IPA</button>
         <a class="download-mp3" href="../../audio/nan.mp3" download="nan.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
     <section class="prose">
-      <p><strong>NaN</strong> 在英语中的标准读法是 <strong>「nan」</strong>（/næn/）。
-      </p>
-      <p>&quot;nan&quot; (rhymes with &quot;can&quot;) or &quot;N-A-N&quot;.</p>
-      <p>
-      </p>
-      <p>其他读法：</p><ul><li><strong>「N A N」</strong> <code>/ˌɛn eɪ ˈɛn/</code></li></ul>
+      <p><strong>NaN</strong> 在英语中的标准读法是 <strong>「nan」</strong>（/næn/）。</p>
+      <p class="en-note" lang="en">&quot;nan&quot; (rhymes with &quot;can&quot;) or &quot;N-A-N&quot;.</p>
+      <p>其他读法：</p><ul class="alt-list"><li class="alt-row"><button class="play-btn play-alt" onclick="zhSpeak('N A N')" aria-label="播放其他读法">▶</button> <strong>「N A N」</strong> <code>/ˌɛn eɪ ˈɛn/</code></li></ul>
       <p><strong>来源：</strong><a href="https://en.wikipedia.org/wiki/NaN" target="_blank" rel="noopener">Wikipedia</a></p>
       <p>读对项目名只是工程师文化的一部分 — 但开会时被人轻轻纠正、或者在 podcast 上被嘉宾礼貌打断的滋味，并不好受。<strong>Pronounce</strong> 是一个开源的开发者词汇发音词典，每条都标注来源、信心等级，并且有预渲染的音频可以直接听。</p>
     </section>
@@ -91,6 +89,12 @@
       <p><a href="../">← 回到中文词条索引</a></p>
     </section>
   </div>
+  <script>
+    // Self-contained audio helpers (no dependency on the global ENTRIES bundle).
+    function zhPlay(s){var n=0;(function go(){if(n++>=3)return;var a=new Audio('../../audio/'+s+'.mp3');a.addEventListener('ended',go);a.play().catch(function(){});})();}
+    function zhSpeak(t){try{var u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=0.9;speechSynthesis.cancel();speechSynthesis.speak(u);}catch(e){}}
+    function zhCopy(t,btn){if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){if(btn){var o=btn.textContent;btn.textContent='已复制 ✓';setTimeout(function(){btn.textContent=o;},1200);}});}}
+  </script>
   <a class="gh-float" href="https://github.com/anzy-renlab-ai/pronounce" target="_blank" rel="noopener"><span class="star">★</span> Star on GitHub</a>
   <footer class="footer">
     <p>Pronounce · MIT · <a href="https://github.com/anzy-renlab-ai/pronounce">GitHub</a></p>

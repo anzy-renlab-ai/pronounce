@@ -11,5 +11,5 @@
   "notes": "Alibaba's Qwen-team reasoning model (QwQ = 'Qwen with Questions'). The official Qwen blog states verbatim: 'Note: This is the pronunciation of QwQ: /kwjuː/, similar to the word \"quill\".' So it's a single syllable: a 'kw' onset glued onto the sound of the letter Q (/juː/), i.e. KWYOO — NOT spelled out 'Q-W-Q' and NOT the kaomoji 'qwq' face. The creators' 'similar to quill' is an informal onset hint (shared 'kw-'), not a literal rhyme — /kwjuː/ does not end in an L and does not match quill's short 'i'. Lowercase middle 'w' makes it look like an emoticon, which is exactly why almost nobody guesses the intended sound.",
   "audio_url": "https://pronounce.renlab.ai/audio/qwq.mp3",
   "url": "https://pronounce.renlab.ai/word/qwq",
-  "date_modified": "2026-06-19"
+  "date_modified": "2026-06-24"
 }

@@ -2,7 +2,7 @@
   "categories": [
     {"name": "product", "count": 678},
     {"name": "acronym", "count": 348},
-    {"name": "cs-term", "count": 259},
+    {"name": "cs-term", "count": 260},
     {"name": "tool", "count": 203},
     {"name": "person", "count": 99},
     {"name": "project", "count": 53},

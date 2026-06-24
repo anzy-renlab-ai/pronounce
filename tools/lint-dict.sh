@@ -60,6 +60,16 @@ if [[ -n "$bad" ]]; then
   echo "  ✗ source_url not a URL:" >&2; echo "$bad" >&2; fail=1
 else echo "  ✓ all source URLs well-formed"; fi
 
+# Source coverage (informational — does NOT fail the lint; we never fabricate URLs)
+echo "[coverage] source citations..."
+awk -F'\t' '
+  !/^#/ && NF>=3 && $1 != "" && $1 != "word" { tot++; if ($6 != "" || $7 != "") srcd++ }
+  END {
+    pct = tot ? int(srcd*1000/tot + 0.5)/10 : 0
+    printf "  %d/%d entries carry a source (%.1f%%); %d uncited\n", srcd, tot, pct, tot-srcd
+  }
+' "$DICT"
+
 echo ""
 if (( fail )); then echo "✗ lint failed"; exit 1
 else echo "✓ lint passed"; fi

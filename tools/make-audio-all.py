@@ -32,7 +32,10 @@ PAUSE_INTRA = "[[slnc 400]]"
 PAUSE_INTER = "[[slnc 700]]"
 
 def slugify(word: str) -> str:
-    return re.sub(r"[^a-z0-9._-]+", "-", word.lower())
+    # Per-char replacement (NOT collapsing runs) to match bin/say-it and
+    # build-seo.py. Collapsing runs makes C++ -> "c-" which collides with
+    # C# and mismatches the canonical /word/ page slug (c--). See README §Contributing.
+    return re.sub(r"[^a-z0-9._-]", "-", word.lower())
 
 def build_body(resp: str, alts: list[str]) -> str:
     """Same logic as bin/say-it build_audible_body in default mode."""

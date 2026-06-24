@@ -1,12 +1,12 @@
 <h1 align="center">🔊 say-it · Pronounce</h1>
 
-<p align="center"><strong>Stop saying "kub-cuttle". One Bash command pronounces 1738+ developer jargon names — with cited sources.</strong></p>
+<p align="center"><strong>Stop saying "kub-cuttle". One Bash command pronounces 1,739+ developer jargon names — most with a cited source.</strong></p>
 
 <p align="center">
 <a href="https://github.com/anzy-renlab-ai/pronounce/stargazers"><img src="https://img.shields.io/github/stars/anzy-renlab-ai/pronounce?style=social" alt="GitHub stars"></a>
 <a href="https://pronounce.renlab.ai"><img src="https://img.shields.io/badge/live-pronounce.renlab.ai-7adfbb?logo=safari&logoColor=white" alt="Live site"></a>
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
-<a href="https://pronounce.renlab.ai/browse"><img src="https://img.shields.io/badge/dictionary-1738%20entries-8fd694" alt="Entries"></a>
+<a href="https://pronounce.renlab.ai/browse"><img src="https://img.shields.io/badge/dictionary-1739%20entries-8fd694" alt="Entries"></a>
 <a href="https://marketplace.visualstudio.com/items?itemName=sayit.pronounce"><img src="https://img.shields.io/visual-studio-marketplace/v/sayit.pronounce?label=VS%20Code&color=007ACC&logo=visualstudiocode" alt="VS Code Marketplace"></a>
 <a href="https://open-vsx.org/extension/sayit/pronounce"><img src="https://img.shields.io/open-vsx/v/sayit/pronounce?label=Open%20VSX&color=8fd694" alt="Open VSX"></a>
 </p>
@@ -50,7 +50,7 @@ That's it. Now try `say-it GIF`, `say-it nginx`, `say-it Pydantic`, `say-it --wh
 
 ## 🏆 The developer pronunciation scoreboard
 
-**1,738 entries, all sourced** — **67 settled by the creator themselves**, **158 the community still argues about.** The famous ones:
+**1,739 entries — 1,128 carry a citable source** — **67 settled by the creator themselves**, **158 the community still argues about.** The famous ones:
 
 ### ✅ Settled — the creator said so
 
@@ -75,7 +75,7 @@ That's it. Now try `say-it GIF`, `say-it nginx`, `say-it Pydantic`, `say-it --wh
 | **[GUI](https://pronounce.renlab.ai/word/gui)** | "gooey" | "G-U-I" |
 | **[JWT](https://pronounce.renlab.ai/word/jwt)** | "jot" (per RFC 7519) | "J-W-T" |
 
-Every cell has IPA, audio, and the source. **[Hear all 1,702 →](https://pronounce.renlab.ai/browse)**
+Every cell has IPA, audio, and the source. **[Hear all 1,739 →](https://pronounce.renlab.ai/browse)**
 
 > Disagree with one? That's the whole point — [open a PR](CONTRIBUTING.md) with your reading and a source. The argument *is* the dataset.
 
@@ -83,7 +83,7 @@ Every cell has IPA, audio, and the source. **[Hear all 1,702 →](https://pronou
 
 ## What you're actually getting
 
-- **1738 entries, every one sourced.** Confidence-tagged (`creator-clarified` / `community-consensus` / `contested`) with a citable URL where one exists. Wilhite said GIF is "jif" at the 2013 Webby Awards. Crockford says JSON is "JAY-son" (RailsConf 2009). RFC 7519 says JWT is "jot". The dictionary cites them.
+- **1,739 entries — 1,128 carry a citable source.** Confidence-tagged (`creator-clarified` / `community-consensus` / `contested`), each with a citable URL where one exists (we'd rather leave it blank than fabricate one). Wilhite said GIF is "jif" at the 2013 Webby Awards. Crockford says JSON is "JAY-son" (RailsConf 2009). RFC 7519 says JWT is "jot". The dictionary cites them.
 - **Multi-reading audio.** For words where the debate is real — GIF, SQL, GUI, char, regex — the CLI chains the alternates after the primary with a spoken "or:" so you *hear* the debate without staring at the terminal. `--solo` skips the tail once you've internalized it.
 - **Zero deps. ~250 lines of Bash.** No npm, no sudo, no surprises. Wraps the `say` engine that's already on your Mac. Ships a [Claude Code skill](skills/pronounce-word/SKILL.md) and an [MCP server](mcp-server/) so your AI answers "how do you pronounce X?" with **audio**, not a phonetic guess.
 
@@ -188,7 +188,7 @@ Your AI replies with **sound**, not just a phonetic guess. Skill file: [`skills/
 
 ![Pronounce demo — kubectl, YAML, Ghostty, wagmi](integrations/vscode/media/demo.gif)
 
-Hover over any tech word in any file — see the IPA, hear the pronunciation. Same 1738-entry dictionary as the CLI, JSON-bundled at build (zero runtime parse cost).
+Hover over any tech word in any file — see the IPA, hear the pronunciation. Same 1,739-entry dictionary as the CLI, JSON-bundled at build (zero runtime parse cost).
 
 ```bash
 # Cursor / VSCodium / Zed / Gitpod / Theia / code-server (Open VSX)
@@ -202,13 +202,13 @@ code --install-extension sayit.pronounce
 - **⌘⇧'** — speak selection.
 - **Status bar** `🔊 sayit` — click to speak the current selection.
 - **Welcome walkthrough** — 4-step onboarding on first install.
-- **`Pronounce: Search dictionary…`** — fuzzy-find all 1738 entries.
+- **`Pronounce: Search dictionary…`** — fuzzy-find all 1,739 entries.
 
 Source: [`integrations/vscode/`](integrations/vscode/). **Cross-platform as of v0.3** — macOS `say`, Linux `espeak-ng`, Windows PowerShell.
 
 ## Chrome / Edge / Brave extension
 
-Click any tech word on any webpage → popup with IPA + audio. Same 1738-entry dictionary; same Web Speech API as `pronounce.renlab.ai`. **Sideload only for now** (not yet on Chrome Web Store).
+Click any tech word on any webpage → popup with IPA + audio. Same 1,739-entry dictionary; same Web Speech API as `pronounce.renlab.ai`. **Sideload only for now** (not yet on Chrome Web Store).
 
 Download `pronounce-chrome-0.1.0.zip` from the [latest release](https://github.com/anzy-renlab-ai/pronounce/releases/latest) → unzip → `chrome://extensions/` → Developer mode → Load unpacked.
 
@@ -216,7 +216,7 @@ Source: [`integrations/chrome/`](integrations/chrome/).
 
 ## How the dictionary works
 
-`data/pronunciations.tsv` is the single source of truth — tab-separated, 1738 entries, covering:
+`data/pronunciations.tsv` is the single source of truth — tab-separated, 1,739 entries, covering:
 
 - **Cloud / DevOps:** `kubectl`, `nginx`, `Kubernetes`, `helm`, `Istio`, `Envoy`, `Prometheus`, `Grafana`, `Terraform`, `Argo`, `Knative`, `etcd`, `containerd`, `runc`, `Podman`, ...
 - **Languages / Frameworks:** `Django`, `Vue`, `Vite`, `Pydantic`, `Bun`, `Deno`, `Hugo`, `Hono`, `Caddy`, `Svelte`, `Astro`, `Pinia`, ...
@@ -231,7 +231,7 @@ Local override: drop a `~/.config/say-it/pronunciations.local.tsv` and it takes 
 ## What works today
 
 - ✅ macOS — any word, via the built-in `say` engine. Zero dependencies.
-- ✅ **993** project / product / jargon entries with cited sources.
+- ✅ **1,128** of 1,739 entries carry a citable source — the rest are confidence-tagged, no fabricated citations.
 - ✅ **Audible multi-reading awareness** — contested words audibly chain alternates with "or:".
 - ✅ `--alt [N]`, `--all`, `--solo`, `--why`, `--json`, `--md`, `--no-dict`, `list`, `search`, `quiz`, `repl`, `stream`, `doctor`, `export`, `benchmark`, `badge`, `cheatsheet`.
 - ✅ Claude Code skill + MCP server for AI-side pronunciation questions.
@@ -243,18 +243,18 @@ Local override: drop a `~/.config/say-it/pronunciations.local.tsv` and it takes 
 
 See [`DESIGN.md`](DESIGN.md) for the architecture.
 
-- **🪟 Windows support** via PowerShell + `System.Speech.SpeechSynthesizer`, same CLI flags.
 - **☁️ Cloud TTS** (opt-in ElevenLabs / OpenAI) for the names native TTS still mangles.
-- **🐧 Linux backend** (`espeak-ng`, then cloud).
-- **🔄 `say-it update`** to pull the latest dictionary without reinstalling.
 - **📚 Anki export** for vocabulary drills.
+- **🌗 Light theme on the v2 homepage** (already shipped on word/SEO pages).
+
+> Shipped since this list was written: **Windows** (PowerShell) + **Linux** (`espeak-ng`) backends, and **`say-it update`** (now a fast dictionary refresh; `--full` reinstalls the CLI).
 
 ## Contributing
 
 Two things we want most:
 
 1. **Pronunciation entries.** Open a PR adding a row to `data/pronunciations.tsv`. Required columns: `word`, `ipa`, `phon_us`. Highly preferred: `source_url` (creator interview, conf talk, official FAQ — anything verifiable). Contested readings are welcome; put the rival in `alt_*` columns and we'll wire `--alt` through.
-2. **Non-Mac backends.** Windows and Linux are top priority. See `DESIGN.md` §Backends.
+2. **Backend quality.** macOS (`say`) is the gold standard; the Linux (`espeak-ng`) and Windows (PowerShell) backends ship but are best-effort — help us close the gap. See `DESIGN.md` §Backends.
 
 Keep it tiny. Keep it dep-free where possible. Keep the defaults opinionated (3 reps, GenAm, Samantha voice).
 

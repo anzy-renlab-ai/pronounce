@@ -47,6 +47,9 @@
     <div class="section-title">Recently added</div>
     <div class="recent-grid" id="recent-grid"></div>
 
+    <div class="section-title">Contributors</div>
+    <div class="contrib-list" id="contrib-list"></div>
+
     <div class="section-title">First letter distribution (A → Z)</div>
     <div class="alphabet" id="bars-letters"></div>
 
@@ -62,15 +65,16 @@
 
   <script>
 const STATS = {
-  total: 1738,
-  withSource: 1119,
-  cats: {"project": 53,"acronym": 348,"person": 99,"cs-term": 259,"tool": 203,"product": 678,"abbreviation": 53,"cli-tool": 45},
-  confs: {"contested": 158,"creator-clarified": 67,"community-consensus": 1513},
-  letters: {"2": 1,"A": 105,"B": 68,"C": 158,"D": 85,"E": 75,"F": 63,"G": 80,"H": 68,"I": 43,"J": 28,"K": 61,"L": 70,"M": 113,"N": 51,"O": 47,"P": 113,"Q": 23,"R": 97,"S": 160,"T": 85,"U": 20,"V": 45,"W": 41,"X": 10,"Y": 10,"Z": 18},
+  total: 1739,
+  withSource: 1120,
+  cats: {"project": 53,"acronym": 348,"person": 99,"cs-term": 260,"tool": 203,"product": 678,"abbreviation": 53,"cli-tool": 45},
+  confs: {"contested": 158,"creator-clarified": 67,"community-consensus": 1514},
+  letters: {"2": 1,"A": 105,"B": 68,"C": 158,"D": 85,"E": 75,"F": 63,"G": 80,"H": 68,"I": 43,"J": 28,"K": 61,"L": 70,"M": 114,"N": 51,"O": 47,"P": 113,"Q": 23,"R": 97,"S": 160,"T": 85,"U": 20,"V": 45,"W": 41,"X": 10,"Y": 10,"Z": 18},
   contested: 158,
-  settled: 1580,
-  recent: [{"w":"Tikhonov","c":"person"},{"w":"Weibull","c":"person"},{"w":"kurtosis","c":"cs-term"},{"w":"Levenshtein","c":"person"},{"w":"Galois","c":"person"},{"w":"Dirichlet","c":"person"},{"w":"Cap'n Proto","c":"tool"},{"w":"Brotli","c":"cs-term"},{"w":"CBOR","c":"acronym"},{"w":"QOI","c":"abbreviation"},{"w":"Nostr","c":"cs-term"},{"w":"Raku","c":"cs-term"}]
+  settled: 1581,
+  recent: [{"w":"mythos","c":"cs-term"},{"w":"Tikhonov","c":"person"},{"w":"Weibull","c":"person"},{"w":"kurtosis","c":"cs-term"},{"w":"Levenshtein","c":"person"},{"w":"Galois","c":"person"},{"w":"Dirichlet","c":"person"},{"w":"Cap'n Proto","c":"tool"},{"w":"Brotli","c":"cs-term"},{"w":"CBOR","c":"acronym"},{"w":"QOI","c":"abbreviation"},{"w":"Nostr","c":"cs-term"}]
 };
+const CONTRIBUTORS = [{"name":"alvin","commits":110}];
 
 function init() {
   const bn = document.getElementById('big-numbers');
@@ -88,7 +92,7 @@ function init() {
     const items = Object.entries(data).sort((a, b) => b[1] - a[1]);
     el.innerHTML = items.map(([k, v]) => `
       <div class="bar-row">
-        <div class="bar-label"><a href="${target === 'bars-cats' ? '/category/' + k : '#'}">${k}</a></div>
+        <div class="bar-label">${target === 'bars-cats' ? `<a href="/category/${k}">${k}</a>` : k}</div>
         <div class="bar-track"><div class="bar-fill bar-${color}" style="width: ${100 * v / max}%"></div></div>
         <div class="bar-value">${v}</div>
       </div>`).join('');
@@ -104,6 +108,14 @@ function init() {
         <span class="recent-word">${w}</span>
         <span class="recent-cat">${c}</span>
       </a>`).join('');
+  }
+
+  // Contributors (from `git shortlog` at build, bots excluded)
+  const cl = document.getElementById('contrib-list');
+  if (cl) {
+    cl.innerHTML = CONTRIBUTORS.map(({name, commits}) => `
+      <span style="display:inline-block;padding:6px 13px;margin:4px;border:1px solid var(--border,#333);border-radius:999px;font-size:14px;">${name} <span style="color:var(--muted-strong,#888);">· ${commits}</span></span>`).join('')
+      + `<a style="display:inline-block;padding:6px 13px;margin:4px;border-radius:999px;font-size:14px;background:var(--accent,#ff6a3d);color:#fff;text-decoration:none;" href="https://github.com/anzy-renlab-ai/pronounce/blob/main/CONTRIBUTING.md">+ be the next →</a>`;
   }
 
   // A-Z grid

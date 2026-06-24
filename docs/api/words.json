@@ -1736,5 +1736,6 @@
   {"word": "Levenshtein", "slug": "levenshtein", "category": "person", "confidence": "contested"},
   {"word": "kurtosis", "slug": "kurtosis", "category": "cs-term", "confidence": "community-consensus"},
   {"word": "Weibull", "slug": "weibull", "category": "person", "confidence": "contested"},
-  {"word": "Tikhonov", "slug": "tikhonov", "category": "person", "confidence": "contested"}
+  {"word": "Tikhonov", "slug": "tikhonov", "category": "person", "confidence": "contested"},
+  {"word": "mythos", "slug": "mythos", "category": "cs-term", "confidence": "community-consensus"}
 ]

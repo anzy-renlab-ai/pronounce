@@ -74,7 +74,7 @@ pandas | /ˈpændəz/ | pandas | product | community-consensus | https://pandas.
 PyTorch | /ˈpaɪtɔːrtʃ/ | pie torch | product | community-consensus | https://pytorch.org/
 NaN | /næn/ | nan | cs-term | contested | https://en.wikipedia.org/wiki/NaN
 enum | /ˈiːnəm/ | ee num | cs-term | community-consensus | (no source)
-Anthropic | /ˌænθrəˈpɪk/ | anth row pick | product | community-consensus | https://www.anthropic.com/
+Anthropic | /ænˈθrɑpɪk/ | an THROP ik | product | community-consensus | https://dictionary.cambridge.org/pronunciation/english/anthropic
 OpenAI | /ˈoʊpən eɪ aɪ/ | open A I | product | community-consensus | https://openai.com/
 Claude | /klɔːd/ | clawed | product | community-consensus | https://www.anthropic.com/claude
 Cohere | /koʊˈhɪər/ | co here | product | community-consensus | https://cohere.com/
@@ -583,7 +583,7 @@ qwen | /kwɛn/ | kwen | product | creator-clarified | https://huggingface.co/Qwe
 kimi | /ˈkiː mi/ | KEE mee | product | community-consensus | https://www.moonshot.cn/
 doubao | /doʊ ˈbaʊ/ | doh BOW | product | community-consensus | https://www.doubao.com/
 minimax | /ˈmɪ ni mæks/ | MIN ee maks | project | community-consensus | https://www.minimaxi.com/
-baichuan | /baɪ ˈtʃwɑːn/ | BYE chwahn | project | community-consensus | https://www.baichuan-ai.com/
+baichuan | /ˈbaɪ tʃwɑːn/ | BYE chwahn | project | community-consensus | https://www.baichuan-ai.com/
 gemma | /ˈdʒɛ mə/ | JEM uh | product | community-consensus | https://ai.google.dev/gemma
 phi | /faɪ/ | fai | product | contested | https://huggingface.co/microsoft/phi-3
 jamba | /ˈdʒæm bə/ | JAM buh | product | community-consensus | https://www.ai21.com/jamba
@@ -692,7 +692,7 @@ CRDT | /ˌsiː ɑːr diː ˈtiː/ | C R D T | acronym | community-consensus | ht
 ACID | /ˈæsɪd/ | acid | acronym | community-consensus | https://en.wikipedia.org/wiki/ACID
 BASE | /beɪs/ | base | acronym | community-consensus | https://en.wikipedia.org/wiki/Eventual_consistency
 CAP | /kæp/ | cap | acronym | community-consensus | https://en.wikipedia.org/wiki/CAP_theorem
-REPL | /ˈrɛpəl/ | reh pəl | acronym | contested | https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop
+REPL | /ˈrɛpəl/ | reh puhl | acronym | contested | https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop
 FIFO | /ˈfaɪ foʊ/ | FYE foh | acronym | community-consensus | https://en.wikipedia.org/wiki/FIFO_(computing_and_electronics)
 LIFO | /ˈlaɪ foʊ/ | LIE foh | acronym | contested | https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
 LRU | /ˌɛl ɑːr ˈjuː/ | L R U | acronym | community-consensus | (no source)
@@ -863,7 +863,7 @@ Saga | /ˈsɑː ɡə/ | SAH guh | cs-term | community-consensus | https://micros
 HLC | /ˌeɪtʃ ɛl ˈsiː/ | H L C | acronym | community-consensus | https://cse.buffalo.edu/tech-reports/2014-04.pdf
 vector clock | /ˈvɛk tər klɒk/ | VEK ter clock | cs-term | community-consensus | https://en.wikipedia.org/wiki/Vector_clock
 Ed25519 | /ˌiː diː ˌtwɛnti faɪv faɪv ˌwʌn ˈnaɪn/ | E D twenty-five five one nine | cs-term | community-consensus | https://ed25519.cr.yp.to/
-ChaCha20 | /ˌtʃɑː tʃɑː ˈtwɛn ti/ | CHA cha twenty | cs-term | community-consensus | https://datatracker.ietf.org/doc/html/rfc7539
+ChaCha20 | /ˈtʃɑː tʃɑː ˌtwɛn ti/ | CHA cha twenty | cs-term | community-consensus | https://datatracker.ietf.org/doc/html/rfc7539
 Poly1305 | /ˈpɒl iː ˌθɜːrˌtiːn ˌoʊ ˈfaɪv/ | PA lee thirteen oh five | cs-term | community-consensus | (no source)
 X25519 | /ˌɛks ˌtwɛnti faɪv faɪv ˌwʌn ˈnaɪn/ | X twenty-five five one nine | cs-term | community-consensus | https://datatracker.ietf.org/doc/html/rfc7748
 OAEP | /ˌoʊ eɪ iː ˈpiː/ | O A E P | acronym | contested | https://datatracker.ietf.org/doc/html/rfc8017
@@ -1740,3 +1740,4 @@ Levenshtein | /ˈlɛvənˌʃtaɪn/ | LEV en shtine | person | contested | https:
 kurtosis | /kɚˈtoʊsɪs/ | ker TOH sis | cs-term | community-consensus | https://en.wiktionary.org/wiki/kurtosis
 Weibull | /ˈwaɪbʊl/ | WHY bull | person | contested | https://en.wikipedia.org/wiki/Weibull_distribution
 Tikhonov | /ˈtiːxənɔf/ | TEE khuh nawf | person | contested | https://en.wikipedia.org/wiki/Andrey_Tikhonov_(mathematician)
+mythos | /ˈmɪθɑs/ | MITH oss | cs-term | community-consensus | https://www.merriam-webster.com/dictionary/mythos

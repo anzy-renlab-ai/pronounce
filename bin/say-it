@@ -11,7 +11,7 @@
 # text. Respelling rides the TTS's built-in letter-to-sound rules.
 set -e
 
-VERSION="0.6.6"
+VERSION="1.0.0"
 VOICE="Samantha"
 TIMES=3
 RATE=130
@@ -150,8 +150,10 @@ ${C_BOLD}Subcommands:${C_RESET}
   say-it cheatsheet              print the full command cheatsheet
   say-it repl   (or -i)          interactive prompt — type words to hear them
   say-it stats                   print dictionary statistics
+  say-it show <word>             open the word's page in your browser
+  say-it serve [port]            serve the local docs/ site (default 8787)
   say-it config                  print resolved paths / version
-  say-it update                  pull the latest dict and CLI from upstream
+  say-it update                  refresh the dictionary (add --full to reinstall the CLI)
   say-it -l                      list every voice the backend supports
   say-it -V                      print the version
   say-it -h                      this help
@@ -187,17 +189,40 @@ CACHE_DIR="${SAY_IT_CACHE_DIR:-$HOME/.cache/say-it}"
 case "${1:-}" in
   update)
     UPSTREAM="${SAY_IT_UPSTREAM:-https://github.com/anzy-renlab-ai/pronounce.git}"
-    TMP_DIR="$(mktemp -d -t say-it-update.XXXXXX)"
-    trap 'rm -rf "$TMP_DIR"' EXIT
-    echo "${C_DIM}Cloning $UPSTREAM …${C_RESET}"
-    if ! git clone --depth=1 "$UPSTREAM" "$TMP_DIR/repo" >/dev/null 2>&1; then
-      echo "say-it update: git clone failed." >&2; exit 5
+    if [[ "${2:-}" == "--full" ]]; then
+      # Full update: clone + re-run the installer (refreshes CLI, dict, and site).
+      command -v git >/dev/null 2>&1 || { echo "say-it update --full: needs git." >&2; exit 5; }
+      TMP_DIR="$(mktemp -d -t say-it-update.XXXXXX)"
+      trap 'rm -rf "$TMP_DIR"' EXIT
+      echo "${C_DIM}Cloning $UPSTREAM …${C_RESET}"
+      if ! git clone --depth=1 "$UPSTREAM" "$TMP_DIR/repo" >/dev/null 2>&1; then
+        echo "say-it update: git clone failed." >&2; exit 5
+      fi
+      echo "${C_DIM}Running installer …${C_RESET}"
+      if ! (cd "$TMP_DIR/repo" && ./install.sh); then
+        echo "say-it update: installer failed." >&2; exit 5
+      fi
+      echo "${C_GREEN}say-it: updated (full).${C_RESET}"
+      exit 0
     fi
-    echo "${C_DIM}Running installer …${C_RESET}"
-    if ! (cd "$TMP_DIR/repo" && ./install.sh); then
-      echo "say-it update: installer failed." >&2; exit 5
+    # Fast path (default): refresh just the dictionary TSV — no git, no reinstall.
+    [[ -z "$DICT" ]] && { echo "say-it: dictionary not found; try 'say-it update --full'." >&2; exit 4; }
+    [[ -w "$DICT" ]] || { echo "say-it update: $DICT is read-only; try 'say-it update --full'." >&2; exit 5; }
+    DICT_URL="${SAY_IT_DICT_URL:-https://raw.githubusercontent.com/anzy-renlab-ai/pronounce/main/data/pronunciations.tsv}"
+    if command -v curl >/dev/null 2>&1; then fetch=(curl -fsSL)
+    elif command -v wget >/dev/null 2>&1; then fetch=(wget -qO-)
+    else echo "say-it update: needs curl or wget (or use 'say-it update --full')." >&2; exit 5; fi
+    tmp_tsv="$(mktemp -t say-it-dict.XXXXXX)"
+    trap 'rm -f "$tmp_tsv"' EXIT
+    echo "${C_DIM}Fetching latest dictionary …${C_RESET}"
+    if ! "${fetch[@]}" "$DICT_URL" > "$tmp_tsv" || [[ ! -s "$tmp_tsv" ]] || ! grep -q $'\t' "$tmp_tsv"; then
+      echo "say-it update: download failed or file looks wrong." >&2; exit 5
     fi
-    echo "${C_GREEN}say-it: updated.${C_RESET}"
+    old_n="$(awk -F'\t' '!/^#/ && NF>=3 && $1!="" && $1!="word"' "$DICT" 2>/dev/null | wc -l | tr -d ' ')"
+    new_n="$(awk -F'\t' '!/^#/ && NF>=3 && $1!="" && $1!="word"' "$tmp_tsv" | wc -l | tr -d ' ')"
+    cp "$tmp_tsv" "$DICT"
+    echo "${C_GREEN}say-it: dictionary updated — ${old_n:-?} → ${new_n} entries.${C_RESET}"
+    echo "${C_DIM}(CLI unchanged; run 'say-it update --full' to update the CLI too.)${C_RESET}"
     exit 0
     ;;
   list)
@@ -706,9 +731,9 @@ EOF
     echo "${C_BOLD}🔊 say-it quiz${C_RESET} — listen and type the respelling. ctrl-C to quit."
     # Load the whole dictionary once instead of scanning + shuffling the file
     # every round (bash 3.2: parallel indexed arrays, no assoc arrays).
-    QWORDS=(); QRESPS=()
-    while IFS=$'\t' read -r _w _r; do QWORDS+=("$_w"); QRESPS+=("$_r"); done \
-      < <(awk -F'\t' '!/^#/ && NF>=3 && $1 != "" && $1 != "word" { print $1 "\t" $3 }' "$DICT")
+    QWORDS=(); QRESPS=(); QALTS=()
+    while IFS=$'\t' read -r _w _r _a; do QWORDS+=("$_w"); QRESPS+=("$_r"); QALTS+=("$_a"); done \
+      < <(awk -F'\t' '!/^#/ && NF>=3 && $1 != "" && $1 != "word" { print $1 "\t" $3 "\t" $5 }' "$DICT")
     n_quiz=${#QWORDS[@]}
     [[ $n_quiz -eq 0 ]] && { echo "say-it quiz: dictionary is empty" >&2; exit 4; }
     score=0; rounds=0
@@ -717,6 +742,7 @@ EOF
       idx=$(( RANDOM % n_quiz ))
       word="${QWORDS[$idx]}"
       resp="${QRESPS[$idx]}"
+      alt="${QALTS[$idx]}"
       echo ""
       echo "${C_DIM}#$rounds — ${C_RESET}${C_CYAN}plays in 3, 2, 1…${C_RESET}"
       sleep 0.7
@@ -727,7 +753,17 @@ EOF
       lower_word=$(echo "$word" | tr '[:upper:]' '[:lower:]')
       lower_guess=$(echo "$guess" | tr '[:upper:]' '[:lower:]')
       lower_resp=$(echo "$resp" | tr '[:upper:]' '[:lower:]')
-      if [[ "$lower_guess" == "$lower_word" ]] || [[ "$lower_guess" == "$lower_resp" ]]; then
+      correct=0
+      [[ "$lower_guess" == "$lower_word" || "$lower_guess" == "$lower_resp" ]] && correct=1
+      if [[ $correct -eq 0 && -n "$alt" ]]; then
+        # alt-respellings (col 5) are pipe-separated — accept any of them for contested words
+        oldifs="$IFS"; IFS='|'
+        for a in $alt; do
+          [[ -n "$a" && "$lower_guess" == "$(echo "$a" | tr '[:upper:]' '[:lower:]')" ]] && correct=1
+        done
+        IFS="$oldifs"
+      fi
+      if [[ $correct -eq 1 ]]; then
         score=$((score+1))
         echo "  ${C_GREEN}✓ correct — $word (\"$resp\")${C_RESET}  score: ${C_BOLD}$score/$rounds${C_RESET}"
       else

@@ -11,5 +11,5 @@
   "notes": "Cross-platform Rust file-watcher that runs a command on file changes (alternative to entr/nodemon). Name = \"watch\" + \"exec\" (execute). The \"exec\" suffix follows dev-tooling convention (cf. the exec syscall / shell builtin): \"eg-ZEK\", not \"ex-eck\". STRESS: WOTCH-eg-zek (primary on first syllable, secondary on -ZEK). No official creator pronunciation FAQ exists, but the compound is unambiguous.",
   "audio_url": "https://pronounce.renlab.ai/audio/watchexec.mp3",
   "url": "https://pronounce.renlab.ai/word/watchexec",
-  "date_modified": "2026-06-19"
+  "date_modified": "2026-06-24"
 }

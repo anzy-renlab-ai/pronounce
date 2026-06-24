@@ -1,15 +1,15 @@
 {
   "word": "Anthropic",
-  "ipa": "/ˌænθrəˈpɪk/",
-  "respelling_us": "anth row pick",
+  "ipa": "/ænˈθrɑpɪk/",
+  "respelling_us": "an THROP ik",
   "alt_ipa": [],
   "alt_respelling_us": [],
-  "source_url": "https://www.anthropic.com/",
-  "source_label": "Anthropic",
+  "source_url": "https://dictionary.cambridge.org/pronunciation/english/anthropic",
+  "source_label": "Cambridge Dictionary",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "\"an-THROW-pick\" — heard from Anthropic communications.",
+  "notes": "Standard/now-famous reading is \"an-THROP-ik\" (stress on second syllable THROP), identical to the adjective \"anthropic\"; matches the company's own usage. The \"an-THROW-pick\" reading is a common mistake.",
   "audio_url": "https://pronounce.renlab.ai/audio/anthropic.mp3",
   "url": "https://pronounce.renlab.ai/word/anthropic",
-  "date_modified": "2026-06-19"
+  "date_modified": "2026-06-24"
 }

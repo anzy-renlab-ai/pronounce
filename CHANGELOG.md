@@ -1,5 +1,24 @@
 # Changelog
 
+## v2.16.0 — 2026-06-24
+
+The **完善 pass** — nine correctness + polish fixes across the CLI, site, and extension, reviewed three ways (Claude + Codex + Kiro). **The CLI and VS Code extension graduate to `1.0.0`** — the public flag surface is stable; the repo release line continues at v2.x.
+
+### Fixed
+- **C++ / C# audio 404 (slug collision).** `tools/make-audio-all.py` and `make-og-all.py` collapsed runs of punctuation (`C++` → `c-`), colliding with `C#` and mismatching the canonical `/word/c--` page — so the C++ page pointed at an mp3 that didn't exist. Unified every slug producer on per-char replacement; regenerated the affected audio/OG.
+- **Chinese pages leaked English into search snippets.** The zh `<meta>` / `og` / `twitter` descriptions appended the English `notes` field (cut off mid-sentence) — exactly what Google/WeChat surface. Now clean Chinese-only. Also dropped a stray empty `<p></p>`.
+- **Entry count disagreed across surfaces** (1738 / 1702 / 993 in README, the badge, and word-page CTAs). Single-sourced to the live count (**1,739**); README stragglers fixed.
+- **`/stats` confidence bars were dead `#` links** and the page had no contributors block despite the "community-maintained" pitch. Bars are now plain-labelled; a contributors list (from `git shortlog`, bots excluded) was added.
+
+### Changed
+- **zh per-word pages reach audio parity with English** — the primary reading plays 3× (was a single play), alternate readings are now playable (Web Speech), and IPA has a copy button.
+- **Honest sourcing.** README no longer claims "all sourced" — it's **1,128 of 1,739** entries with a citable source; the rest are confidence-tagged with *no fabricated URLs*. `lint-dict.sh` now prints source coverage.
+- **`say-it update` is now a fast dictionary refresh** — curls the latest TSV (no git, no reinstall); `--full` does the old clone + reinstall. README "What's coming" no longer lists already-shipped Windows/Linux backends.
+- **Embed widget** honors `?theme=light|auto` and shows IPA; every word page now offers a copy-paste `<iframe>` snippet (the ~1,739 embed widgets were previously undiscoverable).
+- **CLI:** `quiz` accepts alternate respellings as correct; `--help` documents the `show` and `serve` subcommands.
+- CLI `VERSION` → **1.0.0**; VS Code extension → **1.0.0**; the extension's `pronounce.rate` fallback default corrected 200 → 130 (lockstep with `package.json`).
+- **CI:** the `build-site` workflow gets a `concurrency` guard + rebase-retry push to end the auto-build race.
+
 ## v2.15.0 — 2026-06-19
 
 ### Added

@@ -1733,6 +1733,18 @@ $prev_next_html
       <a class="share-btn share-reddit" href="https://www.reddit.com/submit?url=$SITE_URL/word/$slug&title=$(printf '%s' "How to pronounce $word (with source)" | python3 -c 'import sys, urllib.parse; print(urllib.parse.quote(sys.stdin.read()))')" target="_blank" rel="noopener">Reddit</a>
     </section>
 
+    <section class="related embed-section" style="margin-top: 36px;">
+      <h2>Embed this player</h2>
+      <p style="color: var(--muted-strong); font-size: 14.5px;">Drop this mini-player into a blog post, doc, or README. Add <code>?theme=light</code> or <code>?theme=auto</code> to match your page.</p>
+      <div style="margin: 14px 0;">
+        <iframe src="$SITE_URL/embed/$slug" width="380" height="74" style="border:0;border-radius:12px;max-width:100%;" loading="lazy" title="Pronounce $word_esc"></iframe>
+      </div>
+      <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+        <input id="embed-code" readonly value="&lt;iframe src=&quot;$SITE_URL/embed/$slug&quot; width=&quot;380&quot; height=&quot;74&quot; style=&quot;border:0;border-radius:12px&quot; loading=&quot;lazy&quot; title=&quot;Pronounce $word_esc&quot;&gt;&lt;/iframe&gt;" style="flex:1; min-width:240px; padding:9px 12px; font-family:ui-monospace,monospace; font-size:12.5px; border:1px solid var(--border,#333); border-radius:8px; background:var(--bg-elev,#1c1c20); color:var(--fg,#eee);">
+        <button class="btn" onclick="var i=document.getElementById('embed-code'); i.select(); copyToClipboard(i.value,'Embed code copied')">Copy</button>
+      </div>
+    </section>
+
     <section class="related" style="margin-top: 36px;">
       <h2>About this entry</h2>
       <p style="color: var(--muted-strong); font-size: 14.5px;">
@@ -2376,6 +2388,21 @@ STATS_JS="$(awk -F'\t' '
   }
 ' "$DICT")"
 
+# Contributors from git history (bots excluded) — pure awk (bash 3.2 + BWK awk safe;
+# a bash `case` inside $(...) breaks parsing on macOS bash 3.2, so we avoid it).
+CONTRIBUTORS_JS="$(git -C "$REPO_ROOT" shortlog -sne HEAD 2>/dev/null | awk '
+  {
+    n=$1; line=$0
+    sub(/^[[:space:]]*[0-9]+[[:space:]]+/, "", line)
+    em=line; sub(/.*</,"",em); sub(/>.*/,"",em)
+    nm=line; sub(/[[:space:]]*<.*/,"",nm)
+    low=tolower(nm" "em)
+    if (low ~ /bot/ || low ~ /github-actions/) next
+    gsub(/\\/,"\\\\",nm); gsub(/"/,"\\\"",nm)
+    printf "%s{\"name\":\"%s\",\"commits\":%d}", sep, nm, n; sep=","
+  }
+')"
+
 cat > "$DOCS/stats.html" <<EOF
 <!DOCTYPE html>
 <html lang="en">
@@ -2426,6 +2453,9 @@ cat > "$DOCS/stats.html" <<EOF
     <div class="section-title">Recently added</div>
     <div class="recent-grid" id="recent-grid"></div>
 
+    <div class="section-title">Contributors</div>
+    <div class="contrib-list" id="contrib-list"></div>
+
     <div class="section-title">First letter distribution (A → Z)</div>
     <div class="alphabet" id="bars-letters"></div>
 
@@ -2441,6 +2471,7 @@ cat > "$DOCS/stats.html" <<EOF
 
   <script>
 $STATS_JS
+const CONTRIBUTORS = [$CONTRIBUTORS_JS];
 
 function init() {
   const bn = document.getElementById('big-numbers');
@@ -2458,7 +2489,7 @@ function init() {
     const items = Object.entries(data).sort((a, b) => b[1] - a[1]);
     el.innerHTML = items.map(([k, v]) => \`
       <div class="bar-row">
-        <div class="bar-label"><a href="\${target === 'bars-cats' ? '/category/' + k : '#'}">\${k}</a></div>
+        <div class="bar-label">\${target === 'bars-cats' ? \`<a href="/category/\${k}">\${k}</a>\` : k}</div>
         <div class="bar-track"><div class="bar-fill bar-\${color}" style="width: \${100 * v / max}%"></div></div>
         <div class="bar-value">\${v}</div>
       </div>\`).join('');
@@ -2474,6 +2505,14 @@ function init() {
         <span class="recent-word">\${w}</span>
         <span class="recent-cat">\${c}</span>
       </a>\`).join('');
+  }
+
+  // Contributors (from \`git shortlog\` at build, bots excluded)
+  const cl = document.getElementById('contrib-list');
+  if (cl) {
+    cl.innerHTML = CONTRIBUTORS.map(({name, commits}) => \`
+      <span style="display:inline-block;padding:6px 13px;margin:4px;border:1px solid var(--border,#333);border-radius:999px;font-size:14px;">\${name} <span style="color:var(--muted-strong,#888);">· \${commits}</span></span>\`).join('')
+      + \`<a style="display:inline-block;padding:6px 13px;margin:4px;border-radius:999px;font-size:14px;background:var(--accent,#ff6a3d);color:#fff;text-decoration:none;" href="https://github.com/${GH_REPO}/blob/main/CONTRIBUTING.md">+ be the next →</a>\`;
   }
 
   // A-Z grid
@@ -2561,21 +2600,25 @@ awk -F'\t' -v brand="$BRAND" -v site="$SITE_URL" -v outdir="$DOCS/embed" '
     word=$1; ipa=$2; resp=$3
     s = slug(word)
     fn = outdir "/" s ".html"
-    printf "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"utf-8\"><title>%s — pronounce</title><style>" \
-           "body{margin:0;font-family:-apple-system,BlinkMacSystemFont,\"Inter\",sans-serif;background:#18181b;color:#f6f6f7;display:flex;align-items:center;gap:16px;padding:16px 20px;font-size:16px;border-radius:12px}" \
+    printf "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>%s — pronounce</title><style>" \
+           ":root{--bg:#18181b;--fg:#f6f6f7;--resp:#7adfbb;--ipa:#9b9ba0;--attr:#9b9ba0}" \
+           "body.light{--bg:#ffffff;--fg:#18181b;--resp:#0a7d5a;--ipa:#555;--attr:#777}" \
+           "body{margin:0;font-family:-apple-system,BlinkMacSystemFont,\"Inter\",sans-serif;background:var(--bg);color:var(--fg);display:flex;align-items:center;gap:14px;padding:16px 20px;font-size:16px;border-radius:12px}" \
            ".play{background:#ff6a3d;color:#0e0e10;border:none;width:42px;height:42px;border-radius:50%%;cursor:pointer;font-size:14px;font-weight:bold;flex-shrink:0}" \
            ".play:hover{filter:brightness(1.1)}" \
            ".word{font-family:ui-monospace,Menlo,monospace;font-size:18px}" \
-           ".resp{color:#7adfbb;font-family:ui-monospace,monospace;margin-left:auto;font-size:14px}" \
-           ".attr{color:#9b9ba0;font-size:11px;text-decoration:none;margin-left:8px}" \
+           ".ipa{color:var(--ipa);font-family:ui-monospace,monospace;font-size:13px}" \
+           ".resp{color:var(--resp);font-family:ui-monospace,monospace;margin-left:auto;font-size:14px}" \
+           ".attr{color:var(--attr);font-size:11px;text-decoration:none;margin-left:8px}" \
            "</style></head><body>" \
            "<button class=\"play\" onclick=\"a.play()\" aria-label=\"Play\">▶</button>" \
            "<span class=\"word\">%s</span>" \
+           "<span class=\"ipa\">%s</span>" \
            "<span class=\"resp\">%s</span>" \
            "<a class=\"attr\" href=\"%s/word/%s\" target=\"_blank\">pronounce →</a>" \
            "<audio id=\"a\" src=\"%s/audio/%s.mp3\" preload=\"none\"></audio>" \
-           "<script>var a=document.getElementById(\"a\");</script>" \
-           "</body></html>\n", esc(word), esc(word), esc(resp), site, s, site, s > fn
+           "<script>var a=document.getElementById(\"a\");var t=new URLSearchParams(location.search).get(\"theme\");if(t==\"light\"||(t==\"auto\"&&matchMedia(\"(prefers-color-scheme: light)\").matches))document.body.classList.add(\"light\");</script>" \
+           "</body></html>\n", esc(word), esc(word), esc(ipa), esc(resp), site, s, site, s > fn
     close(fn); count++
   }
   END { print "Built " count " embed widgets." }
