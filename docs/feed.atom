@@ -4,174 +4,174 @@
   <link href="https://pronounce.renlab.ai/feed.atom" rel="self"/>
   <link href="https://pronounce.renlab.ai/"/>
   <id>https://pronounce.renlab.ai/</id>
-  <updated>2026-06-28T13:08:14Z</updated>
+  <updated>2026-06-28T13:20:32Z</updated>
   <subtitle>How engineers actually pronounce project / product / jargon names. Community-maintained.</subtitle>
   <entry>
     <title>mythos — MITH oss</title>
     <link href="https://pronounce.renlab.ai/word/mythos"/>
     <id>https://pronounce.renlab.ai/word/mythos</id>
-    <updated>2026-06-28T13:08:14Z</updated>
+    <updated>2026-06-28T13:20:32Z</updated>
     <summary>mythos is pronounced "MITH oss" (/ˈmɪθɑs/). GenAm "MITH-ahs" (Merriam-Webster primary). Greek-derived term for a culture's underlying narrative/belief system. One reading pinned per request.</summary>
   </entry>
   <entry>
     <title>I-JEPA — eye jep uh</title>
     <link href="https://pronounce.renlab.ai/word/i-jepa"/>
     <id>https://pronounce.renlab.ai/word/i-jepa</id>
-    <updated>2026-06-28T13:08:14Z</updated>
+    <updated>2026-06-28T13:20:32Z</updated>
     <summary>I-JEPA is pronounced "eye jep uh" (/ˌaɪ ˈdʒɛpə/). Meta's image self-supervised model (Image JEPA); the 'I' is the letter 'eye' /aɪ/ and JEPA is one word /ˈdʒɛpə/ rhyming with 'pepper', so 'eye-JEP-uh' — the way LeCun voices the suffix. Predicts in latent space, not pixels.</summary>
   </entry>
   <entry>
     <title>V-JEPA — vee jep uh</title>
     <link href="https://pronounce.renlab.ai/word/v-jepa"/>
     <id>https://pronounce.renlab.ai/word/v-jepa</id>
-    <updated>2026-06-28T13:08:14Z</updated>
+    <updated>2026-06-28T13:20:32Z</updated>
     <summary>V-JEPA is pronounced "vee jep uh" (/ˌviː ˈdʒɛpə/). Meta's video JEPA; 'V' (Video) is spelled 'vee' and JEPA is said as the word, giving 'vee-JEP-uh'. Not letter-by-letter.</summary>
   </entry>
   <entry>
     <title>V-JEPA 2 — vee jep uh two</title>
     <link href="https://pronounce.renlab.ai/word/v-jepa-2"/>
     <id>https://pronounce.renlab.ai/word/v-jepa-2</id>
-    <updated>2026-06-28T13:08:14Z</updated>
+    <updated>2026-06-28T13:20:32Z</updated>
     <summary>V-JEPA 2 is pronounced "vee jep uh two" (/ˌviː ˈdʒɛpə ˈtuː/). 2025 video world model, successor to V-JEPA; numeral read 'two' — 'vee-JEP-uh two'.</summary>
   </entry>
   <entry>
     <title>A-JEPA — ay jep uh</title>
     <link href="https://pronounce.renlab.ai/word/a-jepa"/>
     <id>https://pronounce.renlab.ai/word/a-jepa</id>
-    <updated>2026-06-28T13:08:14Z</updated>
+    <updated>2026-06-28T13:20:32Z</updated>
     <summary>A-JEPA is pronounced "ay jep uh" (/ˌeɪ ˈdʒɛpə/). Audio/spectrogram JEPA built on I-JEPA; the 'A' (Audio) is the letter-name 'ay' /eɪ/, NOT the article 'uh' — 'ay-JEP-uh'.</summary>
   </entry>
   <entry>
     <title>MC-JEPA — em see jep uh</title>
     <link href="https://pronounce.renlab.ai/word/mc-jepa"/>
     <id>https://pronounce.renlab.ai/word/mc-jepa</id>
-    <updated>2026-06-28T13:08:14Z</updated>
+    <updated>2026-06-28T13:20:32Z</updated>
     <summary>MC-JEPA is pronounced "em see jep uh" (/ˌɛm ˌsiː ˈdʒɛpə/). Motion-and-Content JEPA; the initials have no vowel so they are letter-spelled 'em-see' ahead of the word JEPA — 'em-see-JEP-uh'.</summary>
   </entry>
   <entry>
     <title>Point-JEPA — point jep uh</title>
     <link href="https://pronounce.renlab.ai/word/point-jepa"/>
     <id>https://pronounce.renlab.ai/word/point-jepa</id>
-    <updated>2026-06-28T13:08:14Z</updated>
+    <updated>2026-06-28T13:20:32Z</updated>
     <summary>Point-JEPA is pronounced "point jep uh" (/ˌpɔɪnt ˈdʒɛpə/). JEPA for point clouds; ordinary word 'point' + JEPA — 'point-JEP-uh'.</summary>
   </entry>
   <entry>
     <title>DINOv2 — dee noh vee two</title>
     <link href="https://pronounce.renlab.ai/word/dinov2"/>
     <id>https://pronounce.renlab.ai/word/dinov2</id>
-    <updated>2026-06-28T13:08:14Z</updated>
+    <updated>2026-06-28T13:20:32Z</updated>
     <summary>DINOv2 is pronounced "dee noh vee two" (/ˈdiːnoʊ viː ˈtuː/). Meta/FAIR self-supervised ViT foundation model, DINO scaled to v2; said 'DEE-noh vee-two' (DINO = self-DIstillation with NO labels). A minority says 'DYE-noh'.</summary>
   </entry>
   <entry>
     <title>DINOv3 — dee noh vee three</title>
     <link href="https://pronounce.renlab.ai/word/dinov3"/>
     <id>https://pronounce.renlab.ai/word/dinov3</id>
-    <updated>2026-06-28T13:08:14Z</updated>
+    <updated>2026-06-28T13:20:32Z</updated>
     <summary>DINOv3 is pronounced "dee noh vee three" (/ˈdiːnoʊ viː ˈθriː/). Meta's 2025 ~7B-param self-supervised vision backbone, third in the DINO line; 'DEE-noh vee-three' is most common, but the dinosaur-pun reading 'DYE-noh' is genuinely widespread, so the vowel is unsettled.</summary>
   </entry>
   <entry>
     <title>iBOT — eye bot</title>
     <link href="https://pronounce.renlab.ai/word/ibot"/>
     <id>https://pronounce.renlab.ai/word/ibot</id>
-    <updated>2026-06-28T13:08:14Z</updated>
+    <updated>2026-06-28T13:20:32Z</updated>
     <summary>iBOT is pronounced "eye bot" (/ˈaɪbɑːt/). ByteDance image-BERT pretraining with an online tokenizer (i = image, lowercase like iPhone); the repo's robot mascot signals 'EYE-bot'.</summary>
   </entry>
   <entry>
     <title>BEiT — beet</title>
     <link href="https://pronounce.renlab.ai/word/beit"/>
     <id>https://pronounce.renlab.ai/word/beit</id>
-    <updated>2026-06-28T13:08:14Z</updated>
+    <updated>2026-06-28T13:20:32Z</updated>
     <summary>BEiT is pronounced "beet" (/biːt/). Microsoft masked-image-modeling pretraining (BERT for image Transformers, i = image); no official reading — split between 'beet' (most common, one syllable) and 'bait'.</summary>
   </entry>
   <entry>
     <title>DINO-WM — dee noh W M</title>
     <link href="https://pronounce.renlab.ai/word/dino-wm"/>
     <id>https://pronounce.renlab.ai/word/dino-wm</id>
-    <updated>2026-06-28T13:08:14Z</updated>
+    <updated>2026-06-28T13:20:32Z</updated>
     <summary>DINO-WM is pronounced "dee noh W M" (/ˈdiːnoʊ ˌdʌbəljuː ˈɛm/). NYU/Meta-FAIR latent world model built on frozen DINOv2 patch features for zero-shot planning; said 'DEE-noh W-M', often expanded to 'dino world model'.</summary>
   </entry>
   <entry>
     <title>BYOL — B Y O L</title>
     <link href="https://pronounce.renlab.ai/word/byol"/>
     <id>https://pronounce.renlab.ai/word/byol</id>
-    <updated>2026-06-28T13:08:14Z</updated>
+    <updated>2026-06-28T13:20:32Z</updated>
     <summary>BYOL is pronounced "B Y O L" (/ˌbiː waɪ oʊ ˈɛl/). Negative-pair-free SSL that bootstraps a target network from an online network (DeepMind 2020); the authors fixed no pronunciation, so it is both spelled out 'B-Y-O-L' and said as a word 'bee-OHL' — the follow-up BYOL-A audio paper even puns 'pronounced viola'.</summary>
   </entry>
   <entry>
     <title>SimSiam — sim sigh am</title>
     <link href="https://pronounce.renlab.ai/word/simsiam"/>
     <id>https://pronounce.renlab.ai/word/simsiam</id>
-    <updated>2026-06-28T13:08:14Z</updated>
+    <updated>2026-06-28T13:20:32Z</updated>
     <summary>SimSiam is pronounced "sim sigh am" (/sɪmˈsaɪæm/). Negative-free Siamese SSL that avoids collapse via a stop-gradient; portmanteau of 'Simple Siamese', so the tail is read like 'Siam' — 'sim-SY-am'.</summary>
   </entry>
   <entry>
     <title>VICReg — vik reg</title>
     <link href="https://pronounce.renlab.ai/word/vicreg"/>
     <id>https://pronounce.renlab.ai/word/vicreg</id>
-    <updated>2026-06-28T13:08:14Z</updated>
+    <updated>2026-06-28T13:20:32Z</updated>
     <summary>VICReg is pronounced "vik reg" (/ˈvɪkrɛɡ/). SSL that prevents collapse with separate Variance-Invariance-Covariance Regularization terms; said as the word 'VIK-reg' (hard g from 'regularization'), not spelled out.</summary>
   </entry>
   <entry>
     <title>VICRegL — vik reg el</title>
     <link href="https://pronounce.renlab.ai/word/vicregl"/>
     <id>https://pronounce.renlab.ai/word/vicregl</id>
-    <updated>2026-06-28T13:08:14Z</updated>
+    <updated>2026-06-28T13:20:32Z</updated>
     <summary>VICRegL is pronounced "vik reg el" (/ˈvɪkrɛɡ ˌɛl/). VICReg extended to learn local/dense visual features for detection and segmentation; 'VIK-reg' followed by a spelled-out 'L' (for Local).</summary>
   </entry>
   <entry>
     <title>Barlow Twins — bar loh twinz</title>
     <link href="https://pronounce.renlab.ai/word/barlow-twins"/>
     <id>https://pronounce.renlab.ai/word/barlow-twins</id>
-    <updated>2026-06-28T13:08:14Z</updated>
+    <updated>2026-06-28T13:20:32Z</updated>
     <summary>Barlow Twins is pronounced "bar loh twinz" (/ˈbɑːrloʊ ˈtwɪnz/). SSL whose loss drives the cross-correlation matrix of two identical network 'twins' toward the identity; plain English, named for neuroscientist Horace Barlow's redundancy-reduction principle — 'BAR-loh twinz'.</summary>
   </entry>
   <entry>
     <title>MoCo — moh koh</title>
     <link href="https://pronounce.renlab.ai/word/moco"/>
     <id>https://pronounce.renlab.ai/word/moco</id>
-    <updated>2026-06-28T13:08:14Z</updated>
+    <updated>2026-06-28T13:20:32Z</updated>
     <summary>MoCo is pronounced "moh koh" (/ˈmoʊkoʊ/). FAIR contrastive SSL with a momentum-updated encoder and a queue of negatives; a blend of MOmentum + COntrast, said as a word — 'MOH-koh'.</summary>
   </entry>
   <entry>
     <title>SimCLR — sim clear</title>
     <link href="https://pronounce.renlab.ai/word/simclr"/>
     <id>https://pronounce.renlab.ai/word/simclr</id>
-    <updated>2026-06-28T13:08:14Z</updated>
+    <updated>2026-06-28T13:20:32Z</updated>
     <summary>SimCLR is pronounced "sim clear" (/sɪmˈklɪr/). Google/Hinton contrastive SSL framework; 'Sim' (Simple) + 'CLR' (Contrastive Learning of Representations) puns on 'clear', so 'sim-CLEAR' dominates; a minority spells it 'sim-C-L-R'.</summary>
   </entry>
   <entry>
     <title>MAE — may</title>
     <link href="https://pronounce.renlab.ai/word/mae"/>
     <id>https://pronounce.renlab.ai/word/mae</id>
-    <updated>2026-06-28T13:08:14Z</updated>
+    <updated>2026-06-28T13:20:32Z</updated>
     <summary>MAE is pronounced "may" (/meɪ/). FAIR masked-image SSL (Masked AutoEncoder) that reconstructs pixels — the model JEPA argues against. Genuinely unsettled: many say the word 'may', others spell 'em-ay-EE'; no author statement, and it collides with 'mean absolute error'.</summary>
   </entry>
   <entry>
     <title>data2vec — day tuh too vek</title>
     <link href="https://pronounce.renlab.ai/word/data2vec"/>
     <id>https://pronounce.renlab.ai/word/data2vec</id>
-    <updated>2026-06-28T13:08:14Z</updated>
+    <updated>2026-06-28T13:20:32Z</updated>
     <summary>data2vec is pronounced "day tuh too vek" (/ˈdeɪtə tuː vɛk/). Meta AI cross-modal SSL that predicts its own latent representations (closest non-JEPA cousin in spirit); inherits the word2vec/wav2vec lineage, so '2' is 'to' and 'vec' is 'vek' — 'DAY-tuh-too-vek'.</summary>
   </entry>
   <entry>
     <title>IRIS — eye ris</title>
     <link href="https://pronounce.renlab.ai/word/iris"/>
     <id>https://pronounce.renlab.ai/word/iris</id>
-    <updated>2026-06-28T13:08:14Z</updated>
+    <updated>2026-06-28T13:20:32Z</updated>
     <summary>IRIS is pronounced "eye ris" (/ˈaɪrɪs/). Sample-efficient Atari agent that learns inside a discrete-autoencoder + GPT-like Transformer world model; styled as the real word 'iris' (the official repo is lowercase) — 'EYE-ris', not lettered out.</summary>
   </entry>
   <entry>
     <title>TWM — T W M</title>
     <link href="https://pronounce.renlab.ai/word/twm"/>
     <id>https://pronounce.renlab.ai/word/twm</id>
-    <updated>2026-06-28T13:08:14Z</updated>
+    <updated>2026-06-28T13:20:32Z</updated>
     <summary>TWM is pronounced "T W M" (/ˌtiː ˌdʌbəljuː ˈɛm/). A Transformer-XL-based world model for data-efficient Atari RL; the initials have no vowel to form a word, so they are spelled out letter by letter — 'T-W-M'.</summary>
   </entry>
   <entry>
     <title>Genie 2 — jee nee two</title>
     <link href="https://pronounce.renlab.ai/word/genie-2"/>
     <id>https://pronounce.renlab.ai/word/genie-2</id>
-    <updated>2026-06-28T13:08:14Z</updated>
+    <updated>2026-06-28T13:20:32Z</updated>
     <summary>Genie 2 is pronounced "jee nee two" (/ˈdʒiːni ˈtuː/). DeepMind's large-scale foundation world model that generates action-controllable, playable 3D environments from a single image; 'Genie' (from 'Generative Interactive Environments') is said like the common word genie, '2' as 'two' — 'JEE-nee two'.</summary>
   </entry>
 </feed>
