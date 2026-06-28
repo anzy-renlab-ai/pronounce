@@ -11,5 +11,5 @@
   "notes": "RMSNorm = Root Mean Square (Layer) Normalization, the normalization used in Llama/Mistral and most modern LLMs. Spoken as a compound: the \"RMS\" part is spelled out letter-by-letter (ar-em-ess), then \"norm\" said as the word. STRESS on NORM: \"ar-em-ess NORM\". No source documents an explicit creator pronunciation, but the letter-spelled-acronym + \"norm\" reading is universal in talks and writeups, hence community-consensus.",
   "audio_url": "https://pronounce.renlab.ai/audio/rmsnorm.mp3",
   "url": "https://pronounce.renlab.ai/word/rmsnorm",
-  "date_modified": "2026-06-24"
+  "date_modified": "2026-06-28"
 }

@@ -1,0 +1,15 @@
+{
+  "word": "Genie 2",
+  "ipa": "/ˈdʒiːni ˈtuː/",
+  "respelling_us": "jee nee two",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://deepmind.google/blog/genie-2-a-large-scale-foundation-world-model/",
+  "source_label": "Google DeepMind — Genie 2 blog (foundation world model announcement)",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "DeepMind's large-scale foundation world model that generates action-controllable, playable 3D environments from a single image; 'Genie' (from 'Generative Interactive Environments') is said like the common word genie, '2' as 'two' — 'JEE-nee two'.",
+  "audio_url": "https://pronounce.renlab.ai/audio/genie-2.mp3",
+  "url": "https://pronounce.renlab.ai/word/genie-2",
+  "date_modified": "2026-06-28"
+}

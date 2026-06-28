@@ -1,0 +1,15 @@
+{
+  "word": "DINOv3",
+  "ipa": "/ˈdiːnoʊ viː ˈθriː/",
+  "respelling_us": "dee noh vee three",
+  "alt_ipa": ["/ˈdaɪnoʊ viː ˈθriː/"],
+  "alt_respelling_us": ["dye noh vee three"],
+  "source_url": "https://ai.meta.com/blog/dinov3-self-supervised-vision-model/",
+  "source_label": "Meta AI DINOv3 announcement (arXiv 2508.10104)",
+  "category": "product",
+  "confidence": "contested",
+  "notes": "Meta's 2025 ~7B-param self-supervised vision backbone, third in the DINO line; 'DEE-noh vee-three' is most common, but the dinosaur-pun reading 'DYE-noh' is genuinely widespread, so the vowel is unsettled.",
+  "audio_url": "https://pronounce.renlab.ai/audio/dinov3.mp3",
+  "url": "https://pronounce.renlab.ai/word/dinov3",
+  "date_modified": "2026-06-28"
+}

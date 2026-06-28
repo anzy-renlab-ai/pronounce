@@ -1,0 +1,15 @@
+{
+  "word": "BEiT",
+  "ipa": "/biːt/",
+  "respelling_us": "beet",
+  "alt_ipa": ["/beɪt/"],
+  "alt_respelling_us": ["bait"],
+  "source_url": "https://arxiv.org/abs/2106.08254",
+  "source_label": "BEiT paper (arXiv 2106.08254)",
+  "category": "product",
+  "confidence": "contested",
+  "notes": "Microsoft masked-image-modeling pretraining (BERT for image Transformers, i = image); no official reading — split between 'beet' (most common, one syllable) and 'bait'.",
+  "audio_url": "https://pronounce.renlab.ai/audio/beit.mp3",
+  "url": "https://pronounce.renlab.ai/word/beit",
+  "date_modified": "2026-06-28"
+}

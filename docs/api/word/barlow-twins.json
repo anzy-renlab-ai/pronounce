@@ -1,0 +1,15 @@
+{
+  "word": "Barlow Twins",
+  "ipa": "/ˈbɑːrloʊ ˈtwɪnz/",
+  "respelling_us": "bar loh twinz",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2103.03230",
+  "source_label": "Zbontar, Jing, Misra, LeCun & Deny, 'Barlow Twins' (arXiv 2103.03230)",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "SSL whose loss drives the cross-correlation matrix of two identical network 'twins' toward the identity; plain English, named for neuroscientist Horace Barlow's redundancy-reduction principle — 'BAR-loh twinz'.",
+  "audio_url": "https://pronounce.renlab.ai/audio/barlow-twins.mp3",
+  "url": "https://pronounce.renlab.ai/word/barlow-twins",
+  "date_modified": "2026-06-28"
+}

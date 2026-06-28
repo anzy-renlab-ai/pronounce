@@ -11,5 +11,5 @@
   "notes": "Zero-copy data serialization + RPC framework by Kenton Varda, former maintainer of Google's Protocol Buffers. Per Varda himself, the name originally meant 'Capabilities and Protobufs' — NOT a Cap'n Crunch pun; he said the cereal reference 'never occurred to me,' and the 'cerealization protocol' pun was pointed out by someone else and only then added to the logo. Regardless of origin, 'Cap'n' is the ordinary contraction of 'captain', so it's said 'KAP-uhn PROH-toh' — same first word as the cereal mascot Cap'n Crunch — stress on KAP and PROH. Newcomers misread the apostrophe and say the full 'CAPtain Proto', or spell the tool name 'capnp' out as letters C-A-P-N-P. The schema file extension and compiler are 'capnp' ('cap-en-pee').",
   "audio_url": "https://pronounce.renlab.ai/audio/cap-n-proto.mp3",
   "url": "https://pronounce.renlab.ai/word/cap-n-proto",
-  "date_modified": "2026-06-24"
+  "date_modified": "2026-06-28"
 }

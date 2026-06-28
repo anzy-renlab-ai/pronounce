@@ -1,0 +1,15 @@
+{
+  "word": "SimSiam",
+  "ipa": "/sɪmˈsaɪæm/",
+  "respelling_us": "sim sigh am",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2011.10566",
+  "source_label": "Chen & He, 'Exploring Simple Siamese Representation Learning', FAIR (arXiv 2011.10566)",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Negative-free Siamese SSL that avoids collapse via a stop-gradient; portmanteau of 'Simple Siamese', so the tail is read like 'Siam' — 'sim-SY-am'.",
+  "audio_url": "https://pronounce.renlab.ai/audio/simsiam.mp3",
+  "url": "https://pronounce.renlab.ai/word/simsiam",
+  "date_modified": "2026-06-28"
+}

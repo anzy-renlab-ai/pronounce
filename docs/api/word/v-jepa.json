@@ -1,0 +1,15 @@
+{
+  "word": "V-JEPA",
+  "ipa": "/ˌviː ˈdʒɛpə/",
+  "respelling_us": "vee jep uh",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://ai.meta.com/blog/v-jepa-yann-lecun-ai-model-video-joint-embedding-predictive-architecture/",
+  "source_label": "Meta AI blog, 'V-JEPA' (Bardes et al., arXiv 2404.08471)",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Meta's video JEPA; 'V' (Video) is spelled 'vee' and JEPA is said as the word, giving 'vee-JEP-uh'. Not letter-by-letter.",
+  "audio_url": "https://pronounce.renlab.ai/audio/v-jepa.mp3",
+  "url": "https://pronounce.renlab.ai/word/v-jepa",
+  "date_modified": "2026-06-28"
+}

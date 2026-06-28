@@ -1,0 +1,15 @@
+{
+  "word": "A-JEPA",
+  "ipa": "/ˌeɪ ˈdʒɛpə/",
+  "respelling_us": "ay jep uh",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2311.15830",
+  "source_label": "Fei et al., 'A-JEPA: Joint-Embedding Predictive Architecture Can Listen' (arXiv 2311.15830)",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Audio/spectrogram JEPA built on I-JEPA; the 'A' (Audio) is the letter-name 'ay' /eɪ/, NOT the article 'uh' — 'ay-JEP-uh'.",
+  "audio_url": "https://pronounce.renlab.ai/audio/a-jepa.mp3",
+  "url": "https://pronounce.renlab.ai/word/a-jepa",
+  "date_modified": "2026-06-28"
+}

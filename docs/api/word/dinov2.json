@@ -1,0 +1,15 @@
+{
+  "word": "DINOv2",
+  "ipa": "/ˈdiːnoʊ viː ˈtuː/",
+  "respelling_us": "dee noh vee two",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2304.07193",
+  "source_label": "DINOv2 paper (arXiv 2304.07193)",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Meta/FAIR self-supervised ViT foundation model, DINO scaled to v2; said 'DEE-noh vee-two' (DINO = self-DIstillation with NO labels). A minority says 'DYE-noh'.",
+  "audio_url": "https://pronounce.renlab.ai/audio/dinov2.mp3",
+  "url": "https://pronounce.renlab.ai/word/dinov2",
+  "date_modified": "2026-06-28"
+}

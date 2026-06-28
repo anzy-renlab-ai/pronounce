@@ -1,0 +1,15 @@
+{
+  "word": "VICRegL",
+  "ipa": "/ˈvɪkrɛɡ ˌɛl/",
+  "respelling_us": "vik reg el",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2210.01571",
+  "source_label": "Bardes, Ponce & LeCun, 'VICRegL' (arXiv 2210.01571)",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "VICReg extended to learn local/dense visual features for detection and segmentation; 'VIK-reg' followed by a spelled-out 'L' (for Local).",
+  "audio_url": "https://pronounce.renlab.ai/audio/vicregl.mp3",
+  "url": "https://pronounce.renlab.ai/word/vicregl",
+  "date_modified": "2026-06-28"
+}

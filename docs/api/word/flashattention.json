@@ -11,5 +11,5 @@
   "notes": "IO-aware exact-attention GPU kernel (Dao-AILab; FlashAttention-2/3) baked into vLLM, TGI, TensorRT-LLM, PyTorch SDPA. Spoken as the two English words \"flash\" + \"attention\" run together, one word in writing. STRESS: secondary on FLASH, primary on -TEN- (flash-uh-TEN-shun). Non-native speakers hesitate on the flash+attention compound; pronunciation is just the plain English words.",
   "audio_url": "https://pronounce.renlab.ai/audio/flashattention.mp3",
   "url": "https://pronounce.renlab.ai/word/flashattention",
-  "date_modified": "2026-06-24"
+  "date_modified": "2026-06-28"
 }

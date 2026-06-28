@@ -1,0 +1,15 @@
+{
+  "word": "TWM",
+  "ipa": "/ˌtiː ˌdʌbəljuː ˈɛm/",
+  "respelling_us": "T W M",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2303.07109",
+  "source_label": "Robine, Höftmann, Uelwer & Harmeling, 'Transformer-based World Models Are Happy With 100k Interactions' (arXiv 2303.07109)",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "A Transformer-XL-based world model for data-efficient Atari RL; the initials have no vowel to form a word, so they are spelled out letter by letter — 'T-W-M'.",
+  "audio_url": "https://pronounce.renlab.ai/audio/twm.mp3",
+  "url": "https://pronounce.renlab.ai/word/twm",
+  "date_modified": "2026-06-28"
+}

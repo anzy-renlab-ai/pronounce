@@ -1,0 +1,15 @@
+{
+  "word": "Point-JEPA",
+  "ipa": "/ˌpɔɪnt ˈdʒɛpə/",
+  "respelling_us": "point jep uh",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2404.16432",
+  "source_label": "Saito et al., 'Point-JEPA' (arXiv 2404.16432)",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "JEPA for point clouds; ordinary word 'point' + JEPA — 'point-JEP-uh'.",
+  "audio_url": "https://pronounce.renlab.ai/audio/point-jepa.mp3",
+  "url": "https://pronounce.renlab.ai/word/point-jepa",
+  "date_modified": "2026-06-28"
+}

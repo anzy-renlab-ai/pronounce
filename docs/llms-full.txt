@@ -1741,3 +1741,26 @@ kurtosis | /kɚˈtoʊsɪs/ | ker TOH sis | cs-term | community-consensus | https
 Weibull | /ˈwaɪbʊl/ | WHY bull | person | contested | https://en.wikipedia.org/wiki/Weibull_distribution
 Tikhonov | /ˈtiːxənɔf/ | TEE khuh nawf | person | contested | https://en.wikipedia.org/wiki/Andrey_Tikhonov_(mathematician)
 mythos | /ˈmɪθɑs/ | MITH oss | cs-term | community-consensus | https://www.merriam-webster.com/dictionary/mythos
+I-JEPA | /ˌaɪ ˈdʒɛpə/ | eye jep uh | product | community-consensus | https://arxiv.org/abs/2301.08243
+V-JEPA | /ˌviː ˈdʒɛpə/ | vee jep uh | product | community-consensus | https://ai.meta.com/blog/v-jepa-yann-lecun-ai-model-video-joint-embedding-predictive-architecture/
+V-JEPA 2 | /ˌviː ˈdʒɛpə ˈtuː/ | vee jep uh two | product | community-consensus | https://ai.meta.com/blog/v-jepa-2-world-model-benchmarks/
+A-JEPA | /ˌeɪ ˈdʒɛpə/ | ay jep uh | product | community-consensus | https://arxiv.org/abs/2311.15830
+MC-JEPA | /ˌɛm ˌsiː ˈdʒɛpə/ | em see jep uh | product | community-consensus | https://arxiv.org/abs/2307.12698
+Point-JEPA | /ˌpɔɪnt ˈdʒɛpə/ | point jep uh | product | community-consensus | https://arxiv.org/abs/2404.16432
+DINOv2 | /ˈdiːnoʊ viː ˈtuː/ | dee noh vee two | product | community-consensus | https://arxiv.org/abs/2304.07193
+DINOv3 | /ˈdiːnoʊ viː ˈθriː/ | dee noh vee three | product | contested | https://ai.meta.com/blog/dinov3-self-supervised-vision-model/
+iBOT | /ˈaɪbɑːt/ | eye bot | product | community-consensus | https://github.com/bytedance/ibot
+BEiT | /biːt/ | beet | product | contested | https://arxiv.org/abs/2106.08254
+DINO-WM | /ˈdiːnoʊ ˌdʌbəljuː ˈɛm/ | dee noh W M | product | community-consensus | https://dino-wm.github.io/
+BYOL | /ˌbiː waɪ oʊ ˈɛl/ | B Y O L | product | contested | https://arxiv.org/abs/2006.07733
+SimSiam | /sɪmˈsaɪæm/ | sim sigh am | product | community-consensus | https://arxiv.org/abs/2011.10566
+VICReg | /ˈvɪkrɛɡ/ | vik reg | product | community-consensus | https://arxiv.org/abs/2105.04906
+VICRegL | /ˈvɪkrɛɡ ˌɛl/ | vik reg el | product | community-consensus | https://arxiv.org/abs/2210.01571
+Barlow Twins | /ˈbɑːrloʊ ˈtwɪnz/ | bar loh twinz | product | community-consensus | https://arxiv.org/abs/2103.03230
+MoCo | /ˈmoʊkoʊ/ | moh koh | product | community-consensus | https://arxiv.org/abs/1911.05722
+SimCLR | /sɪmˈklɪr/ | sim clear | product | community-consensus | https://arxiv.org/abs/2002.05709
+MAE | /meɪ/ | may | product | contested | https://arxiv.org/abs/2111.06377
+data2vec | /ˈdeɪtə tuː vɛk/ | day tuh too vek | product | community-consensus | https://arxiv.org/abs/2202.03555
+IRIS | /ˈaɪrɪs/ | eye ris | product | community-consensus | https://arxiv.org/abs/2209.00588
+TWM | /ˌtiː ˌdʌbəljuː ˈɛm/ | T W M | product | community-consensus | https://arxiv.org/abs/2303.07109
+Genie 2 | /ˈdʒiːni ˈtuː/ | jee nee two | product | community-consensus | https://deepmind.google/blog/genie-2-a-large-scale-foundation-world-model/

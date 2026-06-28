@@ -1,0 +1,15 @@
+{
+  "word": "MAE",
+  "ipa": "/meɪ/",
+  "respelling_us": "may",
+  "alt_ipa": ["/ˌɛm eɪ ˈiː/"],
+  "alt_respelling_us": ["em ay ee"],
+  "source_url": "https://arxiv.org/abs/2111.06377",
+  "source_label": "He et al., 'Masked Autoencoders Are Scalable Vision Learners' (arXiv 2111.06377)",
+  "category": "product",
+  "confidence": "contested",
+  "notes": "FAIR masked-image SSL (Masked AutoEncoder) that reconstructs pixels — the model JEPA argues against. Genuinely unsettled: many say the word 'may', others spell 'em-ay-EE'; no author statement, and it collides with 'mean absolute error'.",
+  "audio_url": "https://pronounce.renlab.ai/audio/mae.mp3",
+  "url": "https://pronounce.renlab.ai/word/mae",
+  "date_modified": "2026-06-28"
+}

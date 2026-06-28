@@ -11,5 +11,5 @@
   "notes": "4-bit post-training quantization for diffusion models that shunts weight+activation outliers into a low-rank branch. SVD = Singular Value Decomposition, read letter-by-letter then \"quant\": ess-vee-dee-KWANT.",
   "audio_url": "https://pronounce.renlab.ai/audio/svdquant.mp3",
   "url": "https://pronounce.renlab.ai/word/svdquant",
-  "date_modified": "2026-06-24"
+  "date_modified": "2026-06-28"
 }

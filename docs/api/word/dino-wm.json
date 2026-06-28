@@ -1,0 +1,15 @@
+{
+  "word": "DINO-WM",
+  "ipa": "/ˈdiːnoʊ ˌdʌbəljuː ˈɛm/",
+  "respelling_us": "dee noh W M",
+  "alt_ipa": ["/ˈdiːnoʊ wɜːrld ˈmɑːdəl/"],
+  "alt_respelling_us": ["dee noh world model"],
+  "source_url": "https://dino-wm.github.io/",
+  "source_label": "DINO-WM project page (arXiv 2411.04983)",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "NYU/Meta-FAIR latent world model built on frozen DINOv2 patch features for zero-shot planning; said 'DEE-noh W-M', often expanded to 'dino world model'.",
+  "audio_url": "https://pronounce.renlab.ai/audio/dino-wm.mp3",
+  "url": "https://pronounce.renlab.ai/word/dino-wm",
+  "date_modified": "2026-06-28"
+}

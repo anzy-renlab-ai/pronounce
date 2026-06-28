@@ -1,0 +1,15 @@
+{
+  "word": "SimCLR",
+  "ipa": "/sɪmˈklɪr/",
+  "respelling_us": "sim clear",
+  "alt_ipa": ["/ˌsɪm siː ɛl ˈɑːr/"],
+  "alt_respelling_us": ["sim C L R"],
+  "source_url": "https://arxiv.org/abs/2002.05709",
+  "source_label": "Chen et al., 'A Simple Framework for Contrastive Learning of Visual Representations' (arXiv 2002.05709)",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Google/Hinton contrastive SSL framework; 'Sim' (Simple) + 'CLR' (Contrastive Learning of Representations) puns on 'clear', so 'sim-CLEAR' dominates; a minority spells it 'sim-C-L-R'.",
+  "audio_url": "https://pronounce.renlab.ai/audio/simclr.mp3",
+  "url": "https://pronounce.renlab.ai/word/simclr",
+  "date_modified": "2026-06-28"
+}

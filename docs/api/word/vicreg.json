@@ -1,0 +1,15 @@
+{
+  "word": "VICReg",
+  "ipa": "/ˈvɪkrɛɡ/",
+  "respelling_us": "vik reg",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2105.04906",
+  "source_label": "Bardes, Ponce & LeCun, 'VICReg' (arXiv 2105.04906)",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "SSL that prevents collapse with separate Variance-Invariance-Covariance Regularization terms; said as the word 'VIK-reg' (hard g from 'regularization'), not spelled out.",
+  "audio_url": "https://pronounce.renlab.ai/audio/vicreg.mp3",
+  "url": "https://pronounce.renlab.ai/word/vicreg",
+  "date_modified": "2026-06-28"
+}

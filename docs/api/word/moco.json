@@ -1,0 +1,15 @@
+{
+  "word": "MoCo",
+  "ipa": "/ˈmoʊkoʊ/",
+  "respelling_us": "moh koh",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/1911.05722",
+  "source_label": "He et al., 'Momentum Contrast for Unsupervised Visual Representation Learning' (arXiv 1911.05722)",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "FAIR contrastive SSL with a momentum-updated encoder and a queue of negatives; a blend of MOmentum + COntrast, said as a word — 'MOH-koh'.",
+  "audio_url": "https://pronounce.renlab.ai/audio/moco.mp3",
+  "url": "https://pronounce.renlab.ai/word/moco",
+  "date_modified": "2026-06-28"
+}

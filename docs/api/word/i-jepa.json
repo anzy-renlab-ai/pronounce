@@ -1,0 +1,15 @@
+{
+  "word": "I-JEPA",
+  "ipa": "/ˌaɪ ˈdʒɛpə/",
+  "respelling_us": "eye jep uh",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2301.08243",
+  "source_label": "Assran et al., 'Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture' (arXiv 2301.08243, CVPR 2023)",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Meta's image self-supervised model (Image JEPA); the 'I' is the letter 'eye' /aɪ/ and JEPA is one word /ˈdʒɛpə/ rhyming with 'pepper', so 'eye-JEP-uh' — the way LeCun voices the suffix. Predicts in latent space, not pixels.",
+  "audio_url": "https://pronounce.renlab.ai/audio/i-jepa.mp3",
+  "url": "https://pronounce.renlab.ai/word/i-jepa",
+  "date_modified": "2026-06-28"
+}

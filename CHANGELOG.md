@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.17.0 — 2026-06-28
+
+**+23 JEPA-family & self-supervised / world-model vocab** (1,739 → 1,762). The dictionary already had `jepa`, `DINO`, `dreamer`, `Genie`; this fills in the family and its cousins so "how do you say I-JEPA / VICReg / SimCLR" gets an answer with audio + a cited source.
+
+### Added
+- **JEPA family** — `I-JEPA` (eye-JEP-uh), `V-JEPA`, `V-JEPA 2`, `A-JEPA` (the 'A' is the letter 'ay', not the article), `MC-JEPA` (em-see-JEP-uh), `Point-JEPA`. JEPA is one word /ˈdʒɛpə/ across all of them.
+- **DINO line** — `DINOv2`, `DINOv3` (vowel genuinely contested: DEE-noh vs the dinosaur-pun DYE-noh), `DINO-WM`, plus `iBOT` (EYE-bot) and `BEiT` (contested: beet vs bait).
+- **Non-contrastive / joint-embedding SSL** — `BYOL` (contested: spelled out vs "bee-OHL"; authors pun "BYOL-A, pronounced viola"), `SimSiam`, `VICReg`, `VICRegL`, `Barlow Twins`, `MoCo`, `SimCLR` (sim-CLEAR), `data2vec` (inherits word2vec lineage).
+- **Reconstruction & world models** — `MAE` (contested: "may" vs em-ay-EE; collides with mean-absolute-error), `IRIS`, `TWM`, `Genie 2`.
+
+Every entry carries a cited source (arXiv / official blog / repo); pronunciations were web-researched and adversarially verified. Confidence split now 1,533 community-consensus / 162 contested / 67 creator-clarified.
+
 ## v2.16.0 — 2026-06-24
 
 The **完善 pass** — nine correctness + polish fixes across the CLI, site, and extension, reviewed three ways (Claude + Codex + Kiro). **The CLI and VS Code extension graduate to `1.0.0`** — the public flag surface is stable; the repo release line continues at v2.x.

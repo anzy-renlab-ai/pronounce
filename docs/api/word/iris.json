@@ -1,0 +1,15 @@
+{
+  "word": "IRIS",
+  "ipa": "/ˈaɪrɪs/",
+  "respelling_us": "eye ris",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2209.00588",
+  "source_label": "Micheli, Alonso & Fleuret, 'Transformers are Sample-Efficient World Models' (arXiv 2209.00588)",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Sample-efficient Atari agent that learns inside a discrete-autoencoder + GPT-like Transformer world model; styled as the real word 'iris' (the official repo is lowercase) — 'EYE-ris', not lettered out.",
+  "audio_url": "https://pronounce.renlab.ai/audio/iris.mp3",
+  "url": "https://pronounce.renlab.ai/word/iris",
+  "date_modified": "2026-06-28"
+}
