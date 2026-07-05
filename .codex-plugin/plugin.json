@@ -6,6 +6,16 @@
   "homepage": "https://pronounce.renlab.ai",
   "repository": "https://github.com/anzy-renlab-ai/pronounce",
   "license": "MIT",
+  "keywords": [
+    "pronunciation",
+    "developer-jargon",
+    "text-to-speech",
+    "tts",
+    "ipa",
+    "dictionary",
+    "mcp",
+    "accessibility"
+  ],
   "interface": {
     "displayName": "Pronounce",
     "shortDescription": "Hear how developer jargon is actually pronounced",
