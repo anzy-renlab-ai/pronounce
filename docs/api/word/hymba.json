@@ -11,5 +11,5 @@
   "notes": "NVIDIA's 1.5B hybrid-head small language model (Nov 2024) that runs Mamba (state-space) and attention heads in parallel within the same layer. The name is widely read as a blend of 'HYbrid' + 'Mamba' (secondary write-ups confirm this; NVIDIA's own blog never states the etymology, so the portmanteau is community inference). That blend implies a short 'y' — HIM-buh, a homophone of the Namibian Himba people — and stress falls on the first syllable. But the 'Hy-' spelling leads many English speakers to default to HYME-buh (long i, like 'hybrid'), so usage is split. No official NVIDIA pronunciation exists.",
   "audio_url": "https://pronounce.renlab.ai/audio/hymba.mp3",
   "url": "https://pronounce.renlab.ai/word/hymba",
-  "date_modified": "2026-06-28"
+  "date_modified": "2026-07-05"
 }

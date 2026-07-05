@@ -1,5 +1,18 @@
 # Changelog
 
+## v2.18.0 — 2026-07-04
+
+**+28 entries — 2025-2026 AI product/model names + ML-systems & tooling jargon** (1,762 → 1,790). The names devs now say aloud in standups and PRs but routinely mispronounce — new TTS/video models, AI coding agents, and the GPU-compute stack.
+
+### Added
+- **TTS / audio models** — `Kokoro` (KOH-kuh-roh, per the model card's own phonemization), `Orpheus` (OR-fee-us), `Fugatto` (foo-GAH-toh, from Italian *fugato*), `Hume` (HYOOM, one syllable).
+- **Video / image / 3D models** — `Marey` (MAIR-ee — Moonvalley says "like Mary"), `Vidu` (VEE-doo), `Aleph` (AH-lef, Runway), `Rodin` (roh-DAN, the anglicized sculptor).
+- **AI coding tools** — `Kiro` (KEER-oh — the About page says "rhymes with hero", *creator-clarified*), `Junie` (JOO-nee, JetBrains), `Qodo` (KOH-doh, ex-Codium), `Phind` (just "find"), `Dyad` (DY-ad, not "DEE-ad").
+- **Inference / compute stack** — `cuDNN` (COO-dee-en-en), `ROCm` (ROCK-em), `SYCL` (SICK-ul), `GEMM` (like the jewel "gem"), `einsum` (INE-sum, from *Einstein*), `Machete` (muh-SHET-ee), `Aphrodite` (af-ruh-DY-tee), `Horovod` (HOR-uh-vahd), `Ulysses` (yoo-LISS-eez — DeepSpeed).
+- **Misleading-spelling names** — `Le Chat` (luh SHAH, French, silent t), `Coze` (KOHZ, one syllable), `MinIO` (min-EYE-oh — founder: "minimal I/O", *creator-clarified*), `Inngest` (in-JEST), `Vapi` (VAP-ee, "Voice API"), `BAML` (*contested*: "bammel" vs spelled-out B-A-M-L).
+
+Every entry carries a cited source (official docs/FAQ, arXiv, Wikipedia, or press); pronunciations were web-researched and adversarially verified by a multi-agent workflow, then hand-reviewed and cross-checked with two independent CLI reviewers (Codex + Kiro) — which swapped Kokoro's primary to the even Japanese-vowel reading (KOH-koh-roh, Misaki-phonemizer form kept as the cited alternate) and pulled Marey's known mispronunciation out of its valid-alternate slot. Confidence split now 1,558 community-consensus / 163 contested / 69 creator-clarified; 1,171 of 1,790 carry a citable source URL.
+
 ## v2.17.0 — 2026-06-28
 
 **+23 JEPA-family & self-supervised / world-model vocab** (1,739 → 1,762). The dictionary already had `jepa`, `DINO`, `dreamer`, `Genie`; this fills in the family and its cousins so "how do you say I-JEPA / VICReg / SimCLR" gets an answer with audio + a cited source.

@@ -11,5 +11,5 @@
   "notes": "Kyutai's real-time full-duplex speech-text foundation model (July 2024), built on the Mimi neural audio codec (Mimi = MEE-mee). Say it MOH-shee: stress the first syllable, long 'o' as in 'go', 'sh' as in 'ship' — MOH-shee. The name matches the Japanese word もしもし (moshi moshi), the phrase used to answer the phone; that etymology is widely assumed but is NOT stated in Kyutai's README, the arXiv paper (2410.00037), or kyutai.org, so treat the naming rationale as unconfirmed. Common English mispronunciations are 'MOSH-ee' (rhyming with 'posh') and 'MOSH-eye' — both wrong.",
   "audio_url": "https://pronounce.renlab.ai/audio/moshi.mp3",
   "url": "https://pronounce.renlab.ai/word/moshi",
-  "date_modified": "2026-06-28"
+  "date_modified": "2026-07-05"
 }

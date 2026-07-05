@@ -16,3 +16,7 @@
 .indexnow/
 marketplace.env
 .gstack/
+
+# Python bytecode
+__pycache__/
+*.pyc

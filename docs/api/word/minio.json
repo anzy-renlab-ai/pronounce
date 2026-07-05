@@ -1,0 +1,15 @@
+{
+  "word": "MinIO",
+  "ipa": "/mɪnˈaɪoʊ/",
+  "respelling_us": "min eye oh",
+  "alt_ipa": ["/ˈmɪnioʊ/"],
+  "alt_respelling_us": ["min ee oh"],
+  "source_url": "https://www.techtarget.com/searchstorage/blog/Storage-Soup/Minio-prepares-new-object-storage-dish-for-2019",
+  "source_label": "TechTarget Storage Soup — founder A.B. Periasamy on the MinIO name",
+  "category": "product",
+  "confidence": "creator-clarified",
+  "notes": "MinIO is a high-performance, S3-compatible object-storage server; the name is short for \"minimal I/O,\" so it is said min-EYE-oh — the \"IO\" is the spelled-out input/output acronym (\"eye-oh\"). Founder/CEO A.B. (Anand Babu) Periasamy has explicitly stated he wants it known as \"Min-IO, as in minimal IO\" (TechTarget, verified). The article confirms the common variant: \"most people pronounce it MIN-EO\" (min-ee-oh, captured as the alt) — devs default to it because \"-io\" reads like an ordinary word ending rather than a spelled-out acronym.",
+  "audio_url": "https://pronounce.renlab.ai/audio/minio.mp3",
+  "url": "https://pronounce.renlab.ai/word/minio",
+  "date_modified": "2026-07-05"
+}

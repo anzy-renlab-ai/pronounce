@@ -1,0 +1,15 @@
+{
+  "word": "cuDNN",
+  "ipa": "/ˈkuː diː ɛn ɛn/",
+  "respelling_us": "coo dee en en",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://developer.nvidia.com/cudnn",
+  "source_label": "NVIDIA Developer — cuDNN (CUDA Deep Neural Network library)",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "cuDNN is NVIDIA's CUDA Deep Neural Network library, a GPU-accelerated set of primitives (convolution, attention, matmul, pooling, normalization) that underpins PyTorch, TensorFlow, and JAX. Say it COO-dee-en-en: the lowercase 'cu' inherits CUDA's 'coo' sound (as in barra-CUDA), then D-N-N is spelled out letter by letter, with primary stress on COO. Non-native devs commonly misread the prefix as 'see-you' (C-U) or 'cud', which sounds wrong to practitioners. It's non-obvious because 'cu' is a CUDA abbreviation glued onto DNN, not a standalone English syllable.",
+  "audio_url": "https://pronounce.renlab.ai/audio/cudnn.mp3",
+  "url": "https://pronounce.renlab.ai/word/cudnn",
+  "date_modified": "2026-07-05"
+}

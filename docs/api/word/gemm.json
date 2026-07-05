@@ -1,0 +1,15 @@
+{
+  "word": "GEMM",
+  "ipa": "/dʒɛm/",
+  "respelling_us": "jem",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://en.wikipedia.org/wiki/GEMM",
+  "source_label": "Wikipedia — GEMM (General matrix multiply, a BLAS subprogram)",
+  "category": "acronym",
+  "confidence": "community-consensus",
+  "notes": "GEMM stands for GEneral Matrix Multiply, the BLAS Level-3 routine C = αAB + βC and the single most-invoked GPU kernel in deep learning (\"fp8 gemm\", \"grouped gemm\"). One syllable, said exactly like the jewel GEM — /dʒɛm/. The double M just comes from the BLAS function names (sgemm/dgemm/cgemm) and is NOT a geminated or hard sound. Non-native devs often mis-say it as spelled-out \"G-E-M-M\"; it looks like an initialism and the doubled M invites a wrong reading.",
+  "audio_url": "https://pronounce.renlab.ai/audio/gemm.mp3",
+  "url": "https://pronounce.renlab.ai/word/gemm",
+  "date_modified": "2026-07-05"
+}

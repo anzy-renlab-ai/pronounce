@@ -11,5 +11,5 @@
   "notes": "Negative-pair-free SSL that bootstraps a target network from an online network (DeepMind 2020); the authors fixed no pronunciation, so it is both spelled out 'B-Y-O-L' and said as a word 'bee-OHL' — the follow-up BYOL-A audio paper even puns 'pronounced viola'.",
   "audio_url": "https://pronounce.renlab.ai/audio/byol.mp3",
   "url": "https://pronounce.renlab.ai/word/byol",
-  "date_modified": "2026-06-28"
+  "date_modified": "2026-07-05"
 }

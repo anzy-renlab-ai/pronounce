@@ -1764,3 +1764,31 @@ data2vec | /ˈdeɪtə tuː vɛk/ | day tuh too vek | product | community-consens
 IRIS | /ˈaɪrɪs/ | eye ris | product | community-consensus | https://arxiv.org/abs/2209.00588
 TWM | /ˌtiː ˌdʌbəljuː ˈɛm/ | T W M | product | community-consensus | https://arxiv.org/abs/2303.07109
 Genie 2 | /ˈdʒiːni ˈtuː/ | jee nee two | product | community-consensus | https://deepmind.google/blog/genie-2-a-large-scale-foundation-world-model/
+Aleph | /ˈɑːlɛf/ | ah lef | product | community-consensus | https://en.wiktionary.org/wiki/aleph
+Aphrodite | /ˌæfrəˈdaɪti/ | af ruh die tee | project | community-consensus | https://en.wiktionary.org/wiki/Aphrodite
+BAML | /ˈbæməl/ | bam uhl | project | contested | https://github.com/BoundaryML/baml
+Coze | /koʊz/ | kohz | product | community-consensus | https://www.merriam-webster.com/dictionary/coze
+cuDNN | /ˈkuː diː ɛn ɛn/ | coo dee en en | tool | community-consensus | https://developer.nvidia.com/cudnn
+Dyad | /ˈdaɪæd/ | dye ad | tool | community-consensus | https://www.dyad.sh/
+einsum | /ˈaɪnsʌm/ | ine sum | cs-term | community-consensus | https://numpy.org/doc/stable/reference/generated/numpy.einsum.html
+Fugatto | /fuˈɡɑːtoʊ/ | foo gah toh | product | community-consensus | https://research.nvidia.com/publication/2025-04_fugatto-1-foundational-generative-audio-transformer-opus-1
+GEMM | /dʒɛm/ | jem | acronym | community-consensus | https://en.wikipedia.org/wiki/GEMM
+Horovod | /ˈhɔrəvɑd/ | hor uh vahd | project | community-consensus | https://www.uber.com/en-CA/blog/horovod/
+Hume | /hjuːm/ | hyoom | product | community-consensus | https://en.wikipedia.org/wiki/David_Hume
+Inngest | /ɪnˈdʒɛst/ | in jest | product | community-consensus | https://github.com/inngest/inngest
+Junie | /ˈdʒuːni/ | joo nee | product | community-consensus | https://www.jetbrains.com/junie/
+Kiro | /ˈkɪroʊ/ | keer oh | product | creator-clarified | https://kiro.dev/about/
+Kokoro | /ˈkoʊkoʊroʊ/ | koh koh roh | product | community-consensus | https://huggingface.co/hexgrad/Kokoro-82M
+Le Chat | /lə ʃɑ/ | luh shah | product | community-consensus | https://en.wikipedia.org/wiki/Mistral_AI
+Machete | /məˈʃɛti/ | muh shet ee | project | community-consensus | https://developers.redhat.com/articles/2024/10/14/introducing-machete-mixed-input-gemm-kernel
+Marey | /ˈmɛri/ | mair ee | product | community-consensus | https://www.fastcompany.com/91363868/moonvalley-releases-its-power-tool-for-ai-filmmaking
+MinIO | /mɪnˈaɪoʊ/ | min eye oh | product | creator-clarified | https://www.techtarget.com/searchstorage/blog/Storage-Soup/Minio-prepares-new-object-storage-dish-for-2019
+Orpheus | /ˈɔːrfiːəs/ | or fee us | product | community-consensus | https://en.wikipedia.org/wiki/Orpheus
+Phind | /faɪnd/ | find | product | community-consensus | https://www.ycombinator.com/companies/phind
+Qodo | /ˈkoʊdoʊ/ | koh doh | product | community-consensus | https://www.qodo.ai/blog/introducing-qodo-a-new-name-the-same-commitment-to-quality/
+ROCm | /ˈrɑkəm/ | rahk em | product | community-consensus | https://en.wikipedia.org/wiki/ROCm
+Rodin | /roʊˈdæn/ | roh dan | product | community-consensus | https://en.wikipedia.org/wiki/Auguste_Rodin
+SYCL | /ˈsɪkəl/ | sik uhl | cs-term | community-consensus | https://en.wikipedia.org/wiki/SYCL
+Ulysses | /juːˈlɪsiːz/ | yoo liss eez | project | community-consensus | https://dictionary.cambridge.org/us/pronunciation/english/ulysses
+Vapi | /ˈvæpi/ | vappy | product | community-consensus | https://www.ycombinator.com/companies/vapi
+Vidu | /ˈviːduː/ | vee doo | product | community-consensus | https://www.newsgd.com/node_1299786306/bf5b26915a.shtml

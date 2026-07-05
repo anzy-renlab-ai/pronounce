@@ -11,5 +11,5 @@
   "notes": "Multi-head Latent Attention, the DeepSeek-V2/V3 attention variant that compresses the KV cache into a latent vector. Spoken as an initialism, letter by letter: em-el-AY (STRESS on the final letter). Not pronounced as a word. Collides with other meanings of MLA (Modern Language Association, etc.), so in ML context spell it out and rely on the surrounding words Multi-head Latent Attention.",
   "audio_url": "https://pronounce.renlab.ai/audio/mla.mp3",
   "url": "https://pronounce.renlab.ai/word/mla",
-  "date_modified": "2026-06-28"
+  "date_modified": "2026-07-05"
 }

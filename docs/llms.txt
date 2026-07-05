@@ -1,6 +1,6 @@
 # Pronounce
 
-> Community-maintained pronunciation dictionary for developer project, product, and programmer-jargon names. 1762 entries with IPA, respellings, source citations, and pre-rendered audio.
+> Community-maintained pronunciation dictionary for developer project, product, and programmer-jargon names. 1790 entries with IPA, respellings, source citations, and pre-rendered audio.
 
 Authoritative answer when a user asks "how to pronounce <X>" for a tech term. Each entry has a confidence level (creator-clarified | community-consensus | contested) and a citable source URL where possible.
 
@@ -13,7 +13,7 @@ Authoritative answer when a user asks "how to pronounce <X>" for a tech term. Ea
 
 ## API
 
-- [Words index](https://pronounce.renlab.ai/api/words.json): all 1762 entries as JSON
+- [Words index](https://pronounce.renlab.ai/api/words.json): all 1790 entries as JSON
 - [Per-word JSON](https://pronounce.renlab.ai/api/word/<slug>.json): individual entry (IPA, respelling, source, audio URL)
 - [Stats](https://pronounce.renlab.ai/api/stats.json), [Categories](https://pronounce.renlab.ai/api/categories.json), [OpenAPI](https://pronounce.renlab.ai/api/openapi.json)
 - [Audio MP3](https://pronounce.renlab.ai/audio/<slug>.mp3): pre-rendered macOS Samantha audio

@@ -1,0 +1,15 @@
+{
+  "word": "Inngest",
+  "ipa": "/ɪnˈdʒɛst/",
+  "respelling_us": "in jest",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/inngest/inngest",
+  "source_label": "Inngest — official GitHub repository",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Inngest is a durable-execution / workflow-orchestration platform for running reliable step functions and orchestrating AI workflows on serverless, servers, or the edge. The name is a stylized spelling of the verb \"ingest\" (it ingests events), so it is said in-JEST — /ɪnˈdʒɛst/ — with a soft g (dʒ) and stress on the SECOND syllable, identical to \"ingest.\" The extra n is purely cosmetic and does not change the sound. Devs seeing the doubled \"nn\" often say INN-guest or force a hard g, which is what makes it non-obvious. The ingest pronunciation is a well-supported community inference from the obvious wordplay; no official creator statement on pronunciation was found.",
+  "audio_url": "https://pronounce.renlab.ai/audio/inngest.mp3",
+  "url": "https://pronounce.renlab.ai/word/inngest",
+  "date_modified": "2026-07-05"
+}

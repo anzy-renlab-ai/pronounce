@@ -1,0 +1,15 @@
+{
+  "word": "Kokoro",
+  "ipa": "/ˈkoʊkoʊroʊ/",
+  "respelling_us": "koh koh roh",
+  "alt_ipa": ["/ˈkoʊkəroʊ/"],
+  "alt_respelling_us": ["koh kuh roh"],
+  "source_url": "https://huggingface.co/hexgrad/Kokoro-82M",
+  "source_label": "hexgrad — Kokoro-82M model card (Hugging Face)",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Kokoro is the viral 82M-parameter, Apache-2.0 open-weight TTS model released in 2025 by hexgrad; the name is the Japanese word 心, meaning 'heart'/'spirit'. The even, flat-vowel KOH-koh-roh — matching the original Japanese 心 (ko-ko-ro) — is how practitioners actually say it, and is used here as the primary. The creator's model-card quickstart phonemizes it /kˈOkəɹO/ (Misaki notation, capital O = /oʊ/) = KOH-kuh-roh, with a reduced middle vowel — kept as the cited alternate. Non-native devs commonly stress the middle and add an 'or' vowel ('ko-KOR-oh'), which is wrong; stress stays light and front. Model card verified 2026-07: 82M params, Apache 2.0, name meaning, and the /kˈOkəɹO/ phonemization all present.",
+  "audio_url": "https://pronounce.renlab.ai/audio/kokoro.mp3",
+  "url": "https://pronounce.renlab.ai/word/kokoro",
+  "date_modified": "2026-07-05"
+}

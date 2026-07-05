@@ -1,0 +1,15 @@
+{
+  "word": "ROCm",
+  "ipa": "/ˈrɑkəm/",
+  "respelling_us": "rahk em",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://en.wikipedia.org/wiki/ROCm",
+  "source_label": "Wikipedia — ROCm",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "ROCm is AMD's open-source GPU-compute software stack — the CUDA equivalent — and the runtime behind AI training/inference on Instinct accelerators (e.g. MI300X). Said \"ROCK-em\" (/ˈrɑkəm/): stress on the first syllable, trailing lowercase 'm' voiced as a light \"em\" (never spelled out); \"rock-M\" is effectively the same sound. Common mistakes: reading it letter-by-letter (R-O-C-M) or giving \"rock\" a wrong vowel (\"Rockham\"/\"Rockcam\"). Non-obvious because the lowercase 'm' disguises the origin \"Radeon Open Compute (platform)\"; per Wikipedia the name no longer functions as a true acronym (Open Compute is a registered trademark).",
+  "audio_url": "https://pronounce.renlab.ai/audio/rocm.mp3",
+  "url": "https://pronounce.renlab.ai/word/rocm",
+  "date_modified": "2026-07-05"
+}

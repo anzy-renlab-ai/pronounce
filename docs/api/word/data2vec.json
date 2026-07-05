@@ -11,5 +11,5 @@
   "notes": "Meta AI cross-modal SSL that predicts its own latent representations (closest non-JEPA cousin in spirit); inherits the word2vec/wav2vec lineage, so '2' is 'to' and 'vec' is 'vek' — 'DAY-tuh-too-vek'.",
   "audio_url": "https://pronounce.renlab.ai/audio/data2vec.mp3",
   "url": "https://pronounce.renlab.ai/word/data2vec",
-  "date_modified": "2026-06-28"
+  "date_modified": "2026-07-05"
 }

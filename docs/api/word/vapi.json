@@ -1,0 +1,15 @@
+{
+  "word": "Vapi",
+  "ipa": "/ˈvæpi/",
+  "respelling_us": "vappy",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.ycombinator.com/companies/vapi",
+  "source_label": "Y Combinator — Vapi company profile",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Vapi (YC W21, vapi.ai) is a developer platform for building voice AI agents; co-founded by Jordan Dearsley (CEO) and Nikhil Gupta (CTO) — not a single founder. The name compresses \"Voice API\" (every feature is accessible via its API), confirmed by multiple sources. Stress falls on the FIRST syllable with a short /æ/: VAP-ee, rhyming with \"happy\" (/ˈvæpi/); corroborated by HowToPronounce (/vˈæ.pi/, \"va-pee\"). No official creator pronunciation statement was found, so confidence stays community-consensus. Non-native devs often default to \"VAH-pee\" (/ˈvɑpi/) or \"VAY-pie\" (/ˈveɪpaɪ/) because the bare letters V-A-P-I don't cue the short /æ/. For macOS say, respell as \"vappy\" for a reliable short-a.",
+  "audio_url": "https://pronounce.renlab.ai/audio/vapi.mp3",
+  "url": "https://pronounce.renlab.ai/word/vapi",
+  "date_modified": "2026-07-05"
+}

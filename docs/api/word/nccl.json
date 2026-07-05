@@ -11,5 +11,5 @@
   "notes": "NVIDIA Collective Communications Library — GPU collective comms (all-reduce, all-gather) for distributed ML training. Official docs: \"NCCL, pronounced 'Nickel'\". Said like the coin/metal: NIK-uhl, stress on first syllable. Non-obvious from the letters N-C-C-L.",
   "audio_url": "https://pronounce.renlab.ai/audio/nccl.mp3",
   "url": "https://pronounce.renlab.ai/word/nccl",
-  "date_modified": "2026-06-28"
+  "date_modified": "2026-07-05"
 }

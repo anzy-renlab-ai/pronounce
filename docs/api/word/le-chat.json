@@ -1,0 +1,15 @@
+{
+  "word": "Le Chat",
+  "ipa": "/lə ʃɑ/",
+  "respelling_us": "luh shah",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://en.wikipedia.org/wiki/Mistral_AI",
+  "source_label": "Wikipedia — Mistral AI (Le Chat)",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Le Chat is Mistral AI's consumer chatbot, a French pun since \"chat\" means both \"chat\" and \"cat,\" which went viral in France in early 2025. Say it the French way, luh SHAH: the final t is silent and \"ch\" is /ʃ/ (like English \"sh\"). Wikipedia gives strict French /lə ʃa/; American speakers naturally render the vowel as \"shah\" /ʃɑ/. English devs commonly mangle it as \"lee chat\" or \"luh CHAT\" with a hard English \"ch\" and an audible t. Non-obvious because the spelling looks like the English word \"chat,\" but it is French. (Mistral renamed the app Vibe at the end of May 2026.)",
+  "audio_url": "https://pronounce.renlab.ai/audio/le-chat.mp3",
+  "url": "https://pronounce.renlab.ai/word/le-chat",
+  "date_modified": "2026-07-05"
+}
