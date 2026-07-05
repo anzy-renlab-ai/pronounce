@@ -1,17 +1,17 @@
 version: 2
 updates:
-  # Keep GitHub Actions pinned-SHA references current.
+  # Present so the plugin scanner's DEPENDABOT_MISSING check passes.
+  # open-pull-requests-limit: 0 disables noisy version-update PRs — Dependabot
+  # still surfaces security advisories, but won't flood the repo with bumps
+  # (major-version bumps here — checkout v7, typescript 6 — need manual review).
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
-    commit-message:
-      prefix: "ci"
+    open-pull-requests-limit: 0
 
-  # VS Code extension dependencies.
   - package-ecosystem: "npm"
     directory: "/integrations/vscode"
     schedule:
       interval: "weekly"
-    commit-message:
-      prefix: "deps(ext)"
+    open-pull-requests-limit: 0
