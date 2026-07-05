@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.2 — 2026-07-05
+### Added
+- Star-only prompt on the third pronunciation (zh-aware) — a lighter nudge to ⭐ the repo.
+### Changed
+- Bundled dictionary updated to 1,790 entries (+28 AI product/model & ML-systems names, reviewed by Codex + Kiro).
+
 ## 0.6.1 — 2026-06-07
 
 ### Added
