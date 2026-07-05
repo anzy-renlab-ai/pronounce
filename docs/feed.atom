@@ -4,181 +4,181 @@
   <link href="https://pronounce.renlab.ai/feed.atom" rel="self"/>
   <link href="https://pronounce.renlab.ai/"/>
   <id>https://pronounce.renlab.ai/</id>
-  <updated>2026-07-05T12:40:33Z</updated>
+  <updated>2026-07-05T13:15:36Z</updated>
   <subtitle>How engineers actually pronounce project / product / jargon names. Community-maintained.</subtitle>
   <entry>
     <title>Coze — kohz</title>
     <link href="https://pronounce.renlab.ai/word/coze"/>
     <id>https://pronounce.renlab.ai/word/coze</id>
-    <updated>2026-07-05T12:40:33Z</updated>
+    <updated>2026-07-05T13:15:36Z</updated>
     <summary>Coze is pronounced "kohz" (/koʊz/). Coze (Chinese 扣子, kòuzi, "button") is ByteDance's no-code AI agent and chatbot-building platform, launched in 2024 (open-source Coze Studio at github.com/coze-dev/coze-studio; coze.com). It is ONE syllable, KOHZ — identical to the rare/literary English verb "coze" ("to chat cozily"), rhyming with "doze" and "rose"; the trailing "e" is silent and there is no second vowel. Non-native devs routinely misread the -oze/-e ending as a two-syllable "CO-zee" (like "cozy"), which is wrong. It is non-obvious because the spelling looks like it should split, and the Chinese source name kòuzi actually does have two syllables. Pronunciation confirmed against Merriam-Webster (/ˈkōz/) and Dictionary.com (/koʊz/, respelling [kohz], one syllable); no official ByteDance pronunciation statement was found, hence community-consensus rather than creator-clarified.</summary>
   </entry>
   <entry>
     <title>cuDNN — coo dee en en</title>
     <link href="https://pronounce.renlab.ai/word/cudnn"/>
     <id>https://pronounce.renlab.ai/word/cudnn</id>
-    <updated>2026-07-05T12:40:33Z</updated>
+    <updated>2026-07-05T13:15:36Z</updated>
     <summary>cuDNN is pronounced "coo dee en en" (/ˈkuː diː ɛn ɛn/). cuDNN is NVIDIA's CUDA Deep Neural Network library, a GPU-accelerated set of primitives (convolution, attention, matmul, pooling, normalization) that underpins PyTorch, TensorFlow, and JAX. Say it COO-dee-en-en: the lowercase 'cu' inherits CUDA's 'coo' sound (as in barra-CUDA), then D-N-N is spelled out letter by letter, with primary stress on COO. Non-native devs commonly misread the prefix as 'see-you' (C-U) or 'cud', which sounds wrong to practitioners. It's non-obvious because 'cu' is a CUDA abbreviation glued onto DNN, not a standalone English syllable.</summary>
   </entry>
   <entry>
     <title>Dyad — dye ad</title>
     <link href="https://pronounce.renlab.ai/word/dyad"/>
     <id>https://pronounce.renlab.ai/word/dyad</id>
-    <updated>2026-07-05T12:40:33Z</updated>
+    <updated>2026-07-05T13:15:36Z</updated>
     <summary>Dyad is pronounced "dye ad" (/ˈdaɪæd/). Dyad is a free, local, open-source AI app builder for power users (a v0 / Lovable / Bolt / Replit alternative), at dyad.sh (GitHub: dyad-sh/dyad). The name is the ordinary English/Greek word "dyad" (from Greek δυάς, "a pair/group of two"), stressed on the first syllable: DY-ad /ˈdaɪæd/, where "dy" is a long-i diphthong like "die." Confirmed by Merriam-Webster, Cambridge, Oxford, and Wiktionary. Non-native devs commonly misread the "dy-" as /diː/ and say "DEE-ad." Official site confirms the name but gives no pronunciation guidance; pronunciation is dictionary-backed.</summary>
   </entry>
   <entry>
     <title>einsum — ine sum</title>
     <link href="https://pronounce.renlab.ai/word/einsum"/>
     <id>https://pronounce.renlab.ai/word/einsum</id>
-    <updated>2026-07-05T12:40:33Z</updated>
+    <updated>2026-07-05T13:15:36Z</updated>
     <summary>einsum is pronounced "ine sum" (/ˈaɪnsʌm/). Clip of "Einstein summation" — the tensor-contraction primitive in NumPy/PyTorch/JAX (np.einsum, torch.einsum); NumPy docs confirm it "Evaluates the Einstein summation convention on the operands" (docs state the meaning, not the pronunciation). Stress on the first syllable: INE-sum, where "ein" rhymes with the start of Einstein /aɪn/ (like "wine"). Non-native devs commonly say "EEN-sum" (/iːn/) or "AYN-sum" (/eɪn/, as in "rein"); the German "ei" digraph is /aɪ/, not /iː/ or /eɪ/. Non-obvious because the clipped "ein-" hides its origin in the surname Einstein.</summary>
   </entry>
   <entry>
     <title>Fugatto — foo gah toh</title>
     <link href="https://pronounce.renlab.ai/word/fugatto"/>
     <id>https://pronounce.renlab.ai/word/fugatto</id>
-    <updated>2026-07-05T12:40:33Z</updated>
+    <updated>2026-07-05T13:15:36Z</updated>
     <summary>Fugatto is pronounced "foo gah toh" (/fuˈɡɑːtoʊ/). Fugatto = "Foundational Generative Audio Transformer Opus 1," NVIDIA's Nov-2024 any-to-any generative audio model (text/audio prompts to create or transform music, voice, and sound). Pronounced foo-GAH-toh, stress on the second syllable (GAH = long "ah" as in father), echoing the Italian musical term "fugato" (in the manner of a fugue) — NVIDIA doubled the t for the backronym (Italian speakers note the real word is one-t "fugato"). NVIDIA never published an explicit pronunciation, so this reading is inferred from the fugato etymon (community-consensus, not creator-clarified). Non-native devs commonly flatten it to FOO-gat-oh or few-GAT-oh, misplacing stress and using a short American "a."</summary>
   </entry>
   <entry>
     <title>GEMM — jem</title>
     <link href="https://pronounce.renlab.ai/word/gemm"/>
     <id>https://pronounce.renlab.ai/word/gemm</id>
-    <updated>2026-07-05T12:40:33Z</updated>
+    <updated>2026-07-05T13:15:36Z</updated>
     <summary>GEMM is pronounced "jem" (/dʒɛm/). GEMM stands for GEneral Matrix Multiply, the BLAS Level-3 routine C = αAB + βC and the single most-invoked GPU kernel in deep learning ("fp8 gemm", "grouped gemm"). One syllable, said exactly like the jewel GEM — /dʒɛm/. The double M just comes from the BLAS function names (sgemm/dgemm/cgemm) and is NOT a geminated or hard sound. Non-native devs often mis-say it as spelled-out "G-E-M-M"; it looks like an initialism and the doubled M invites a wrong reading.</summary>
   </entry>
   <entry>
     <title>Horovod — hor uh vahd</title>
     <link href="https://pronounce.renlab.ai/word/horovod"/>
     <id>https://pronounce.renlab.ai/word/horovod</id>
-    <updated>2026-07-05T12:40:33Z</updated>
+    <updated>2026-07-05T13:15:36Z</updated>
     <summary>Horovod is pronounced "hor uh vahd" (/ˈhɔrəvɑd/). Horovod is Uber's open-source distributed deep-learning training framework (TensorFlow, Keras, PyTorch, MXNet) built on the ring-allreduce communication pattern. Uber's engineering blog confirms the name comes from a traditional Russian folk dance in which performers dance with linked arms in a circle — mirroring how the training processes pass gradients around a ring; the blog gives no pronunciation. First-syllable stress (HOR-uh-vahd) is corroborated by community pronunciation guides (e.g. HowToPronounce). Note the Russian original хоровод is actually final-stressed (kho-ro-VOD); English devs anglicize to first-syllable stress, and some mis-guess huh-ROH-vahd (second-syllable).</summary>
   </entry>
   <entry>
     <title>Hume — hyoom</title>
     <link href="https://pronounce.renlab.ai/word/hume"/>
     <id>https://pronounce.renlab.ai/word/hume</id>
-    <updated>2026-07-05T12:40:33Z</updated>
+    <updated>2026-07-05T13:15:36Z</updated>
     <summary>Hume is pronounced "hyoom" (/hjuːm/). Hume AI is an empathic-voice research lab whose flagship product is EVI (Empathic Voice Interface, a speech-to-speech API through EVI 3 in 2025); it is named after the 18th-century Scottish philosopher David Hume and ships a "David Hume" EVI voice. One syllable, stressed HYOOM — a y-glide plus "oom", rhyming with "room" (/hjuːm/), with a silent trailing e. Non-native devs commonly mangle it into two syllables ("HYOO-mee", "HOO-may"); the single-syllable /hjuːm/ is non-obvious because the final e is silent and hu- is a y-glide, not "hoo".</summary>
   </entry>
   <entry>
     <title>Inngest — in jest</title>
     <link href="https://pronounce.renlab.ai/word/inngest"/>
     <id>https://pronounce.renlab.ai/word/inngest</id>
-    <updated>2026-07-05T12:40:33Z</updated>
+    <updated>2026-07-05T13:15:36Z</updated>
     <summary>Inngest is pronounced "in jest" (/ɪnˈdʒɛst/). Inngest is a durable-execution / workflow-orchestration platform for running reliable step functions and orchestrating AI workflows on serverless, servers, or the edge. The name is a stylized spelling of the verb "ingest" (it ingests events), so it is said in-JEST — /ɪnˈdʒɛst/ — with a soft g (dʒ) and stress on the SECOND syllable, identical to "ingest." The extra n is purely cosmetic and does not change the sound. Devs seeing the doubled "nn" often say INN-guest or force a hard g, which is what makes it non-obvious. The ingest pronunciation is a well-supported community inference from the obvious wordplay; no official creator statement on pronunciation was found.</summary>
   </entry>
   <entry>
     <title>Junie — joo nee</title>
     <link href="https://pronounce.renlab.ai/word/junie"/>
     <id>https://pronounce.renlab.ai/word/junie</id>
-    <updated>2026-07-05T12:40:33Z</updated>
+    <updated>2026-07-05T13:15:36Z</updated>
     <summary>Junie is pronounced "joo nee" (/ˈdʒuːni/). Junie is JetBrains' AI coding agent (launched April 2025; moved out of beta to general availability June 17, 2026), running inside JetBrains IDEs (IntelliJ IDEA, PyCharm, WebStorm, GoLand, Rider, CLion, PhpStorm, RubyMine) and as a standalone CLI. Said "JOO-nee" — stress on the first syllable, long "oo" — exactly like the English given name/nickname Junie (as in the children's-book character Junie B. Jones): "June" + "-ee". JetBrains has not published an explicit pronunciation, so this reflects the standard name pronunciation (community consensus), corroborated by HowToPronounce (dʒˈuː.ni) and PronounceNames. Non-native devs are misled by the French-looking "-ie" tail into "joo-NYAY", or read the u with the "fun" vowel as "JUN-ee"; both are wrong. Non-obvious because the spelling doesn't cue the long-"oo" vowel or the front-stressed name.</summary>
   </entry>
   <entry>
     <title>Kiro — keer oh</title>
     <link href="https://pronounce.renlab.ai/word/kiro"/>
     <id>https://pronounce.renlab.ai/word/kiro</id>
-    <updated>2026-07-05T12:40:33Z</updated>
+    <updated>2026-07-05T13:15:36Z</updated>
     <summary>Kiro is pronounced "keer oh" (/ˈkɪroʊ/). Kiro is Amazon/AWS's agentic IDE (2025), centered on spec-driven development: it turns prompts into structured requirements, design, and tasks that AI agents implement. Stress on the first syllable — KEER-oh (/ˈkɪroʊ/). The official About page explicitly says the name "rhymes with hero." Non-native devs are pulled by the spelling toward "KY-roh" (long-i, like gyro or Cairo), which is wrong; the written i maps to a near-/ee/ vowel, not the long-i diphthong.</summary>
   </entry>
   <entry>
     <title>Kokoro — koh koh roh</title>
     <link href="https://pronounce.renlab.ai/word/kokoro"/>
     <id>https://pronounce.renlab.ai/word/kokoro</id>
-    <updated>2026-07-05T12:40:33Z</updated>
+    <updated>2026-07-05T13:15:36Z</updated>
     <summary>Kokoro is pronounced "koh koh roh" (/ˈkoʊkoʊroʊ/). Kokoro is the viral 82M-parameter, Apache-2.0 open-weight TTS model released in 2025 by hexgrad; the name is the Japanese word 心, meaning 'heart'/'spirit'. The even, flat-vowel KOH-koh-roh — matching the original Japanese 心 (ko-ko-ro) — is how practitioners actually say it, and is used here as the primary. The creator's model-card quickstart phonemizes it /kˈOkəɹO/ (Misaki notation, capital O = /oʊ/) = KOH-kuh-roh, with a reduced middle vowel — kept as the cited alternate. Non-native devs commonly stress the middle and add an 'or' vowel ('ko-KOR-oh'), which is wrong; stress stays light and front. Model card verified 2026-07: 82M params, Apache 2.0, name meaning, and the /kˈOkəɹO/ phonemization all present.</summary>
   </entry>
   <entry>
     <title>Le Chat — luh shah</title>
     <link href="https://pronounce.renlab.ai/word/le-chat"/>
     <id>https://pronounce.renlab.ai/word/le-chat</id>
-    <updated>2026-07-05T12:40:33Z</updated>
+    <updated>2026-07-05T13:15:36Z</updated>
     <summary>Le Chat is pronounced "luh shah" (/lə ʃɑ/). Le Chat is Mistral AI's consumer chatbot, a French pun since "chat" means both "chat" and "cat," which went viral in France in early 2025. Say it the French way, luh SHAH: the final t is silent and "ch" is /ʃ/ (like English "sh"). Wikipedia gives strict French /lə ʃa/; American speakers naturally render the vowel as "shah" /ʃɑ/. English devs commonly mangle it as "lee chat" or "luh CHAT" with a hard English "ch" and an audible t. Non-obvious because the spelling looks like the English word "chat," but it is French. (Mistral renamed the app Vibe at the end of May 2026.)</summary>
   </entry>
   <entry>
     <title>Machete — muh shet ee</title>
     <link href="https://pronounce.renlab.ai/word/machete"/>
     <id>https://pronounce.renlab.ai/word/machete</id>
-    <updated>2026-07-05T12:40:33Z</updated>
+    <updated>2026-07-05T13:15:36Z</updated>
     <summary>Machete is pronounced "muh shet ee" (/məˈʃɛti/). Neural Magic's mixed-input (w4a16/w8a16) GEMM kernel in vLLM 0.6.2+, optimized for NVIDIA Hopper GPUs; the spiritual successor to the Marlin kernels. Reuses the common English word 'machete' (the blade; a Spanish loanword). Standard General American puts stress on the second syllable — muh-SHET-ee — with 'ch' pronounced /ʃ/ ('sh') and the final -e as 'ee' /i/, not silent. Merriam-Webster and Wiktionary also list a 'ch' variant /məˈtʃɛti/ (muh-CHET-ee). Devs unfamiliar with the word commonly misread it as 'muh-CHEET' (rhyming with 'machine') or 'MATCH-et'. The source names and describes the kernel but gives no pronunciation guidance, so confidence is community-consensus (standard dictionary word), not creator-clarified.</summary>
   </entry>
   <entry>
     <title>Marey — mair ee</title>
     <link href="https://pronounce.renlab.ai/word/marey"/>
     <id>https://pronounce.renlab.ai/word/marey</id>
-    <updated>2026-07-05T12:40:33Z</updated>
+    <updated>2026-07-05T13:15:36Z</updated>
     <summary>Marey is pronounced "mair ee" (/ˈmɛri/). Marey is Moonvalley's foundational AI video model (beta March 2025, GA July 2025), trained exclusively on licensed footage and marketed as the first "commercially safe" model for professional filmmaking; API available via fal.ai. Named after 19th-century French chronophotographer Étienne-Jules Marey. Fast Company and other press state it is pronounced exactly like the given name "Mary" — MAIR-ee, stress on the first syllable. The common mistake is a French-style "mah-RAY" (/maˈreɪ/) or spelling-based "MAR-ee," non-obvious because the honoree's French surname is [maʁɛ] (ma-REH) yet the product deliberately anglicizes to "Mary."</summary>
   </entry>
   <entry>
     <title>MinIO — min eye oh</title>
     <link href="https://pronounce.renlab.ai/word/minio"/>
     <id>https://pronounce.renlab.ai/word/minio</id>
-    <updated>2026-07-05T12:40:33Z</updated>
+    <updated>2026-07-05T13:15:36Z</updated>
     <summary>MinIO is pronounced "min eye oh" (/mɪnˈaɪoʊ/). MinIO is a high-performance, S3-compatible object-storage server; the name is short for "minimal I/O," so it is said min-EYE-oh — the "IO" is the spelled-out input/output acronym ("eye-oh"). Founder/CEO A.B. (Anand Babu) Periasamy has explicitly stated he wants it known as "Min-IO, as in minimal IO" (TechTarget, verified). The article confirms the common variant: "most people pronounce it MIN-EO" (min-ee-oh, captured as the alt) — devs default to it because "-io" reads like an ordinary word ending rather than a spelled-out acronym.</summary>
   </entry>
   <entry>
     <title>Orpheus — or fee us</title>
     <link href="https://pronounce.renlab.ai/word/orpheus"/>
     <id>https://pronounce.renlab.ai/word/orpheus</id>
-    <updated>2026-07-05T12:40:33Z</updated>
+    <updated>2026-07-05T13:15:36Z</updated>
     <summary>Orpheus is pronounced "or fee us" (/ˈɔːrfiːəs/). Orpheus is Canopy Labs' 2025 open-source, Llama-3b-based TTS model (repo canopyai/Orpheus-TTS; HF canopylabs/orpheus-3b-*), named after the legendary Greek bard-musician. Stress on the first syllable: OR-fee-us. Non-native devs often shift stress (or-FEE-us) or read 'ph' as /p/ ('OR-pee-us'); 'ph' is /f/ and the accent stays up front. Non-obvious because the classical name is unfamiliar and 'eu' invites a false /juː/ reading — a rarer two-syllable variant OR-fyoos /ˈɔːrfjuːs/ does exist, but OR-fee-us is dominant.</summary>
   </entry>
   <entry>
     <title>Phind — find</title>
     <link href="https://pronounce.renlab.ai/word/phind"/>
     <id>https://pronounce.renlab.ai/word/phind</id>
-    <updated>2026-07-05T12:40:33Z</updated>
+    <updated>2026-07-05T13:15:36Z</updated>
     <summary>Phind is pronounced "find" (/faɪnd/). Phind was an AI search engine and coding assistant built for developers (YC S22, founded by Michael Royzen and Justin Wei; the product went inactive in early 2026). The name is a play on "find," with "Ph" taking the F sound as in "phone" — a single stressed syllable, FIND (/faɪnd/), a homophone of the word "find." Non-native devs sometimes misread the unusual "Ph"-before-consonant spelling as "P-hind" or split it into two syllables; it is simply pronounced identically to "find." Corroborated by a Latent Space podcast where founder Michael Royzen's spoken "Phind" is transcribed as "Find." The pronunciation is universally understood but not explicitly stated in any official source, hence community-consensus.</summary>
   </entry>
   <entry>
     <title>Qodo — koh doh</title>
     <link href="https://pronounce.renlab.ai/word/qodo"/>
     <id>https://pronounce.renlab.ai/word/qodo</id>
-    <updated>2026-07-05T12:40:33Z</updated>
+    <updated>2026-07-05T13:15:36Z</updated>
     <summary>Qodo is pronounced "koh doh" (/ˈkoʊdoʊ/). Qodo (formerly CodiumAI/Codium, rebranded 2024) is an AI code-review and test-generation agent platform. Its official rebrand blog confirms the name is a confluence of "Quality" and "Code" (and "quality of development") — but the blog does NOT state a pronunciation. Said KOH-doh: first syllable like "code," stress on syllable one. Pronunciation is community consensus (howtopronounce lists /ˈkoʊdoʊ/, "koh-doh"), consistent with the "Code" root — not an explicit creator statement. Non-native devs, thrown by a bare Q with no following U, often overcorrect to KWOH-doh (treating Q like "queen"/"quick"), but no /kw/ glide belongs here — this Q is a stylized C, not a normal English Q.</summary>
   </entry>
   <entry>
     <title>ROCm — rahk em</title>
     <link href="https://pronounce.renlab.ai/word/rocm"/>
     <id>https://pronounce.renlab.ai/word/rocm</id>
-    <updated>2026-07-05T12:40:33Z</updated>
+    <updated>2026-07-05T13:15:36Z</updated>
     <summary>ROCm is pronounced "rahk em" (/ˈrɑkəm/). ROCm is AMD's open-source GPU-compute software stack — the CUDA equivalent — and the runtime behind AI training/inference on Instinct accelerators (e.g. MI300X). Said "ROCK-em" (/ˈrɑkəm/): stress on the first syllable, trailing lowercase 'm' voiced as a light "em" (never spelled out); "rock-M" is effectively the same sound. Common mistakes: reading it letter-by-letter (R-O-C-M) or giving "rock" a wrong vowel ("Rockham"/"Rockcam"). Non-obvious because the lowercase 'm' disguises the origin "Radeon Open Compute (platform)"; per Wikipedia the name no longer functions as a true acronym (Open Compute is a registered trademark).</summary>
   </entry>
   <entry>
     <title>Rodin — roh dan</title>
     <link href="https://pronounce.renlab.ai/word/rodin"/>
     <id>https://pronounce.renlab.ai/word/rodin</id>
-    <updated>2026-07-05T12:40:33Z</updated>
+    <updated>2026-07-05T13:15:36Z</updated>
     <summary>Rodin is pronounced "roh dan" (/roʊˈdæn/). Rodin (Hyper3D Rodin) is Deemos Technology's image-to-3D and text-to-3D generative model (2024-2025), named after French sculptor Auguste Rodin. Anglicized as roh-DAN: stress on the SECOND syllable, final '-DAN' rhyming with the name Dan (/dæn/), per Wikipedia's English IPA /roʊˈdæn/. Non-native devs wrongly read it as 'ROH-din' or 'ROD-in' with English spelling stress; it's non-obvious because the French-derived name stresses the final syllable and its nasal ending anglicizes to '-an' rather than '-in'.</summary>
   </entry>
   <entry>
     <title>SYCL — sik uhl</title>
     <link href="https://pronounce.renlab.ai/word/sycl"/>
     <id>https://pronounce.renlab.ai/word/sycl</id>
-    <updated>2026-07-05T12:40:33Z</updated>
+    <updated>2026-07-05T13:15:36Z</updated>
     <summary>SYCL is pronounced "sik uhl" (/ˈsɪkəl/). SYCL is a Khronos Group royalty-free C++ standard for heterogeneous/accelerator (GPU) computing, central to Intel oneAPI and CUDA-to-SYCL porting. Pronounced SICK-ul (/ˈsɪkəl/) — a deliberate homophone of the farming tool "sickle" — with stress on the first syllable. Non-native devs commonly spell it out "S-Y-C-L" or say "SY-cull" (/ˈsaɪkəl/), missing that the two-syllable name reads like a real English word. Originally "System-wide Compute Language"; since 2020 the creators state it is a name, not an acronym. Pronunciation documented on Wikipedia; no creator/official pronunciation quote located, so labeled community-consensus.</summary>
   </entry>
   <entry>
     <title>Ulysses — yoo liss eez</title>
     <link href="https://pronounce.renlab.ai/word/ulysses"/>
     <id>https://pronounce.renlab.ai/word/ulysses</id>
-    <updated>2026-07-05T12:40:33Z</updated>
+    <updated>2026-07-05T13:15:36Z</updated>
     <summary>Ulysses is pronounced "yoo liss eez" (/juːˈlɪsiːz/). DeepSpeed-Ulysses is Microsoft's sequence-parallelism system for training extreme-long-context Transformers — it partitions input sequences across GPUs and uses an all-to-all collective for distributed attention (arXiv:2309.14509). "Ulysses" is the Latin name for Homer's Odysseus. Primary stress is on the second syllable: yoo-LISS-eez. Non-native devs commonly mangle it as "oo-LISS-es," missing that the initial U is /juː/ ("yoo") and the -es ending is /iːz/ ("eez"). A first-syllable-stress variant (YOO-lih-seez) exists but the second-syllable reading dominates. Non-obvious because it is a classical proper name with irregular English vowels, yet cited constantly in long-context training papers.</summary>
   </entry>
   <entry>
     <title>Vapi — vappy</title>
     <link href="https://pronounce.renlab.ai/word/vapi"/>
     <id>https://pronounce.renlab.ai/word/vapi</id>
-    <updated>2026-07-05T12:40:33Z</updated>
+    <updated>2026-07-05T13:15:36Z</updated>
     <summary>Vapi is pronounced "vappy" (/ˈvæpi/). Vapi (YC W21, vapi.ai) is a developer platform for building voice AI agents; co-founded by Jordan Dearsley (CEO) and Nikhil Gupta (CTO) — not a single founder. The name compresses "Voice API" (every feature is accessible via its API), confirmed by multiple sources. Stress falls on the FIRST syllable with a short /æ/: VAP-ee, rhyming with "happy" (/ˈvæpi/); corroborated by HowToPronounce (/vˈæ.pi/, "va-pee"). No official creator pronunciation statement was found, so confidence stays community-consensus. Non-native devs often default to "VAH-pee" (/ˈvɑpi/) or "VAY-pie" (/ˈveɪpaɪ/) because the bare letters V-A-P-I don't cue the short /æ/. For macOS say, respell as "vappy" for a reliable short-a.</summary>
   </entry>
   <entry>
     <title>Vidu — vee doo</title>
     <link href="https://pronounce.renlab.ai/word/vidu"/>
     <id>https://pronounce.renlab.ai/word/vidu</id>
-    <updated>2026-07-05T12:40:33Z</updated>
+    <updated>2026-07-05T13:15:36Z</updated>
     <summary>Vidu is pronounced "vee doo" (/ˈviːduː/). Vidu is the text-to-video AI model from Beijing Shengshu Technology and Tsinghua University (launched April 2024; Vidu Q1 shipped 2025). Stress falls on the FIRST syllable: VEE-doo. Shengshu chief scientist Zhu Jun explained at the 2024 Zhongguancun Forum that the name evokes "video" and the phrase "we do." Common mistake: non-native devs read it as VY-doo (long-i, as in "vie") or VID-oo (short-i, as in "video"); the correct branded vowel is a long /iː/, which is non-obvious because English "video" actually starts with a short-i /vɪd/.</summary>
   </entry>
 </feed>
