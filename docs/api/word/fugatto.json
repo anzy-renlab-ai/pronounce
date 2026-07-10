@@ -11,5 +11,5 @@
   "notes": "Fugatto = \"Foundational Generative Audio Transformer Opus 1,\" NVIDIA's Nov-2024 any-to-any generative audio model (text/audio prompts to create or transform music, voice, and sound). Pronounced foo-GAH-toh, stress on the second syllable (GAH = long \"ah\" as in father), echoing the Italian musical term \"fugato\" (in the manner of a fugue) — NVIDIA doubled the t for the backronym (Italian speakers note the real word is one-t \"fugato\"). NVIDIA never published an explicit pronunciation, so this reading is inferred from the fugato etymon (community-consensus, not creator-clarified). Non-native devs commonly flatten it to FOO-gat-oh or few-GAT-oh, misplacing stress and using a short American \"a.\"",
   "audio_url": "https://pronounce.renlab.ai/audio/fugatto.mp3",
   "url": "https://pronounce.renlab.ai/word/fugatto",
-  "date_modified": "2026-07-05"
+  "date_modified": "2026-07-10"
 }

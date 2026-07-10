@@ -11,5 +11,5 @@
   "notes": "Meta's image self-supervised model (Image JEPA); the 'I' is the letter 'eye' /aɪ/ and JEPA is one word /ˈdʒɛpə/ rhyming with 'pepper', so 'eye-JEP-uh' — the way LeCun voices the suffix. Predicts in latent space, not pixels.",
   "audio_url": "https://pronounce.renlab.ai/audio/i-jepa.mp3",
   "url": "https://pronounce.renlab.ai/word/i-jepa",
-  "date_modified": "2026-07-05"
+  "date_modified": "2026-07-10"
 }

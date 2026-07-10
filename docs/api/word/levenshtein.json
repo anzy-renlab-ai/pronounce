@@ -11,5 +11,5 @@
   "notes": "Named after Soviet/Russian mathematician Vladimir Levenshtein (Russian: Левенштейн), who defined the edit-distance metric in 1965 — bread-and-butter in NLP, spell-checkers, fuzzy search, and bioinformatics. The German/Yiddish-orthography '-stein' is the trap: the standard English reading rhymes 'stein' with 'mine' (like Einstein), giving LEV-en-shtine — stress on the FIRST syllable, 'sht' cluster kept intact. Many devs instead say LEV-en-STEEN / LEE-ven-steen (sounding the 's' separately, '-steen' like the recurring 'Bernstein' debate) or stress the middle syllable. The 'sh' before the 't' is what most often gets dropped.",
   "audio_url": "https://pronounce.renlab.ai/audio/levenshtein.mp3",
   "url": "https://pronounce.renlab.ai/word/levenshtein",
-  "date_modified": "2026-07-05"
+  "date_modified": "2026-07-10"
 }

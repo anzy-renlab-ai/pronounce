@@ -11,5 +11,5 @@
   "notes": "SYCL is a Khronos Group royalty-free C++ standard for heterogeneous/accelerator (GPU) computing, central to Intel oneAPI and CUDA-to-SYCL porting. Pronounced SICK-ul (/ˈsɪkəl/) — a deliberate homophone of the farming tool \"sickle\" — with stress on the first syllable. Non-native devs commonly spell it out \"S-Y-C-L\" or say \"SY-cull\" (/ˈsaɪkəl/), missing that the two-syllable name reads like a real English word. Originally \"System-wide Compute Language\"; since 2020 the creators state it is a name, not an acronym. Pronunciation documented on Wikipedia; no creator/official pronunciation quote located, so labeled community-consensus.",
   "audio_url": "https://pronounce.renlab.ai/audio/sycl.mp3",
   "url": "https://pronounce.renlab.ai/word/sycl",
-  "date_modified": "2026-07-05"
+  "date_modified": "2026-07-10"
 }

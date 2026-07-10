@@ -11,5 +11,5 @@
   "notes": "Google's HTTP compression algorithm (Content-Encoding: br), now supported in all major browsers. Named after the Swiss German word 'Brötli' meaning a small bread roll — sibling to Google's earlier 'Zopfli' (also a Swiss bakery product). Most English speakers say BROHT-lee (stress on BROHT, long o); some say BROT-lee with a short o. Two syllables: BROHT + lee — the 'tli' is one syllable, not 'tuh-lee'. The umlaut 'ö' of the original 'Brötli' is dropped in the ASCII spelling, which is part of what makes the word look harder than it sounds. Common mistakes: broh-TLEE (stress on the wrong syllable) or reading '-tli' as two syllables. Stress is on the first syllable.",
   "audio_url": "https://pronounce.renlab.ai/audio/brotli.mp3",
   "url": "https://pronounce.renlab.ai/word/brotli",
-  "date_modified": "2026-07-05"
+  "date_modified": "2026-07-10"
 }

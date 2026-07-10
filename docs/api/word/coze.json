@@ -11,5 +11,5 @@
   "notes": "Coze (Chinese 扣子, kòuzi, \"button\") is ByteDance's no-code AI agent and chatbot-building platform, launched in 2024 (open-source Coze Studio at github.com/coze-dev/coze-studio; coze.com). It is ONE syllable, KOHZ — identical to the rare/literary English verb \"coze\" (\"to chat cozily\"), rhyming with \"doze\" and \"rose\"; the trailing \"e\" is silent and there is no second vowel. Non-native devs routinely misread the -oze/-e ending as a two-syllable \"CO-zee\" (like \"cozy\"), which is wrong. It is non-obvious because the spelling looks like it should split, and the Chinese source name kòuzi actually does have two syllables. Pronunciation confirmed against Merriam-Webster (/ˈkōz/) and Dictionary.com (/koʊz/, respelling [kohz], one syllable); no official ByteDance pronunciation statement was found, hence community-consensus rather than creator-clarified.",
   "audio_url": "https://pronounce.renlab.ai/audio/coze.mp3",
   "url": "https://pronounce.renlab.ai/word/coze",
-  "date_modified": "2026-07-05"
+  "date_modified": "2026-07-10"
 }

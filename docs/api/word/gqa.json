@@ -11,5 +11,5 @@
   "notes": "Grouped-Query Attention — the default attention in Llama 2/3, Qwen, Gemma, GPT-OSS. Read as an initialism, letter by letter: G-Q-A, jee-kyoo-AY, STRESS on the final letter. Said-as-a-word never caught on because the Q has no following vowel, so spelling it out is the dominant convention in papers, model cards, and talks.",
   "audio_url": "https://pronounce.renlab.ai/audio/gqa.mp3",
   "url": "https://pronounce.renlab.ai/word/gqa",
-  "date_modified": "2026-07-05"
+  "date_modified": "2026-07-10"
 }

@@ -11,5 +11,5 @@
   "notes": "Tune a learned prefix prepended to each layer's keys/values.",
   "audio_url": "https://pronounce.renlab.ai/audio/prefix-tuning.mp3",
   "url": "https://pronounce.renlab.ai/word/prefix-tuning",
-  "date_modified": "2026-07-05"
+  "date_modified": "2026-07-10"
 }

@@ -11,5 +11,5 @@
   "notes": "Three syllables: BEZ-ee-ay, with the final '-ier' as the French /je/ → 'yay/ay' and a SILENT 'r'. Named after French engineer Pierre Bézier (French [bezje]); anglicized to 'BEZ-ee-ay' (Wikipedia also lists 'BEH-zee-ay', /ˈbɛz.i.eɪ/). Hugely common in front-end and graphics work — every CSS author meets cubic-bezier() and SVG path Béziers — yet it's routinely mispronounced 'BEEZ-ee-er' or 'BEZ-yer' with a hard, sounded 'r'. The accent on the é is also dropped in code (cubic-bezier), reinforcing the wrong reading. Stress is on the first syllable (BEZ); the alt form moves emphasis to the final 'AY'.",
   "audio_url": "https://pronounce.renlab.ai/audio/bezier.mp3",
   "url": "https://pronounce.renlab.ai/word/bezier",
-  "date_modified": "2026-07-05"
+  "date_modified": "2026-07-10"
 }

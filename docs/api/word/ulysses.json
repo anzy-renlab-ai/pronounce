@@ -11,5 +11,5 @@
   "notes": "DeepSpeed-Ulysses is Microsoft's sequence-parallelism system for training extreme-long-context Transformers — it partitions input sequences across GPUs and uses an all-to-all collective for distributed attention (arXiv:2309.14509). \"Ulysses\" is the Latin name for Homer's Odysseus. Primary stress is on the second syllable: yoo-LISS-eez. Non-native devs commonly mangle it as \"oo-LISS-es,\" missing that the initial U is /juː/ (\"yoo\") and the -es ending is /iːz/ (\"eez\"). A first-syllable-stress variant (YOO-lih-seez) exists but the second-syllable reading dominates. Non-obvious because it is a classical proper name with irregular English vowels, yet cited constantly in long-context training papers.",
   "audio_url": "https://pronounce.renlab.ai/audio/ulysses.mp3",
   "url": "https://pronounce.renlab.ai/word/ulysses",
-  "date_modified": "2026-07-05"
+  "date_modified": "2026-07-10"
 }

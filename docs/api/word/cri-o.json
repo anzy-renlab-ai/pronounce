@@ -11,5 +11,5 @@
   "notes": "Lightweight CNCF Kubernetes container runtime; default runtime in OpenShift. The name derives from CRI (Container Runtime Interface) plus OCI (Open Container Initiative) — confirmed by Red Hat's announcement. Common community reading is 'CRY-oh': read 'CRI' as the word 'cry', then 'oh'. Stress on CRY. Common mispronunciations: spelling it out letter-by-letter 'C-R-I-O', or 'CREE-oh'. No official/maintainer doc states the pronunciation, so this is community usage rather than a creator clarification.",
   "audio_url": "https://pronounce.renlab.ai/audio/cri-o.mp3",
   "url": "https://pronounce.renlab.ai/word/cri-o",
-  "date_modified": "2026-07-05"
+  "date_modified": "2026-07-10"
 }

@@ -11,5 +11,5 @@
   "notes": "Google's data-templating / configuration language (common in Kubernetes / infra tooling). The official site states verbatim: \"The name Jsonnet is a portmanteau of JSON and sonnet, pronounced 'jay sonnet'.\" So it's JAY (from JSON's 'jay-son') overlapping into SONNET — three syllables JAY-SON-it, primary stress on JAY (like JSON itself). Note the General American 'sonnet' vowel is /ɑː/, not British /ɒ/. Common mistakes: 'jay-SO-net', 'juh-SON-et', or reading it like the French name 'Jeannette'. The intended reading bakes in JSON (jay-son) + sonnet.",
   "audio_url": "https://pronounce.renlab.ai/audio/jsonnet.mp3",
   "url": "https://pronounce.renlab.ai/word/jsonnet",
-  "date_modified": "2026-07-05"
+  "date_modified": "2026-07-10"
 }

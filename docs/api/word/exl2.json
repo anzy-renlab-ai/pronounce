@@ -11,5 +11,5 @@
   "notes": "Mixed-bitrate quantization format native to the ExLlamaV2 (turboderp) local-LLM inference library; the name is a contraction of ExLlamaV2 (EX-L + 2). Spelled out letter-by-letter \"E-X-L-TWO\" in local-LLM communities, not read as \"excel-two\". STRESS on TWO. File extension/suffix seen as .exl2 on Hugging Face quants.",
   "audio_url": "https://pronounce.renlab.ai/audio/exl2.mp3",
   "url": "https://pronounce.renlab.ai/word/exl2",
-  "date_modified": "2026-07-05"
+  "date_modified": "2026-07-10"
 }
