@@ -28,6 +28,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="/v2/styles.css">
@@ -39,9 +40,11 @@
 {"@context":"https://schema.org","@type":"WebSite","name":"Pronounce","description":"Community pronunciation dictionary for developer project and product names.","url":"https://pronounce.renlab.ai/","potentialAction":{"@type":"SearchAction","target":"https://pronounce.renlab.ai/browse?q={search_term_string}","query-input":"required name=search_term_string"}}
 </script>
 
-<!-- React 18 production builds. JSX precompiled via esbuild into bundle.js (no in-browser Babel). -->
-<script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
-<script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<!-- React 18 production builds. JSX precompiled via esbuild into bundle.js (no in-browser Babel).
+     All four scripts are `defer`red so they don't block first paint; defer preserves
+     document order (react → react-dom → data → bundle), so globals resolve correctly. -->
+<script defer crossorigin src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+<script defer crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
@@ -59,9 +62,9 @@
 </noscript>
 
 <!-- Data (auto-generated from data/pronunciations.tsv via tools/build-v2-data.py) -->
-<script src="/v2/data.js"></script>
+<script defer src="/v2/data.js"></script>
 
 <!-- App bundle (audio + sections + eggs + app concatenated, esbuild-compiled) -->
-<script src="/v2/bundle.js"></script>
+<script defer src="/v2/bundle.js"></script>
 </body>
 </html>

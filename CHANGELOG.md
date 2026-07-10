@@ -1,5 +1,13 @@
 # Changelog
 
+## v2.20.0 — 2026-07-10
+
+**Site hardening — no new entries (holds at 1,790).** The second half of the three-reviewer pass: the two highest-impact site defects Claude's workflow found.
+
+### Fixed
+- **Service worker never delivered fixes to returning visitors.** `docs/sw.js` had a hardcoded `CACHE_NAME='pronounce-v1'` and cached `/`, `/browse.html`, CSS, JS, and every `/word/` page **cache-first** — so anyone who had ever loaded a page was pinned forever to the bytes they first cached; corrected pronunciations, new words, and restyles silently never reached them. And because the file's bytes never changed, the browser never saw a new worker, so the old cache was never purged. Now `build-site.sh` **emits `sw.js` each build** with a `CACHE_NAME` stamped from a content hash (shell CSS/JS + dictionary + build script) — it changes iff the served content changes, so every deploy makes a fresh cache and `activate` purges the stale one. Strategy is now **stale-while-revalidate** for HTML/CSS/JS/word pages (instant + offline, but refreshes in the background), **cache-first** only for immutable `/audio` + `/og`, and pass-through for `/api` + `/_vercel` + cross-origin. Verified end-to-end (installs → activates → creates the versioned cache; routing unit-tested).
+- **Homepage blocked first paint on a third-party CDN.** `docs/index.html` pulled React + ReactDOM from `unpkg.com` render-blocking with no preconnect and no fallback — a slow/down unpkg meant a blank homepage for every JS visitor. Added `<link rel=preconnect href=https://unpkg.com>` and `defer`red all four scripts (react → react-dom → data → bundle, order preserved by spec). Verified the app still mounts (`#root` populated) headless.
+
 ## v2.19.0 — 2026-07-10
 
 **Quality / cross-platform release — no new entries (holds at 1,790).** A three-reviewer pass (Claude workflow + Codex CLI + Kiro CLI) surfaced real cross-platform defects and metadata drift; this ships the verified, low-risk fixes.
