@@ -16,3 +16,20 @@ marketplace.env
 
 # OS cruft
 .DS_Store
+
+# Non-runtime bulk — the Codex plugin only needs plugin.json, assets/icon.svg,
+# .mcp.json and skills/. Everything below is generated site output, datasets,
+# promo material, or build tooling that would otherwise balloon the package
+# (docs/ alone is ~146MB). Keep these out of the published plugin.
+docs/
+pitch/
+hf-dataset/
+.indexnow/
+.vercel/
+tools/
+assets/*.png
+CHANGELOG.md
+LAUNCH.md
+LAUNCH-READY.md
+IDEAS.md
+DESIGN.md

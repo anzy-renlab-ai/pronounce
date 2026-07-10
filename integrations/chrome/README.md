@@ -1,6 +1,6 @@
 # Pronounce — Chrome / Edge / Brave extension
 
-Hover any tech word on any web page — hear how engineers actually say it. 851-entry sourced dictionary, the same one that powers the [CLI](../../bin/say-it), [VS Code extension](https://open-vsx.org/extension/sayit/pronounce), and [Pronounce.ai](https://pronounce.renlab.ai/).
+Hover any tech word on any web page — hear how engineers actually say it. 1790-entry sourced dictionary, the same one that powers the [CLI](../../bin/say-it), [VS Code extension](https://open-vsx.org/extension/sayit/pronounce), and [Pronounce.ai](https://pronounce.renlab.ai/).
 
 > **Sideload only** (v0.1). The extension is not yet on the Chrome Web Store — load it unpacked or as a `.zip`.
 
@@ -17,7 +17,7 @@ The 🔊 Pronounce icon should appear in the toolbar. Click it for a search popu
 ## What it does
 
 - **Click any tech word** on any web page (default mode). A tooltip shows IPA, English-style respelling, both readings if contested, the source citation, and a 🔊 Play button (Web Speech API).
-- **Toolbar popup** — fuzzy-search all 851 entries with `↑↓ Enter`.
+- **Toolbar popup** — fuzzy-search all 1790 entries with `↑↓ Enter`.
 - **Settings**: click → options → toggle on/off, switch trigger to Alt/⌘+click only, change speech rate.
 
 ## Privacy

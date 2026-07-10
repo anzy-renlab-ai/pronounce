@@ -1,5 +1,26 @@
 # Changelog
 
+## v2.19.0 — 2026-07-10
+
+**Quality / cross-platform release — no new entries (holds at 1,790).** A three-reviewer pass (Claude workflow + Codex CLI + Kiro CLI) surfaced real cross-platform defects and metadata drift; this ships the verified, low-risk fixes.
+
+### Fixed
+- **CLI now actually works off macOS.** `[[slnc N]]` pause markup is macOS `say`-only — it was leaking into the espeak/PowerShell backends and being spoken/garbled as literal "slnc 400". Now stripped inside the `tts_speak`/`tts_save` funnel for every non-`say` backend, so Linux/Windows audio is clean.
+- **Windows `say-it <word>` produced no audio at all.** The default-play path forced `tts_save`, which the PowerShell SAPI backend can't do → under `set -e` the script aborted before playback. Added a `tts_can_save` guard that falls back to speaking live when the backend can't render to a file.
+- **Installer no longer hard-blocks Linux/Windows.** `install.sh` `exit 2`-ed on any non-Darwin host claiming "only works on macOS" — stale since the CLI went cross-platform in v0.3. Now installs everywhere and only *warns* when no TTS backend is detected.
+
+### Changed
+- **Chrome extension dictionary regenerated 851 → 1,790 entries** from `data/pronunciations.tsv` via the new, reusable `tools/build-chrome-dict.py` (which also stamps the count into the manifest + README so it can't drift again). Extension bumped to 0.2.0.
+- **`.codex-plugin/plugin.json`** version 2.12.0 → 2.19.0 (was 6 releases stale in the Codex marketplace listing).
+- **`.codexignore`** now excludes `docs/`, `pitch/`, `hf-dataset/`, and build tooling — the published Codex plugin no longer bundles ~150 MB of non-runtime files.
+- **`mcp-server/pyproject.toml`** pins `mcp>=1.0.0,<2` so a future major `mcp` release can't silently break uvx-launched MCP clients.
+- **`integrations/vscode/package-lock.json`** root version synced 0.6.3 → 1.0.2 to match `package.json`.
+
+### Tooling
+- **`tools/lint-dict.sh`** gained a count-consistency check (step 6/6): fails loud if `README.md`, `.codex-plugin/plugin.json`, or `mcp-server/server.json` stop advertising the current TSV entry count — the drift bug that bit v2.16.0.
+
+_Known follow-up (deferred to a site-hardening release): `docs/sw.js` never revalidates so returning visitors are pinned to first-cached pages; the homepage loads React render-blocking from unpkg. Publishing `pronounce-mcp` to PyPI (to collapse the ~repo-sized uvx cold-start clone) is queued behind a one-time pypi.org publisher setup._
+
 ## v2.18.0 — 2026-07-04
 
 **+28 entries — 2025-2026 AI product/model names + ML-systems & tooling jargon** (1,762 → 1,790). The names devs now say aloud in standups and PRs but routinely mispronounce — new TTS/video models, AI coding agents, and the GPU-compute stack.

@@ -3,21 +3,23 @@
 # and the Claude Code skill into place.
 set -e
 
-# --- OS gate -----------------------------------------------------------------
-# The current backend uses macOS `say`. Windows + Linux are roadmap.
-if [[ "$(uname -s)" != "Darwin" ]]; then
+# --- TTS backend check (advisory, non-blocking) ------------------------------
+# The CLI is cross-platform: macOS `say`, Linux `espeak-ng`/`espeak`, Windows
+# PowerShell System.Speech. Install proceeds everywhere; we only warn when no
+# backend is present so audio playback still has a hint on how to enable it.
+# (Text-only modes — --why / --json / --md — work with no backend at all.)
+if ! command -v say >/dev/null 2>&1 \
+   && ! command -v espeak-ng >/dev/null 2>&1 \
+   && ! command -v espeak >/dev/null 2>&1 \
+   && ! command -v powershell.exe >/dev/null 2>&1; then
   cat >&2 <<EOF
-say-it: this release only works on macOS (uses the built-in \`say\` TTS).
-        Detected: $(uname -s).
-
-Windows (PowerShell + System.Speech) and Linux (espeak-ng / cloud TTS)
-backends are on the roadmap. Track or contribute:
-  https://github.com/anzy-renlab-ai/pronounce
-
-To force install anyway (CLI will exit on first invocation), run:
-  SAY_IT_FORCE=1 ./install.sh
+say-it: no TTS backend detected on $(uname -s) — installing anyway.
+        To hear pronunciations, install one:
+          Linux:   sudo apt install espeak-ng   (or yum/pacman/brew)
+          Windows: PowerShell (built into modern Windows)
+          macOS:   built-in \`say\` (should already be present)
+        Text-only modes (--why, --json, --md) work without a backend.
 EOF
-  if [[ "${SAY_IT_FORCE:-0}" != "1" ]]; then exit 2; fi
 fi
 
 PREFIX="${PREFIX:-$HOME/.local}"

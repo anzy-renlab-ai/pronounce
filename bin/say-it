@@ -11,7 +11,7 @@
 # text. Respelling rides the TTS's built-in letter-to-sound rules.
 set -e
 
-VERSION="1.0.0"
+VERSION="1.1.0"
 VOICE="Samantha"
 TIMES=3
 RATE=130
@@ -55,6 +55,9 @@ fi
 # Speaks the text using the detected backend at the given rate (default $RATE).
 tts_speak() {
   local _text="$1" _rate="${2:-$RATE}"
+  # `[[slnc N]]` pause markup is macOS `say`-only; on espeak/PowerShell it would
+  # be spoken/garbled as literal text. Strip it for every non-`say` backend.
+  [[ "$TTS_BACKEND" != say ]] && _text="$(printf '%s' "$_text" | sed -E 's/\[\[[^]]*\]\]//g')"
   case "$TTS_BACKEND" in
     say)        say -v "$VOICE" -r "$_rate" "$_text" 2>/dev/null ;;
     espeak-ng)  espeak-ng -v en-us -s "$_rate" "$_text" 2>/dev/null ;;
@@ -80,6 +83,7 @@ tts_speak() {
 # Saves the rendered audio to a file. AIFF on macOS, WAV elsewhere.
 tts_save() {
   local _text="$1" _out="$2"
+  [[ "$TTS_BACKEND" != say ]] && _text="$(printf '%s' "$_text" | sed -E 's/\[\[[^]]*\]\]//g')"
   case "$TTS_BACKEND" in
     say)        say -v "$VOICE" -r "$RATE" -o "$_out" "$_text" 2>/dev/null ;;
     espeak-ng)  espeak-ng -v en-us -s "$RATE" -w "$_out" "$_text" 2>/dev/null ;;
@@ -87,6 +91,16 @@ tts_save() {
     *)
       echo "say-it: --output not supported on this TTS backend." >&2
       return 1 ;;
+  esac
+}
+
+# tts_can_save — true if the active backend can render audio to a file.
+# PowerShell SAPI (default Windows path) cannot, so callers must fall back to
+# speaking live instead of routing through the file cache.
+tts_can_save() {
+  case "$TTS_BACKEND" in
+    say|espeak-ng|espeak) return 0 ;;
+    *) return 1 ;;
   esac
 }
 
@@ -1087,16 +1101,19 @@ if [[ -n "$SAVE" ]]; then
   echo "Saved: $SAVE"
 else
   mkdir -p "$CACHE_DIR" 2>/dev/null || true
-  CACHED="$(cache_path "$BODY")"
-  if [[ -f "$CACHED" && -s "$CACHED" ]]; then
-    audio_play "$CACHED"
-  else
-    if [[ -d "$CACHE_DIR" && -w "$CACHE_DIR" ]]; then
-      tts_save "$BODY" "$CACHED"
+  if tts_can_save && [[ -d "$CACHE_DIR" && -w "$CACHE_DIR" ]]; then
+    CACHED="$(cache_path "$BODY")"
+    if [[ -f "$CACHED" && -s "$CACHED" ]]; then
+      audio_play "$CACHED"
+    elif tts_save "$BODY" "$CACHED"; then
       audio_play "$CACHED"
     else
       tts_speak "$BODY"
     fi
+  else
+    # Backend can't render to a file (e.g. Windows PowerShell) — speak live so
+    # `say-it <word>` still produces audio instead of aborting under `set -e`.
+    tts_speak "$BODY"
   fi
 fi
 
