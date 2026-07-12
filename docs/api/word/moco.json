@@ -11,5 +11,5 @@
   "notes": "FAIR contrastive SSL with a momentum-updated encoder and a queue of negatives; a blend of MOmentum + COntrast, said as a word — 'MOH-koh'.",
   "audio_url": "https://pronounce.renlab.ai/audio/moco.mp3",
   "url": "https://pronounce.renlab.ai/word/moco",
-  "date_modified": "2026-07-12"
+  "date_modified": "2026-06-28"
 }

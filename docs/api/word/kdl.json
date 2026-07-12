@@ -11,5 +11,5 @@
   "notes": "The KDL Document Language (a config/serialization format, kdl.dev). The official FAQ answers the pronunciation question with simply \"Same as 'cuddle'.\" Stress on CUH. Almost everyone defaults to spelling it out 'K-D-L' on first encounter; the maintainers deliberately want it said like the word cuddle (one implementation is even named 'cuddle'). Created by the kdl-org community (Kat Marchán et al.).",
   "audio_url": "https://pronounce.renlab.ai/audio/kdl.mp3",
   "url": "https://pronounce.renlab.ai/word/kdl",
-  "date_modified": "2026-07-12"
+  "date_modified": "2026-06-18"
 }

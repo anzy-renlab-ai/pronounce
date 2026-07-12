@@ -372,8 +372,8 @@ def navbar(prefix: str) -> str:
     <div class="brand"><a href="{prefix}/">🔊 {BRAND}</a></div>
     <div class="links">
       <a href="{prefix}/browse">Browse all</a>
-      <a href="{prefix}/collection/">Collections</a>
-      <a href="{prefix}/compare/">Compare</a>
+      <a href="{prefix}/collection">Collections</a>
+      <a href="{prefix}/compare">Compare</a>
       <a href="{prefix}/quiz">Quiz</a>
       <a href="{prefix}/zh" hreflang="zh-Hans" lang="zh-Hans">中文</a>
       <a href="https://github.com/{GH_REPO}">GitHub</a>
@@ -492,7 +492,7 @@ def emit_collection(coll: dict, by_slug: dict, out_dir: Path) -> None:
                 "@type": "BreadcrumbList",
                 "itemListElement": [
                     {"@type": "ListItem", "position": 1, "name": BRAND, "item": f"{SITE_URL}/"},
-                    {"@type": "ListItem", "position": 2, "name": "Collections", "item": f"{SITE_URL}/collection/"},
+                    {"@type": "ListItem", "position": 2, "name": "Collections", "item": f"{SITE_URL}/collection"},
                     {"@type": "ListItem", "position": 3, "name": coll["title"], "item": canonical},
                 ],
             },
@@ -510,7 +510,7 @@ def emit_collection(coll: dict, by_slug: dict, out_dir: Path) -> None:
     html += f'  <div class="gh-banner">⭐ <a href="https://github.com/{GH_REPO}">Star on GitHub</a> — community pronunciation dictionary</div>\n'
     html += navbar("..")
     html += f"""  <div class="container-narrow word-page">
-    <p style="font-size: 13px; color: var(--muted);"><a href="/collection/">← All collections</a></p>
+    <p style="font-size: 13px; color: var(--muted);"><a href="/collection">← All collections</a></p>
     <h1>{esc(coll["h1"])}</h1>
     <p class="subtitle" style="margin-bottom: 24px;">{esc(coll["desc"])}</p>
     <section class="prose">
@@ -541,7 +541,7 @@ def emit_collection(coll: dict, by_slug: dict, out_dir: Path) -> None:
 
 
 def emit_collection_index(out_dir: Path) -> None:
-    canonical = f"{SITE_URL}/collection/"
+    canonical = f"{SITE_URL}/collection"
     html = head_common(
         title="Pronunciation collections by topic",
         desc="Curated pronunciation guides: AI startups, LLM models, Chinese AI labs, vector databases, coding agents, and more.",
@@ -624,7 +624,7 @@ def emit_compare(pair_cfg: dict, by_slug: dict, out_dir: Path) -> None:
     html += f'  <div class="gh-banner">⭐ <a href="https://github.com/{GH_REPO}">Star on GitHub</a></div>\n'
     html += navbar("..")
     html += f"""  <div class="container-narrow word-page">
-    <p style="font-size: 13px; color: var(--muted);"><a href="/compare/">← All comparisons</a></p>
+    <p style="font-size: 13px; color: var(--muted);"><a href="/compare">← All comparisons</a></p>
     <h1>{esc(pair_cfg["h1"])}</h1>
     <section class="prose">
       <p>{pair_cfg["angle"]}</p>
@@ -677,7 +677,7 @@ def emit_compare(pair_cfg: dict, by_slug: dict, out_dir: Path) -> None:
 
 
 def emit_compare_index(out_dir: Path, by_slug: dict) -> None:
-    canonical = f"{SITE_URL}/compare/"
+    canonical = f"{SITE_URL}/compare"
     html = head_common(
         title="Pronunciation comparisons — same sound, different brands",
         desc="Side-by-side pronunciation pages: Groq vs Grok, Gemma vs Gemini, Qwen vs Kimi, and more.",
@@ -822,7 +822,7 @@ def emit_zh_word(e: dict, out_dir: Path) -> None:
     <div class="links">
       <a href="../../zh">中文首页</a>
       <a href="../../browse" hreflang="en" lang="en">Browse (EN)</a>
-      <a href="../../collection/" hreflang="en" lang="en">Collections</a>
+      <a href="/collection" hreflang="en" lang="en">Collections</a>
       <a href="{en_url}" hreflang="en" lang="en">English version</a>
       <a href="https://github.com/{GH_REPO}">GitHub</a>
       <button id="theme-toggle" class="theme-toggle" aria-label="切换主题">◐</button>
@@ -890,7 +890,7 @@ def emit_zh_word(e: dict, out_dir: Path) -> None:
 
 
 def emit_zh_word_index(entries: list, out_dir: Path) -> None:
-    canonical = f"{SITE_URL}/zh/word/"
+    canonical = f"{SITE_URL}/zh/word"
     title = "全部词条 — 中文发音指南"
     desc = f"全部技术词汇的中文发音解释 — Anthropic、Cursor、Kubernetes 等 {len(entries)}+ 词条，附音频和 IPA。"
     html = head_common(
@@ -946,15 +946,15 @@ def emit_seo_sitemap(entries: list, by_slug: dict, out_path: Path) -> None:
     urls = []
     # Clean URLs only (Vercel cleanUrls: *.html 308-redirects to the
     # extensionless twin; sitemaps must never list redirecting URLs).
-    urls.append((f"{SITE_URL}/collection/", "0.85", "weekly"))
+    urls.append((f"{SITE_URL}/collection", "0.85", "weekly"))
     for c in COLLECTIONS:
         urls.append((f"{SITE_URL}/collection/{c['slug']}", "0.8", "weekly"))
-    urls.append((f"{SITE_URL}/compare/", "0.85", "weekly"))
+    urls.append((f"{SITE_URL}/compare", "0.85", "weekly"))
     for cp in COMPARES:
         a, b = cp["pair"]
         if a in by_slug and b in by_slug:
             urls.append((f"{SITE_URL}/compare/{a}-vs-{b}", "0.8", "weekly"))
-    urls.append((f"{SITE_URL}/zh/word/", "0.85", "weekly"))
+    urls.append((f"{SITE_URL}/zh/word", "0.85", "weekly"))
     for e in entries:
         urls.append((f"{SITE_URL}/zh/word/{e['slug']}", "0.7", "monthly"))
     lines = ['<?xml version="1.0" encoding="UTF-8"?>',

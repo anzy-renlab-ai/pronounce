@@ -1,5 +1,19 @@
 # Changelog
 
+## v2.22.0 — 2026-07-12
+
+**Follow-up to v2.21.0 — clears the rest of the verified backlog.** No dictionary change (holds at 1,848).
+
+### Fixed
+
+- **React is now self-hosted.** The homepage pulled React and ReactDOM from `unpkg.com` — a third-party single point of failure for the site's main entry page, and an unreliable one from China, which is where most of this project's users are. Both UMD builds are now committed under `docs/v2/vendor/` and served same-origin, so the service worker caches them too. Verified in a real browser: React 18.3.1 mounts, `#root` populates, **zero requests to unpkg**.
+- **`build-v2-bundle.sh` was never called by any build** — the same defect that hid the homepage search-index drift for months. Editing a `.jsx` source silently shipped the previous `bundle.js`. Wired into `build-site.sh`.
+- **Every page claimed it was published and modified today, on every build.** `datePublished` and `dateModified` were stamped with the build date, so `/word/gif` said it first appeared today — and a CI run rewrote ~5,400 files with no real change, telling Google that all 1,848 entries change daily. Real per-entry dates are now recovered from the dictionary's git history into `data/entry-dates.tsv` (committed) and maintained incrementally: a new word gets today, a word whose row actually changed gets today as `modified`, everything else keeps its date. `/word/gif` now correctly reads published 2026-05-16, modified 2026-05-19. **A rebuild with no dictionary change now rewrites zero files** (measured).
+- **Sitemap `lastmod` per word** is the entry's real last-changed date instead of the build date.
+- **The daily pages were generated *after* `sitemap.xml` was written**, so the sitemap always listed the previous build's dates — the newest live daily page was never in it. Reordered.
+- **Four hub pages self-canonicalled at trailing-slash URLs that 308-redirect** (`/collection/`, `/compare/`, `/daily/`, `/zh/word/`). Google discards a canonical that redirects. Canonicals and sitemap entries now use the clean URLs Vercel actually serves.
+- **The `2FA` entry was unreachable** from the VS Code hover and the Chrome click: both token regexes required a leading letter. They now accept a leading digit but still require a letter somewhere, so bare numbers (`2024`, a port) are not tokens.
+
 ## v2.21.0 — 2026-07-12
 
 **+58 entries (1,790 → 1,848) and the biggest correctness sweep the project has had.** A three-reviewer pass (a Claude multi-agent workflow + Codex CLI + Kiro CLI, run in parallel) plus two independent dictionary critics. The reviewers disagreed usefully: each of the three found real defects the other two missed.

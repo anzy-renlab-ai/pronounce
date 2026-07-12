@@ -11,5 +11,5 @@
   "notes": "Aphrodite (aphrodite-engine) is PygmalionAI's large-scale LLM inference engine, built on vLLM's PagedAttention and named after the Greek goddess of love. Four syllables with primary stress on the third: af-ruh-DY-tee, ending in a full \"-ee\" sound. Non-native devs mangle it to \"AY-pro-dite\" — but \"aph\" is \"af\" (not \"ayf\"), and the final -e is NOT silent (it's \"ee\"). It's non-obvious because the \"-ite\" ending looks like it should rhyme with \"kite,\" and English speakers instinctively silence a trailing -e. Verified against Wiktionary US IPA /æfɹəˈdaɪti/.",
   "audio_url": "https://pronounce.renlab.ai/audio/aphrodite.mp3",
   "url": "https://pronounce.renlab.ai/word/aphrodite",
-  "date_modified": "2026-07-12"
+  "date_modified": "2026-07-05"
 }

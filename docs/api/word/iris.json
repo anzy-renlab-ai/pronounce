@@ -11,5 +11,5 @@
   "notes": "Sample-efficient Atari agent that learns inside a discrete-autoencoder + GPT-like Transformer world model; styled as the real word 'iris' (the official repo is lowercase) — 'EYE-ris', not lettered out.",
   "audio_url": "https://pronounce.renlab.ai/audio/iris.mp3",
   "url": "https://pronounce.renlab.ai/word/iris",
-  "date_modified": "2026-07-12"
+  "date_modified": "2026-06-28"
 }

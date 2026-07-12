@@ -11,5 +11,5 @@
   "notes": "Concise Binary Object Representation, the binary data format defined in IETF RFC 8949 (used in COSE, WebAuthn attestation, CoAP/IoT). The RFC defines the expansion but gives no spoken form, so usage is split: many say it as one word 'SEE-bore' (C read as the letter, second syllable like 'bore' — roughly 'seaboard' minus the 'd'), while others spell it out 'C-B-O-R'. Compare the related token format CWT, which RFC 8392 explicitly says is pronounced like 'cot' — no such ruling exists for CBOR itself, leaving it genuinely contested. Stress on the first syllable in the word form (SEE-bore); on the final letter in the spelled-out form (see-bee-oh-AR).",
   "audio_url": "https://pronounce.renlab.ai/audio/cbor.mp3",
   "url": "https://pronounce.renlab.ai/word/cbor",
-  "date_modified": "2026-07-12"
+  "date_modified": "2026-06-19"
 }

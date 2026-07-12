@@ -141,7 +141,9 @@
   }
 
   // ---------- Word matching ----------
-  const WORD_RE = /[a-zA-Z][a-zA-Z0-9_+#.-]*/g;
+  // May START with a digit (the dictionary has `2FA`) but must contain a letter, so
+  // bare numbers like `2024` or a port number are still not tokens.
+  const WORD_RE = /(?=[a-zA-Z0-9_+#.-]*[a-zA-Z])[a-zA-Z0-9][a-zA-Z0-9_+#.-]*/g;
   function lookupTokenAt(text, offset) {
     WORD_RE.lastIndex = 0;
     let m;

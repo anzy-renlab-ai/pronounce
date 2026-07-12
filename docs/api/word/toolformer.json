@@ -11,5 +11,5 @@
   "notes": "Meta AI paper (Schick et al., 2023): seminal \"LLM teaches itself to use tools/APIs\" work, foundational to tool-calling agents. Portmanteau of \"tool\" + \"-former\" (borrowed from Transformer). STRESS: TOOL-for-mer; \"-former\" rhymes with the end of transFORMER. No creator audio on record, but the construction is unambiguous.",
   "audio_url": "https://pronounce.renlab.ai/audio/toolformer.mp3",
   "url": "https://pronounce.renlab.ai/word/toolformer",
-  "date_modified": "2026-07-12"
+  "date_modified": "2026-05-30"
 }

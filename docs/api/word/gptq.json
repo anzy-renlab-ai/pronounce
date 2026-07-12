@@ -11,5 +11,5 @@
   "notes": "Post-training weight quantization method for LLMs (\"GPT\" + \"Q\" for quantization). An initialism, spelled out letter-by-letter: jee-pee-tee-KYOO, primary stress on the final Q. The \"GPT\" prefix is read like GPT-4 (not \"gee-putt\"). Not pronounced as a single word.",
   "audio_url": "https://pronounce.renlab.ai/audio/gptq.mp3",
   "url": "https://pronounce.renlab.ai/word/gptq",
-  "date_modified": "2026-07-12"
+  "date_modified": "2026-05-30"
 }

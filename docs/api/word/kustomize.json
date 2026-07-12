@@ -11,5 +11,5 @@
   "notes": "Kubernetes-native config management tool (kubernetes-sigs/kustomize), built into kubectl since 1.14 as 'kubectl kustomize' and 'kubectl apply -k'. It is just the word 'customize' with the Kubernetes-style K-for-C swap, so it is said identically to customize: KUSS-tuh-myze, stress firmly on the first syllable. The hazard is purely the spelling — people see the leading 'K' and try to honor it as a hard 'kuh-STOM-ize', or spell-pronounce it letter-by-letter, especially since the sibling term 'Kubernetes' genuinely is hard. The joke is that the K is cosmetic (K8s, kubectl, Kustomize) and the word is said exactly like 'customize'.",
   "audio_url": "https://pronounce.renlab.ai/audio/kustomize.mp3",
   "url": "https://pronounce.renlab.ai/word/kustomize",
-  "date_modified": "2026-07-12"
+  "date_modified": "2026-06-18"
 }

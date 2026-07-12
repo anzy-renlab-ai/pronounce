@@ -4,181 +4,181 @@
   <link href="https://pronounce.renlab.ai/feed.atom" rel="self"/>
   <link href="https://pronounce.renlab.ai/"/>
   <id>https://pronounce.renlab.ai/</id>
-  <updated>2026-07-12T11:35:38Z</updated>
+  <updated>2026-07-12T14:18:13Z</updated>
   <subtitle>How engineers actually pronounce project / product / jargon names. Community-maintained.</subtitle>
   <entry>
     <title>Zephyr — zeffer</title>
     <link href="https://pronounce.renlab.ai/word/zephyr"/>
     <id>https://pronounce.renlab.ai/word/zephyr</id>
-    <updated>2026-07-12T11:35:38Z</updated>
+    <updated>2026-07-12T14:18:13Z</updated>
     <summary>Zephyr is pronounced "zeffer" (/ˈzɛfər/). Zephyr is the Linux Foundation's small-footprint RTOS for microcontrollers, and the default runtime behind Nordic's nRF Connect SDK plus growing Espressif and ST support. It is pronounced ZEF-ur (/ˈzɛfər/) — stress on the first syllable, a short 'e', the 'ph' as /f/, and the final 'y' reduced to a schwa — after Zephyrus, the Greek god of the west wind. Non-native devs routinely misread the Greek-via-Latin spelling as ZEE-fire, zeh-FEER or ZEP-hire.</summary>
   </entry>
   <entry>
     <title>Zeitwerk — tsite verk</title>
     <link href="https://pronounce.renlab.ai/word/zeitwerk"/>
     <id>https://pronounce.renlab.ai/word/zeitwerk</id>
-    <updated>2026-07-12T11:35:38Z</updated>
+    <updated>2026-07-12T14:18:13Z</updated>
     <summary>Zeitwerk is pronounced "tsite verk" (/ˈtsaɪtvɛrk/). Zeitwerk is the Ruby code loader that has been Rails' default autoloader since Rails 6 and remains so in Rails 8 The name is German for "clockwork" and follows German spelling rules — Z is "ts", "ei" is "eye", W is "v" — giving TSITE-verk, not the common misreading "ZEET-werk".</summary>
   </entry>
   <entry>
     <title>Citus — site us</title>
     <link href="https://pronounce.renlab.ai/word/citus"/>
     <id>https://pronounce.renlab.ai/word/citus</id>
-    <updated>2026-07-12T11:35:38Z</updated>
+    <updated>2026-07-12T14:18:13Z</updated>
     <summary>Citus is pronounced "site us" (/ˈsaɪtəs/). Citus is the open-source extension that turns PostgreSQL into a distributed, sharded database, and it powers Azure Cosmos DB for PostgreSQL. It is pronounced SITE-us, not KEE-tus or SIT-us — the name comes from the Olympic motto Citius, Altius, Fortius (faster, higher, stronger). Citus Data got asked so often that they published an official blog post settling it.</summary>
   </entry>
   <entry>
     <title>APISIX — ay pee eye six</title>
     <link href="https://pronounce.renlab.ai/word/apisix"/>
     <id>https://pronounce.renlab.ai/word/apisix</id>
-    <updated>2026-07-12T11:35:38Z</updated>
+    <updated>2026-07-12T14:18:13Z</updated>
     <summary>APISIX is pronounced "ay pee eye six" (/ˌeɪ piː ˈaɪ sɪks/). Apache APISIX is a top-level Apache Software Foundation cloud-native API gateway and AI gateway, a peer of Kong, Traefik and Envoy. Despite looking like one word, it is spoken as two tokens: the letters A-P-I followed by the number six. Maintainer @membphis confirmed this on the project tracker, explaining that 6 is a lucky number in China — hence the name.</summary>
   </entry>
   <entry>
     <title>Alembic — uh lem bik</title>
     <link href="https://pronounce.renlab.ai/word/alembic"/>
     <id>https://pronounce.renlab.ai/word/alembic</id>
-    <updated>2026-07-12T11:35:38Z</updated>
+    <updated>2026-07-12T14:18:13Z</updated>
     <summary>Alembic is pronounced "uh lem bik" (/əˈlɛmbɪk/). Alembic is the schema-migration tool for SQLAlchemy, used in most FastAPI and SQLModel backends. The name comes from the alchemical still, borrowed from Arabic al-anbiq via Greek ambix. Stress falls on the middle syllable — uh-LEM-bik — not on the first, which is what the spelling tempts most non-native speakers into.</summary>
   </entry>
   <entry>
     <title>reqwest — request</title>
     <link href="https://pronounce.renlab.ai/word/reqwest"/>
     <id>https://pronounce.renlab.ai/word/reqwest</id>
-    <updated>2026-07-12T11:35:38Z</updated>
+    <updated>2026-07-12T14:18:13Z</updated>
     <summary>reqwest is pronounced "request" (/rɪˈkwɛst/). reqwest is the de-facto HTTP client crate of the Rust ecosystem, written by the author of hyper. The name is a deliberate misspelling of "request": the creator's introduction post explains it was forced on him because the `request` crate name was already taken, and it is said exactly like the ordinary English word "request". Cold readers often guess "REK-west" because the qw digraph is almost nonexistent in English outside "qwerty".</summary>
   </entry>
   <entry>
     <title>Cython — sigh thon</title>
     <link href="https://pronounce.renlab.ai/word/cython"/>
     <id>https://pronounce.renlab.ai/word/cython</id>
-    <updated>2026-07-12T11:35:38Z</updated>
+    <updated>2026-07-12T14:18:13Z</updated>
     <summary>Cython is pronounced "sigh thon" (/ˈsaɪθɑːn/). Optimizing compiler that turns Python-like .pyx code into C extension modules; it powers the fast paths in NumPy, SciPy, pandas and scikit-learn. Pronounced "SIGH-thon" — the C is soft, rhyming with Python, not "see-thon" or "kye-thon". Do not confuse it with CPython, the reference interpreter, which really is said "see-Python".</summary>
   </entry>
   <entry>
     <title>Leiningen — line ing un</title>
     <link href="https://pronounce.renlab.ai/word/leiningen"/>
     <id>https://pronounce.renlab.ai/word/leiningen</id>
-    <updated>2026-07-12T11:35:38Z</updated>
+    <updated>2026-07-12T14:18:13Z</updated>
     <summary>Leiningen is pronounced "line ing un" (/ˈlaɪnɪŋən/). Leiningen (the lein command) is the long-standing build tool and project-automation entry point for Clojure. The official FAQ settles it: LINE-ing-en, with the German ei read as "eye" — the name comes from Carl Stephenson's short story "Leiningen Versus the Ants". Common misreadings like "lay-nin-jen" or "lee-nin-gen" are simply wrong.</summary>
   </entry>
   <entry>
     <title>RNGD — ren uh gayd</title>
     <link href="https://pronounce.renlab.ai/word/rngd"/>
     <id>https://pronounce.renlab.ai/word/rngd</id>
-    <updated>2026-07-12T11:35:38Z</updated>
+    <updated>2026-07-12T14:18:13Z</updated>
     <summary>RNGD is pronounced "ren uh gayd" (/ˈrɛnɪˌɡeɪd/). RNGD is FuriosaAI's second-generation data-center inference NPU (48GB HBM3, 180W, tensor-contraction architecture), pitched as a power-efficient Nvidia alternative and in mass production since January 2026. The vowel-less name is a disemvoweled spelling of "renegade" — Furiosa's own product page and its Hot Chips 2024 press release both gloss it as RNGD (pronounced "renegade"), and the company brands its spec page and user summit as RENEGADE. Reading it letter-by-letter as R-N-G-D or guessing "ringed" is the common mistake.</summary>
   </entry>
   <entry>
     <title>tau-bench — tau bench</title>
     <link href="https://pronounce.renlab.ai/word/tau-bench"/>
     <id>https://pronounce.renlab.ai/word/tau-bench</id>
-    <updated>2026-07-12T11:35:38Z</updated>
+    <updated>2026-07-12T14:18:13Z</updated>
     <summary>tau-bench is pronounced "tau bench" (/ˈtaʊ ˌbɛntʃ/). Sierra's τ-bench (now τ²/τ³-bench) is the tool-agent-user benchmark whose pass^k scores are cited in most 2025-2026 model cards. The leading character is the Greek letter tau, and the maintainers' README answers "How do you say τ³-bench?" with "We just say 'tau three'" — so it is the letter name, never "TAO" as in Daoism. In General American tau is /taʊ/, rhyming with "now"; the /tɔː/ ("taw") variant is also widely heard.</summary>
   </entry>
   <entry>
     <title>AGNTCY — ay jun see</title>
     <link href="https://pronounce.renlab.ai/word/agntcy"/>
     <id>https://pronounce.renlab.ai/word/agntcy</id>
-    <updated>2026-07-12T11:35:38Z</updated>
+    <updated>2026-07-12T14:18:13Z</updated>
     <summary>AGNTCY is pronounced "ay jun see" (/ˈeɪdʒənsi/). AGNTCY is the Linux Foundation-hosted "Internet of Agents" project donated by Cisco (Outshift), covering agent discovery (OASF), messaging (SLIM) and identity, and is routinely compared against MCP and A2A. It is a disemvoweled brand — AGNT (agent) plus -CY — and is simply read as the English word "agency" (AY-jun-see), not spelled out letter-by-letter. Cold readers usually try "A-G-N-T-C-Y" or "ag-EN-tik-ee"; the project's own site and the Linux Foundation press release never state the pronunciation, so this is labeled community-consensus on the strength of third-party technical coverage.</summary>
   </entry>
   <entry>
     <title>GAIA — guy uh</title>
     <link href="https://pronounce.renlab.ai/word/gaia"/>
     <id>https://pronounce.renlab.ai/word/gaia</id>
-    <updated>2026-07-12T11:35:38Z</updated>
+    <updated>2026-07-12T14:18:13Z</updated>
     <summary>GAIA is pronounced "guy uh" (/ˈɡaɪə/). GAIA (General AI Assistants) is the 466-question benchmark for browsing and tool-use agents, with a live Hugging Face leaderboard and its own unit in the HF Agents Course. The name reuses the Greek earth goddess, which English reads two ways: dictionaries list both /ˈɡaɪə/ (guy-uh) and /ˈɡeɪə/ (gay-uh). The authors never stated an official pronunciation, but scientific naming after the goddess — Lovelock's Gaia hypothesis — is settled on guy-uh, so that is the safer default.</summary>
   </entry>
   <entry>
     <title>sycophancy — sick uh fuhn see</title>
     <link href="https://pronounce.renlab.ai/word/sycophancy"/>
     <id>https://pronounce.renlab.ai/word/sycophancy</id>
-    <updated>2026-07-12T11:35:38Z</updated>
+    <updated>2026-07-12T14:18:13Z</updated>
     <summary>sycophancy is pronounced "sick uh fuhn see" (/ˈsɪkəfənsi/). In LLM work, sycophancy is the failure mode where a model excessively agrees with or flatters the user, and it is now a standard eval axis reported in system cards and release notes. Stress falls on the FIRST syllable — SICK-uh-fuhn-see — and the opening "sy" is /sɪ/ like "sick", not "sigh". The tempting si-KOF-uhn-see reading, formed by analogy with discrepancy or despondency, is not recorded in any major dictionary; note also that the adjective sycophantic does shift the stress, to sik-uh-FAN-tik.</summary>
   </entry>
   <entry>
     <title>Elo — ee loh</title>
     <link href="https://pronounce.renlab.ai/word/elo"/>
     <id>https://pronounce.renlab.ai/word/elo</id>
-    <updated>2026-07-12T11:35:38Z</updated>
+    <updated>2026-07-12T14:18:13Z</updated>
     <summary>Elo is pronounced "ee loh" (/ˈiːloʊ/). The rating scale behind LMArena / Chatbot Arena leaderboards, cited as "Elo score" in most 2025-2026 model launch posts and eval blogs. It is the surname of Hungarian-American physics professor Arpad Elo (né Élő), not an acronym — Wikipedia states it is "written as 'Elo', not 'ELO'" — so spelling it out as letters E-L-O is the common mistake. Both EE-loh and EL-oh are accepted in English, with EE-loh listed first by Wikipedia and Wiktionary.</summary>
   </entry>
   <entry>
     <title>Liger — lie gher</title>
     <link href="https://pronounce.renlab.ai/word/liger"/>
     <id>https://pronounce.renlab.ai/word/liger</id>
-    <updated>2026-07-12T11:35:38Z</updated>
+    <updated>2026-07-12T14:18:13Z</updated>
     <summary>Liger is pronounced "lie gher" (/ˈlaɪɡər/). LinkedIn's Liger-Kernel is a Triton kernel library for LLM training, giving roughly 20% more throughput and 60% less memory, and it is wired into TRL, Axolotl, LLaMA-Factory and the Hugging Face Trainer. The name is the lion-tiger hybrid, so it is "LY-ger" with a long i and a hard g — not "LEE-ger", not short-i "LIG-er", and not soft-g "LY-jer". LinkedIn also backronyms it as GPU Efficient Runtime, but it is always spoken as the animal word.</summary>
   </entry>
   <entry>
     <title>Helion — hee lee on</title>
     <link href="https://pronounce.renlab.ai/word/helion"/>
     <id>https://pronounce.renlab.ai/word/helion</id>
-    <updated>2026-07-12T11:35:38Z</updated>
+    <updated>2026-07-12T14:18:13Z</updated>
     <summary>Helion is pronounced "hee lee on" (/ˈhiːliɑːn/). Helion is PyTorch's high-level kernel-authoring DSL from Meta (public beta at PyTorch Conference 2025), which compiles down to Triton. The name is the physics term for a helium-3 nucleus, a deliberate sibling to Triton (the hydrogen-3 nucleus), and it is a portmanteau of helium + ion — so the first syllable is HEE as in helium, not HELL as in the English word hellion. The reduced form hee lee uhn is an equally valid variant.</summary>
   </entry>
   <entry>
     <title>Chutes — shoots</title>
     <link href="https://pronounce.renlab.ai/word/chutes"/>
     <id>https://pronounce.renlab.ai/word/chutes</id>
-    <updated>2026-07-12T11:35:38Z</updated>
+    <updated>2026-07-12T14:18:13Z</updated>
     <summary>Chutes is pronounced "shoots" (/ˈʃuːts/). Chutes is Rayon Labs' serverless AI inference platform on Bittensor Subnet 64, and one of the highest-throughput providers routable from OpenRouter. The name is the ordinary English word chute (as in parachute or a garbage chute), borrowed from French, so the ch is /ʃ/ and it sounds exactly like shoots. Non-native developers reading it cold in a provider list routinely say chootz with an English ch, which is wrong.</summary>
   </entry>
   <entry>
     <title>Ion Stoica — ee own stoy kuh</title>
     <link href="https://pronounce.renlab.ai/word/ion-stoica"/>
     <id>https://pronounce.renlab.ai/word/ion-stoica</id>
-    <updated>2026-07-12T11:35:38Z</updated>
+    <updated>2026-07-12T14:18:13Z</updated>
     <summary>Ion Stoica is pronounced "ee own stoy kuh" (/iˈoʊn ˈstɔɪkə/). Romanian-American Berkeley professor: co-creator of Apache Spark, Mesos and Ray, co-founder of Databricks and Anyscale, and head of the Sky Computing Lab behind vLLM and Chatbot Arena. "Ion" is not the chemistry word — it is the Romanian form of "John", /iˈon/, so "ee-OHN" and not "EYE-on". The surname is "STOY-kuh": the "oi" is a single diphthong (the name goes back to Bulgarian Stoyko), not "sto-EE-ka" or "STOH-ik-uh".</summary>
   </entry>
   <entry>
     <title>Ghodsi — god see</title>
     <link href="https://pronounce.renlab.ai/word/ghodsi"/>
     <id>https://pronounce.renlab.ai/word/ghodsi</id>
-    <updated>2026-07-12T11:35:38Z</updated>
+    <updated>2026-07-12T14:18:13Z</updated>
     <summary>Ghodsi is pronounced "god see" (/ˈɡɑːdsi/). Ali Ghodsi is the co-founder and CEO of Databricks, quoted in most lakehouse and AI-infrastructure news cycles. The surname is Persian (قدسی, from Ghods/Quds, "sacred"), where the "gh" transliterates a single hard G rather than an aspirated or two-step "guh-HOD". It is simply "GOD-see", two syllables with the stress up front.</summary>
   </entry>
   <entry>
     <title>Liang Wenfeng — lyahng wun fung</title>
     <link href="https://pronounce.renlab.ai/word/liang-wenfeng"/>
     <id>https://pronounce.renlab.ai/word/liang-wenfeng</id>
-    <updated>2026-07-12T11:35:38Z</updated>
+    <updated>2026-07-12T14:18:13Z</updated>
     <summary>Liang Wenfeng is pronounced "lyahng wun fung" (/ˌljɑːŋ ˈwʌn fʌŋ/). Founder and CEO of DeepSeek and co-founder of the High-Flyer hedge fund; the R1/V3 line reset open-weight model economics. Pinyin is Liáng Wénfēng: "Liang" is a single syllable, lyahng — not "lee-ANG" — and "Wenfeng" is wun-fung, with Wiktionary giving /li̯ɑŋ³⁵/, /wən³⁵/ and /fɤŋ⁵⁵/ for 梁文锋. The usual Western podcast reading "lee-ANG wen-FENG", with an English short-e in both halves, is simply wrong.</summary>
   </entry>
   <entry>
     <title>Raschka — rahsh kuh</title>
     <link href="https://pronounce.renlab.ai/word/raschka"/>
     <id>https://pronounce.renlab.ai/word/raschka</id>
-    <updated>2026-07-12T11:35:38Z</updated>
+    <updated>2026-07-12T14:18:13Z</updated>
     <summary>Raschka is pronounced "rahsh kuh" (/ˈrɑːʃkə/). Sebastian Raschka, author of "Build a Large Language Model (From Scratch)" and the Ahead of AI newsletter. German surname: "sch" is the /ʃ/ digraph, so it is "RAHSH-kuh", not a "rask" cluster. US speakers commonly anglicize the first vowel to "RASH-kuh"; both are heard.</summary>
   </entry>
   <entry>
     <title>Tri Dao — tree dow</title>
     <link href="https://pronounce.renlab.ai/word/tri-dao"/>
     <id>https://pronounce.renlab.ai/word/tri-dao</id>
-    <updated>2026-07-12T11:35:38Z</updated>
+    <updated>2026-07-12T14:18:13Z</updated>
     <summary>Tri Dao is pronounced "tree dow" (/ˌtriː ˈdaʊ/). Tri Dao is the author of FlashAttention and co-author of Mamba, and co-founder/Chief Scientist at Together AI; his name fronts the Dao-AILab kernels and Mamba model cards. The name is Vietnamese: "Tri" is TREE, not "try", and "Dao" (Đào) rhymes with "how" — it is neither the Taoist "tao" nor the crypto "DAO". VOA's Vietnamese pronunciation guide renders the surname Dao as "DOW" and the Tri- syllable as "TREE-".</summary>
   </entry>
   <entry>
     <title>Ronacher — roh nah ker</title>
     <link href="https://pronounce.renlab.ai/word/ronacher"/>
     <id>https://pronounce.renlab.ai/word/ronacher</id>
-    <updated>2026-07-12T11:35:38Z</updated>
+    <updated>2026-07-12T14:18:13Z</updated>
     <summary>Ronacher is pronounced "roh nah ker" (/ˈroʊnɑːkər/). Armin Ronacher is the Austrian developer behind Flask and Jinja, now at Sentry, whose essays on agentic coding are HN front-page staples. The surname is German: the 'ch' follows a back vowel, so it is the ach-Laut (the throat sound in Scottish 'loch'), which English speakers render as a /k/ — ROH-nah-ker with stress on the first syllable, never the English 'ch' of 'church' and never a 'sh'. Anglophones routinely mangle it (the top user entry on howtopronounce.com is 'rah-nashur'), and on Rustacean Station the host had to stop and ask him how to say it.</summary>
   </entry>
   <entry>
     <title>Kolmogorov — kohl muh gor uhf</title>
     <link href="https://pronounce.renlab.ai/word/kolmogorov"/>
     <id>https://pronounce.renlab.ai/word/kolmogorov</id>
-    <updated>2026-07-12T11:35:38Z</updated>
+    <updated>2026-07-12T14:18:13Z</updated>
     <summary>Kolmogorov is pronounced "kohl muh gor uhf" (/ˌkoʊlməˈɡɔːrəf/). Andrey Kolmogorov, Russian mathematician behind Kolmogorov complexity and the theorem underpinning Kolmogorov-Arnold Networks (KANs). Stress lands on the third syllable — kohl-muh-GOR-uhf — and the final v is devoiced to an f, matching the Russian [kəlmɐˈɡorəf]. Cold readers usually get it wrong twice, stressing the first syllable and ending on a voiced ov.</summary>
   </entry>
   <entry>
     <title>Huyen — hwee uhn</title>
     <link href="https://pronounce.renlab.ai/word/huyen"/>
     <id>https://pronounce.renlab.ai/word/huyen</id>
-    <updated>2026-07-12T11:35:38Z</updated>
+    <updated>2026-07-12T14:18:13Z</updated>
     <summary>Huyen is pronounced "hwee uhn" (/ˈhwiən/). Chip Huyen, author of O'Reilly's 'AI Engineering' and 'Designing Machine Learning Systems' (huyenchip.com). Vietnamese Huyền is a single syllable — Wiktionary gives Hanoi [hwiən˨˩], roughly 'hw' plus the name Ian; English readers wrongly stretch it into three syllables as 'HYOO-yen'. Commonly simplified in English to rhyme with 'when'.</summary>
   </entry>
 </feed>

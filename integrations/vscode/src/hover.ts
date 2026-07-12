@@ -1,7 +1,10 @@
 import * as vscode from 'vscode';
 import { lookup, Entry } from './dict';
 
-const WORD_RE = /[a-zA-Z][a-zA-Z0-9_.\-+#]*/;
+// A token may START with a digit (the dictionary has `2FA`, which a leading-letter
+// regex could never reach) but must contain at least one letter, so bare numbers
+// like `2024` or a port number are still not tokens.
+const WORD_RE = /(?=[a-zA-Z0-9_.\-+#]*[a-zA-Z])[a-zA-Z0-9][a-zA-Z0-9_.\-+#]*/;
 
 export function makeHoverProvider(extensionPath: string): vscode.HoverProvider {
   return {

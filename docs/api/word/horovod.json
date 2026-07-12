@@ -11,5 +11,5 @@
   "notes": "Horovod is Uber's open-source distributed deep-learning training framework (TensorFlow, Keras, PyTorch, MXNet) built on the ring-allreduce communication pattern. Uber's engineering blog confirms the name comes from a traditional Russian folk dance in which performers dance with linked arms in a circle — mirroring how the training processes pass gradients around a ring; the blog gives no pronunciation. First-syllable stress (HOR-uh-vahd) is corroborated by community pronunciation guides (e.g. HowToPronounce). Note the Russian original хоровод is actually final-stressed (kho-ro-VOD); English devs anglicize to first-syllable stress, and some mis-guess huh-ROH-vahd (second-syllable).",
   "audio_url": "https://pronounce.renlab.ai/audio/horovod.mp3",
   "url": "https://pronounce.renlab.ai/word/horovod",
-  "date_modified": "2026-07-12"
+  "date_modified": "2026-07-05"
 }

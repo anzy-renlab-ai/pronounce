@@ -11,5 +11,5 @@
   "notes": "Orpheus is Canopy Labs' 2025 open-source, Llama-3b-based TTS model (repo canopyai/Orpheus-TTS; HF canopylabs/orpheus-3b-*), named after the legendary Greek bard-musician. Stress on the first syllable: OR-fee-us. Non-native devs often shift stress (or-FEE-us) or read 'ph' as /p/ ('OR-pee-us'); 'ph' is /f/ and the accent stays up front. Non-obvious because the classical name is unfamiliar and 'eu' invites a false /juː/ reading — a rarer two-syllable variant OR-fyoos /ˈɔːrfjuːs/ does exist, but OR-fee-us is dominant.",
   "audio_url": "https://pronounce.renlab.ai/audio/orpheus.mp3",
   "url": "https://pronounce.renlab.ai/word/orpheus",
-  "date_modified": "2026-07-12"
+  "date_modified": "2026-07-05"
 }

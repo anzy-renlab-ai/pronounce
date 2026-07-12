@@ -11,5 +11,5 @@
   "notes": "Junie is JetBrains' AI coding agent (launched April 2025; moved out of beta to general availability June 17, 2026), running inside JetBrains IDEs (IntelliJ IDEA, PyCharm, WebStorm, GoLand, Rider, CLion, PhpStorm, RubyMine) and as a standalone CLI. Said \"JOO-nee\" — stress on the first syllable, long \"oo\" — exactly like the English given name/nickname Junie (as in the children's-book character Junie B. Jones): \"June\" + \"-ee\". JetBrains has not published an explicit pronunciation, so this reflects the standard name pronunciation (community consensus), corroborated by HowToPronounce (dʒˈuː.ni) and PronounceNames. Non-native devs are misled by the French-looking \"-ie\" tail into \"joo-NYAY\", or read the u with the \"fun\" vowel as \"JUN-ee\"; both are wrong. Non-obvious because the spelling doesn't cue the long-\"oo\" vowel or the front-stressed name.",
   "audio_url": "https://pronounce.renlab.ai/audio/junie.mp3",
   "url": "https://pronounce.renlab.ai/word/junie",
-  "date_modified": "2026-07-12"
+  "date_modified": "2026-07-05"
 }
