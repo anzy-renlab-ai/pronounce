@@ -1,0 +1,15 @@
+{
+  "word": "Jinja",
+  "ipa": "/ˈdʒɪndʒə/",
+  "respelling_us": "jin juh",
+  "alt_ipa": ["/ˈdʒɪndʒɑː/"],
+  "alt_respelling_us": ["jin jah"],
+  "source_url": "https://jinja.palletsprojects.com/en/stable/faq/",
+  "source_label": "Jinja FAQ — \"Jinja is a Japanese Shinto shrine (神社)\"",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "Jinja is the Python template engine behind Flask, Ansible and dbt, and the format Hugging Face chat templates are written in. The official FAQ says the name is the Japanese word 神社 (jinja, a Shinto shrine), chosen because temple puns on template — so both j's are soft: JIN-juh. Non-native readers who give j its native value and say \"YIN-ya\" or \"HIN-ha\" are the common miss.",
+  "audio_url": "https://pronounce.renlab.ai/audio/jinja.mp3",
+  "url": "https://pronounce.renlab.ai/word/jinja",
+  "date_modified": "2026-07-12"
+}

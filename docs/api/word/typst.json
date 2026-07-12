@@ -1,0 +1,15 @@
+{
+  "word": "Typst",
+  "ipa": "/ˈtaɪpst/",
+  "respelling_us": "typst",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/typst/typst",
+  "source_label": "GitHub — typst/typst README (\"IPA: /taɪpst/. 'Ty' like in Typesetting and 'pst' like in Hipster.\")",
+  "category": "tool",
+  "confidence": "creator-clarified",
+  "notes": "Typst is a Rust-based markup typesetting system pitched as a modern LaTeX replacement, driven from the command line with typst compile. Its official README settles the pronunciation with IPA /taɪpst/: one single syllable, \"Ty\" as in Typesetting plus \"pst\" as in Hipster. It is NOT \"typist\" — there is no vowel between the p and the st.",
+  "audio_url": "https://pronounce.renlab.ai/audio/typst.mp3",
+  "url": "https://pronounce.renlab.ai/word/typst",
+  "date_modified": "2026-07-12"
+}

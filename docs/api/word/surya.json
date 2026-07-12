@@ -1,0 +1,15 @@
+{
+  "word": "Surya",
+  "ipa": "/ˈsuːrjə/",
+  "respelling_us": "soor yuh",
+  "alt_ipa": ["/ˈsuːriə/"],
+  "alt_respelling_us": ["soo ree uh"],
+  "source_url": "https://en.wikipedia.org/wiki/Surya",
+  "source_label": "Wikipedia — Surya (/ˈsuːriə/ SOO-ree-ə), the Hindu sun god the project is named after; Wiktionary Sanskrit सूर्य [ˈsuːɾjɐ]",
+  "category": "tool",
+  "confidence": "contested",
+  "notes": "Surya is Datalab's open-source OCR, layout and table-recognition model and Python package (surya-ocr), the engine behind Marker. The README says it is named for the Hindu sun god, Sanskrit/Hindi sources support SOOR-yuh (two syllables, long oo, y-glide), while English Wikipedia gives the anglicized three-syllable SOO-ree-uh; both are attested and no source establishes a winner. The common mistake is reading the first vowel like surrey.",
+  "audio_url": "https://pronounce.renlab.ai/audio/surya.mp3",
+  "url": "https://pronounce.renlab.ai/word/surya",
+  "date_modified": "2026-07-12"
+}

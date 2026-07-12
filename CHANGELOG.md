@@ -1,5 +1,48 @@
 # Changelog
 
+## v2.21.0 — 2026-07-12
+
+**+58 entries (1,790 → 1,848) and the biggest correctness sweep the project has had.** A three-reviewer pass (a Claude multi-agent workflow + Codex CLI + Kiro CLI, run in parallel) plus two independent dictionary critics. The reviewers disagreed usefully: each of the three found real defects the other two missed.
+
+### Fixed — the site was lying to visitors
+
+- **The homepage searched a 1,212-entry index while advertising 1,790.** `tools/build-v2-data.py` generates `docs/v2/data.js` — the homepage's client-side search index — and **no build step ever ran it**. 578 words (32% of the dictionary: Kokoro, Kiro, the whole JEPA family, …) had a live `/word/` page, an API entry, and audio, but typing them into the homepage search box returned nothing. It is now regenerated on every build, and the build **fails** if the index count and the dictionary count disagree. (The script also hardcoded an absolute path to one laptop, which is why it could never have run in CI.)
+- **29 word pages played the wrong pronunciation.** `make-audio-all.py` skipped any entry whose `.mp3` already existed, so when a respelling was *corrected* the audio never caught up. `/word/anthropic` displayed `an THROP ik` and called "an-THROW-pick" a common mistake — while its ▶ button played exactly that mistake. Same for `gif`, `yaml`, `awk`, `latex`, `tcl`, `repl`, `mysql`, `postgresql`, `dijkstra` and 20 more. Audio is now fingerprinted by the spoken body (`docs/audio/manifest.json`) and re-rendered whenever that changes.
+- **Six entries whose audio contradicted their own IPA.** macOS `say` softens `g` before `e`/`i`/`y`, so respellings with a hard-`g` IPA came out with a /dʒ/: `Jaeger` (`yay ger`) played "yay-**jer**", `guix` ("geeks") played "**jeeks**", `vogels` played "voh-**jels**", `together.ai` played "tuh-**JETH**-er", `Gitea` played "**ji**-TAY-uh". And `tau` (`tow`) simply played "**toe**". Verified by rendering each respelling and its soft-`g` twin and comparing the audio byte-for-byte. Now respelled with the `gh` digraph the dictionary already used for `Ghidra`.
+- **The homepage never registered the service worker.** Registration lives in `script.js`, which the v2 homepage does not load — so every visitor who landed on `/` (the PWA's own `start_url`) got no offline support at all.
+- **The service worker cached `.html` URLs on a site that serves clean URLs.** `/browse`, `/faq`, `/quiz`, `/scoreboard` and friends matched no rule, were never cached, and hard-failed offline. The emitter now routes the extensionless paths the site actually serves.
+- **`build-seo.py` failures were swallowed** (`|| echo "non-fatal"`), so a broken run could ship a site silently missing half its indexable pages. Now fatal, with a sitemap assertion.
+
+### Fixed — CLI
+
+- **`say-it import` destroyed the dictionary.** The user overlay (`~/.config/say-it/pronunciations.local.tsv`) sat *first* in the lookup path and `import` seeded it with only the comment header — so importing one custom word replaced all 1,790 entries with it (`say-it stats` → `Total entries: 1`; `say-it kubectl` → empty). Then `say-it update` overwrote that same file with upstream, deleting the user's custom entries. Base and overlay are now separate: local rows are **layered over** the shipped dictionary (and override same-word rows), and `update` only ever writes the base.
+- **Every word played the first word's audio on slim Linux images.** The audio cache keyed on `shasum`, which is a Perl script and absent from minimal containers — the key came back empty, so every word collapsed onto one cache file. Now falls through `shasum` → `sha1sum` → `sha256sum` → `md5sum` → `cksum`, and bypasses the cache entirely rather than colliding.
+- **TTS failures were completely silent.** Every backend call ended in `2>/dev/null`, so `say-it -v Samanha kubectl` (one typo) exited 1 with no audio, no error, nothing — while `say` itself had said "Voice `Samanha' not found." The backend's diagnostic is now surfaced.
+- **`say-it badge|explain|teach|diff` hung forever** when no dictionary was found: `awk … "$DICT"` with an empty `$DICT` gets an empty filename argument, which awk reads as *stdin*. They now exit 4.
+- **`say-it playlist a b c` silently played only `a`.** It read `$1` and dropped the rest.
+- `say-it search 'c++'` returned 1,209 of 1,790 entries (the query was used as an awk regex); `search '['` crashed. Now a literal substring match.
+- `say-it --why` spoke the word, though the docs promise "no audio", and exited 3 on a machine with no TTS backend. It is text-only now.
+- `say-it import` dropped the last row of any file without a trailing newline.
+- Playback with no audio player installed aborted under `set -e` instead of falling back to live speech.
+
+### Fixed — extensions & release process
+
+- **`publish-marketplace.sh` shipped different versions to the two marketplaces.** It packaged the `.vsix` *before* `vsce publish <bump>` raised the version, then handed Open VSX the stale file — so MS Marketplace got the new version and Open VSX got the old one. It now bumps first and publishes one identical artifact to both.
+- **VS Code: two voices talked over each other.** A killed process still fired its `exit` handler, which nulled the handle to the process the *new* click had just spawned — so the next click had nothing to cancel. Fixed with a generation token.
+- **Chrome: clicking any sentence-final word did nothing** — `kubectl.` never matched `kubectl` (the fix the VS Code hover already had). Also: the tooltip escaped notes *then* truncated, slicing HTML entities into literal `&qu`; the popup hardcoded the speech rate and ignored the options slider; and the Web Store listing promised hover when the extension is click-only.
+- VS Code hover rendered dictionary text as fully-trusted Markdown. Now escaped, with `isTrusted` narrowed to this extension's own two commands.
+- `.codex-plugin/plugin.json` was two releases stale; the Chrome install docs pointed at a `0.1.0` zip and at a `/releases/latest` that has no assets; `manifest.webmanifest` advertised "Browse all **310** entries"; the Chinese word index's meta description said "600+ 词条". All now correct, and the count-bearing ones are synced by the build.
+
+### Added
+
+- **+58 entries** — 2026 AI labs and models (`Sakana`, `Sarvam`, `Kuaishou`, `Cogito`, `Jina`, `Surya`, `Liger`, `Helion`, `Chutes`), CNCF and infra projects (`SPIFFE`, `youki`, `Krkn`, `Kuasar`, `Aeraki`, `Kured`, `Zenoh`, `Piraeus`, `Vineyard`, `Gravitino`, `Citus`, `APISIX`, `Fluss`), tooling (`Typst`, `Ghidra`, `Grype`, `Syft`, `jOOQ`, `Ktor`, `Hikari`, `Leiningen`, `Zeitwerk`, `Alembic`, `Cython`, `Jinja`, `Werkzeug`, `melange`, `vlt`, `Qoder`, `Rocq`, `reqwest`), the `Shai-Hulud` npm worm, and the researcher surnames devs read aloud in paper clubs (`Kolmogorov`, `Ion Stoica`, `Ghodsi`, `Liang Wenfeng`, `Raschka`, `Tri Dao`, `Huyen`, `Ronacher`).
+- Discovery ran 6 domain finders → 81 candidates → a per-candidate adversarial verifier (22 rejected) → **two independent critics**. The Claude critic rendered every respelling through `say` and compared audio byte-for-byte, which is how `Liger → "lie ger"` was caught playing "LIE-jer" — the exact error its own notes warn about — and how `Typst → "typst"` was *cleared* after a heuristic had flagged it. Three rows were downgraded from `creator-clarified` to `community-consensus` because the cited source states the name's origin but never its pronunciation.
+
+### Tooling
+
+- `make-audio-all.py` is now **explicitly sequential**. macOS `say -o` is not concurrency-safe: under load it emits a different (consistent, but non-canonical) waveform for the same input, which silently rewrites every mp3 in the corpus. Measured and documented in the source.
+- CLI `VERSION` → **1.2.0**. Site audio is rendered at 175 wpm while the CLI defaults to 130 — the About page claimed the two were "byte-identical"; it now says what's actually true.
+
 ## v2.20.0 — 2026-07-10
 
 **Site hardening — no new entries (holds at 1,790).** The second half of the three-reviewer pass: the two highest-impact site defects Claude's workflow found.

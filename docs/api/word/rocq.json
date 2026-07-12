@@ -1,0 +1,15 @@
+{
+  "word": "Rocq",
+  "ipa": "/ˈrɑːk/",
+  "respelling_us": "rock",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/rocq-prover/rocq/wiki/Alternative-names",
+  "source_label": "Rocq wiki — Alternative names (\"in English, sound like rock\"; short for Rocquencourt)",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "The Rocq Prover is the new name of the Coq proof assistant, official since the 9.0 release in March 2025. It is pronounced simply \"rock\" — the name honors Inria Rocquencourt, where the system was born, and echoes the mythical bird Roc; the final q is silent. Do not carry over the old Coq /kɒk/ vowel or read the French -cq as \"kew\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/rocq.mp3",
+  "url": "https://pronounce.renlab.ai/word/rocq",
+  "date_modified": "2026-07-12"
+}

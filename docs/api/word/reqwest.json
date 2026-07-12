@@ -1,0 +1,15 @@
+{
+  "word": "reqwest",
+  "ipa": "/rɪˈkwɛst/",
+  "respelling_us": "request",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://seanmonstar.com/blog/introducing-reqwest/",
+  "source_label": "seanmonstar — \"Introducing Reqwest\" (name origin: the `request` crate name was already taken)",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "reqwest is the de-facto HTTP client crate of the Rust ecosystem, written by the author of hyper. The name is a deliberate misspelling of \"request\": the creator's introduction post explains it was forced on him because the `request` crate name was already taken, and it is said exactly like the ordinary English word \"request\". Cold readers often guess \"REK-west\" because the qw digraph is almost nonexistent in English outside \"qwerty\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/reqwest.mp3",
+  "url": "https://pronounce.renlab.ai/word/reqwest",
+  "date_modified": "2026-07-12"
+}

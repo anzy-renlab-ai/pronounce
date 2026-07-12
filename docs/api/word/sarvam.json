@@ -1,0 +1,15 @@
+{
+  "word": "Sarvam",
+  "ipa": "/ˈsɜːrvəm/",
+  "respelling_us": "sir vum",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://en.wiktionary.org/wiki/%E0%A4%B8%E0%A4%B0%E0%A5%8D%E0%A4%B5",
+  "source_label": "Wiktionary — सर्व (Sanskrit sarva-, IPA /s̪ɐɾ.ʋɐ/, stress on the first syllable; sarvam = \"all, everything\")",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Sarvam AI is India's IndiaAI-Mission sovereign-model builder; its open Sarvam-M, Sarvam-30B and Sarvam-105B models ship on Hugging Face and are the default reference point for Indic-language LLM work. The name is Sanskrit सर्वम् \"all, everything\", where the inherent short a is a central /ə~ɐ/ — so it is SUR-vum, stressed on the first syllable, not \"SAR-vam\" with the vowel of \"car\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/sarvam.mp3",
+  "url": "https://pronounce.renlab.ai/word/sarvam",
+  "date_modified": "2026-07-12"
+}

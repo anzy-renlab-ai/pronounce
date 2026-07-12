@@ -34,15 +34,21 @@
       .filter(Boolean);
     for (const a of alts.slice(0, 1)) seq.push(`or, ${a}`);
     let i = 0;
-    const tick = () => {
-      if (i >= seq.length) return;
-      const u = new SpeechSynthesisUtterance(seq[i++]);
-      if (voice) u.voice = voice;
-      u.rate = 0.92;
-      u.onend = () => setTimeout(tick, 120);
-      speechSynthesis.speak(u);
-    };
-    tick();
+    // The rate slider on the options page writes chrome.storage.sync — the popup
+    // used to hardcode 0.92 and ignore it, so a user who slowed playback down (the
+    // whole point of a pronunciation tool) saw no effect here. Same default the
+    // content script uses.
+    chrome.storage.sync.get({ rate: 0.95 }, ({ rate }) => {
+      const tick = () => {
+        if (i >= seq.length) return;
+        const u = new SpeechSynthesisUtterance(seq[i++]);
+        if (voice) u.voice = voice;
+        u.rate = rate;
+        u.onend = () => setTimeout(tick, 120);
+        speechSynthesis.speak(u);
+      };
+      tick();
+    });
   }
 
   const $q = document.getElementById('q');

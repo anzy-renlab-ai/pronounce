@@ -1,0 +1,15 @@
+{
+  "word": "Kured",
+  "ipa": "/ˈkjʊr diː/",
+  "respelling_us": "cure dee",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://kured.dev/docs/faq/",
+  "source_label": "Kured official FAQ — \"How do you pronounce kured?\" → \"cure dee\" (IPA: /kjʊəɹdiː/)",
+  "category": "product",
+  "confidence": "creator-clarified",
+  "notes": "Kured (KUbernetes REboot Daemon) is a CNCF Sandbox DaemonSet that performs safe automatic node reboots, widely used on AKS and self-managed clusters. Its official FAQ answers the pronunciation question directly: say it as \"cure dee\", because the trailing D comes from \"daemon\", akin to systemd. The obvious cold reading — one syllable rhyming with \"cured\" — is the common mistake; the D is spoken separately, exactly as in containerd and etcd.",
+  "audio_url": "https://pronounce.renlab.ai/audio/kured.mp3",
+  "url": "https://pronounce.renlab.ai/word/kured",
+  "date_modified": "2026-07-12"
+}

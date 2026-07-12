@@ -1,0 +1,15 @@
+{
+  "word": "Zenoh",
+  "ipa": "/ˈziːnoʊ/",
+  "respelling_us": "zee noh",
+  "alt_ipa": ["/ˈzɛnoʊ/"],
+  "alt_respelling_us": ["zeh noh"],
+  "source_url": "https://github.com/eclipse-zenoh/zenoh/blob/main/README.md",
+  "source_label": "Eclipse Zenoh README — \"Zenoh (pronounced /zeno/)\"",
+  "category": "project",
+  "confidence": "contested",
+  "notes": "Eclipse Zenoh is a zero-overhead pub/sub, store/query and compute protocol, now an official ROS 2 middleware via rmw_zenoh. Its README annotates it \"(pronounced /zeno/)\" — the trailing h is silent and it is just two syllables, never \"ZEE-noh-h\" or \"zeh-NOH\". English speakers usually say it like the philosopher Zeno, while the maintainers' own /zeno/ notation and many European users give ZEH-noh.",
+  "audio_url": "https://pronounce.renlab.ai/audio/zenoh.mp3",
+  "url": "https://pronounce.renlab.ai/word/zenoh",
+  "date_modified": "2026-07-12"
+}

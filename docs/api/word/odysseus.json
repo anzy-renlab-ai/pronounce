@@ -1,0 +1,15 @@
+{
+  "word": "Odysseus",
+  "ipa": "/oʊˈdɪsiəs/",
+  "respelling_us": "oh diss ee us",
+  "alt_ipa": ["/oʊˈdɪsjuːs/", "/əˈdɪsiəs/"],
+  "alt_respelling_us": ["oh diss yoos", "uh diss ee us"],
+  "source_url": "https://en.wiktionary.org/wiki/Odysseus",
+  "source_label": "Wiktionary — Odysseus (English IPA: /əˈdɪsjuːs/, /oʊˈdɪsi.əs/, /oʊˈdɪsjuːs/); Wikipedia gives /əˈdɪsiəs/",
+  "category": "project",
+  "confidence": "community-consensus",
+  "notes": "Odysseus is PewDiePie's MIT-licensed self-hosted AI workspace (chat, agents, deep research, local models via Ollama/llama.cpp/vLLM), which went from zero to roughly 30k GitHub stars in 48 hours and past 77k within three weeks. The name is the Greek hero of the Odyssey and the stress lands on the second syllable: oh-DISS-ee-us, not oh-dee-SAY-us or o-DIE-see-us. The compressed variant oh-DISS-yoos is also standard English, and an unstressed first syllable (uh-DISS-ee-us) is the form Wikipedia lists.",
+  "audio_url": "https://pronounce.renlab.ai/audio/odysseus.mp3",
+  "url": "https://pronounce.renlab.ai/word/odysseus",
+  "date_modified": "2026-07-12"
+}

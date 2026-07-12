@@ -11,5 +11,5 @@
   "notes": "A programmable, non-Turing-complete configuration language by Gabriel Gonzalez (an alternative to YAML/JSON). The official README settles it: the name comes from a Dustman in the game Planescape: Torment (NOT author Roald DAHL and NOT the lentil dish 'dal/daal'), and 'rhymes with tall/call/hall — dɔl for a US speaker, dɔːl for a UK speaker.' So General American is DAWL (rhymes with TALL), stress on the single syllable. Despite the ruling, a large slice of the community still says /dɑːl/ ('dahl', like the dish), tracked in GitHub issue #144 which also catalogs /dæl/ (rhymes with 'pal'); the silent-h 'Dh' digraph even tempts a /ð/ ('that') onset.",
   "audio_url": "https://pronounce.renlab.ai/audio/dhall.mp3",
   "url": "https://pronounce.renlab.ai/word/dhall",
-  "date_modified": "2026-07-10"
+  "date_modified": "2026-07-12"
 }

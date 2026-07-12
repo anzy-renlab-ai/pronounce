@@ -11,7 +11,7 @@
 # text. Respelling rides the TTS's built-in letter-to-sound rules.
 set -e
 
-VERSION="1.1.0"
+VERSION="1.2.0"
 VOICE="Samantha"
 TIMES=3
 RATE=130
@@ -53,22 +53,33 @@ fi
 
 # tts_speak <text> [rate-wpm]
 # Speaks the text using the detected backend at the given rate (default $RATE).
+# The backend's own diagnostics are the only clue the user gets when TTS fails
+# (a mistyped -v voice, a locked audio device). They used to be sent to
+# /dev/null, so `say-it -v Samanha kubectl` exited 1 with no audio, no message,
+# and no hint — a silent dead end. Capture stderr and surface it.
+tts_report() {
+  local _backend="$1" _rc="$2" _err="$3"
+  echo "say-it: TTS backend '$_backend' failed (exit $_rc)." >&2
+  [[ -n "$_err" ]] && printf '  %s\n' "$_err" >&2
+  return "$_rc"
+}
+
 tts_speak() {
-  local _text="$1" _rate="${2:-$RATE}"
+  local _text="$1" _rate="${2:-$RATE}" _err="" _rc=0
   # `[[slnc N]]` pause markup is macOS `say`-only; on espeak/PowerShell it would
   # be spoken/garbled as literal text. Strip it for every non-`say` backend.
   [[ "$TTS_BACKEND" != say ]] && _text="$(printf '%s' "$_text" | sed -E 's/\[\[[^]]*\]\]//g')"
   case "$TTS_BACKEND" in
-    say)        say -v "$VOICE" -r "$_rate" "$_text" 2>/dev/null ;;
-    espeak-ng)  espeak-ng -v en-us -s "$_rate" "$_text" 2>/dev/null ;;
-    espeak)     espeak -v en-us -s "$_rate" "$_text" 2>/dev/null ;;
+    say)        _err="$(say -v "$VOICE" -r "$_rate" "$_text" 2>&1 >/dev/null)" || _rc=$? ;;
+    espeak-ng)  _err="$(espeak-ng -v en-us -s "$_rate" "$_text" 2>&1 >/dev/null)" || _rc=$? ;;
+    espeak)     _err="$(espeak -v en-us -s "$_rate" "$_text" 2>&1 >/dev/null)" || _rc=$? ;;
     powershell)
       # PowerShell rate is -10..10; map wpm (~80–500) into that range
       local _ps_rate=$(( (_rate - 175) / 25 ))
       [[ $_ps_rate -lt -10 ]] && _ps_rate=-10
       [[ $_ps_rate -gt 10 ]] && _ps_rate=10
       local _esc; _esc=$(printf '%s' "$_text" | sed "s/'/''/g")
-      powershell.exe -NoProfile -Command "Add-Type -AssemblyName System.Speech; \$s = New-Object System.Speech.Synthesis.SpeechSynthesizer; \$s.Rate = $_ps_rate; \$s.Speak('$_esc')" 2>/dev/null
+      _err="$(powershell.exe -NoProfile -Command "Add-Type -AssemblyName System.Speech; \$s = New-Object System.Speech.Synthesis.SpeechSynthesizer; \$s.Rate = $_ps_rate; \$s.Speak('$_esc')" 2>&1 >/dev/null)" || _rc=$?
       ;;
     "")
       echo "say-it: no TTS backend found. Install one:" >&2
@@ -77,21 +88,26 @@ tts_speak() {
       echo "  Windows:  PowerShell (built into modern Windows)" >&2
       return 1 ;;
   esac
+  (( _rc != 0 )) && tts_report "$TTS_BACKEND" "$_rc" "$_err"
+  return "$_rc"
 }
 
 # tts_save <text> <output-file>
 # Saves the rendered audio to a file. AIFF on macOS, WAV elsewhere.
 tts_save() {
-  local _text="$1" _out="$2"
+  local _text="$1" _out="$2" _err="" _rc=0
   [[ "$TTS_BACKEND" != say ]] && _text="$(printf '%s' "$_text" | sed -E 's/\[\[[^]]*\]\]//g')"
   case "$TTS_BACKEND" in
-    say)        say -v "$VOICE" -r "$RATE" -o "$_out" "$_text" 2>/dev/null ;;
-    espeak-ng)  espeak-ng -v en-us -s "$RATE" -w "$_out" "$_text" 2>/dev/null ;;
-    espeak)     espeak -v en-us -s "$RATE" -w "$_out" "$_text" 2>/dev/null ;;
+    say)        _err="$(say -v "$VOICE" -r "$RATE" -o "$_out" "$_text" 2>&1 >/dev/null)" || _rc=$? ;;
+    espeak-ng)  _err="$(espeak-ng -v en-us -s "$RATE" -w "$_out" "$_text" 2>&1 >/dev/null)" || _rc=$? ;;
+    espeak)     _err="$(espeak -v en-us -s "$RATE" -w "$_out" "$_text" 2>&1 >/dev/null)" || _rc=$? ;;
     *)
       echo "say-it: --output not supported on this TTS backend." >&2
       return 1 ;;
   esac
+  # An unwritable -o path or a bad voice must not fail silently.
+  (( _rc != 0 )) && tts_report "$TTS_BACKEND" "$_rc" "$_err"
+  return "$_rc"
 }
 
 # tts_can_save — true if the active backend can render audio to a file.
@@ -184,20 +200,107 @@ Dictionary + docs: https://github.com/anzy-renlab-ai/pronounce — a ★ helps m
 EOF
 }
 
+# --- temp-file cleanup --------------------------------------------------------
+# Single EXIT trap; every temp path gets appended here instead of each site
+# installing its own trap (a second `trap ... EXIT` would silently replace the
+# first, leaking whatever the first one was guarding).
+TMP_PATHS=()
+cleanup_tmp() { (( ${#TMP_PATHS[@]} )) && rm -rf "${TMP_PATHS[@]}"; return 0; }
+trap cleanup_tmp EXIT
+
+# --- hashing ------------------------------------------------------------------
+# `shasum` is a Perl script and is missing on slim Linux/Alpine images, so it
+# cannot be the only hasher: an empty digest would collapse every word onto one
+# cache filename and replay the first word's audio forever. Fall through the
+# coreutils hashers to POSIX `cksum`, and return empty only if literally nothing
+# is available (callers then bypass the cache rather than collide).
+hash_hex() {
+  if command -v shasum >/dev/null 2>&1; then shasum | awk '{print $1}'
+  elif command -v sha1sum >/dev/null 2>&1; then sha1sum | awk '{print $1}'
+  elif command -v sha256sum >/dev/null 2>&1; then sha256sum | awk '{print $1}'
+  elif command -v md5sum >/dev/null 2>&1; then md5sum | awk '{print $1}'
+  elif command -v cksum >/dev/null 2>&1; then cksum | awk '{printf "%08x\n", $1}'
+  else cat >/dev/null 2>&1 || true; fi
+}
+
+CACHE_DIR="${SAY_IT_CACHE_DIR:-$HOME/.cache/say-it}"
+
 # --- locate the dictionary ----------------------------------------------------
+# BASE_DICT is the shipped dictionary. LOCAL_DICT is an optional user overlay
+# (written by `say-it import`) holding ONLY the user's own rows — it is layered
+# ON TOP of the base, never used in place of it, and `update` never writes to it.
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-DICT_CANDIDATES=(
+LOCAL_DICT="${SAY_IT_LOCAL_DICT:-$HOME/.config/say-it/pronunciations.local.tsv}"
+BASE_CANDIDATES=(
   "${SAY_IT_DICT:-}"
-  "$HOME/.config/say-it/pronunciations.local.tsv"
   "$SCRIPT_DIR/../share/say-it/pronunciations.tsv"
   "$SCRIPT_DIR/../data/pronunciations.tsv"
 )
-DICT=""
-for c in "${DICT_CANDIDATES[@]}"; do
-  if [[ -n "$c" && -f "$c" ]]; then DICT="$c"; break; fi
+BASE_DICT=""
+for c in "${BASE_CANDIDATES[@]}"; do
+  if [[ -n "$c" && -f "$c" ]]; then BASE_DICT="$c"; break; fi
 done
 
-CACHE_DIR="${SAY_IT_CACHE_DIR:-$HOME/.cache/say-it}"
+# Merge base + overlay into one file for the ~40 readers below, which all expect
+# a single TSV path. Local rows REPLACE the base row with the same word (case-
+# insensitive) and local-only rows are appended in file order.
+merge_dicts() {
+  awk -F'\t' '
+    NR==FNR {
+      if (!/^#/ && $1 != "" && $1 != "word") {
+        k = tolower($1)
+        if (!(k in local)) order[++n] = k
+        local[k] = $0
+      }
+      next
+    }
+    {
+      if (/^#/ || $1 == "" || $1 == "word") { print; next }
+      k = tolower($1)
+      if (k in local) { print local[k]; used[k] = 1; next }
+      print
+    }
+    END { for (i = 1; i <= n; i++) if (!(order[i] in used)) print local[order[i]] }
+  ' "$LOCAL_DICT" "$BASE_DICT"
+}
+
+# The merged file is keyed by WHICH pair of dicts produced it, not just by mtime:
+# SAY_IT_DICT can repoint the base at a different (possibly older) file, and an
+# mtime-only check would happily serve the previous base's merge.
+merged_path() {
+  local key
+  key="$(printf '%s\x1f%s' "$BASE_DICT" "$LOCAL_DICT" | hash_hex)"
+  [[ -z "$key" ]] && return 1
+  printf '%s/dict-merged-%s.tsv' "$CACHE_DIR" "${key:0:16}"
+}
+
+DICT="$BASE_DICT"
+if [[ -n "$BASE_DICT" && -f "$LOCAL_DICT" ]] &&
+   awk -F'\t' '!/^#/ && $1 != "" && $1 != "word" { found = 1; exit } END { exit !found }' "$LOCAL_DICT" 2>/dev/null; then
+  if mkdir -p "$CACHE_DIR" 2>/dev/null && [[ -w "$CACHE_DIR" ]] && MERGED="$(merged_path)"; then
+    if [[ ! -f "$MERGED" || "$BASE_DICT" -nt "$MERGED" || "$LOCAL_DICT" -nt "$MERGED" ]]; then
+      # write-then-rename so concurrent say-it processes can't read a half file
+      merge_dicts > "$MERGED.$$" 2>/dev/null && mv -f "$MERGED.$$" "$MERGED" || rm -f "$MERGED.$$"
+    fi
+    [[ -s "$MERGED" ]] && DICT="$MERGED"
+  else
+    MERGED="$(mktemp -t say-it-dict-merged.XXXXXX)"
+    TMP_PATHS+=("$MERGED")
+    merge_dicts > "$MERGED" 2>/dev/null && [[ -s "$MERGED" ]] && DICT="$MERGED"
+  fi
+fi
+# Any write to base or overlay must drop the merged view.
+invalidate_merged() { rm -f "$CACHE_DIR"/dict-merged-*.tsv 2>/dev/null || true; }
+
+# Every dict-reading subcommand must call this. Without it, `awk … "$DICT"` with
+# an empty $DICT gets an empty filename argument, which awk treats as "read
+# stdin" — so `say-it badge kubectl` on a box with no dictionary hung forever
+# instead of failing.
+require_dict() {
+  [[ -n "$DICT" ]] && return 0
+  echo "say-it: dictionary not found; try 'say-it update --full'." >&2
+  exit 4
+}
 
 # --- subcommands --------------------------------------------------------------
 case "${1:-}" in
@@ -207,7 +310,7 @@ case "${1:-}" in
       # Full update: clone + re-run the installer (refreshes CLI, dict, and site).
       command -v git >/dev/null 2>&1 || { echo "say-it update --full: needs git." >&2; exit 5; }
       TMP_DIR="$(mktemp -d -t say-it-update.XXXXXX)"
-      trap 'rm -rf "$TMP_DIR"' EXIT
+      TMP_PATHS+=("$TMP_DIR")
       echo "${C_DIM}Cloning $UPSTREAM …${C_RESET}"
       if ! git clone --depth=1 "$UPSTREAM" "$TMP_DIR/repo" >/dev/null 2>&1; then
         echo "say-it update: git clone failed." >&2; exit 5
@@ -220,21 +323,23 @@ case "${1:-}" in
       exit 0
     fi
     # Fast path (default): refresh just the dictionary TSV — no git, no reinstall.
-    [[ -z "$DICT" ]] && { echo "say-it: dictionary not found; try 'say-it update --full'." >&2; exit 4; }
-    [[ -w "$DICT" ]] || { echo "say-it update: $DICT is read-only; try 'say-it update --full'." >&2; exit 5; }
+    # Writes the BASE dict only; a user's `import`ed overlay is never touched.
+    [[ -z "$BASE_DICT" ]] && { echo "say-it: dictionary not found; try 'say-it update --full'." >&2; exit 4; }
+    [[ -w "$BASE_DICT" ]] || { echo "say-it update: $BASE_DICT is read-only; try 'say-it update --full'." >&2; exit 5; }
     DICT_URL="${SAY_IT_DICT_URL:-https://raw.githubusercontent.com/anzy-renlab-ai/pronounce/main/data/pronunciations.tsv}"
     if command -v curl >/dev/null 2>&1; then fetch=(curl -fsSL)
     elif command -v wget >/dev/null 2>&1; then fetch=(wget -qO-)
     else echo "say-it update: needs curl or wget (or use 'say-it update --full')." >&2; exit 5; fi
     tmp_tsv="$(mktemp -t say-it-dict.XXXXXX)"
-    trap 'rm -f "$tmp_tsv"' EXIT
+    TMP_PATHS+=("$tmp_tsv")
     echo "${C_DIM}Fetching latest dictionary …${C_RESET}"
     if ! "${fetch[@]}" "$DICT_URL" > "$tmp_tsv" || [[ ! -s "$tmp_tsv" ]] || ! grep -q $'\t' "$tmp_tsv"; then
       echo "say-it update: download failed or file looks wrong." >&2; exit 5
     fi
-    old_n="$(awk -F'\t' '!/^#/ && NF>=3 && $1!="" && $1!="word"' "$DICT" 2>/dev/null | wc -l | tr -d ' ')"
+    old_n="$(awk -F'\t' '!/^#/ && NF>=3 && $1!="" && $1!="word"' "$BASE_DICT" 2>/dev/null | wc -l | tr -d ' ')"
     new_n="$(awk -F'\t' '!/^#/ && NF>=3 && $1!="" && $1!="word"' "$tmp_tsv" | wc -l | tr -d ' ')"
-    cp "$tmp_tsv" "$DICT"
+    cp "$tmp_tsv" "$BASE_DICT"
+    invalidate_merged
     echo "${C_GREEN}say-it: dictionary updated — ${old_n:-?} → ${new_n} entries.${C_RESET}"
     echo "${C_DIM}(CLI unchanged; run 'say-it update --full' to update the CLI too.)${C_RESET}"
     exit 0
@@ -253,9 +358,12 @@ case "${1:-}" in
     pat="${2:-}"
     [[ -z "$pat" ]] && { echo "say-it: usage: say-it search <pattern>" >&2; exit 2; }
     pat_lower="$(printf '%s' "$pat" | tr '[:upper:]' '[:lower:]')"
+    # Literal substring, not a regex: dictionary words are full of metacharacters
+    # ("C++", "C#", ".NET"), so `search c++` as a regex matched 1,200+ rows and
+    # `search '['` died with an awk regex error.
     awk -v p="$pat_lower" -F'\t' '
       !/^#/ && NF>=2 && $1 != "" && $1 != "word" {
-        if (tolower($1) ~ p || tolower($10) ~ p) printf "%-22s %s\n", $1, $10
+        if (index(tolower($1), p) || index(tolower($10), p)) printf "%-22s %s\n", $1, $10
       }
     ' "$DICT"
     exit 0
@@ -270,7 +378,9 @@ case "${1:-}" in
     [[ -z "$DICT" ]] && { echo "say-it: dictionary not found" >&2; exit 4; }
     # Deterministic: hash today's date, pick word at that index
     day="$(date +%Y%m%d)"
-    idx=$(printf '%s' "$day" | shasum | awk '{print substr($1,1,8)}' | (echo "ibase=16; $(tr a-f A-F)" | bc) 2>/dev/null || echo "0")
+    digest="$(printf '%s' "$day" | hash_hex | tr 'a-f' 'A-F')"
+    digest="${digest:0:8}"
+    idx=$(( 16#${digest:-0} ))
     count=$(awk -F'\t' '!/^#/ && NF>=2 && $1 != "" && $1 != "word"' "$DICT" | wc -l | tr -d ' ')
     pick=$((idx % count + 1))
     word="$(awk -F'\t' -v n="$pick" '!/^#/ && NF>=2 && $1 != "" && $1 != "word" { i++; if (i==n) { print $1; exit } }' "$DICT")"
@@ -309,13 +419,17 @@ case "${1:-}" in
     printf '%s\n' "$stats_data" | awk -F'\t' '$1=="CONF"{print $2"\t"$3}' | sort -rn | \
       while IFS=$'\t' read -r n c; do printf "    %-22s ${C_BOLD}%4d${C_RESET}\n" "$c" "$n"; done
     echo ""
-    echo "  ${C_CYAN}With source URL:${C_RESET} ${C_BOLD}$src${C_RESET}/$total ($((src * 100 / total))%)"
+    echo "  ${C_CYAN}With source URL:${C_RESET} ${C_BOLD}$src${C_RESET}/$total ($(( total ? src * 100 / total : 0 ))%)"
     exit 0
     ;;
   config)
     echo "${C_BOLD}say-it config${C_RESET}"
     echo "  ${C_CYAN}version:${C_RESET}     $VERSION"
-    echo "  ${C_CYAN}dict path:${C_RESET}   ${DICT:-<not found>}"
+    echo "  ${C_CYAN}dict path:${C_RESET}   ${BASE_DICT:-<not found>}"
+    if [[ -f "$LOCAL_DICT" ]]; then
+      local_n="$(awk -F'\t' '!/^#/ && NF>=3 && $1!="" && $1!="word"' "$LOCAL_DICT" 2>/dev/null | wc -l | tr -d ' ')"
+      echo "  ${C_CYAN}local dict:${C_RESET}  $LOCAL_DICT ${C_DIM}(${local_n:-0} entries, layered over the base)${C_RESET}"
+    fi
     echo "  ${C_CYAN}cache dir:${C_RESET}   $CACHE_DIR"
     echo "  ${C_CYAN}voice:${C_RESET}       $VOICE"
     echo "  ${C_CYAN}rate:${C_RESET}        $RATE wpm"
@@ -484,16 +598,18 @@ print(json.dumps(out, indent=2, ensure_ascii=False))
   import)
     src="${2:-}"
     [[ -z "$src" || ! -f "$src" ]] && { echo "say-it import: file not found: $src" >&2; exit 2; }
-    local_dict="$HOME/.config/say-it/pronunciations.local.tsv"
+    local_dict="$LOCAL_DICT"
     mkdir -p "$(dirname "$local_dict")"
     if [[ ! -f "$local_dict" ]]; then
-      [[ -z "$DICT" ]] && { echo "say-it import: no base dictionary found to seed the header" >&2; exit 4; }
+      [[ -z "$BASE_DICT" ]] && { echo "say-it import: no base dictionary found to seed the header" >&2; exit 4; }
       # Copy the comment block through the header row (the line starting "word\t").
       # Content-driven so it survives the header comment block growing/shrinking.
-      awk '{ print } /^word\t/ { exit }' "$DICT" > "$local_dict"
+      awk '{ print } /^word\t/ { exit }' "$BASE_DICT" > "$local_dict"
     fi
     appended=0
-    while IFS= read -r line; do
+    # `|| [[ -n "$line" ]]` — read returns non-zero on a final line with no
+    # trailing newline, which silently dropped the last entry of the file.
+    while IFS= read -r line || [[ -n "$line" ]]; do
       [[ -z "$line" || "$line" =~ ^# ]] && continue
       word=$(printf '%s' "$line" | awk -F'\t' '{print $1}')
       [[ -z "$word" || "$word" == "word" ]] && continue
@@ -502,11 +618,13 @@ print(json.dumps(out, indent=2, ensure_ascii=False))
       echo "$line" >> "$local_dict"
       appended=$((appended+1))
     done < "$src"
+    invalidate_merged
     echo "${C_GREEN}Imported $appended entries to $local_dict${C_RESET}"
     echo "  Your local entries take precedence over the bundled dictionary."
     exit 0
     ;;
   badge)
+    require_dict
     [[ -z "${2:-}" ]] && { echo "say-it: usage: say-it badge <word>" >&2; exit 2; }
     word="$2"
     slug="$(printf '%s' "$word" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9._-]/-/g')"
@@ -529,6 +647,7 @@ MD
     exit 0
     ;;
   explain)
+    require_dict
     [[ -z "${2:-}" ]] && { echo "say-it: usage: say-it explain <word>" >&2; exit 2; }
     word="$2"
     # Single awk pass extracts every field, joined by \x1f (a non-whitespace
@@ -580,8 +699,14 @@ MD
       while IFS= read -r w; do WORDS+=("$w"); done < <(awk -F'\t' '!/^#/ && NF>=2 && $1 != "" && $1 != "word" { print $1 }' "$DICT")
       shift
     else
-      IFS=',' read -ra WORDS <<< "$1"
-      shift
+      # Accept BOTH `playlist a,b,c` and `playlist a b c` — the help text shows
+      # space-separated words, but only the first argument used to be read, so
+      # `playlist kubectl nginx GIF` silently spoke kubectl and stopped.
+      for _arg in "$@"; do
+        IFS=',' read -ra _parts <<< "$_arg"
+        for _p in "${_parts[@]}"; do [[ -n "$_p" ]] && WORDS+=("$_p"); done
+      done
+      shift $#
     fi
     [[ ${#WORDS[@]} -eq 0 ]] && { echo "say-it playlist: nothing to play" >&2; exit 2; }
     echo "${C_BOLD}🔊 playlist (${#WORDS[@]} words)${C_RESET}"
@@ -700,6 +825,7 @@ EOF
     exit 0
     ;;
   diff)
+    require_dict
     word1="${2:-}"
     word2="${3:-}"
     [[ -z "$word1" || -z "$word2" ]] && { echo "say-it: usage: say-it diff <word1> <word2>" >&2; exit 2; }
@@ -716,6 +842,7 @@ EOF
     exit 0
     ;;
   teach)
+    require_dict
     [[ -z "${2:-}" ]] && { echo "say-it: usage: say-it teach <word>" >&2; exit 2; }
     word="$2"
     line=$(awk -F'\t' -v w="$(printf '%s' "$word" | tr '[:upper:]' '[:lower:]')" '!/^#/ && tolower($1)==w { print; exit }' "$DICT")
@@ -999,10 +1126,15 @@ print_why() {
   fi
 }
 
-[[ $SHOW_WHY -eq 1 ]] && print_why
+# --why is a text-only inspector (SKILL.md and the no-backend hint below both
+# promise "no audio"), so it exits here instead of falling through to speak.
+if [[ $SHOW_WHY -eq 1 ]]; then
+  print_why
+  exit 0
+fi
 
-# Everything past here produces audio. Text-only modes (--json/--md/tweet)
-# already exited above, and --why has printed. If no TTS backend was detected
+# Everything past here produces audio. Text-only modes (--json/--md/tweet/--why)
+# already exited above. If no TTS backend was detected
 # (macOS say / Linux espeak-ng / Windows PowerShell), stop with install hints
 # instead of failing obscurely deeper in the speak path.
 if [[ -z "$TTS_BACKEND" ]]; then
@@ -1058,7 +1190,10 @@ build_audible_body() {
 cache_path() {
   local body="$1"
   local key
-  key="$(printf '%s\x1f%s\x1f%s\x1f%s' "$VOICE" "$RATE" "$TIMES" "$body" | shasum | awk '{print $1}')"
+  key="$(printf '%s\x1f%s\x1f%s\x1f%s' "$VOICE" "$RATE" "$TIMES" "$body" | hash_hex)"
+  # No hasher at all → no usable key. Fail so the caller speaks live rather than
+  # writing every word to the same "$CACHE_DIR/.aiff".
+  [[ -z "$key" ]] && return 1
   printf '%s/%s.aiff' "$CACHE_DIR" "$key"
 }
 
@@ -1101,12 +1236,16 @@ if [[ -n "$SAVE" ]]; then
   echo "Saved: $SAVE"
 else
   mkdir -p "$CACHE_DIR" 2>/dev/null || true
-  if tts_can_save && [[ -d "$CACHE_DIR" && -w "$CACHE_DIR" ]]; then
-    CACHED="$(cache_path "$BODY")"
+  if tts_can_save && [[ -d "$CACHE_DIR" && -w "$CACHE_DIR" ]] && CACHED="$(cache_path "$BODY")"; then
+    # Every audio_play falls back to live speech: a box can have espeak-ng but no
+    # player at all (paplay/aplay/play/ffplay), and under `set -e` a failed play
+    # would abort the script into silence instead of just speaking.
     if [[ -f "$CACHED" && -s "$CACHED" ]]; then
-      audio_play "$CACHED"
-    elif tts_save "$BODY" "$CACHED"; then
-      audio_play "$CACHED"
+      audio_play "$CACHED" || tts_speak "$BODY"
+    elif tts_save "$BODY" "$CACHED" 2>/dev/null; then
+      # The cache render is speculative, so keep it quiet — if the backend is
+      # genuinely broken, the tts_speak below reports it once, not twice.
+      audio_play "$CACHED" || tts_speak "$BODY"
     else
       tts_speak "$BODY"
     fi

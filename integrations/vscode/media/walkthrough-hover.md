@@ -6,6 +6,6 @@ kubectl
     🔊 Play  ·  source: KubeCon 2018
 ```
 
-Hover over any of **1790 entries**. Works in `.md` / `.yaml` / `.py` / `.ts` / Dockerfile / Terraform — every language.
+Hover over any of **1848 entries**. Works in `.md` / `.yaml` / `.py` / `.ts` / Dockerfile / Terraform — every language.
 
 Toggle off in settings: `pronounce.hoverEnabled`.

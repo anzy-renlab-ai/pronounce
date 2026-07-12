@@ -1,0 +1,15 @@
+{
+  "word": "Gravitino",
+  "ipa": "/ˌɡrævɪˈtiːnoʊ/",
+  "respelling_us": "grav ih tee noh",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.dictionary.com/browse/gravitino",
+  "source_label": "Dictionary.com — gravitino /ˌgræv ɪˈti noʊ/ (grav-i-TEE-noh)",
+  "category": "project",
+  "confidence": "community-consensus",
+  "notes": "Apache Gravitino is a federated metadata lake / open data catalog (originally from Datastrato) that competes with Unity Catalog and Polaris for Iceberg governance. The name is the physics particle — graviton plus the Italian diminutive -ino — and dictionaries give grav-i-TEE-noh, stress on 'tee', with 'vi' as a short 'ih' rather than 'vye'. The project publishes no pronunciation guidance of its own, so the dictionary reading of the particle is the consensus.",
+  "audio_url": "https://pronounce.renlab.ai/audio/gravitino.mp3",
+  "url": "https://pronounce.renlab.ai/word/gravitino",
+  "date_modified": "2026-07-12"
+}

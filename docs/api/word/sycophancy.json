@@ -1,0 +1,15 @@
+{
+  "word": "sycophancy",
+  "ipa": "/ˈsɪkəfənsi/",
+  "respelling_us": "sick uh fuhn see",
+  "alt_ipa": ["/ˈsɪkəˌfænsi/"],
+  "alt_respelling_us": ["sick uh fan see"],
+  "source_url": "https://www.oxfordlearnersdictionaries.com/definition/english/sycophancy",
+  "source_label": "Oxford Learner's Dictionaries — sycophancy /ˈsɪkəfənsi/ (NAmE & BrE); Dictionary.com lists /ˈsɪk ə fən si, -ˌfæn-, ˈsaɪ kə-/",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "In LLM work, sycophancy is the failure mode where a model excessively agrees with or flatters the user, and it is now a standard eval axis reported in system cards and release notes. Stress falls on the FIRST syllable — SICK-uh-fuhn-see — and the opening \"sy\" is /sɪ/ like \"sick\", not \"sigh\". The tempting si-KOF-uhn-see reading, formed by analogy with discrepancy or despondency, is not recorded in any major dictionary; note also that the adjective sycophantic does shift the stress, to sik-uh-FAN-tik.",
+  "audio_url": "https://pronounce.renlab.ai/audio/sycophancy.mp3",
+  "url": "https://pronounce.renlab.ai/word/sycophancy",
+  "date_modified": "2026-07-12"
+}

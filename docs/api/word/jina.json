@@ -1,0 +1,15 @@
+{
+  "word": "Jina",
+  "ipa": "/ˈdʒiːnə/",
+  "respelling_us": "jee nuh",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/jina-ai/faq/blob/main/faq_main.md",
+  "source_label": "Jina AI official FAQ — \"How do I pronounce Jina?\": \"like jee-na with the emphasis on the jee. Or exactly the way the name 'Gina' is pronounced in English.\"",
+  "category": "product",
+  "confidence": "creator-clarified",
+  "notes": "Jina AI is the Berlin-based search-AI company (acquired by Elastic in October 2025) behind the jina-embeddings and jina-reranker model families and the r.jina.ai reader endpoint used in RAG and agent stacks. Its official FAQ answers \"How do I pronounce Jina?\" with: roughly like jee-na, stress on the jee — exactly the way the English name \"Gina\" is said. The same FAQ explicitly calls out jy-na and jee-NA (stress on the second syllable) as incorrect, so the Spanish-style HEE-nah and German-style YEE-nah readings the spelling suggests are wrong too.",
+  "audio_url": "https://pronounce.renlab.ai/audio/jina.mp3",
+  "url": "https://pronounce.renlab.ai/word/jina",
+  "date_modified": "2026-07-12"
+}

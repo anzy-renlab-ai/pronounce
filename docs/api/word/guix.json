@@ -1,7 +1,7 @@
 {
   "word": "guix",
   "ipa": "/ɡiːks/",
-  "respelling_us": "geeks",
+  "respelling_us": "gheeks",
   "alt_ipa": [],
   "alt_respelling_us": [],
   "source_url": "https://guix.gnu.org/",
@@ -11,5 +11,5 @@
   "notes": "GNU package manager; pronounced \"geeks\".",
   "audio_url": "https://pronounce.renlab.ai/audio/guix.mp3",
   "url": "https://pronounce.renlab.ai/word/guix",
-  "date_modified": "2026-07-10"
+  "date_modified": "2026-07-12"
 }

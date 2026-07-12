@@ -1,0 +1,15 @@
+{
+  "word": "Syft",
+  "ipa": "/ˈsɪft/",
+  "respelling_us": "sift",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://oss.anchore.com/docs/projects/",
+  "source_label": "Anchore OSS Docs — Syft (pronounced like \"sift\")",
+  "category": "cli-tool",
+  "confidence": "creator-clarified",
+  "notes": "Anchore's open-source CLI that generates a Software Bill of Materials from container images and filesystems, and the SBOM feeder for its vulnerability scanner Grype. Anchore's own docs gloss it \"pronounced like sift\" — one syllable, exactly like the verb. The y trips people up because sibling tool Grype takes the other y sound and rhymes with hype, so readers guess \"SYE-ft\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/syft.mp3",
+  "url": "https://pronounce.renlab.ai/word/syft",
+  "date_modified": "2026-07-12"
+}

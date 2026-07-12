@@ -1,0 +1,15 @@
+{
+  "word": "Cython",
+  "ipa": "/ˈsaɪθɑːn/",
+  "respelling_us": "sigh thon",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://en.wikipedia.org/wiki/Cython",
+  "source_label": "Wikipedia — Cython (/ˈsaɪθɒn/)",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "Optimizing compiler that turns Python-like .pyx code into C extension modules; it powers the fast paths in NumPy, SciPy, pandas and scikit-learn. Pronounced \"SIGH-thon\" — the C is soft, rhyming with Python, not \"see-thon\" or \"kye-thon\". Do not confuse it with CPython, the reference interpreter, which really is said \"see-Python\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/cython.mp3",
+  "url": "https://pronounce.renlab.ai/word/cython",
+  "date_modified": "2026-07-12"
+}

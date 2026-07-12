@@ -1,0 +1,15 @@
+{
+  "word": "youki",
+  "ipa": "/ˈjoʊki/",
+  "respelling_us": "yoh kee",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/youki-dev/youki/blob/main/README.md",
+  "source_label": "youki README — About the name (\"youki is pronounced as /joʊki/ or yoh-key\")",
+  "category": "tool",
+  "confidence": "creator-clarified",
+  "notes": "Container runtime implementing the OCI runtime-spec in Rust, a runc alternative. The official README and docs state it is pronounced /joʊki/ or \"yoh-key\", after the Japanese word 容器 (yōki) meaning \"a container\". The \"ou\" is a Japanese long o, so it is not \"YOO-kee\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/youki.mp3",
+  "url": "https://pronounce.renlab.ai/word/youki",
+  "date_modified": "2026-07-12"
+}

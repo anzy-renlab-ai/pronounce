@@ -1,0 +1,15 @@
+{
+  "word": "Vineyard",
+  "ipa": "/ˈvɪnjərd/",
+  "respelling_us": "vin yerd",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.oxfordlearnersdictionaries.com/us/definition/english/vineyard",
+  "source_label": "Oxford Learner's Dictionaries — vineyard (NAmE /ˈvɪnjərd/)",
+  "category": "project",
+  "confidence": "community-consensus",
+  "notes": "Vineyard (v6d) is a CNCF sandbox project — an in-memory immutable data manager giving zero-copy sharing of distributed data between steps of big-data and ML pipelines. Despite the spelling it is VIN-yerd, with a short i and a silent e; it is not VINE-yard. Dictionaries are unanimous on /ˈvɪnjərd/, and the project site offers no alternative pronunciation of its own.",
+  "audio_url": "https://pronounce.renlab.ai/audio/vineyard.mp3",
+  "url": "https://pronounce.renlab.ai/word/vineyard",
+  "date_modified": "2026-07-12"
+}

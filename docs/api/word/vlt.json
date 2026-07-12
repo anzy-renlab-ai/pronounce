@@ -1,0 +1,15 @@
+{
+  "word": "vlt",
+  "ipa": "/ˈvoʊlt/",
+  "respelling_us": "volt",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/vltpkg",
+  "source_label": "GitHub — vltpkg org display name: \"vlt /vōlt/\" (mirrored on vlt.io and docs.vlt.sh page titles)",
+  "category": "cli-tool",
+  "confidence": "creator-clarified",
+  "notes": "vlt is a JavaScript package manager and CLI from npm's creator Isaac Schlueter and former npm maintainers, released with vsr, a serverless registry. Because the name is written with no vowels, cold readers spell it out as \"V-L-T\" or guess \"vult\", and many write-ups call it \"vault\" — but the project brands itself \"vlt /vōlt/\" in its own GitHub org name and site titles, so it is one syllable, exactly like the English word volt, rhyming with bolt.",
+  "audio_url": "https://pronounce.renlab.ai/audio/vlt.mp3",
+  "url": "https://pronounce.renlab.ai/word/vlt",
+  "date_modified": "2026-07-12"
+}

@@ -1,0 +1,15 @@
+{
+  "word": "GAIA",
+  "ipa": "/ˈɡaɪə/",
+  "respelling_us": "guy uh",
+  "alt_ipa": ["/ˈɡeɪə/"],
+  "alt_respelling_us": ["gay uh"],
+  "source_url": "https://en.wiktionary.org/wiki/Gaia",
+  "source_label": "Wiktionary — Gaia (Gaia hypothesis: /ˈɡaɪə/; goddess: /ˈɡeɪə/, /ˈɡaɪə/); Wikipedia — Gaia (/ˈɡeɪ.ə, ˈɡaɪ.ə/)",
+  "category": "acronym",
+  "confidence": "contested",
+  "notes": "GAIA (General AI Assistants) is the 466-question benchmark for browsing and tool-use agents, with a live Hugging Face leaderboard and its own unit in the HF Agents Course. The name reuses the Greek earth goddess, which English reads two ways: dictionaries list both /ˈɡaɪə/ (guy-uh) and /ˈɡeɪə/ (gay-uh). The authors never stated an official pronunciation, but scientific naming after the goddess — Lovelock's Gaia hypothesis — is settled on guy-uh, so that is the safer default.",
+  "audio_url": "https://pronounce.renlab.ai/audio/gaia.mp3",
+  "url": "https://pronounce.renlab.ai/word/gaia",
+  "date_modified": "2026-07-12"
+}

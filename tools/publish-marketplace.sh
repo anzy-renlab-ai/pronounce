@@ -39,6 +39,17 @@ for arg in "$@"; do
   esac
 done
 
+# Bump BEFORE packaging. The old order packaged the vsix at the CURRENT version,
+# then let `vsce publish <bump>` raise package.json and publish the new version to
+# MS — while Open VSX was handed the already-captured, now-stale vsix. The two
+# marketplaces silently diverged by one version every bumped release.
+if [[ -n "$BUMP_OR_VERSION" ]]; then
+  echo "==> Bumping version ($BUMP_OR_VERSION)"
+  npm version "$BUMP_OR_VERSION" --no-git-tag-version >/dev/null
+fi
+VERSION=$(node -p "require('./package.json').version")
+echo "    version: $VERSION"
+
 echo "==> Building dictionary + compiling TypeScript"
 npm run build:dict >/dev/null
 npm run compile >/dev/null
@@ -46,19 +57,17 @@ npm run compile >/dev/null
 echo "==> Packaging vsix"
 rm -f pronounce-*.vsix
 npx vsce package --no-dependencies >/dev/null
-VSIX=$(ls -1 pronounce-*.vsix | head -1)
+VSIX="pronounce-$VERSION.vsix"
+[[ -f "$VSIX" ]] || { echo "publish: expected $VSIX, got: $(ls pronounce-*.vsix 2>/dev/null)" >&2; exit 1; }
 echo "    $VSIX"
 
+# Both markets get the SAME artifact — publish the packaged file, never re-bump.
 if [[ $SKIP_MSMP -eq 0 ]]; then
   if [[ -z "${VSCE_PAT:-}" ]]; then
     echo "VSCE_PAT not set in $CONFIG; skipping MS Marketplace." >&2
   else
-    echo "==> Publishing to Microsoft VS Code Marketplace"
-    if [[ -n "$BUMP_OR_VERSION" ]]; then
-      npx vsce publish "$BUMP_OR_VERSION" -p "$VSCE_PAT"
-    else
-      npx vsce publish -p "$VSCE_PAT"
-    fi
+    echo "==> Publishing $VSIX to Microsoft VS Code Marketplace"
+    npx vsce publish --packagePath "$VSIX" -p "$VSCE_PAT"
   fi
 fi
 
@@ -66,7 +75,7 @@ if [[ $SKIP_OVSX -eq 0 ]]; then
   if [[ -z "${OVSX_PAT:-}" ]]; then
     echo "OVSX_PAT not set in $CONFIG; skipping Open VSX." >&2
   else
-    echo "==> Publishing to Open VSX"
+    echo "==> Publishing $VSIX to Open VSX"
     npx ovsx publish "$VSIX" -p "$OVSX_PAT"
   fi
 fi

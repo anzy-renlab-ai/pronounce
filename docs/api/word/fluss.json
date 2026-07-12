@@ -1,0 +1,15 @@
+{
+  "word": "Fluss",
+  "ipa": "/ˈfluːs/",
+  "respelling_us": "floose",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/apache/fluss",
+  "source_label": "GitHub — apache/fluss README (\"Fluss (German: river, pronounced /flus/)\")",
+  "category": "product",
+  "confidence": "creator-clarified",
+  "notes": "Apache Fluss (incubating) is a Flink-native streaming storage layer for real-time lakehouses, tiering data into Iceberg or Paimon. The name is the German word for \"river\" and the project README states it is pronounced /flus/ — a short German u, closest to English \"floos\" — so it is not English \"fuss\", and the double-s stays voiceless rather than turning into a z.",
+  "audio_url": "https://pronounce.renlab.ai/audio/fluss.mp3",
+  "url": "https://pronounce.renlab.ai/word/fluss",
+  "date_modified": "2026-07-12"
+}

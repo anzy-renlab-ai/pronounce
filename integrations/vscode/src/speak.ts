@@ -5,6 +5,12 @@ import { lookup } from './dict';
 type Backend = 'say' | 'espeak-ng' | 'espeak' | 'powershell' | null;
 
 let running: ChildProcess | null = null;
+// Bumped on every speak() call. A killed process still fires its 'exit' handler,
+// and that stale handler used to run `next()` and null out `running` — wiping the
+// handle to the process the NEW call had just spawned. The next click then had
+// nothing to cancel, so two `say` processes talked over each other. Handlers now
+// no-op unless they belong to the current generation.
+let generation = 0;
 let cachedBackend: Backend | undefined;
 
 function detectBackend(): Backend {
@@ -60,6 +66,8 @@ export function speak(extensionPath: string, word: string): void {
   const entry = lookup(extensionPath, word);
   const spoken = entry?.respelling_us || word;
 
+  const myGen = ++generation;
+
   if (running) {
     running.kill('SIGTERM');
     running = null;
@@ -68,15 +76,19 @@ export function speak(extensionPath: string, word: string): void {
   const queue: string[] = Array(reps).fill(spoken);
 
   const next = () => {
+    if (myGen !== generation) return;   // superseded by a newer speak() — stay out of its way
     const text = queue.shift();
     if (!text) {
       running = null;
       return;
     }
     const [cmd, args] = commandFor(backend, text, voice, rate);
-    running = spawn(cmd, args);
-    running.on('exit', next);
-    running.on('error', (err) => {
+    const child = spawn(cmd, args);
+    if (myGen !== generation) { child.kill('SIGTERM'); return; }  // superseded mid-spawn
+    running = child;
+    child.on('exit', next);
+    child.on('error', (err) => {
+      if (myGen !== generation) return;
       vscode.window.showErrorMessage(vscode.l10n.t('Pronounce ({0}): {1}', backend, err.message));
       running = null;
     });

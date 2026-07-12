@@ -11,5 +11,5 @@
   "notes": "Neural Magic's mixed-input (w4a16/w8a16) GEMM kernel in vLLM 0.6.2+, optimized for NVIDIA Hopper GPUs; the spiritual successor to the Marlin kernels. Reuses the common English word 'machete' (the blade; a Spanish loanword). Standard General American puts stress on the second syllable — muh-SHET-ee — with 'ch' pronounced /ʃ/ ('sh') and the final -e as 'ee' /i/, not silent. Merriam-Webster and Wiktionary also list a 'ch' variant /məˈtʃɛti/ (muh-CHET-ee). Devs unfamiliar with the word commonly misread it as 'muh-CHEET' (rhyming with 'machine') or 'MATCH-et'. The source names and describes the kernel but gives no pronunciation guidance, so confidence is community-consensus (standard dictionary word), not creator-clarified.",
   "audio_url": "https://pronounce.renlab.ai/audio/machete.mp3",
   "url": "https://pronounce.renlab.ai/word/machete",
-  "date_modified": "2026-07-10"
+  "date_modified": "2026-07-12"
 }

@@ -1,0 +1,15 @@
+{
+  "word": "Werkzeug",
+  "ipa": "/ˈvɛrkˌtsɔɪk/",
+  "respelling_us": "verk tsoyk",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://en.wiktionary.org/wiki/Werkzeug",
+  "source_label": "Wiktionary — Werkzeug (German) /ˈvɛʁkˌtsɔʏ̯k/",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "The WSGI library under Flask, German for \"tool\" — Pallets' own project page says so. German spelling trips up English readers four ways: W is a V, z is \"ts\", eu is \"oy\", and the final g devoices to a k, giving \"VERK-tsoyk\". The common English readings \"WERK-zoog\" and \"WORK-zeeg\" are simply wrong.",
+  "audio_url": "https://pronounce.renlab.ai/audio/werkzeug.mp3",
+  "url": "https://pronounce.renlab.ai/word/werkzeug",
+  "date_modified": "2026-07-12"
+}

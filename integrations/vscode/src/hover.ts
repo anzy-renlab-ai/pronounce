@@ -42,45 +42,63 @@ export function makeHoverProvider(extensionPath: string): vscode.HoverProvider {
   };
 }
 
+// Dictionary text is data, not markup. Neutralize the characters that would let
+// a row's notes/labels close out of their span and inject their own link — a
+// trusted hover renders `command:` URIs, so an injected link would be clickable.
+function esc(s: string): string {
+  return s.replace(/[\\`*_{}[\]()<>#+\-.!|]/g, '\\$&');
+}
+
+// Only http(s) may become a link target; anything else renders as inert text.
+// Parens are percent-encoded rather than rejected — 25 sources are Wikipedia
+// URLs like /wiki/Monad_(functional_programming), and a bare ")" would close the
+// markdown link early.
+function safeUrl(u: string): string | null {
+  if (!/^https?:\/\/\S+$/i.test(u)) return null;
+  return u.replace(/\(/g, '%28').replace(/\)/g, '%29');
+}
+
 function renderMarkdown(word: string, entry: Entry | null): vscode.MarkdownString {
   const playArgs = encodeURIComponent(JSON.stringify([{ word }]));
   const playLink = `command:pronounce.speak?${playArgs}`;
   const md = new vscode.MarkdownString();
-  md.isTrusted = true;
+  // Trust only our own two commands, never the full command surface.
+  md.isTrusted = { enabledCommands: ['pronounce.speak', 'pronounce.starOnGitHub'] };
   md.supportHtml = false;
 
   if (entry) {
     const display = entry.word ?? word;
-    md.appendMarkdown(`**${display}**`);
-    if (entry.ipa) md.appendMarkdown(` — \`/${entry.ipa.replace(/^\/|\/$/g, '')}/\``);
+    md.appendMarkdown(`**${esc(display)}**`);
+    if (entry.ipa) md.appendMarkdown(` — \`/${entry.ipa.replace(/^\/|\/$/g, '').replace(/`/g, '')}/\``);
     md.appendMarkdown(`  \n`);
     if (entry.respelling_us) {
-      md.appendMarkdown(`_${vscode.l10n.t('say:')}_ **${entry.respelling_us}**  \n`);
+      md.appendMarkdown(`_${vscode.l10n.t('say:')}_ **${esc(entry.respelling_us)}**  \n`);
     }
     // Show alternate readings inline so "contested" words tell the whole story.
     if (entry.alt_respelling_us) {
       const alts = entry.alt_respelling_us.split('|').map(s => s.trim()).filter(Boolean);
       if (alts.length) {
-        md.appendMarkdown(`_${vscode.l10n.t('or:')}_ ${alts.map(a => `**${a}**`).join(' · ')}  \n`);
+        md.appendMarkdown(`_${vscode.l10n.t('or:')}_ ${alts.map(a => `**${esc(a)}**`).join(' · ')}  \n`);
       }
     }
     if (entry.confidence) {
       const badge = entry.confidence === 'creator-clarified' ? '✅' :
                     entry.confidence === 'contested' ? '⚖️' : '·';
-      md.appendMarkdown(`${badge} _${entry.confidence}_`);
-      if (entry.source_label) md.appendMarkdown(` · ${entry.source_label}`);
+      md.appendMarkdown(`${badge} _${esc(entry.confidence)}_`);
+      if (entry.source_label) md.appendMarkdown(` · ${esc(entry.source_label)}`);
       md.appendMarkdown(`  \n`);
     }
-    if (entry.notes) md.appendMarkdown(`\n${entry.notes}\n\n`);
+    if (entry.notes) md.appendMarkdown(`\n${esc(entry.notes)}\n\n`);
     md.appendMarkdown(`[${vscode.l10n.t('🔊 Play')}](${playLink})`);
     md.appendMarkdown(`  ·  **[${vscode.l10n.t('★ Star on GitHub')}](command:pronounce.starOnGitHub)**`);
-    if (entry.source_url) md.appendMarkdown(`  ·  [${vscode.l10n.t('source')}](${entry.source_url})`);
+    const src = entry.source_url ? safeUrl(entry.source_url) : null;
+    if (src) md.appendMarkdown(`  ·  [${vscode.l10n.t('source')}](${src})`);
   } else {
     const requestUrl =
       `https://github.com/anzy-renlab-ai/pronounce/issues/new` +
       `?template=add-pronunciation.yml` +
       `&title=${encodeURIComponent(`Add pronunciation entry: ${word}`)}`;
-    md.appendMarkdown(`**${word}**  \n[${vscode.l10n.t('🔊 Play (TTS letter-to-sound)')}](${playLink})`);
+    md.appendMarkdown(`**${esc(word)}**  \n[${vscode.l10n.t('🔊 Play (TTS letter-to-sound)')}](${playLink})`);
     md.appendMarkdown(`  ·  [${vscode.l10n.t('➕ Request entry')}](${requestUrl})`);
     md.appendMarkdown(`  ·  **[${vscode.l10n.t('★ Star this dictionary')}](command:pronounce.starOnGitHub)**`);
   }

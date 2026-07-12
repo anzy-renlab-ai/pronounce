@@ -1,0 +1,15 @@
+{
+  "word": "Hikari",
+  "ipa": "/ˌhiːkɑːˈriː/",
+  "respelling_us": "hee kah ree",
+  "alt_ipa": ["/ˌhiːkɑːˈliː/"],
+  "alt_respelling_us": ["hee kah lee"],
+  "source_url": "https://github.com/brettwooldridge/HikariCP",
+  "source_label": "HikariCP README — \"Hi·ka·ri [hi·ka·'lē] (Origin: Japanese): light; ray.\"",
+  "category": "product",
+  "confidence": "creator-clarified",
+  "notes": "Hikari is the Japanese word 光 (\"light; ray\") and the name behind HikariCP, the high-performance JDBC connection pool that Spring Boot uses by default — hence the ubiquitous \"HikariPool-1 - Starting...\" log line. The README's own heading spells the pronunciation out as Hi·ka·ri [hi·ka·'lē]: hee-kah-REE, three even syllables with the Japanese flapped r sounding close to an English l. English readers commonly get it wrong as \"HIGH-kah-ree\" with a long English i; the trailing CP (Connection Pool) is then spelled out as C-P.",
+  "audio_url": "https://pronounce.renlab.ai/audio/hikari.mp3",
+  "url": "https://pronounce.renlab.ai/word/hikari",
+  "date_modified": "2026-07-12"
+}

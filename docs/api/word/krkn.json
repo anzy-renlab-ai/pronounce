@@ -1,0 +1,15 @@
+{
+  "word": "Krkn",
+  "ipa": "/ˈkrɑːkən/",
+  "respelling_us": "krah kuhn",
+  "alt_ipa": ["/ˈkreɪkən/", "/ˈkrækən/"],
+  "alt_respelling_us": ["kray kuhn", "krak uhn"],
+  "source_url": "https://github.com/krkn-chaos/krkn",
+  "source_label": "GitHub — krkn-chaos/krkn README (\"Krkn aka Kraken\")",
+  "category": "project",
+  "confidence": "community-consensus",
+  "notes": "Krkn is a CNCF sandbox chaos and resiliency testing tool for Kubernetes, originally built at Red Hat as \"Kraken\". The vowel-less spelling is pure branding: it is simply said \"kraken\", which the maintainers confirm in the README title \"Krkn aka Kraken\" and in the code (the entry point is still run_kraken.py). Dictionaries give KRAH-ken as the standard reading of kraken, with KRAY-ken and KRACK-en as common variants.",
+  "audio_url": "https://pronounce.renlab.ai/audio/krkn.mp3",
+  "url": "https://pronounce.renlab.ai/word/krkn",
+  "date_modified": "2026-07-12"
+}

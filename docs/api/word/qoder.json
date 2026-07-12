@@ -1,0 +1,15 @@
+{
+  "word": "Qoder",
+  "ipa": "/ˈkoʊdər/",
+  "respelling_us": "coder",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://zenn.dev/beagle/articles/52fb87f10d537f?locale=en",
+  "source_label": "Zenn — Trying Out Qoder (pronunciation given as /ˈkoʊdər/, \"similar to coder\")",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Alibaba's agentic AI IDE (Quest Mode, spec-driven agents), launched Aug 2025 with 1.0 in May 2026. Pronounced exactly like \"coder\" — the Q is a straight substitution for the C and adds no sound of its own. Chinese launch coverage describes the name as 谐音 Coder (a homophone of \"Coder\"); the common misreadings are the letter-name \"Q-oder\" and \"KWOH-der\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/qoder.mp3",
+  "url": "https://pronounce.renlab.ai/word/qoder",
+  "date_modified": "2026-07-12"
+}

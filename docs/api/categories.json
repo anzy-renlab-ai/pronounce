@@ -1,12 +1,12 @@
 {
   "categories": [
-    {"name": "product", "count": 719},
-    {"name": "acronym", "count": 349},
-    {"name": "cs-term", "count": 262},
-    {"name": "tool", "count": 205},
-    {"name": "person", "count": 99},
-    {"name": "project", "count": 58},
+    {"name": "product", "count": 736},
+    {"name": "acronym", "count": 351},
+    {"name": "cs-term", "count": 264},
+    {"name": "tool", "count": 215},
+    {"name": "person", "count": 107},
+    {"name": "project", "count": 73},
     {"name": "abbreviation", "count": 53},
-    {"name": "cli-tool", "count": 45}
+    {"name": "cli-tool", "count": 49}
   ]
 }

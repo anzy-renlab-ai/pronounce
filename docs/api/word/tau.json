@@ -1,7 +1,7 @@
 {
   "word": "tau",
   "ipa": "/taʊ/",
-  "respelling_us": "tow",
+  "respelling_us": "tau",
   "alt_ipa": ["/tɔː/"],
   "alt_respelling_us": ["taw"],
   "source_url": "",
@@ -11,5 +11,5 @@
   "notes": "Greek letter τ; \"tow\" (rhymes cow) vs \"taw\".",
   "audio_url": "https://pronounce.renlab.ai/audio/tau.mp3",
   "url": "https://pronounce.renlab.ai/word/tau",
-  "date_modified": "2026-07-10"
+  "date_modified": "2026-07-12"
 }

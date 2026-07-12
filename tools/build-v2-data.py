@@ -1,7 +1,7 @@
 import csv, json, re, sys
 from pathlib import Path
 
-REPO = Path("/Users/baidu/work/say-it")
+REPO = Path(__file__).resolve().parent.parent
 TSV = REPO / "data" / "pronunciations.tsv"
 OUT = REPO / "docs" / "v2" / "data.js"
 

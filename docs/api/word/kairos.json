@@ -1,0 +1,15 @@
+{
+  "word": "Kairos",
+  "ipa": "/ˈkaɪrɑs/",
+  "respelling_us": "kye rahss",
+  "alt_ipa": ["/ˈkaɪroʊs/"],
+  "alt_respelling_us": ["kye rohss"],
+  "source_url": "https://www.dictionary.com/browse/kairos",
+  "source_label": "Dictionary.com — kairos: \"kahy-rahs, -rohs\" /ˈkaɪ rɑs, -roʊs/ (corroborated by Wiktionary /ˈkaɪɹɒs/)",
+  "category": "project",
+  "confidence": "community-consensus",
+  "notes": "Kairos is a CNCF Sandbox project: an immutable Linux meta-distribution for building bootable edge Kubernetes OS images, used alongside Talos and Flatcar in edge fleets. The name is Ancient Greek καιρός, \"the opportune moment\", and the 'ai' digraph is /aɪ/ with stress on the first syllable: KYE-ross. Readers coming to it cold often say \"KAY-ross\" or \"kah-ee-ROSS\", both of which are wrong; a valid variant ends in -rohs.",
+  "audio_url": "https://pronounce.renlab.ai/audio/kairos.mp3",
+  "url": "https://pronounce.renlab.ai/word/kairos",
+  "date_modified": "2026-07-12"
+}

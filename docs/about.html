@@ -54,7 +54,7 @@
 
     <h2>Where the audio comes from</h2>
 
-    <p>Every entry has a pre-rendered <code>.mp3</code> generated via macOS's built-in <code>say</code> command (<code>say -v Samantha -r 175</code>, with <code>[[slnc N]]</code> inter-rep pauses) and converted to MP3 via ffmpeg. The browser ▶ button plays these files directly, so the audio you hear on the website is <em>byte-identical</em> to what the CLI produces.</p>
+    <p>Every entry has a pre-rendered <code>.mp3</code> generated via macOS's built-in <code>say</code> command (<code>say -v Samantha -r 175</code>, with <code>[[slnc N]]</code> inter-rep pauses) and converted to MP3 via ffmpeg. The browser ▶ button plays these files directly — same voice, same engine, same respelling as the CLI. The one difference is speed: this corpus is rendered at 175&nbsp;wpm, while <code>say-it</code> defaults to a slower, clearer 130&nbsp;wpm. Run <code>say-it -r 175 &lt;word&gt;</code> to hear exactly these bytes, or just <code>say-it &lt;word&gt;</code> for the slower default.</p>
 
     <h2>How to contribute</h2>
 

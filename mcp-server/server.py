@@ -79,7 +79,12 @@ def pronounce(word: str) -> dict:
 
 @mcp.tool()
 def search_pronunciations(query: str, limit: int = 20) -> list[dict]:
-    """Search the dictionary by partial word or notes match.
+    """Search the dictionary by partial word or category match.
+
+    Matches substrings against the entry's `word` and `category` only —
+    the search index (/api/words.json) carries no notes or source text, so
+    a query like "Kelsey" will NOT surface `kubectl`. To read an entry's
+    notes, look it up with `pronounce`.
 
     Returns a list of matching entries with `word`, `slug`, `category`,
     and `confidence`. Use this when the exact spelling is unknown or

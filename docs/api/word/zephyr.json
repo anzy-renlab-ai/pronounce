@@ -1,0 +1,15 @@
+{
+  "word": "Zephyr",
+  "ipa": "/ˈzɛfər/",
+  "respelling_us": "zeffer",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.merriam-webster.com/dictionary/zephyr",
+  "source_label": "Merriam-Webster — zephyr (ˈze-fər)",
+  "category": "project",
+  "confidence": "community-consensus",
+  "notes": "Zephyr is the Linux Foundation's small-footprint RTOS for microcontrollers, and the default runtime behind Nordic's nRF Connect SDK plus growing Espressif and ST support. It is pronounced ZEF-ur (/ˈzɛfər/) — stress on the first syllable, a short 'e', the 'ph' as /f/, and the final 'y' reduced to a schwa — after Zephyrus, the Greek god of the west wind. Non-native devs routinely misread the Greek-via-Latin spelling as ZEE-fire, zeh-FEER or ZEP-hire.",
+  "audio_url": "https://pronounce.renlab.ai/audio/zephyr.mp3",
+  "url": "https://pronounce.renlab.ai/word/zephyr",
+  "date_modified": "2026-07-12"
+}

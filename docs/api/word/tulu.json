@@ -11,5 +11,5 @@
   "notes": "AllenAI's open post-training model family (Tülu 2, Tülu 3). The Tülu 3 paper footnotes the name: 'A tülu is a hybrid camel bred between Bactrian camel and dromedary' — fitting AllenAI's running camel theme (the predecessor papers 'How Far Can Camels Go?' and 'Camels in a Changing Climate'). It comes from the Turkish word tülü ('hairy/feathered'); the ü is a front rounded vowel (like German ü or French 'tu'). English speakers overwhelmingly settle on TOO-loo with stress on the first syllable. A more faithful-to-Turkish rendering is tew-LOO — note Turkish stresses the FINAL syllable (Wiktionary: /tyˈly/). Common stumble: devs drop the umlaut entirely and say 'tuh-LOO' or 'TUH-luh', or read it as 'tulu' rhyming with 'Zulu'. (The AllenAI model name is spelled 'Tülu' with one ü; the underlying Turkish word is 'tülü'.)",
   "audio_url": "https://pronounce.renlab.ai/audio/tulu.mp3",
   "url": "https://pronounce.renlab.ai/word/tulu",
-  "date_modified": "2026-07-10"
+  "date_modified": "2026-07-12"
 }

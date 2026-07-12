@@ -1,0 +1,15 @@
+{
+  "word": "SPIFFE",
+  "ipa": "/ˈspɪfi/",
+  "respelling_us": "spiffy",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.redhat.com/en/topics/security/spiffe-and-spire",
+  "source_label": "Red Hat — What are SPIFFE and SPIRE? (SPIFFE, pronounced \"spiffy\")",
+  "category": "acronym",
+  "confidence": "community-consensus",
+  "notes": "SPIFFE (Secure Production Identity Framework For Everyone) is a CNCF graduated standard that gives every workload a cryptographic identity (an SVID) so services can do zero-trust mTLS without baked-in secrets; its implementation is SPIRE. It is spoken as a word, not letter-by-letter, and the trailing -E is voiced: it is pronounced exactly like the English word \"spiffy\", rhyming with jiffy. The two traps are saying \"spiff\" with a silent E, or spelling it out S-P-I-F-F-E.",
+  "audio_url": "https://pronounce.renlab.ai/audio/spiffe.mp3",
+  "url": "https://pronounce.renlab.ai/word/spiffe",
+  "date_modified": "2026-07-12"
+}

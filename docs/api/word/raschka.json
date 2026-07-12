@@ -1,0 +1,15 @@
+{
+  "word": "Raschka",
+  "ipa": "/ˈrɑːʃkə/",
+  "respelling_us": "rahsh kuh",
+  "alt_ipa": ["/ˈræʃkə/"],
+  "alt_respelling_us": ["rash kuh"],
+  "source_url": "https://www.howtopronounce.com/raschka",
+  "source_label": "HowToPronounce — Raschka (\"ra-shkuh\", 25 user recordings)",
+  "category": "person",
+  "confidence": "community-consensus",
+  "notes": "Sebastian Raschka, author of \"Build a Large Language Model (From Scratch)\" and the Ahead of AI newsletter. German surname: \"sch\" is the /ʃ/ digraph, so it is \"RAHSH-kuh\", not a \"rask\" cluster. US speakers commonly anglicize the first vowel to \"RASH-kuh\"; both are heard.",
+  "audio_url": "https://pronounce.renlab.ai/audio/raschka.mp3",
+  "url": "https://pronounce.renlab.ai/word/raschka",
+  "date_modified": "2026-07-12"
+}

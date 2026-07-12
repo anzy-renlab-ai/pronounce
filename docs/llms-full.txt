@@ -283,7 +283,7 @@ TimescaleDB | /ˈtaɪmˌskeɪl diː biː/ | time scale D B | product | community
 InfluxDB | /ˈɪnflʌks diː biː/ | in flux D B | product | community-consensus | https://www.influxdata.com/
 Sentry | /ˈsɛntri/ | sentry | product | community-consensus | https://sentry.io/
 Honeycomb | /ˈhʌniˌkoʊm/ | honey comb | product | community-consensus | https://www.honeycomb.io/
-Jaeger | /ˈjeɪɡər/ | yay ger | product | community-consensus | https://www.jaegertracing.io/
+Jaeger | /ˈjeɪɡər/ | yay gher | product | community-consensus | https://www.jaegertracing.io/
 Loki | /ˈloʊki/ | low key | product | community-consensus | https://grafana.com/oss/loki/
 Tempo | /ˈtɛmpoʊ/ | tem po | product | community-consensus | https://grafana.com/oss/tempo/
 Vector | /ˈvɛktər/ | vec tor | product | community-consensus | https://vector.dev/
@@ -558,7 +558,7 @@ perplexity | /pər ˈplɛk sə ti/ | per PLEK suh tee | project | community-cons
 cerebras | /sə ˈriː brəs/ | suh REE bruhs | project | community-consensus | https://www.cerebras.net/
 etched | /ɛtʃt/ | echt | project | community-consensus | https://www.etched.com/
 sambanova | /ˌsæm bə ˈnoʊ və/ | sam buh NO vuh | project | community-consensus | https://sambanova.ai/
-together.ai | /tə ˈɡɛð ər eɪ aɪ/ | tuh GETH er A I | project | community-consensus | https://www.together.ai/
+together.ai | /tə ˈɡɛð ər eɪ aɪ/ | together A I | project | community-consensus | https://www.together.ai/
 fireworks.ai | /ˈfaɪər wɜːrks eɪ aɪ/ | FIRE works A I | project | community-consensus | https://fireworks.ai/
 modular | /ˈmɒ dʒə lər/ | MOJ uh ler | project | community-consensus | https://www.modular.com/
 nous | /naʊs/ | nowss | project | contested | https://nousresearch.com/
@@ -665,7 +665,7 @@ Logseq | /lɒɡˈsiːk/ | log seek | product | creator-clarified | https://logse
 AppFlowy | /æpˈfloʊi/ | app FLOH ee | product | community-consensus | https://appflowy.io/
 Affine | /əˈfaɪn/ | uh fine | product | contested | https://affine.pro/
 Anytype | /ˈɛni taɪp/ | enny type | product | community-consensus | https://anytype.io/
-Gitea | /ɡɪˈteɪ ə/ | gi TAY uh | product | community-consensus | https://docs.gitea.com/
+Gitea | /ɡɪˈteɪ ə/ | ghih TAY uh | product | community-consensus | https://docs.gitea.com/
 Forgejo | /fɔːrˈdʒeɪ joʊ/ | for JAY yo | product | community-consensus | https://forgejo.org/
 Slidev | /ˈslaɪ dɛv/ | SLIE dev | tool | creator-clarified | https://sli.dev/
 Yazi | /ˈjɑː ziː/ | YAH zee | cli-tool | community-consensus | https://yazi-rs.github.io/
@@ -1051,7 +1051,7 @@ fulcio | /ˈfʊlsi oʊ/ | fool see oh | tool | contested | (no source)
 gentoo | /ˈdʒɛntuː/ | jen too | product | community-consensus | (no source)
 gnome | /ɡəˈnoʊm/ | guh nome | product | contested | (no source)
 graylog | /ˈɡreɪ lɒɡ/ | gray log | product | community-consensus | (no source)
-guix | /ɡiːks/ | geeks | product | creator-clarified | https://guix.gnu.org/
+guix | /ɡiːks/ | gheeks | product | creator-clarified | https://guix.gnu.org/
 gvisor | /ˈdʒiː vaɪzər/ | jee visor | product | community-consensus | (no source)
 hyprland | /ˈhaɪpər lænd/ | hyper land | product | community-consensus | (no source)
 kakoune | /kæˈkuːn/ | kah koon | tool | community-consensus | (no source)
@@ -1130,7 +1130,7 @@ sutskever | /ˈsʌtskɪvər/ | suts kih ver | person | community-consensus | (no
 hassabis | /həˈsæbɪs/ | huh sab iss | person | community-consensus | (no source)
 hinton | /ˈhɪntən/ | hin tun | person | community-consensus | (no source)
 buterin | /ˈbjuːtərɪn/ | byoo ter in | person | community-consensus | (no source)
-vogels | /ˈvoʊɡəlz/ | voh gels | person | community-consensus | (no source)
+vogels | /ˈvoʊɡəlz/ | voh gulz | person | community-consensus | (no source)
 raadt | /də ˈrɑːt/ | duh raht | person | community-consensus | (no source)
 poettering | /ˈpœtərɪŋ/ | pet er ing | person | contested | (no source)
 bellard | /bɛˈlɑːr/ | bell ar | person | community-consensus | (no source)
@@ -1245,7 +1245,7 @@ nu | /njuː/ | new | cs-term | community-consensus | (no source)
 psi | /saɪ/ | sigh | cs-term | contested | (no source)
 xi | /zaɪ/ | zye | cs-term | contested | (no source)
 rho | /roʊ/ | roh | cs-term | community-consensus | (no source)
-tau | /taʊ/ | tow | cs-term | contested | (no source)
+tau | /taʊ/ | tau | cs-term | contested | (no source)
 zeta | /ˈzeɪtə/ | zay tuh | cs-term | contested | (no source)
 omega | /oʊˈmeɪɡə/ | oh may guh | cs-term | community-consensus | (no source)
 omicron | /ˈɒmɪkrɒn/ | om ih kron | cs-term | contested | (no source)
@@ -1792,3 +1792,61 @@ SYCL | /ˈsɪkəl/ | sik uhl | cs-term | community-consensus | https://en.wikipe
 Ulysses | /juːˈlɪsiːz/ | yoo liss eez | project | community-consensus | https://dictionary.cambridge.org/us/pronunciation/english/ulysses
 Vapi | /ˈvæpi/ | vappy | product | community-consensus | https://www.ycombinator.com/companies/vapi
 Vidu | /ˈviːduː/ | vee doo | product | community-consensus | https://www.newsgd.com/node_1299786306/bf5b26915a.shtml
+Sakana | /sɑˈkɑnɑ/ | sah kah nah | project | community-consensus | https://en.wiktionary.org/wiki/%E3%81%95%E3%81%8B%E3%81%AA
+Surya | /ˈsuːrjə/ | soor yuh | tool | contested | https://en.wikipedia.org/wiki/Surya
+Sarvam | /ˈsɜːrvəm/ | sir vum | product | community-consensus | https://en.wiktionary.org/wiki/%E0%A4%B8%E0%A4%B0%E0%A5%8D%E0%A4%B5
+Kuaishou | /ˈkwaɪʃoʊ/ | kwai show | product | community-consensus | https://en.wiktionary.org/wiki/%E5%BF%AB%E6%89%8B
+Jina | /ˈdʒiːnə/ | jee nuh | product | creator-clarified | https://github.com/jina-ai/faq/blob/main/faq_main.md
+vlt | /ˈvoʊlt/ | volt | cli-tool | creator-clarified | https://github.com/vltpkg
+Cogito | /ˈkɑɡɪˌtoʊ/ | kog ih toh | product | contested | https://www.merriam-webster.com/dictionary/cogito
+Typst | /ˈtaɪpst/ | typst | tool | creator-clarified | https://github.com/typst/typst
+Qoder | /ˈkoʊdər/ | coder | product | community-consensus | https://zenn.dev/beagle/articles/52fb87f10d537f?locale=en
+Grype | /ˈɡraɪp/ | gripe | cli-tool | creator-clarified | https://oss.anchore.com/docs/projects/
+Syft | /ˈsɪft/ | sift | cli-tool | creator-clarified | https://oss.anchore.com/docs/projects/
+Shai-Hulud | /ˌʃaɪ huˈluːd/ | shy hoo lude | project | community-consensus | https://en.wikipedia.org/wiki/Sandworm_(Dune)
+Ghidra | /ˈɡiːdrə/ | ghee druh | tool | creator-clarified | https://github.com/NationalSecurityAgency/ghidra/wiki/Frequently-asked-questions
+Odysseus | /oʊˈdɪsiəs/ | oh diss ee us | project | community-consensus | https://en.wiktionary.org/wiki/Odysseus
+melange | /meɪˈlɑːnʒ/ | may lahnzh | cli-tool | community-consensus | https://en.wiktionary.org/wiki/melange
+SPIFFE | /ˈspɪfi/ | spiffy | acronym | community-consensus | https://www.redhat.com/en/topics/security/spiffe-and-spire
+youki | /ˈjoʊki/ | yoh kee | tool | creator-clarified | https://github.com/youki-dev/youki/blob/main/README.md
+Krkn | /ˈkrɑːkən/ | krah kuhn | project | community-consensus | https://github.com/krkn-chaos/krkn
+Aeraki | /ɛˈrɑːki/ | air rah kee | project | creator-clarified | https://github.com/aeraki-mesh/aeraki
+Kured | /ˈkjʊr diː/ | cure dee | product | creator-clarified | https://kured.dev/docs/faq/
+Fluss | /ˈfluːs/ | floose | product | creator-clarified | https://github.com/apache/fluss
+Zenoh | /ˈziːnoʊ/ | zee noh | project | contested | https://github.com/eclipse-zenoh/zenoh/blob/main/README.md
+Kuasar | /ˈkweɪzɑr/ | kway zar | project | community-consensus | https://github.com/cncf/sandbox/issues/56
+Kairos | /ˈkaɪrɑs/ | kye rahss | project | community-consensus | https://www.dictionary.com/browse/kairos
+Piraeus | /paɪˈriːəs/ | pie ree us | product | community-consensus | https://en.wikipedia.org/wiki/Piraeus
+Vineyard | /ˈvɪnjərd/ | vin yerd | project | community-consensus | https://www.oxfordlearnersdictionaries.com/us/definition/english/vineyard
+Gravitino | /ˌɡrævɪˈtiːnoʊ/ | grav ih tee noh | project | community-consensus | https://www.dictionary.com/browse/gravitino
+jOOQ | /ˈdʒuːk/ | juke | tool | creator-clarified | https://www.jooq.org/how-to-pronounce-jooq
+Rocq | /ˈrɑːk/ | rock | product | community-consensus | https://github.com/rocq-prover/rocq/wiki/Alternative-names
+Ktor | /ˈkeɪtɔːr/ | kay tor | product | creator-clarified | https://ktor.io/docs/faq.html
+Hikari | /ˌhiːkɑːˈriː/ | hee kah ree | product | creator-clarified | https://github.com/brettwooldridge/HikariCP
+Werkzeug | /ˈvɛrkˌtsɔɪk/ | verk tsoyk | product | community-consensus | https://en.wiktionary.org/wiki/Werkzeug
+Jinja | /ˈdʒɪndʒə/ | jin juh | tool | community-consensus | https://jinja.palletsprojects.com/en/stable/faq/
+Zephyr | /ˈzɛfər/ | zeffer | project | community-consensus | https://www.merriam-webster.com/dictionary/zephyr
+Zeitwerk | /ˈtsaɪtvɛrk/ | tsite verk | tool | community-consensus | https://github.com/fxn/zeitwerk
+Citus | /ˈsaɪtəs/ | site us | project | creator-clarified | https://www.citusdata.com/blog/2018/06/19/how-to-pronounce-citus/
+APISIX | /ˌeɪ piː ˈaɪ sɪks/ | ay pee eye six | project | creator-clarified | https://github.com/apache/apisix/issues/1190
+Alembic | /əˈlɛmbɪk/ | uh lem bik | tool | community-consensus | https://www.merriam-webster.com/dictionary/alembic
+reqwest | /rɪˈkwɛst/ | request | product | community-consensus | https://seanmonstar.com/blog/introducing-reqwest/
+Cython | /ˈsaɪθɑːn/ | sigh thon | tool | community-consensus | https://en.wikipedia.org/wiki/Cython
+Leiningen | /ˈlaɪnɪŋən/ | line ing un | tool | creator-clarified | https://leiningen.org/faq.html
+RNGD | /ˈrɛnɪˌɡeɪd/ | ren uh gayd | product | creator-clarified | https://furiosa.ai/rngd
+tau-bench | /ˈtaʊ ˌbɛntʃ/ | tau bench | project | contested | https://github.com/sierra-research/tau2-bench
+AGNTCY | /ˈeɪdʒənsi/ | ay jun see | project | community-consensus | https://aisera.com/blog/a2a-agent2agent-protocol/
+GAIA | /ˈɡaɪə/ | guy uh | acronym | contested | https://en.wiktionary.org/wiki/Gaia
+sycophancy | /ˈsɪkəfənsi/ | sick uh fuhn see | cs-term | community-consensus | https://www.oxfordlearnersdictionaries.com/definition/english/sycophancy
+Elo | /ˈiːloʊ/ | ee loh | cs-term | contested | https://en.wikipedia.org/wiki/Elo_rating_system
+Liger | /ˈlaɪɡər/ | lie gher | product | community-consensus | https://en.wiktionary.org/wiki/liger
+Helion | /ˈhiːliɑːn/ | hee lee on | product | community-consensus | https://en.wikipedia.org/wiki/Helium-3_nucleus
+Chutes | /ˈʃuːts/ | shoots | product | community-consensus | https://en.wiktionary.org/wiki/chute
+Ion Stoica | /iˈoʊn ˈstɔɪkə/ | ee own stoy kuh | person | community-consensus | https://en.wiktionary.org/wiki/Ion
+Ghodsi | /ˈɡɑːdsi/ | god see | person | community-consensus | https://www.pronouncenames.com/ghodsi
+Liang Wenfeng | /ˌljɑːŋ ˈwʌn fʌŋ/ | lyahng wun fung | person | community-consensus | https://en.wikipedia.org/wiki/Liang_Wenfeng
+Raschka | /ˈrɑːʃkə/ | rahsh kuh | person | community-consensus | https://www.howtopronounce.com/raschka
+Tri Dao | /ˌtriː ˈdaʊ/ | tree dow | person | community-consensus | https://pronounce.voanews.com/browse-oneregion.php?region=vietnam
+Ronacher | /ˈroʊnɑːkər/ | roh nah ker | person | community-consensus | https://rustacean-station.org/transcript/rust-in-production-armin-ronacher/
+Kolmogorov | /ˌkoʊlməˈɡɔːrəf/ | kohl muh gor uhf | person | community-consensus | https://www.dictionary.com/browse/kolmogorov
+Huyen | /ˈhwiən/ | hwee uhn | person | community-consensus | https://en.wiktionary.org/wiki/Huy%E1%BB%81n

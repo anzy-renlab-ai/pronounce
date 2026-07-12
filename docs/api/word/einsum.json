@@ -11,5 +11,5 @@
   "notes": "Clip of \"Einstein summation\" — the tensor-contraction primitive in NumPy/PyTorch/JAX (np.einsum, torch.einsum); NumPy docs confirm it \"Evaluates the Einstein summation convention on the operands\" (docs state the meaning, not the pronunciation). Stress on the first syllable: INE-sum, where \"ein\" rhymes with the start of Einstein /aɪn/ (like \"wine\"). Non-native devs commonly say \"EEN-sum\" (/iːn/) or \"AYN-sum\" (/eɪn/, as in \"rein\"); the German \"ei\" digraph is /aɪ/, not /iː/ or /eɪ/. Non-obvious because the clipped \"ein-\" hides its origin in the surname Einstein.",
   "audio_url": "https://pronounce.renlab.ai/audio/einsum.mp3",
   "url": "https://pronounce.renlab.ai/word/einsum",
-  "date_modified": "2026-07-10"
+  "date_modified": "2026-07-12"
 }

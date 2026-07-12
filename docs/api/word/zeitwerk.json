@@ -1,0 +1,15 @@
+{
+  "word": "Zeitwerk",
+  "ipa": "/ˈtsaɪtvɛrk/",
+  "respelling_us": "tsite verk",
+  "alt_ipa": ["/ˈzaɪtwɜrk/"],
+  "alt_respelling_us": ["zite werk"],
+  "source_url": "https://github.com/fxn/zeitwerk",
+  "source_label": "GitHub — fxn/zeitwerk README §Pronunciation (audio recorded \"in perfect German\")",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "Zeitwerk is the Ruby code loader that has been Rails' default autoloader since Rails 6 and remains so in Rails 8 The name is German for \"clockwork\" and follows German spelling rules — Z is \"ts\", \"ei\" is \"eye\", W is \"v\" — giving TSITE-verk, not the common misreading \"ZEET-werk\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/zeitwerk.mp3",
+  "url": "https://pronounce.renlab.ai/word/zeitwerk",
+  "date_modified": "2026-07-12"
+}

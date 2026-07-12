@@ -1,0 +1,15 @@
+{
+  "word": "Piraeus",
+  "ipa": "/paɪˈriːəs/",
+  "respelling_us": "pie ree us",
+  "alt_ipa": ["/pɪˈreɪəs/"],
+  "alt_respelling_us": ["pih ray us"],
+  "source_url": "https://en.wikipedia.org/wiki/Piraeus",
+  "source_label": "Wikipedia — Piraeus (IPA /paɪˈriːəs, pɪˈreɪəs/)",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Piraeus Datastore is a CNCF sandbox project providing LINSTOR/DRBD-based replicated block storage for Kubernetes, a common Longhorn/OpenEBS alternative on bare-metal clusters; it is named after Greece's great port, Πειραιάς. The dominant English reading is \"py-REE-us\" — the -aeus ending is a trap that invites \"PIE-ray-oos\" or stress on the first syllable. Note that \"pih-RAY-us\" is not an error but a documented secondary variant: Wikipedia, Collins and Dictionary.com all list both /paɪˈriːəs/ and /pɪˈreɪəs/.",
+  "audio_url": "https://pronounce.renlab.ai/audio/piraeus.mp3",
+  "url": "https://pronounce.renlab.ai/word/piraeus",
+  "date_modified": "2026-07-12"
+}

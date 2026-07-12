@@ -1,0 +1,15 @@
+{
+  "word": "Cogito",
+  "ipa": "/ˈkɑɡɪˌtoʊ/",
+  "respelling_us": "kog ih toh",
+  "alt_ipa": ["/ˈkɑdʒɪˌtoʊ/", "/ˈkoʊɡɪˌtoʊ/"],
+  "alt_respelling_us": ["kodge ih toh", "koh ghee toh"],
+  "source_url": "https://www.merriam-webster.com/dictionary/cogito",
+  "source_label": "Merriam-Webster — cogito (ˈkä-gi-ˌtō, ˈkō-gi-ˌtō, ˈkä-ji-ˌtō)",
+  "category": "product",
+  "confidence": "contested",
+  "notes": "Cogito is Deep Cogito's family of open-weight reasoning models (Cogito v2, and the v2.1 671B MoE on Hugging Face), named after Descartes' Latin cogito ergo sum. The stress lands on the first syllable in English — never \"koh-JEE-toh\" — but the g is unsettled: Merriam-Webster and Collins both lead with the hard-g KAH-gi-toh, while the anglicized soft-g KAH-ji-toh (by analogy with cogitate) and the Latinate KOH-ghee-toh are also attested. Deep Cogito has never stated a preference, and note this is a different word from the existing cognito entry (AWS Cognito, kog-NEE-toh).",
+  "audio_url": "https://pronounce.renlab.ai/audio/cogito.mp3",
+  "url": "https://pronounce.renlab.ai/word/cogito",
+  "date_modified": "2026-07-12"
+}

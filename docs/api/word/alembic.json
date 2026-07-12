@@ -1,0 +1,15 @@
+{
+  "word": "Alembic",
+  "ipa": "/əˈlɛmbɪk/",
+  "respelling_us": "uh lem bik",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.merriam-webster.com/dictionary/alembic",
+  "source_label": "Merriam-Webster — alembic (ə-ˈlem-bik)",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "Alembic is the schema-migration tool for SQLAlchemy, used in most FastAPI and SQLModel backends. The name comes from the alchemical still, borrowed from Arabic al-anbiq via Greek ambix. Stress falls on the middle syllable — uh-LEM-bik — not on the first, which is what the spelling tempts most non-native speakers into.",
+  "audio_url": "https://pronounce.renlab.ai/audio/alembic.mp3",
+  "url": "https://pronounce.renlab.ai/word/alembic",
+  "date_modified": "2026-07-12"
+}

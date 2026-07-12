@@ -1,0 +1,15 @@
+{
+  "word": "Liger",
+  "ipa": "/ˈlaɪɡər/",
+  "respelling_us": "lie gher",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://en.wiktionary.org/wiki/liger",
+  "source_label": "Wiktionary — liger, GenAm /ˈlaɪɡɚ/, blend of lion + tiger",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "LinkedIn's Liger-Kernel is a Triton kernel library for LLM training, giving roughly 20% more throughput and 60% less memory, and it is wired into TRL, Axolotl, LLaMA-Factory and the Hugging Face Trainer. The name is the lion-tiger hybrid, so it is \"LY-ger\" with a long i and a hard g — not \"LEE-ger\", not short-i \"LIG-er\", and not soft-g \"LY-jer\". LinkedIn also backronyms it as GPU Efficient Runtime, but it is always spoken as the animal word.",
+  "audio_url": "https://pronounce.renlab.ai/audio/liger.mp3",
+  "url": "https://pronounce.renlab.ai/word/liger",
+  "date_modified": "2026-07-12"
+}

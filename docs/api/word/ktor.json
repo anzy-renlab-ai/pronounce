@@ -1,0 +1,15 @@
+{
+  "word": "Ktor",
+  "ipa": "/ˈkeɪtɔːr/",
+  "respelling_us": "kay tor",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://ktor.io/docs/faq.html",
+  "source_label": "Ktor FAQ (JetBrains) — \"How do I pronounce Ktor?\" → /keɪ-tor/",
+  "category": "product",
+  "confidence": "creator-clarified",
+  "notes": "Ktor is JetBrains' Kotlin-first framework for building asynchronous servers and clients, and the default HTTP stack for Kotlin backends and Kotlin Multiplatform. The official FAQ says it is pronounced /keɪ-tor/ — the name is the abbreviation ctor (constructor) with the C replaced by K for Kotlin, so the leading K is said as the letter name. Readers who see the vowel-less Kt spelling often guess kuh-TOR or spell it out K-T-O-R; both are wrong.",
+  "audio_url": "https://pronounce.renlab.ai/audio/ktor.mp3",
+  "url": "https://pronounce.renlab.ai/word/ktor",
+  "date_modified": "2026-07-12"
+}

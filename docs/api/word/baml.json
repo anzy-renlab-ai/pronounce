@@ -11,5 +11,5 @@
   "notes": "BAML is Boundary's (YC) open-source domain-specific language for writing type-safe LLM/agent prompts; .baml files declare typed prompt functions callable from any language. The README's own gloss is the joke \"Basically A Made-up Language\"; it is also widely reported to have originated as \"Boundary AI Markup Language,\" paralleling YAML. Built on the -ML markup-language lineage, so the natural one-word reading is \"bammel\" /ˈbæməl/ — first-syllable stress, rhyming with camel, exactly like YAML→\"yammel\" / SAML→\"sammel.\" No official pronunciation guide exists and many first-time readers instead spell it out B-A-M-L (alt), so it is genuinely split. Non-obvious because the four consonant-heavy letters give no cue that a vowel sits between the M and L; non-native devs also tend to over-articulate the trailing -L.",
   "audio_url": "https://pronounce.renlab.ai/audio/baml.mp3",
   "url": "https://pronounce.renlab.ai/word/baml",
-  "date_modified": "2026-07-10"
+  "date_modified": "2026-07-12"
 }

@@ -105,7 +105,7 @@
       <div style="margin-top:6px"><em style="color:#c9bfa9">say:</em> <strong style="color:#8fd694">${escapeHtml(entry.respelling_us || '')}</strong></div>
       ${alts.length ? `<div style="margin-top:2px;color:#8a8270"><em>or:</em> ${alts.map((a) => `<strong>${escapeHtml(a)}</strong>`).join(' · ')}</div>` : ''}
       <div style="margin-top:8px;color:#8a8270;font-size:11px">${badge} ${escapeHtml(entry.confidence || '')}${entry.source_label ? ' · ' + escapeHtml(entry.source_label) : ''}</div>
-      ${entry.notes ? `<div style="margin-top:8px;color:#e8e2d4;font-size:12px;font-style:italic">${escapeHtml(entry.notes).slice(0, 200)}</div>` : ''}
+      ${entry.notes ? `<div style="margin-top:8px;color:#e8e2d4;font-size:12px;font-style:italic">${escapeHtml(entry.notes.slice(0, 200))}</div>` : ''}
       <div style="margin-top:10px;padding-top:8px;border-top:1px solid #333;display:flex;gap:12px;font-size:12px">
         <a href="#" data-pn-action="play" style="color:#8fd694;text-decoration:none">🔊 Play</a>
         ${entry.source_url ? `<a href="${escapeHtml(entry.source_url)}" target="_blank" rel="noopener" style="color:#8fd694;text-decoration:none">source ↗</a>` : ''}
@@ -149,8 +149,15 @@
       const start = m.index,
         end = start + m[0].length;
       if (offset >= start && offset <= end) {
+        // Try the exact token first so dotted entries (next.js, three.js) resolve.
+        // If that misses, retry with trailing punctuation stripped: a sentence-final
+        // "kubectl." / "YAML." otherwise matches the whole token, misses the key, and
+        // the tooltip silently never appears — which is exactly where a dev clicks a
+        // tech word in prose. Same fallback the VS Code hover already does.
         const k = m[0].toLowerCase();
         if (dict[k]) return dict[k];
+        const trimmed = k.replace(/[.\-+#_]+$/, '');
+        if (trimmed && trimmed !== k && dict[trimmed]) return dict[trimmed];
         return null;
       }
     }

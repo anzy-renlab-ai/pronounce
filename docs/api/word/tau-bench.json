@@ -1,0 +1,15 @@
+{
+  "word": "tau-bench",
+  "ipa": "/ˈtaʊ ˌbɛntʃ/",
+  "respelling_us": "tau bench",
+  "alt_ipa": ["/ˈtɔː ˌbɛntʃ/"],
+  "alt_respelling_us": ["taw bench"],
+  "source_url": "https://github.com/sierra-research/tau2-bench",
+  "source_label": "sierra-research/tau2-bench README — \"How do you say τ³-bench? We just say 'tau three,' but you do you!\"",
+  "category": "project",
+  "confidence": "contested",
+  "notes": "Sierra's τ-bench (now τ²/τ³-bench) is the tool-agent-user benchmark whose pass^k scores are cited in most 2025-2026 model cards. The leading character is the Greek letter tau, and the maintainers' README answers \"How do you say τ³-bench?\" with \"We just say 'tau three'\" — so it is the letter name, never \"TAO\" as in Daoism. In General American tau is /taʊ/, rhyming with \"now\"; the /tɔː/ (\"taw\") variant is also widely heard.",
+  "audio_url": "https://pronounce.renlab.ai/audio/tau-bench.mp3",
+  "url": "https://pronounce.renlab.ai/word/tau-bench",
+  "date_modified": "2026-07-12"
+}

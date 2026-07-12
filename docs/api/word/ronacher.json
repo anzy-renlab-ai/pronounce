@@ -1,0 +1,15 @@
+{
+  "word": "Ronacher",
+  "ipa": "/ˈroʊnɑːkər/",
+  "respelling_us": "roh nah ker",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://rustacean-station.org/transcript/rust-in-production-armin-ronacher/",
+  "source_label": "Rustacean Station — host: \"how do you pronounce your last name?\"; Armin: \"Ronacher.\"",
+  "category": "person",
+  "confidence": "community-consensus",
+  "notes": "Armin Ronacher is the Austrian developer behind Flask and Jinja, now at Sentry, whose essays on agentic coding are HN front-page staples. The surname is German: the 'ch' follows a back vowel, so it is the ach-Laut (the throat sound in Scottish 'loch'), which English speakers render as a /k/ — ROH-nah-ker with stress on the first syllable, never the English 'ch' of 'church' and never a 'sh'. Anglophones routinely mangle it (the top user entry on howtopronounce.com is 'rah-nashur'), and on Rustacean Station the host had to stop and ask him how to say it.",
+  "audio_url": "https://pronounce.renlab.ai/audio/ronacher.mp3",
+  "url": "https://pronounce.renlab.ai/word/ronacher",
+  "date_modified": "2026-07-12"
+}

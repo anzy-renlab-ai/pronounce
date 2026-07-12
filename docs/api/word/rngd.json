@@ -1,0 +1,15 @@
+{
+  "word": "RNGD",
+  "ipa": "/ˈrɛnɪˌɡeɪd/",
+  "respelling_us": "ren uh gayd",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://furiosa.ai/rngd",
+  "source_label": "FuriosaAI — RNGD product page (\"RNGD (pronounced \\\"renegade\\\")\")",
+  "category": "product",
+  "confidence": "creator-clarified",
+  "notes": "RNGD is FuriosaAI's second-generation data-center inference NPU (48GB HBM3, 180W, tensor-contraction architecture), pitched as a power-efficient Nvidia alternative and in mass production since January 2026. The vowel-less name is a disemvoweled spelling of \"renegade\" — Furiosa's own product page and its Hot Chips 2024 press release both gloss it as RNGD (pronounced \"renegade\"), and the company brands its spec page and user summit as RENEGADE. Reading it letter-by-letter as R-N-G-D or guessing \"ringed\" is the common mistake.",
+  "audio_url": "https://pronounce.renlab.ai/audio/rngd.mp3",
+  "url": "https://pronounce.renlab.ai/word/rngd",
+  "date_modified": "2026-07-12"
+}

@@ -892,7 +892,7 @@ def emit_zh_word(e: dict, out_dir: Path) -> None:
 def emit_zh_word_index(entries: list, out_dir: Path) -> None:
     canonical = f"{SITE_URL}/zh/word/"
     title = "全部词条 — 中文发音指南"
-    desc = "全部技术词汇的中文发音解释 — Anthropic、Cursor、Kubernetes 等 600+ 词条，附音频和 IPA。"
+    desc = f"全部技术词汇的中文发音解释 — Anthropic、Cursor、Kubernetes 等 {len(entries)}+ 词条，附音频和 IPA。"
     html = head_common(
         title=title,
         desc=desc,

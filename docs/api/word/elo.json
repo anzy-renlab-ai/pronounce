@@ -1,0 +1,15 @@
+{
+  "word": "Elo",
+  "ipa": "/ˈiːloʊ/",
+  "respelling_us": "ee loh",
+  "alt_ipa": ["/ˈɛloʊ/"],
+  "alt_respelling_us": ["el oh"],
+  "source_url": "https://en.wikipedia.org/wiki/Elo_rating_system",
+  "source_label": "Wikipedia — Elo rating system (footnote: written as \"Elo\", not \"ELO\"; /ˈiːloʊ/ or /ˈɛloʊ/)",
+  "category": "cs-term",
+  "confidence": "contested",
+  "notes": "The rating scale behind LMArena / Chatbot Arena leaderboards, cited as \"Elo score\" in most 2025-2026 model launch posts and eval blogs. It is the surname of Hungarian-American physics professor Arpad Elo (né Élő), not an acronym — Wikipedia states it is \"written as 'Elo', not 'ELO'\" — so spelling it out as letters E-L-O is the common mistake. Both EE-loh and EL-oh are accepted in English, with EE-loh listed first by Wikipedia and Wiktionary.",
+  "audio_url": "https://pronounce.renlab.ai/audio/elo.mp3",
+  "url": "https://pronounce.renlab.ai/word/elo",
+  "date_modified": "2026-07-12"
+}

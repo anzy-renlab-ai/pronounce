@@ -1,0 +1,15 @@
+{
+  "word": "jOOQ",
+  "ipa": "/ˈdʒuːk/",
+  "respelling_us": "juke",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.jooq.org/how-to-pronounce-jooq",
+  "source_label": "jOOQ official — How to Pronounce jOOQ (IPA \"dʒuːk\", \"Sounds like: juke\")",
+  "category": "tool",
+  "confidence": "creator-clarified",
+  "notes": "jOOQ is a typesafe SQL DSL for Java that models SQL as an internal DSL, widely used as an alternative to JPA/Hibernate. It is a recursive acronym for \"jOOQ Object Oriented Querying\", but it is never spelled out letter-by-letter — the maintainers keep a dedicated page stating it is pronounced /dʒuːk/, exactly like the \"juke\" in jukebox. The official blog compares it to SQL: just as you say \"sequel\" rather than \"ess queue ell\", you say \"juke\" rather than \"jay o o queue\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/jooq.mp3",
+  "url": "https://pronounce.renlab.ai/word/jooq",
+  "date_modified": "2026-07-12"
+}

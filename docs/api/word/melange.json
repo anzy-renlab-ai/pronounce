@@ -1,0 +1,15 @@
+{
+  "word": "melange",
+  "ipa": "/meɪˈlɑːnʒ/",
+  "respelling_us": "may lahnzh",
+  "alt_ipa": ["/məˈlɑːnʒ/", "/meɪˈlɑːndʒ/"],
+  "alt_respelling_us": ["muh lahnzh", "may lahnj"],
+  "source_url": "https://en.wiktionary.org/wiki/melange",
+  "source_label": "Wiktionary — melange: /məˈlɑnʒ/, /meɪ-/, /-ˈlɑndʒ/ (corroborated by Dictionary.com: [mey-lahnzh, -lahnj])",
+  "category": "cli-tool",
+  "confidence": "community-consensus",
+  "notes": "melange is Chainguard's declarative apk build tool; paired with apko it builds Wolfi-based low-CVE container images without a Dockerfile. The name is the French word mélange (\"mixture\"), so the final -ange is a soft \"zh\" like rouge or measure, and the stress falls on the second syllable: may-LAHNZH, not \"MEL-anj\". The anglicized may-LAHNJ is a listed dictionary variant, but the zh-form is the standard one.",
+  "audio_url": "https://pronounce.renlab.ai/audio/melange.mp3",
+  "url": "https://pronounce.renlab.ai/word/melange",
+  "date_modified": "2026-07-12"
+}

@@ -1,0 +1,15 @@
+{
+  "word": "Ghidra",
+  "ipa": "/ˈɡiːdrə/",
+  "respelling_us": "ghee druh",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/NationalSecurityAgency/ghidra/wiki/Frequently-asked-questions",
+  "source_label": "NSA Ghidra FAQ — \"Gee-druh. The G sounds like the G in goto, great, good, graph, and GitHub. The emphasis goes on the first syllable.\"",
+  "category": "tool",
+  "confidence": "creator-clarified",
+  "notes": "Ghidra is the NSA's open-source software reverse-engineering framework, widely used for binary analysis and now a common target for AI agent MCP servers. The 'gh' spelling tempts readers into a soft-G 'JEE-dra', but the official FAQ specifies a hard G as in GitHub with stress on the first syllable: GEE-druh. Wikipedia gives the same IPA, and the question was settled in the project's own GitHub issue #61.",
+  "audio_url": "https://pronounce.renlab.ai/audio/ghidra.mp3",
+  "url": "https://pronounce.renlab.ai/word/ghidra",
+  "date_modified": "2026-07-12"
+}

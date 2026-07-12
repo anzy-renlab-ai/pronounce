@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pronounce · how to say kubectl, nginx, YAML, Ghostty</title>
 
-<meta name="description" content="A community-maintained pronunciation dictionary — 1790 entries — for the project, product, and programmer-jargon names developers actually use. kubectl, nginx, YAML, Ghostty, wagmi, Dijkstra, and 1,600+ more. With cited sources. CLI + VS Code extension + MCP server + Claude Code skill.">
+<meta name="description" content="A community-maintained pronunciation dictionary — 1848 entries — for the project, product, and programmer-jargon names developers actually use. kubectl, nginx, YAML, Ghostty, wagmi, Dijkstra, and 1,600+ more. With cited sources. CLI + VS Code extension + MCP server + Claude Code skill.">
 <meta name="keywords" content="how to pronounce kubectl, how to pronounce nginx, how to pronounce YAML, how to pronounce Ghostty, project name pronunciation, developer pronunciation guide">
 <link rel="canonical" href="https://pronounce.renlab.ai/">
 <link rel="alternate" hreflang="en" href="https://pronounce.renlab.ai/">
 <link rel="alternate" hreflang="zh-Hans" href="https://pronounce.renlab.ai/zh">
 <meta property="og:title" content="Pronounce · how to say kubectl, nginx, YAML, Ghostty">
-<meta property="og:description" content="A community pronunciation dictionary for developer jargon — 1790 entries with cited sources. Open source, MIT.">
+<meta property="og:description" content="A community pronunciation dictionary for developer jargon — 1848 entries with cited sources. Open source, MIT.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://pronounce.renlab.ai/">
 <meta property="og:image" content="https://pronounce.renlab.ai/og.png">
@@ -19,7 +19,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="How to pronounce kubectl, nginx, YAML, Ghostty">
-<meta name="twitter:description" content="A community pronunciation dictionary — 1790 entries with cited sources.">
+<meta name="twitter:description" content="A community pronunciation dictionary — 1848 entries with cited sources.">
 <meta name="twitter:image" content="https://pronounce.renlab.ai/og.png">
 <meta name="theme-color" content="#8fd694">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
@@ -66,5 +66,16 @@
 
 <!-- App bundle (audio + sections + eggs + app concatenated, esbuild-compiled) -->
 <script defer src="/v2/bundle.js"></script>
+
+<!-- The homepage is the PWA's start_url but never loads script.js, where the
+     registration lives — so a visitor who only ever landed on / got no service
+     worker at all, and the offline/install feature was dead for them. -->
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('/sw.js').catch(function () {});
+    });
+  }
+</script>
 </body>
 </html>

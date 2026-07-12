@@ -1,0 +1,15 @@
+{
+  "word": "AGNTCY",
+  "ipa": "/ˈeɪdʒənsi/",
+  "respelling_us": "ay jun see",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://aisera.com/blog/a2a-agent2agent-protocol/",
+  "source_label": "Aisera — A2A protocol explainer: AGNTCY (pronounced \"agency\")",
+  "category": "project",
+  "confidence": "community-consensus",
+  "notes": "AGNTCY is the Linux Foundation-hosted \"Internet of Agents\" project donated by Cisco (Outshift), covering agent discovery (OASF), messaging (SLIM) and identity, and is routinely compared against MCP and A2A. It is a disemvoweled brand — AGNT (agent) plus -CY — and is simply read as the English word \"agency\" (AY-jun-see), not spelled out letter-by-letter. Cold readers usually try \"A-G-N-T-C-Y\" or \"ag-EN-tik-ee\"; the project's own site and the Linux Foundation press release never state the pronunciation, so this is labeled community-consensus on the strength of third-party technical coverage.",
+  "audio_url": "https://pronounce.renlab.ai/audio/agntcy.mp3",
+  "url": "https://pronounce.renlab.ai/word/agntcy",
+  "date_modified": "2026-07-12"
+}

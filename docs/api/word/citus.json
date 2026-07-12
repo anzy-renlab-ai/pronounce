@@ -1,0 +1,15 @@
+{
+  "word": "Citus",
+  "ipa": "/ˈsaɪtəs/",
+  "respelling_us": "site us",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.citusdata.com/blog/2018/06/19/how-to-pronounce-citus/",
+  "source_label": "Citus Data blog — \"How do you pronounce Citus?\" (pronounced \"site-us\")",
+  "category": "project",
+  "confidence": "creator-clarified",
+  "notes": "Citus is the open-source extension that turns PostgreSQL into a distributed, sharded database, and it powers Azure Cosmos DB for PostgreSQL. It is pronounced SITE-us, not KEE-tus or SIT-us — the name comes from the Olympic motto Citius, Altius, Fortius (faster, higher, stronger). Citus Data got asked so often that they published an official blog post settling it.",
+  "audio_url": "https://pronounce.renlab.ai/audio/citus.mp3",
+  "url": "https://pronounce.renlab.ai/word/citus",
+  "date_modified": "2026-07-12"
+}

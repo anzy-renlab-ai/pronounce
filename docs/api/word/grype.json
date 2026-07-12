@@ -1,0 +1,15 @@
+{
+  "word": "Grype",
+  "ipa": "/ˈɡraɪp/",
+  "respelling_us": "gripe",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://oss.anchore.com/docs/projects/",
+  "source_label": "Anchore OSS Docs — \"Grype (rhymes with hype) is an open-source vulnerability scanner\"",
+  "category": "cli-tool",
+  "confidence": "creator-clarified",
+  "notes": "Grype is Anchore's open-source vulnerability scanner for container images, filesystems and SBOMs, the companion to Syft. Anchore's official docs spell it out: \"Grype (rhymes with hype)\" — so it is simply the word \"gripe\". The y-spelling misleads readers into \"grip\", \"GRIP-ee\" or a French-looking \"gree-PAY\", all of which are wrong.",
+  "audio_url": "https://pronounce.renlab.ai/audio/grype.mp3",
+  "url": "https://pronounce.renlab.ai/word/grype",
+  "date_modified": "2026-07-12"
+}

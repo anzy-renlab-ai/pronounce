@@ -1,0 +1,15 @@
+{
+  "word": "Aeraki",
+  "ipa": "/ɛˈrɑːki/",
+  "respelling_us": "air rah kee",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/aeraki-mesh/aeraki",
+  "source_label": "GitHub README — aeraki-mesh/aeraki (\"Aeraki [Air-rah-ki] is the Greek word for 'breeze'\")",
+  "category": "project",
+  "confidence": "creator-clarified",
+  "notes": "Aeraki Mesh is a CNCF sandbox project that manages non-HTTP layer-7 protocols such as Dubbo, Thrift and Redis in an Istio service mesh. The maintainers spell the pronunciation out in the README: Aeraki [Air-rah-ki] is the Greek word for breeze, with the stress on the second syllable. The ae- digraph misleads English readers into air-uh-kye or ay-RAY-kee.",
+  "audio_url": "https://pronounce.renlab.ai/audio/aeraki.mp3",
+  "url": "https://pronounce.renlab.ai/word/aeraki",
+  "date_modified": "2026-07-12"
+}

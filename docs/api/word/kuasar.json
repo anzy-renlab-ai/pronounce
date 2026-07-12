@@ -1,0 +1,15 @@
+{
+  "word": "Kuasar",
+  "ipa": "/ˈkweɪzɑr/",
+  "respelling_us": "kway zar",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/cncf/sandbox/issues/56",
+  "source_label": "CNCF Sandbox application #56 — maintainers' project summary: \"Kuasar(Quasar in Kubernetes) is a low-level container runtime\"",
+  "category": "project",
+  "confidence": "community-consensus",
+  "notes": "Kuasar is a CNCF Sandbox multi-sandbox container runtime written in Rust (Huawei Cloud, WasmEdge, openEuler) that unifies MicroVM, Wasm and app-kernel sandboxes behind one sandbox API. The name is simply \"quasar\" respelled with a K for Kubernetes — the maintainers' own CNCF application glosses it as \"Kuasar(Quasar in Kubernetes)\" — so it is said KWAY-zar, exactly like the astronomical object. Cold readers routinely mangle it as \"koo-AH-sar\" by reading the ua literally.",
+  "audio_url": "https://pronounce.renlab.ai/audio/kuasar.mp3",
+  "url": "https://pronounce.renlab.ai/word/kuasar",
+  "date_modified": "2026-07-12"
+}

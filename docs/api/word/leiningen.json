@@ -1,0 +1,15 @@
+{
+  "word": "Leiningen",
+  "ipa": "/ˈlaɪnɪŋən/",
+  "respelling_us": "line ing un",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://leiningen.org/faq.html",
+  "source_label": "Leiningen official FAQ — \"How do you pronounce Leiningen? It's LINE-ing-en. ['laɪnɪŋən]\"",
+  "category": "tool",
+  "confidence": "creator-clarified",
+  "notes": "Leiningen (the lein command) is the long-standing build tool and project-automation entry point for Clojure. The official FAQ settles it: LINE-ing-en, with the German ei read as \"eye\" — the name comes from Carl Stephenson's short story \"Leiningen Versus the Ants\". Common misreadings like \"lay-nin-jen\" or \"lee-nin-gen\" are simply wrong.",
+  "audio_url": "https://pronounce.renlab.ai/audio/leiningen.mp3",
+  "url": "https://pronounce.renlab.ai/word/leiningen",
+  "date_modified": "2026-07-12"
+}

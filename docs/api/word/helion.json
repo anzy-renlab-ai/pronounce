@@ -1,0 +1,15 @@
+{
+  "word": "Helion",
+  "ipa": "/ˈhiːliɑːn/",
+  "respelling_us": "hee lee on",
+  "alt_ipa": ["/ˈhiːliən/"],
+  "alt_respelling_us": ["hee lee uhn"],
+  "source_url": "https://en.wikipedia.org/wiki/Helium-3_nucleus",
+  "source_label": "Wikipedia — Helion (chemistry): \"The term helion is a portmanteau of helium and ion\"",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Helion is PyTorch's high-level kernel-authoring DSL from Meta (public beta at PyTorch Conference 2025), which compiles down to Triton. The name is the physics term for a helium-3 nucleus, a deliberate sibling to Triton (the hydrogen-3 nucleus), and it is a portmanteau of helium + ion — so the first syllable is HEE as in helium, not HELL as in the English word hellion. The reduced form hee lee uhn is an equally valid variant.",
+  "audio_url": "https://pronounce.renlab.ai/audio/helion.mp3",
+  "url": "https://pronounce.renlab.ai/word/helion",
+  "date_modified": "2026-07-12"
+}

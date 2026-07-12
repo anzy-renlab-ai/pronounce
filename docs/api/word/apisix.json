@@ -1,0 +1,15 @@
+{
+  "word": "APISIX",
+  "ipa": "/ˌeɪ piː ˈaɪ sɪks/",
+  "respelling_us": "ay pee eye six",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/apache/apisix/issues/1190",
+  "source_label": "GitHub — apache/apisix issue #1190, maintainer @membphis: \"'6' is a lucky number in China, so we would like to call it `API SIX`\"",
+  "category": "project",
+  "confidence": "creator-clarified",
+  "notes": "Apache APISIX is a top-level Apache Software Foundation cloud-native API gateway and AI gateway, a peer of Kong, Traefik and Envoy. Despite looking like one word, it is spoken as two tokens: the letters A-P-I followed by the number six. Maintainer @membphis confirmed this on the project tracker, explaining that 6 is a lucky number in China — hence the name.",
+  "audio_url": "https://pronounce.renlab.ai/audio/apisix.mp3",
+  "url": "https://pronounce.renlab.ai/word/apisix",
+  "date_modified": "2026-07-12"
+}
