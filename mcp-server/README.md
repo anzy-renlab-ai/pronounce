@@ -1,5 +1,10 @@
 # pronounce-mcp — MCP server for the Pronounce dictionary
 
+<!-- Ownership proof for the official MCP registry: it verifies that this PyPI
+     package belongs to the server name below by looking for this exact line in
+     the package's published README. Do not remove or reword it. -->
+mcp-name: io.github.anzy-renlab-ai/pronounce
+
 An MCP server that exposes the community pronunciation dictionary at <https://pronounce.renlab.ai> as tools any MCP-aware client (Claude Desktop, Continue, Zed, ...) can call.
 
 When a user asks an LLM "how do you pronounce kubectl?", the client invokes `pronounce("kubectl")` and gets back the canonical reading, IPA, alternate readings (if contested), source citation, and a link to the human-readable page — without the LLM having to hallucinate.

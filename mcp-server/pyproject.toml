@@ -1,6 +1,6 @@
 [project]
 name = "pronounce-mcp"
-version = "0.1.0"
+version = "0.1.1"
 description = "MCP server for pronounce.renlab.ai — look up how engineers actually pronounce project / product / jargon names from any MCP-aware client."
 authors = [{name = "Pronounce community"}]
 readme = "README.md"
