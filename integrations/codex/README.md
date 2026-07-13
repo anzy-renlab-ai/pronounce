@@ -35,14 +35,14 @@ Add to `~/.codex/config.toml`:
 ```toml
 [mcp_servers.pronounce]
 command = "uvx"
-args = ["--from", "git+https://github.com/anzy-renlab-ai/pronounce.git#subdirectory=mcp-server", "pronounce-mcp"]
-# The repo ships pre-rendered audio (~86 MB clone), so the from-git cold
-# start exceeds Codex's 10 s default:
-startup_timeout_sec = 120
+args = ["pronounce-mcp"]
 ```
 
-Or: `codex mcp add pronounce -- uvx --from "git+https://github.com/anzy-renlab-ai/pronounce.git#subdirectory=mcp-server" pronounce-mcp`
-(then raise `startup_timeout_sec` in the TOML by hand).
+Or: `codex mcp add pronounce -- uvx pronounce-mcp`
+
+(Installs a 5 KB wheel from PyPI. The old `uvx --from git+…` form cloned the
+whole repo — pre-rendered audio and all — and blew past Codex's 10 s startup
+timeout, which is why this used to need `startup_timeout_sec = 120`.)
 
 The MCP tools return IPA + respelling + source citation as data; pair with
 the skill (or `AGENTS.md` below) if you also want audio played out loud.

@@ -5,8 +5,6 @@
     "pronounce": {
       "command": "uvx",
       "args": [
-        "--from",
-        "git+https://github.com/anzy-renlab-ai/pronounce.git#subdirectory=mcp-server",
         "pronounce-mcp"
       ]
     }

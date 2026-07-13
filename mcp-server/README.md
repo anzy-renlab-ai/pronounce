@@ -37,7 +37,7 @@ Until it lands on npm, run it straight from a checkout: `node mcp-server/npm/ind
   "mcpServers": {
     "pronounce": {
       "command": "uvx",
-      "args": ["--from", "git+https://github.com/anzy-renlab-ai/pronounce#subdirectory=mcp-server", "pronounce-mcp"]
+      "args": ["pronounce-mcp"]
     }
   }
 }
@@ -46,7 +46,7 @@ Until it lands on npm, run it straight from a checkout: `node mcp-server/npm/ind
 Or with `pipx`:
 
 ```bash
-pipx install "git+https://github.com/anzy-renlab-ai/pronounce#subdirectory=mcp-server"
+pipx install pronounce-mcp
 ```
 
 ```jsonc

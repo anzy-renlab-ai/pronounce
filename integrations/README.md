@@ -39,7 +39,7 @@ deterministic dictionary-backed answers.
   "mcpServers": {
     "pronounce": {
       "command": "uvx",
-      "args": ["--from", "git+https://github.com/anzy-renlab-ai/pronounce#subdirectory=mcp-server", "pronounce-mcp"]
+      "args": ["pronounce-mcp"]
     }
   }
 }

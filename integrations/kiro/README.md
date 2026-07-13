@@ -17,7 +17,7 @@ Merge [`mcp.json`](mcp.json) into `~/.kiro/settings/mcp.json` (user-wide) or
   "mcpServers": {
     "pronounce": {
       "command": "uvx",
-      "args": ["--from", "git+https://github.com/anzy-renlab-ai/pronounce.git#subdirectory=mcp-server", "pronounce-mcp"],
+      "args": ["pronounce-mcp"],
       "disabled": false
     }
   }
