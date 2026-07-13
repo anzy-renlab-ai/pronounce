@@ -32,11 +32,18 @@ jobs:
         id: ver
         run: echo "version=$(jq -r .version mcp-server/server.json)" >> "$GITHUB_OUTPUT"
 
-      - name: Check server.json oci identifier matches version
+      - name: Check server.json package identifiers match the version
         run: |
           v="${{ steps.ver.outputs.version }}"
+          # Select by registryType, not by array index — the PyPI package is listed
+          # first now, and a positional check silently breaks the moment the order
+          # changes (it did).
           jq -e --arg t "ghcr.io/anzy-renlab-ai/pronounce-mcp:$v" \
-            '.packages[0].identifier == $t' mcp-server/server.json
+            'any(.packages[]; .registryType == "oci" and .identifier == $t)' \
+            mcp-server/server.json
+          jq -e --arg v "$v" \
+            'any(.packages[]; .registryType == "pypi" and .identifier == "pronounce-mcp" and .version == $v)' \
+            mcp-server/server.json
 
       - name: Build and push image
         uses: docker/build-push-action@10e90e3645eae34f1e60eeb005ba3a3d33f178e8 # v6
