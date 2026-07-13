@@ -36,13 +36,19 @@ Add to `~/.codex/config.toml`:
 [mcp_servers.pronounce]
 command = "uvx"
 args = ["pronounce-mcp"]
+# Only needed for the very first run — see below.
+startup_timeout_sec = 120
 ```
 
 Or: `codex mcp add pronounce -- uvx pronounce-mcp`
 
-(Installs a 5 KB wheel from PyPI. The old `uvx --from git+…` form cloned the
-whole repo — pre-rendered audio and all — and blew past Codex's 10 s startup
-timeout, which is why this used to need `startup_timeout_sec = 120`.)
+**Startup timing.** The package itself is a 5 KB wheel from PyPI. Cold start is
+still slow the *first* time — measured 85 s from a completely empty `uv` cache,
+because `uv` downloads a Python interpreter and the `mcp` dependency tree. Once
+those are cached, startup is ~3 s and you can drop `startup_timeout_sec`
+entirely. (Before this package existed, `uvx --from git+…` cloned the whole
+repository — 217 MB of git history, pre-rendered audio and all — to fetch a 4 KB
+`server.py`, and paid that on *every* cold start.)
 
 The MCP tools return IPA + respelling + source citation as data; pair with
 the skill (or `AGENTS.md` below) if you also want audio played out loud.
