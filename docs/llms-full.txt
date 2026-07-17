@@ -1867,7 +1867,7 @@ Keptn | /ˈkæptən/ | captain | project | creator-clarified | https://v1.keptn.
 Tyk | /taɪk/ | tyke | product | creator-clarified | https://github.com/TykTechnologies/tyk/issues/195
 Xapian | /ˈzæpiən/ | zap ee un | project | creator-clarified | https://trac.xapian.org/wiki/FAQ/CorrectPronunciation
 Kueue | /kjuː/ | kyoo | project | community-consensus | https://easontechtalk.com/kueue-quick-start-fair-sharing-gpu-tpu-kubernetes/
-Linode | /ˈlɪnoʊd/ | lin ode | product | creator-clarified | https://en.wikipedia.org/wiki/Linode
+Linode | /ˈlɪnoʊd/ | lin ode | product | creator-clarified | https://x.com/linode/status/288691718667255809
 OpenBao | /ˌoʊpən ˈbaʊ/ | open bao | project | community-consensus | https://en.wiktionary.org/wiki/bao
 Sqitch | /skɪtʃ/ | skitch | cli-tool | community-consensus | https://dev.to/ovid/sane-database-change-management-3cdm
 Guice | /dʒuːs/ | juice | product | creator-clarified | https://github.com/google/guice

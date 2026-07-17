@@ -35,8 +35,15 @@ const existing = new Set(
   text.split("\n").filter(l => l && !l.startsWith("#"))
     .map(l => l.split("\t")[0].toLowerCase()).filter(w => w && w !== "word")
 );
-const fresh = rows.filter(r => !existing.has(r[0].toLowerCase()));
-const dupes = rows.filter(r => existing.has(r[0].toLowerCase())).map(r => r[0]);
+const fresh = [];
+const dupes = [];
+for (const r of rows) {
+  if (typeof r[0] !== "string" || !r[0]) throw new Error(`row ${JSON.stringify(r).slice(0, 60)} has no word key`);
+  const key = r[0].toLowerCase();
+  if (existing.has(key)) { dupes.push(r[0]); continue; }
+  existing.add(key); // guards against duplicates WITHIN the batch too
+  fresh.push(r);
+}
 if (dupes.length) console.log(`skipping ${dupes.length} already present: ${dupes.join(", ")}`);
 const lines = fresh.map(r => {
   if (r.length !== 10) throw new Error(`row "${r[0]}" has ${r.length} fields, need 10`);

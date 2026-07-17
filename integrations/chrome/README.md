@@ -6,7 +6,7 @@ Click any tech word on any web page — hear how engineers actually say it. 1880
 
 ## Install (Chromium-based: Chrome / Edge / Brave / Arc / Opera)
 
-1. Download [`pronounce-chrome-0.3.0.zip`](pronounce-chrome-0.3.0.zip) (checked into this folder).
+1. Download [`pronounce-chrome-0.3.1.zip`](pronounce-chrome-0.3.1.zip) (checked into this folder).
 2. Unzip somewhere stable (e.g. `~/Applications/pronounce-chrome/`).
 3. Open `chrome://extensions/`.
 4. Toggle **Developer mode** (top-right).
@@ -31,7 +31,7 @@ The 🔊 Pronounce icon should appear in the toolbar. Click it for a search popu
 ```bash
 # build a fresh zip
 cd integrations/chrome
-zip -r ../../pronounce-chrome-0.3.0.zip . -x "*.DS_Store" -x "node_modules/*"
+zip -r ../../pronounce-chrome-0.3.1.zip . -x "*.DS_Store" -x "node_modules/*"
 ```
 
 Source: [`integrations/chrome/`](.) in the main repo.

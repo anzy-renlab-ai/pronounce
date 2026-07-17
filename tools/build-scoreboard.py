@@ -240,11 +240,11 @@ footer.bottom a {{ color:var(--accent2); text-decoration:none; }}
 <main class="wrap">
   <div class="hero">
     <h1>The developer pronunciation <span class="fight">scoreboard</span></h1>
-    <p>Of {n_total} sourced terms, <strong>{n_con}</strong> are still argued about and <strong>{n_set}</strong> were settled by the people who made them. Both readings, the receipts, and the audio — so you can stop fighting on standup (or fight better).</p>
+    <p>Of {n_total} terms, <strong>{n_con}</strong> are still argued about and <strong>{n_set}</strong> were settled by the people who made them. Both readings, the receipts, and the audio — so you can stop fighting on standup (or fight better).</p>
     <div class="tally">
       <div class="stat"><div class="num fight">{n_con}</div><div class="lbl">still contested</div></div>
       <div class="stat"><div class="num settled">{n_set}</div><div class="lbl">creator-settled</div></div>
-      <div class="stat"><div class="num">{n_total}</div><div class="lbl">total, all sourced</div></div>
+      <div class="stat"><div class="num">{n_total}</div><div class="lbl">total terms</div></div>
     </div>
     <div class="cta">
       <a href="https://github.com/{GH}">★ Star on GitHub</a>
