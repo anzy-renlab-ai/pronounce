@@ -1,0 +1,15 @@
+{
+  "word": "Vitess",
+  "ipa": "/vɪˈtɛs/",
+  "respelling_us": "vih tess",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://kubernetespodcast.com/episode/081-vitess/",
+  "source_label": "Kubernetes Podcast #081 — creators on the name (French \"vitesse\")",
+  "category": "project",
+  "confidence": "community-consensus",
+  "notes": "CNCF-graduated MySQL sharding system from YouTube; named after French \"vitesse\" (speed), so stress falls on the second syllable.",
+  "audio_url": "https://pronounce.renlab.ai/audio/vitess.mp3",
+  "url": "https://pronounce.renlab.ai/word/vitess",
+  "date_modified": "2026-07-17"
+}

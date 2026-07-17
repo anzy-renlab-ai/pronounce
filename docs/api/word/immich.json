@@ -1,0 +1,15 @@
+{
+  "word": "Immich",
+  "ipa": "/ˈɪmɪdʒ/",
+  "respelling_us": "image",
+  "alt_ipa": ["/ˈɪmɪtʃ/"],
+  "alt_respelling_us": ["im itch"],
+  "source_url": "https://github.com/immich-app/immich/discussions/158",
+  "source_label": "GitHub discussion #158 \"Why Immich?\" — creator alextran1502",
+  "category": "product",
+  "confidence": "creator-clarified",
+  "notes": "Self-hosted photo/video backup server; creator Alex Tran: \"It is pronounced as 'image'\", though much of the community says IMM-itch.",
+  "audio_url": "https://pronounce.renlab.ai/audio/immich.mp3",
+  "url": "https://pronounce.renlab.ai/word/immich",
+  "date_modified": "2026-07-17"
+}

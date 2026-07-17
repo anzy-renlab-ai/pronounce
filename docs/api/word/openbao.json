@@ -1,0 +1,15 @@
+{
+  "word": "OpenBao",
+  "ipa": "/ˌoʊpən ˈbaʊ/",
+  "respelling_us": "open bao",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://en.wiktionary.org/wiki/bao",
+  "source_label": "Wiktionary — bao",
+  "category": "project",
+  "confidence": "community-consensus",
+  "notes": "Linux Foundation fork of HashiCorp Vault named after baozi, the steamed bun (per GitHub discussion #34) — \"bao\" rhymes with \"cow\", not \"bay-oh\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/openbao.mp3",
+  "url": "https://pronounce.renlab.ai/word/openbao",
+  "date_modified": "2026-07-17"
+}

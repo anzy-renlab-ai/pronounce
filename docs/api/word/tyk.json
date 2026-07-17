@@ -1,0 +1,15 @@
+{
+  "word": "Tyk",
+  "ipa": "/taɪk/",
+  "respelling_us": "tyke",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/TykTechnologies/tyk/issues/195",
+  "source_label": "Tyk GitHub issue #195 — \"How do you pronounce tyk?\"",
+  "category": "product",
+  "confidence": "creator-clarified",
+  "notes": "Open-source Go API gateway; creator Martin Buhr confirmed on GitHub it rhymes with \"Mike\" — /taɪk/.",
+  "audio_url": "https://pronounce.renlab.ai/audio/tyk.mp3",
+  "url": "https://pronounce.renlab.ai/word/tyk",
+  "date_modified": "2026-07-17"
+}

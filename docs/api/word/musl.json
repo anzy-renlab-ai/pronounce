@@ -1,0 +1,15 @@
+{
+  "word": "musl",
+  "ipa": "/ˈmʌsəl/",
+  "respelling_us": "muscle",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://musl.libc.org/about.html",
+  "source_label": "musl official site — About",
+  "category": "product",
+  "confidence": "creator-clarified",
+  "notes": "Lightweight libc behind Alpine Linux images; official site says \"musl, pronounced like the word 'mussel' or 'muscle'\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/musl.mp3",
+  "url": "https://pronounce.renlab.ai/word/musl",
+  "date_modified": "2026-07-17"
+}

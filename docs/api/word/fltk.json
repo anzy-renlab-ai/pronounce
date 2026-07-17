@@ -1,0 +1,15 @@
+{
+  "word": "FLTK",
+  "ipa": "/ˈfʊltɪk/",
+  "respelling_us": "full tick",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.fltk.org/doc-1.1/intro.html",
+  "source_label": "FLTK documentation — Introduction",
+  "category": "tool",
+  "confidence": "creator-clarified",
+  "notes": "Veteran cross-platform C++ GUI toolkit; the official docs open with 'The Fast Light Tool Kit (\"FLTK\", pronounced \"fulltick\")'.",
+  "audio_url": "https://pronounce.renlab.ai/audio/fltk.mp3",
+  "url": "https://pronounce.renlab.ai/word/fltk",
+  "date_modified": "2026-07-17"
+}

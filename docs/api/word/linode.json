@@ -1,0 +1,15 @@
+{
+  "word": "Linode",
+  "ipa": "/ˈlɪnoʊd/",
+  "respelling_us": "lin ode",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://en.wikipedia.org/wiki/Linode",
+  "source_label": "Wikipedia — Linode",
+  "category": "product",
+  "confidence": "creator-clarified",
+  "notes": "Cloud host (acquired by Akamai in 2022; now Akamai Connected Cloud), from \"Linux node\"; the official @linode account clarified \"We pronounce it Lih-node - 'lin' as in Linux!\", though LIE-node remains a common mispronunciation.",
+  "audio_url": "https://pronounce.renlab.ai/audio/linode.mp3",
+  "url": "https://pronounce.renlab.ai/word/linode",
+  "date_modified": "2026-07-17"
+}

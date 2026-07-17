@@ -1,0 +1,15 @@
+{
+  "word": "Kueue",
+  "ipa": "/kjuː/",
+  "respelling_us": "kyoo",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://easontechtalk.com/kueue-quick-start-fair-sharing-gpu-tpu-kubernetes/",
+  "source_label": "Eason Tech Talk — Kueue quick start (\"pronounced like queue\")",
+  "category": "project",
+  "confidence": "community-consensus",
+  "notes": "Kubernetes-native job-queueing controller (kubernetes-sigs); the K-wordplay name is read exactly like \"queue\" — one syllable, kyoo.",
+  "audio_url": "https://pronounce.renlab.ai/audio/kueue.mp3",
+  "url": "https://pronounce.renlab.ai/word/kueue",
+  "date_modified": "2026-07-17"
+}

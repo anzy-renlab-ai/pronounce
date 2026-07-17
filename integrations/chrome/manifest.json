@@ -2,8 +2,8 @@
   "manifest_version": 3,
   "name": "Pronounce — Tech Word Pronunciation",
   "short_name": "Pronounce",
-  "version": "0.3.0",
-  "description": "Click any tech word on any web page — hear how it's actually pronounced. 1848 sourced entries.",
+  "version": "0.3.1",
+  "description": "Click any tech word on any web page — hear how it's actually pronounced. 1880 sourced entries.",
   "author": "Pronounce.ai",
   "homepage_url": "https://pronounce.renlab.ai/",
   "icons": {
@@ -12,7 +12,7 @@
     "128": "icons/icon-128.png"
   },
   "action": {
-    "default_title": "Pronounce — search 1848 entries",
+    "default_title": "Pronounce — search 1880 entries",
     "default_popup": "src/popup.html",
     "default_icon": {
       "16": "icons/icon-16.png",

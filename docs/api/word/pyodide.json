@@ -1,0 +1,15 @@
+{
+  "word": "Pyodide",
+  "ipa": "/ˈpaɪəˌdaɪd/",
+  "respelling_us": "pie uh dyed",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/pyodide/pyodide/issues/1631",
+  "source_label": "Pyodide GitHub issue #1631",
+  "category": "product",
+  "confidence": "creator-clarified",
+  "notes": "CPython compiled to WebAssembly for running Python in the browser; maintainers rth and hoodmane gave the IPA ˈpɑɪ.ə.ˌdɑɪd (Py + Iodide — rhymes with iodide).",
+  "audio_url": "https://pronounce.renlab.ai/audio/pyodide.mp3",
+  "url": "https://pronounce.renlab.ai/word/pyodide",
+  "date_modified": "2026-07-17"
+}

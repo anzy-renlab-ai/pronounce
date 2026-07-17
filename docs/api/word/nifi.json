@@ -1,0 +1,15 @@
+{
+  "word": "NiFi",
+  "ipa": "/ˈnaɪˌfaɪ/",
+  "respelling_us": "nigh fie",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://svn.apache.org/repos/asf/nifi/site/trunk/faq.html",
+  "source_label": "Apache NiFi FAQ (apache.org SVN)",
+  "category": "product",
+  "confidence": "creator-clarified",
+  "notes": "Apache dataflow tool from NSA's \"NiagaraFiles\"; the official FAQ states \"nye fye\" is the preferred pronunciation.",
+  "audio_url": "https://pronounce.renlab.ai/audio/nifi.mp3",
+  "url": "https://pronounce.renlab.ai/word/nifi",
+  "date_modified": "2026-07-17"
+}

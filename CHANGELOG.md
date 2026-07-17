@@ -1,5 +1,26 @@
 # Changelog
 
+## v2.23.0 — 2026-07-17
+
+**+32 entries (1,848 → 1,880).** Discovered by a 4-lens web-research workflow (2026 AI/chip names, infra gap-fill, creator-clarified classics, contested staples), then one adversarial verifier per candidate — every row's source was fetched live before it was kept, and the risky respelling syllables were byte-verified through `say -o` before appending.
+
+### Added — dictionary
+
+- **2026 silicon & AI names:** NVIDIA **Rubin** (ROO-bin, after astronomer Vera Rubin), OpenAI/Broadcom **Jalapeño** (hah-luh-PAY-nyoh), Microsoft **Maia** (MY-ah vs MAY-uh — contested), **Majorana** (my-uh-RAH-nuh — the Italian j is a glide, never /dʒ/), **MAI** (the letters), Yann LeCun's **AMI** Labs ("ah-MEE", French for *friend* — filed as contested against the letter-read Amazon Machine Image), d-Matrix **Corsair**, **Taalas** (tah-LAHS), **oMLX**.
+- **Infra gap-fill:** **Immich** (creator: "pronounced as 'image'"), **Debezium** (dee-BEE-zee-um, official FAQ), Apache **NiFi** (nigh-fie, not "niffy"), **Keptn** ("captain"), **Tyk** ("tyke"), **Xapian** (ZAP-ee-un), **Kueue** (kyoo), **Linode** (LIN-ode — "we pronounce it linn-ode"), **OpenBao** (bao as in "bough"), **Sqitch** ("skitch", not "skwitch"), **Vitess** (vih-TESS, French *vitesse*), **lighttpd** ("lighty").
+- **Creator-clarified classics** that somehow weren't in yet: **Guice** ("juice"), **Thymeleaf** ("time leaf"), **musl** ("mussel"), **xonsh** ("consh"), **Pyodide** (pie-uh-dyed), **FLTK** ("fulltick"), **Nagios** (nah-GHEE-ose, Ethan Galstad's archived FAQ), **Cygwin** (SIG-win).
+- **Contested staples:** **axios** (AK-see-ohs vs AK-see-oss), **Mockito** (mah-KEE-toh — a maintainer-confirmed mock/mojito pun), **Haxe** ("hex" per early official docs vs "hacks").
+
+### Verification notes
+
+- The adversarial pass made real corrections: MAI's claimed "my" pronunciation traced back to a search-summarizer hallucination (no documented instance exists — dropped); Kueue's respelling arrived as the homograph "queue" (rewritten "kyoo"); Nagios' dead FAQ link was swapped for the archived original that carries Galstad's own "nah-ghee-ose".
+- Byte-verified against macOS `say` before appending: "bao" renders identically to "bough" (/baʊ/), "sair" to "sare", "ose" is distinct from both "oss" and "oze", "M A I" follows the established `L L M` letter convention, and "nyoh" follows the already-audited n+y glide precedent ("pee nya", "ray nyee").
+
+### Extensions
+
+- VS Code extension **1.2.0**: bundled dictionary refreshed to 1,880; ships the `2FA`-reachability hover fix from v2.22.0 that never made it to the marketplace.
+- Chrome extension **0.3.1**: dictionary refreshed to 1,880; same leading-digit token fix.
+
 ## v2.22.0 — 2026-07-12
 
 **Follow-up to v2.21.0 — clears the rest of the verified backlog.** No dictionary change (holds at 1,848).

@@ -1,0 +1,15 @@
+{
+  "word": "Sqitch",
+  "ipa": "/skɪtʃ/",
+  "respelling_us": "skitch",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://dev.to/ovid/sane-database-change-management-3cdm",
+  "source_label": "dev.to — Sane Database Change Management",
+  "category": "cli-tool",
+  "confidence": "community-consensus",
+  "notes": "Wheeler's database change-management tool (\"SQL changes with Git stuck in the middle\"); pronounced \"skitch\", not \"skwitch\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/sqitch.mp3",
+  "url": "https://pronounce.renlab.ai/word/sqitch",
+  "date_modified": "2026-07-17"
+}

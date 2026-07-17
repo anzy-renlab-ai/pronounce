@@ -1850,3 +1850,35 @@ Tri Dao | /ˌtriː ˈdaʊ/ | tree dow | person | community-consensus | https://p
 Ronacher | /ˈroʊnɑːkər/ | roh nah ker | person | community-consensus | https://rustacean-station.org/transcript/rust-in-production-armin-ronacher/
 Kolmogorov | /ˌkoʊlməˈɡɔːrəf/ | kohl muh gor uhf | person | community-consensus | https://www.dictionary.com/browse/kolmogorov
 Huyen | /ˈhwiən/ | hwee uhn | person | community-consensus | https://en.wiktionary.org/wiki/Huy%E1%BB%81n
+Rubin | /ˈruːbɪn/ | roo bin | product | community-consensus | https://en.wikipedia.org/wiki/Vera_Rubin
+AMI | /ˌeɪ ɛm ˈaɪ/ | A M I | acronym | contested | https://www.technologyreview.com/2026/01/22/1131661/yann-lecuns-new-venture-ami-labs/
+Taalas | /ˈtɑːlɑːs/ | tah lahs | product | community-consensus | https://baike.baidu.com/en/item/Taalas/1451675
+Jalapeño | /ˌhɑːləˈpeɪnjoʊ/ | hah luh pay nyoh | product | community-consensus | https://en.wiktionary.org/wiki/jalape%C3%B1o
+oMLX | /ˌoʊ ɛm ɛl ˈɛks/ | oh em ell eks | tool | community-consensus | (no source)
+Maia | /ˈmaɪə/ | my ah | product | contested | https://en.wiktionary.org/wiki/Maia
+Majorana | /ˌmaɪəˈrɑːnə/ | my uh rah nuh | product | community-consensus | https://en.wikipedia.org/wiki/Ettore_Majorana
+MAI | /ˌɛm eɪ ˈaɪ/ | M A I | acronym | community-consensus | https://microsoft.ai/news/building-a-hillclimbing-machine-launching-seven-new-mai-models/
+Corsair | /ˈkɔːrsɛər/ | kor sair | product | community-consensus | https://www.dictionary.com/browse/corsair
+lighttpd | /ˈlaɪti/ | lie tee | product | creator-clarified | https://www.lighttpd.net/
+Immich | /ˈɪmɪdʒ/ | image | product | creator-clarified | https://github.com/immich-app/immich/discussions/158
+Debezium | /diˈbiːziəm/ | dee bee zee um | project | creator-clarified | https://debezium.io/documentation/faq/
+NiFi | /ˈnaɪˌfaɪ/ | nigh fie | product | creator-clarified | https://svn.apache.org/repos/asf/nifi/site/trunk/faq.html
+Keptn | /ˈkæptən/ | captain | project | creator-clarified | https://v1.keptn.sh/docs/concepts/glossary/
+Tyk | /taɪk/ | tyke | product | creator-clarified | https://github.com/TykTechnologies/tyk/issues/195
+Xapian | /ˈzæpiən/ | zap ee un | project | creator-clarified | https://trac.xapian.org/wiki/FAQ/CorrectPronunciation
+Kueue | /kjuː/ | kyoo | project | community-consensus | https://easontechtalk.com/kueue-quick-start-fair-sharing-gpu-tpu-kubernetes/
+Linode | /ˈlɪnoʊd/ | lin ode | product | creator-clarified | https://en.wikipedia.org/wiki/Linode
+OpenBao | /ˌoʊpən ˈbaʊ/ | open bao | project | community-consensus | https://en.wiktionary.org/wiki/bao
+Sqitch | /skɪtʃ/ | skitch | cli-tool | community-consensus | https://dev.to/ovid/sane-database-change-management-3cdm
+Guice | /dʒuːs/ | juice | product | creator-clarified | https://github.com/google/guice
+Thymeleaf | /ˈtaɪmˌliːf/ | time leaf | product | creator-clarified | https://www.thymeleaf.org/faq.html
+Vitess | /vɪˈtɛs/ | vih tess | project | community-consensus | https://kubernetespodcast.com/episode/081-vitess/
+musl | /ˈmʌsəl/ | muscle | product | creator-clarified | https://musl.libc.org/about.html
+axios | /ˈæksioʊs/ | ak see ose | product | contested | https://github.com/axios/axios/issues/802
+Mockito | /mɑːˈkiːtoʊ/ | mah kee toh | tool | contested | https://github.com/mockito/mockito/issues/889
+xonsh | /kɑːnʃ/ | kahnsh | cli-tool | creator-clarified | https://xon.sh/
+Pyodide | /ˈpaɪəˌdaɪd/ | pie uh dyed | product | creator-clarified | https://github.com/pyodide/pyodide/issues/1631
+Haxe | /hɛks/ | hex | product | contested | https://groups.google.com/g/haxelang/c/GSOT3BGU180
+FLTK | /ˈfʊltɪk/ | full tick | tool | creator-clarified | https://www.fltk.org/doc-1.1/intro.html
+Cygwin | /ˈsɪɡwɪn/ | sig win | tool | community-consensus | https://en.wikipedia.org/wiki/Cygwin
+Nagios | /ˈnɑːɡiːoʊs/ | nah ghee ose | tool | creator-clarified | https://web.archive.org/web/20060103075457/http://www.nagios.org/faqs/viewfaq.php?faq_id=3&expand=false&showdesc=true

@@ -1,0 +1,15 @@
+{
+  "word": "axios",
+  "ipa": "/ˈæksioʊs/",
+  "respelling_us": "ak see ose",
+  "alt_ipa": ["/ˈæksiɑːs/"],
+  "alt_respelling_us": ["ak see oss"],
+  "source_url": "https://github.com/axios/axios/issues/802",
+  "source_label": "axios GitHub issue #802 (top-voted reading)",
+  "category": "product",
+  "confidence": "contested",
+  "notes": "Promise-based HTTP client among npm's most-downloaded packages; from Greek axios (\"worthy\") with no official ruling — top-voted community reading is \"AK-see-ohs\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/axios.mp3",
+  "url": "https://pronounce.renlab.ai/word/axios",
+  "date_modified": "2026-07-17"
+}

@@ -1,0 +1,15 @@
+{
+  "word": "xonsh",
+  "ipa": "/kɑːnʃ/",
+  "respelling_us": "kahnsh",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://xon.sh/",
+  "source_label": "xonsh official site",
+  "category": "cli-tool",
+  "confidence": "creator-clarified",
+  "notes": "Python-powered cross-platform shell; the official homepage states it \"sounds like 'consh'\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/xonsh.mp3",
+  "url": "https://pronounce.renlab.ai/word/xonsh",
+  "date_modified": "2026-07-17"
+}

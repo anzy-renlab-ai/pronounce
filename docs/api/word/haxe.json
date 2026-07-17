@@ -1,0 +1,15 @@
+{
+  "word": "Haxe",
+  "ipa": "/hɛks/",
+  "respelling_us": "hex",
+  "alt_ipa": ["/hæks/"],
+  "alt_respelling_us": ["hacks"],
+  "source_url": "https://groups.google.com/g/haxelang/c/GSOT3BGU180",
+  "source_label": "haxelang mailing list — \"hacks\", \"hex\" or \"hacksy\"?",
+  "category": "product",
+  "confidence": "contested",
+  "notes": "Cross-platform language compiling to JS, C++, JVM and more; early official docs said \"hex\" while English speakers naturally say \"hacks\" — no creator ruling, both survive at conferences.",
+  "audio_url": "https://pronounce.renlab.ai/audio/haxe.mp3",
+  "url": "https://pronounce.renlab.ai/word/haxe",
+  "date_modified": "2026-07-17"
+}

@@ -1,0 +1,15 @@
+{
+  "word": "Mockito",
+  "ipa": "/mɑːˈkiːtoʊ/",
+  "respelling_us": "mah kee toh",
+  "alt_ipa": ["/moʊˈkiːtoʊ/"],
+  "alt_respelling_us": ["moh kee toh"],
+  "source_url": "https://github.com/mockito/mockito/issues/889",
+  "source_label": "mockito/mockito issue #889 — maintainer IPA answer",
+  "category": "tool",
+  "confidence": "contested",
+  "notes": "Java mocking framework whose name is a maintainer-confirmed pun on mock + mojito; a maintainer answered issue #889 with mock-based /mɑˈkiːtoʊ/ (\"mah-KEE-toh\"), while creator Szczepan Faber told the mailing list to \"go ahead and pronounce it the mojito way\" (\"moh-KEE-toh\"), so the split is genuine.",
+  "audio_url": "https://pronounce.renlab.ai/audio/mockito.mp3",
+  "url": "https://pronounce.renlab.ai/word/mockito",
+  "date_modified": "2026-07-17"
+}

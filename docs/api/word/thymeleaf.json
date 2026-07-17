@@ -1,0 +1,15 @@
+{
+  "word": "Thymeleaf",
+  "ipa": "/ˈtaɪmˌliːf/",
+  "respelling_us": "time leaf",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.thymeleaf.org/faq.html",
+  "source_label": "Thymeleaf official FAQ",
+  "category": "product",
+  "confidence": "creator-clarified",
+  "notes": "Java/Spring server-side template engine; the official FAQ spells it out as /ˈtaɪmˌlɪːf/ — th sounds like plain t, as in the herb thyme (TIME-leaf).",
+  "audio_url": "https://pronounce.renlab.ai/audio/thymeleaf.mp3",
+  "url": "https://pronounce.renlab.ai/word/thymeleaf",
+  "date_modified": "2026-07-17"
+}

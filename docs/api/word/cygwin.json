@@ -1,0 +1,15 @@
+{
+  "word": "Cygwin",
+  "ipa": "/ˈsɪɡwɪn/",
+  "respelling_us": "sig win",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://en.wikipedia.org/wiki/Cygwin",
+  "source_label": "Wikipedia — Cygwin",
+  "category": "tool",
+  "confidence": "community-consensus",
+  "notes": "POSIX compatibility layer for Windows (Cygnus + Windows); Wikipedia gives /ˈsɪɡwɪn/ SIG-win, confirmed by a Cygwin developer on the project mailing list.",
+  "audio_url": "https://pronounce.renlab.ai/audio/cygwin.mp3",
+  "url": "https://pronounce.renlab.ai/word/cygwin",
+  "date_modified": "2026-07-17"
+}

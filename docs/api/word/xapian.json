@@ -1,0 +1,15 @@
+{
+  "word": "Xapian",
+  "ipa": "/ˈzæpiən/",
+  "respelling_us": "zap ee un",
+  "alt_ipa": ["/ˈzeɪpiən/"],
+  "alt_respelling_us": ["zay pee un"],
+  "source_url": "https://trac.xapian.org/wiki/FAQ/CorrectPronunciation",
+  "source_label": "Xapian FAQ — CorrectPronunciation",
+  "category": "project",
+  "confidence": "creator-clarified",
+  "notes": "FAQ: usually \"ZAP-ian\" like the word zap; \"ZAY-pian\" is a popular variant (name mangles \"sapient\").",
+  "audio_url": "https://pronounce.renlab.ai/audio/xapian.mp3",
+  "url": "https://pronounce.renlab.ai/word/xapian",
+  "date_modified": "2026-07-17"
+}

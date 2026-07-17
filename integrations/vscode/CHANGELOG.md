@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.2.0 — 2026-07-17
+### Added
+- **Dictionary +32 → 1,880 entries** — 2026 AI/chip names (NVIDIA Rubin, OpenAI Jalapeño, Microsoft Maia/Majorana/MAI, d-Matrix Corsair), infra names (Immich, Debezium, NiFi, Keptn, Tyk, Kueue, Linode, OpenBao, Vitess, lighttpd), and creator-clarified classics (Guice "juice", Thymeleaf "time leaf", musl "mussel", Nagios "nah-ghee-ose", Mockito, axios, Haxe). Every entry source-verified.
+### Fixed
+- **`2FA` is now hoverable.** The hover token regex required a leading letter, so entries starting with a digit were unreachable. It now accepts a leading digit but still requires a letter somewhere, so bare numbers (`2024`, a port) are not tokens.
+
+## 1.1.0 — 2026-07-12
+### Added
+- Bundled dictionary updated to 1,848 entries (+58: 2026 AI models/labs, CNCF & infra projects, researcher surnames), with the v2.21.0 correctness sweep (29 corrected audio respellings, soft-`g` fixes).
+
 ## 1.0.2 — 2026-07-05
 ### Added
 - Star-only prompt on the third pronunciation (zh-aware) — a lighter nudge to ⭐ the repo.

@@ -1,0 +1,15 @@
+{
+  "word": "Guice",
+  "ipa": "/dʒuːs/",
+  "respelling_us": "juice",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/google/guice",
+  "source_label": "Google Guice README",
+  "category": "product",
+  "confidence": "creator-clarified",
+  "notes": "Google's Java dependency-injection framework; the README opens with \"Guice (pronounced 'juice')\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/guice.mp3",
+  "url": "https://pronounce.renlab.ai/word/guice",
+  "date_modified": "2026-07-17"
+}
