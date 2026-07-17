@@ -4,181 +4,181 @@
   <link href="https://pronounce.renlab.ai/feed.atom" rel="self"/>
   <link href="https://pronounce.renlab.ai/"/>
   <id>https://pronounce.renlab.ai/</id>
-  <updated>2026-07-17T05:45:53Z</updated>
+  <updated>2026-07-17T05:58:20Z</updated>
   <subtitle>How engineers actually pronounce project / product / jargon names. Community-maintained.</subtitle>
   <entry>
     <title>MAI — M A I</title>
     <link href="https://pronounce.renlab.ai/word/mai"/>
     <id>https://pronounce.renlab.ai/word/mai</id>
-    <updated>2026-07-17T05:45:53Z</updated>
+    <updated>2026-07-17T05:58:20Z</updated>
     <summary>MAI is pronounced "M A I" (/ˌɛm eɪ ˈaɪ/). Microsoft AI's in-house model family (MAI-Thinking-1, MAI-Voice-2, ...); read letter-by-letter like the "AI" it contains — Microsoft has published no official pronunciation.</summary>
   </entry>
   <entry>
     <title>Corsair — kor sair</title>
     <link href="https://pronounce.renlab.ai/word/corsair"/>
     <id>https://pronounce.renlab.ai/word/corsair</id>
-    <updated>2026-07-17T05:45:53Z</updated>
+    <updated>2026-07-17T05:58:20Z</updated>
     <summary>Corsair is pronounced "kor sair" (/ˈkɔːrsɛər/). d-Matrix's in-memory-compute inference accelerator (also the PC-hardware brand); American dictionaries stress the first syllable — KOR-sair, not the French-style cor-SAIR.</summary>
   </entry>
   <entry>
     <title>lighttpd — lie tee</title>
     <link href="https://pronounce.renlab.ai/word/lighttpd"/>
     <id>https://pronounce.renlab.ai/word/lighttpd</id>
-    <updated>2026-07-17T05:45:53Z</updated>
+    <updated>2026-07-17T05:58:20Z</updated>
     <summary>lighttpd is pronounced "lie tee" (/ˈlaɪti/). Portmanteau of light + httpd; the official site states it is pronounced "lighty".</summary>
   </entry>
   <entry>
     <title>Immich — image</title>
     <link href="https://pronounce.renlab.ai/word/immich"/>
     <id>https://pronounce.renlab.ai/word/immich</id>
-    <updated>2026-07-17T05:45:53Z</updated>
+    <updated>2026-07-17T05:58:20Z</updated>
     <summary>Immich is pronounced "image" (/ˈɪmɪdʒ/). Self-hosted photo/video backup server; creator Alex Tran: "It is pronounced as 'image'", though much of the community says IMM-itch.</summary>
   </entry>
   <entry>
     <title>Debezium — dee bee zee um</title>
     <link href="https://pronounce.renlab.ai/word/debezium"/>
     <id>https://pronounce.renlab.ai/word/debezium</id>
-    <updated>2026-07-17T05:45:53Z</updated>
+    <updated>2026-07-17T05:58:20Z</updated>
     <summary>Debezium is pronounced "dee bee zee um" (/diˈbiːziəm/). Official FAQ: "dee-BEE-zee-uhm" — say "DBs-ium" fast; from DBs + the periodic-table -ium suffix.</summary>
   </entry>
   <entry>
     <title>NiFi — nigh fie</title>
     <link href="https://pronounce.renlab.ai/word/nifi"/>
     <id>https://pronounce.renlab.ai/word/nifi</id>
-    <updated>2026-07-17T05:45:53Z</updated>
+    <updated>2026-07-17T05:58:20Z</updated>
     <summary>NiFi is pronounced "nigh fie" (/ˈnaɪˌfaɪ/). Apache dataflow tool from NSA's "NiagaraFiles"; the official FAQ states "nye fye" is the preferred pronunciation.</summary>
   </entry>
   <entry>
     <title>Keptn — captain</title>
     <link href="https://pronounce.renlab.ai/word/keptn"/>
     <id>https://pronounce.renlab.ai/word/keptn</id>
-    <updated>2026-07-17T05:45:53Z</updated>
+    <updated>2026-07-17T05:58:20Z</updated>
     <summary>Keptn is pronounced "captain" (/ˈkæptən/). CNCF application life-cycle orchestration project (archived Sept 2025); official glossary states "Keptn, pronounced captain."</summary>
   </entry>
   <entry>
     <title>Tyk — tyke</title>
     <link href="https://pronounce.renlab.ai/word/tyk"/>
     <id>https://pronounce.renlab.ai/word/tyk</id>
-    <updated>2026-07-17T05:45:53Z</updated>
+    <updated>2026-07-17T05:58:20Z</updated>
     <summary>Tyk is pronounced "tyke" (/taɪk/). Open-source Go API gateway; creator Martin Buhr confirmed on GitHub it rhymes with "Mike" — /taɪk/.</summary>
   </entry>
   <entry>
     <title>Xapian — zap ee un</title>
     <link href="https://pronounce.renlab.ai/word/xapian"/>
     <id>https://pronounce.renlab.ai/word/xapian</id>
-    <updated>2026-07-17T05:45:53Z</updated>
+    <updated>2026-07-17T05:58:20Z</updated>
     <summary>Xapian is pronounced "zap ee un" (/ˈzæpiən/). FAQ: usually "ZAP-ian" like the word zap; "ZAY-pian" is a popular variant (name mangles "sapient").</summary>
   </entry>
   <entry>
     <title>Kueue — kyoo</title>
     <link href="https://pronounce.renlab.ai/word/kueue"/>
     <id>https://pronounce.renlab.ai/word/kueue</id>
-    <updated>2026-07-17T05:45:53Z</updated>
+    <updated>2026-07-17T05:58:20Z</updated>
     <summary>Kueue is pronounced "kyoo" (/kjuː/). Kubernetes-native job-queueing controller (kubernetes-sigs); the K-wordplay name is read exactly like "queue" — one syllable, kyoo.</summary>
   </entry>
   <entry>
     <title>Linode — lin ode</title>
     <link href="https://pronounce.renlab.ai/word/linode"/>
     <id>https://pronounce.renlab.ai/word/linode</id>
-    <updated>2026-07-17T05:45:53Z</updated>
+    <updated>2026-07-17T05:58:20Z</updated>
     <summary>Linode is pronounced "lin ode" (/ˈlɪnoʊd/). Cloud host (acquired by Akamai in 2022; now Akamai Connected Cloud), from "Linux node"; the official @linode account clarified "We pronounce it Lih-node - 'lin' as in Linux!", though LIE-node remains a common mispronunciation.</summary>
   </entry>
   <entry>
     <title>OpenBao — open bao</title>
     <link href="https://pronounce.renlab.ai/word/openbao"/>
     <id>https://pronounce.renlab.ai/word/openbao</id>
-    <updated>2026-07-17T05:45:53Z</updated>
+    <updated>2026-07-17T05:58:20Z</updated>
     <summary>OpenBao is pronounced "open bao" (/ˌoʊpən ˈbaʊ/). Linux Foundation fork of HashiCorp Vault named after baozi, the steamed bun (per GitHub discussion #34) — "bao" rhymes with "cow", not "bay-oh".</summary>
   </entry>
   <entry>
     <title>Sqitch — skitch</title>
     <link href="https://pronounce.renlab.ai/word/sqitch"/>
     <id>https://pronounce.renlab.ai/word/sqitch</id>
-    <updated>2026-07-17T05:45:53Z</updated>
+    <updated>2026-07-17T05:58:20Z</updated>
     <summary>Sqitch is pronounced "skitch" (/skɪtʃ/). Wheeler's database change-management tool ("SQL changes with Git stuck in the middle"); pronounced "skitch", not "skwitch".</summary>
   </entry>
   <entry>
     <title>Guice — juice</title>
     <link href="https://pronounce.renlab.ai/word/guice"/>
     <id>https://pronounce.renlab.ai/word/guice</id>
-    <updated>2026-07-17T05:45:53Z</updated>
+    <updated>2026-07-17T05:58:20Z</updated>
     <summary>Guice is pronounced "juice" (/dʒuːs/). Google's Java dependency-injection framework; the README opens with "Guice (pronounced 'juice')".</summary>
   </entry>
   <entry>
     <title>Thymeleaf — time leaf</title>
     <link href="https://pronounce.renlab.ai/word/thymeleaf"/>
     <id>https://pronounce.renlab.ai/word/thymeleaf</id>
-    <updated>2026-07-17T05:45:53Z</updated>
+    <updated>2026-07-17T05:58:20Z</updated>
     <summary>Thymeleaf is pronounced "time leaf" (/ˈtaɪmˌliːf/). Java/Spring server-side template engine; the official FAQ spells it out as /ˈtaɪmˌlɪːf/ — th sounds like plain t, as in the herb thyme (TIME-leaf).</summary>
   </entry>
   <entry>
     <title>Vitess — vih tess</title>
     <link href="https://pronounce.renlab.ai/word/vitess"/>
     <id>https://pronounce.renlab.ai/word/vitess</id>
-    <updated>2026-07-17T05:45:53Z</updated>
+    <updated>2026-07-17T05:58:20Z</updated>
     <summary>Vitess is pronounced "vih tess" (/vɪˈtɛs/). CNCF-graduated MySQL sharding system from YouTube; named after French "vitesse" (speed), so stress falls on the second syllable.</summary>
   </entry>
   <entry>
     <title>musl — muscle</title>
     <link href="https://pronounce.renlab.ai/word/musl"/>
     <id>https://pronounce.renlab.ai/word/musl</id>
-    <updated>2026-07-17T05:45:53Z</updated>
+    <updated>2026-07-17T05:58:20Z</updated>
     <summary>musl is pronounced "muscle" (/ˈmʌsəl/). Lightweight libc behind Alpine Linux images; official site says "musl, pronounced like the word 'mussel' or 'muscle'".</summary>
   </entry>
   <entry>
     <title>axios — ak see ose</title>
     <link href="https://pronounce.renlab.ai/word/axios"/>
     <id>https://pronounce.renlab.ai/word/axios</id>
-    <updated>2026-07-17T05:45:53Z</updated>
+    <updated>2026-07-17T05:58:20Z</updated>
     <summary>axios is pronounced "ak see ose" (/ˈæksioʊs/). Promise-based HTTP client among npm's most-downloaded packages; from Greek axios ("worthy") with no official ruling — top-voted community reading is "AK-see-ohs".</summary>
   </entry>
   <entry>
     <title>Mockito — mah kee toh</title>
     <link href="https://pronounce.renlab.ai/word/mockito"/>
     <id>https://pronounce.renlab.ai/word/mockito</id>
-    <updated>2026-07-17T05:45:53Z</updated>
+    <updated>2026-07-17T05:58:20Z</updated>
     <summary>Mockito is pronounced "mah kee toh" (/mɑːˈkiːtoʊ/). Java mocking framework whose name is a maintainer-confirmed pun on mock + mojito; a maintainer answered issue #889 with mock-based /mɑˈkiːtoʊ/ ("mah-KEE-toh"), while creator Szczepan Faber told the mailing list to "go ahead and pronounce it the mojito way" ("moh-KEE-toh"), so the split is genuine.</summary>
   </entry>
   <entry>
     <title>xonsh — kahnsh</title>
     <link href="https://pronounce.renlab.ai/word/xonsh"/>
     <id>https://pronounce.renlab.ai/word/xonsh</id>
-    <updated>2026-07-17T05:45:53Z</updated>
+    <updated>2026-07-17T05:58:20Z</updated>
     <summary>xonsh is pronounced "kahnsh" (/kɑːnʃ/). Python-powered cross-platform shell; the official homepage states it "sounds like 'consh'".</summary>
   </entry>
   <entry>
     <title>Pyodide — pie uh dyed</title>
     <link href="https://pronounce.renlab.ai/word/pyodide"/>
     <id>https://pronounce.renlab.ai/word/pyodide</id>
-    <updated>2026-07-17T05:45:53Z</updated>
+    <updated>2026-07-17T05:58:20Z</updated>
     <summary>Pyodide is pronounced "pie uh dyed" (/ˈpaɪəˌdaɪd/). CPython compiled to WebAssembly for running Python in the browser; maintainers rth and hoodmane gave the IPA ˈpɑɪ.ə.ˌdɑɪd (Py + Iodide — rhymes with iodide).</summary>
   </entry>
   <entry>
     <title>Haxe — hex</title>
     <link href="https://pronounce.renlab.ai/word/haxe"/>
     <id>https://pronounce.renlab.ai/word/haxe</id>
-    <updated>2026-07-17T05:45:53Z</updated>
+    <updated>2026-07-17T05:58:20Z</updated>
     <summary>Haxe is pronounced "hex" (/hɛks/). Cross-platform language compiling to JS, C++, JVM and more; early official docs said "hex" while English speakers naturally say "hacks" — no creator ruling, both survive at conferences.</summary>
   </entry>
   <entry>
     <title>FLTK — full tick</title>
     <link href="https://pronounce.renlab.ai/word/fltk"/>
     <id>https://pronounce.renlab.ai/word/fltk</id>
-    <updated>2026-07-17T05:45:53Z</updated>
+    <updated>2026-07-17T05:58:20Z</updated>
     <summary>FLTK is pronounced "full tick" (/ˈfʊltɪk/). Veteran cross-platform C++ GUI toolkit; the official docs open with 'The Fast Light Tool Kit ("FLTK", pronounced "fulltick")'.</summary>
   </entry>
   <entry>
     <title>Cygwin — sig win</title>
     <link href="https://pronounce.renlab.ai/word/cygwin"/>
     <id>https://pronounce.renlab.ai/word/cygwin</id>
-    <updated>2026-07-17T05:45:53Z</updated>
+    <updated>2026-07-17T05:58:20Z</updated>
     <summary>Cygwin is pronounced "sig win" (/ˈsɪɡwɪn/). POSIX compatibility layer for Windows (Cygnus + Windows); Wikipedia gives /ˈsɪɡwɪn/ SIG-win, confirmed by a Cygwin developer on the project mailing list.</summary>
   </entry>
   <entry>
     <title>Nagios — nah ghee ose</title>
     <link href="https://pronounce.renlab.ai/word/nagios"/>
     <id>https://pronounce.renlab.ai/word/nagios</id>
-    <updated>2026-07-17T05:45:53Z</updated>
+    <updated>2026-07-17T05:58:20Z</updated>
     <summary>Nagios is pronounced "nah ghee ose" (/ˈnɑːɡiːoʊs/). Veteran open-source infrastructure monitoring system (NetSaint 1999, renamed 2002); creator Ethan Galstad's official FAQ spells it out as "nah-ghee-ose" — "Nah" plus the start of "geese" plus the end of "verbose" — so the g is hard, never "NAY-jee-os", and Wikipedia records the same /ˈnɑːɡiːoʊs/.</summary>
   </entry>
 </feed>
