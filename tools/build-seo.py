@@ -807,7 +807,8 @@ def emit_zh_word(e: dict, out_dir: Path) -> None:
         style_prefix="../..",
         og_image=f"{SITE_URL}/og/{slug}.png",
         hreflang_pairs=[
-            ("zh-CN", canonical),
+            # Keep this set IDENTICAL to the EN page's (en/zh-Hans/x-default) —
+            # Google wants every version to list the same full alternate set.
             ("zh-Hans", canonical),
             ("en", en_url),
             ("x-default", en_url),
@@ -900,7 +901,13 @@ def emit_zh_word_index(entries: list, out_dir: Path) -> None:
         lang="zh-CN",
         style_prefix="../..",
         og_image=f"{SITE_URL}/og.png",
-        hreflang_pairs=[("en", f"{SITE_URL}/browse"), ("zh-CN", canonical)],
+        # Must mirror /browse's set exactly (en/zh-Hans/x-default) or GSC
+        # reports "hreflang no return tag" against the pair.
+        hreflang_pairs=[
+            ("en", f"{SITE_URL}/browse"),
+            ("zh-Hans", canonical),
+            ("x-default", f"{SITE_URL}/browse"),
+        ],
     )
     html += "\n</head>\n<body>\n"
     html += f'  <div class="gh-banner">⭐ <a href="https://github.com/{GH_REPO}">在 GitHub 给个 Star</a></div>\n'

@@ -957,7 +957,6 @@ cat > "$DOCS/v1.html" <<EOF
   <link rel="canonical" href="${SITE_URL}/">
   <link rel="alternate" hreflang="en" href="${SITE_URL}/">
   <link rel="alternate" hreflang="zh-Hans" href="${SITE_URL}/zh">
-  <link rel="alternate" hreflang="zh-CN" href="${SITE_URL}/zh">
   <link rel="alternate" hreflang="x-default" href="${SITE_URL}/">
   <meta property="og:title" content="How to pronounce kubectl, nginx, GIF, JSON — ${BRAND}">
   <meta property="og:description" content="A community-maintained pronunciation dictionary for developer jargon. With sources. Open source, MIT.">
@@ -1161,7 +1160,6 @@ cat > "$DOCS/zh.html" <<EOF
   <meta name="keywords" content="kubectl 怎么读, nginx 发音, GIF 发音, JSON 发音, 程序员发音, 项目名读音, 英文发音词典">
   <link rel="canonical" href="${SITE_URL}/zh">
   <link rel="alternate" hreflang="zh-Hans" href="${SITE_URL}/zh">
-  <link rel="alternate" hreflang="zh-CN" href="${SITE_URL}/zh">
   <link rel="alternate" hreflang="en" href="${SITE_URL}/">
   <link rel="alternate" hreflang="x-default" href="${SITE_URL}/">
   <meta property="og:title" content="kubectl / nginx / GIF / JSON 怎么读 — ${BRAND}">
@@ -1376,6 +1374,7 @@ cat > "$DOCS/browse.html" <<EOF
   <meta name="description" content="Browse the full ${BRAND} dictionary: ${ENTRY_COUNT}+ project, product, and programmer-jargon pronunciations. Search, filter by category, hear each reading.">
   <link rel="canonical" href="${SITE_URL}/browse">
   <link rel="alternate" hreflang="en" href="${SITE_URL}/browse">
+  <link rel="alternate" hreflang="zh-Hans" href="${SITE_URL}/zh/word">
   <link rel="alternate" hreflang="x-default" href="${SITE_URL}/browse">
   <meta property="og:title" content="Pronunciation dictionary · ${BRAND}">
   <meta property="og:description" content="Browse the full ${BRAND} dictionary: ${ENTRY_COUNT}+ project, product, and programmer-jargon pronunciations. Search, filter by category, hear each reading.">
