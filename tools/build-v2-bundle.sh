@@ -12,6 +12,9 @@ cat docs/v2/audio.jsx \
     docs/v2/eggs.jsx \
     docs/v2/app.jsx > "$TMP"
 
-npx --yes esbuild "$TMP" --target=es2018 --minify --outfile=docs/v2/bundle.js
+SOURCE_HASH="$(shasum -a 256 "$TMP" | awk '{print $1}')"
+npx --yes esbuild "$TMP" --target=es2018 --minify \
+    "--banner:js=/* v2-source-sha256: $SOURCE_HASH */" \
+    --outfile=docs/v2/bundle.js
 rm -f "$TMP"
 echo "wrote docs/v2/bundle.js"

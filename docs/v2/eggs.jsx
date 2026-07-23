@@ -32,7 +32,7 @@ function CommandPalette({ open, onClose, registerEgg }) {
     else if (e.key === 'ArrowUp') { e.preventDefault(); setCursor(c => Math.max(0, c - 1)); }
     else if (e.key === 'Enter') {
       const r = results[cursor];
-      if (r) SpeechCtx.chain(r);
+      if (r) SpeechCtx.playEntry(r);
     }
   };
 
@@ -67,7 +67,7 @@ function CommandPalette({ open, onClose, registerEgg }) {
               key={r.w}
               className={`row ${i === cursor ? 'active' : ''}`}
               onMouseEnter={() => setCursor(i)}
-              onClick={() => SpeechCtx.chain(r)}
+              onClick={() => SpeechCtx.playEntry(r)}
             >
               <div className="pw">{r.w}</div>
               <div className="presp">"{r.resp}"{r.alt ? <span style={{ color: 'var(--ink-3)' }}> · or "{r.alt}"</span> : null}</div>
@@ -138,15 +138,36 @@ function Karaoke({ on, onClose }) {
     if (!on) return;
     setPhraseIdx(0);
     let i = 0;
+    let disposed = false;
+    let nextTimer = null;
+    let activeRequestId = null;
     const speakNext = () => {
-      if (i >= PHRASES.length) return;
+      if (disposed || i >= PHRASES.length) return;
       const p = PHRASES[i];
       setPhraseIdx(i);
-      SpeechCtx.speak(p.say, {
-        onend: () => { i++; setTimeout(speakNext, 350); }
+      const requestId = SpeechCtx.speak(p.say, {
+        onDone: ({ requestId: completedRequestId, status }) => {
+          if (
+            disposed ||
+            completedRequestId !== activeRequestId ||
+            status !== 'ended'
+          ) return;
+          activeRequestId = null;
+          i++;
+          nextTimer = setTimeout(speakNext, 350);
+        },
       });
+      activeRequestId = requestId;
     };
     speakNext();
+    return () => {
+      disposed = true;
+      if (nextTimer !== null) clearTimeout(nextTimer);
+      if (activeRequestId !== null) {
+        SpeechCtx.cancel(activeRequestId);
+        activeRequestId = null;
+      }
+    };
   }, [on]);
 
   if (!on) return null;

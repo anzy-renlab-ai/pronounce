@@ -28,22 +28,38 @@ function Hero({ onWordClick, registerEgg }) {
   const [active, setActive] = React.useState(false);
   const [current, setCurrent] = React.useState(DICT[0]);
   const idx = React.useRef(0);
+  const requestRef = React.useRef(null);
 
   const play = () => {
     setActive(true);
-    SpeechCtx.chain(current);
+    const requestId = SpeechCtx.playEntry(current, {
+      onDone: ({ requestId }) => {
+        if (requestRef.current !== requestId) return;
+        requestRef.current = null;
+        setActive(false);
+      },
+    });
+    requestRef.current = requestId;
     registerEgg('hero');
-    setTimeout(() => setActive(false), 2200);
   };
+
+  React.useEffect(() => () => {
+    if (requestRef.current !== null) {
+      SpeechCtx.cancel(requestRef.current);
+      requestRef.current = null;
+    }
+  }, []);
 
   // Auto-cycle words every 8s
   React.useEffect(() => {
+    if (active) return;
     const t = setInterval(() => {
+      if (requestRef.current !== null) return;
       idx.current = (idx.current + 1) % 6;
       setCurrent(DICT[idx.current]);
     }, 8000);
     return () => clearInterval(t);
-  }, []);
+  }, [active]);
 
   return (
     <section className="hero shell">
@@ -119,6 +135,7 @@ window.Hero = Hero;
 function WordGrid({ registerEgg }) {
   const [playingIdx, setPlayingIdx] = React.useState(-1);
   const [filter, setFilter] = React.useState('all');
+  const requestRef = React.useRef(null);
   const filtered = DICT.filter(d => {
     if (filter === 'all') return true;
     if (filter === 'contested') return d.conf === 'contested';
@@ -128,10 +145,23 @@ function WordGrid({ registerEgg }) {
 
   const play = (i, entry) => {
     setPlayingIdx(i);
-    SpeechCtx.chain(entry);
+    const requestId = SpeechCtx.playEntry(entry, {
+      onDone: ({ requestId }) => {
+        if (requestRef.current !== requestId) return;
+        requestRef.current = null;
+        setPlayingIdx(-1);
+      },
+    });
+    requestRef.current = requestId;
     if (entry.w === 'GIF') registerEgg('jiffy');
-    setTimeout(() => setPlayingIdx(-1), 2400);
   };
+
+  React.useEffect(() => () => {
+    if (requestRef.current !== null) {
+      SpeechCtx.cancel(requestRef.current);
+      requestRef.current = null;
+    }
+  }, []);
 
   return (
     <section className="section shell" id="dictionary">
@@ -195,7 +225,8 @@ window.WordGrid = WordGrid;
 function Famous({ registerEgg }) {
   const speak = (m) => {
     registerEgg('famous');
-    SpeechCtx.speak(`${m.w}. ${m.said}.`);
+    const entry = DICT_ALL.find(d => d.w === m.w);
+    if (entry) SpeechCtx.playEntry(entry);
   };
   return (
     <section className="section shell" id="famous">

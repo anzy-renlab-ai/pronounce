@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import test from 'node:test';
 import vm from 'node:vm';
@@ -7,12 +8,40 @@ const AUDIO_SOURCE = readFileSync(
   new URL('../docs/v2/audio.jsx', import.meta.url),
   'utf8',
 );
+const SECTIONS_1_SOURCE = readFileSync(
+  new URL('../docs/v2/sections-1.jsx', import.meta.url),
+  'utf8',
+);
+const SECTIONS_2_SOURCE = readFileSync(
+  new URL('../docs/v2/sections-2.jsx', import.meta.url),
+  'utf8',
+);
+const EGGS_SOURCE = readFileSync(
+  new URL('../docs/v2/eggs.jsx', import.meta.url),
+  'utf8',
+);
+const APP_SOURCE = readFileSync(
+  new URL('../docs/v2/app.jsx', import.meta.url),
+  'utf8',
+);
+const BUNDLE_SOURCE = readFileSync(
+  new URL('../docs/v2/bundle.js', import.meta.url),
+  'utf8',
+);
 const WAVEFORM_MARKER = '// ========== Waveform (canvas) ==========';
 const markerIndex = AUDIO_SOURCE.indexOf(WAVEFORM_MARKER);
 
 assert.notEqual(markerIndex, -1, 'audio.jsx must keep the Waveform marker');
 
 const SPEECH_SOURCE = AUDIO_SOURCE.slice(0, markerIndex);
+
+function sourceBlock(source, start, end) {
+  const startIndex = source.indexOf(start);
+  const endIndex = source.indexOf(end, startIndex);
+  assert.notEqual(startIndex, -1, `source must contain ${start}`);
+  assert.notEqual(endIndex, -1, `source must contain ${end}`);
+  return source.slice(startIndex, endIndex);
+}
 
 function deferred() {
   let resolve;
@@ -26,6 +55,7 @@ function deferred() {
 
 function loadEngine({
   hasSpeech = true,
+  hasQueueMicrotask = true,
   play = () => new Promise(() => {}),
 } = {}) {
   const audioInstances = [];
@@ -55,10 +85,8 @@ function loadEngine({
     }
   }
 
-  const sandbox = {
-    Audio: MockAudio,
-    queueMicrotask,
-  };
+  const sandbox = { Audio: MockAudio };
+  if (hasQueueMicrotask) sandbox.queueMicrotask = queueMicrotask;
 
   let speechSynthesis;
   if (hasSpeech) {
@@ -128,6 +156,21 @@ test('SpeechCtx playback contract', async t => {
 
     env.audioInstances[0].onended();
     env.audioInstances[0].onerror();
+    await flushTasks();
+    assert.deepEqual(eventPairs(events), [[requestId, 'ended']]);
+  });
+
+  await t.test('missing queueMicrotask still settles asynchronously exactly once', async () => {
+    const events = [];
+    const env = loadEngine({ hasQueueMicrotask: false });
+    const requestId = env.SpeechCtx.playEntry(
+      { slug: 'promise-defer', w: 'promise defer' },
+      { onDone: event => events.push(event) },
+    );
+
+    env.audioInstances[0].onended();
+    env.audioInstances[0].onended();
+    assert.deepEqual(eventPairs(events), [], 'completion must remain asynchronous');
     await flushTasks();
     assert.deepEqual(eventPairs(events), [[requestId, 'ended']]);
   });
@@ -351,5 +394,129 @@ test('SpeechCtx playback contract', async t => {
     await flushTasks();
 
     assert.deepEqual(ended, ['successful']);
+  });
+});
+
+test('deployed v2 bundle matches its JSX sources', () => {
+  const sourceHash = createHash('sha256')
+    .update(AUDIO_SOURCE)
+    .update(SECTIONS_1_SOURCE)
+    .update(SECTIONS_2_SOURCE)
+    .update(EGGS_SOURCE)
+    .update(APP_SOURCE)
+    .digest('hex');
+
+  assert.ok(
+    BUNDLE_SOURCE.startsWith(`/* v2-source-sha256: ${sourceHash} */\n`),
+    'docs/v2/bundle.js is stale; run bash tools/build-v2-bundle.sh',
+  );
+});
+
+test('dictionary playback consumer source contract', async t => {
+  const hero = sourceBlock(SECTIONS_1_SOURCE, 'function Hero(', 'window.Hero = Hero;');
+  const wordGrid = sourceBlock(
+    SECTIONS_1_SOURCE,
+    'function WordGrid(',
+    'window.WordGrid = WordGrid;',
+  );
+  const famous = sourceBlock(
+    SECTIONS_1_SOURCE,
+    'function Famous(',
+    'window.Famous = Famous;',
+  );
+  const palette = sourceBlock(
+    EGGS_SOURCE,
+    'function CommandPalette(',
+    'window.CommandPalette = CommandPalette;',
+  );
+  const karaoke = sourceBlock(
+    EGGS_SOURCE,
+    'function Karaoke(',
+    'window.Karaoke = Karaoke;',
+  );
+  const quiz = sourceBlock(SECTIONS_2_SOURCE, 'function Quiz(', 'window.Quiz = Quiz;');
+  const typeToSpeak = sourceBlock(
+    APP_SOURCE,
+    '// Type-to-speak:',
+    '// Logo triple-click',
+  );
+  const logo = sourceBlock(APP_SOURCE, '// Logo triple-click', '// global ripple');
+
+  for (const [name, source] of [
+    ['sections-1.jsx', SECTIONS_1_SOURCE],
+    ['sections-2.jsx', SECTIONS_2_SOURCE],
+    ['eggs.jsx', EGGS_SOURCE],
+    ['app.jsx', APP_SOURCE],
+  ]) {
+    await t.test(`${name} has no legacy dictionary chain calls`, () => {
+      assert.doesNotMatch(source, /SpeechCtx\.chain\(/);
+    });
+  }
+
+  await t.test('Hero owns canonical entry playback until matching completion', () => {
+    assert.match(hero, /const requestRef = React\.useRef\(null\);/);
+    assert.match(
+      hero,
+      /const requestId = SpeechCtx\.playEntry\(\s*current,\s*\{\s*onDone:/s,
+    );
+    assert.match(hero, /if \(requestRef\.current !== requestId\) return;/);
+    assert.match(hero, /requestRef\.current = requestId;/);
+    assert.match(hero, /SpeechCtx\.cancel\(requestRef\.current\);/);
+    assert.doesNotMatch(hero, /setTimeout\(/);
+  });
+
+  await t.test('Hero rotation pauses and restarts around active playback', () => {
+    assert.match(hero, /if \(active\) return;/);
+    assert.match(hero, /\}, \[active\]\);/);
+  });
+
+  await t.test('WordGrid owns canonical entry playback until matching completion', () => {
+    assert.match(wordGrid, /const requestRef = React\.useRef\(null\);/);
+    assert.match(
+      wordGrid,
+      /const requestId = SpeechCtx\.playEntry\(\s*entry,\s*\{\s*onDone:/s,
+    );
+    assert.match(wordGrid, /if \(requestRef\.current !== requestId\) return;/);
+    assert.match(wordGrid, /requestRef\.current = requestId;/);
+    assert.match(wordGrid, /SpeechCtx\.cancel\(requestRef\.current\);/);
+    assert.doesNotMatch(wordGrid, /setTimeout\(/);
+  });
+
+  await t.test('Famous resolves and plays the full dictionary entry', () => {
+    assert.match(famous, /DICT_ALL\.find\(d => d\.w === m\.w\)/);
+    assert.match(famous, /SpeechCtx\.playEntry\(entry\)/);
+  });
+
+  await t.test('Command Palette Enter plays the selected entry', () => {
+    assert.match(
+      palette,
+      /else if \(e\.key === 'Enter'\)[\s\S]*?if \(r\) SpeechCtx\.playEntry\(r\);/,
+    );
+  });
+
+  await t.test('Command Palette click plays the selected entry', () => {
+    assert.match(palette, /onClick=\{\(\) => SpeechCtx\.playEntry\(r\)\}/);
+  });
+
+  await t.test('type-to-speak plays the matched entry', () => {
+    assert.match(typeToSpeak, /SpeechCtx\.playEntry\(match\);/);
+  });
+
+  await t.test('Karaoke continues only from its current successful request', () => {
+    assert.doesNotMatch(karaoke, /onend:/);
+    assert.match(karaoke, /onDone:/);
+    assert.match(karaoke, /completedRequestId !== activeRequestId/);
+    assert.match(karaoke, /status !== 'ended'/);
+  });
+
+  await t.test('Karaoke cleanup disposes timers and its owned request', () => {
+    assert.match(karaoke, /disposed = true;/);
+    assert.match(karaoke, /clearTimeout\(nextTimer\);/);
+    assert.match(karaoke, /SpeechCtx\.cancel\(activeRequestId\);/);
+  });
+
+  await t.test('free-text Quiz and logo feedback remain direct speech', () => {
+    assert.match(quiz, /SpeechCtx\.speak\(/);
+    assert.match(logo, /SpeechCtx\.speak\(/);
   });
 });

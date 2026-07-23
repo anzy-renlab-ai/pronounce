@@ -32,7 +32,10 @@ const SpeechCtx = {
     if (!req || req.finished) return;
     req.finished = true;
     if (this.active === req) this.active = null;
-    queueMicrotask(() => {
+    const defer = typeof queueMicrotask === 'function'
+      ? queueMicrotask
+      : callback => Promise.resolve().then(callback);
+    defer(() => {
       if (typeof req.onDone === 'function') {
         req.onDone({ requestId: req.id, status });
       }

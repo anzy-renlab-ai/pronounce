@@ -94,7 +94,7 @@ function App() {
             d.w.toLowerCase().replace(/[^a-z]/g, '') === typed
           );
           if (match) {
-            SpeechCtx.chain(match);
+            SpeechCtx.playEntry(match);
             showToast('You typed it · we said it', `"${match.w}" → ${match.resp}`);
             if (match.w.toLowerCase() === 'gif') registerEgg('jiffy');
           }
