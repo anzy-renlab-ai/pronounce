@@ -4,10 +4,19 @@ const SpeechCtx = {
   ready: false,
   rate: 0.92,
   pitch: 1.0,
+  active: null,
+  _nextRequestId: 0,
+  _canSpeak() {
+    return (
+      typeof window.speechSynthesis !== 'undefined' &&
+      typeof window.SpeechSynthesisUtterance === 'function'
+    );
+  },
   init() {
-    if (!('speechSynthesis' in window)) return;
+    if (!this._canSpeak()) return;
+    const synth = window.speechSynthesis;
     const pick = () => {
-      const v = speechSynthesis.getVoices();
+      const v = synth.getVoices();
       if (!v.length) return;
       this.voice =
         v.find(x => /Samantha/i.test(x.name)) ||
@@ -17,39 +26,172 @@ const SpeechCtx = {
       this.ready = true;
     };
     pick();
-    speechSynthesis.onvoiceschanged = pick;
+    synth.onvoiceschanged = pick;
   },
-  speak(text, opts = {}) {
-    if (!('speechSynthesis' in window)) return;
-    if (opts.cancel !== false) speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(text);
-    if (this.voice) u.voice = this.voice;
-    u.rate = opts.rate ?? this.rate;
-    u.pitch = opts.pitch ?? this.pitch;
-    u.volume = opts.volume ?? 1;
-    if (opts.onend) u.onend = opts.onend;
-    speechSynthesis.speak(u);
-    return u;
+  _finish(req, status) {
+    if (!req || req.finished) return;
+    req.finished = true;
+    if (this.active === req) this.active = null;
+    queueMicrotask(() => {
+      if (typeof req.onDone === 'function') {
+        req.onDone({ requestId: req.id, status });
+      }
+    });
+    if (status === 'ended' && typeof req.onEnd === 'function') {
+      req.onEnd();
+    }
   },
-  // chain primary + alternates, "or: <alt>"
-  chain(entry) {
-    speechSynthesis.cancel();
-    const utter = (t, after) => {
-      const u = new SpeechSynthesisUtterance(t);
-      if (this.voice) u.voice = this.voice;
-      u.rate = this.rate; u.pitch = this.pitch;
-      if (after) u.onend = after;
-      speechSynthesis.speak(u);
+  _pause(req) {
+    if (!req?.audio) return;
+    try {
+      req.audio.pause();
+    } catch (_) {}
+  },
+  _cancelSpeech() {
+    if (!this._canSpeak()) return;
+    try {
+      window.speechSynthesis.cancel();
+    } catch (_) {}
+  },
+  _begin(onDone) {
+    const previous = this.active;
+    if (previous && !previous.finished) {
+      this._finish(previous, 'cancelled');
+      this._pause(previous);
+    }
+    this._cancelSpeech();
+    const req = {
+      id: ++this._nextRequestId,
+      onDone,
+      finished: false,
+      fallbackStarted: false,
+      audio: null,
     };
-    const queue = [entry.resp, entry.resp];
-    if (entry.alt) queue.push(`or, ${entry.alt}`);
+    this.active = req;
+    return req;
+  },
+  _speakQueue(req, queue, opts) {
+    if (this.active !== req || req.finished) return;
+    if (!this._canSpeak()) {
+      this._finish(req, 'failed');
+      return;
+    }
+
     let i = 0;
     const next = () => {
-      if (i >= queue.length) return;
-      const t = queue[i++];
-      utter(t, i < queue.length ? next : null);
+      if (this.active !== req || req.finished) return;
+      if (i >= queue.length) {
+        this._finish(req, 'ended');
+        return;
+      }
+
+      let utterance;
+      try {
+        utterance = new window.SpeechSynthesisUtterance(queue[i++]);
+      } catch (_) {
+        this._finish(req, 'failed');
+        return;
+      }
+      if (this.voice) utterance.voice = this.voice;
+      utterance.rate = opts.rate;
+      utterance.pitch = opts.pitch;
+      utterance.volume = opts.volume;
+
+      let settled = false;
+      utterance.onend = () => {
+        if (settled) return;
+        settled = true;
+        next();
+      };
+      utterance.onerror = () => {
+        if (settled) return;
+        settled = true;
+        if (this.active === req && !req.finished) {
+          this._finish(req, 'failed');
+        }
+      };
+
+      try {
+        window.speechSynthesis.speak(utterance);
+      } catch (_) {
+        settled = true;
+        this._finish(req, 'failed');
+      }
     };
     next();
+  },
+  _fallback(req, entry) {
+    if (
+      this.active !== req ||
+      req.finished ||
+      req.fallbackStarted
+    ) return;
+    req.fallbackStarted = true;
+    this._pause(req);
+    req.audio = null;
+
+    const primary = entry.resp || entry.w;
+    const alternateValues = Array.isArray(entry.alts)
+      ? entry.alts
+      : (entry.alt == null ? [] : [entry.alt]);
+    const alternates = alternateValues
+      .map(value => String(value).trim())
+      .filter(Boolean);
+    const queue = [
+      primary,
+      primary,
+      primary,
+      ...alternates.map(value => `or, ${value}`),
+    ];
+    this._speakQueue(req, queue, {
+      rate: this.rate,
+      pitch: this.pitch,
+      volume: 1,
+    });
+  },
+  cancel(requestId) {
+    const req = this.active;
+    if (!req || req.id !== requestId || req.finished) return;
+    this._finish(req, 'cancelled');
+    this._pause(req);
+    this._cancelSpeech();
+  },
+  playEntry(entry, opts = {}) {
+    const req = this._begin(opts.onDone);
+    const fallback = () => this._fallback(req, entry);
+
+    try {
+      const audio = new Audio(`/audio/${entry.slug}.mp3`);
+      req.audio = audio;
+      audio.onended = () => {
+        if (
+          this.active === req &&
+          !req.finished &&
+          !req.fallbackStarted
+        ) this._finish(req, 'ended');
+      };
+      audio.onerror = fallback;
+      const playing = audio.play();
+      if (playing && typeof playing.catch === 'function') {
+        playing.catch(fallback);
+      }
+    } catch (_) {
+      fallback();
+    }
+    return req.id;
+  },
+  speak(text, opts = {}) {
+    const req = this._begin(opts.onDone);
+    req.onEnd = opts.onend;
+    this._speakQueue(req, [text], {
+      rate: opts.rate ?? this.rate,
+      pitch: opts.pitch ?? this.pitch,
+      volume: opts.volume ?? 1,
+    });
+    return req.id;
+  },
+  chain(entry, opts = {}) {
+    return this.playEntry(entry, opts);
   },
 };
 SpeechCtx.init();
