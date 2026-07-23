@@ -13,53 +13,70 @@ CONF_MAP = {
     "contested": "contested",
 }
 
-rows = []
-with open(TSV) as f:
-    for line in f:
-        if line.startswith("#") or not line.strip():
-            continue
-        cells = line.rstrip("\n").split("\t")
-        if cells[0] == "word":
-            continue
-        if len(cells) < 10:
-            continue
-        word, ipa, resp, alt_ipa, alt_resp, src_url, src_label, cat, conf, notes = cells
-        if not word or not resp:
-            continue
-        # take first alt respelling (split by |)
-        alt = (alt_resp.split("|")[0].strip() if alt_resp else "")
-        rows.append({
-            "w": word,
-            "ipa": ipa,
-            "resp": resp,
-            "alt": alt or None,
-            "conf": CONF_MAP.get(conf, "community"),
-            "src": src_label or None,
-            "url": src_url or None,
-            "cat": cat,
-            "notes": notes or None,
-        })
-
 # strip None to compact JSON
 def compact(d):
     return {k: v for k, v in d.items() if v is not None}
 
-dict_entries = [compact(r) for r in rows]
+
+def slugify(word):
+    return re.sub(r"[^a-z0-9._-]", "-", word.lower())
+
+
+def split_alts(alt_resp):
+    return [part.strip() for part in alt_resp.split("|") if part.strip()]
+
+
+def entry_from_cells(cells):
+    word, ipa, resp, alt_ipa, alt_resp, src_url, src_label, cat, conf, notes = cells
+    alts = split_alts(alt_resp)
+    return compact({
+        "w": word,
+        "slug": slugify(word),
+        "ipa": ipa,
+        "resp": resp,
+        "alts": alts,
+        "alt": alts[0] if alts else None,
+        "conf": CONF_MAP.get(conf, "community"),
+        "src": src_label or None,
+        "url": src_url or None,
+        "cat": cat,
+        "notes": notes or None,
+    })
+
+
+def load_rows(path=TSV):
+    rows = []
+    with open(path) as f:
+        for line in f:
+            if line.startswith("#") or not line.strip():
+                continue
+            cells = line.rstrip("\n").split("\t")
+            if cells[0] == "word":
+                continue
+            if len(cells) < 10:
+                continue
+            if not cells[0] or not cells[2]:
+                continue
+            rows.append(entry_from_cells(cells))
+    return rows
 
 # FAMOUS = top 8 creator-clarified, picked for cultural cachet
 HERO = ["GIF", "JSON", "GNU", "etcd", "PostgreSQL", "LaTeX", "Django", "Debian",
         "nginx", "YAML", "TOML", "Tcl", "awk", "Dijkstra"]
-hero_set = {h.lower() for h in HERO}
-famous = []
-for r in rows:
-    if r["w"].lower() in hero_set and r["conf"] == "creator":
-        famous.append({
-            "w": r["w"],
-            "said": r["resp"],
-            "src": r["src"] or "—",
-            "url": r["url"] or "#",
-        })
-famous = famous[:8]  # cap
+
+
+def build_famous(rows):
+    hero_set = {h.lower() for h in HERO}
+    famous = []
+    for r in rows:
+        if r["w"].lower() in hero_set and r["conf"] == "creator":
+            famous.append({
+                "w": r["w"],
+                "said": r["resp"],
+                "src": r.get("src") or "—",
+                "url": r.get("url") or "#",
+            })
+    return famous[:8]  # cap
 
 # FAQS — keep prototype's set
 faqs = [
@@ -92,25 +109,36 @@ eggs = [
     {"id": "quiz",     "label": "Pick the correct quiz answer"},
 ]
 
-with open(OUT, "w") as f:
-    f.write("// Auto-generated from data/pronunciations.tsv at build time.\n")
-    f.write("// DO NOT EDIT by hand — re-run tools/build-v2-data.py.\n\n")
-    f.write(f"window.DICT_ALL = {json.dumps(dict_entries, ensure_ascii=False)};\n\n")
-    # Curated DICT for WordGrid — top 24 by mix of contested + creator-clarified
-    curated_words = [
-        "kubectl", "nginx", "GIF", "JSON", "YAML", "TOML", "Ghostty", "wagmi",
-        "Pydantic", "Knative", "GNU", "etcd", "Dijkstra", "Logseq", "Affine",
-        "tldraw", "Excalidraw", "Tcl", "awk", "SQL", "sudo", "Keras", "QUIC", "viem",
-    ]
-    curated_set = {w.lower() for w in curated_words}
-    curated = []
-    by_w = {r["w"].lower(): compact(r) for r in rows}
-    for w in curated_words:
-        if w.lower() in by_w:
-            curated.append(by_w[w.lower()])
-    f.write(f"window.DICT = {json.dumps(curated, ensure_ascii=False)};\n\n")
-    f.write(f"window.FAMOUS = {json.dumps(famous, ensure_ascii=False)};\n\n")
-    f.write(f"window.FAQS = {json.dumps(faqs, ensure_ascii=False)};\n\n")
-    f.write(f"window.EGGS = {json.dumps(eggs, ensure_ascii=False)};\n")
+def write_data(rows, out=OUT):
+    dict_entries = [compact(r) for r in rows]
+    famous = build_famous(rows)
+    with open(out, "w") as f:
+        f.write("// Auto-generated from data/pronunciations.tsv at build time.\n")
+        f.write("// DO NOT EDIT by hand — re-run tools/build-v2-data.py.\n\n")
+        f.write(f"window.DICT_ALL = {json.dumps(dict_entries, ensure_ascii=False)};\n\n")
+        # Curated DICT for WordGrid — top 24 by mix of contested + creator-clarified
+        curated_words = [
+            "kubectl", "nginx", "GIF", "JSON", "YAML", "TOML", "Ghostty", "wagmi",
+            "Pydantic", "Knative", "GNU", "etcd", "Dijkstra", "Logseq", "Affine",
+            "tldraw", "Excalidraw", "Tcl", "awk", "SQL", "sudo", "Keras", "QUIC", "viem",
+        ]
+        curated_set = {w.lower() for w in curated_words}
+        curated = []
+        by_w = {r["w"].lower(): compact(r) for r in rows}
+        for w in curated_words:
+            if w.lower() in by_w:
+                curated.append(by_w[w.lower()])
+        f.write(f"window.DICT = {json.dumps(curated, ensure_ascii=False)};\n\n")
+        f.write(f"window.FAMOUS = {json.dumps(famous, ensure_ascii=False)};\n\n")
+        f.write(f"window.FAQS = {json.dumps(faqs, ensure_ascii=False)};\n\n")
+        f.write(f"window.EGGS = {json.dumps(eggs, ensure_ascii=False)};\n")
+    return len(dict_entries), len(curated), len(famous)
 
-print(f"wrote {len(rows)} ALL + {len(curated)} curated DICT + {len(famous)} FAMOUS → {OUT}")
+
+def main():
+    counts = write_data(load_rows())
+    print(f"wrote {counts[0]} ALL + {counts[1]} curated DICT + {counts[2]} FAMOUS → {OUT}")
+
+
+if __name__ == "__main__":
+    main()
