@@ -16,6 +16,7 @@
 .indexnow/
 marketplace.env
 .gstack/
+.worktrees/
 
 # Python bytecode
 __pycache__/
