@@ -639,10 +639,11 @@ print(json.dumps(out, indent=2, ensure_ascii=False))
 [![🔊 $word — $resp](https://img.shields.io/badge/🔊-$word%20%E2%86%92%20$(printf '%s' "$resp" | sed 's/ /%20/g')-ff6a3d?style=flat&logo=speakerdeck&logoColor=white)](https://pronounce.renlab.ai/word/$slug)
 MD
     if command -v pbcopy >/dev/null 2>&1; then
-      cat <<MD | tr -d '\n' | pbcopy
+      if cat <<MD | tr -d '\n' | pbcopy; then
 [![🔊 $word — $resp](https://img.shields.io/badge/🔊-$word%20%E2%86%92%20$(printf '%s' "$resp" | sed 's/ /%20/g')-ff6a3d?style=flat&logo=speakerdeck&logoColor=white)](https://pronounce.renlab.ai/word/$slug)
 MD
-      [[ $QUIET -eq 0 ]] && echo "${C_DIM}(badge markdown copied to clipboard)${C_RESET}" >&2
+        [[ $QUIET -eq 0 ]] && echo "${C_DIM}(badge markdown copied to clipboard)${C_RESET}" >&2
+      fi
     fi
     exit 0
     ;;
@@ -1078,8 +1079,9 @@ emit_tweet() {
   fi
   printf '%s\n' "$text"
   if command -v pbcopy >/dev/null 2>&1; then
-    printf '%s' "$text" | pbcopy
-    [[ $QUIET -eq 0 ]] && echo "${C_DIM}(copied to clipboard — paste into x.com)${C_RESET}" >&2
+    if printf '%s' "$text" | pbcopy; then
+      [[ $QUIET -eq 0 ]] && echo "${C_DIM}(copied to clipboard — paste into x.com)${C_RESET}" >&2
+    fi
   fi
 }
 

@@ -30,6 +30,26 @@ assert_contains() {
   fi
 }
 
+assert_contains_without() {
+  local name="$1"; local needle="$2"; local unwanted="$3"; shift 3
+  local out
+  out="$("$@" 2>&1)" || { echo "✗ $name: exit non-zero"; fail=1; return; }
+  if [[ "$out" != *"$needle"* ]]; then
+    echo "✗ $name: missing '$needle' in output" >&2
+    fail=1
+  elif [[ "$out" == *"$unwanted"* ]]; then
+    echo "✗ $name: unexpected '$unwanted' in output" >&2
+    fail=1
+  else
+    echo "✓ $name"
+  fi
+}
+
+failing_pbcopy_dir="$(mktemp -d)"
+trap 'rm -rf "$failing_pbcopy_dir"' EXIT
+printf '%s\n' '#!/usr/bin/env bash' 'exit 1' > "$failing_pbcopy_dir/pbcopy"
+chmod +x "$failing_pbcopy_dir/pbcopy"
+
 echo "Smoke testing $CLI ..."
 assert_contains "help"             "Usage:"            "$CLI" -h
 assert_contains "version"          "say-it"            "$CLI" -V
@@ -42,8 +62,10 @@ assert_contains "--why GIF"        "Wilhite"           "$CLI" --why GIF
 assert_contains "--json kubectl"   "respelling_us"     "$CLI" --json kubectl
 assert_contains "--md JSON"        "Crockford"         "$CLI" --md JSON
 assert_contains "explain kubectl"  "Kelsey Hightower"  "$CLI" explain kubectl
-assert_contains "badge GIF"        "shields.io"        "$CLI" badge GIF
-assert_contains "tweet kubectl"    "TIL"               "$CLI" tweet kubectl
+assert_contains_without "badge GIF with failing pbcopy" "shields.io" "copied to clipboard" \
+  env PATH="$failing_pbcopy_dir:$PATH" "$CLI" badge GIF
+assert_contains_without "tweet kubectl with failing pbcopy" "TIL" "copied to clipboard" \
+  env PATH="$failing_pbcopy_dir:$PATH" "$CLI" tweet kubectl
 assert_contains "cheatsheet"       "Discovery"         "$CLI" cheatsheet
 assert_contains "didyoumean"       "did you mean"      "$CLI" --why Kafkah
 
