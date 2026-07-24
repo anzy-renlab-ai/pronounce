@@ -23,7 +23,7 @@ Match patterns:
    say-it "$WORD"
    ```
 
-   This plays the audio through the user's macOS speakers. The CLI looks the word up in a community-maintained dictionary and feeds an English-like respelling to macOS `say` so project names come out the way engineers actually pronounce them.
+   This plays audio through the detected OS TTS backend: macOS `say`, Linux `espeak-ng`/`espeak`, or Windows PowerShell `System.Speech`. The CLI looks the word up in a community-maintained dictionary and feeds its English-like `respelling_us` to the detected OS TTS engine so project names come out the way engineers actually pronounce them.
 
 2. **Get the metadata** so you can cite it:
 

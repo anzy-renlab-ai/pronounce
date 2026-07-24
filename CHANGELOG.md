@@ -1,5 +1,21 @@
 # Changelog
 
+## v2.23.1 — 2026-07-23
+
+**Consistency release — canonical web audio, accurate product facts, and complete release guards.** No dictionary change (holds at 1,880 entries, 1,260 with a citable source).
+
+### Fixed
+
+- **Homepage audio now matches the committed corpus.** Hero, dictionary cards, Famous entries, the command palette, and type-to-speak play the canonical `/audio/<slug>.mp3` first, with a guarded Web Speech fallback only when playback fails. Each request settles exactly once, so stale failures cannot speak over newer audio.
+- **Public product facts match the shipped CLI.** Current docs describe one Bash CLI with no npm runtime, English-like `respelling_us` input, and the three detected OS backends: macOS `say`, Linux `espeak-ng`/`espeak`, and Windows PowerShell `System.Speech`.
+- **Source coverage is explicit.** Public copy distinguishes the 1,880 total entries from the 1,260 carrying a citable source instead of implying universal coverage.
+- **Release guards cover every v2 build source.** Build-site and CI path filters now include the JSX, generator, media, and test inputs; Ubuntu CI runs the audio, v2-data, and incremental-OG tests with Python 3.12 and Pillow.
+
+### Changed
+
+- Per-word OG rendering now uses a versioned atomic manifest, skips current cards, and exposes bootstrap and read-only check modes.
+- The noindex v2 scaffold uses the root Open Graph URL and deferred same-origin React assets.
+
 ## v2.23.0 — 2026-07-17
 
 **+32 entries (1,848 → 1,880).** Discovered by a 4-lens web-research workflow (2026 AI/chip names, infra gap-fill, creator-clarified classics, contested staples), then one adversarial verifier per candidate — every row's source was fetched live before it was kept, and the risky respelling syllables were byte-verified through `say -o` before appending.

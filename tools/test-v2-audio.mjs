@@ -24,6 +24,14 @@ const APP_SOURCE = readFileSync(
   new URL('../docs/v2/app.jsx', import.meta.url),
   'utf8',
 );
+const V2_DATA_BUILDER_SOURCE = readFileSync(
+  new URL('./build-v2-data.py', import.meta.url),
+  'utf8',
+);
+const V2_INDEX_SOURCE = readFileSync(
+  new URL('../docs/v2/index.html', import.meta.url),
+  'utf8',
+);
 const BUNDLE_SOURCE = readFileSync(
   new URL('../docs/v2/bundle.js', import.meta.url),
   'utf8',
@@ -518,5 +526,81 @@ test('dictionary playback consumer source contract', async t => {
   await t.test('free-text Quiz and logo feedback remain direct speech', () => {
     assert.match(quiz, /SpeechCtx\.speak\(/);
     assert.match(logo, /SpeechCtx\.speak\(/);
+  });
+});
+
+test('v2 product and release fact source contract', async t => {
+  const currentSources = [
+    ['sections-1.jsx', SECTIONS_1_SOURCE],
+    ['sections-2.jsx', SECTIONS_2_SOURCE],
+    ['eggs.jsx', EGGS_SOURCE],
+    ['build-v2-data.py', V2_DATA_BUILDER_SOURCE],
+    ['index.html', V2_INDEX_SOURCE],
+  ];
+
+  for (const [name, source] of currentSources) {
+    await t.test(`${name} omits retired product claims`, () => {
+      assert.doesNotMatch(source, /~250/i);
+      assert.doesNotMatch(source, /On the roadmap/i);
+      assert.doesNotMatch(source, /powered by Web Speech API/i);
+    });
+  }
+
+  await t.test('homepage describes committed MP3 playback with Web Speech fallback', () => {
+    assert.match(SECTIONS_1_SOURCE, /(?:committed canonical|canonical committed) MP3/i);
+    assert.match(SECTIONS_1_SOURCE, /Web Speech[^.]*fallback/i);
+    assert.match(V2_DATA_BUILDER_SOURCE, /(?:committed canonical|canonical committed) MP3/i);
+    assert.match(V2_DATA_BUILDER_SOURCE, /Web Speech[^.]*fallback/i);
+  });
+
+  await t.test('homepage describes all three shipped OS backends', () => {
+    assert.match(SECTIONS_2_SOURCE, /macOS[^.]*say/i);
+    assert.match(SECTIONS_2_SOURCE, /Linux[^.]*espeak-ng[^.]*espeak/i);
+    assert.match(SECTIONS_2_SOURCE, /Windows[^.]*System\.Speech/i);
+    assert.match(V2_DATA_BUILDER_SOURCE, /macOS[^.]*say/i);
+    assert.match(V2_DATA_BUILDER_SOURCE, /Linux[^.]*espeak-ng[^.]*espeak/i);
+    assert.match(V2_DATA_BUILDER_SOURCE, /Windows[^.]*System\.Speech/i);
+  });
+
+  await t.test('homepage derives and displays sourced coverage without universal claims', () => {
+    assert.match(
+      SECTIONS_2_SOURCE,
+      /const sourcedCount = DICT_ALL\.filter\(d\s*=>\s*d\.url\)\.length;/,
+    );
+    assert.match(
+      SECTIONS_2_SOURCE,
+      /`\$\{sourcedCount\} of \$\{DICT_ALL\.length\} entries source-cited`/,
+    );
+    assert.doesNotMatch(
+      `${SECTIONS_1_SOURCE}\n${SECTIONS_2_SOURCE}`,
+      /(?:all|every) (?:1,880|1880|\$\{DICT_ALL\.length\})[^.\n]*(?:source|cited)/i,
+    );
+    assert.doesNotMatch(SECTIONS_2_SOURCE, /Every entry[^.\n]*(?:source|linked)/i);
+    assert.match(SECTIONS_2_SOURCE, /a source citation when available/i);
+    assert.doesNotMatch(
+      SECTIONS_2_SOURCE,
+      /audio, IPA, and a source citation, not a phonetic guess/i,
+    );
+  });
+
+  await t.test('footer and noindex scaffold identify the v2.23.1 release', () => {
+    assert.match(SECTIONS_2_SOURCE, /sayit · MIT · v2\.23\.1 ·/);
+    assert.match(V2_INDEX_SOURCE, /1,880 entries[^"\n]*1,260[^"\n]*cited sources/i);
+  });
+
+  await t.test('noindex scaffold uses root OG URL and deferred same-origin runtime scripts', () => {
+    assert.match(
+      V2_INDEX_SOURCE,
+      /<meta property="og:url" content="https:\/\/pronounce\.renlab\.ai\/">/,
+    );
+    assert.match(
+      V2_INDEX_SOURCE,
+      /<script defer src="\/v2\/vendor\/react\.production\.min\.js"><\/script>/,
+    );
+    assert.match(
+      V2_INDEX_SOURCE,
+      /<script defer src="\/v2\/vendor\/react-dom\.production\.min\.js"><\/script>/,
+    );
+    assert.doesNotMatch(V2_INDEX_SOURCE, /unpkg\.com/);
   });
 });

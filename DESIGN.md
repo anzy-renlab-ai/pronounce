@@ -1,154 +1,138 @@
 # say-it — Design
 
-Status: **v0.1 shipped** · Owner: @alvin · Last touched: 2026-05-16
+Status: **v2.23.1 shipped** · Last reviewed: 2026-07-23
 
-This doc captures the architecture for say-it after the 2026-05-16 scope clarification, plus the technical surprise discovered during M1 (Apple's documented `[[inpt PHON]]` markup is dead — see §"macOS surprise").
+This document describes the product that is currently shipped. Future ideas live in
+`IDEAS.md`; they are not part of the runtime contract below.
 
-## Goals (revised)
+## Goals
 
-1. **Answer "how do people actually say this English word/name?"** — with audio, not IPA.
-2. **First-class on project/product names with community-habitual pronunciations** that diverge from dictionary readings. Examples: `kubectl`, `nginx`, `GUI`, `GNU`, `PostgreSQL`, `JSON`, `char`, `regex`, `sudo`, `Linux`, `Debian`, `Cassandra`, `k8s`, `Ceph`, `YAML`, `GIF`, `SQL`, `cache`, `tmux`, `Kubernetes`, `nginx`, `pwd`.
-3. **Cross-platform**: macOS and **Windows** are both must-have. Linux is roadmap.
+1. Answer “how do developers actually say this project, product, or jargon name?”
+   with audio, IPA, an English-like respelling, and an honest confidence label.
+2. Make contested readings audible: primary three times, then each alternate after
+   a spoken “or”.
+3. Keep the core portable and inspectable: one Bash CLI, no npm runtime, and one TSV
+   source of truth.
+4. Use the operating system’s shipped or conventional local TTS rather than requiring
+   a hosted speech service.
 
-Non-goals: regional accent showcase (US/UK/AU/IE/ZA voices), sentence-level prosody, language learning curriculum.
+Non-goals are regional-accent catalogs, sentence narration, and a general-English
+dictionary.
 
-## macOS surprise (key finding from M1)
+## Runtime architecture
 
-Apple's Speech Synthesis Programming Guide documents two phoneme-injection paths: the legacy `[[inpt PHON]]…[[inpt TEXT]]` bracket commands and SSML `<phoneme alphabet="ipa" ph="…">…</phoneme>`. **Neither is parsed by the modern `say(1)` CLI in macOS 14+.** Both fall through as literal text — `say "[[inpt PHON]]k AE1 t[[inpt TEXT]]"` is read character-by-character (~3.5s of mumbling), not as "cat" (~0.6s). Empirical test in `tools/phon_audit.sh`.
-
-Consequence: the dictionary cannot ship Apple phoneme strings and rely on `say` to honor them. Instead we ship **English-like respellings** (`"koob control"`, `"jif"`, `"engine X"`) and ride the TTS engine's built-in letter-to-sound rules, which produce acceptable output for short English-shaped strings. The trade-off is lossy precision in exchange for reliability.
-
-The IPA column is retained in the dictionary anyway — it's still useful for (a) display in `--why` output, (b) future cloud TTS providers (ElevenLabs, OpenAI) and (c) the Windows SAPI backend, both of which DO parse SSML `<phoneme>`.
-
-## Pipeline
-
-```
+```text
 say-it <word>
   │
-  ├── 1. Normalize (lowercase for lookup, original case preserved for display)
-  │
-  ├── 2. Lookup in dictionary (data/pronunciations.tsv)
-  │      ├── hit → respelling_us string, e.g. "koob control"
-  │      └── miss → use the raw word
-  │
-  ├── 3. Build the audible body
-  │      ├── default       → primary × N reps + spoken "or: <alt>" for each alt
-  │      ├── --solo        → primary × N reps only
-  │      ├── --alt [N]     → Nth alt × N reps only
-  │      └── --all         → primary × N + each alt × N, chained with "or:"
-  │
-  └── 4. Feed to the platform TTS
-         ├── macOS   → say -v Samantha -r 200 "<body>"
-         ├── Windows → SSML body with <phoneme alphabet="ipa" ph="..."> (M2)
-         └── Cloud   → ElevenLabs / OpenAI with SSML phoneme (M3)
+  ├── normalize the lookup key
+  ├── read data/pronunciations.tsv (+ optional local overrides)
+  ├── choose primary / --solo / --alt N / --all audible body
+  └── pass English-like text to the detected backend
+        ├── macOS  → say
+        ├── Linux → espeak-ng, then espeak
+        └── Windows → PowerShell System.Speech
 ```
 
-### Why alternates chain into the audio by default
+`bin/say-it` is the single CLI on all three platforms. Windows users run that Bash
+file under Git Bash, MSYS2, or Cygwin; it invokes the built-in PowerShell speech
+assembly when detected. The platform dispatch stays behind `tts_speak`, `tts_save`,
+and `audio_play` so lookup and flag behavior do not fork by OS.
 
-Multi-reading words (`GIF`, `SQL`, `GUI`, `kubectl`, `char`, ...) carry context: the user needs to know there's debate. Printing "alt = gif" to stdout is invisible if the user isn't watching the terminal. Spoken `"or: <alt>"` makes the multi-reading status perceptible from the audio alone. `--solo` opts out for users who have already grasped this.
+The default contract is three repetitions at 130 wpm. macOS defaults to Samantha;
+Linux and Windows use an available English voice from their backend. File output is
+supported where the backend can render it; live speech remains the fallback.
 
 ## Dictionary
 
-**Format:** TSV at `data/pronunciations.tsv`, 10 columns:
+`data/pronunciations.tsv` has ten columns:
 
-```
-word | ipa | respelling_us | alt_ipa | alt_respelling_us | source_url | source_label | category | confidence | notes
-```
-
-`alt_*` columns are `|`-separated for multi-reading words (e.g. `char` has 2 alts: `care|car`). Lookup is case-insensitive on `word`.
-
-Example rows (header omitted, TAB-separated in real file):
-
-```
-kubectl         koob control           cube cuddle | cube C T L  most common in K8s community
-nginx           engine ex                                        official: "engine x"
-GUI             gooey                   G U I                     RMS prefers G-U-I
-GNU             guh new                                           one syllable; rhymes w/ "new"
-PostgreSQL      post gres Q L           post gres sequel
-JSON            jay son                 jee son                   Crockford: "jay-son"
-SQL             sequel                  S Q L                     ANSI: S-Q-L; informal: sequel
-GIF             jiff                    giff
-char            char                    care                      C/C++ convention: "char" rhymes with "car"
-regex           redj ex                 reg ex
-sudo            soo doo                 soo doh
+```text
+word | ipa | respelling_us | alt_ipa | alt_respelling_us |
+source_url | source_label | category | confidence | notes
 ```
 
-- One row per word; case-insensitive lookup on `word`.
-- `respelling` is the **primary** community reading, written as ordinary English that `say` / SAPI both pronounce reasonably.
-- `alt` is `|`-separated alternates surfaced when `--alt` is passed (or all enumerated when `--all` is passed).
-- `notes` is optional editorial context; never spoken.
+`respelling_us` is English-like input passed to the detected OS TTS backend; it is
+not a phoneme payload. IPA is display metadata. Alternate IPA and respelling fields
+are pipe-separated and paired by index.
 
-**Editorial stance:** When there are camps (GIF, SQL, JSON), pick the more common reading in software engineering practice as primary and put the rival in `alt` with a note. Document the tie-breaker rule in this file so contributions don't relitigate.
+Every row has a confidence value:
 
-**Distribution:** dict ships with the repo and installs to `$PREFIX/share/say-it/pronunciations.tsv`. Both bash and PowerShell read this file directly — single source of truth, no codegen.
+- `creator-clarified` — a creator quote, official FAQ, or canonical documentation
+  supports the reading.
+- `community-consensus` — widespread usage without a single authoritative citation.
+- `contested` — multiple readings genuinely compete in developer usage.
 
-## Backends
+Source URLs are optional by design. The v2.23.1 corpus has 1,880 entries and 1,260
+with a citable source. Empty source fields stay empty rather than being filled with
+weak or fabricated citations.
 
-### macOS (`bin/say-it`, existing, bash)
+## Audible body
 
-Wraps `say`. After step 2, swaps `WORD` for the respelling if dict had a hit. Keeps current flags.
-
-### Windows (`bin/say-it.ps1`, new, PowerShell)
-
-```powershell
-Add-Type -AssemblyName System.Speech
-$synth = New-Object System.Speech.Synthesis.SpeechSynthesizer
-$synth.Rate = $RateToScale($Rate)        # map 130-200 wpm to -2..0
-if ($Voice) { $synth.SelectVoice($Voice) }
-1..$Times | % { $synth.Speak($Text) }
+```text
+default   primary × N, then “or: <alternate>” once for each alternate
+--solo    primary × N only
+--alt N   selected alternate × N
+--all     primary × N, then every alternate × N
+--no-dict raw input through the detected backend
 ```
 
-- PowerShell 5.1 ships with Windows 10/11 by default, has `System.Speech`. PowerShell 7+ may need `System.Speech` shim — installer will check and warn.
-- For `-o FILE`: `$synth.SetOutputToWaveFile($Save); $synth.Speak($Text); $synth.SetOutputToDefaultAudioDevice()`.
-- Flag surface is 1:1 with the bash CLI so the skill doesn't branch.
-- A thin `bin/say-it.cmd` shim invokes `powershell.exe -ExecutionPolicy Bypass -File say-it.ps1 %*` so users get `say-it` on `cmd.exe` PATH.
+The spoken alternate tail is intentional: users should hear that a word is
+contested even when they are not watching terminal output.
 
-### Cloud TTS (both platforms)
+## Website audio
 
-- Provider: **ElevenLabs** primary (best quality on proper nouns), OpenAI TTS as alternate. Selected by env var `SAY_IT_TTS_PROVIDER=elevenlabs|openai`, default `elevenlabs` if any key is set, else error with install help.
-- Auth: `SAY_IT_ELEVENLABS_API_KEY` / `SAY_IT_OPENAI_API_KEY` env vars. No config file in v1.
-- Transport: `curl` on both platforms (macOS has it; Windows 10+ ships `curl.exe`).
-- Output: mp3 to cache, then play via `afplay` (macOS) / `(New-Object Media.SoundPlayer)` or `Start-Process` (Windows; mp3 needs Windows Media Player CLI or ffplay — pick wav from cloud if provider supports).
-- Cache key: `sha1(provider + voice + text)`. Hits skip the API round-trip.
+The committed `docs/audio/<slug>.mp3` corpus is canonical for website dictionary
+playback. The Hero, cards, Famous entries, command palette, type-to-speak, browse,
+and word pages request that MP3 first. Web Speech is a fallback only when the asset
+cannot play; it reconstructs the same primary-three-times plus all-alternates body.
 
-## CLI surface (target)
+The v2 homepage’s `SpeechCtx` owns one active request and returns a monotonically
+increasing request ID. Completion is asynchronous and settles exactly once as
+`ended`, `failed`, or `cancelled`. Late callbacks from superseded playback cannot
+start speech or clear newer UI state.
 
-Existing flags stay. New:
+Free-form interactions such as quiz feedback and karaoke phrases intentionally use
+direct speech rather than dictionary MP3s.
 
+## Generated site
+
+The TSV remains the source of truth:
+
+- `tools/build-v2-data.py` emits browser entries, canonical slugs, and complete
+  alternate arrays into `docs/v2/data.js`.
+- `tools/build-v2-bundle.sh` compiles the five v2 JSX sources into
+  `docs/v2/bundle.js`.
+- `tools/build-site.sh` generates word, browse, Chinese, daily, API, and supporting
+  pages.
+- `tools/make-audio-all.py` maintains fingerprinted committed MP3s.
+- `tools/make-og.py` and `tools/make-og-all.py` maintain global and per-word cards.
+
+Generated `data.js` and `bundle.js` are committed outputs, but workflow triggers
+track their sources rather than the generated files.
+
+## Release guards
+
+The dependency-light release checks are:
+
+```bash
+node --test tools/test-v2-audio.mjs
+python3 -m unittest tools/test_build_v2_data.py tools/test_make_og_all.py
+bash tools/lint-dict.sh
+bash tools/smoke-test.sh
+python3 tools/make-og-all.py --check
 ```
---cloud                    force cloud TTS for this call
---alt                      use the first alternate respelling
---all                      enumerate primary + every alt, separated by pauses
---no-dict                  bypass the dictionary, send the word as-is
---why                      print which entry/path was used (debug)
-```
 
-## Installer changes
+CI runs the audio, data, and OG tests on Ubuntu with Python 3.12 and Pillow. The
+site workflow uses pinned actions and triggers whenever a source, generator, or
+guard capable of changing committed site output changes.
 
-`install.sh` (POSIX) and a new `install.ps1`:
+## Editorial and implementation constraints
 
-- macOS/Linux: install `bin/say-it` + `data/pronunciations.tsv` + skill (unchanged otherwise).
-- Windows: install `bin/say-it.ps1`, `bin/say-it.cmd` shim, and `data/pronunciations.tsv` under `%LOCALAPPDATA%\say-it\`. Skill lands at `%USERPROFILE%\.claude\skills\pronounce-word\`.
-
-## Claude Code skill changes (`skills/pronounce-word/SKILL.md`)
-
-- Reframe purpose: "community-habitual pronunciation of English words and project/product names." Drop the accent-list framing.
-- Trigger patterns unchanged.
-- Document `--alt` / `--all` so the skill can surface both readings when the word is contested ("GIF 怎么读" → play primary, mention the alt exists, offer `say-it --alt GIF`).
-- Document Windows path: the skill should call `say-it` either way; the installed shim handles dispatch.
-
-## Open questions
-
-1. **Editorial process for the dict.** Open PRs only, or accept a `~/.say-it/pronunciations.local.tsv` override that takes precedence over the bundled one? (Lean: yes to local override, since pronunciation preferences are personal.)
-2. **Cloud TTS voice selection.** ElevenLabs has many voices; pick one default ("Rachel"? "Adam"?) and let `-v` override.
-3. **Windows audio of mp3.** SAPI can't speak mp3 input. Either request wav from the cloud provider (smaller voice catalog, more bandwidth) or bundle a tiny mp3 player. ElevenLabs supports `output_format=pcm_22050` which `System.Media.SoundPlayer` can play after wrapping in a WAV header — that's probably the cleanest path.
-4. **Linux.** Out of scope for this iteration. `espeak-ng` is the natural backend but its voice quality is significantly worse — likely a "cloud-only on Linux" stance.
-5. **README rewrite scope.** Wait until the dictionary has ~50 entries and Windows is functional, or update aspirationally now? (Lean: aspirational now under a "what's new" section; full rewrite after MVP.)
-
-## Milestones
-
-1. **M0 — design approval** (this doc).
-2. **M1 — dictionary** (`data/pronunciations.tsv` + ~30 seed entries, bash reads & uses it).
-3. **M2 — Windows MVP** (`bin/say-it.ps1` reaches feature parity with bash CLI minus `--cloud`).
-4. **M3 — cloud fallback** (ElevenLabs path on both platforms, cache, `--cloud` flag).
-5. **M4 — docs sweep** (README rewrite, skill update, CHANGELOG).
+- Lookup is case-insensitive while canonical display spelling is preserved.
+- Generated slugs replace each non-`[a-z0-9._-]` character with `-`.
+- Leave `source_url` empty when no defensible citation exists.
+- Keep the CLI/skill defaults in lockstep: three repetitions and 130 wpm.
+- Route TTS and playback through the backend helpers; do not add platform gates to
+  individual subcommands.
+- New runtime dependencies, hosted TTS, regional dictionaries, and homepage payload
+  reduction require separate design work.

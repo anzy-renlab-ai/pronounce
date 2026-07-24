@@ -82,7 +82,7 @@ function CommandPalette({ open, onClose, registerEgg }) {
             <span><kbd>↵</kbd> hear</span>
             <span><kbd>esc</kbd> close</span>
           </div>
-          <div>powered by Web Speech API</div>
+          <div>canonical MP3 · Web Speech fallback</div>
         </div>
       </div>
     </div>

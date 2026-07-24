@@ -6,9 +6,23 @@ on:
     paths:
       - 'data/pronunciations.tsv'
       - 'tools/build-site.sh'
+      - '.github/workflows/build-site.yml'
+      - 'docs/v2/audio.jsx'
+      - 'docs/v2/sections-1.jsx'
+      - 'docs/v2/sections-2.jsx'
+      - 'docs/v2/eggs.jsx'
+      - 'docs/v2/app.jsx'
+      - 'tools/build-v2-data.py'
+      - 'tools/build-v2-bundle.sh'
+      - 'tools/build-entry-dates.py'
+      - 'tools/build-scoreboard.py'
+      - 'tools/build-seo.py'
+      - 'tools/make-audio-all.py'
       - 'tools/make-og.py'
       - 'tools/make-og-all.py'
-      - '.github/workflows/build-site.yml'
+      - 'tools/test-v2-audio.mjs'
+      - 'tools/test_build_v2_data.py'
+      - 'tools/test_make_og_all.py'
   workflow_dispatch:
 
 concurrency:

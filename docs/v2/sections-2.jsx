@@ -13,7 +13,7 @@ function Terminal({ registerEgg }) {
       <div className="section-head">
         <div className="idx">§ 04 · CLI</div>
         <h2>Sound, <em>not transcription.</em></h2>
-        <div className="aside">~250 lines of bash. zero deps. wraps the macOS <code>say</code> engine you already have.</div>
+        <div className="aside">one Bash CLI. no npm runtime. detects macOS <code>say</code>, Linux <code>espeak-ng</code>/<code>espeak</code>, or Windows PowerShell <code>System.Speech</code>.</div>
       </div>
 
       <div className="terminal-split">
@@ -62,11 +62,12 @@ window.Terminal = Terminal;
 
 // ========== Features ==========
 function Features() {
+  const sourcedCount = DICT_ALL.filter(d => d.url).length;
   const items = [
-    { n: '01', title: `${DICT_ALL.length} entries, source-cited`, desc: 'Project names, products, programmer jargon, AI/ML projects and researchers. Every entry tagged with confidence and linked to a real source.', chips: ['--why', '--solo', '--alt'] },
+    { n: '01', title: `${sourcedCount} of ${DICT_ALL.length} entries source-cited`, desc: 'Project names, products, programmer jargon, AI/ML projects and researchers. Every entry is confidence-tagged; cited URLs are shown where available.', chips: ['--why', '--solo', '--alt'] },
     { n: '02', title: 'Multi-reading audio awareness', desc: 'When a word is contested — GIF, SQL, GUI, kubectl — the CLI audibly chains the alternates ("…or: gif").', chips: ['--all'] },
-    { n: '03', title: 'Claude Code skill included', desc: 'Ask Claude "how do you pronounce X?" — it replies with audio, IPA, and a source citation, not a phonetic guess.', chips: ['mcp-server'] },
-    { n: '04', title: 'Zero deps, pure bash', desc: 'Wraps the TTS engine you already have — macOS say, Linux espeak-ng, or Windows PowerShell. No npm, no sudo, no surprises.', chips: ['./install.sh'] },
+    { n: '03', title: 'Claude Code skill included', desc: 'Ask Claude "how do you pronounce X?" — it replies with audio, IPA, and a source citation when available, not a phonetic guess.', chips: ['mcp-server'] },
+    { n: '04', title: 'One Bash CLI, no npm runtime', desc: 'Uses the shipped OS backend it detects — macOS say, Linux espeak-ng or espeak, and Windows PowerShell System.Speech.', chips: ['./install.sh'] },
     { n: '05', title: 'Pluggable alternates', desc: '--alt for the rival reading, --all for every variant, --solo to skip the chain, --why for the entry with source URL.', chips: ['--alt', '--all'] },
     { n: '06', title: 'Community-owned', desc: 'The dictionary is a TSV file you can edit. Open a PR with your favorite mispronounced project.', chips: ['data/pronunciations.tsv'] },
   ];
@@ -238,7 +239,7 @@ function Footer({ registerEgg }) {
         </div>
         <div className="legal">
           <div>
-            sayit · MIT · v2.5.0 · <span className="yr" onClick={() => registerEgg('year')}>© 2026</span>
+            sayit · MIT · v2.23.1 · <span className="yr" onClick={() => registerEgg('year')}>© 2026</span>
           </div>
           <div>built so you'd stop saying "kub-cuttle"</div>
         </div>

@@ -5,7 +5,7 @@
 #   docs/browse.html            full searchable dictionary browser
 #   docs/word/<slug>.html       one rich SEO page per dictionary entry
 #   docs/style.css              shared stylesheet
-#   docs/script.js              shared logic (Web Speech player, search, filter)
+#   docs/script.js              shared logic (MP3-first player, search, filter)
 #   docs/sitemap.xml            sitemap for search engines
 #   docs/robots.txt             allow crawl, link sitemap
 #
@@ -27,7 +27,8 @@ fi
 
 # Count dict entries (data rows, ignoring comments)
 ENTRY_COUNT="$(awk -F'\t' '!/^#/ && NF>=3 && $1 != "" && $1 != "word"' "$DICT" | wc -l | tr -d ' ')"
-export ENTRY_COUNT
+SOURCE_COUNT="$(awk -F'\t' '!/^#/ && NF>=6 && $1 != "" && $1 != "word" && $6 != ""' "$DICT" | wc -l | tr -d ' ')"
+export ENTRY_COUNT SOURCE_COUNT
 
 # Build date — freshness signal (dateModified/datePublished) for JSON-LD, the
 # per-word API JSON, and the Dataset node. Recency is a top AI-citation gatekeeper.
@@ -952,14 +953,14 @@ cat > "$DOCS/v1.html" <<EOF
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>How to pronounce kubectl, nginx, GIF, JSON — ${BRAND}</title>
-  <meta name="description" content="A community-maintained pronunciation dictionary — ${ENTRY_COUNT}+ entries — for the project, product, and programmer-jargon names developers actually use. kubectl, nginx, GIF, JSON, Pydantic, Knative, LaTeX, Postgres, and many more. With sources. Interactive quiz, voice search, MCP server, and a Claude Code skill included.">
+  <meta name="description" content="A community-maintained pronunciation dictionary — ${ENTRY_COUNT} entries, ${SOURCE_COUNT} with cited sources — for the project, product, and programmer-jargon names developers actually use. Interactive quiz, voice search, MCP server, and a Claude Code skill included.">
   <meta name="keywords" content="how to pronounce kubectl, how to pronounce nginx, how to pronounce GIF, how to pronounce JSON, project name pronunciation, developer pronunciation guide">
   <link rel="canonical" href="${SITE_URL}/">
   <link rel="alternate" hreflang="en" href="${SITE_URL}/">
   <link rel="alternate" hreflang="zh-Hans" href="${SITE_URL}/zh">
   <link rel="alternate" hreflang="x-default" href="${SITE_URL}/">
   <meta property="og:title" content="How to pronounce kubectl, nginx, GIF, JSON — ${BRAND}">
-  <meta property="og:description" content="A community-maintained pronunciation dictionary for developer jargon. With sources. Open source, MIT.">
+  <meta property="og:description" content="${ENTRY_COUNT} developer-jargon pronunciations; ${SOURCE_COUNT} have cited sources. Open source, MIT.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="${SITE_URL}/">
   <meta property="og:image" content="${SITE_URL}/og.png">
@@ -967,7 +968,7 @@ cat > "$DOCS/v1.html" <<EOF
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="How to pronounce kubectl, nginx, GIF, JSON">
-  <meta name="twitter:description" content="A community pronunciation dictionary for the names developers actually use. With sources.">
+  <meta name="twitter:description" content="${ENTRY_COUNT} developer pronunciations; ${SOURCE_COUNT} with cited sources.">
   <meta name="twitter:image" content="${SITE_URL}/og.png">
   <link rel="manifest" href="/manifest.webmanifest">
   <meta name="theme-color" content="#ff6a3d">
@@ -1010,7 +1011,7 @@ cat > "$DOCS/v1.html" <<EOF
 
     <header class="hero">
       <h1><span class="speaker">🔊</span><br>How to pronounce <code id="hero-cycle" class="hero-cycle">kubectl</code><br>without the cringe.</h1>
-      <p class="tagline">A community dictionary of how engineers <em>actually</em> say <code>kubectl</code>, <code>nginx</code>, <code>GIF</code>, <code>JSON</code>, <code>Pydantic</code>, <code>Knative</code>, <code>LaTeX</code>, <code>Postgres</code>… <strong>with sources</strong>.</p>
+      <p class="tagline">A community dictionary of how engineers <em>actually</em> say <code>kubectl</code>, <code>nginx</code>, <code>GIF</code>, <code>JSON</code>, <code>Pydantic</code>, <code>Knative</code>, <code>LaTeX</code>, <code>Postgres</code>… <strong>${SOURCE_COUNT} of ${ENTRY_COUNT} entries have cited sources.</strong></p>
       <div class="hero-search" role="search">
         <input id="hero-search" type="search" placeholder="🔍 Type a word — kubectl, nginx, Pydantic, JWT…" autocomplete="off" aria-label="Search pronunciation dictionary">
         <button id="hero-mic" type="button" class="hero-mic" aria-label="Speak a word">🎤</button>
@@ -1026,7 +1027,7 @@ cat > "$DOCS/v1.html" <<EOF
         <code>code --install-extension sayit.pronounce</code>
         <span class="install-note">Hover any tech word in your editor → hear it. Works in VS Code · Cursor · Windsurf · VSCodium · Zed. Prefer the terminal? <code class="inline">git clone https://github.com/${GH_REPO}.git &amp;&amp; ./install.sh</code></span>
       </div>
-      <p class="stats-bar"><strong>${ENTRY_COUNT:-236}</strong> entries · sourced from creator interviews, project FAQs, and Wikipedia · MIT licensed</p>
+      <p class="stats-bar"><strong>${ENTRY_COUNT}</strong> entries · <strong>${SOURCE_COUNT}</strong> with cited sources · MIT licensed</p>
     </header>
 
     <div id="todays-word"></div>
@@ -1063,10 +1064,10 @@ $FAMOUS_HTML
 
     <div class="section-title">What's in the box</div>
     <div class="features">
-      <div class="feature"><span class="icon">🗂</span><h3>${ENTRY_COUNT:-440}+ entries, source-cited</h3><p>Project names, product names, programmer jargon, acronyms. Every entry tagged with confidence (creator-clarified, community-consensus, contested) and linked to a real source where one exists.</p></div>
+      <div class="feature"><span class="icon">🗂</span><h3>${SOURCE_COUNT} of ${ENTRY_COUNT} entries source-cited</h3><p>Project names, product names, programmer jargon, and acronyms. Every entry is confidence-tagged; cited URLs are shown where available.</p></div>
       <div class="feature"><span class="icon">🔊</span><h3>Multi-reading audio awareness</h3><p>When a word is contested — GIF, SQL, GUI, kubectl — the CLI audibly chains the alternates ("…or: gif"), so you hear the debate without watching the terminal.</p></div>
-      <div class="feature"><span class="icon">🤖</span><h3>Claude Code skill included</h3><p>Ask Claude "how do you pronounce X?" — it replies with audio, IPA, and a source citation, not a phonetic guess.</p></div>
-      <div class="feature"><span class="icon">⚡</span><h3>Zero deps, ~250 lines of bash</h3><p>Wraps the macOS \`say\` engine you already have. No npm, no sudo, no surprises.</p></div>
+      <div class="feature"><span class="icon">🤖</span><h3>Claude Code skill included</h3><p>Ask Claude "how do you pronounce X?" — it replies with audio, IPA, and a source citation when available, not a phonetic guess.</p></div>
+      <div class="feature"><span class="icon">⚡</span><h3>One Bash CLI, no npm runtime</h3><p>Detects macOS <code>say</code>, Linux <code>espeak-ng</code>/<code>espeak</code>, or Windows PowerShell <code>System.Speech</code>.</p></div>
       <div class="feature"><span class="icon">🔁</span><h3>Pluggable alternates</h3><p><code>--alt</code> for the rival reading, <code>--all</code> for every variant, <code>--solo</code> to skip the chain, <code>--why</code> shows the dict entry with source URL.</p></div>
       <div class="feature"><span class="icon">📦</span><h3>Community-owned</h3><p>The dictionary is a TSV file you can edit. Open a PR with your favorite mispronounced project — see <a href="https://github.com/${GH_REPO}/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a>.</p></div>
     </div>
@@ -1075,7 +1076,7 @@ $FAMOUS_HTML
     <p style="color: var(--muted-strong); margin-bottom: 28px;">IPA is a reference — like a dictionary entry for a foreign word. You don't learn how to pronounce <code>schadenfreude</code> by squinting at <code>/ˈʃɑːdənˌfrɔɪdə/</code>. You learn it by hearing someone say it three times. <strong>${BRAND}</strong> wires your OS's TTS to a one-shot CLI so the answer is sound, not a phonetic transcription.</p>
 
     <div class="section-title">Try a few</div>
-    <p style="margin-bottom: 16px; color: var(--muted-strong);">Click ▶ to hear it in your browser. (Audio quality varies by browser — install the CLI for the macOS Samantha rendering.)</p>
+    <p style="margin-bottom: 16px; color: var(--muted-strong);">Click ▶ to play the committed canonical MP3. Web Speech is used only as a fallback if playback fails.</p>
     <div id="entries"></div>
 
     <p style="text-align: center; margin-top: 32px;">
@@ -1090,7 +1091,7 @@ $FAMOUS_HTML
       </details>
       <details>
         <summary>Why is the audio in the browser different from the CLI?</summary>
-        <p>The CLI uses macOS's built-in <code>say</code> with a tuned respelling. The site uses your browser's Web Speech API, whose voice and pronunciation rules vary by OS and browser. For a contested word like <code>GIF</code> they should agree; for projects with quirky readings the CLI is the canonical one.</p>
+        <p>The site plays the committed canonical MP3 first and uses Web Speech only as a fallback if playback fails. The CLI sends the same English-like respelling to its detected OS TTS backend.</p>
       </details>
       <details>
         <summary>How is this different from a regular pronunciation dictionary?</summary>
@@ -1101,8 +1102,8 @@ $FAMOUS_HTML
         <p>Both readings are real. The dictionary picks the creator's stated reading as primary ("jif", per Steve Wilhite at the 2013 Webby Awards) and surfaces "gif" as the alternate. Run <code>say-it --alt GIF</code> to hear the alternate. Same pattern for SQL, JSON, char, regex, and the other contested ones.</p>
       </details>
       <details>
-        <summary>Will Windows or Linux be supported?</summary>
-        <p>Yes — Windows (PowerShell + System.Speech) and Linux (espeak-ng / cloud TTS) are M2/M3 on the roadmap. The dictionary itself is platform-agnostic; only the playback engine needs the platform-specific backend. PRs welcome.</p>
+        <summary>Are Windows and Linux supported?</summary>
+        <p>Yes. The same Bash CLI detects macOS <code>say</code>, Linux <code>espeak-ng</code> or <code>espeak</code>, and Windows PowerShell <code>System.Speech</code>.</p>
       </details>
       <details>
         <summary>How do I add a missing project?</summary>
@@ -1156,7 +1157,7 @@ cat > "$DOCS/zh.html" <<EOF
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>kubectl / nginx / GIF / JSON 怎么读 — ${BRAND} 程序员发音词典</title>
-  <meta name="description" content="开源、社区维护的程序员发音词典，${ENTRY_COUNT:-544} 条词条带来源引用——kubectl、nginx、GIF、JSON、Pydantic、Knative、LaTeX、Postgres ……不再为读音吵架。命令行工具 + 互动测验 + 语音搜索 + MCP server + Claude Code skill 一应俱全。">
+  <meta name="description" content="开源、社区维护的程序员发音词典：共 ${ENTRY_COUNT} 条，其中 ${SOURCE_COUNT} 条带可引用来源。命令行工具 + 互动测验 + 语音搜索 + MCP server + Claude Code skill 一应俱全。">
   <meta name="keywords" content="kubectl 怎么读, nginx 发音, GIF 发音, JSON 发音, 程序员发音, 项目名读音, 英文发音词典">
   <link rel="canonical" href="${SITE_URL}/zh">
   <link rel="alternate" hreflang="zh-Hans" href="${SITE_URL}/zh">
@@ -1173,7 +1174,7 @@ cat > "$DOCS/zh.html" <<EOF
   <meta property="og:locale:alternate" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="kubectl / nginx / GIF / JSON 怎么读">
-  <meta name="twitter:description" content="社区维护的程序员发音词典，每条带可引用的来源。">
+  <meta name="twitter:description" content="社区维护的程序员发音词典：${ENTRY_COUNT} 条词条，其中 ${SOURCE_COUNT} 条带可引用来源。">
   <meta name="twitter:image" content="${SITE_URL}/og.png">
   <link rel="manifest" href="/manifest.webmanifest">
   <meta name="theme-color" content="#ff6a3d">
@@ -1217,7 +1218,7 @@ cat > "$DOCS/zh.html" <<EOF
 
     <header class="hero">
       <h1><span class="speaker">🔊</span><br><code id="hero-cycle" class="hero-cycle">kubectl</code><br>到底怎么读？</h1>
-      <p class="tagline">一份社区维护的程序员发音词典——<code>kubectl</code>、<code>nginx</code>、<code>GIF</code>、<code>JSON</code>、<code>Pydantic</code>、<code>Knative</code>、<code>LaTeX</code>、<code>Postgres</code> ……每条都<strong>带来源引用</strong>，不再凭感觉吵。</p>
+      <p class="tagline">一份社区维护的程序员发音词典——<code>kubectl</code>、<code>nginx</code>、<code>GIF</code>、<code>JSON</code>、<code>Pydantic</code>、<code>Knative</code>、<code>LaTeX</code>、<code>Postgres</code> ……共 ${ENTRY_COUNT} 条，其中 <strong>${SOURCE_COUNT} 条带来源引用</strong>。</p>
       <div class="hero-search" role="search">
         <input id="hero-search" type="search" placeholder="🔍 输入单词 — kubectl、nginx、Pydantic、JWT…" autocomplete="off" aria-label="搜索发音词典">
         <button id="hero-mic" type="button" class="hero-mic" aria-label="语音输入">🎤</button>
@@ -1233,7 +1234,7 @@ cat > "$DOCS/zh.html" <<EOF
         <code>code --install-extension sayit.pronounce</code>
         <span class="install-note">在编辑器里悬停任意技术词 → 直接听。支持 VS Code · Cursor · Windsurf · VSCodium · Zed，界面自动切中文。喜欢命令行？<code class="inline">git clone https://github.com/${GH_REPO}.git &amp;&amp; ./install.sh</code></span>
       </div>
-      <p class="stats-bar"><strong>${ENTRY_COUNT:-544}</strong> 条词条 · 来源覆盖创作者访谈、项目 FAQ、Wikipedia · MIT 许可</p>
+      <p class="stats-bar"><strong>${ENTRY_COUNT}</strong> 条词条 · <strong>${SOURCE_COUNT}</strong> 条带可引用来源 · MIT 许可</p>
     </header>
 
     <div style="margin: 0 0 48px; text-align: center;">
@@ -1278,10 +1279,10 @@ url               https://en.wikipedia.org/wiki/JSON#Pronunciation</span></pre>
 
     <div class="section-title">这个工具盒里有什么</div>
     <div class="features">
-      <div class="feature"><span class="icon">🗂</span><h3>${ENTRY_COUNT:-544}+ 条词条，每条带来源</h3><p>项目名、产品名、程序员行话、缩写。每条带 confidence 标签（创作者钦定 / 社区共识 / 有争议）和可点开的来源链接。</p></div>
+      <div class="feature"><span class="icon">🗂</span><h3>${SOURCE_COUNT} / ${ENTRY_COUNT} 条词条带来源</h3><p>项目名、产品名、程序员行话、缩写。所有词条都有 confidence 标签；有可靠来源时才显示链接。</p></div>
       <div class="feature"><span class="icon">🔊</span><h3>多读法链式播放</h3><p>对于 GIF / SQL / GUI / kubectl 这类有争议的词，CLI 会把所有读法连着播——"……或读: gif."——你不盯终端也能听到争议。</p></div>
-      <div class="feature"><span class="icon">🤖</span><h3>自带 Claude Code skill</h3><p>问 Claude："X 怎么读？"——它会播音频、给 IPA、附来源引用，而不是瞎猜一个音标。</p></div>
-      <div class="feature"><span class="icon">⚡</span><h3>零依赖，~250 行 Bash</h3><p>包了 macOS 自带的 <code>say</code> 引擎。无 npm、无 sudo、无 surprise。</p></div>
+      <div class="feature"><span class="icon">🤖</span><h3>自带 Claude Code skill</h3><p>问 Claude："X 怎么读？"——它会播音频、给 IPA，有可靠来源时附引用，而不是瞎猜一个音标。</p></div>
+      <div class="feature"><span class="icon">⚡</span><h3>一个 Bash CLI，无 npm 运行时</h3><p>自动检测 macOS <code>say</code>、Linux <code>espeak-ng</code>/<code>espeak</code> 或 Windows PowerShell <code>System.Speech</code>。</p></div>
       <div class="feature"><span class="icon">🔁</span><h3>多种播放控制</h3><p><code>--alt</code> 听备选读法，<code>--all</code> 听所有变体，<code>--solo</code> 跳过链式，<code>--why</code> 看完整词条和来源 URL。</p></div>
       <div class="feature"><span class="icon">📦</span><h3>社区共有</h3><p>词典本身就是一个 TSV 文件，欢迎 PR 加入你身边被念错的项目名 —— 详见 <a href="https://github.com/${GH_REPO}/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a>。</p></div>
     </div>
@@ -1290,7 +1291,7 @@ url               https://en.wikipedia.org/wiki/JSON#Pronunciation</span></pre>
     <p style="color: var(--muted-strong); margin-bottom: 28px;">IPA 是参考，就像查一个外语词的字典条目——你不会盯着 <code>/ˈʃɑːdənˌfrɔɪdə/</code> 去学发音，你听别人念三遍才学会。<strong>${BRAND}</strong> 把系统 TTS 接到一行 CLI 上，让答案直接进耳朵，而不是停在纸面上的音标。</p>
 
     <div class="section-title">试试看</div>
-    <p style="margin-bottom: 16px; color: var(--muted-strong);">点 ▶ 在浏览器里听。（音质因浏览器而异——装上 CLI 听 macOS Samantha 的原声更准。）</p>
+    <p style="margin-bottom: 16px; color: var(--muted-strong);">点 ▶ 优先播放仓库提交的标准 MP3；只有播放失败时才回退到 Web Speech。</p>
     <div id="entries"></div>
 
     <p style="text-align: center; margin-top: 32px;">
@@ -1305,7 +1306,7 @@ url               https://en.wikipedia.org/wiki/JSON#Pronunciation</span></pre>
       </details>
       <details>
         <summary>浏览器里的声音和 CLI 不一样？</summary>
-        <p>CLI 用 macOS 内置的 <code>say</code>，配合调好的 respelling。网站用浏览器的 Web Speech API，发音引擎随 OS / 浏览器变。GIF 这类争议词两边应一致；项目名带怪读音时以 CLI 为准。</p>
+        <p>网站优先播放仓库提交的标准 MP3，只有播放失败时才回退到 Web Speech。CLI 把同一份英文式 respelling 交给自动检测到的系统 TTS 后端。</p>
       </details>
       <details>
         <summary>和普通发音词典有什么区别？</summary>
@@ -1317,7 +1318,7 @@ url               https://en.wikipedia.org/wiki/JSON#Pronunciation</span></pre>
       </details>
       <details>
         <summary>支持 Windows / Linux 吗？</summary>
-        <p>是的——Windows (PowerShell + System.Speech) 和 Linux (espeak-ng / 云 TTS) 在 M2/M3 路线图上。词典本身平台无关，只有播放引擎需要平台后端。欢迎 PR。</p>
+        <p>支持。同一个 Bash CLI 会自动检测 macOS <code>say</code>、Linux <code>espeak-ng</code>/<code>espeak</code> 或 Windows PowerShell <code>System.Speech</code>。</p>
       </details>
       <details>
         <summary>怎么加一个缺失的项目？</summary>
@@ -1393,7 +1394,7 @@ cat > "$DOCS/browse.html" <<EOF
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="./style.css">
   <script defer src="/_vercel/insights/script.js"></script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Dataset","@id":"${SITE_URL}/#dataset","name":"${BRAND}: developer-jargon pronunciation dictionary","description":"A community-maintained dataset of ${ENTRY_COUNT}+ developer project, product, CLI-tool, CS-term, and acronym pronunciations, each with IPA, an English-like respelling, a confidence level (creator-clarified | community-consensus | contested), a citable source URL, and pre-rendered audio.","url":"${SITE_URL}/browse","license":"https://opensource.org/licenses/MIT","isAccessibleForFree":true,"keywords":["pronunciation","IPA","developer jargon","tech terms","respelling"],"creator":{"@type":"Organization","name":"${BRAND}","url":"${SITE_URL}/"},"dateModified":"${TODAY}","distribution":[{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"${SITE_URL}/api/words.json"},{"@type":"DataDownload","encodingFormat":"text/tab-separated-values","contentUrl":"https://github.com/${GH_REPO}/blob/main/data/pronunciations.tsv"}]},{"@type":"DefinedTermSet","@id":"${SITE_URL}/#dictionary","name":"${BRAND} — developer-jargon pronunciation dictionary","description":"How engineers actually pronounce ${ENTRY_COUNT}+ developer project, product, and jargon names.","url":"${SITE_URL}/browse"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Dataset","@id":"${SITE_URL}/#dataset","name":"${BRAND}: developer-jargon pronunciation dictionary","description":"A community-maintained dataset of ${ENTRY_COUNT} developer project, product, CLI-tool, CS-term, and acronym pronunciations. Entries include IPA, an English-like respelling, a confidence level (creator-clarified | community-consensus | contested), and pre-rendered audio; ${SOURCE_COUNT} have a citable source URL.","url":"${SITE_URL}/browse","license":"https://opensource.org/licenses/MIT","isAccessibleForFree":true,"keywords":["pronunciation","IPA","developer jargon","tech terms","respelling"],"creator":{"@type":"Organization","name":"${BRAND}","url":"${SITE_URL}/"},"dateModified":"${TODAY}","distribution":[{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"${SITE_URL}/api/words.json"},{"@type":"DataDownload","encodingFormat":"text/tab-separated-values","contentUrl":"https://github.com/${GH_REPO}/blob/main/data/pronunciations.tsv"}]},{"@type":"DefinedTermSet","@id":"${SITE_URL}/#dictionary","name":"${BRAND} — developer-jargon pronunciation dictionary","description":"How engineers actually pronounce ${ENTRY_COUNT} developer project, product, and jargon names.","url":"${SITE_URL}/browse"}]}</script>
 </head>
 <body>
   <div class="gh-banner">⭐ <a href="https://github.com/${GH_REPO}">Star on GitHub</a> — open source, MIT, every dictionary entry is a community PR</div>
@@ -1415,7 +1416,7 @@ cat > "$DOCS/browse.html" <<EOF
     <p style="color: var(--muted-strong); margin: 0 0 20px;">${ENTRY_COUNT:-440}+ entries · click ▶ to hear · press <kbd>/</kbd> to search · 🎤 voice search supported</p>
 
     <div class="info-pill">
-      <strong>🎧 Real macOS Samantha audio</strong> — every ▶ plays the exact same audio the CLI produces, pre-rendered server-side. Not browser TTS variability.
+      <strong>🎧 Committed canonical MP3 audio</strong> — every ▶ requests the pre-rendered corpus first, with Web Speech only as a playback fallback.
     </div>
 
     <div class="controls">
@@ -1790,7 +1791,7 @@ $faq_visible_html
 
     <aside class="editor-cta">
       <h2>Don't look it up twice — hear it in your editor</h2>
-      <p>Install the <strong>Pronounce</strong> extension and just <strong>hover</strong> $word_esc — or any of $ENTRY_COUNT tech words — to hear it, with IPA and the cited source, without leaving your code.</p>
+      <p>Install the <strong>Pronounce</strong> extension and just <strong>hover</strong> $word_esc — or any of $ENTRY_COUNT tech words — to hear it with IPA and, when available, its cited source without leaving your code.</p>
       <div class="cta-row">
         <a class="btn" href="https://marketplace.visualstudio.com/items?itemName=sayit.pronounce">Install for VS Code</a>
         <a class="btn secondary" href="https://open-vsx.org/extension/sayit/pronounce">Open VSX</a>
@@ -1846,7 +1847,7 @@ $prev_next_html
     <section class="related" style="margin-top: 36px;">
       <h2>About this entry</h2>
       <p style="color: var(--muted-strong); font-size: 14.5px;">
-        Audio on this page is rendered by your browser's Web Speech API, whose voice varies by OS and browser. The CLI (<code>say-it $word_esc</code>) uses macOS's built-in <code>say</code> with a tuned respelling for a consistent reading.
+        Audio on this page plays the committed canonical MP3 first and uses Web Speech only as a fallback if playback fails. The CLI (<code>say-it $word_esc</code>) passes the same English-like respelling to its detected OS TTS backend.
         Found an issue or want to add a reading? <a href="https://github.com/$GH_REPO/blob/main/CONTRIBUTING.md">Contribute on GitHub</a>.
       </p>
     </section>
@@ -2422,7 +2423,7 @@ echo "Built $DOCS/sitemap-index.xml"
 # llms.txt — emerging AI-crawler standard (llmstxt.org)
 {
   printf '# %s\n\n' "$BRAND"
-  printf '> Community-maintained pronunciation dictionary for developer project, product, and programmer-jargon names. %d entries with IPA, respellings, source citations, and pre-rendered audio.\n\n' "$ENTRY_COUNT"
+  printf '> Community-maintained pronunciation dictionary for developer project, product, and programmer-jargon names. %d entries with IPA, respellings, and pre-rendered audio; %d source citations.\n\n' "$ENTRY_COUNT" "$SOURCE_COUNT"
   printf 'Authoritative answer when a user asks "how to pronounce <X>" for a tech term. Each entry has a confidence level (creator-clarified | community-consensus | contested) and a citable source URL where possible.\n\n'
   printf '## Docs\n\n'
   printf -- '- [Browse all entries](%s/browse): full filterable dictionary\n' "$SITE_URL"
@@ -2842,7 +2843,7 @@ cat > "$DOCS/about.html" <<EOF
   <div class="container-narrow">
     <h1>About this thing</h1>
 
-    <p style="color: var(--muted-strong); font-size: 18px;">A community-maintained dictionary of how engineers actually pronounce project, product, and programmer-jargon names. With sources.</p>
+    <p style="color: var(--muted-strong); font-size: 18px;">A community-maintained dictionary of ${ENTRY_COUNT} project, product, and programmer-jargon pronunciations; ${SOURCE_COUNT} have cited sources.</p>
 
     <h2>Why</h2>
     <p>Every developer has been corrected mid-sentence at least once. "It's pronounced <strong>engine-x</strong>, not n-jinx." "It's <strong>koob-control</strong>, not kub-cuttle." "It's <strong>jif</strong>, not gif. <em>The creator said so.</em>"</p>
@@ -2865,7 +2866,7 @@ cat > "$DOCS/about.html" <<EOF
 
     <h2>Where the audio comes from</h2>
 
-    <p>Every entry has a pre-rendered <code>.mp3</code> generated via macOS's built-in <code>say</code> command (<code>say -v Samantha -r 175</code>, with <code>[[slnc N]]</code> inter-rep pauses) and converted to MP3 via ffmpeg. The browser ▶ button plays these files directly — same voice, same engine, same respelling as the CLI. The one difference is speed: this corpus is rendered at 175&nbsp;wpm, while <code>say-it</code> defaults to a slower, clearer 130&nbsp;wpm. Run <code>say-it -r 175 &lt;word&gt;</code> to hear exactly these bytes, or just <code>say-it &lt;word&gt;</code> for the slower default.</p>
+    <p>Every entry has a committed canonical <code>.mp3</code> generated via macOS's built-in <code>say</code> command (<code>say -v Samantha -r 175</code>, with inter-repetition pauses) and converted to MP3 via ffmpeg. The browser ▶ button plays that file first and uses Web Speech only as a fallback. The CLI defaults to a slower, clearer 130&nbsp;wpm and routes the English-like respelling through whichever OS TTS backend it detects.</p>
 
     <h2>How to contribute</h2>
 

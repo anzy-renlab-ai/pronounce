@@ -82,7 +82,7 @@ function Hero({ onWordClick, registerEgg }) {
           </h1>
           <p className="lede">
             A community dictionary of how engineers <strong>actually</strong> say <code>kubectl</code>, <code>nginx</code>, <code>GIF</code>, <code>JSON</code>, <code>Pydantic</code>, <code>Knative</code>, <code>LaTeX</code>, <code>Postgres</code>…<br/>
-            <span style={{ color: 'var(--accent)', fontStyle: 'italic' }}>with sources.</span>
+            <span style={{ color: 'var(--accent)', fontStyle: 'italic' }}>with cited sources where available.</span>
           </p>
           <div className="cta-row">
             <a href="https://marketplace.visualstudio.com/items?itemName=sayit.pronounce" className="btn primary">
@@ -124,7 +124,7 @@ function Hero({ onWordClick, registerEgg }) {
         <div className="metric"><div className="n">{DICT_ALL.length}</div><div className="l">Entries</div></div>
         <div className="metric"><div className="n">{DICT_ALL.filter(d => d.url).length}</div><div className="l">Sources cited</div></div>
         <div className="metric"><div className="n">{DICT_ALL.filter(d => d.conf === 'contested').length}</div><div className="l">Contested readings</div></div>
-        <div className="metric"><div className="n">~<em>250</em></div><div className="l">Lines of bash</div></div>
+        <div className="metric"><div className="n">1</div><div className="l">Bash CLI</div></div>
       </div>
     </section>
   );
@@ -168,7 +168,7 @@ function WordGrid({ registerEgg }) {
       <div className="section-head">
         <div className="idx">§ 02 · Dictionary</div>
         <h2>Try a few. <em>Click</em> to hear.</h2>
-        <div className="aside">audio quality varies by browser. install the CLI for the canonical macOS rendering.</div>
+        <div className="aside">every play starts with the committed canonical MP3; Web Speech is only the fallback when playback fails.</div>
       </div>
 
       {/* filter chips */}

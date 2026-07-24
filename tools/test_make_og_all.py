@@ -5,6 +5,7 @@ import copy
 import importlib.util
 import io
 import json
+import re
 import shutil
 import sys
 import tempfile
@@ -853,6 +854,112 @@ class CliTests(unittest.TestCase):
         self.assertIn("error:", stderr)
         self.assertIn("example.png", stderr)
         self.assertEqual(self.manifest_path.read_bytes(), before_manifest)
+
+
+class WorkflowClosureTests(unittest.TestCase):
+    REPO = SCRIPT.parent.parent
+    BUILD_WORKFLOW = REPO / ".github" / "workflows" / "build-site.yml"
+    CI_WORKFLOW = REPO / ".github" / "workflows" / "ci.yml"
+    COMMON_SOURCE_AND_TEST_PATHS = (
+        "data/pronunciations.tsv",
+        "tools/build-site.sh",
+        "docs/v2/audio.jsx",
+        "docs/v2/sections-1.jsx",
+        "docs/v2/sections-2.jsx",
+        "docs/v2/eggs.jsx",
+        "docs/v2/app.jsx",
+        "tools/build-v2-data.py",
+        "tools/build-v2-bundle.sh",
+        "tools/build-entry-dates.py",
+        "tools/build-scoreboard.py",
+        "tools/build-seo.py",
+        "tools/make-audio-all.py",
+        "tools/make-og.py",
+        "tools/make-og-all.py",
+        "tools/test-v2-audio.mjs",
+        "tools/test_build_v2_data.py",
+        "tools/test_make_og_all.py",
+    )
+    FACT_DOC_PATHS = (
+        "README.md",
+        "CLAUDE.md",
+        "DESIGN.md",
+        "CONTRIBUTING.md",
+        "integrations/codex/AGENTS.md",
+        "docs/v2/index.html",
+        "CHANGELOG.md",
+    )
+
+    @staticmethod
+    def source(path):
+        return path.read_text(encoding="utf-8")
+
+    @classmethod
+    def push_paths(cls, path):
+        source = cls.source(path)
+        match = re.search(
+            r"(?ms)^  push:\n.*?^    paths:\n"
+            r"(?P<paths>(?:      - ['\"][^'\"]+['\"]\n)+)",
+            source,
+        )
+        if match is None:
+            raise AssertionError(f"{path} must define on.push.paths")
+        return tuple(
+            re.findall(r"^      - ['\"]([^'\"]+)['\"]$", match["paths"], re.MULTILINE)
+        )
+
+    def test_build_site_push_paths_are_the_exact_source_closure(self):
+        expected = (
+            *self.COMMON_SOURCE_AND_TEST_PATHS[:2],
+            ".github/workflows/build-site.yml",
+            *self.COMMON_SOURCE_AND_TEST_PATHS[2:],
+        )
+        actual = self.push_paths(self.BUILD_WORKFLOW)
+        self.assertEqual(actual, expected)
+        self.assertNotIn("docs/v2/data.js", actual)
+        self.assertNotIn("docs/v2/bundle.js", actual)
+
+    def test_ci_push_paths_are_the_exact_source_fact_and_test_closure(self):
+        expected = (
+            "bin/say-it",
+            *self.COMMON_SOURCE_AND_TEST_PATHS[:2],
+            ".github/workflows/ci.yml",
+            ".github/workflows/build-site.yml",
+            *self.COMMON_SOURCE_AND_TEST_PATHS[2:],
+            "tools/lint-dict.sh",
+            "tools/smoke-test.sh",
+            *self.FACT_DOC_PATHS,
+        )
+        actual = self.push_paths(self.CI_WORKFLOW)
+        self.assertEqual(actual, expected)
+        self.assertNotIn("docs/v2/data.js", actual)
+        self.assertNotIn("docs/v2/bundle.js", actual)
+
+    def test_ci_has_pinned_ubuntu_release_guard_with_exact_commands(self):
+        source = self.source(self.CI_WORKFLOW)
+        release_guard = re.search(
+            r"(?ms)^  release-guard:\n(?P<body>.*?)(?=^  [a-zA-Z0-9_-]+:\n|\Z)",
+            source,
+        )
+        self.assertIsNotNone(release_guard, "CI must define a release-guard job")
+        body = release_guard["body"]
+        self.assertIn("    runs-on: ubuntu-latest\n", body)
+        self.assertRegex(
+            body,
+            r"uses: actions/checkout@[0-9a-f]{40}\s+# v4",
+        )
+        self.assertRegex(
+            body,
+            r"uses: actions/setup-python@[0-9a-f]{40}\s+# v5",
+        )
+        self.assertIn("python-version: '3.12'", body)
+        self.assertIn("run: python -m pip install Pillow", body)
+        self.assertIn("run: node --test tools/test-v2-audio.mjs", body)
+        self.assertIn(
+            "run: python -m unittest "
+            "tools/test_build_v2_data.py tools/test_make_og_all.py",
+            body,
+        )
 
 
 if __name__ == "__main__":

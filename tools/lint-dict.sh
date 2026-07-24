@@ -141,10 +141,10 @@ else echo "  ✓ every entry has its OG card and audio file"; fi
 # Source coverage (informational — does NOT fail the lint; we never fabricate URLs)
 echo "[coverage] source citations..."
 awk -F'\t' '
-  !/^#/ && NF>=3 && $1 != "" && $1 != "word" { tot++; if ($6 != "" || $7 != "") srcd++ }
+  !/^#/ && NF>=3 && $1 != "" && $1 != "word" { tot++; if ($6 != "") srcd++ }
   END {
     pct = tot ? int(srcd*1000/tot + 0.5)/10 : 0
-    printf "  %d/%d entries carry a source (%.1f%%); %d uncited\n", srcd, tot, pct, tot-srcd
+    printf "  %d/%d entries carry a citable source URL (%.1f%%); %d uncited\n", srcd, tot, pct, tot-srcd
   }
 ' "$DICT"
 
