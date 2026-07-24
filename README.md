@@ -93,8 +93,9 @@ $ say-it --why JSON
 word              JSON
 ipa               /ˈdʒeɪsən/
 respelling_us     jay son
-source            Douglas Crockford (RailsConf 2009)
-url               https://www.youtube.com/watch?v=-C-JoyNuQJs
+confidence        contested
+source            Wikipedia § Pronunciation
+url               https://en.wikipedia.org/wiki/JSON#Pronunciation
 ```
 
 ---

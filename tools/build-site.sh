@@ -1099,6 +1099,7 @@ cat > "$DOCS/v1.html" <<EOF
 <span class="comment">word              JSON
 ipa               /ˈdʒeɪsən/
 respelling_us     jay son
+confidence        contested
 source            Wikipedia § Pronunciation
 url               https://en.wikipedia.org/wiki/JSON#Pronunciation</span></pre>
 
@@ -1304,6 +1305,7 @@ cat > "$DOCS/zh.html" <<EOF
 <span class="comment">word              JSON
 ipa               /ˈdʒeɪsən/
 respelling_us     jay son
+confidence        contested
 source            Wikipedia § Pronunciation
 url               https://en.wikipedia.org/wiki/JSON#Pronunciation</span></pre>
 

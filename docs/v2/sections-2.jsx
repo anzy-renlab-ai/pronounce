@@ -48,8 +48,9 @@ function Terminal({ registerEgg }) {
             <div className="ln"><span className="key">word</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span className="val">JSON</span></div>
             <div className="ln"><span className="key">ipa</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span className="val">/ˈdʒeɪsən/</span></div>
             <div className="ln"><span className="key">respelling_us</span>&nbsp; <span className="val">jay son</span></div>
+            <div className="ln"><span className="key">confidence</span>&nbsp;&nbsp;&nbsp;&nbsp; <span className="val">contested</span></div>
             <div className="ln"><span className="key">source</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span className="val">Wikipedia § Pronunciation</span></div>
-            <div className="ln"><span className="key">confidence</span>&nbsp;&nbsp;&nbsp;&nbsp; <span className="val">creator</span></div>
+            <div className="ln"><span className="key">url</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span className="val">https://en.wikipedia.org/wiki/JSON#Pronunciation</span></div>
             <div className="ln">&nbsp;</div>
             <div className="ln"><span className="prompt">$</span> <span className="cursor"></span></div>
           </div>

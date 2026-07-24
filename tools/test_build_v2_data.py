@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import importlib.util
+import json
 import os
 import re
 import shutil
@@ -155,6 +156,99 @@ class RepositoryProductFactTests(unittest.TestCase):
 
     def source(self, path):
         return (REPO / path).read_text(encoding="utf-8")
+
+    def dictionary_entry(self, word):
+        lines = self.source("data/pronunciations.tsv").splitlines()
+        header = next(line.split("\t") for line in lines if line.startswith("word\t"))
+        row = next(
+            line.split("\t")
+            for line in lines
+            if not line.startswith("#") and line.split("\t", 1)[0] == word
+        )
+        self.assertEqual(len(row), len(header))
+        return dict(zip(header, row))
+
+    def cli_json_entry(self, word):
+        completed = subprocess.run(
+            [str(REPO / "bin" / "say-it"), "--json", word],
+            cwd=REPO,
+            env={
+                **os.environ,
+                "NO_COLOR": "1",
+                "SAY_IT_NO_HISTORY": "1",
+                "SAY_IT_DICT": str(REPO / "data" / "pronunciations.tsv"),
+                "SAY_IT_LOCAL_DICT": str(REPO / ".test-no-local-dict"),
+            },
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        return json.loads(completed.stdout)
+
+    def test_gif_demo_alternate_matches_dictionary_and_cli(self):
+        entry = self.dictionary_entry("GIF")
+        cli = self.cli_json_entry("GIF")
+
+        self.assertEqual(entry["alt_ipa"], "/ɡɪf/")
+        self.assertEqual(entry["alt_respelling_us"], "gif")
+        self.assertEqual(cli["alt_ipa"], [entry["alt_ipa"]])
+        self.assertEqual(
+            cli["alt_respelling_us"], [entry["alt_respelling_us"]]
+        )
+        self.assertEqual(cli["confidence"], entry["confidence"])
+        self.assertEqual(cli["source_url"], entry["source_url"])
+        self.assertEqual(cli["source_label"], entry["source_label"])
+
+        spoken_alternate = f"or: {cli['alt_respelling_us'][0]}."
+        self.assertIn(spoken_alternate, self.source("docs/v2/sections-2.jsx"))
+        self.assertIn(spoken_alternate, self.source("tools/build-site.sh"))
+
+    def test_json_why_demos_match_dictionary_and_cli(self):
+        entry = self.dictionary_entry("JSON")
+        cli = self.cli_json_entry("JSON")
+
+        for field in (
+            "ipa",
+            "respelling_us",
+            "source_url",
+            "source_label",
+            "confidence",
+        ):
+            with self.subTest(field=field):
+                self.assertEqual(cli[field], entry[field])
+
+        self.assertEqual(cli["confidence"], "contested")
+        self.assertEqual(cli["source_label"], "Wikipedia § Pronunciation")
+        self.assertEqual(
+            cli["source_url"],
+            "https://en.wikipedia.org/wiki/JSON#Pronunciation",
+        )
+
+        jsx_demo = self.source("docs/v2/sections-2.jsx").split(
+            '<span className="flag">--why</span> JSON', 1
+        )[1].split('<span className="prompt">$</span>', 1)[0]
+        readme_demo = self.source("README.md").split(
+            "$ say-it --why JSON", 1
+        )[1].split("```", 1)[0]
+        shell_demos = re.findall(
+            r"say-it --why JSON\n(.*?)</span></pre>",
+            self.source("tools/build-site.sh"),
+            re.DOTALL,
+        )
+        self.assertEqual(len(shell_demos), 2)
+
+        for name, demo in (
+            ("v2 terminal", jsx_demo),
+            ("README", readme_demo),
+            ("generated English source", shell_demos[0]),
+            ("generated Chinese source", shell_demos[1]),
+        ):
+            with self.subTest(demo=name):
+                self.assertIn(cli["ipa"], demo)
+                self.assertIn(cli["respelling_us"], demo)
+                self.assertIn(cli["source_label"], demo)
+                self.assertIn(cli["source_url"], demo)
+                self.assertIn(cli["confidence"], demo)
 
     def test_dictionary_has_exact_total_and_sourced_counts(self):
         rows = []
