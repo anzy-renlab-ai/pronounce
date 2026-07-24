@@ -56,7 +56,7 @@ That's it. Now try `say-it GIF`, `say-it nginx`, `say-it Pydantic`, `say-it --wh
 
 | Word | It's… | …not | Settled by |
 |------|-------|------|-----------|
-| **[GIF](https://pronounce.renlab.ai/word/gif)** | "jif" | "gif" (hard g) | Steve Wilhite (creator), NYT 2013 |
+| **[GIF](https://pronounce.renlab.ai/word/gif)** | "jif" | "ghif" (hard-G speech cue) | Steve Wilhite (creator), NYT 2013 |
 | **[nginx](https://pronounce.renlab.ai/word/nginx)** | "engine X" | "n-jinx" | NGINX official |
 | **[YAML](https://pronounce.renlab.ai/word/yaml)** | "yam-ul" | "yammel" | yaml.org |
 | **[GNU](https://pronounce.renlab.ai/word/gnu)** | "guh-NEW" (hard g) | "noo" | GNU Project |

@@ -8,7 +8,7 @@ Tiny Raycast wrapper around the `say-it` CLI.
 2. Open **Raycast → Settings → Extensions → Scripts → Add Script Directory** and point it at `integrations/raycast/` in this repo.
 3. Trigger Raycast (⌘-space), type **Pronounce**, hit Enter, type the word (e.g. `kubectl`), Enter again.
 
-The script reuses your installed dictionary (`data/pronunciations.tsv`), so contested words still play the alternates ("…or: gif").
+The script reuses your installed dictionary (`data/pronunciations.tsv`), so contested words still play the alternates ("…or: ghif" for GIF, using an explicit hard-G speech cue).
 
 ## Why a script command, not a full extension?
 

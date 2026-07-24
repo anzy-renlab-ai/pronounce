@@ -87,7 +87,7 @@ faqs = [
     {"q": "How is this different from a regular pronunciation dictionary?",
      "a": "This one's for the names engineers actually use — <code>kubectl</code>, <code>nginx</code>, <code>Pydantic</code>, <code>Knative</code>, <code>Ghostty</code>, <code>YAML</code>. Webster doesn't cover them; this does, with confidence tagging and a citable source where one exists."},
     {"q": "Why is GIF \"jif\" here? I always say \"gif\".",
-     "a": "Both are real. The dictionary picks the creator's stated reading as primary (\"jif\", per Wilhite at the 2013 Webby Awards) and surfaces \"gif\" as the alternate. Same pattern for SQL, JSON, char, regex."},
+     "a": "Both are real. The dictionary picks the creator's stated reading as primary (\"jif\", per Wilhite at the 2013 Webby Awards) and surfaces the hard-G \"gif\" reading using the unambiguous speech cue \"ghif\". Same pattern for SQL, JSON, char, regex."},
     {"q": "Windows or Linux support?",
      "a": "Shipped. The one Bash CLI detects macOS <code>say</code>, Linux <code>espeak-ng</code> or <code>espeak</code>, and Windows PowerShell <code>System.Speech</code>."},
     {"q": "How do I add a missing project?",

@@ -191,7 +191,7 @@ class RepositoryProductFactTests(unittest.TestCase):
         cli = self.cli_json_entry("GIF")
 
         self.assertEqual(entry["alt_ipa"], "/ɡɪf/")
-        self.assertEqual(entry["alt_respelling_us"], "gif")
+        self.assertEqual(entry["alt_respelling_us"], "ghif")
         self.assertEqual(cli["alt_ipa"], [entry["alt_ipa"]])
         self.assertEqual(
             cli["alt_respelling_us"], [entry["alt_respelling_us"]]
@@ -203,6 +203,33 @@ class RepositoryProductFactTests(unittest.TestCase):
         spoken_alternate = f"or: {cli['alt_respelling_us'][0]}."
         self.assertIn(spoken_alternate, self.source("docs/v2/sections-2.jsx"))
         self.assertIn(spoken_alternate, self.source("tools/build-site.sh"))
+
+        if shutil.which("say"):
+            with tempfile.TemporaryDirectory() as audio_dir:
+                primary = Path(audio_dir) / "primary.aiff"
+                alternate = Path(audio_dir) / "alternate.aiff"
+                for respelling, output in (
+                    (entry["respelling_us"], primary),
+                    (entry["alt_respelling_us"], alternate),
+                ):
+                    subprocess.run(
+                        [
+                            "say",
+                            "-v",
+                            "Samantha",
+                            "-r",
+                            "130",
+                            "-o",
+                            str(output),
+                            f"{respelling}.",
+                        ],
+                        check=True,
+                    )
+                self.assertNotEqual(
+                    primary.read_bytes(),
+                    alternate.read_bytes(),
+                    "GIF's alternate must produce a distinct hard-G waveform",
+                )
 
     def test_json_why_demos_match_dictionary_and_cli(self):
         entry = self.dictionary_entry("JSON")
@@ -415,20 +442,35 @@ class RepositoryProductFactTests(unittest.TestCase):
             self.fail("build-site.sh must expose its canonical slugger for parity tests")
 
         env = {**os.environ, "LC_ALL": "C", "LANG": "C"}
-        for word, expected in (
+        cases = [
             ("C++", "c--"),
             ("C#", "c-"),
-            ("Fréchet", "fr-chet"),
-            ("Jalapeño", "jalape-o"),
-        ):
+            ("éö", "--"),
+        ]
+        for line in self.source("data/pronunciations.tsv").splitlines():
+            if line.startswith("#") or line.startswith("word\t") or not line:
+                continue
+            word = line.split("\t", 1)[0]
+            if not word.isascii():
+                cases.append(
+                    (word, re.sub(r"[^a-z0-9._-]", "-", word.lower()))
+                )
+
+        self.assertGreaterEqual(len(cases), 5)
+        for word, expected in cases:
             with self.subTest(word=word):
                 completed = subprocess.run(
                     ["bash", str(build_script), "--slug-for-test", word],
                     cwd=REPO,
                     env=env,
-                    check=True,
+                    check=False,
                     capture_output=True,
                     text=True,
+                )
+                self.assertEqual(
+                    completed.returncode,
+                    0,
+                    completed.stderr or completed.stdout,
                 )
                 self.assertEqual(completed.stdout, expected + "\n")
                 self.assertEqual(completed.stderr, "")

@@ -27,9 +27,10 @@ GH_REPO="${GH_REPO:-anzy-renlab-ai/pronounce}"
 SITE_URL="${SITE_URL:-https://pronounce.renlab.ai}"
 
 # The canonical asset slug replaces one Unicode code point with one hyphen.
-# macOS awk/sed split UTF-8 into bytes under LC_ALL=C, so run only slug-related
-# transformations under an installed UTF-8 locale and use an explicit ASCII
-# allowlist (locale collation can otherwise treat é as part of [a-z]).
+# sed handles that under a UTF-8 locale. awk is deliberately kept in the C
+# locale because Ubuntu's default mawk remains byte-oriented even in UTF-8;
+# its slug expressions discard UTF-8 continuation bytes, then replace each
+# remaining disallowed byte (one per Unicode code point) with one hyphen.
 find_slug_locale() {
   local available candidate match
   available="$(locale -a 2>/dev/null || true)"
@@ -57,7 +58,7 @@ slugify() (
 )
 
 slug_awk() {
-  LC_ALL="$SLUG_LOCALE" command awk "$@"
+  LC_ALL=C command awk "$@"
 }
 
 htmlesc() {
@@ -102,7 +103,12 @@ if [[ "${1:-}" == "--slug-for-test" ]]; then
   [[ $# -eq 2 ]] || { echo "usage: build-site.sh --slug-for-test <word>" >&2; exit 2; }
   shell_slug="$(slugify "$2")"
   awk_slug="$(printf '%s\n' "$2" | slug_awk '
-    { value = tolower($0); gsub(/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/, "-", value); print value }
+    {
+      value = tolower($0)
+      gsub(/[\200-\277]/, "", value)
+      gsub(/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/, "-", value)
+      print value
+    }
   ')"
   if [[ "$shell_slug" != "$awk_slug" ]]; then
     echo "build-site: shell/awk slug mismatch for $2" >&2
@@ -1151,7 +1157,7 @@ cat > "$DOCS/v1.html" <<EOF
 <span class="out">🔊 koob control. koob control. koob control. <span class="alt">or: cube cuddle. or: kube C T L.</span></span>
 
 <span class="prompt">\$</span> say-it GIF
-<span class="out">🔊 jif. jif. jif. <span class="alt">or: gif.</span></span>          <span class="comment"># with receipts — Wilhite at the Webby Awards, 2013</span>
+<span class="out">🔊 jif. jif. jif. <span class="alt">or: ghif.</span></span>         <span class="comment"># hard-G cue · Wilhite at the Webby Awards, 2013</span>
 
 <span class="prompt">\$</span> say-it --why JSON
 <span class="comment">word              JSON
@@ -1172,7 +1178,7 @@ $FAMOUS_HTML
     <div class="section-title">What's in the box</div>
     <div class="features">
       <div class="feature"><span class="icon">🗂</span><h3>${SOURCE_COUNT} of ${ENTRY_COUNT} entries source-cited</h3><p>Project names, product names, programmer jargon, and acronyms. Every entry is confidence-tagged; cited URLs are shown where available.</p></div>
-      <div class="feature"><span class="icon">🔊</span><h3>Multi-reading audio awareness</h3><p>When a word is contested — GIF, SQL, GUI, kubectl — the CLI audibly chains the alternates ("…or: gif"), so you hear the debate without watching the terminal.</p></div>
+      <div class="feature"><span class="icon">🔊</span><h3>Multi-reading audio awareness</h3><p>When a word is contested — GIF, SQL, GUI, kubectl — the CLI audibly chains the alternates ("…or: ghif", an explicit hard-G speech cue), so you hear the debate without watching the terminal.</p></div>
       <div class="feature"><span class="icon">🤖</span><h3>Claude Code skill included</h3><p>Ask Claude "how do you pronounce X?" — it replies with audio, IPA, and a source citation when available, not a phonetic guess.</p></div>
       <div class="feature"><span class="icon">⚡</span><h3>One Bash CLI, no npm runtime</h3><p>Detects macOS <code>say</code>, Linux <code>espeak-ng</code>/<code>espeak</code>, or Windows PowerShell <code>System.Speech</code>.</p></div>
       <div class="feature"><span class="icon">🔁</span><h3>Pluggable alternates</h3><p><code>--alt</code> for the rival reading, <code>--all</code> for every variant, <code>--solo</code> to skip the chain, <code>--why</code> shows the dict entry with source URL.</p></div>
@@ -1206,7 +1212,7 @@ $FAMOUS_HTML
       </details>
       <details>
         <summary>Why is GIF pronounced "jif" here? I always say "gif".</summary>
-        <p>Both readings are real. The dictionary picks the creator's stated reading as primary ("jif", per Steve Wilhite at the 2013 Webby Awards) and surfaces "gif" as the alternate. Run <code>say-it --alt GIF</code> to hear the alternate. Same pattern for SQL, JSON, char, regex, and the other contested ones.</p>
+        <p>Both readings are real. The dictionary picks the creator's stated reading as primary ("jif", per Steve Wilhite at the 2013 Webby Awards) and surfaces the hard-G "gif" reading with the unambiguous speech cue "ghif". Run <code>say-it --alt GIF</code> to hear the alternate. Same pattern for SQL, JSON, char, regex, and the other contested ones.</p>
       </details>
       <details>
         <summary>Are Windows and Linux supported?</summary>
@@ -1221,7 +1227,7 @@ $FAMOUS_HTML
         <p>No. If no source exists, leave it blank and mark <code>confidence</code> as <code>community-consensus</code>. We'd rather under-claim than fabricate.</p>
       </details>
       <details>
-        <summary>Why does the CLI play "or: gif" after the primary?</summary>
+        <summary>Why does the CLI play "or: ghif" after the primary?</summary>
         <p>Multi-reading words carry context — you should know there's a debate. The audible <code>"or: &lt;alt&gt;"</code> tail makes that perceptible without watching the terminal. Use <code>--solo</code> to skip it once you've internalized the debate.</p>
       </details>
     </section>
@@ -1357,7 +1363,7 @@ cat > "$DOCS/zh.html" <<EOF
 <span class="out">🔊 koob control. koob control. koob control. <span class="alt">或读: cube cuddle. 或读: kube C T L.</span></span>
 
 <span class="prompt">\$</span> say-it GIF
-<span class="out">🔊 jif. jif. jif. <span class="alt">或读: gif.</span></span>          <span class="comment"># 带来源 — Wilhite 2013 年 Webby 奖现场亲口说</span>
+<span class="out">🔊 jif. jif. jif. <span class="alt">或读: ghif.</span></span>         <span class="comment"># 硬 G 提示 · Wilhite 2013 年 Webby 奖现场亲口说</span>
 
 <span class="prompt">\$</span> say-it --why JSON
 <span class="comment">word              JSON
@@ -1388,7 +1394,7 @@ url               https://en.wikipedia.org/wiki/JSON#Pronunciation</span></pre>
     <div class="section-title">这个工具盒里有什么</div>
     <div class="features">
       <div class="feature"><span class="icon">🗂</span><h3>${SOURCE_COUNT} / ${ENTRY_COUNT} 条词条带来源</h3><p>项目名、产品名、程序员行话、缩写。所有词条都有 confidence 标签；有可靠来源时才显示链接。</p></div>
-      <div class="feature"><span class="icon">🔊</span><h3>多读法链式播放</h3><p>对于 GIF / SQL / GUI / kubectl 这类有争议的词，CLI 会把所有读法连着播——"……或读: gif."——你不盯终端也能听到争议。</p></div>
+      <div class="feature"><span class="icon">🔊</span><h3>多读法链式播放</h3><p>对于 GIF / SQL / GUI / kubectl 这类有争议的词，CLI 会把所有读法连着播——"……或读: ghif."（明确提示硬 G）——你不盯终端也能听到争议。</p></div>
       <div class="feature"><span class="icon">🤖</span><h3>自带 Claude Code skill</h3><p>问 Claude："X 怎么读？"——它会播音频、给 IPA，有可靠来源时附引用，而不是瞎猜一个音标。</p></div>
       <div class="feature"><span class="icon">⚡</span><h3>一个 Bash CLI，无 npm 运行时</h3><p>自动检测 macOS <code>say</code>、Linux <code>espeak-ng</code>/<code>espeak</code> 或 Windows PowerShell <code>System.Speech</code>。</p></div>
       <div class="feature"><span class="icon">🔁</span><h3>多种播放控制</h3><p><code>--alt</code> 听备选读法，<code>--all</code> 听所有变体，<code>--solo</code> 跳过链式，<code>--why</code> 看完整词条和来源 URL。</p></div>
@@ -1422,7 +1428,7 @@ url               https://en.wikipedia.org/wiki/JSON#Pronunciation</span></pre>
       </details>
       <details>
         <summary>为什么 GIF 是 "jif"？我一直读 "gif"。</summary>
-        <p>两种读法都真实存在。词典把创作者亲口说的读法 ("jif"，Steve Wilhite 2013 年 Webby 奖) 列为主读，"gif" 作为 alt。<code>say-it --alt GIF</code> 听备选。SQL / JSON / char / regex 同款多读处理。</p>
+        <p>两种读法都真实存在。词典把创作者亲口说的读法 ("jif"，Steve Wilhite 2013 年 Webby 奖) 列为主读；硬 G 的 "gif" 读法使用明确的语音提示 "ghif"。<code>say-it --alt GIF</code> 听备选。SQL / JSON / char / regex 同款多读处理。</p>
       </details>
       <details>
         <summary>支持 Windows / Linux 吗？</summary>
@@ -1437,7 +1443,7 @@ url               https://en.wikipedia.org/wiki/JSON#Pronunciation</span></pre>
         <p>不必。没有可靠来源就留空，confidence 标 <code>community-consensus</code>。宁可保守也不胡编。</p>
       </details>
       <details>
-        <summary>为什么 CLI 在主读后还播 "or: gif"？</summary>
+        <summary>为什么 CLI 在主读后还播 "or: ghif"？</summary>
         <p>多读法的词自带语境——你应该知道存在争议。可听的 <code>"or: &lt;alt&gt;"</code> 尾巴让你不盯终端也能感知。熟了之后 <code>--solo</code> 跳过即可。</p>
       </details>
     </section>
@@ -1587,7 +1593,9 @@ slug_awk -F'\t' -v dates="$REPO_ROOT/data/entry-dates.tsv" '
     close(dates)
   }
   !/^#/ && NF>=3 && $1 != "" && $1 != "word" {
-    slug = tolower($1); gsub(/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/, "-", slug)
+    slug = tolower($1)
+    gsub(/[\200-\277]/, "", slug)
+    gsub(/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/, "-", slug)
     printf "%s\x1f%s\x1f%s\x1f%s\x1f%s\x1f%s\x1f%s\x1f%s\x1f%s\x1f%s\x1f%s\x1f%s\n",
       $1, $2, $3, $4, $5, $6, $7, $8, $9, $10,
       (slug in pub ? pub[slug] : ENVIRON["TODAY"]),
@@ -1999,7 +2007,12 @@ slug_awk -F'\t' -v dates="$REPO_ROOT/data/entry-dates.tsv" '
     close(dates)
   }
   function jesc(s) { gsub(/\\/, "\\\\", s); gsub(/"/, "\\\"", s); gsub(/\t/, " ", s); return s }
-  function slug(s,    out) { out = tolower(s); gsub(/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/, "-", out); return out }
+  function slug(s,    out) {
+    out = tolower(s)
+    gsub(/[\200-\277]/, "", out)
+    gsub(/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/, "-", out)
+    return out
+  }
   function altarr(s, n,    arr, out, i, first) {
     n = split(s, arr, "|"); out = "["
     first = 1
@@ -2028,7 +2041,7 @@ slug_awk -F'\t' -v dates="$REPO_ROOT/data/entry-dates.tsv" '
     printf "  \"notes\": \"%s\",\n", jesc(notes) >> out
     printf "  \"audio_url\": \"%s/audio/%s.mp3\",\n", site, slug(word) >> out
     printf "  \"url\": \"%s/word/%s\",\n", site, slug(word) >> out
-    api_slug = tolower($1); gsub(/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/, "-", api_slug)
+    api_slug = slug($1)
     printf "  \"date_modified\": \"%s\"\n", (api_slug in mod ? mod[api_slug] : today) >> out
     print "}" >> out
     close(out)
@@ -2042,7 +2055,12 @@ slug_awk -F'\t' -v dates="$REPO_ROOT/data/entry-dates.tsv" '
   printf "[\n"
   slug_awk -F'\t' '
     function jesc(s) { gsub(/\\/, "\\\\", s); gsub(/"/, "\\\"", s); return s }
-    function slug(s,    out) { out = tolower(s); gsub(/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/, "-", out); return out }
+    function slug(s,    out) {
+      out = tolower(s)
+      gsub(/[\200-\277]/, "", out)
+      gsub(/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/, "-", out)
+      return out
+    }
     BEGIN { first = 1 }
     !/^#/ && NF >= 3 && $1 != "" && $1 != "word" {
       if (!first) print ","
@@ -2176,7 +2194,12 @@ XML
   # Take the last 25 entries from the TSV
   tail -25 "$DICT" | slug_awk -F'\t' -v site="$SITE_URL" -v bd="$build_date" '
     function jesc(s) { gsub(/&/, "\\&amp;", s); gsub(/</, "\\&lt;", s); gsub(/>/, "\\&gt;", s); return s }
-    function slug(s,    out) { out = tolower(s); gsub(/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/, "-", out); return out }
+    function slug(s,    out) {
+      out = tolower(s)
+      gsub(/[\200-\277]/, "", out)
+      gsub(/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/, "-", out)
+      return out
+    }
     !/^#/ && NF>=3 && $1 != "" && $1 != "word" {
       printf "  <entry>\n"
       printf "    <title>%s — %s</title>\n", jesc($1), jesc($3)
@@ -2200,7 +2223,9 @@ find "$DOCS/badge" -name '*.svg' -delete 2>/dev/null || true
 slug_awk -F'\t' '!/^#/ && NF>=3 && $1 != "" && $1 != "word" {
   word = $1
   resp = $3
-  s = tolower(word); gsub(/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/, "-", s)
+  s = tolower(word)
+  gsub(/[\200-\277]/, "", s)
+  gsub(/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/, "-", s)
   # Approx text width — 7px per char in monospace
   word_w = length(word) * 8 + 8
   resp_w = length(resp) * 8 + 16
@@ -2234,7 +2259,9 @@ slug_awk -F'\t' '!/^#/ && NF>=3 && $1 != "" && $1 != "word" {
 slug_awk -F'\t' -v outdir="$DOCS/badge" '!/^#/ && NF>=3 && $1 != "" && $1 != "word" {
   word = $1
   resp = $3
-  s = tolower(word); gsub(/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/, "-", s)
+  s = tolower(word)
+  gsub(/[\200-\277]/, "", s)
+  gsub(/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/, "-", s)
   word_w = length(word) * 8 + 8
   resp_w = length(resp) * 8 + 16
   total_w = 22 + word_w + resp_w
@@ -2482,7 +2509,9 @@ TODAY="$(date +%Y-%m-%d)"
       close(dates)
     }
     !/^#/ && NF>=3 && $1 != "" && $1 != "word" {
-      slug = tolower($1); gsub(/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/, "-", slug)
+      slug = tolower($1)
+      gsub(/[\200-\277]/, "", slug)
+      gsub(/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/, "-", slug)
       lm = (slug in mod) ? mod[slug] : today
       printf "  <url><loc>%s/word/%s</loc><lastmod>%s</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>\n", site, slug, lm
     }
@@ -2842,7 +2871,9 @@ awk -F'\t' '!/^#/ && NF>=8 && $1 != "" && $1 != "word" { print $8 }' "$DICT" | s
     printf '    <h1>Category: <code>%s</code></h1>\n' "$catname"
     printf '    <ul class="cat-list">\n'
     slug_awk -F'\t' -v c="$catname" '!/^#/ && NF>=8 && $8==c && $1 != "" && $1 != "word" {
-      sl=tolower($1); gsub(/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/,"-",sl)
+      sl = tolower($1)
+      gsub(/[\200-\277]/, "", sl)
+      gsub(/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/, "-", sl)
       printf "      <li><a href=\"/word/%s\">%s</a> <span class=\"cat-list-resp\">%s</span></li>\n", sl, $1, $3
     }' "$DICT"
     printf '    </ul>\n  </div>\n'
@@ -2861,7 +2892,12 @@ find "$DOCS/embed" -name '*.html' -delete 2>/dev/null || true
 
 slug_awk -F'\t' -v brand="$BRAND" -v site="$SITE_URL" -v outdir="$DOCS/embed" '
   function esc(s) { gsub(/&/, "\\&amp;", s); gsub(/</, "\\&lt;", s); gsub(/>/, "\\&gt;", s); gsub(/"/, "\\&quot;", s); return s }
-  function slug(s,    out) { out = tolower(s); gsub(/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/, "-", out); return out }
+  function slug(s,    out) {
+    out = tolower(s)
+    gsub(/[\200-\277]/, "", out)
+    gsub(/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/, "-", out)
+    return out
+  }
   !/^#/ && NF>=3 && $1 != "" && $1 != "word" {
     word=$1; ipa=$2; resp=$3
     s = slug(word)

@@ -94,7 +94,7 @@ It ships with a 540-entry dictionary (kubectl, nginx, GIF, JSON, Pydantic,
 JWT, Knative, LaTeX, …), every entry tagged with a confidence level and
 a source URL (creator interview, project FAQ, Wikipedia anchor).
 
-Multi-reading words audibly chain their alternates ("or: gif") so you hear
+Multi-reading words audibly chain their alternates ("or: ghif", an explicit hard-G speech cue) so you hear
 the debate without watching the terminal.
 
 Bonus: interactive quiz, voice-mic search on the site, MCP server for

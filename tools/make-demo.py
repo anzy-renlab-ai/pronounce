@@ -3,7 +3,7 @@
 
 Composes 3 terminal-style PNG frames with the real CLI audio output:
 1. say-it kubectl  → koob control × 3 + or: cube cuddle, or: kube C T L
-2. say-it GIF      → jif × 3 + or: gif
+2. say-it GIF      → jif × 3 + or: ghif (hard-G cue)
 3. say-it --why JSON  → printed entry (silent panel)
 
 Each frame is rendered with Pillow; audio is generated via the CLI;
@@ -111,7 +111,7 @@ def render_frame_gif(path):
     render_terminal_lines(img, d, [
         [("$ ", MUTED), ("say-it GIF", FG)],
         "",
-        [("🔊 ", FG), ("jif. jif. jif. ", ACCENT_2), ("or: gif.", ACCENT)],
+        [("🔊 ", FG), ("jif. jif. jif. ", ACCENT_2), ("or: ghif.", ACCENT)],
         "",
         [("   ", FG), ("# Wilhite, Webby Awards 2013", MUTED)],
     ])

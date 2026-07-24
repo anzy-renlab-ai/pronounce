@@ -45,7 +45,7 @@
 
     <!-- Line 3 (spacer + next prompt) -->
     <text x="0" y="76"><tspan class="prompt">$ </tspan><tspan class="cmd">say-it GIF</tspan></text>
-    <text x="0" y="108"><tspan class="cmd">🔊 </tspan><tspan class="out">jif. jif. jif. </tspan><tspan class="alt">or: gif.</tspan><tspan class="comment">    # creator-clarified — Wilhite, Webbys 2013</tspan></text>
+    <text x="0" y="108"><tspan class="cmd">🔊 </tspan><tspan class="out">jif. jif. jif. </tspan><tspan class="alt">or: ghif.</tspan><tspan class="comment">    # hard-G cue · Wilhite, Webbys 2013</tspan></text>
 
     <!-- Line 4 (--why) -->
     <text x="0" y="152"><tspan class="prompt">$ </tspan><tspan class="cmd">say-it --why JSON</tspan></text>

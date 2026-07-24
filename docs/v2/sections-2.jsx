@@ -42,7 +42,7 @@ function Terminal({ registerEgg }) {
             <div className="ln"><span className="speak">🔊</span> <span className="out">koob control. koob control. koob control. <span className="comment">or: cube cuddle. or: kube C T L.</span></span></div>
             <div className="ln">&nbsp;</div>
             <div className="ln"><span className="prompt">$</span> <span className="cmd">say-it</span> GIF</div>
-            <div className="ln"><span className="speak">🔊</span> <span className="out">jif. jif. jif. <span className="comment">or: gif.&nbsp;&nbsp;# with receipts — Wilhite, 2013</span></span></div>
+            <div className="ln"><span className="speak">🔊</span> <span className="out">jif. jif. jif. <span className="comment">or: ghif.&nbsp;&nbsp;# hard-G cue · Wilhite, 2013</span></span></div>
             <div className="ln">&nbsp;</div>
             <div className="ln"><span className="prompt">$</span> <span className="cmd">say-it</span> <span className="flag">--why</span> JSON</div>
             <div className="ln"><span className="key">word</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span className="val">JSON</span></div>
@@ -66,7 +66,7 @@ function Features() {
   const sourcedCount = DICT_ALL.filter(d => d.url).length;
   const items = [
     { n: '01', title: `${sourcedCount} of ${DICT_ALL.length} entries source-cited`, desc: 'Project names, products, programmer jargon, AI/ML projects and researchers. Every entry is confidence-tagged; cited URLs are shown where available.', chips: ['--why', '--solo', '--alt'] },
-    { n: '02', title: 'Multi-reading audio awareness', desc: 'When a word is contested — GIF, SQL, GUI, kubectl — the CLI audibly chains the alternates ("…or: gif").', chips: ['--all'] },
+    { n: '02', title: 'Multi-reading audio awareness', desc: 'When a word is contested — GIF, SQL, GUI, kubectl — the CLI audibly chains the alternates ("…or: ghif", using an explicit hard-G speech cue).', chips: ['--all'] },
     { n: '03', title: 'Claude Code skill included', desc: 'Ask Claude "how do you pronounce X?" — it replies with audio, IPA, and a source citation when available, not a phonetic guess.', chips: ['mcp-server'] },
     { n: '04', title: 'One Bash CLI, no npm runtime', desc: 'Uses the shipped OS backend it detects — macOS say, Linux espeak-ng or espeak, and Windows PowerShell System.Speech.', chips: ['./install.sh'] },
     { n: '05', title: 'Pluggable alternates', desc: '--alt for the rival reading, --all for every variant, --solo to skip the chain, --why for the entry with source URL.', chips: ['--alt', '--all'] },

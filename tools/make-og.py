@@ -132,7 +132,7 @@ def tline(y, parts):
 tline(T_Y + 56, [("$ ", MUTED), ("say-it kubectl", FG)])
 tline(T_Y + 92, [("🔊 ", FG), ("koob control. ", ACCENT_2), ("or: cube cuddle.", ACCENT)])
 tline(T_Y + 134, [("$ ", MUTED), ("say-it GIF", FG)])
-tline(T_Y + 170, [("🔊 ", FG), ("jif. jif. ", ACCENT_2), ("or: gif.   ", ACCENT), ("# Wilhite, 2013", MUTED)])
+tline(T_Y + 170, [("🔊 ", FG), ("jif. jif. ", ACCENT_2), ("or: ghif.   ", ACCENT), ("# hard-G cue · Wilhite, 2013", MUTED)])
 
 img.save(OUT, "PNG", optimize=True)
 print(f"Wrote {OUT}  ({OUT.stat().st_size // 1024} KB)")

@@ -27,7 +27,7 @@
 word	ipa	respelling_us	alt_ipa	alt_respelling_us	source_url	source_label	category	confidence	notes
 kubectl	/ˈkuːb kənˌtroʊl/	koob control	/ˈkjuːb kʌtəl/|/ˌkjuːb siː tiː ˈɛl/	cube cuddle|kube C T L			cli-tool	contested	K8s community readings vary widely. "koob-control" is heard from Kelsey Hightower and many maintainers; "cube-cuddle" is the running meme; some say it letter-by-letter.
 nginx	/ˈɛn dʒɪnˈɛks/	engine X			https://nginx.org/en/	NGINX official	product	creator-clarified	"engine-x" is the documented reading from the official site.
-GIF	/dʒɪf/	jif	/ɡɪf/	gif	https://www.nytimes.com/2013/05/22/business/media/creator-of-the-gif-says-its-pronounced-jif.html	Steve Wilhite, NYT (2013)	acronym	creator-clarified	Wilhite (creator): "It's pronounced JIF, not GIF." Community remains split.
+GIF	/dʒɪf/	jif	/ɡɪf/	ghif	https://www.nytimes.com/2013/05/22/business/media/creator-of-the-gif-says-its-pronounced-jif.html	Steve Wilhite, NYT (2013)	acronym	creator-clarified	Wilhite (creator): "It's pronounced JIF, not GIF." Community remains split. The alternate uses "ghif" as an explicit hard-G TTS cue.
 JSON	/ˈdʒeɪsən/	jay son	/ˈdʒiːˌsɒn/	jee son	https://en.wikipedia.org/wiki/JSON#Pronunciation	Wikipedia § Pronunciation	acronym	contested	Crockford uses "JAY-son"; "JEE-son" is also widespread. Wikipedia notes the variance.
 SQL	/ˈsiːkwəl/	sequel	/ˌɛs kjuː ˈɛl/	S Q L	https://en.wikipedia.org/wiki/SQL#Pronunciation	Wikipedia § Pronunciation	acronym	contested	ANSI: "S-Q-L"; practitioner: "sequel" (heir to IBM SEQUEL).
 GUI	/ˈɡuːi/	gooey	/ˌdʒiː juː ˈaɪ/|/ɡwi/	G U I|gwee	https://en.wikipedia.org/wiki/Graphical_user_interface	Wikipedia	acronym	contested	"GOOEY" is mainstream (matches Mandarin 故意 sound); "G-U-I" letter-by-letter is RMS/old-school; "gwee" is rare.

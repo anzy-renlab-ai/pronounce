@@ -69,7 +69,7 @@ and (where possible) linked to a source — official FAQ, Wikipedia § Pronuncia
 creator interview.
 
 For multi-reading words, the CLI audibly chains the alternates after the primary
-("jif. jif. jif. or: gif."), so you hear the debate without having to read the
+("jif. jif. jif. or: ghif.", using an explicit hard-G speech cue), so you hear the debate without having to read the
 terminal.
 
 The CLI is a ~250-line Bash script wrapping macOS `say`. There's also a Claude
