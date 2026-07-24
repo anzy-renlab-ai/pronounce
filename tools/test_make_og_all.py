@@ -351,6 +351,41 @@ class StateMachineTests(unittest.TestCase):
         factory.assert_not_called()
         self.assertEqual(self.snapshot_tree(self.root), before)
 
+    def test_stale_missing_card_uses_lazy_pillow_factory_once(self):
+        entry = self.entry()
+        self.install_current_state([entry])
+        (self.out_dir / "example.png").unlink()
+        changed_spec = copy.deepcopy(self.module.RENDER_SPEC)
+        changed_spec["palette"]["accent"] = [9, 8, 7]
+        rendered_paths = []
+
+        def fake_renderer(rendered_entry, output_path):
+            self.assertEqual(rendered_entry, entry)
+            rendered_paths.append(Path(output_path))
+            Path(output_path).write_bytes(b"factory png")
+
+        factory = mock.Mock(return_value=fake_renderer)
+        with mock.patch.object(self.module, "create_pillow_renderer", factory):
+            result = self.module.sync_cards(
+                [entry],
+                out_dir=self.out_dir,
+                manifest_path=self.manifest_path,
+                render_spec=changed_spec,
+            )
+
+        self.assertEqual((result.rendered, result.current), (1, 0))
+        factory.assert_called_once_with(changed_spec)
+        self.assertEqual(len(rendered_paths), 1)
+        self.assertFalse(rendered_paths[0].exists())
+        self.assertEqual(
+            (self.out_dir / "example.png").read_bytes(),
+            b"factory png",
+        )
+        self.assertEqual(
+            json.loads(self.manifest_path.read_text(encoding="utf-8")),
+            self.manifest_for([entry], render_spec=changed_spec),
+        )
+
     def test_missing_or_empty_png_is_rendered_via_a_temporary_path(self):
         for original in ("missing", "empty"):
             with self.subTest(original=original):
