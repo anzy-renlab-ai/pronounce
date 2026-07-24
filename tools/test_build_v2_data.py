@@ -500,6 +500,14 @@ class RepositoryProductFactTests(unittest.TestCase):
         self.assertEqual(completed.stderr, "")
         self.assertNotIn("date -u +%Y-%m-%dT%H:%M:%SZ", source)
 
+    def test_build_workflow_commits_entry_date_state_with_site_outputs(self):
+        workflow = self.source(".github/workflows/build-site.yml")
+        self.assertIn(
+            "git status --porcelain -- docs/ data/entry-dates.tsv",
+            workflow,
+        )
+        self.assertIn("git add docs/ data/entry-dates.tsv", workflow)
+
     def test_build_helpers_match_previous_oracles_for_the_whole_corpus(self):
         build_script = REPO / "tools" / "build-site.sh"
         source = build_script.read_text(encoding="utf-8")
