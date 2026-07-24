@@ -21,6 +21,54 @@ BRAND="${BRAND:-Pronounce}"
 GH_REPO="${GH_REPO:-anzy-renlab-ai/pronounce}"
 SITE_URL="${SITE_URL:-https://pronounce.renlab.ai}"
 
+# The canonical asset slug replaces one Unicode code point with one hyphen.
+# macOS awk/sed split UTF-8 into bytes under LC_ALL=C, so run only slug-related
+# transformations under an installed UTF-8 locale and use an explicit ASCII
+# allowlist (locale collation can otherwise treat é as part of [a-z]).
+find_slug_locale() {
+  local available candidate match
+  available="$(locale -a 2>/dev/null || true)"
+  for candidate in C.UTF-8 C.utf8 en_US.UTF-8 en_US.utf8; do
+    match="$(printf '%s\n' "$available" | grep -Fxi "$candidate" | head -n 1 || true)"
+    if [[ -n "$match" ]]; then
+      printf '%s\n' "$match"
+      return 0
+    fi
+  done
+  return 1
+}
+
+SLUG_LOCALE="$(find_slug_locale || true)"
+if [[ -z "$SLUG_LOCALE" ]]; then
+  echo "build-site: an installed UTF-8 locale is required for canonical slugs" >&2
+  exit 1
+fi
+
+slugify() (
+  export LC_ALL="$SLUG_LOCALE"
+  printf '%s' "$1" \
+    | tr '[:upper:]' '[:lower:]' \
+    | sed 's/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/-/g'
+)
+
+slug_awk() {
+  LC_ALL="$SLUG_LOCALE" command awk "$@"
+}
+
+if [[ "${1:-}" == "--slug-for-test" ]]; then
+  [[ $# -eq 2 ]] || { echo "usage: build-site.sh --slug-for-test <word>" >&2; exit 2; }
+  shell_slug="$(slugify "$2")"
+  awk_slug="$(printf '%s\n' "$2" | slug_awk '
+    { value = tolower($0); gsub(/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/, "-", value); print value }
+  ')"
+  if [[ "$shell_slug" != "$awk_slug" ]]; then
+    echo "build-site: shell/awk slug mismatch for $2" >&2
+    exit 1
+  fi
+  printf '%s\n' "$shell_slug"
+  exit 0
+fi
+
 if [[ ! -f "$DICT" ]]; then
   echo "build-site: dict not found at $DICT" >&2; exit 1
 fi
@@ -430,7 +478,7 @@ function buildBody(entry, opts) {
 // CURRENT_AUDIO holds the most recently triggered HTMLAudioElement so we can stop it.
 let CURRENT_AUDIO = null;
 function audioUrl(word) {
-  const slug = word.toLowerCase().replace(/[^a-z0-9._-]/g, '-');
+  const slug = word.toLowerCase().replace(/[^a-z0-9._-]/gu, '-');
   return '/audio/' + slug + '.mp3';
 }
 
@@ -473,7 +521,7 @@ function escHTML(s) {
 }
 function badge(text, kind) { return \`<span class="badge badge-\${kind}">\${text}</span>\`; }
 function entryHref(word) {
-  return './word/' + word.toLowerCase().replace(/[^a-z0-9._-]/g, '-');
+  return './word/' + word.toLowerCase().replace(/[^a-z0-9._-]/gu, '-');
 }
 
 function renderEntry(e, idx) {
@@ -600,7 +648,7 @@ function initWordPage() {
     if (e.key === 'r' || e.key === 'R') {
       e.preventDefault();
       const pick = ENTRIES[Math.floor(Math.random() * ENTRIES.length)];
-      window.location.href = './' + pick.w.toLowerCase().replace(/[^a-z0-9._-]/g, '-');
+      window.location.href = './' + pick.w.toLowerCase().replace(/[^a-z0-9._-]/gu, '-');
     } else if (e.key === ' ') {
       e.preventDefault();
       const btn = document.querySelector('.play-primary');
@@ -649,7 +697,7 @@ function renderTodaysWord() {
   const el = document.getElementById('todays-word');
   if (!el) return;
   const e = todaysWord();
-  const slug = e.w.toLowerCase().replace(/[^a-z0-9._-]/g, '-');
+  const slug = e.w.toLowerCase().replace(/[^a-z0-9._-]/gu, '-');
   el.innerHTML = \`
     <div class="todays-inner">
       <div class="todays-label">📅 Today's pronunciation</div>
@@ -694,7 +742,7 @@ function initHeroSearch() {
   const mic = document.getElementById('hero-mic');
   if (!input || !sug) return;
 
-  function slugify(w) { return w.toLowerCase().replace(/[^a-z0-9._-]/g, '-'); }
+  function slugify(w) { return w.toLowerCase().replace(/[^a-z0-9._-]/gu, '-'); }
   function escapeHtml(s){ return String(s||'').replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 
   function searchEntries(q) {
@@ -1469,7 +1517,7 @@ TMP_LIST="$(mktemp -t say-it-words.XXXXXX)"
 # can stamp datePublished/dateModified without spawning a lookup per word. These
 # used to be the BUILD date on every page — a fresh "modified today" on all 1,848
 # entries every CI run, which is both false and ~5,400 files of churn.
-awk -F'\t' -v dates="$REPO_ROOT/data/entry-dates.tsv" '
+slug_awk -F'\t' -v dates="$REPO_ROOT/data/entry-dates.tsv" '
   BEGIN {
     while ((getline line < dates) > 0) {
       if (line ~ /^#/ || line == "") continue
@@ -1479,7 +1527,7 @@ awk -F'\t' -v dates="$REPO_ROOT/data/entry-dates.tsv" '
     close(dates)
   }
   !/^#/ && NF>=3 && $1 != "" && $1 != "word" {
-    slug = tolower($1); gsub(/[^a-z0-9._-]/, "-", slug)
+    slug = tolower($1); gsub(/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/, "-", slug)
     printf "%s\x1f%s\x1f%s\x1f%s\x1f%s\x1f%s\x1f%s\x1f%s\x1f%s\x1f%s\x1f%s\x1f%s\n",
       $1, $2, $3, $4, $5, $6, $7, $8, $9, $10,
       (slug in pub ? pub[slug] : ENVIRON["TODAY"]),
@@ -1487,7 +1535,6 @@ awk -F'\t' -v dates="$REPO_ROOT/data/entry-dates.tsv" '
   }
 ' "$DICT" > "$TMP_LIST"
 
-slugify() { printf '%s' "$1" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9._-]/-/g'; }
 htmlesc() { printf '%s' "$1" | sed -e 's/&/\&amp;/g' -e 's/</\&lt;/g' -e 's/>/\&gt;/g' -e 's/"/\&quot;/g'; }
 jsonesc() { printf '%s' "$1" | sed -e 's/\\/\\\\/g' -e 's/"/\\"/g'; }
 
@@ -1883,7 +1930,7 @@ rm -f "$TMP_LIST"
 # ---------------------------------------------------------------------------
 mkdir -p "$DOCS/api/word"
 find "$DOCS/api/word" -name '*.json' -delete 2>/dev/null || true
-awk -F'\t' -v dates="$REPO_ROOT/data/entry-dates.tsv" '
+slug_awk -F'\t' -v dates="$REPO_ROOT/data/entry-dates.tsv" '
   BEGIN {
     # Real per-entry dateModified, not the build date.
     # NOTE: `dates` must come from -v, not an operand assignment — operand vars are
@@ -1895,7 +1942,7 @@ awk -F'\t' -v dates="$REPO_ROOT/data/entry-dates.tsv" '
     close(dates)
   }
   function jesc(s) { gsub(/\\/, "\\\\", s); gsub(/"/, "\\\"", s); gsub(/\t/, " ", s); return s }
-  function slug(s,    out) { out = tolower(s); gsub(/[^a-z0-9._-]/, "-", out); return out }
+  function slug(s,    out) { out = tolower(s); gsub(/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/, "-", out); return out }
   function altarr(s, n,    arr, out, i, first) {
     n = split(s, arr, "|"); out = "["
     first = 1
@@ -1924,7 +1971,7 @@ awk -F'\t' -v dates="$REPO_ROOT/data/entry-dates.tsv" '
     printf "  \"notes\": \"%s\",\n", jesc(notes) >> out
     printf "  \"audio_url\": \"%s/audio/%s.mp3\",\n", site, slug(word) >> out
     printf "  \"url\": \"%s/word/%s\",\n", site, slug(word) >> out
-    api_slug = tolower($1); gsub(/[^a-z0-9._-]/, "-", api_slug)
+    api_slug = tolower($1); gsub(/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/, "-", api_slug)
     printf "  \"date_modified\": \"%s\"\n", (api_slug in mod ? mod[api_slug] : today) >> out
     print "}" >> out
     close(out)
@@ -1936,9 +1983,9 @@ awk -F'\t' -v dates="$REPO_ROOT/data/entry-dates.tsv" '
 # Index JSON — list of all words for discovery
 {
   printf "[\n"
-  awk -F'\t' '
+  slug_awk -F'\t' '
     function jesc(s) { gsub(/\\/, "\\\\", s); gsub(/"/, "\\\"", s); return s }
-    function slug(s,    out) { out = tolower(s); gsub(/[^a-z0-9._-]/, "-", out); return out }
+    function slug(s,    out) { out = tolower(s); gsub(/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/, "-", out); return out }
     BEGIN { first = 1 }
     !/^#/ && NF >= 3 && $1 != "" && $1 != "word" {
       if (!first) print ","
@@ -2070,9 +2117,9 @@ echo "Built $DOCS/api/openapi.json"
   <subtitle>How engineers actually pronounce project / product / jargon names. Community-maintained.</subtitle>
 XML
   # Take the last 25 entries from the TSV
-  tail -25 "$DICT" | awk -F'\t' -v site="$SITE_URL" -v bd="$build_date" '
+  tail -25 "$DICT" | slug_awk -F'\t' -v site="$SITE_URL" -v bd="$build_date" '
     function jesc(s) { gsub(/&/, "\\&amp;", s); gsub(/</, "\\&lt;", s); gsub(/>/, "\\&gt;", s); return s }
-    function slug(s,    out) { out = tolower(s); gsub(/[^a-z0-9._-]/, "-", out); return out }
+    function slug(s,    out) { out = tolower(s); gsub(/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/, "-", out); return out }
     !/^#/ && NF>=3 && $1 != "" && $1 != "word" {
       printf "  <entry>\n"
       printf "    <title>%s — %s</title>\n", jesc($1), jesc($3)
@@ -2093,10 +2140,10 @@ echo "Built $DOCS/feed.atom"
 mkdir -p "$DOCS/badge"
 find "$DOCS/badge" -name '*.svg' -delete 2>/dev/null || true
 
-awk -F'\t' '!/^#/ && NF>=3 && $1 != "" && $1 != "word" {
+slug_awk -F'\t' '!/^#/ && NF>=3 && $1 != "" && $1 != "word" {
   word = $1
   resp = $3
-  s = tolower(word); gsub(/[^a-z0-9._-]/, "-", s)
+  s = tolower(word); gsub(/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/, "-", s)
   # Approx text width — 7px per char in monospace
   word_w = length(word) * 8 + 8
   resp_w = length(resp) * 8 + 16
@@ -2127,10 +2174,10 @@ awk -F'\t' '!/^#/ && NF>=3 && $1 != "" && $1 != "word" {
 }' > /dev/null
 
 # Rerun to write per-word SVG files
-awk -F'\t' -v outdir="$DOCS/badge" '!/^#/ && NF>=3 && $1 != "" && $1 != "word" {
+slug_awk -F'\t' -v outdir="$DOCS/badge" '!/^#/ && NF>=3 && $1 != "" && $1 != "word" {
   word = $1
   resp = $3
-  s = tolower(word); gsub(/[^a-z0-9._-]/, "-", s)
+  s = tolower(word); gsub(/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/, "-", s)
   word_w = length(word) * 8 + 8
   resp_w = length(resp) * 8 + 16
   total_w = 22 + word_w + resp_w
@@ -2369,7 +2416,7 @@ TODAY="$(date +%Y-%m-%d)"
   printf '  <url><loc>%s/daily</loc><lastmod>%s</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>\n' "$SITE_URL" "$TODAY"
   # lastmod is the entry's REAL last-changed date, not the build date — telling
   # Google that all 1,848 pages changed today is both false and useless.
-  awk -F'\t' -v dates="$REPO_ROOT/data/entry-dates.tsv" -v site="$SITE_URL" -v today="$TODAY" '
+  slug_awk -F'\t' -v dates="$REPO_ROOT/data/entry-dates.tsv" -v site="$SITE_URL" -v today="$TODAY" '
     BEGIN {
       while ((getline line < dates) > 0) {
         if (line ~ /^#/ || line == "") continue
@@ -2378,7 +2425,7 @@ TODAY="$(date +%Y-%m-%d)"
       close(dates)
     }
     !/^#/ && NF>=3 && $1 != "" && $1 != "word" {
-      slug = tolower($1); gsub(/[^a-z0-9._-]/, "-", slug)
+      slug = tolower($1); gsub(/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/, "-", slug)
       lm = (slug in mod) ? mod[slug] : today
       printf "  <url><loc>%s/word/%s</loc><lastmod>%s</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>\n", site, slug, lm
     }
@@ -2663,7 +2710,7 @@ function init() {
   const rg = document.getElementById('recent-grid');
   if (rg) {
     rg.innerHTML = (STATS.recent || []).map(({w, c}) => \`
-      <a class="recent-card" href="/word/\${w.toLowerCase().replace(/[^a-z0-9._-]/g, '-')}">
+      <a class="recent-card" href="/word/\${w.toLowerCase().replace(/[^a-z0-9._-]/gu, '-')}">
         <span class="recent-word">\${w}</span>
         <span class="recent-cat">\${c}</span>
       </a>\`).join('');
@@ -2737,8 +2784,8 @@ awk -F'\t' '!/^#/ && NF>=8 && $1 != "" && $1 != "word" { print $8 }' "$DICT" | s
     printf '  <div class="container">\n'
     printf '    <h1>Category: <code>%s</code></h1>\n' "$catname"
     printf '    <ul class="cat-list">\n'
-    awk -F'\t' -v c="$catname" '!/^#/ && NF>=8 && $8==c && $1 != "" && $1 != "word" {
-      sl=tolower($1); gsub(/[^a-z0-9._-]/,"-",sl)
+    slug_awk -F'\t' -v c="$catname" '!/^#/ && NF>=8 && $8==c && $1 != "" && $1 != "word" {
+      sl=tolower($1); gsub(/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/,"-",sl)
       printf "      <li><a href=\"/word/%s\">%s</a> <span class=\"cat-list-resp\">%s</span></li>\n", sl, $1, $3
     }' "$DICT"
     printf '    </ul>\n  </div>\n'
@@ -2755,9 +2802,9 @@ mkdir -p "$DOCS/embed"
 # Clear stale embeds
 find "$DOCS/embed" -name '*.html' -delete 2>/dev/null || true
 
-awk -F'\t' -v brand="$BRAND" -v site="$SITE_URL" -v outdir="$DOCS/embed" '
+slug_awk -F'\t' -v brand="$BRAND" -v site="$SITE_URL" -v outdir="$DOCS/embed" '
   function esc(s) { gsub(/&/, "\\&amp;", s); gsub(/</, "\\&lt;", s); gsub(/>/, "\\&gt;", s); gsub(/"/, "\\&quot;", s); return s }
-  function slug(s,    out) { out = tolower(s); gsub(/[^a-z0-9._-]/, "-", out); return out }
+  function slug(s,    out) { out = tolower(s); gsub(/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/, "-", out); return out }
   !/^#/ && NF>=3 && $1 != "" && $1 != "word" {
     word=$1; ipa=$2; resp=$3
     s = slug(word)
@@ -2797,7 +2844,7 @@ cat > "$DOCS/random.html" <<EOF
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const pick = ENTRIES[Math.floor(Math.random() * ENTRIES.length)];
-  const slug = pick.w.toLowerCase().replace(/[^a-z0-9._-]/g, '-');
+  const slug = pick.w.toLowerCase().replace(/[^a-z0-9._-]/gu, '-');
   window.location.replace("/word/" + slug);
 });
 </script>

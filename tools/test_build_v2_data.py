@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 import importlib.util
+import os
 import re
 import shutil
+import subprocess
 import tempfile
 import unittest
 from pathlib import Path
@@ -51,6 +53,7 @@ class BuildV2DataTests(unittest.TestCase):
         slugify = self.helper("slugify")
         self.assertEqual(slugify("C++"), "c--")
         self.assertEqual(slugify("C#"), "c-")
+        self.assertEqual(slugify("Fréchet"), "fr-chet")
         self.assertEqual(slugify("Jalapeño"), "jalape-o")
 
     def test_split_alts_trims_drops_empty_parts_and_preserves_order(self):
@@ -309,6 +312,31 @@ class RepositoryProductFactTests(unittest.TestCase):
         coverage = source.split("# Source coverage", 1)[1]
         self.assertIn('if ($6 != "") srcd++', coverage)
         self.assertNotIn('$6 != "" || $7 != ""', coverage)
+
+    def test_shell_build_slug_matches_python_contract_under_c_locale(self):
+        build_script = REPO / "tools" / "build-site.sh"
+        source = build_script.read_text(encoding="utf-8")
+        if "--slug-for-test" not in source:
+            self.fail("build-site.sh must expose its canonical slugger for parity tests")
+
+        env = {**os.environ, "LC_ALL": "C", "LANG": "C"}
+        for word, expected in (
+            ("C++", "c--"),
+            ("C#", "c-"),
+            ("Fréchet", "fr-chet"),
+            ("Jalapeño", "jalape-o"),
+        ):
+            with self.subTest(word=word):
+                completed = subprocess.run(
+                    ["bash", str(build_script), "--slug-for-test", word],
+                    cwd=REPO,
+                    env=env,
+                    check=True,
+                    capture_output=True,
+                    text=True,
+                )
+                self.assertEqual(completed.stdout, expected + "\n")
+                self.assertEqual(completed.stderr, "")
 
     def test_release_heading_and_historical_promo_asset_are_stable(self):
         changelog = self.source("CHANGELOG.md")

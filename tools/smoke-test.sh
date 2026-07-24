@@ -66,6 +66,9 @@ assert_contains_without "badge GIF with failing pbcopy" "shields.io" "copied to 
   env PATH="$failing_pbcopy_dir:$PATH" "$CLI" badge GIF
 assert_contains_without "tweet kubectl with failing pbcopy" "TIL" "copied to clipboard" \
   env PATH="$failing_pbcopy_dir:$PATH" "$CLI" tweet kubectl
+assert_contains "badge Fréchet canonical slug" "/word/fr-chet)" "$CLI" badge Fréchet
+assert_contains "--md Fréchet canonical slug" "/word/fr-chet" "$CLI" --md Fréchet
+assert_contains "tweet Fréchet canonical slug" "/word/fr-chet" "$CLI" tweet Fréchet
 assert_contains "cheatsheet"       "Discovery"         "$CLI" cheatsheet
 assert_contains "didyoumean"       "did you mean"      "$CLI" --why Kafkah
 

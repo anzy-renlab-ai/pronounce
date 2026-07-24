@@ -23,9 +23,22 @@ else echo "  ✓ all rows have 10 columns"; fi
 
 # Check duplicate slugs
 echo "[2/8] checking for duplicate slugs..."
-dups=$(awk -F'\t' '!/^#/ && NF>=1 && $1 != "" && $1 != "word" {
-  s=tolower($1); gsub(/[^a-z0-9._-]/,"-",s); print s
-}' "$DICT" | sort | uniq -d)
+dups=$(python3 - "$DICT" <<'PYEOF'
+from collections import Counter
+import re
+import sys
+
+slugs = []
+with open(sys.argv[1], encoding="utf-8") as source:
+    for line in source:
+        if line.startswith("#") or not line.strip():
+            continue
+        word = line.split("\t", 1)[0]
+        if word and word != "word":
+            slugs.append(re.sub(r"[^a-z0-9._-]", "-", word.lower()))
+print("\n".join(sorted(slug for slug, count in Counter(slugs).items() if count > 1)))
+PYEOF
+)
 if [[ -n "$dups" ]]; then
   echo "  ✗ duplicate slugs:" >&2; echo "$dups" >&2; fail=1
 else echo "  ✓ no duplicate slugs"; fi

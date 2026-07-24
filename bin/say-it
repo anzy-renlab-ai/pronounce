@@ -27,6 +27,42 @@ OUTPUT_MD=0
 COPY_CLIP=0
 QUIET=0
 
+# URL and asset slugs replace each non-ASCII code point with one hyphen. BSD
+# sed/awk split UTF-8 into bytes under LC_ALL=C (Fréchet -> fr--chet), so choose
+# an installed UTF-8 locale only for slugging. Keep the rest of the CLI in the
+# caller's locale.
+find_slug_locale() {
+  local available candidate match
+  available="$(locale -a 2>/dev/null || true)"
+  for candidate in C.UTF-8 C.utf8 en_US.UTF-8 en_US.utf8; do
+    match="$(printf '%s\n' "$available" | grep -Fxi "$candidate" | head -n 1 || true)"
+    if [[ -n "$match" ]]; then
+      printf '%s\n' "$match"
+      return 0
+    fi
+  done
+  return 1
+}
+
+SLUG_LOCALE="$(find_slug_locale || true)"
+
+slugify_word() {
+  local word="$1"
+  if [[ -n "$SLUG_LOCALE" ]]; then
+    (
+      export LC_ALL="$SLUG_LOCALE"
+      printf '%s' "$word" \
+        | tr '[:upper:]' '[:lower:]' \
+        | sed 's/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/-/g'
+    )
+  elif command -v python3 >/dev/null 2>&1; then
+    python3 -c 'import re, sys; print(re.sub(r"[^a-z0-9._-]", "-", sys.argv[1].lower()), end="")' "$word"
+  else
+    echo "say-it: URL output needs an installed UTF-8 locale or python3." >&2
+    return 1
+  fi
+}
+
 # ANSI colors (disabled if NO_COLOR or not a TTY)
 if [[ -t 1 && -z "${NO_COLOR:-}" ]]; then
   C_RESET=$'\033[0m'; C_BOLD=$'\033[1m'; C_DIM=$'\033[2m'
@@ -627,7 +663,7 @@ print(json.dumps(out, indent=2, ensure_ascii=False))
     require_dict
     [[ -z "${2:-}" ]] && { echo "say-it: usage: say-it badge <word>" >&2; exit 2; }
     word="$2"
-    slug="$(printf '%s' "$word" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9._-]/-/g')"
+    slug="$(slugify_word "$word")"
     sep=$'\x1f'
     parsed=$(awk -F'\t' -v w="$(printf '%s' "$word" | tr '[:upper:]' '[:lower:]')" -v s="$sep" \
       '!/^#/ && tolower($1)==w { print $2 s $3; exit }' "$DICT")
@@ -750,7 +786,7 @@ MD
   show)
     [[ -z "${2:-}" ]] && { echo "say-it: usage: say-it show <word>" >&2; exit 2; }
     word="$2"
-    slug="$(printf '%s' "$word" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9._-]/-/g')"
+    slug="$(slugify_word "$word")"
     url="https://pronounce.renlab.ai/word/$slug"
     if command -v open >/dev/null 2>&1; then open "$url"
     elif command -v xdg-open >/dev/null 2>&1; then xdg-open "$url"
@@ -1063,7 +1099,7 @@ MD
     echo "📎 [${SRC_LABEL:-source}]($SRC_URL)"
   fi
   echo ""
-  echo "🔊 \`say-it $WORD\`  ·  🌐 https://pronounce.renlab.ai/word/$(echo "$WORD" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9._-]/-/g')"
+  echo "🔊 \`say-it $WORD\`  ·  🌐 https://pronounce.renlab.ai/word/$(slugify_word "$WORD")"
 }
 
 emit_tweet() {
@@ -1073,7 +1109,7 @@ emit_tweet() {
     [[ -n "$ALT_RESP" ]] && text="$text (or \"${ALT_RESP%%|*}\")"
     text="$text 🔊"
     [[ -n "$SRC_LABEL" ]] && text="$text — ${SRC_LABEL}"
-    text="$text · https://pronounce.renlab.ai/word/$(echo "$WORD" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9._-]/-/g')"
+    text="$text · https://pronounce.renlab.ai/word/$(slugify_word "$WORD")"
   else
     text="How do you pronounce $WORD? https://pronounce.renlab.ai"
   fi
