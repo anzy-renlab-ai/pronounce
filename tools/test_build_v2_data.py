@@ -438,6 +438,11 @@ class RepositoryProductFactTests(unittest.TestCase):
         source = build_script.read_text(encoding="utf-8")
         if "--helper-stream-for-test" not in source:
             self.fail("build-site.sh must expose pure helpers for corpus parity tests")
+        self.assertIn(
+            "shopt -u patsub_replacement",
+            source,
+            "Bash 5.2 must not expand '&' inside HTML replacement strings",
+        )
 
         values = [
             cell

@@ -14,6 +14,11 @@
 # Zero build deps: bash + awk.
 set -e
 
+# Bash 5.2 enables patsub_replacement by default, which gives "&" special
+# meaning inside ${value//pattern/replacement}. Disable it so the pure-Bash
+# HTML escaper is byte-identical to Bash 3.2 and the former sed implementation.
+shopt -u patsub_replacement 2>/dev/null || true
+
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 DICT="$REPO_ROOT/data/pronunciations.tsv"
 DOCS="$REPO_ROOT/docs"
