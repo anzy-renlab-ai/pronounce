@@ -20,7 +20,7 @@
         "comparisonOldTitle": "Before",
         "comparisonOld": ["kub-cuttle", "eng-inks", "jraffic", "guess and pray"],
         "comparisonNewTitle": "After",
-        "comparisonNew": ["koo-buh-K-T-L", "engine X", "jif (sourced)", "say-it kubectl"]
+        "comparisonNew": ["koo-buh-K-T-L", "engine X", "jif (creator-cited)", "say-it kubectl"]
       }
     },
     {
@@ -28,8 +28,8 @@
       "duration_frames": 180,
       "transition_in": { "type": "fade", "duration_frames": 12 },
       "props": {
-        "bigNumber": "544",
-        "numberLabel": "entries · every one sourced"
+        "bigNumber": "1,880",
+        "numberLabel": "entries · 1,260 source-cited"
       }
     },
     {
@@ -38,7 +38,7 @@
       "transition_in": { "type": "fade", "duration_frames": 12 },
       "props": {
         "spotlightFeature": "Multi-reading audio",
-        "spotlightSubtext": "jif … or: ghif. The hard-G debate, audible."
+        "spotlightSubtext": "101 creator-clarified · 174 contested · jif … or: ghif."
       }
     },
     {
@@ -46,8 +46,8 @@
       "duration_frames": 300,
       "transition_in": { "type": "fade", "duration_frames": 12 },
       "props": {
-        "spotlightFeature": "Claude Code skill built-in",
-        "spotlightSubtext": "Ask Claude: audio + IPA + source, not a guess."
+        "spotlightFeature": "Cross-platform Bash CLI",
+        "spotlightSubtext": "macOS say · Linux espeak · Windows System.Speech · no npm runtime."
       }
     },
     {

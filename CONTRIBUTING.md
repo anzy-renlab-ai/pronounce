@@ -41,7 +41,7 @@ Respellings use each backend's letter-to-sound rules. The pronunciation that sou
 
 If it sounds wrong, iterate on the respelling. Common pitfalls:
 
-- macOS `say` may interpret `giff` as `/dʒɪf/` (same as `jif`). Use `gif` for the hard-G reading.
+- macOS `say` with the Samantha voice interprets both `gif` and `giff` as `/dʒɪf/` (the same waveform as `jif`). Use `ghif` as the explicit hard-G `/ɡɪf/` speech cue, and listen to the result rather than trusting the spelling.
 - Feed ordinary English-like text through `respelling_us`; IPA is display metadata, not TTS input.
 - Watch out for short tokens that get spelled letter-by-letter (e.g. `tmux` raw becomes "T-M-U-X"). Use a respelling like `T mux` or `tee mucks`.
 

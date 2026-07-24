@@ -46,15 +46,18 @@ Show HN: Pronounce – a CLI that speaks kubectl, GIF, JSON the way devs actuall
 ```
 Hi HN — I built Pronounce, a tiny CLI + community dictionary for the project
 names devs trip over: kubectl ("koob-control"), nginx ("engine X"), GIF
-("jif"), JSON ("jay-son"), and 540+ more, each with a source citation.
+("jif"), JSON ("jay-son"), and more. The dictionary has 1,880 entries:
+all are confidence-tagged, 1,260 are source-cited, 101 are
+creator-clarified, and 174 are contested.
 
   $ say-it kubectl
   🔊  koob control. koob control. koob control. or: cube cuddle. or: kube C T L.
 
-The CLI wraps macOS's built-in `say` with a curated respelling per entry,
-so you hear the intended community reading instead of whatever the TTS
-guessed from the letters. Multi-reading words (GIF, SQL, JWT) chain their
-alternates audibly so you know the debate exists.
+The Bash CLI uses the speech backend already available on your platform:
+macOS `say`, Linux `espeak-ng`/`espeak`, or Windows PowerShell
+`System.Speech`. Curated respellings keep the TTS from guessing from the
+letters. Multi-reading words (GIF, SQL, JWT) chain their alternates audibly
+so you know the debate exists.
 
 There's also an interactive quiz, voice search via Web Speech API, an MCP
 server so Claude/Cursor can answer pronunciation questions, and a Raycast
@@ -64,7 +67,8 @@ The dictionary is a TSV file — every entry tagged with confidence
 (creator-clarified, community-consensus, contested) and a source URL when
 one exists. PRs welcome.
 
-MIT, zero deps (Bash + macOS `say`). Windows/Linux backends are next.
+MIT. One Bash CLI with no npm runtime; macOS, Linux, and Windows backends
+ship today.
 
 Repo: https://github.com/anzy-renlab-ai/pronounce
 Live: https://pronounce.renlab.ai/
@@ -79,20 +83,22 @@ Quiz: https://pronounce.renlab.ai/quiz.html
 
 **Title**:
 ```
-I built a CLI that pronounces kubectl, GIF, JWT the way the community actually says them (540+ entries, sourced)
+I built a CLI that pronounces kubectl, GIF, JWT the way the community actually says them (1,880 entries; 1,260 sourced)
 ```
 
 **Body**:
 ```
-Tired of saying "kub-cuttle" or hearing 47 takes on GIF? `say-it` is a 1-file
-Bash CLI that speaks the *intended* community reading through macOS `say`:
+Tired of saying "kub-cuttle" or hearing 47 takes on GIF? `say-it` is one
+Bash CLI that speaks the *intended* community reading through the detected
+OS speech backend:
 
     $ say-it kubectl
     🔊 koob control. koob control. koob control. or: cube cuddle. or: kube C T L.
 
-It ships with a 540-entry dictionary (kubectl, nginx, GIF, JSON, Pydantic,
-JWT, Knative, LaTeX, …), every entry tagged with a confidence level and
-a source URL (creator interview, project FAQ, Wikipedia anchor).
+It ships with a 1,880-entry dictionary (kubectl, nginx, GIF, JSON,
+Pydantic, JWT, Knative, LaTeX, …). Every entry has a confidence level;
+1,260 have source URLs, 101 are creator-clarified, and 174 are contested.
+Entries without reliable evidence leave the source field blank.
 
 Multi-reading words audibly chain their alternates ("or: ghif", an explicit hard-G speech cue) so you hear
 the debate without watching the terminal.
@@ -100,7 +106,8 @@ the debate without watching the terminal.
 Bonus: interactive quiz, voice-mic search on the site, MCP server for
 Claude/Cursor, Raycast script.
 
-MIT, zero deps. Star if it saves you from one cringey standup moment :)
+MIT, no npm runtime, and speech backends for macOS, Linux, and Windows.
+Star if it saves you from one cringey standup moment :)
 
 https://github.com/anzy-renlab-ai/pronounce
 https://pronounce.renlab.ai/
@@ -113,7 +120,7 @@ https://pronounce.renlab.ai/
 ```
 1/ You say "n-jinx" in standup one time and you never recover.
 
-I built Pronounce — a CLI that speaks 540+ project / product names the way devs actually say them.
+I built Pronounce — a CLI that speaks 1,880 project / product names the way devs actually say them.
 
 kubectl → "koob control"
 GIF    → "jif" (creator says so)
@@ -123,15 +130,18 @@ https://pronounce.renlab.ai 🔊
 ```
 
 ```
-2/ Every entry is sourced.
+2/ Every one of the 1,880 entries is confidence-tagged; 1,260 are source-cited.
 
 If a creator settled the pronunciation on record (Wilhite at the Webby Awards for GIF, Linus for Linux, Crockford for JSON), the dictionary cites it.
 
-If it's community-consensus or contested, it says so — and audibly chains the alternates.
+There are 101 creator-clarified and 174 contested entries. If reliable
+evidence is unavailable, the source stays blank instead of inventing a URL.
+Contested entries audibly chain the alternates.
 ```
 
 ```
-3/ The CLI is 1 file of Bash. No deps. Just wraps macOS `say` with a curated respelling per word.
+3/ The CLI is one Bash program with no npm runtime. It detects macOS `say`,
+Linux `espeak-ng`/`espeak`, or Windows PowerShell `System.Speech`.
 
   $ say-it kubectl     # 3 reps + alternates
   $ say-it --alt GIF   # focus on the rival reading
@@ -140,13 +150,13 @@ If it's community-consensus or contested, it says so — and audibly chains the 
 ```
 
 ```
-4/ The browser side: interactive quiz, voice mic search (Web Speech API), instant typeahead, PWA install. Every word has its own page with audio + source + share buttons.
+4/ The browser side: interactive quiz, voice mic search (Web Speech API), instant typeahead, PWA install. Every word has its own page with canonical audio, confidence, a source when one exists, and share buttons.
 
 There's also an MCP server so Claude / Cursor can answer pronunciation questions.
 ```
 
 ```
-5/ Open source, MIT, every entry is a community PR.
+5/ Open source, MIT, and community-editable through a plain TSV dictionary.
 
 If you've ever been gently corrected mid-standup, this is for you.
 
@@ -177,21 +187,25 @@ Then walk through: the problem → the dictionary approach → the audible alter
 
 **Title**:
 ```
-[分享] kubectl 怎么读？一个 540 词的开发者发音字典 + CLI
+[分享] kubectl 怎么读？一个 1,880 词的开发者发音字典 + CLI
 ```
 
 **Body**:
 ```
 做开发久了，每个人都念错过几个项目名 —— "kub-cuttle"、"n-jinx"、JSON 到底是 "jay-son" 还是 "jee-son"…
 
-最近开源了一个小工具 say-it，把这种发音查询做成一个 1 文件 Bash CLI，调用 macOS `say` 把"社区实际念法"播出来，不是查 IPA 看不懂。
+最近开源了一个小工具 say-it，把这种发音查询做成一个 Bash CLI，
+自动调用 macOS `say`、Linux `espeak-ng`/`espeak` 或 Windows PowerShell
+`System.Speech`，把“社区实际念法”播出来，不是只给一串 IPA。
 
 例：
 
     $ say-it kubectl
     🔊  koob control. koob control. koob control. or: cube cuddle. or: kube C T L.
 
-字典 540 条，每条都标了置信度（creator-clarified / community-consensus / contested）和来源 URL（Wilhite 在 Webby Awards 上说 GIF 念 "jif"、Crockford 在 RailsConf 说 JSON 念 "jay-son" 等等）。
+字典 1,880 条，每条都标了置信度；其中 1,260 条有来源 URL，
+101 条是 creator-clarified，174 条是 contested。没有可靠证据的条目会
+留空来源，不编造 URL。
 
 附带：
 - 网页版（带语音 mic 搜索 + 互动 quiz）：https://pronounce.renlab.ai
@@ -199,7 +213,7 @@ Then walk through: the problem → the dictionary approach → the audible alter
 - Raycast / Alfred / VS Code 集成
 - Claude Code Skill：中文 "X 怎么读？" 自动触发
 
-MIT、零依赖、PR 欢迎。GitHub：https://github.com/anzy-renlab-ai/pronounce
+MIT、无需 npm runtime、PR 欢迎。GitHub：https://github.com/anzy-renlab-ai/pronounce
 ```
 
 ---
@@ -208,7 +222,7 @@ MIT、零依赖、PR 欢迎。GitHub：https://github.com/anzy-renlab-ai/pronoun
 
 **Title**:
 ```
-你确定 kubectl 念 "kub-cuttle"？我做了一个 540 词的开发者发音字典
+你确定 kubectl 念 "kub-cuttle"？我做了一个 1,880 词的开发者发音字典
 ```
 
 **Frontmatter (tags)**: `命令行`, `开源`, `CLI`, `开发工具`, `效率`
@@ -217,7 +231,9 @@ MIT、零依赖、PR 欢迎。GitHub：https://github.com/anzy-renlab-ai/pronoun
 ```
 本文背景：写了 6 个月 Kubernetes，听到第一次 KubeCon talk 才知道 kubectl 念 "koob-control"，不是 "kub-cuttle"；nginx 念 "engine X"，不是 "n-jinx"；GIF 创作者 Wilhite 在 Webby Awards 上明确说念 "jif"，不是 "gif"…
 
-整理了一份社区共识 + 来源引用的开发者发音字典，写了个 1 文件 Bash CLI 调 macOS `say` 播出来。540 条，全部有来源 URL。开源 MIT，欢迎补充。
+整理了一份开发者发音字典，写了个 Bash CLI 自动调用 macOS、Linux 或
+Windows 的语音后端播出来。共 1,880 条，全部标置信度；1,260 条有来源，
+101 条是 creator-clarified，174 条是 contested。开源 MIT，欢迎补充。
 ```
 
 后面同样：例子 → 字典维护方式 → 网页 / quiz / MCP server / Raycast 集成 → GitHub 链接。
@@ -236,11 +252,12 @@ Small thing — but every standup, every demo, every interview where someone
 gently corrects you costs micro-trust. So I open-sourced what I'd wanted:
 
 ▸ Pronounce — a CLI + community dictionary for developer jargon
-▸ 540+ entries with confidence levels and source citations
+▸ 1,880 confidence-tagged entries; 1,260 source-cited
+▸ 101 creator-clarified; 174 contested
 ▸ Audio playback for the "intended" community reading
 ▸ MCP server so AI assistants stop guessing
 
-The dictionary is a TSV file. Every entry is a community PR. If you've
+The dictionary is a community-editable TSV file. If you've
 ever been corrected mid-meeting, drop a star ⭐ — it nudges more devs to
 contribute their favorite mispronounced project name.
 
@@ -253,8 +270,8 @@ https://github.com/anzy-renlab-ai/pronounce
 
 ```
 new tiny tool: Pronounce — a CLI that says "kubectl", "nginx", "GIF",
-"JSON", and 540+ other developer jargon names the way the community
-actually says them. cited sources, audible alternates, MIT, zero deps.
+"JSON", and 1,880 developer jargon names the way the community actually
+says them. 1,260 source-cited, audible alternates, MIT, no npm runtime.
 
 🌐 https://pronounce.renlab.ai
 🐙 https://github.com/anzy-renlab-ai/pronounce
@@ -269,7 +286,7 @@ actually says them. cited sources, audible alternates, MIT, zero deps.
 Adjust target community:
 
 - General dev: `does anyone else still pronounce kubectl as "kub-cuttle"? I made a thing → https://pronounce.renlab.ai`
-- DevOps: `apparently it's "et-cetera-distributed", not "et-see-dee". 540 of these, all cited → https://pronounce.renlab.ai`
+- DevOps: `apparently it's "et-cetera-distributed", not "et-see-dee". 1,880 entries, 1,260 source-cited → https://pronounce.renlab.ai`
 - AI/ML: `built an MCP server so Claude / Cursor can answer "how to pronounce X" with audio → https://github.com/anzy-renlab-ai/pronounce/tree/main/mcp-server`
 - Newbie-friendly: `if you've ever said n-jinx in a meeting and felt the shame, this is for you → https://pronounce.renlab.ai`
 
@@ -280,13 +297,13 @@ Adjust target community:
 Copy this into the repo Description field:
 
 ```
-🔊 Pronounce developer jargon out loud. 540+ entries (kubectl, GIF, JSON, JWT…), sourced, with confidence levels. Bash CLI + interactive quiz + voice search + MCP server.
+🔊 Pronounce developer jargon out loud. 1,880 confidence-tagged entries; 1,260 source-cited. Cross-platform Bash CLI + quiz + voice search + MCP server.
 ```
 
 Topics to add (Settings → Topics):
 
 ```
-cli  bash  pronunciation  dictionary  macos  developer-tools
+cli  bash  pronunciation  dictionary  macos  linux  windows  developer-tools
 text-to-speech  tts  speech-synthesis  open-source  community-driven
 claude-code  mcp  mcp-server  raycast  alfred  pwa  kubernetes
 sre  devops  programming  jargon
@@ -302,7 +319,7 @@ sre  devops  programming  jargon
 4. **Reply, don't post** — when someone tweets "how do you pronounce X", reply with the canonical link + 1 sentence. Genuine help converts to stars more than launches do.
 5. **Cross-link from your other repos** — README badge `[![Pronounce](https://img.shields.io/badge/say-it-ff6a3d)](https://pronounce.renlab.ai)`.
 6. **Submit to awesome lists** — `awesome-cli-apps`, `awesome-shell`, `awesome-developer-tools`, `awesome-mcp-servers` (you're already in two).
-7. **Hacker News follow-up post a month later** — "Pronounce update: 540 entries, MCP server, here's what worked" tends to chart better than launches.
+7. **Hacker News follow-up post a month later** — "Pronounce update: 1,880 entries, MCP server, here's what worked" tends to chart better than launches.
 
 ---
 

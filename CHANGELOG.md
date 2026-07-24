@@ -2,13 +2,14 @@
 
 ## v2.23.1 — 2026-07-23
 
-**Consistency release — canonical web audio, accurate product facts, and complete release guards.** No dictionary change (holds at 1,880 entries, 1,260 with a citable source).
+**Consistency release — canonical web audio, accurate product facts, and complete release guards.** No entry-count change (holds at 1,880 entries, 1,260 with a citable source).
 
 ### Fixed
 
 - **Homepage audio now matches the committed corpus.** Hero, dictionary cards, Famous entries, the command palette, and type-to-speak play the canonical `/audio/<slug>.mp3` first, with a guarded Web Speech fallback only when playback fails. Each request settles exactly once, so stale failures cannot speak over newer audio.
+- **GIF's hard-G alternate is audible again.** Samantha renders raw `gif` and `giff` identically to the primary `jif`; the `/ɡɪf/` alternate now uses the verified `ghif` speech cue, with demos and release tests kept in sync.
 - **Public product facts match the shipped CLI.** Current docs describe one Bash CLI with no npm runtime, English-like `respelling_us` input, and the three detected OS backends: macOS `say`, Linux `espeak-ng`/`espeak`, and Windows PowerShell `System.Speech`.
-- **Source coverage is explicit.** Public copy distinguishes the 1,880 total entries from the 1,260 carrying a citable source instead of implying universal coverage.
+- **Source coverage is explicit.** Public copy distinguishes the 1,880 total entries from the 1,260 carrying a citable source instead of implying universal coverage; 101 entries are creator-clarified and 174 are contested.
 - **Release guards cover every v2 build source.** Build-site and CI path filters now include the JSX, generator, media, and test inputs; Ubuntu CI runs the audio, v2-data, and incremental-OG tests with Python 3.12 and Pillow.
 
 ### Changed

@@ -24,7 +24,7 @@ These are P0. Do not skip.
 - [ ] **Listen to 20-30 dict entries.** Run `tools/audit-listen.sh && open .audit-audio/`. Click through `kubectl`, `nginx`, `Pydantic`, `Anthropic`, `Kubernetes`, `Cilium`, `Knative`, `Vercel`, `Postgres`, `Mistral`, `Ollama`, `LaTeX`, `Pinia`, `Cassandra`, `Velero`, every `contested` entry, the Famous Moments words. If any sound badly wrong, fix the `respelling_us` column and re-run.
 - [ ] **Verify every Famous Moments source URL clicks through to the right material.** A 404 or wrong-video URL kills credibility instantly on HN. If a source can't be verified, blank the URL and downgrade `confidence` to `community-consensus`.
 - [ ] **Smoke test the install path on a fresh terminal.** `git clone … && cd pronounce && ./install.sh && say-it kubectl`. If anything errors, fix before launching.
-- [ ] **Test the site at <https://pronounce.renlab.ai> on Safari + Chrome.** Click ▶ on a few words — Web Speech voice will differ from CLI, that's documented in the disclaimer.
+- [ ] **Test the site at <https://pronounce.renlab.ai> on Safari + Chrome.** Click ▶ on a few words — the site should play the committed canonical MP3 first and use Web Speech only if playback fails.
 - [ ] **Take a 6-10 sec demo screen recording** of the terminal showing `say-it kubectl` and `say-it GIF`. Use [asciinema](https://asciinema.org) or [Cleanshot](https://cleanshot.com) → MP4. Upload to <https://x.com/upload/video> or wherever. Pin to repo README.
 - [ ] **Star + watch your own repo** (signal to GitHub trending algorithm). Have a friend or two do the same — 5-10 stars before launch isn't suspicious, it's normal.
 - [ ] **Pin an issue:** "Add your favorite mispronounced project — PR welcome". Lowers contribution friction; every PR opener tends to star.
@@ -61,20 +61,20 @@ Body (write into the first comment, since HN posts can't have a body when there'
 I built this after the 47th time I heard a coworker say "kub-cuttle" and finally
 realized I'd been saying it that way for six months too.
 
-It's a community-maintained dictionary of how engineers actually pronounce
-project, product, and programmer-jargon names — kubectl, nginx, GIF, JSON,
-Pydantic, Knative, LaTeX, Postgres, GUI, GNU, and ~170 more. Every entry tagged
-with a confidence level (creator-clarified / community-consensus / contested)
-and (where possible) linked to a source — official FAQ, Wikipedia § Pronunciation,
-creator interview.
+It's a community-maintained dictionary of 1,880 project, product, and
+programmer-jargon pronunciations — kubectl, nginx, GIF, JSON, Pydantic, Knative,
+LaTeX, Postgres, GUI, GNU, and many more. All 1,880 are confidence-tagged;
+1,260 link to a citable source, including 101 creator-clarified entries and
+174 contested readings.
 
 For multi-reading words, the CLI audibly chains the alternates after the primary
 ("jif. jif. jif. or: ghif.", using an explicit hard-G speech cue), so you hear the debate without having to read the
 terminal.
 
-The CLI is a ~250-line Bash script wrapping macOS `say`. There's also a Claude
-Code skill so "how do you pronounce X?" prompts get answered with audio + a
-source URL instead of a phonetic guess.
+The CLI is one Bash program with no npm runtime. It detects macOS `say`, Linux
+`espeak-ng`/`espeak`, or Windows PowerShell `System.Speech`. There's also a
+Claude Code skill so "how do you pronounce X?" prompts get answered with audio,
+IPA, and a source URL when one exists instead of a phonetic guess.
 
 GitHub: https://github.com/anzy-renlab-ai/pronounce
 MIT, contributions very welcome — especially for the contested entries.
@@ -84,12 +84,11 @@ Things I learned writing this that surprised me:
   any more (both fall through as literal text — I checked empirically). So the
   dictionary ships English-like respellings rather than phonemes.
 - `[[slnc N]]` IS still honored, so the inter-rep pauses are real silence.
-- "giff" gets pronounced /dʒɪf/ by Samantha, same as "jif" — the engine has an
-  internal lexicon override. You have to write "gif" (single f, lowercase) to
-  get the hard-G.
+- Samantha pronounces both "gif" and "giff" as /dʒɪf/, the same waveform as
+  "jif". The explicit speech cue "ghif" is required for the hard-G /ɡɪf/ reading.
 
-Windows/Linux backends and cloud TTS (ElevenLabs, OpenAI) are M2-M3 on the
-roadmap.
+The three local OS backends ship today. Cloud TTS integrations remain optional
+future work.
 ```
 
 When the post hits the new queue, reload `news.ycombinator.com/newest` and find your submission. Have 2-3 friends ready to upvote within the first 10 minutes — this is **not** astroturfing if they're real users who actually find it useful, it's signal. The HN algorithm needs early signal to surface a post.
@@ -151,8 +150,9 @@ Pre-write 18 of these. Suggested words (highest "huh I didn't know" factor):
 ```
 20/
 
-That's just the loud ones — there are 170+ in the full dict, plus a Claude
-Code skill that turns "how do you pronounce X?" into audio with a source.
+That's just the loud ones — there are 1,880 entries in the full dict, plus a
+Claude Code skill that turns "how do you pronounce X?" into audio, IPA, and a
+source when one exists.
 
 If you've been saying any of these wrong, the cure is hearing them three times.
 
@@ -208,8 +208,8 @@ Post to three subs the same day, but with **different angles** in the titles. Cr
 **r/programming** (700k subs):
 
 ```
-Title: How to pronounce kubectl, nginx, GIF, and 170+ project names —
-       with creator citations
+Title: How to pronounce kubectl, nginx, GIF, and 1,880 developer terms —
+       1,260 with citable sources
 ```
 
 **r/devops** (150k subs):
@@ -222,8 +222,8 @@ Title: A small CLI for how to actually pronounce kubectl (and 12 other
 **r/commandline** (45k subs):
 
 ```
-Title: say-it — a Bash CLI that wraps macOS `say` and a community
-       dictionary of how engineers really pronounce things
+Title: say-it — a cross-platform Bash CLI and community dictionary of
+       how engineers really pronounce things
 ```
 
 For each: post the link, top comment yourself with a 3-paragraph context (problem → what it does → "here's the GitHub if you'd star"). Reply to every commenter.
@@ -306,11 +306,11 @@ These multiply the leverage of every channel:
 - ❌ Post the same text across HN + Reddit + Twitter at exactly the same time. Looks coordinated. Stagger.
 - ❌ Astroturf with sockpuppet accounts. Detectable. Career-ending.
 - ❌ Launch incomplete. If `kubectl` came out wrong in your last test, fix it BEFORE launching.
-- ❌ Promise features that don't exist. Roadmap items are OK; "Windows support" claimed as shipping today is not.
+- ❌ Promise features that don't exist. The three local OS backends ship; cloud TTS remains future work.
 - ❌ Argue with critics. Thank them, fix what's fixable, ignore what isn't.
 
 ## After the launch
 
-If you hit 500 stars: cut a v0.2 with the actual top-3 community-requested features (probably cloud TTS, a brew formula, and Windows backend in that order).
+If you hit 500 stars: cut the next release around the actual top community requests (for example cloud TTS, a brew formula, or another editor integration).
 
 If you don't hit 500: don't sweat it. The site has compounding SEO — `/word/<slug>` pages will keep ranking for "how to pronounce X" queries for months. Star count from organic search alone tends to be 10-30/month for tools with this kind of search profile, which adds up.
