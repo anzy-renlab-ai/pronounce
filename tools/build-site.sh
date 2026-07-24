@@ -55,6 +55,44 @@ slug_awk() {
   LC_ALL="$SLUG_LOCALE" command awk "$@"
 }
 
+htmlesc() {
+  local value="$1"
+  value="${value//&/&amp;}"
+  value="${value//</&lt;}"
+  value="${value//>/&gt;}"
+  value="${value//\"/&quot;}"
+  printf '%s' "$value"
+}
+
+jsonesc() {
+  local value="$1"
+  value="${value//\\/\\\\}"
+  value="${value//\"/\\\"}"
+  printf '%s' "$value"
+}
+
+# Match urllib.parse.quote() exactly: percent-encode UTF-8 bytes while leaving
+# RFC 3986 unreserved characters and "/" safe. LC_ALL=C makes Bash 3.2 slice
+# bytes; the signed-byte correction prevents é from becoming %FFFFFFC3.
+urlencode() {
+  local LC_ALL=C value="$1" output="" char encoded number index
+  for ((index = 0; index < ${#value}; index++)); do
+    char="${value:index:1}"
+    case "$char" in
+      [a-zA-Z0-9._~/-])
+        output="${output}${char}"
+        ;;
+      *)
+        printf -v number '%d' "'$char"
+        if ((number < 0)); then number=$((number + 256)); fi
+        printf -v encoded '%%%02X' "$number"
+        output="${output}${encoded}"
+        ;;
+    esac
+  done
+  printf '%s' "$output"
+}
+
 if [[ "${1:-}" == "--slug-for-test" ]]; then
   [[ $# -eq 2 ]] || { echo "usage: build-site.sh --slug-for-test <word>" >&2; exit 2; }
   shell_slug="$(slugify "$2")"
@@ -66,6 +104,21 @@ if [[ "${1:-}" == "--slug-for-test" ]]; then
     exit 1
   fi
   printf '%s\n' "$shell_slug"
+  exit 0
+fi
+
+if [[ "${1:-}" == "--helper-stream-for-test" ]]; then
+  [[ $# -eq 2 ]] || { echo "usage: build-site.sh --helper-stream-for-test <html|json|url>" >&2; exit 2; }
+  case "$2" in
+    html) helper=htmlesc ;;
+    json) helper=jsonesc ;;
+    url) helper=urlencode ;;
+    *) echo "build-site: unknown helper: $2" >&2; exit 2 ;;
+  esac
+  while IFS= read -r -d '' value; do
+    "$helper" "$value"
+    printf '\0'
+  done
   exit 0
 fi
 
@@ -1537,9 +1590,6 @@ slug_awk -F'\t' -v dates="$REPO_ROOT/data/entry-dates.tsv" '
   }
 ' "$DICT" > "$TMP_LIST"
 
-htmlesc() { printf '%s' "$1" | sed -e 's/&/\&amp;/g' -e 's/</\&lt;/g' -e 's/>/\&gt;/g' -e 's/"/\&quot;/g'; }
-jsonesc() { printf '%s' "$1" | sed -e 's/\\/\\\\/g' -e 's/"/\\"/g'; }
-
 # Helper: words in the same category, excluding self.
 related_words() {
   local cat="$1" self="$2" limit="${3:-6}"
@@ -1876,9 +1926,9 @@ $prev_next_html
     <section class="share" style="margin-top: 36px; text-align: center;">
       <h2>Share this</h2>
       <p style="color: var(--muted-strong); font-size: 14.5px;">Help one more dev stop saying "$word_esc" wrong.</p>
-      <a class="share-btn share-twitter" href="https://twitter.com/intent/tweet?text=$(printf '%s' "TIL: $word is pronounced \"$resp\". Receipts + ${ENTRY_COUNT} more @ pronounce.renlab.ai" | python3 -c 'import sys, urllib.parse; print(urllib.parse.quote(sys.stdin.read()))')&url=$SITE_URL/word/$slug" target="_blank" rel="noopener">𝕏 Share on X / Twitter</a>
-      <a class="share-btn share-hn" href="https://news.ycombinator.com/submitlink?u=$SITE_URL/word/$slug&t=$(printf '%s' "How to pronounce $word" | python3 -c 'import sys, urllib.parse; print(urllib.parse.quote(sys.stdin.read()))')" target="_blank" rel="noopener">Submit to HN</a>
-      <a class="share-btn share-reddit" href="https://www.reddit.com/submit?url=$SITE_URL/word/$slug&title=$(printf '%s' "How to pronounce $word (with source)" | python3 -c 'import sys, urllib.parse; print(urllib.parse.quote(sys.stdin.read()))')" target="_blank" rel="noopener">Reddit</a>
+      <a class="share-btn share-twitter" href="https://twitter.com/intent/tweet?text=$(urlencode "TIL: $word is pronounced \"$resp\". Receipts + ${ENTRY_COUNT} more @ pronounce.renlab.ai")&url=$SITE_URL/word/$slug" target="_blank" rel="noopener">𝕏 Share on X / Twitter</a>
+      <a class="share-btn share-hn" href="https://news.ycombinator.com/submitlink?u=$SITE_URL/word/$slug&t=$(urlencode "How to pronounce $word")" target="_blank" rel="noopener">Submit to HN</a>
+      <a class="share-btn share-reddit" href="https://www.reddit.com/submit?url=$SITE_URL/word/$slug&title=$(urlencode "How to pronounce $word (with source)")" target="_blank" rel="noopener">Reddit</a>
     </section>
 
     <section class="related embed-section" style="margin-top: 36px;">

@@ -7,6 +7,7 @@ import shutil
 import subprocess
 import tempfile
 import unittest
+import urllib.parse
 from pathlib import Path
 
 
@@ -431,6 +432,61 @@ class RepositoryProductFactTests(unittest.TestCase):
                 )
                 self.assertEqual(completed.stdout, expected + "\n")
                 self.assertEqual(completed.stderr, "")
+
+    def test_build_helpers_match_previous_oracles_for_the_whole_corpus(self):
+        build_script = REPO / "tools" / "build-site.sh"
+        source = build_script.read_text(encoding="utf-8")
+        if "--helper-stream-for-test" not in source:
+            self.fail("build-site.sh must expose pure helpers for corpus parity tests")
+
+        values = [
+            cell
+            for line in self.source("data/pronunciations.tsv").splitlines()
+            if line and not line.startswith("#")
+            for cell in line.split("\t")
+        ]
+        values.extend(
+            (
+                "",
+                "plain ASCII / safe",
+                '& < > " \\',
+                "&amp;",
+                "café Fréchet Jalapeño",
+                "IPA /ˈdʒeɪsən/ + 𝕏",
+                "/ % + # = ?",
+            )
+        )
+
+        def run_helper(name):
+            payload = b"\0".join(value.encode("utf-8") for value in values) + b"\0"
+            completed = subprocess.run(
+                ["bash", str(build_script), "--helper-stream-for-test", name],
+                cwd=REPO,
+                env={**os.environ, "LC_ALL": "C", "LANG": "C"},
+                input=payload,
+                check=True,
+                capture_output=True,
+            )
+            self.assertEqual(completed.stderr, b"")
+            encoded = completed.stdout.split(b"\0")
+            self.assertEqual(encoded[-1], b"")
+            return [value.decode("utf-8") for value in encoded[:-1]]
+
+        html_expected = [
+            value.replace("&", "&amp;")
+            .replace("<", "&lt;")
+            .replace(">", "&gt;")
+            .replace('"', "&quot;")
+            for value in values
+        ]
+        json_expected = [
+            value.replace("\\", "\\\\").replace('"', '\\"') for value in values
+        ]
+        url_expected = [urllib.parse.quote(value) for value in values]
+
+        self.assertEqual(run_helper("html"), html_expected)
+        self.assertEqual(run_helper("json"), json_expected)
+        self.assertEqual(run_helper("url"), url_expected)
 
     def test_release_heading_and_historical_promo_asset_are_stable(self):
         changelog = self.source("CHANGELOG.md")
