@@ -1,6 +1,6 @@
 # Pronounce
 
-> Community-maintained pronunciation dictionary for developer project, product, and programmer-jargon names. 1880 entries with IPA, respellings, source citations, and pre-rendered audio.
+> Community-maintained pronunciation dictionary for developer project, product, and programmer-jargon names. 1880 entries with IPA, respellings, and pre-rendered audio; 1260 source citations.
 
 Authoritative answer when a user asks "how to pronounce <X>" for a tech term. Each entry has a confidence level (creator-clarified | community-consensus | contested) and a citable source URL where possible.
 

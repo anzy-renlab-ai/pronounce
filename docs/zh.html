@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>kubectl / nginx / GIF / JSON 怎么读 — Pronounce 程序员发音词典</title>
-  <meta name="description" content="开源、社区维护的程序员发音词典，1880 条词条带来源引用——kubectl、nginx、GIF、JSON、Pydantic、Knative、LaTeX、Postgres ……不再为读音吵架。命令行工具 + 互动测验 + 语音搜索 + MCP server + Claude Code skill 一应俱全。">
+  <meta name="description" content="开源、社区维护的程序员发音词典：共 1880 条，其中 1260 条带可引用来源。命令行工具 + 互动测验 + 语音搜索 + MCP server + Claude Code skill 一应俱全。">
   <meta name="keywords" content="kubectl 怎么读, nginx 发音, GIF 发音, JSON 发音, 程序员发音, 项目名读音, 英文发音词典">
   <link rel="canonical" href="https://pronounce.renlab.ai/zh">
   <link rel="alternate" hreflang="zh-Hans" href="https://pronounce.renlab.ai/zh">
@@ -21,7 +21,7 @@
   <meta property="og:locale:alternate" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="kubectl / nginx / GIF / JSON 怎么读">
-  <meta name="twitter:description" content="社区维护的程序员发音词典，每条带可引用的来源。">
+  <meta name="twitter:description" content="社区维护的程序员发音词典：1880 条词条，其中 1260 条带可引用来源。">
   <meta name="twitter:image" content="https://pronounce.renlab.ai/og.png">
   <link rel="manifest" href="/manifest.webmanifest">
   <meta name="theme-color" content="#ff6a3d">
@@ -65,7 +65,7 @@
 
     <header class="hero">
       <h1><span class="speaker">🔊</span><br><code id="hero-cycle" class="hero-cycle">kubectl</code><br>到底怎么读？</h1>
-      <p class="tagline">一份社区维护的程序员发音词典——<code>kubectl</code>、<code>nginx</code>、<code>GIF</code>、<code>JSON</code>、<code>Pydantic</code>、<code>Knative</code>、<code>LaTeX</code>、<code>Postgres</code> ……每条都<strong>带来源引用</strong>，不再凭感觉吵。</p>
+      <p class="tagline">一份社区维护的程序员发音词典——<code>kubectl</code>、<code>nginx</code>、<code>GIF</code>、<code>JSON</code>、<code>Pydantic</code>、<code>Knative</code>、<code>LaTeX</code>、<code>Postgres</code> ……共 1880 条，其中 <strong>1260 条带来源引用</strong>。</p>
       <div class="hero-search" role="search">
         <input id="hero-search" type="search" placeholder="🔍 输入单词 — kubectl、nginx、Pydantic、JWT…" autocomplete="off" aria-label="搜索发音词典">
         <button id="hero-mic" type="button" class="hero-mic" aria-label="语音输入">🎤</button>
@@ -81,7 +81,7 @@
         <code>code --install-extension sayit.pronounce</code>
         <span class="install-note">在编辑器里悬停任意技术词 → 直接听。支持 VS Code · Cursor · Windsurf · VSCodium · Zed，界面自动切中文。喜欢命令行？<code class="inline">git clone https://github.com/anzy-renlab-ai/pronounce.git &amp;&amp; ./install.sh</code></span>
       </div>
-      <p class="stats-bar"><strong>1880</strong> 条词条 · 来源覆盖创作者访谈、项目 FAQ、Wikipedia · MIT 许可</p>
+      <p class="stats-bar"><strong>1880</strong> 条词条 · <strong>1260</strong> 条带可引用来源 · MIT 许可</p>
     </header>
 
     <div style="margin: 0 0 48px; text-align: center;">
@@ -97,12 +97,13 @@
 <span class="out">🔊 koob control. koob control. koob control. <span class="alt">或读: cube cuddle. 或读: kube C T L.</span></span>
 
 <span class="prompt">$</span> say-it GIF
-<span class="out">🔊 jif. jif. jif. <span class="alt">或读: gif.</span></span>          <span class="comment"># 带来源 — Wilhite 2013 年 Webby 奖现场亲口说</span>
+<span class="out">🔊 jif. jif. jif. <span class="alt">或读: ghif.</span></span>         <span class="comment"># 硬 G 提示 · Wilhite 2013 年 Webby 奖现场亲口说</span>
 
 <span class="prompt">$</span> say-it --why JSON
 <span class="comment">word              JSON
 ipa               /ˈdʒeɪsən/
 respelling_us     jay son
+confidence        contested
 source            Wikipedia § Pronunciation
 url               https://en.wikipedia.org/wiki/JSON#Pronunciation</span></pre>
 
@@ -126,10 +127,10 @@ url               https://en.wikipedia.org/wiki/JSON#Pronunciation</span></pre>
 
     <div class="section-title">这个工具盒里有什么</div>
     <div class="features">
-      <div class="feature"><span class="icon">🗂</span><h3>1880+ 条词条，每条带来源</h3><p>项目名、产品名、程序员行话、缩写。每条带 confidence 标签（创作者钦定 / 社区共识 / 有争议）和可点开的来源链接。</p></div>
-      <div class="feature"><span class="icon">🔊</span><h3>多读法链式播放</h3><p>对于 GIF / SQL / GUI / kubectl 这类有争议的词，CLI 会把所有读法连着播——"……或读: gif."——你不盯终端也能听到争议。</p></div>
-      <div class="feature"><span class="icon">🤖</span><h3>自带 Claude Code skill</h3><p>问 Claude："X 怎么读？"——它会播音频、给 IPA、附来源引用，而不是瞎猜一个音标。</p></div>
-      <div class="feature"><span class="icon">⚡</span><h3>零依赖，~250 行 Bash</h3><p>包了 macOS 自带的 <code>say</code> 引擎。无 npm、无 sudo、无 surprise。</p></div>
+      <div class="feature"><span class="icon">🗂</span><h3>1260 / 1880 条词条带来源</h3><p>项目名、产品名、程序员行话、缩写。所有词条都有 confidence 标签；有可靠来源时才显示链接。</p></div>
+      <div class="feature"><span class="icon">🔊</span><h3>多读法链式播放</h3><p>对于 GIF / SQL / GUI / kubectl 这类有争议的词，CLI 会把所有读法连着播——"……或读: ghif."（明确提示硬 G）——你不盯终端也能听到争议。</p></div>
+      <div class="feature"><span class="icon">🤖</span><h3>自带 Claude Code skill</h3><p>问 Claude："X 怎么读？"——它会播音频、给 IPA，有可靠来源时附引用，而不是瞎猜一个音标。</p></div>
+      <div class="feature"><span class="icon">⚡</span><h3>一个 Bash CLI，无 npm 运行时</h3><p>自动检测 macOS <code>say</code>、Linux <code>espeak-ng</code>/<code>espeak</code> 或 Windows PowerShell <code>System.Speech</code>。</p></div>
       <div class="feature"><span class="icon">🔁</span><h3>多种播放控制</h3><p><code>--alt</code> 听备选读法，<code>--all</code> 听所有变体，<code>--solo</code> 跳过链式，<code>--why</code> 看完整词条和来源 URL。</p></div>
       <div class="feature"><span class="icon">📦</span><h3>社区共有</h3><p>词典本身就是一个 TSV 文件，欢迎 PR 加入你身边被念错的项目名 —— 详见 <a href="https://github.com/anzy-renlab-ai/pronounce/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a>。</p></div>
     </div>
@@ -138,7 +139,7 @@ url               https://en.wikipedia.org/wiki/JSON#Pronunciation</span></pre>
     <p style="color: var(--muted-strong); margin-bottom: 28px;">IPA 是参考，就像查一个外语词的字典条目——你不会盯着 <code>/ˈʃɑːdənˌfrɔɪdə/</code> 去学发音，你听别人念三遍才学会。<strong>Pronounce</strong> 把系统 TTS 接到一行 CLI 上，让答案直接进耳朵，而不是停在纸面上的音标。</p>
 
     <div class="section-title">试试看</div>
-    <p style="margin-bottom: 16px; color: var(--muted-strong);">点 ▶ 在浏览器里听。（音质因浏览器而异——装上 CLI 听 macOS Samantha 的原声更准。）</p>
+    <p style="margin-bottom: 16px; color: var(--muted-strong);">点 ▶ 优先播放仓库提交的标准 MP3；只有播放失败时才回退到 Web Speech。</p>
     <div id="entries"></div>
 
     <p style="text-align: center; margin-top: 32px;">
@@ -153,7 +154,7 @@ url               https://en.wikipedia.org/wiki/JSON#Pronunciation</span></pre>
       </details>
       <details>
         <summary>浏览器里的声音和 CLI 不一样？</summary>
-        <p>CLI 用 macOS 内置的 <code>say</code>，配合调好的 respelling。网站用浏览器的 Web Speech API，发音引擎随 OS / 浏览器变。GIF 这类争议词两边应一致；项目名带怪读音时以 CLI 为准。</p>
+        <p>网站优先播放仓库提交的标准 MP3，只有播放失败时才回退到 Web Speech。CLI 把同一份英文式 respelling 交给自动检测到的系统 TTS 后端。</p>
       </details>
       <details>
         <summary>和普通发音词典有什么区别？</summary>
@@ -161,11 +162,11 @@ url               https://en.wikipedia.org/wiki/JSON#Pronunciation</span></pre>
       </details>
       <details>
         <summary>为什么 GIF 是 "jif"？我一直读 "gif"。</summary>
-        <p>两种读法都真实存在。词典把创作者亲口说的读法 ("jif"，Steve Wilhite 2013 年 Webby 奖) 列为主读，"gif" 作为 alt。<code>say-it --alt GIF</code> 听备选。SQL / JSON / char / regex 同款多读处理。</p>
+        <p>两种读法都真实存在。词典把创作者亲口说的读法 ("jif"，Steve Wilhite 2013 年 Webby 奖) 列为主读；硬 G 的 "gif" 读法使用明确的语音提示 "ghif"。<code>say-it --alt GIF</code> 听备选。SQL / JSON / char / regex 同款多读处理。</p>
       </details>
       <details>
         <summary>支持 Windows / Linux 吗？</summary>
-        <p>是的——Windows (PowerShell + System.Speech) 和 Linux (espeak-ng / 云 TTS) 在 M2/M3 路线图上。词典本身平台无关，只有播放引擎需要平台后端。欢迎 PR。</p>
+        <p>支持。同一个 Bash CLI 会自动检测 macOS <code>say</code>、Linux <code>espeak-ng</code>/<code>espeak</code> 或 Windows PowerShell <code>System.Speech</code>。</p>
       </details>
       <details>
         <summary>怎么加一个缺失的项目？</summary>
@@ -176,7 +177,7 @@ url               https://en.wikipedia.org/wiki/JSON#Pronunciation</span></pre>
         <p>不必。没有可靠来源就留空，confidence 标 <code>community-consensus</code>。宁可保守也不胡编。</p>
       </details>
       <details>
-        <summary>为什么 CLI 在主读后还播 "or: gif"？</summary>
+        <summary>为什么 CLI 在主读后还播 "or: ghif"？</summary>
         <p>多读法的词自带语境——你应该知道存在争议。可听的 <code>"or: &lt;alt&gt;"</code> 尾巴让你不盯终端也能感知。熟了之后 <code>--solo</code> 跳过即可。</p>
       </details>
     </section>

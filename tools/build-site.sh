@@ -61,6 +61,13 @@ slug_awk() {
   LC_ALL=C command awk "$@"
 }
 
+feed_updated_at() {
+  LC_ALL=C command awk -F'\t' '
+    !/^#/ && NF >= 3 && $3 > latest { latest = $3 }
+    END { if (latest != "") print latest "T00:00:00Z" }
+  ' "$REPO_ROOT/data/entry-dates.tsv"
+}
+
 htmlesc() {
   local value="$1"
   value="${value//&/&amp;}"
@@ -115,6 +122,12 @@ if [[ "${1:-}" == "--slug-for-test" ]]; then
     exit 1
   fi
   printf '%s\n' "$shell_slug"
+  exit 0
+fi
+
+if [[ "${1:-}" == "--feed-timestamp-for-test" ]]; then
+  [[ $# -eq 1 ]] || { echo "usage: build-site.sh --feed-timestamp-for-test" >&2; exit 2; }
+  feed_updated_at
   exit 0
 fi
 
@@ -2180,7 +2193,10 @@ echo "Built $DOCS/api/openapi.json"
 
 # Atom feed — recent additions (synthetic: order by row position in TSV)
 {
-  build_date="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+  # Atom's <updated> describes the latest entry change, not the wall-clock
+  # build instant. This is truthful and keeps repeated builds byte-identical.
+  build_date="$(feed_updated_at)"
+  [[ -n "$build_date" ]] || build_date="${TODAY}T00:00:00Z"
   cat <<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">

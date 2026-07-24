@@ -2,7 +2,7 @@
 const ENTRIES = [
   { w: "kubectl", ipa: "/ˈkuːb kənˌtroʊl/", r: "koob control", aIpa: "/ˈkjuːb kʌtəl/|/ˌkjuːb siː tiː ˈɛl/", aR: "cube cuddle|kube C T L", url: "", srcLabel: "", cat: "cli-tool", conf: "contested", notes: "K8s community readings vary widely. \"koob-control\" is heard from Kelsey Hightower and many maintainers; \"cube-cuddle\" is the running meme; some say it letter-by-letter." },
   { w: "nginx", ipa: "/ˈɛn dʒɪnˈɛks/", r: "engine X", aIpa: "", aR: "", url: "https://nginx.org/en/", srcLabel: "NGINX official", cat: "product", conf: "creator-clarified", notes: "\"engine-x\" is the documented reading from the official site." },
-  { w: "GIF", ipa: "/dʒɪf/", r: "jif", aIpa: "", aR: "", url: "https://www.nytimes.com/2013/05/22/business/media/creator-of-the-gif-says-its-pronounced-jif.html", srcLabel: "Steve Wilhite, NYT (2013)", cat: "acronym", conf: "creator-clarified", notes: "Wilhite (creator): \"It's pronounced JIF, not GIF.\" Community remains split." },
+  { w: "GIF", ipa: "/dʒɪf/", r: "jif", aIpa: "/ɡɪf/", aR: "ghif", url: "https://www.nytimes.com/2013/05/22/business/media/creator-of-the-gif-says-its-pronounced-jif.html", srcLabel: "Steve Wilhite, NYT (2013)", cat: "acronym", conf: "creator-clarified", notes: "Wilhite (creator): \"It's pronounced JIF, not GIF.\" Community remains split. The alternate uses \"ghif\" as an explicit hard-G TTS cue." },
   { w: "JSON", ipa: "/ˈdʒeɪsən/", r: "jay son", aIpa: "/ˈdʒiːˌsɒn/", aR: "jee son", url: "https://en.wikipedia.org/wiki/JSON#Pronunciation", srcLabel: "Wikipedia § Pronunciation", cat: "acronym", conf: "contested", notes: "Crockford uses \"JAY-son\"; \"JEE-son\" is also widespread. Wikipedia notes the variance." },
   { w: "SQL", ipa: "/ˈsiːkwəl/", r: "sequel", aIpa: "/ˌɛs kjuː ˈɛl/", aR: "S Q L", url: "https://en.wikipedia.org/wiki/SQL#Pronunciation", srcLabel: "Wikipedia § Pronunciation", cat: "acronym", conf: "contested", notes: "ANSI: \"S-Q-L\"; practitioner: \"sequel\" (heir to IBM SEQUEL)." },
   { w: "GUI", ipa: "/ˈɡuːi/", r: "gooey", aIpa: "/ˌdʒiː juː ˈaɪ/|/ɡwi/", aR: "G U I|gwee", url: "https://en.wikipedia.org/wiki/Graphical_user_interface", srcLabel: "Wikipedia", cat: "acronym", conf: "contested", notes: "\"GOOEY\" is mainstream (matches Mandarin 故意 sound); \"G-U-I\" letter-by-letter is RMS/old-school; \"gwee\" is rare." },
@@ -1907,7 +1907,7 @@ function buildBody(entry, opts) {
 // CURRENT_AUDIO holds the most recently triggered HTMLAudioElement so we can stop it.
 let CURRENT_AUDIO = null;
 function audioUrl(word) {
-  const slug = word.toLowerCase().replace(/[^a-z0-9._-]/g, '-');
+  const slug = word.toLowerCase().replace(/[^a-z0-9._-]/gu, '-');
   return '/audio/' + slug + '.mp3';
 }
 
@@ -1950,7 +1950,7 @@ function escHTML(s) {
 }
 function badge(text, kind) { return `<span class="badge badge-${kind}">${text}</span>`; }
 function entryHref(word) {
-  return './word/' + word.toLowerCase().replace(/[^a-z0-9._-]/g, '-');
+  return './word/' + word.toLowerCase().replace(/[^a-z0-9._-]/gu, '-');
 }
 
 function renderEntry(e, idx) {
@@ -2077,7 +2077,7 @@ function initWordPage() {
     if (e.key === 'r' || e.key === 'R') {
       e.preventDefault();
       const pick = ENTRIES[Math.floor(Math.random() * ENTRIES.length)];
-      window.location.href = './' + pick.w.toLowerCase().replace(/[^a-z0-9._-]/g, '-');
+      window.location.href = './' + pick.w.toLowerCase().replace(/[^a-z0-9._-]/gu, '-');
     } else if (e.key === ' ') {
       e.preventDefault();
       const btn = document.querySelector('.play-primary');
@@ -2126,7 +2126,7 @@ function renderTodaysWord() {
   const el = document.getElementById('todays-word');
   if (!el) return;
   const e = todaysWord();
-  const slug = e.w.toLowerCase().replace(/[^a-z0-9._-]/g, '-');
+  const slug = e.w.toLowerCase().replace(/[^a-z0-9._-]/gu, '-');
   el.innerHTML = `
     <div class="todays-inner">
       <div class="todays-label">📅 Today's pronunciation</div>
@@ -2171,7 +2171,7 @@ function initHeroSearch() {
   const mic = document.getElementById('hero-mic');
   if (!input || !sug) return;
 
-  function slugify(w) { return w.toLowerCase().replace(/[^a-z0-9._-]/g, '-'); }
+  function slugify(w) { return w.toLowerCase().replace(/[^a-z0-9._-]/gu, '-'); }
   function escapeHtml(s){ return String(s||'').replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 
   function searchEntries(q) {

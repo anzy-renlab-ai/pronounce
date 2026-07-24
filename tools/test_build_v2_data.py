@@ -475,6 +475,31 @@ class RepositoryProductFactTests(unittest.TestCase):
                 self.assertEqual(completed.stdout, expected + "\n")
                 self.assertEqual(completed.stderr, "")
 
+    def test_atom_feed_timestamp_tracks_latest_entry_modification(self):
+        build_script = REPO / "tools" / "build-site.sh"
+        source = build_script.read_text(encoding="utf-8")
+        if "--feed-timestamp-for-test" not in source:
+            self.fail("build-site.sh must expose its stable Atom timestamp")
+
+        modified_dates = []
+        for line in self.source("data/entry-dates.tsv").splitlines():
+            if line.startswith("#") or not line:
+                continue
+            cells = line.split("\t")
+            modified_dates.append(cells[2])
+        expected = max(modified_dates) + "T00:00:00Z\n"
+
+        completed = subprocess.run(
+            ["bash", str(build_script), "--feed-timestamp-for-test"],
+            cwd=REPO,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(completed.stdout, expected)
+        self.assertEqual(completed.stderr, "")
+        self.assertNotIn("date -u +%Y-%m-%dT%H:%M:%SZ", source)
+
     def test_build_helpers_match_previous_oracles_for_the_whole_corpus(self):
         build_script = REPO / "tools" / "build-site.sh"
         source = build_script.read_text(encoding="utf-8")

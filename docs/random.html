@@ -5,7 +5,7 @@
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const pick = ENTRIES[Math.floor(Math.random() * ENTRIES.length)];
-  const slug = pick.w.toLowerCase().replace(/[^a-z0-9._-]/g, '-');
+  const slug = pick.w.toLowerCase().replace(/[^a-z0-9._-]/gu, '-');
   window.location.replace("/word/" + slug);
 });
 </script>

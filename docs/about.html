@@ -31,7 +31,7 @@
   <div class="container-narrow">
     <h1>About this thing</h1>
 
-    <p style="color: var(--muted-strong); font-size: 18px;">A community-maintained dictionary of how engineers actually pronounce project, product, and programmer-jargon names. With sources.</p>
+    <p style="color: var(--muted-strong); font-size: 18px;">A community-maintained dictionary of 1880 project, product, and programmer-jargon pronunciations; 1260 have cited sources.</p>
 
     <h2>Why</h2>
     <p>Every developer has been corrected mid-sentence at least once. "It's pronounced <strong>engine-x</strong>, not n-jinx." "It's <strong>koob-control</strong>, not kub-cuttle." "It's <strong>jif</strong>, not gif. <em>The creator said so.</em>"</p>
@@ -54,7 +54,7 @@
 
     <h2>Where the audio comes from</h2>
 
-    <p>Every entry has a pre-rendered <code>.mp3</code> generated via macOS's built-in <code>say</code> command (<code>say -v Samantha -r 175</code>, with <code>[[slnc N]]</code> inter-rep pauses) and converted to MP3 via ffmpeg. The browser ▶ button plays these files directly — same voice, same engine, same respelling as the CLI. The one difference is speed: this corpus is rendered at 175&nbsp;wpm, while <code>say-it</code> defaults to a slower, clearer 130&nbsp;wpm. Run <code>say-it -r 175 &lt;word&gt;</code> to hear exactly these bytes, or just <code>say-it &lt;word&gt;</code> for the slower default.</p>
+    <p>Every entry has a committed canonical <code>.mp3</code> generated via macOS's built-in <code>say</code> command (<code>say -v Samantha -r 175</code>, with inter-repetition pauses) and converted to MP3 via ffmpeg. The browser ▶ button plays that file first and uses Web Speech only as a fallback. The CLI defaults to a slower, clearer 130&nbsp;wpm and routes the English-like respelling through whichever OS TTS backend it detects.</p>
 
     <h2>How to contribute</h2>
 
