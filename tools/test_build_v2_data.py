@@ -141,6 +141,7 @@ class RepositoryProductFactTests(unittest.TestCase):
         "integrations/codex/AGENTS.md",
     )
     CURRENT_SOURCES = FACT_DOCS + (
+        "docs/index.html",
         "docs/v2/sections-1.jsx",
         "docs/v2/sections-2.jsx",
         "docs/v2/eggs.jsx",
@@ -216,6 +217,36 @@ class RepositoryProductFactTests(unittest.TestCase):
             re.compile(
                 r"(?:all|every) (?:1,880|1880) (?:entries|words)"
                 r"[^.\n]*(?:source|cited)",
+                re.IGNORECASE,
+            ),
+        )
+
+    def test_live_root_reports_exact_source_coverage_without_universal_claims(self):
+        root = self.source("docs/index.html")
+        for attribute in (
+            'name="description"',
+            'property="og:description"',
+            'name="twitter:description"',
+        ):
+            with self.subTest(attribute=attribute):
+                self.assertRegex(
+                    root,
+                    re.compile(
+                        rf'<meta {attribute} content="[^"]*'
+                        r'1,880[^"]*1,260[^"]*citable source',
+                        re.IGNORECASE,
+                    ),
+                )
+
+        noscript = root.split("<noscript>", 1)[1].split("</noscript>", 1)[0]
+        self.assertIn("1,880", noscript)
+        self.assertIn("1,260", noscript)
+        self.assertNotRegex(
+            root,
+            re.compile(
+                r"(?:each|every|all) (?:dictionary )?entr(?:y|ies)"
+                r"[^.\n]*(?:source|cited)|"
+                r"(?:1,880|1880) entries with cited sources",
                 re.IGNORECASE,
             ),
         )

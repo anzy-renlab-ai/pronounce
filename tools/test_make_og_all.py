@@ -886,6 +886,7 @@ class WorkflowClosureTests(unittest.TestCase):
         "DESIGN.md",
         "CONTRIBUTING.md",
         "integrations/codex/AGENTS.md",
+        "docs/index.html",
         "docs/v2/index.html",
         "CHANGELOG.md",
     )
