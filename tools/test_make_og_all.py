@@ -118,9 +118,7 @@ class CoreContractTests(unittest.TestCase):
     def test_card_stamp_covers_every_raw_visible_field_renderer_and_render_spec(self):
         card_stamp = self.helper("card_stamp")
         render_spec = {"canvas": [1200, 630], "save": {"format": "PNG"}}
-        baseline = card_stamp(
-            ENTRY, renderer_version="renderer-a", render_spec=render_spec
-        )
+        baseline = card_stamp(ENTRY, renderer_version=1, render_spec=render_spec)
 
         for field in VISIBLE_FIELDS:
             changed = dict(ENTRY)
@@ -129,7 +127,7 @@ class CoreContractTests(unittest.TestCase):
                 self.assertNotEqual(
                     card_stamp(
                         changed,
-                        renderer_version="renderer-a",
+                        renderer_version=1,
                         render_spec=render_spec,
                     ),
                     baseline,
@@ -140,38 +138,40 @@ class CoreContractTests(unittest.TestCase):
         self.assertEqual(
             card_stamp(
                 nonrendered,
-                renderer_version="renderer-a",
+                renderer_version=1,
                 render_spec=render_spec,
             ),
             baseline,
         )
         self.assertNotEqual(
-            card_stamp(
-                ENTRY, renderer_version="renderer-b", render_spec=render_spec
-            ),
+            card_stamp(ENTRY, renderer_version=2, render_spec=render_spec),
             baseline,
         )
         self.assertNotEqual(
             card_stamp(
                 ENTRY,
-                renderer_version="renderer-a",
+                renderer_version=1,
                 render_spec={"canvas": [1200, 631], "save": {"format": "PNG"}},
             ),
             baseline,
         )
 
+    def test_default_renderer_contract_is_numeric_one(self):
+        self.assertIs(type(self.module.RENDERER_VERSION), int)
+        self.assertEqual(self.module.RENDERER_VERSION, 1)
+
     def test_manifest_loader_is_strict_or_lenient_about_exact_shape_and_versions(self):
         load_manifest = self.helper("load_manifest")
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp) / "manifest.json"
-            valid = {"schema": 7, "renderer": "renderer-a", "cards": {"example": "x"}}
+            valid = {"schema": 7, "renderer": 3, "cards": {"example": "x"}}
             path.write_text(json.dumps(valid), encoding="utf-8")
             self.assertEqual(
                 load_manifest(
                     path,
                     strict=True,
                     schema_version=7,
-                    renderer_version="renderer-a",
+                    renderer_version=3,
                 ),
                 valid,
             )
@@ -179,11 +179,14 @@ class CoreContractTests(unittest.TestCase):
             invalid_documents = (
                 "{",
                 json.dumps({**valid, "extra": True}),
-                json.dumps({"schema": 8, "renderer": "renderer-a", "cards": {}}),
-                json.dumps({"schema": 7, "renderer": "renderer-b", "cards": {}}),
-                json.dumps({"schema": 7, "renderer": "renderer-a", "cards": []}),
+                json.dumps({"schema": 8, "renderer": 3, "cards": {}}),
+                json.dumps({"schema": 7, "renderer": 4, "cards": {}}),
+                json.dumps({"schema": 7, "renderer": "3", "cards": {}}),
+                json.dumps({"schema": 7, "renderer": 3.0, "cards": {}}),
+                json.dumps({"schema": 7, "renderer": True, "cards": {}}),
+                json.dumps({"schema": 7, "renderer": 3, "cards": []}),
                 json.dumps(
-                    {"schema": 7, "renderer": "renderer-a", "cards": {"example": 1}}
+                    {"schema": 7, "renderer": 3, "cards": {"example": 1}}
                 ),
             )
             for document in invalid_documents:
@@ -194,14 +197,14 @@ class CoreContractTests(unittest.TestCase):
                             path,
                             strict=True,
                             schema_version=7,
-                            renderer_version="renderer-a",
+                            renderer_version=3,
                         )
                     self.assertIsNone(
                         load_manifest(
                             path,
                             strict=False,
                             schema_version=7,
-                            renderer_version="renderer-a",
+                            renderer_version=3,
                         )
                     )
 
@@ -211,14 +214,14 @@ class CoreContractTests(unittest.TestCase):
                     path,
                     strict=True,
                     schema_version=7,
-                    renderer_version="renderer-a",
+                    renderer_version=3,
                 )
             self.assertIsNone(
                 load_manifest(
                     path,
                     strict=False,
                     schema_version=7,
-                    renderer_version="renderer-a",
+                    renderer_version=3,
                 )
             )
 
@@ -226,7 +229,7 @@ class CoreContractTests(unittest.TestCase):
         write_manifest_atomic = self.helper("write_manifest_atomic")
         manifest = {
             "schema": 1,
-            "renderer": "renderer-a",
+            "renderer": 1,
             "cards": {"z": "last", "a": "first"},
         }
         with tempfile.TemporaryDirectory() as tmp:
@@ -296,7 +299,8 @@ class StateMachineTests(unittest.TestCase):
         renderer_version=None,
         render_spec=None,
     ):
-        renderer_version = renderer_version or self.module.RENDERER_VERSION
+        if renderer_version is None:
+            renderer_version = self.module.RENDERER_VERSION
         render_spec = render_spec or self.module.RENDER_SPEC
         indexed = self.module.index_entries(entries)
         cards = {}
@@ -508,14 +512,14 @@ class StateMachineTests(unittest.TestCase):
             out_dir=self.out_dir,
             manifest_path=self.manifest_path,
             renderer=renderer,
-            renderer_version="pillow-og-v2",
+            renderer_version=2,
         )
 
         self.assertEqual((result.rendered, result.current), (1, 0))
         self.assertEqual(calls, ["Example"])
         self.assertEqual(
             json.loads(self.manifest_path.read_text(encoding="utf-8")),
-            self.manifest_for([entry], renderer_version="pillow-og-v2"),
+            self.manifest_for([entry], renderer_version=2),
         )
 
     def test_invalid_manifest_variants_make_every_card_stale(self):
@@ -531,7 +535,14 @@ class StateMachineTests(unittest.TestCase):
             json.dumps(
                 {
                     "schema": self.module.SCHEMA_VERSION,
-                    "renderer": "older-renderer",
+                    "renderer": self.module.RENDERER_VERSION - 1,
+                    "cards": {},
+                }
+            ).encode(),
+            json.dumps(
+                {
+                    "schema": self.module.SCHEMA_VERSION,
+                    "renderer": str(self.module.RENDERER_VERSION),
                     "cards": {},
                 }
             ).encode(),
@@ -618,7 +629,7 @@ class StateMachineTests(unittest.TestCase):
         alpha_path.write_bytes(b"old alpha")
         beta_path.write_bytes(b"old beta")
         old_manifest = self.manifest_for(
-            entries, renderer_version="older-renderer"
+            entries, renderer_version=self.module.RENDERER_VERSION - 1
         )
         self.manifest_path.write_text(
             json.dumps(old_manifest) + "\n", encoding="utf-8"

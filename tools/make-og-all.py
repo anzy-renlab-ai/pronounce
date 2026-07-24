@@ -25,7 +25,7 @@ OUT_DIR = REPO / "docs" / "og"
 MANIFEST = OUT_DIR / "manifest.json"
 
 SCHEMA_VERSION = 1
-RENDERER_VERSION = "pillow-og-v1"
+RENDERER_VERSION = 1
 ENTRY_FIELDS = (
     "word",
     "ipa",
@@ -204,7 +204,7 @@ def index_entries(
 
 def card_stamp(
     entry: Mapping[str, Any],
-    renderer_version: str = RENDERER_VERSION,
+    renderer_version: int = RENDERER_VERSION,
     render_spec: Mapping[str, Any] = RENDER_SPEC,
 ) -> str:
     """Fingerprint every raw input that can affect a rendered card."""
@@ -226,7 +226,7 @@ def _validate_manifest(
     value: Any,
     *,
     schema_version: int,
-    renderer_version: str,
+    renderer_version: int,
 ) -> dict[str, Any]:
     if not isinstance(value, dict):
         raise ManifestError("OG manifest must be a JSON object")
@@ -237,7 +237,7 @@ def _validate_manifest(
             f"OG manifest schema must be exactly {schema_version!r}"
         )
     if (
-        not isinstance(value["renderer"], str)
+        type(value["renderer"]) is not int
         or value["renderer"] != renderer_version
     ):
         raise ManifestError(
@@ -257,7 +257,7 @@ def load_manifest(
     *,
     strict: bool = False,
     schema_version: int = SCHEMA_VERSION,
-    renderer_version: str = RENDERER_VERSION,
+    renderer_version: int = RENDERER_VERSION,
 ) -> dict[str, Any] | None:
     """Load a manifest strictly, or return None for any invalid lenient input."""
     manifest_path = pathlib.Path(path)
@@ -329,7 +329,7 @@ class SyncResult(NamedTuple):
 def _desired_manifest(
     indexed: Mapping[str, Mapping[str, Any]],
     *,
-    renderer_version: str,
+    renderer_version: int,
     render_spec: Mapping[str, Any],
 ) -> dict[str, Any]:
     # Start empty by design. Reusing prior cards would retain removed slugs.
@@ -395,7 +395,7 @@ def bootstrap_existing(
     *,
     out_dir: pathlib.Path = OUT_DIR,
     manifest_path: pathlib.Path = MANIFEST,
-    renderer_version: str = RENDERER_VERSION,
+    renderer_version: int = RENDERER_VERSION,
     render_spec: Mapping[str, Any] = RENDER_SPEC,
 ) -> int:
     """Stamp a complete existing corpus without rendering or changing PNGs."""
@@ -427,7 +427,7 @@ def check_state(
     *,
     out_dir: pathlib.Path = OUT_DIR,
     manifest_path: pathlib.Path = MANIFEST,
-    renderer_version: str = RENDERER_VERSION,
+    renderer_version: int = RENDERER_VERSION,
     render_spec: Mapping[str, Any] = RENDER_SPEC,
 ) -> int:
     """Validate exact manifest state and expected PNGs without writing anything."""
@@ -488,7 +488,7 @@ def sync_cards(
     manifest_path: pathlib.Path = MANIFEST,
     renderer=None,
     renderer_factory=None,
-    renderer_version: str = RENDERER_VERSION,
+    renderer_version: int = RENDERER_VERSION,
     render_spec: Mapping[str, Any] = RENDER_SPEC,
 ) -> SyncResult:
     """Render only stale cards and publish the manifest after all renders succeed."""
