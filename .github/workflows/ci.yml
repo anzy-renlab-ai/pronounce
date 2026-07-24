@@ -27,6 +27,9 @@ on:
       - 'tools/test-v2-audio.mjs'
       - 'tools/test_build_v2_data.py'
       - 'tools/test_make_og_all.py'
+      - 'tools/build-chrome-dict.py'
+      - 'integrations/chrome/src/dictionary.json'
+      - 'tools/test_chrome_dictionary.py'
       - 'tools/lint-dict.sh'
       - 'tools/smoke-test.sh'
       - 'README.md'
@@ -66,4 +69,4 @@ jobs:
       - name: Test homepage audio
         run: node --test tools/test-v2-audio.mjs
       - name: Test generated data and OG state
-        run: python -m unittest tools/test_build_v2_data.py tools/test_make_og_all.py
+        run: python -m unittest tools/test_build_v2_data.py tools/test_make_og_all.py tools/test_chrome_dictionary.py

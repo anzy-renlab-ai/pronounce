@@ -116,7 +116,7 @@ The dependency-light release checks are:
 
 ```bash
 node --test tools/test-v2-audio.mjs
-python3 -m unittest tools/test_build_v2_data.py tools/test_make_og_all.py
+python3 -m unittest tools/test_build_v2_data.py tools/test_make_og_all.py tools/test_chrome_dictionary.py
 bash tools/lint-dict.sh
 bash tools/smoke-test.sh
 python3 tools/make-og-all.py --check

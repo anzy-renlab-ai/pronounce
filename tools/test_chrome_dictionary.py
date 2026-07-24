@@ -7,6 +7,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 TSV = REPO / "data" / "pronunciations.tsv"
 CHROME_DICTIONARY = REPO / "integrations" / "chrome" / "src" / "dictionary.json"
+CI_WORKFLOW = REPO / ".github" / "workflows" / "ci.yml"
 EXPECTED_ENTRY_COUNT = 1880
 
 TSV_COLUMNS = (
@@ -80,6 +81,14 @@ class ChromeDictionaryParityTests(unittest.TestCase):
             gif_row["alt_respelling_us"],
         )
         self.assertEqual(gif["notes"], gif_row["notes"])
+
+    def test_ci_runs_chrome_dictionary_parity_guard(self):
+        workflow = CI_WORKFLOW.read_text(encoding="utf-8")
+        self.assertIn("'tools/test_chrome_dictionary.py'", workflow)
+        self.assertIn(
+            "tools/test_make_og_all.py tools/test_chrome_dictionary.py",
+            workflow,
+        )
 
 
 if __name__ == "__main__":

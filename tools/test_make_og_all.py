@@ -901,6 +901,11 @@ class WorkflowClosureTests(unittest.TestCase):
         "docs/v2/index.html",
         "CHANGELOG.md",
     )
+    CHROME_PARITY_PATHS = (
+        "tools/build-chrome-dict.py",
+        "integrations/chrome/src/dictionary.json",
+        "tools/test_chrome_dictionary.py",
+    )
 
     @staticmethod
     def source(path):
@@ -938,6 +943,7 @@ class WorkflowClosureTests(unittest.TestCase):
             ".github/workflows/ci.yml",
             ".github/workflows/build-site.yml",
             *self.COMMON_SOURCE_AND_TEST_PATHS[2:],
+            *self.CHROME_PARITY_PATHS,
             "tools/lint-dict.sh",
             "tools/smoke-test.sh",
             *self.FACT_DOC_PATHS,
@@ -969,7 +975,8 @@ class WorkflowClosureTests(unittest.TestCase):
         self.assertIn("run: node --test tools/test-v2-audio.mjs", body)
         self.assertIn(
             "run: python -m unittest "
-            "tools/test_build_v2_data.py tools/test_make_og_all.py",
+            "tools/test_build_v2_data.py tools/test_make_og_all.py "
+            "tools/test_chrome_dictionary.py",
             body,
         )
 
