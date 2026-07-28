@@ -882,8 +882,10 @@ class WorkflowClosureTests(unittest.TestCase):
         "tools/build-v2-data.py",
         "tools/build-v2-bundle.sh",
         "tools/build-entry-dates.py",
+        "tools/test_build_entry_dates.py",
         "tools/build-scoreboard.py",
         "tools/build-seo.py",
+        "tools/test_build_seo.py",
         "tools/make-audio-all.py",
         "tools/make-og.py",
         "tools/make-og-all.py",
@@ -942,10 +944,14 @@ class WorkflowClosureTests(unittest.TestCase):
             *self.COMMON_SOURCE_AND_TEST_PATHS[:2],
             ".github/workflows/ci.yml",
             ".github/workflows/build-site.yml",
-            *self.COMMON_SOURCE_AND_TEST_PATHS[2:],
+            *self.COMMON_SOURCE_AND_TEST_PATHS[2:14],
+            "tools/test_indexnow_submit.py",
+            "tools/indexnow-submit.sh",
+            *self.COMMON_SOURCE_AND_TEST_PATHS[14:],
             *self.CHROME_PARITY_PATHS,
             "tools/lint-dict.sh",
             "tools/smoke-test.sh",
+            ".github/workflows/indexnow.yml",
             *self.FACT_DOC_PATHS,
         )
         actual = self.push_paths(self.CI_WORKFLOW)
@@ -976,7 +982,8 @@ class WorkflowClosureTests(unittest.TestCase):
         self.assertIn(
             "run: python -m unittest "
             "tools/test_build_v2_data.py tools/test_make_og_all.py "
-            "tools/test_chrome_dictionary.py",
+            "tools/test_chrome_dictionary.py tools/test_build_entry_dates.py "
+            "tools/test_build_seo.py tools/test_indexnow_submit.py",
             body,
         )
 

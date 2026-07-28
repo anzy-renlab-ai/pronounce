@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # IndexNow URL submission for Bing + Yandex.
 #
-# Reads the sitemap, extracts every URL, and pushes them in batches of 10000
-# to api.indexnow.org (Bing) and yandex.com (Yandex). Idempotent — safe to
-# re-run on every build. Set INDEXNOW_DRY_RUN=1 to print the payload only.
+# Reads every page sitemap, extracts every URL, and pushes them in batches of
+# 10000 to api.indexnow.org (Bing) and yandex.com (Yandex). Idempotent — safe
+# to re-run on every build. Set INDEXNOW_DRY_RUN=1 to print the payload only.
 #
 # Usage:
 #   bash tools/indexnow-submit.sh
@@ -28,15 +28,20 @@ fi
 KEY="$(tr -d '[:space:]' < "$KEY_FILE")"
 KEY_URL="$SITE_URL/$KEY.txt"
 
-# Submit every page sitemap, not just sitemap.xml — the Chinese per-word pages
-# (/zh/word/) live in sitemap-seo.xml, so reading only sitemap.xml silently
-# dropped ~1200 zh URLs from every IndexNow run. Skip sitemap-index.xml: its
-# <loc>s point at other sitemaps, not pages.
-SITEMAPS=()
-for sm in "$ROOT"/docs/sitemap.xml "$ROOT"/docs/sitemap-seo.xml; do
-  [[ -f "$sm" ]] && SITEMAPS+=("$sm")
+# Submit every required page sitemap. sitemap-seo.xml contains editorial pages,
+# while sitemap-zh.xml contains Chinese per-word pages. sitemap-index.xml and
+# sitemap-images.xml do not contain page URLs and must not be submitted.
+SITEMAPS=(
+  "$ROOT/docs/sitemap.xml"
+  "$ROOT/docs/sitemap-seo.xml"
+  "$ROOT/docs/sitemap-zh.xml"
+)
+for sm in "${SITEMAPS[@]}"; do
+  if [[ ! -f "$sm" ]]; then
+    echo "ERROR: required page sitemap missing: $sm — run tools/build-site.sh first." >&2
+    exit 2
+  fi
 done
-[[ ${#SITEMAPS[@]} -gt 0 ]] || { echo "ERROR: no page sitemaps under $ROOT/docs." >&2; exit 2; }
 
 STATE_DIR="$ROOT/.indexnow"
 mkdir -p "$STATE_DIR"

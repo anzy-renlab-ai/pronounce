@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - 'docs/sitemap.xml'
+      - 'docs/sitemap-seo.xml'
+      - 'docs/sitemap-zh.xml'
       - 'docs/sitemap-images.xml'
       - 'tools/indexnow-submit.sh'
   schedule:

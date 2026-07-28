@@ -19,8 +19,12 @@ on:
       - 'tools/build-v2-data.py'
       - 'tools/build-v2-bundle.sh'
       - 'tools/build-entry-dates.py'
+      - 'tools/test_build_entry_dates.py'
       - 'tools/build-scoreboard.py'
       - 'tools/build-seo.py'
+      - 'tools/test_build_seo.py'
+      - 'tools/test_indexnow_submit.py'
+      - 'tools/indexnow-submit.sh'
       - 'tools/make-audio-all.py'
       - 'tools/make-og.py'
       - 'tools/make-og-all.py'
@@ -32,6 +36,7 @@ on:
       - 'tools/test_chrome_dictionary.py'
       - 'tools/lint-dict.sh'
       - 'tools/smoke-test.sh'
+      - '.github/workflows/indexnow.yml'
       - 'README.md'
       - 'CLAUDE.md'
       - 'DESIGN.md'
@@ -69,4 +74,4 @@ jobs:
       - name: Test homepage audio
         run: node --test tools/test-v2-audio.mjs
       - name: Test generated data and OG state
-        run: python -m unittest tools/test_build_v2_data.py tools/test_make_og_all.py tools/test_chrome_dictionary.py
+        run: python -m unittest tools/test_build_v2_data.py tools/test_make_og_all.py tools/test_chrome_dictionary.py tools/test_build_entry_dates.py tools/test_build_seo.py tools/test_indexnow_submit.py
