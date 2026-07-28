@@ -11,8 +11,9 @@ Outputs:
   docs/compare/index.html           compare landing
   docs/zh/word/<slug>.html          Chinese version per dict entry
   docs/zh/word/index.html           Chinese word browser
-  docs/sitemap-seo.xml              sitemap for the new pages (linked from
-                                    docs/sitemap-index.xml by build-site.sh)
+  docs/sitemap-seo.xml              collection and comparison sitemap
+  docs/sitemap-zh.xml               Chinese word sitemap
+  docs/sitemap-index.xml            patched with both supplemental sitemaps
 
 Why a Python script instead of more bash? build-site.sh is already 2.6k lines.
 Stdlib-only Python keeps the new templates readable + skip the awk gymnastics.
@@ -27,11 +28,11 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 DICT = REPO / "data" / "pronunciations.tsv"
+ENTRY_DATES = REPO / "data" / "entry-dates.tsv"
 DOCS = REPO / "docs"
 BRAND = "Pronounce"
 GH_REPO = "anzy-renlab-ai/pronounce"
 SITE_URL = "https://pronounce.renlab.ai"
-TODAY = date.today().isoformat()
 
 SLUG_RE = re.compile(r"[^a-z0-9._-]")
 
@@ -55,7 +56,9 @@ def js_arg(s: str) -> str:
 def load_entries():
     entries = []
     by_slug = {}
-    for raw in DICT.read_text(encoding="utf-8").splitlines():
+    for line_no, raw in enumerate(
+        DICT.read_text(encoding="utf-8").splitlines(), 1
+    ):
         if not raw or raw.startswith("#"):
             continue
         parts = raw.split("\t")
@@ -74,9 +77,63 @@ def load_entries():
             "notes": parts[9],
         }
         e["slug"] = slugify(e["word"])
+        if e["slug"] in by_slug:
+            previous = by_slug[e["slug"]]
+            raise ValueError(
+                f"{DICT}:{line_no}: duplicate generated slug {e['slug']!r} "
+                f"for words {previous['word']!r} and {e['word']!r}"
+            )
         entries.append(e)
         by_slug[e["slug"]] = e
     return entries, by_slug
+
+
+def load_entry_dates(
+    entries: list[dict], path: Path | None = None
+) -> dict[str, str]:
+    source = path if path is not None else ENTRY_DATES
+    if not source.is_file():
+        raise FileNotFoundError(f"entry date file missing: {source}")
+
+    modified = {}
+    for line_no, raw in enumerate(
+        source.read_text(encoding="utf-8").splitlines(), 1
+    ):
+        if not raw or raw.startswith("#"):
+            continue
+        cells = raw.split("\t")
+        if len(cells) != 4:
+            raise ValueError(
+                f"{source}:{line_no}: expected 4 tab-separated fields"
+            )
+        slug, _published, changed, _row_hash = cells
+        if slug in modified:
+            raise ValueError(
+                f"{source}:{line_no}: duplicate slug {slug!r}"
+            )
+        try:
+            parsed = date.fromisoformat(changed)
+        except ValueError as exc:
+            raise ValueError(
+                f"{source}:{line_no}: invalid dateModified {changed!r}; "
+                "expected YYYY-MM-DD"
+            ) from exc
+        if parsed.isoformat() != changed:
+            raise ValueError(
+                f"{source}:{line_no}: dateModified {changed!r} must be "
+                "YYYY-MM-DD"
+            )
+        modified[slug] = changed
+
+    expected = {entry["slug"] for entry in entries}
+    actual = set(modified)
+    missing = sorted(expected - actual)
+    stale = sorted(actual - expected)
+    if missing or stale:
+        raise ValueError(
+            f"entry date slug mismatch: missing={missing}, stale={stale}"
+        )
+    return modified
 
 
 # ---------------------------------------------------------------------------
@@ -949,40 +1006,145 @@ def emit_zh_word_index(entries: list, out_dir: Path) -> None:
 # ---------------------------------------------------------------------------
 # Sitemap supplement
 # ---------------------------------------------------------------------------
-def emit_seo_sitemap(entries: list, by_slug: dict, out_path: Path) -> None:
+def newest(slugs: list[str], modified: dict[str, str]) -> str:
+    return max(modified[slug] for slug in slugs)
+
+
+def write_sitemap(
+    urls: list[tuple[str, str, str, str]], out_path: Path
+) -> str:
+    if not urls:
+        raise ValueError(f"refusing to write empty sitemap: {out_path}")
+    lines = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    ]
+    for loc, lastmod, priority, changefreq in urls:
+        lines.append(
+            f"  <url><loc>{loc}</loc><lastmod>{lastmod}</lastmod>"
+            f"<changefreq>{changefreq}</changefreq>"
+            f"<priority>{priority}</priority></url>"
+        )
+    lines.append("</urlset>")
+    out_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    return max(lastmod for _loc, lastmod, _priority, _changefreq in urls)
+
+
+def emit_seo_sitemap(
+    by_slug: dict, modified: dict[str, str], out_path: Path
+) -> str:
+    """Emit clean collection/comparison URLs with content-derived dates."""
     urls = []
-    # Clean URLs only (Vercel cleanUrls: *.html 308-redirects to the
-    # extensionless twin; sitemaps must never list redirecting URLs).
-    urls.append((f"{SITE_URL}/collection", "0.85", "weekly"))
+    collection_urls = []
     for c in COLLECTIONS:
-        urls.append((f"{SITE_URL}/collection/{c['slug']}", "0.8", "weekly"))
-    urls.append((f"{SITE_URL}/compare", "0.85", "weekly"))
+        included = [
+            slugify(word)
+            for word in c["words"]
+            if slugify(word) in by_slug
+        ]
+        if not included:
+            continue
+        collection_urls.append(
+            (
+                f"{SITE_URL}/collection/{c['slug']}",
+                newest(included, modified),
+                "0.8",
+                "weekly",
+            )
+        )
+    if collection_urls:
+        collection_latest = max(url[1] for url in collection_urls)
+        urls.append(
+            (
+                f"{SITE_URL}/collection",
+                collection_latest,
+                "0.85",
+                "weekly",
+            )
+        )
+        urls.extend(collection_urls)
+
+    comparison_urls = []
     for cp in COMPARES:
         a, b = cp["pair"]
         if a in by_slug and b in by_slug:
-            urls.append((f"{SITE_URL}/compare/{a}-vs-{b}", "0.8", "weekly"))
-    urls.append((f"{SITE_URL}/zh/word", "0.85", "weekly"))
+            comparison_urls.append(
+                (
+                    f"{SITE_URL}/compare/{a}-vs-{b}",
+                    newest([a, b], modified),
+                    "0.8",
+                    "weekly",
+                )
+            )
+    if comparison_urls:
+        comparison_latest = max(url[1] for url in comparison_urls)
+        urls.append(
+            (
+                f"{SITE_URL}/compare",
+                comparison_latest,
+                "0.85",
+                "weekly",
+            )
+        )
+        urls.extend(comparison_urls)
+
+    return write_sitemap(urls, out_path)
+
+
+def emit_zh_sitemap(
+    entries: list[dict], modified: dict[str, str], out_path: Path
+) -> str:
+    """Emit the Chinese word index and per-entry URLs with real dates."""
+    urls = []
+    if entries:
+        entry_slugs = [entry["slug"] for entry in entries]
+        urls.append(
+            (
+                f"{SITE_URL}/zh/word",
+                newest(entry_slugs, modified),
+                "0.85",
+                "weekly",
+            )
+        )
     for e in entries:
-        urls.append((f"{SITE_URL}/zh/word/{e['slug']}", "0.7", "monthly"))
-    lines = ['<?xml version="1.0" encoding="UTF-8"?>',
-             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    for loc, prio, cf in urls:
-        lines.append(f'  <url><loc>{loc}</loc><lastmod>{TODAY}</lastmod><changefreq>{cf}</changefreq><priority>{prio}</priority></url>')
-    lines.append('</urlset>')
-    out_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+        slug = e["slug"]
+        urls.append(
+            (
+                f"{SITE_URL}/zh/word/{slug}",
+                modified[slug],
+                "0.7",
+                "monthly",
+            )
+        )
+    return write_sitemap(urls, out_path)
 
 
-def patch_sitemap_index() -> None:
-    """Add sitemap-seo.xml to docs/sitemap-index.xml if not already present."""
-    p = DOCS / "sitemap-index.xml"
-    if not p.exists():
-        return
-    txt = p.read_text(encoding="utf-8")
-    if "sitemap-seo.xml" in txt:
-        return
-    insert = f'  <sitemap><loc>{SITE_URL}/sitemap-seo.xml</loc><lastmod>{TODAY}</lastmod></sitemap>\n'
-    txt = txt.replace("</sitemapindex>", insert + "</sitemapindex>")
-    p.write_text(txt, encoding="utf-8")
+def patch_sitemap_index(
+    sitemaps: dict[str, str], path: Path | None = None
+) -> None:
+    """Replace generator-owned sitemap entries while preserving base entries."""
+    index_path = path if path is not None else DOCS / "sitemap-index.xml"
+    if not index_path.is_file():
+        raise FileNotFoundError(f"sitemap index missing: {index_path}")
+
+    text = index_path.read_text(encoding="utf-8")
+    owned_entry = re.compile(
+        r"(?m)^[ \t]*<sitemap>\s*"
+        r"<loc>[^<]*sitemap-(?:seo|zh)\.xml</loc>"
+        r".*?</sitemap>[ \t]*(?:\n|$)",
+        re.DOTALL,
+    )
+    text = owned_entry.sub("", text)
+    closing = "</sitemapindex>"
+    if closing not in text:
+        raise ValueError(f"{index_path}: missing {closing}")
+    insert = "".join(
+        f"  <sitemap><loc>{SITE_URL}/{filename}</loc>"
+        f"<lastmod>{latest}</lastmod></sitemap>\n"
+        for filename, latest in sitemaps.items()
+    )
+    text = text.replace(closing, insert + closing, 1)
+    index_path.write_text(text, encoding="utf-8")
 
 
 # ---------------------------------------------------------------------------
@@ -990,6 +1152,7 @@ def patch_sitemap_index() -> None:
 # ---------------------------------------------------------------------------
 def main() -> None:
     entries, by_slug = load_entries()
+    modified = load_entry_dates(entries)
     print(f"Loaded {len(entries)} entries.")
 
     coll_dir = DOCS / "collection"
@@ -1015,9 +1178,22 @@ def main() -> None:
     emit_zh_word_index(entries, zh_word_dir)
     print(f"  → wrote {len(entries)} Chinese per-word pages + index")
 
-    emit_seo_sitemap(entries, by_slug, DOCS / "sitemap-seo.xml")
-    patch_sitemap_index()
-    print("  → wrote sitemap-seo.xml + patched sitemap-index.xml")
+    seo_latest = emit_seo_sitemap(
+        by_slug, modified, DOCS / "sitemap-seo.xml"
+    )
+    zh_latest = emit_zh_sitemap(
+        entries, modified, DOCS / "sitemap-zh.xml"
+    )
+    patch_sitemap_index(
+        {
+            "sitemap-seo.xml": seo_latest,
+            "sitemap-zh.xml": zh_latest,
+        }
+    )
+    print(
+        "  → wrote sitemap-seo.xml + sitemap-zh.xml "
+        "+ patched sitemap-index.xml"
+    )
 
 
 if __name__ == "__main__":
