@@ -28,6 +28,8 @@ REPO = Path(__file__).resolve().parent.parent
 DICT = REPO / "data" / "pronunciations.tsv"
 OUT = REPO / "data" / "entry-dates.tsv"
 SLUG_RE = re.compile(r"[^a-z0-9._-]")
+CANONICAL_SLUG_RE = re.compile(r"[a-z0-9._-]+")
+ROW_HASH_RE = re.compile(r"[0-9a-f]{12}")
 TODAY = date.today().isoformat()
 
 
@@ -97,8 +99,18 @@ def load_state(path: Path = OUT) -> dict[str, dict]:
                 f"{source}:{line_no}: expected 4 tab-separated fields"
             )
         slug, pub, mod, h = parts
+        if CANONICAL_SLUG_RE.fullmatch(slug) is None:
+            raise ValueError(
+                f"{source}:{line_no}: invalid slug {slug!r}; "
+                "expected [a-z0-9._-]+"
+            )
         if slug in state:
             raise ValueError(f"{source}:{line_no}: duplicate slug {slug!r}")
+        if ROW_HASH_RE.fullmatch(h) is None:
+            raise ValueError(
+                f"{source}:{line_no}: invalid row hash {h!r} "
+                f"for slug {slug!r}; expected 12 lowercase hexadecimal characters"
+            )
         for field, value in (("published", pub), ("modified", mod)):
             try:
                 parsed = date.fromisoformat(value)

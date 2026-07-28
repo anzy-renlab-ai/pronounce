@@ -44,7 +44,9 @@ class EntryDateStateTests(unittest.TestCase):
         self.state_file.write_text(
             "# generated state\n"
             "\n"
-            "alpha\t2026-05-01\t2026-06-02\tabc123\n",
+            "alpha\t2026-05-01\t2026-06-02\t0123456789ab\n"
+            ".hidden\t2026-05-02\t2026-06-03\t1234567890ab\n"
+            "-leading\t2026-05-03\t2026-06-04\tabcdef012345\n",
             encoding="utf-8",
         )
 
@@ -54,15 +56,25 @@ class EntryDateStateTests(unittest.TestCase):
                 "alpha": {
                     "published": "2026-05-01",
                     "modified": "2026-06-02",
-                    "hash": "abc123",
-                }
+                    "hash": "0123456789ab",
+                },
+                ".hidden": {
+                    "published": "2026-05-02",
+                    "modified": "2026-06-03",
+                    "hash": "1234567890ab",
+                },
+                "-leading": {
+                    "published": "2026-05-03",
+                    "modified": "2026-06-04",
+                    "hash": "abcdef012345",
+                },
             },
         )
 
     def test_load_state_rejects_duplicate_slug(self):
         self.state_file.write_text(
-            "alpha\t2026-05-01\t2026-05-01\thash-a\n"
-            "alpha\t2026-05-01\t2026-06-01\thash-b\n",
+            "alpha\t2026-05-01\t2026-05-01\taaaaaaaaaaaa\n"
+            "alpha\t2026-05-01\t2026-06-01\tbbbbbbbbbbbb\n",
             encoding="utf-8",
         )
 
@@ -74,10 +86,76 @@ class EntryDateStateTests(unittest.TestCase):
         self.assertIn("duplicate slug", message)
         self.assertIn("alpha", message)
 
+    def test_load_state_rejects_empty_slug(self):
+        self.state_file.write_text(
+            "\t2026-05-01\t2026-06-02\t0123456789ab\n",
+            encoding="utf-8",
+        )
+
+        with self.assertRaises(ValueError) as raised:
+            self.helper("load_state")(self.state_file)
+
+        message = str(raised.exception)
+        self.assertIn(":1:", message)
+        self.assertIn("invalid slug", message)
+        self.assertIn("''", message)
+        self.assertIn("[a-z0-9._-]+", message)
+
+    def test_load_state_rejects_non_canonical_slug(self):
+        for invalid in ("Alpha", "alpha/beta", "alpha beta"):
+            with self.subTest(invalid=invalid):
+                self.state_file.write_text(
+                    f"{invalid}\t2026-05-01\t2026-06-02\t0123456789ab\n",
+                    encoding="utf-8",
+                )
+
+                with self.assertRaises(ValueError) as raised:
+                    self.helper("load_state")(self.state_file)
+
+                message = str(raised.exception)
+                self.assertIn(":1:", message)
+                self.assertIn("invalid slug", message)
+                self.assertIn(invalid, message)
+                self.assertIn("[a-z0-9._-]+", message)
+
+    def test_load_state_rejects_empty_row_hash(self):
+        self.state_file.write_text(
+            "alpha\t2026-05-01\t2026-06-02\t\n",
+            encoding="utf-8",
+        )
+
+        with self.assertRaises(ValueError) as raised:
+            self.helper("load_state")(self.state_file)
+
+        message = str(raised.exception)
+        self.assertIn(":1:", message)
+        self.assertIn("row hash", message)
+        self.assertIn("alpha", message)
+        self.assertIn("''", message)
+        self.assertIn("12 lowercase hexadecimal", message)
+
+    def test_load_state_rejects_non_canonical_row_hash(self):
+        for invalid in ("abc123", "0123456789AB", "0123456789ag"):
+            with self.subTest(invalid=invalid):
+                self.state_file.write_text(
+                    f"alpha\t2026-05-01\t2026-06-02\t{invalid}\n",
+                    encoding="utf-8",
+                )
+
+                with self.assertRaises(ValueError) as raised:
+                    self.helper("load_state")(self.state_file)
+
+                message = str(raised.exception)
+                self.assertIn(":1:", message)
+                self.assertIn("row hash", message)
+                self.assertIn("alpha", message)
+                self.assertIn(invalid, message)
+                self.assertIn("12 lowercase hexadecimal", message)
+
     def test_load_state_rejects_rows_without_exactly_four_tab_separated_fields(self):
         for malformed in (
             "alpha\t2026-05-01\t2026-06-02",
-            "alpha\t2026-05-01\t2026-06-02\thash\textra",
+            "alpha\t2026-05-01\t2026-06-02\taaaaaaaaaaaa\textra",
         ):
             with self.subTest(malformed=malformed):
                 self.state_file.write_text(
@@ -96,7 +174,7 @@ class EntryDateStateTests(unittest.TestCase):
         for invalid in ("2026-02-30", "20260728"):
             with self.subTest(invalid=invalid):
                 self.state_file.write_text(
-                    f"alpha\t{invalid}\t2026-07-28\thash-a\n",
+                    f"alpha\t{invalid}\t2026-07-28\taaaaaaaaaaaa\n",
                     encoding="utf-8",
                 )
 
@@ -114,7 +192,7 @@ class EntryDateStateTests(unittest.TestCase):
         for invalid in ("2026-02-30", "20260728"):
             with self.subTest(invalid=invalid):
                 self.state_file.write_text(
-                    f"alpha\t2026-07-28\t{invalid}\thash-a\n",
+                    f"alpha\t2026-07-28\t{invalid}\taaaaaaaaaaaa\n",
                     encoding="utf-8",
                 )
 
@@ -241,7 +319,7 @@ class EntryDateStateTests(unittest.TestCase):
         state_file.write_text(
             "alpha\t2026-05-01\t2026-06-01\t"
             f"{self.module.row_hash(alpha)}\n"
-            "stale\t2026-04-01\t2026-04-01\tstale-hash\n",
+            "stale\t2026-04-01\t2026-04-01\tcccccccccccc\n",
             encoding="utf-8",
         )
         historical = {
