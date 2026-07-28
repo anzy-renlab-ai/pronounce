@@ -81,29 +81,81 @@ def bootstrap() -> dict[str, dict]:
     return state
 
 
-def load() -> dict[str, dict]:
-    if not OUT.exists():
+def load_state(path: Path = OUT) -> dict[str, dict]:
+    source = Path(path)
+    if not source.exists():
         return {}
     state = {}
-    for line in OUT.read_text(encoding="utf-8").splitlines():
+    for line_no, line in enumerate(
+        source.read_text(encoding="utf-8").splitlines(), 1
+    ):
         if not line or line.startswith("#"):
             continue
         parts = line.split("\t")
         if len(parts) != 4:
-            continue
+            raise ValueError(
+                f"{source}:{line_no}: expected 4 tab-separated fields"
+            )
         slug, pub, mod, h = parts
+        if slug in state:
+            raise ValueError(f"{source}:{line_no}: duplicate slug {slug!r}")
+        for field, value in (("published", pub), ("modified", mod)):
+            try:
+                parsed = date.fromisoformat(value)
+            except ValueError:
+                parsed = None
+            if parsed is None or parsed.isoformat() != value:
+                raise ValueError(
+                    f"{source}:{line_no}: invalid {field} date {value!r} "
+                    f"for slug {slug!r}; expected YYYY-MM-DD"
+                )
         state[slug] = {"published": pub, "modified": mod, "hash": h}
     return state
 
 
+def recover_missing_entries(
+    state: dict[str, dict],
+    rows: dict[str, list[str]],
+    historical: dict[str, dict],
+    today: str,
+) -> tuple[dict[str, dict], int]:
+    reconciled = {slug: values.copy() for slug, values in state.items()}
+    added = 0
+    for slug, cols in rows.items():
+        if slug in reconciled:
+            continue
+        h = row_hash(cols)
+        previous = historical.get(slug)
+        if previous is None:
+            reconciled[slug] = {
+                "published": today,
+                "modified": today,
+                "hash": h,
+            }
+            added += 1
+            continue
+        reconciled[slug] = {
+            "published": previous["published"],
+            "modified": (
+                previous["modified"] if previous["hash"] == h else today
+            ),
+            "hash": h,
+        }
+    return reconciled, added
+
+
 def main() -> None:
-    state = load()
+    state = load_state(OUT)
+    rows = parse_tsv(DICT.read_text(encoding="utf-8"))
+    added = changed = 0
     if not state:
         print("data/entry-dates.tsv missing — bootstrapping from git history.")
         state = bootstrap()
+    elif any(slug not in state for slug in rows):
+        state, added = recover_missing_entries(
+            state, rows, bootstrap(), TODAY
+        )
 
-    rows = parse_tsv(DICT.read_text(encoding="utf-8"))
-    added = changed = 0
     for slug, cols in rows.items():
         h = row_hash(cols)
         cur = state.get(slug)
