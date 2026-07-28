@@ -80,7 +80,7 @@ trap 'rm -f "$PAYLOAD_FILE"' EXIT
 
 if [[ "${INDEXNOW_DRY_RUN:-0}" == "1" ]]; then
   echo "Dry run — payload:"
-  cat "$PAYLOAD_FILE" | head -c 2048
+  head -c 2048 "$PAYLOAD_FILE"
   echo "..."
   exit 0
 fi

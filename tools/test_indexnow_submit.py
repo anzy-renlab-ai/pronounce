@@ -83,6 +83,23 @@ class IndexNowSubmitTests(unittest.TestCase):
         self.assertEqual(result.returncode, 2, result.stdout)
         self.assertIn("sitemap-zh.xml", result.stderr)
 
+    def test_large_dry_run_truncates_payload_without_sigpipe_failure(self) -> None:
+        bulk_urls = [
+            f"https://example.test/bulk/{index:05d}-{'x' * 160}"
+            for index in range(5_000)
+        ]
+        self.write_sitemap("sitemap.xml", *bulk_urls)
+        self.write_sitemap("sitemap-seo.xml", "https://example.test/editorial")
+        self.write_sitemap("sitemap-zh.xml", "https://example.test/chinese")
+
+        result = self.run_script()
+
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("Submitting 5002 URLs to IndexNow", result.stdout)
+        self.assertIn("Dry run — payload:", result.stdout)
+        self.assertIn(bulk_urls[0], result.stdout)
+        self.assertTrue(result.stdout.endswith("...\n"), result.stdout[-100:])
+
     def test_dry_run_deduplicates_urls_across_page_sitemaps(self) -> None:
         duplicate = "https://example.test/shared"
         self.write_sitemap("sitemap.xml", duplicate)
