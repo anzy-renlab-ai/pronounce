@@ -103,8 +103,9 @@ index every submitted page.
 
 ## Error Handling
 
-- Missing `data/entry-dates.tsv`, duplicate slugs, unknown slugs, or invalid
-  ISO dates fail the SEO build with an actionable message.
+- Missing `data/entry-dates.tsv`, duplicate slugs, invalid ISO dates, or any
+  slug-set mismatch between the dictionary and date file (missing dates or
+  stale date rows) fails the SEO build with an actionable message.
 - An empty collection or unavailable comparison is omitted as it is today.
 - Sitemap index patching replaces the generator-owned supplemental entries
   deterministically, so stale or duplicate `sitemap-seo.xml` /
