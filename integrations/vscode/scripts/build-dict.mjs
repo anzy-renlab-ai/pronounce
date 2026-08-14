@@ -37,20 +37,22 @@ for (const line of lines) {
 mkdirSync(dirname(outPath), { recursive: true });
 writeFileSync(outPath, JSON.stringify(entries, null, 0));
 const COUNT = Object.keys(entries).length;
-console.log(`built dictionary: ${COUNT} entries → ${outPath}`);
+const SOURCE_COUNT = Object.values(entries).filter(entry => entry.source_url).length;
+console.log(`built dictionary: ${COUNT} entries (${SOURCE_COUNT} sourced) → ${outPath}`);
 
 // Keep every "<N> entries" claim across docs in lockstep with the real count.
 // Stale, contradictory counts (e.g. one page says 993, another 817) read as
 // abandonware on the Marketplace listing — so this is part of the build, not a
-// manual chore. Matches prose ("993 entries", "918 sourced entries",
+// manual chore. Matches total-count prose ("993 entries",
 // "918-entry browser", "918+ entries") and the URL-encoded shields badge.
-// One prose pattern for every count phrasing ("918 entries", "918+ sourced
-// entries", "1654 developer jargon names"); the captured "+" is preserved so
-// each doc keeps its own style.
+// Source-coverage phrases such as "1,263 sourced entries" are deliberately
+// excluded: that number is not the total. "confidence-tagged" is safe because
+// every dictionary entry carries a confidence value.
 // Number part matches either a comma-grouped form ("1,702") or a bare run
 // ("1702"); the comma branch is tried first so we consume the WHOLE number
 // instead of just the "702" after the comma (which produced "1,1702").
-const PROSE = /\b(\d{1,3}(?:,\d{3})+|\d{3,5})(\+?)((?:[ \-]sourced)?[ \-](?:entr(?:y|ies)|developer[ \-]jargon names))/gi;
+const PROSE = /\b(\d{1,3}(?:,\d{3})+|\d{3,5})(\+?)((?:[ \-]confidence[ \-]tagged)?[ \-](?:entr(?:y|ies)|(?:developer[ \-]jargon|tech|project, product, and programmer[ \-]jargon) names))/gi;
+const SOURCE_PROSE = /\b(\d{1,3}(?:,\d{3})+|\d{3,5})(?= (?:(?:carry|with) (?:a )?citable sources?|sourced entr(?:y|ies)))/gi;
 const BADGE = /\b\d{3,4}(?:%2B)?%20entries/gi;
 const CJK = /\d{3,4}(?=\s*条)/g; // Chinese: "1212 条" / "1212 条词条"
 const docFiles = [
@@ -74,6 +76,8 @@ for (const parts of docFiles) {
     // ("1,702") keep them, otherwise emit the bare count ("1702").
     .replace(PROSE, (_m, num, plus, tail) =>
       `${num.includes(',') ? COUNT.toLocaleString('en-US') : COUNT}${plus}${tail}`)
+    .replace(SOURCE_PROSE, num =>
+      num.includes(',') ? SOURCE_COUNT.toLocaleString('en-US') : `${SOURCE_COUNT}`)
     .replace(BADGE, `${COUNT}%20entries`)
     .replace(CJK, `${COUNT}`);
   if (next !== text) {

@@ -396,6 +396,7 @@ class RepositoryProductFactTests(unittest.TestCase):
                 re.IGNORECASE,
             ),
         )
+
         self.assertNotRegex(
             readme,
             re.compile(
@@ -404,6 +405,13 @@ class RepositoryProductFactTests(unittest.TestCase):
                 re.IGNORECASE,
             ),
         )
+
+    def test_vscode_count_sync_does_not_overwrite_source_coverage(self):
+        source = self.source("integrations/vscode/scripts/build-dict.mjs")
+        self.assertNotIn("(?:[ \\-]sourced)?", source)
+        self.assertIn("confidence[ \\-]tagged", source)
+        self.assertIn("const SOURCE_COUNT =", source)
+        self.assertIn(".replace(SOURCE_PROSE", source)
 
     def test_live_root_reports_exact_source_coverage_without_universal_claims(self):
         root = self.source("docs/index.html")
