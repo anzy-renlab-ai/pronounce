@@ -61,10 +61,10 @@ Body (write into the first comment, since HN posts can't have a body when there'
 I built this after the 47th time I heard a coworker say "kub-cuttle" and finally
 realized I'd been saying it that way for six months too.
 
-It's a community-maintained dictionary of 1,880 project, product, and
+It's a community-maintained dictionary of 1,883 project, product, and
 programmer-jargon pronunciations — kubectl, nginx, GIF, JSON, Pydantic, Knative,
-LaTeX, Postgres, GUI, GNU, and many more. All 1,880 are confidence-tagged;
-1,260 link to a citable source, including 101 creator-clarified entries and
+LaTeX, Postgres, GUI, GNU, and many more. All 1,883 are confidence-tagged;
+1,263 link to a citable source, including 105 creator-clarified entries and
 174 contested readings.
 
 For multi-reading words, the CLI audibly chains the alternates after the primary
@@ -150,7 +150,7 @@ Pre-write 18 of these. Suggested words (highest "huh I didn't know" factor):
 ```
 20/
 
-That's just the loud ones — there are 1,880 entries in the full dict, plus a
+That's just the loud ones — there are 1,883 entries in the full dict, plus a
 Claude Code skill that turns "how do you pronounce X?" into audio, IPA, and a
 source when one exists.
 
@@ -208,8 +208,8 @@ Post to three subs the same day, but with **different angles** in the titles. Cr
 **r/programming** (700k subs):
 
 ```
-Title: How to pronounce kubectl, nginx, GIF, and 1,880 developer terms —
-       1,260 with citable sources
+Title: How to pronounce kubectl, nginx, GIF, and 1,883 developer terms —
+       1,263 with citable sources
 ```
 
 **r/devops** (150k subs):

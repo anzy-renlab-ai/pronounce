@@ -1,5 +1,24 @@
 # Changelog
 
+## v2.24.0 — 2026-08-14
+
+**AI company pronunciation refresh — one correction and three creator-verified additions.** The dictionary now has 1,883 entries, 1,263 with a citable source; 105 are creator-clarified and 174 are contested.
+
+### Corrected
+
+- **Simile now means the AI company in this dictionary.** Co-founder and CEO Joon Sung Park says `SIM-uh-lee` in a timestamped Bloomberg Technology interview. The former `sigh-MILE` alternate was a mispronunciation, not an accepted company reading, so it has been removed.
+
+### Added
+
+- **QualiKI** — `KWAH-luh-key`; the company's official pronunciation post says `Kwali-KI`, like “quality” with the final `-ty` sound replaced by `-ky` (`KI` is German for AI).
+- **KugelAudio** — `KOO-gull audio`; co-founder Viktor Presber says the name in a timestamped interview. Automatic captions repeatedly hear “Google Audio,” useful corroboration but not the primary evidence.
+- **Gradium** — `GRAY-dee-um`; co-founder Neil Zeghidour says it on Gradium's official channel, with `GRAY` rather than `GRAD` as the first syllable.
+
+### Changed
+
+- Regenerated the website search data, per-word pages, canonical audio, Open Graph cards, Hugging Face export, and bundled VS Code/Chrome dictionaries from the TSV source of truth.
+- Updated current product statistics and the Codex plugin manifest to v2.24.0; the independently versioned CLI and browser/editor extensions keep their existing package versions.
+
 ## v2.23.1 — 2026-07-23
 
 **Consistency release — canonical web audio, accurate product facts, and complete release guards.** No entry-count change (holds at 1,880 entries, 1,260 with a citable source).

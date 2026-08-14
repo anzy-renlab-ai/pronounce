@@ -28,8 +28,8 @@
       "duration_frames": 180,
       "transition_in": { "type": "fade", "duration_frames": 12 },
       "props": {
-        "bigNumber": "1,880",
-        "numberLabel": "entries · 1,260 source-cited"
+        "bigNumber": "1,883",
+        "numberLabel": "entries · 1,263 source-cited"
       }
     },
     {
@@ -38,7 +38,7 @@
       "transition_in": { "type": "fade", "duration_frames": 12 },
       "props": {
         "spotlightFeature": "Multi-reading audio",
-        "spotlightSubtext": "101 creator-clarified · 174 contested · jif … or: ghif."
+        "spotlightSubtext": "105 creator-clarified · 174 contested · jif … or: ghif."
       }
     },
     {
