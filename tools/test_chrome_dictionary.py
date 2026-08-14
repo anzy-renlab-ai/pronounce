@@ -8,7 +8,7 @@ REPO = Path(__file__).resolve().parent.parent
 TSV = REPO / "data" / "pronunciations.tsv"
 CHROME_DICTIONARY = REPO / "integrations" / "chrome" / "src" / "dictionary.json"
 CI_WORKFLOW = REPO / ".github" / "workflows" / "ci.yml"
-EXPECTED_ENTRY_COUNT = 1880
+EXPECTED_ENTRY_COUNT = 1883
 
 TSV_COLUMNS = (
     "word",

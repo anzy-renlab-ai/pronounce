@@ -573,7 +573,7 @@ test('v2 product and release fact source contract', async t => {
     );
     assert.doesNotMatch(
       `${SECTIONS_1_SOURCE}\n${SECTIONS_2_SOURCE}`,
-      /(?:all|every) (?:1,880|1880|\$\{DICT_ALL\.length\})[^.\n]*(?:source|cited)/i,
+      /(?:all|every) (?:1,883|1883|\$\{DICT_ALL\.length\})[^.\n]*(?:source|cited)/i,
     );
     assert.doesNotMatch(SECTIONS_2_SOURCE, /Every entry[^.\n]*(?:source|linked)/i);
     assert.match(SECTIONS_2_SOURCE, /a source citation when available/i);
@@ -583,9 +583,9 @@ test('v2 product and release fact source contract', async t => {
     );
   });
 
-  await t.test('footer and noindex scaffold identify the v2.23.1 release', () => {
-    assert.match(SECTIONS_2_SOURCE, /sayit · MIT · v2\.23\.1 ·/);
-    assert.match(V2_INDEX_SOURCE, /1,880 entries[^"\n]*1,260[^"\n]*cited sources/i);
+  await t.test('footer and noindex scaffold identify the v2.24.0 release', () => {
+    assert.match(SECTIONS_2_SOURCE, /sayit · MIT · v2\.24\.0 ·/);
+    assert.match(V2_INDEX_SOURCE, /1,883 entries[^"\n]*1,263[^"\n]*cited sources/i);
   });
 
   await t.test('noindex scaffold uses root OG URL and deferred same-origin runtime scripts', () => {
