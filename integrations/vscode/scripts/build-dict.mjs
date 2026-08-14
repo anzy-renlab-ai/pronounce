@@ -51,7 +51,7 @@ console.log(`built dictionary: ${COUNT} entries (${SOURCE_COUNT} sourced) → ${
 // Number part matches either a comma-grouped form ("1,702") or a bare run
 // ("1702"); the comma branch is tried first so we consume the WHOLE number
 // instead of just the "702" after the comma (which produced "1,1702").
-const PROSE = /\b(\d{1,3}(?:,\d{3})+|\d{3,5})(\+?)((?:[ \-]confidence[ \-]tagged)?[ \-](?:entr(?:y|ies)|(?:developer[ \-]jargon|tech|project, product, and programmer[ \-]jargon) names))/gi;
+const PROSE = /\b(\d{1,3}(?:,\d{3})+|\d{3,5})(\+?)((?:[ \-]confidence[ \-]tagged)?[ \-](?:entr(?:y|ies)|(?:developer[ \-]jargon|tech|project, product, and programmer[ \-]jargon)\s+names))/gi;
 const SOURCE_PROSE = /\b(\d{1,3}(?:,\d{3})+|\d{3,5})(?= (?:(?:carry|with) (?:a )?citable sources?|sourced entr(?:y|ies)))/gi;
 const BADGE = /\b\d{3,4}(?:%2B)?%20entries/gi;
 const CJK = /\d{3,4}(?=\s*条)/g; // Chinese: "1212 条" / "1212 条词条"

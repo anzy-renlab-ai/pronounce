@@ -433,6 +433,8 @@ class RepositoryProductFactTests(unittest.TestCase):
         noscript = root.split("<noscript>", 1)[1].split("</noscript>", 1)[0]
         self.assertIn("1,883", noscript)
         self.assertIn("1,263", noscript)
+        self.assertNotIn("1,880", noscript)
+        self.assertNotIn("1,260", noscript)
         self.assertNotRegex(
             root,
             re.compile(
