@@ -25,7 +25,7 @@ OUT_DIR = REPO / "docs" / "og"
 MANIFEST = OUT_DIR / "manifest.json"
 
 SCHEMA_VERSION = 1
-RENDERER_VERSION = 1
+RENDERER_VERSION = 2
 ENTRY_FIELDS = (
     "word",
     "ipa",
@@ -533,6 +533,21 @@ def sync_cards(
     return SyncResult(rendered=len(stale), current=len(indexed) - len(stale))
 
 
+def select_font_for_text(fonts: Iterable[Any], text: str):
+    """Choose the first loaded font that paints every non-space character."""
+    choices = list(fonts)
+    if not choices:
+        raise ValueError("at least one font candidate is required")
+    characters = set(text) - {character for character in text if character.isspace()}
+    for font in choices:
+        try:
+            if all(font.getmask(character).getbbox() is not None for character in characters):
+                return font
+        except Exception:
+            continue
+    return choices[0]
+
+
 def create_pillow_renderer(
     render_spec: Mapping[str, Any] = RENDER_SPEC,
 ):
@@ -540,15 +555,18 @@ def create_pillow_renderer(
     from PIL import Image, ImageDraw, ImageFont
 
     fonts = {}
+    font_choices = {}
     for name, font_spec in render_spec["fonts"].items():
+        choices = []
         for candidate in font_spec["candidates"]:
             try:
-                fonts[name] = ImageFont.truetype(candidate, font_spec["size"])
-                break
+                choices.append(ImageFont.truetype(candidate, font_spec["size"]))
             except Exception:
                 continue
-        else:
-            fonts[name] = ImageFont.load_default()
+        if not choices:
+            choices.append(ImageFont.load_default())
+        font_choices[name] = choices
+        fonts[name] = choices[0]
 
     canvas = render_spec["canvas"]
     palette = render_spec["palette"]
@@ -634,10 +652,11 @@ def create_pillow_renderer(
             y_after = y_after_word + layout["missing_respelling_gap"]
 
         if ipa:
+            ipa_font = select_font_for_text(font_choices["ipa"], ipa)
             draw.text(
                 (word_position[0], y_after),
                 ipa,
-                font=fonts["ipa"],
+                font=ipa_font,
                 fill=tuple(palette["muted"]),
             )
             y_after += (

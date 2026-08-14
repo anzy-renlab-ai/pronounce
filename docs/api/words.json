@@ -545,7 +545,7 @@
   {"word": "Pelican", "slug": "pelican", "category": "product", "confidence": "community-consensus"},
   {"word": "hermes", "slug": "hermes", "category": "product", "confidence": "community-consensus"},
   {"word": "aaru", "slug": "aaru", "category": "project", "confidence": "community-consensus"},
-  {"word": "simile", "slug": "simile", "category": "project", "confidence": "creator-clarified"},
+  {"word": "Simile", "slug": "simile", "category": "project", "confidence": "creator-clarified"},
   {"word": "QualiKI", "slug": "qualiki", "category": "project", "confidence": "creator-clarified"},
   {"word": "KugelAudio", "slug": "kugelaudio", "category": "project", "confidence": "creator-clarified"},
   {"word": "Gradium", "slug": "gradium", "category": "project", "confidence": "creator-clarified"},

@@ -2362,7 +2362,12 @@ echo "$INDEXNOW_KEY" > "$DOCS/.indexnow-key"
 # ---------------------------------------------------------------------------
 mkdir -p "$DOCS/daily"
 # Get sorted entries
-WORDS_FOR_DAILY="$(awk -F'\t' '!/^#/ && NF>=3 && $1 != "" && $1 != "word" { print $1 "\t" $2 "\t" $3 "\t" $8 "\t" $10 }' "$DICT")"
+WORDS_FOR_DAILY="$(slug_awk -F'\t' '!/^#/ && NF>=3 && $1 != "" && $1 != "word" {
+  slug = tolower($1)
+  gsub(/[\200-\277]/, "", slug)
+  gsub(/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/, "-", slug)
+  print $1 "\t" $2 "\t" $3 "\t" $8 "\t" $10 "\t" slug
+}' "$DICT")"
 WORDS_TOTAL="$(echo "$WORDS_FOR_DAILY" | grep -c . || true)"
 
 DAILY_INDEX_TMP="$(mktemp)"
@@ -2373,16 +2378,27 @@ for ((d = DAYS_BACK; d >= 0; d--)); do
   else
     daydate="$(date -d "$d days ago" +%Y-%m-%d)"
   fi
-  daycompact="${daydate//-/}"
-  # Deterministic hash matching todaysWord() in script.js
-  hashval=0
-  for ((ci = 0; ci < ${#daycompact}; ci++)); do
-    c="${daycompact:ci:1}"
-    cval=$(LC_CTYPE=C printf '%d' "'$c")
-    hashval=$(( ((hashval << 5) - hashval + cval) & 0x7FFFFFFF ))
-  done
-  idx=$(( hashval % WORDS_TOTAL ))
-  row="$(echo "$WORDS_FOR_DAILY" | awk -v n="$idx" 'NR==(n+1) {print; exit}')"
+  # Once a dated URL is committed, keep its selected word stable while still
+  # refreshing pronunciation/source details from the current dictionary row.
+  existing_daily_slug=""
+  if [[ -s "$DOCS/daily/$daydate.html" ]]; then
+    existing_daily_slug="$(sed -n 's#.*href="[^"]*/word/\([^"]*\)".*#\1#p' "$DOCS/daily/$daydate.html" | head -n 1)"
+  fi
+  row=""
+  if [[ -n "$existing_daily_slug" ]]; then
+    row="$(echo "$WORDS_FOR_DAILY" | awk -F'\t' -v slug="$existing_daily_slug" '$6 == slug {print; exit}')"
+  fi
+  if [[ -z "$row" ]]; then
+    daycompact="${daydate//-/}"
+    hashval=0
+    for ((ci = 0; ci < ${#daycompact}; ci++)); do
+      c="${daycompact:ci:1}"
+      cval=$(LC_CTYPE=C printf '%d' "'$c")
+      hashval=$(( ((hashval << 5) - hashval + cval) & 0x7FFFFFFF ))
+    done
+    idx=$(( hashval % WORDS_TOTAL ))
+    row="$(echo "$WORDS_FOR_DAILY" | awk -v n="$idx" 'NR==(n+1) {print; exit}')"
+  fi
   d_word="$(echo "$row" | cut -f1)"
   d_ipa="$(echo "$row" | cut -f2)"
   d_resp="$(echo "$row" | cut -f3)"
@@ -2703,14 +2719,14 @@ STATS_JS="$(awk -F'\t' '
 # a bash `case` inside $(...) breaks parsing on macOS bash 3.2, so we avoid it).
 CONTRIBUTORS_JS="$(git -C "$REPO_ROOT" shortlog -sne HEAD 2>/dev/null | awk '
   {
-    n=$1; line=$0
+    line=$0
     sub(/^[[:space:]]*[0-9]+[[:space:]]+/, "", line)
     em=line; sub(/.*</,"",em); sub(/>.*/,"",em)
     nm=line; sub(/[[:space:]]*<.*/,"",nm)
     low=tolower(nm" "em)
     if (low ~ /bot/ || low ~ /github-actions/) next
     gsub(/\\/,"\\\\",nm); gsub(/"/,"\\\"",nm)
-    printf "%s{\"name\":\"%s\",\"commits\":%d}", sep, nm, n; sep=","
+    printf "%s{\"name\":\"%s\"}", sep, nm; sep=","
   }
 ')"
 
@@ -2818,11 +2834,12 @@ function init() {
       </a>\`).join('');
   }
 
-  // Contributors (from \`git shortlog\` at build, bots excluded)
+  // Contributors (from \`git shortlog\` at build, bots excluded). Commit
+  // totals are intentionally omitted so generating this page is idempotent.
   const cl = document.getElementById('contrib-list');
   if (cl) {
-    cl.innerHTML = CONTRIBUTORS.map(({name, commits}) => \`
-      <span style="display:inline-block;padding:6px 13px;margin:4px;border:1px solid var(--border,#333);border-radius:999px;font-size:14px;">\${name} <span style="color:var(--muted-strong,#888);">· \${commits}</span></span>\`).join('')
+    cl.innerHTML = CONTRIBUTORS.map(({name}) => \`
+      <span style="display:inline-block;padding:6px 13px;margin:4px;border:1px solid var(--border,#333);border-radius:999px;font-size:14px;">\${name}</span>\`).join('')
       + \`<a style="display:inline-block;padding:6px 13px;margin:4px;border-radius:999px;font-size:14px;background:var(--accent,#ff6a3d);color:#fff;text-decoration:none;" href="https://github.com/${GH_REPO}/blob/main/CONTRIBUTING.md">+ be the next →</a>\`;
   }
 

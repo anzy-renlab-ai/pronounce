@@ -348,6 +348,7 @@ class RepositoryProductFactTests(unittest.TestCase):
 
         self.assertEqual(rows["simile"][3], "")
         self.assertEqual(rows["simile"][4], "")
+        self.assertEqual(rows["simile"][0], "Simile")
 
     def test_current_sources_omit_retired_marketing_and_roadmap_claims(self):
         for path in self.CURRENT_SOURCES:
@@ -407,11 +408,38 @@ class RepositoryProductFactTests(unittest.TestCase):
         )
 
     def test_vscode_count_sync_does_not_overwrite_source_coverage(self):
-        source = self.source("integrations/vscode/scripts/build-dict.mjs")
-        self.assertNotIn("(?:[ \\-]sourced)?", source)
-        self.assertIn("confidence[ \\-]tagged", source)
-        self.assertIn("const SOURCE_COUNT =", source)
-        self.assertIn(".replace(SOURCE_PROSE", source)
+        builder = self.source("integrations/vscode/scripts/build-dict.mjs")
+        synchronizer = self.source("integrations/vscode/scripts/count-sync.mjs")
+        self.assertNotIn("(?:[ \\-]sourced)?", synchronizer)
+        self.assertIn("confidence[ \\-]tagged", synchronizer)
+        self.assertIn("const SOURCE_COUNT =", builder)
+        self.assertIn("const CREATOR_COUNT =", builder)
+        self.assertIn("const CONTESTED_COUNT =", builder)
+        self.assertIn("syncCountText(text", builder)
+
+        zh = self.source("integrations/vscode/package.nls.zh-cn.json")
+        self.assertIn("1883 条发音词条，其中 1263 条带来源引用，105 条为作者确认", zh)
+        self.assertNotIn("1883 条带来源", zh)
+
+        package = self.source("integrations/vscode/package.json")
+        walkthrough = self.source("integrations/vscode/media/walkthrough-star.md")
+        self.assertIn("Browse all confidence-tagged entries", package)
+        self.assertIn("1,883 entries; 1,263 carry a citable source", walkthrough)
+        self.assertNotIn("Every entry has a source citation", walkthrough)
+
+    def test_committed_daily_page_keeps_its_original_word_selection(self):
+        daily = self.source("docs/daily/2026-06-15.html")
+        self.assertIn("pronunciation of the day: UXE", daily)
+        self.assertIn("/word/uxe", daily)
+
+        generator = self.source("tools/build-site.sh")
+        self.assertIn("existing_daily_slug", generator)
+
+    def test_stats_contributor_output_does_not_drift_on_every_commit(self):
+        generator = self.source("tools/build-site.sh")
+        stats = self.source("docs/stats.html")
+        self.assertNotIn('"commits":%d', generator)
+        self.assertNotIn('"commits":', stats)
 
     def test_live_root_reports_exact_source_coverage_without_universal_claims(self):
         root = self.source("docs/index.html")

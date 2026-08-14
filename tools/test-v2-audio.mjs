@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import test from 'node:test';
 import vm from 'node:vm';
+import { syncCountText } from '../integrations/vscode/scripts/count-sync.mjs';
 
 const AUDIO_SOURCE = readFileSync(
   new URL('../docs/v2/audio.jsx', import.meta.url),
@@ -42,6 +43,34 @@ const markerIndex = AUDIO_SOURCE.indexOf(WAVEFORM_MARKER);
 assert.notEqual(markerIndex, -1, 'audio.jsx must keep the Waveform marker');
 
 const SPEECH_SOURCE = AUDIO_SOURCE.slice(0, markerIndex);
+
+test('VS Code count copy keeps total, sourced, and creator metrics distinct', () => {
+  const stale = [
+    '1,880 entries; 1,260 carry a citable source',
+    '1,260 also carry a citable source',
+    '1,260 of 1,880 entries carry a citable source',
+    '1,260 sourced entries',
+    '101 settled by the creator; 172 the community still argues',
+    '1880 条社区维护词条，其中 1260 条带来源引用，101 条为作者确认',
+  ].join('\n');
+
+  assert.equal(
+    syncCountText(stale, {
+      count: 1883,
+      sourceCount: 1263,
+      creatorCount: 105,
+      contestedCount: 174,
+    }),
+    [
+      '1,883 entries; 1,263 carry a citable source',
+      '1,263 also carry a citable source',
+      '1,263 of 1,883 entries carry a citable source',
+      '1,263 sourced entries',
+      '105 settled by the creator; 174 the community still argues',
+      '1883 条社区维护词条，其中 1263 条带来源引用，105 条为作者确认',
+    ].join('\n'),
+  );
+});
 
 function sourceBlock(source, start, end) {
   const startIndex = source.indexOf(start);

@@ -156,9 +156,34 @@ class CoreContractTests(unittest.TestCase):
             baseline,
         )
 
-    def test_default_renderer_contract_is_numeric_one(self):
+    def test_default_renderer_contract_is_numeric_two(self):
         self.assertIs(type(self.module.RENDERER_VERSION), int)
-        self.assertEqual(self.module.RENDERER_VERSION, 1)
+        self.assertEqual(self.module.RENDERER_VERSION, 2)
+
+    def test_font_selector_skips_a_loadable_font_with_blank_ipa_glyphs(self):
+        select_font_for_text = self.helper("select_font_for_text")
+
+        class Mask:
+            def __init__(self, visible):
+                self.visible = visible
+
+            def getbbox(self):
+                return (0, 0, 1, 1) if self.visible else None
+
+        class Font:
+            def __init__(self, missing=""):
+                self.missing = set(missing)
+
+            def getmask(self, character):
+                return Mask(character not in self.missing)
+
+        incomplete = Font(missing="əɪˈ")
+        complete = Font()
+        self.assertIs(
+            select_font_for_text([incomplete, complete], "/ˈsɪ mə li/"),
+            complete,
+        )
+        self.assertIs(select_font_for_text([incomplete], "   "), incomplete)
 
     def test_manifest_loader_is_strict_or_lenient_about_exact_shape_and_versions(self):
         load_manifest = self.helper("load_manifest")
@@ -502,6 +527,7 @@ class StateMachineTests(unittest.TestCase):
         entry = self.entry()
         self.install_current_state([entry])
         calls = []
+        next_renderer_version = self.module.RENDERER_VERSION + 1
 
         def renderer(rendered_entry, output_path):
             calls.append(rendered_entry["word"])
@@ -512,14 +538,14 @@ class StateMachineTests(unittest.TestCase):
             out_dir=self.out_dir,
             manifest_path=self.manifest_path,
             renderer=renderer,
-            renderer_version=2,
+            renderer_version=next_renderer_version,
         )
 
         self.assertEqual((result.rendered, result.current), (1, 0))
         self.assertEqual(calls, ["Example"])
         self.assertEqual(
             json.loads(self.manifest_path.read_text(encoding="utf-8")),
-            self.manifest_for([entry], renderer_version=2),
+            self.manifest_for([entry], renderer_version=next_renderer_version),
         )
 
     def test_invalid_manifest_variants_make_every_card_stale(self):

@@ -5,6 +5,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { syncCountText } from './count-sync.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const repoRoot = join(here, '..', '..', '..');
@@ -38,6 +39,10 @@ mkdirSync(dirname(outPath), { recursive: true });
 writeFileSync(outPath, JSON.stringify(entries, null, 0));
 const COUNT = Object.keys(entries).length;
 const SOURCE_COUNT = Object.values(entries).filter(entry => entry.source_url).length;
+const CREATOR_COUNT = Object.values(entries).filter(
+  entry => entry.confidence === 'creator-clarified').length;
+const CONTESTED_COUNT = Object.values(entries).filter(
+  entry => entry.confidence === 'contested').length;
 console.log(`built dictionary: ${COUNT} entries (${SOURCE_COUNT} sourced) → ${outPath}`);
 
 // Keep every "<N> entries" claim across docs in lockstep with the real count.
@@ -48,13 +53,6 @@ console.log(`built dictionary: ${COUNT} entries (${SOURCE_COUNT} sourced) → ${
 // Source-coverage phrases such as "1,263 sourced entries" are deliberately
 // excluded: that number is not the total. "confidence-tagged" is safe because
 // every dictionary entry carries a confidence value.
-// Number part matches either a comma-grouped form ("1,702") or a bare run
-// ("1702"); the comma branch is tried first so we consume the WHOLE number
-// instead of just the "702" after the comma (which produced "1,1702").
-const PROSE = /\b(\d{1,3}(?:,\d{3})+|\d{3,5})(\+?)((?:[ \-]confidence[ \-]tagged)?[ \-](?:entr(?:y|ies)|(?:developer[ \-]jargon|tech|project, product, and programmer[ \-]jargon)\s+names))/gi;
-const SOURCE_PROSE = /\b(\d{1,3}(?:,\d{3})+|\d{3,5})(?= (?:(?:carry|with) (?:a )?citable sources?|sourced entr(?:y|ies)))/gi;
-const BADGE = /\b\d{3,4}(?:%2B)?%20entries/gi;
-const CJK = /\d{3,4}(?=\s*条)/g; // Chinese: "1212 条" / "1212 条词条"
 const docFiles = [
   ['integrations', 'vscode', 'package.json'],
   ['integrations', 'vscode', 'package.nls.json'],
@@ -62,6 +60,7 @@ const docFiles = [
   ['integrations', 'vscode', 'README.md'],
   ['integrations', 'vscode', 'media', 'walkthrough-hover.md'],
   ['integrations', 'vscode', 'media', 'walkthrough-search.md'],
+  ['integrations', 'vscode', 'media', 'walkthrough-star.md'],
   ['README.md'],
   ['docs', 'index.html'],
   ['.codex-plugin', 'plugin.json'],
@@ -71,15 +70,12 @@ for (const parts of docFiles) {
   const p = join(repoRoot, ...parts);
   let text;
   try { text = readFileSync(p, 'utf8'); } catch { continue; }
-  const next = text
-    // Preserve each doc's own digit style: if the matched number used commas
-    // ("1,702") keep them, otherwise emit the bare count ("1702").
-    .replace(PROSE, (_m, num, plus, tail) =>
-      `${num.includes(',') ? COUNT.toLocaleString('en-US') : COUNT}${plus}${tail}`)
-    .replace(SOURCE_PROSE, num =>
-      num.includes(',') ? SOURCE_COUNT.toLocaleString('en-US') : `${SOURCE_COUNT}`)
-    .replace(BADGE, `${COUNT}%20entries`)
-    .replace(CJK, `${COUNT}`);
+  const next = syncCountText(text, {
+    count: COUNT,
+    sourceCount: SOURCE_COUNT,
+    creatorCount: CREATOR_COUNT,
+    contestedCount: CONTESTED_COUNT,
+  });
   if (next !== text) {
     writeFileSync(p, next);
     console.log(`synced count → ${parts.join('/')}`);

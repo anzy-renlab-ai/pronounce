@@ -548,7 +548,7 @@ Gatsby | /ˈɡætsbi/ | gats bee | product | community-consensus | https://www.g
 Pelican | /ˈpɛlɪkən/ | pel i kun | product | community-consensus | https://getpelican.com/
 hermes | /ˈhɜːr miːz/ | HER meez | product | community-consensus | https://huggingface.co/NousResearch
 aaru | /ˈɑː ruː/ | AH roo | project | community-consensus | https://aaru.com/
-simile | /ˈsɪ mə li/ | SIM uh lee | project | creator-clarified | https://www.youtube.com/watch?v=_7FuglsjhbM&t=26s
+Simile | /ˈsɪ mə li/ | SIM uh lee | project | creator-clarified | https://www.youtube.com/watch?v=_7FuglsjhbM&t=26s
 QualiKI | /ˈkwɑː lə kiː/ | KWAH luh key | project | creator-clarified | https://www.linkedin.com/posts/qualiki_ever-wondered-how-to-pronounce-our-name-activity-7476337222900875264-Kcui
 KugelAudio | /ˈkuː ɡəl ˌɔː di oʊ/ | KOO gull audio | project | creator-clarified | https://www.youtube.com/watch?v=fEBxXqWpUMA&t=15s
 Gradium | /ˈɡreɪ di əm/ | GRAY dee um | project | creator-clarified | https://www.youtube.com/watch?v=qaaaXWs_bMg&t=6s
