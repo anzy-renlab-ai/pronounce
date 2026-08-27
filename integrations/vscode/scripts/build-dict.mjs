@@ -50,7 +50,7 @@ console.log(`built dictionary: ${COUNT} entries (${SOURCE_COUNT} sourced) → ${
 // abandonware on the Marketplace listing — so this is part of the build, not a
 // manual chore. Matches total-count prose ("993 entries",
 // "918-entry browser", "918+ entries") and the URL-encoded shields badge.
-// Source-coverage phrases such as "1,263 sourced entries" are deliberately
+// Source-coverage phrases such as "1,268 sourced entries" are deliberately
 // excluded: that number is not the total. "confidence-tagged" is safe because
 // every dictionary entry carries a confidence value.
 const docFiles = [

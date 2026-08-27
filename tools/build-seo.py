@@ -903,9 +903,11 @@ def emit_zh_word(e: dict, out_dir: Path) -> None:
       <p><strong>{esc(e['word'])}</strong> 在英语中的标准读法是 <strong>「{esc(e['resp'])}」</strong>（{esc(e['ipa'])}）。</p>"""
     if e["notes"]:
         html += f'\n      <p class="en-note" lang="en">{esc(e["notes"])}</p>'
+    if alt_html:
+        html += f"\n      {alt_html}"
+    if src_html:
+        html += f"\n      {src_html}"
     html += f"""
-      {alt_html}
-      {src_html}
       <p>读对项目名只是工程师文化的一部分 — 但开会时被人轻轻纠正、或者在 podcast 上被嘉宾礼貌打断的滋味，并不好受。<strong>{BRAND}</strong> 是一个开源的开发者词汇发音词典，每条都标注来源、信心等级，并且有预渲染的音频可以直接听。</p>
     </section>
 

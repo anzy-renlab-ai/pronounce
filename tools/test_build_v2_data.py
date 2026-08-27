@@ -287,8 +287,8 @@ class RepositoryProductFactTests(unittest.TestCase):
             if len(cells) >= 10 and cells[0] and cells[2]:
                 rows.append(cells)
 
-        self.assertEqual(len(rows), 1_883)
-        self.assertEqual(sum(bool(cells[5].strip()) for cells in rows), 1_263)
+        self.assertEqual(len(rows), 1_888)
+        self.assertEqual(sum(bool(cells[5].strip()) for cells in rows), 1_268)
 
     def test_v224_ai_company_rows(self):
         expected = {
@@ -350,6 +350,72 @@ class RepositoryProductFactTests(unittest.TestCase):
         self.assertEqual(rows["simile"][4], "")
         self.assertEqual(rows["simile"][0], "Simile")
 
+    def test_v225_neolab_rows(self):
+        expected = {
+            "neo lab": (
+                "/ˈniːoʊ læb/",
+                "NEE oh lab",
+                "",
+                "",
+                "https://dictionary.cambridge.org/us/pronunciation/english/neo",
+                "Cambridge English — neo- (US /niː.oʊ-/)",
+                "project",
+                "community-consensus",
+            ),
+            "neocognition": (
+                "/ˌniːoʊ kɑːɡˈnɪʃən/",
+                "NEE oh kog NISH un",
+                "",
+                "",
+                "https://www.youtube.com/watch?v=VRWrA_KhHwU&t=464s",
+                "Yu Su @ Berkeley RDI (7:44)",
+                "project",
+                "creator-clarified",
+            ),
+            "andon": (
+                "/ˈændən/",
+                "AN dun",
+                "",
+                "",
+                "https://www.youtube.com/watch?v=cO8qC6HBuBg&t=15s",
+                "Lukas Petersson @ AI Engineer (0:15)",
+                "project",
+                "creator-clarified",
+            ),
+            "taide": (
+                "/ˈtaɪ də/",
+                "tie duh",
+                "",
+                "",
+                "https://www.youtube.com/watch?v=c-nWFyYP0QU&t=2585s",
+                "Tsai Tzong-Han @ TFC (43:05)",
+                "project",
+                "creator-clarified",
+            ),
+            "gigaai": (
+                "/ˈɡɪɡə ˌeɪ ˈaɪ/",
+                "GIG uh A I",
+                "/ˈdʒɪɡə ˌeɪ ˈaɪ/",
+                "JIG uh A I",
+                "https://www.merriam-webster.com/dictionary/giga-",
+                "Merriam-Webster — giga- (hard-G and soft-G)",
+                "project",
+                "contested",
+            ),
+        }
+        rows = {}
+        for line in self.source("data/pronunciations.tsv").splitlines():
+            if not line or line.startswith("#") or line.startswith("word\t"):
+                continue
+            cells = line.split("\t")
+            rows[cells[0].lower()] = cells
+
+        for word, contract in expected.items():
+            with self.subTest(word=word):
+                self.assertIn(word, rows)
+                self.assertEqual(tuple(rows[word][1:9]), contract)
+                self.assertTrue(rows[word][5].startswith("https://"))
+
     def test_current_sources_omit_retired_marketing_and_roadmap_claims(self):
         for path in self.CURRENT_SOURCES:
             source = self.source(path)
@@ -386,7 +452,7 @@ class RepositoryProductFactTests(unittest.TestCase):
 
     def test_readme_reports_source_coverage_without_universal_source_claims(self):
         readme = self.source("README.md")
-        self.assertIn("1,883 entries — 1,263 carry a citable source", readme)
+        self.assertIn("1,888 entries — 1,268 carry a citable source", readme)
         self.assertNotIn("Shipped since this list was written", readme)
         self.assertNotRegex(
             readme,
@@ -401,7 +467,7 @@ class RepositoryProductFactTests(unittest.TestCase):
         self.assertNotRegex(
             readme,
             re.compile(
-                r"(?:all|every) (?:1,883|1883) (?:entries|words)"
+                r"(?:all|every) (?:1,888|1888) (?:entries|words)"
                 r"[^.\n]*(?:source|cited)",
                 re.IGNORECASE,
             ),
@@ -418,13 +484,13 @@ class RepositoryProductFactTests(unittest.TestCase):
         self.assertIn("syncCountText(text", builder)
 
         zh = self.source("integrations/vscode/package.nls.zh-cn.json")
-        self.assertIn("1883 条发音词条，其中 1263 条带来源引用，105 条为作者确认", zh)
-        self.assertNotIn("1883 条带来源", zh)
+        self.assertIn("1888 条发音词条，其中 1268 条带来源引用，108 条为作者确认", zh)
+        self.assertNotIn("1888 条带来源", zh)
 
         package = self.source("integrations/vscode/package.json")
         walkthrough = self.source("integrations/vscode/media/walkthrough-star.md")
         self.assertIn("Browse all confidence-tagged entries", package)
-        self.assertIn("1,883 entries; 1,263 carry a citable source", walkthrough)
+        self.assertIn("1,888 entries; 1,268 carry a citable source", walkthrough)
         self.assertNotIn("Every entry has a source citation", walkthrough)
 
     def test_committed_daily_page_keeps_its_original_word_selection(self):
@@ -453,14 +519,14 @@ class RepositoryProductFactTests(unittest.TestCase):
                     root,
                     re.compile(
                         rf'<meta {attribute} content="[^"]*'
-                        r'1,883[^"]*1,263[^"]*citable source',
+                        r'1,888[^"]*1,268[^"]*citable source',
                         re.IGNORECASE,
                     ),
                 )
 
         noscript = root.split("<noscript>", 1)[1].split("</noscript>", 1)[0]
-        self.assertIn("1,883", noscript)
-        self.assertIn("1,263", noscript)
+        self.assertIn("1,888", noscript)
+        self.assertIn("1,268", noscript)
         self.assertNotIn("1,880", noscript)
         self.assertNotIn("1,260", noscript)
         self.assertNotRegex(
@@ -468,7 +534,7 @@ class RepositoryProductFactTests(unittest.TestCase):
             re.compile(
                 r"(?:each|every|all) (?:dictionary )?entr(?:y|ies)"
                 r"[^.\n]*(?:source|cited)|"
-                r"(?:1,883|1883) entries with cited sources",
+                r"(?:1,888|1888) entries with cited sources",
                 re.IGNORECASE,
             ),
         )
@@ -669,7 +735,7 @@ class RepositoryProductFactTests(unittest.TestCase):
         changelog = self.source("CHANGELOG.md")
         self.assertTrue(
             changelog.startswith(
-                "# Changelog\n\n## v2.24.0 — 2026-08-14\n"
+                "# Changelog\n\n## v2.25.0 — 2026-08-27\n"
             )
         )
         self.assertIn("## v2.23.0 — 2026-07-17", changelog)

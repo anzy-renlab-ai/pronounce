@@ -4,12 +4,12 @@
   "category": "Developer tool · CLI · open-source dictionary",
   "domain": "pronounce.renlab.ai",
   "problem": "Engineers butcher project names daily — kub-cuttle, eng-inks, jraffic. Every standup, every conference talk, every Loom. There's no canonical answer because the names are jargon Webster doesn't cover.",
-  "solution": "Pronounce is a 1,883-entry community dictionary of how engineers actually say developer jargon — kubectl, nginx, GIF, JSON, Pydantic, Knative, Ghostty, wagmi, YAML. Every entry is confidence-tagged; 1,263 are source-cited, 105 are creator-clarified, and 174 are contested. One Bash CLI with no npm runtime detects speech backends on macOS, Linux, and Windows.",
+  "solution": "Pronounce is a 1,888-entry community dictionary of how engineers actually say developer jargon — kubectl, nginx, GIF, JSON, Pydantic, Knative, Ghostty, wagmi, YAML. Every entry is confidence-tagged; 1,268 are source-cited, 108 are creator-clarified, and 175 are contested. One Bash CLI with no npm runtime detects speech backends on macOS, Linux, and Windows.",
   "why_now": "AI coding agents (Claude / Cursor) hit the same wall: they read 'kubectl' and have no idea how to say it. A pronunciation MCP server fixes that in one install. Meanwhile remote-first work makes pronunciation drift worse — colleagues never hear each other say the words.",
   "market_size": "30M+ developers worldwide (Stack Overflow 2024). Every one of them mispronounces at least one project name a week.",
   "target_customer": "Backend engineers, DevOps, SREs, AI coding agent users, conference speakers, dev-tool YouTubers.",
   "features": [
-    { "title": "1,883 confidence-tagged entries", "description": "1,263 are source-cited, 105 creator-clarified, and 174 contested; the source stays blank when reliable evidence is unavailable.", "icon": "📚" },
+    { "title": "1,888 confidence-tagged entries", "description": "1,268 are source-cited, 108 creator-clarified, and 175 contested; the source stays blank when reliable evidence is unavailable.", "icon": "📚" },
     { "title": "Multi-reading audio", "description": "Contested words like GIF and SQL play 'jif … or: ghif' (an explicit hard-G speech cue) — you hear the debate, not just one side.", "icon": "🔊" },
     { "title": "Claude Code skill built-in", "description": "Ask Claude 'how do you pronounce X' — it returns audio + IPA + a source when one exists, not a phonetic guess.", "icon": "🤖" },
     { "title": "Cross-platform Bash CLI", "description": "No npm runtime. Detects macOS `say`, Linux `espeak-ng`/`espeak`, or Windows PowerShell `System.Speech`.", "icon": "⚡" },
@@ -18,12 +18,12 @@
   ],
   "demo_video_path": "",
   "traction": [
-    { "metric": "Dictionary entries", "value": "1,883", "delta": "all confidence-tagged" },
-    { "metric": "Source-cited entries", "value": "1,263", "delta": "URLs only where evidence exists" },
-    { "metric": "Confidence highlights", "value": "105 / 174", "delta": "creator-clarified / contested" }
+    { "metric": "Dictionary entries", "value": "1,888", "delta": "all confidence-tagged" },
+    { "metric": "Source-cited entries", "value": "1,268", "delta": "URLs only where evidence exists" },
+    { "metric": "Confidence highlights", "value": "108 / 175", "delta": "creator-clarified / contested" }
   ],
   "pricing": [
-    { "tier": "Open source", "price": "$0", "features": ["MIT license", "All 1,883 entries", "1,263 source citations", "macOS + Linux + Windows audio backends", "CLI + webapp + MCP server + Claude Code skill + VS Code extension", "Community-maintained"], "highlight": true }
+    { "tier": "Open source", "price": "$0", "features": ["MIT license", "All 1,888 entries", "1,268 source citations", "macOS + Linux + Windows audio backends", "CLI + webapp + MCP server + Claude Code skill + VS Code extension", "Community-maintained"], "highlight": true }
   ],
   "team": [
     { "name": "alvin", "role": "Maintainer", "bio": "Engineer · built say-it after the 47th time someone said 'kub-cuttle' on a call." }

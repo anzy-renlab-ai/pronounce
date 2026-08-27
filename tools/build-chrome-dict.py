@@ -72,11 +72,11 @@ def main():
         encoding="utf-8",
     )
     stamp_count(MANIFEST, count, [
-        (r"\d[\d,]* sourced entries", "{n} sourced entries"),
+        (r"\d[\d,]* confidence-tagged entries", "{n} confidence-tagged entries"),
         (r"search \d[\d,]* entries", "search {n} entries"),
     ])
     stamp_count(README, count, [
-        (r"\d[\d,]*-entry sourced dictionary", "{n}-entry sourced dictionary"),
+        (r"\d[\d,]*-entry confidence-tagged dictionary", "{n}-entry confidence-tagged dictionary"),
         (r"all \d[\d,]* entries", "all {n} entries"),
     ])
     print(f"chrome dict: {count} entries -> {DICT_OUT.relative_to(ROOT)}")

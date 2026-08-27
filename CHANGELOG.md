@@ -1,5 +1,22 @@
 # Changelog
 
+## v2.25.0 — 2026-08-27
+
+**NEO LAB pronunciation batch — five additions, three backed by direct creator or project-team speech.** The dictionary now has 1,888 entries, 1,268 with a citable source; 108 are creator-clarified and 175 are contested.
+
+### Added
+
+- **Neo Lab** — `NEE-oh lab`; Cambridge documents the US `neo-` prefix as `/niː.oʊ-/`. No creator pronunciation guide was found, so the RenLab series title is treated compositionally and marked community-consensus.
+- **NeoCognition** — `NEE-oh kog-NISH-un`; co-founder Yu Su says the company name in a timestamped Berkeley RDI talk.
+- **Andon** — `AN-dun`; co-founder Lukas Petersson says `Andon Labs` in a timestamped AI Engineer talk. The name comes from Toyota's stop-the-line signal.
+- **TAIDE** — `TIE-duh`; project model-team convener Tsai Tzong-Han repeats the Taiwanese Mandarin shorthand 台德/泰德 in a timestamped interview, rather than spelling out the five letters.
+- **GigaAI** — `GIG-uh A-I`, with `JIG-uh A-I` retained as an audible alternate. The company has not published a ruling, while Merriam-Webster records both hard-G and soft-G readings for `giga-`, so the entry is marked contested.
+
+### Changed
+
+- Regenerated the website search data, per-word pages, canonical audio, Open Graph cards, Hugging Face export, and bundled VS Code/Chrome dictionaries from the TSV source of truth.
+- Updated current product statistics and the Codex plugin manifest to v2.25.0; the independently versioned CLI and browser/editor extensions keep their existing package versions.
+
 ## v2.24.0 — 2026-08-14
 
 **AI company pronunciation refresh — one correction and three creator-verified additions.** The dictionary now has 1,883 entries, 1,263 with a citable source; 105 are creator-clarified and 174 are contested.

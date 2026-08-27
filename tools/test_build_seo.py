@@ -572,6 +572,14 @@ class MainIntegrationTests(BuildSeoTestCase):
         self.assertIn("sitemap-seo.xml", stdout.getvalue())
         self.assertIn("sitemap-zh.xml", stdout.getvalue())
 
+        for page in docs.rglob("*.html"):
+            with self.subTest(page=page.relative_to(docs)):
+                lines = page.read_text(encoding="utf-8").splitlines()
+                self.assertFalse(
+                    any(line.endswith((" ", "\t")) for line in lines),
+                    "generated HTML must not contain trailing whitespace",
+                )
+
 
 if __name__ == "__main__":
     unittest.main()

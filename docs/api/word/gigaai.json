@@ -1,0 +1,15 @@
+{
+  "word": "GigaAI",
+  "ipa": "/ˈɡɪɡə ˌeɪ ˈaɪ/",
+  "respelling_us": "GIG uh A I",
+  "alt_ipa": ["/ˈdʒɪɡə ˌeɪ ˈaɪ/"],
+  "alt_respelling_us": ["JIG uh A I"],
+  "source_url": "https://www.merriam-webster.com/dictionary/giga-",
+  "source_label": "Merriam-Webster — giga- (hard-G and soft-G)",
+  "category": "project",
+  "confidence": "contested",
+  "notes": "GigaAI (极佳视界) has not published a pronunciation guide. Hard-G \"GIG-uh A-I\" is primary here; Merriam-Webster records both \"JIG-uh\" and \"GIG-uh,\" so the soft-G reading remains audible as an alternate.",
+  "audio_url": "https://pronounce.renlab.ai/audio/gigaai.mp3",
+  "url": "https://pronounce.renlab.ai/word/gigaai",
+  "date_modified": "2026-08-27"
+}
