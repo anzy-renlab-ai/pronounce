@@ -1,0 +1,15 @@
+{
+  "word": "Marble",
+  "ipa": "/ˈmɑːrbəl/",
+  "respelling_us": "mar bul",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.worldlabs.ai/blog/marble-world-model",
+  "source_label": "World Labs — Marble: A Multimodal World Model",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "World Labs' multimodal model for creating editable, explorable 3D worlds from text, images, video, or layouts. Say MAR-buhl, like the ordinary English word.",
+  "audio_url": "https://pronounce.renlab.ai/audio/marble.mp3",
+  "url": "https://pronounce.renlab.ai/word/marble",
+  "date_modified": "2026-09-01"
+}

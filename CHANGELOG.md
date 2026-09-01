@@ -1,5 +1,30 @@
 # Changelog
 
+## v2.26.0 — 2026-09-01
+
+**Persona, affective AI, and embodied world-model vocabulary — 15 sourced additions.** The dictionary now has 1,903 entries, 1,283 with a citable source; 108 are creator-clarified and 175 are contested.
+
+### Added
+
+- **persona** — `per-SOH-nuh`; the identity, role, tone, and behavioral frame assigned to an AI system.
+- **affect / affective** — distinguishes the noun `AFF-ect` from the everyday verb `uh-FECT`, and adds `uh-FEK-tiv` for affective computing.
+- **anthropomorphism** — `an-thruh-puh-MOR-fiz-um`; attributing human traits or feelings to an AI agent.
+- **prosody** — `PRAH-suh-dee`, with documented `PRAH-zuh-dee` alternate; rhythm, stress, pitch, and intonation in speech.
+- **valence / arousal** — the positive-to-negative and activation dimensions commonly paired in computational emotion models.
+- **interoception / alexithymia** — internal-body sensing and difficulty identifying or describing emotions.
+- **affordance** — `uh-FOR-duhns`; an action possibility an environment offers an agent.
+- **homeostasis** — `hoh-mee-oh-STAY-sis`; regulation of internal stability in embodied and affective agents.
+- **enactivism / autopoiesis** — vocabulary for embodied cognition, autonomy, and self-maintaining systems.
+- **Genie 3** — Google DeepMind's real-time interactive world model.
+- **Marble** — World Labs' multimodal model for editable, explorable 3D worlds.
+
+All 15 additions carry a citable source, including the official Google DeepMind and World Labs product pages for the two named world models.
+
+### Changed
+
+- Regenerated the website search data, per-word pages, canonical audio, Open Graph cards, Hugging Face export, and bundled VS Code/Chrome dictionaries from the TSV source of truth.
+- Updated current product statistics and the Codex plugin manifest to v2.26.0; the independently versioned CLI and browser/editor extensions keep their existing package versions.
+
 ## v2.25.0 — 2026-08-27
 
 **NEO LAB pronunciation batch — five additions, three backed by direct creator or project-team speech.** The dictionary now has 1,888 entries, 1,268 with a citable source; 108 are creator-clarified and 175 are contested.

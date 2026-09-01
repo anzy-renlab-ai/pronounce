@@ -1,0 +1,15 @@
+{
+  "word": "prosody",
+  "ipa": "/ˈprɑːsədi/",
+  "respelling_us": "PRAH suh dee",
+  "alt_ipa": ["/ˈprɑːzədi/"],
+  "alt_respelling_us": ["PRAH zuh dee"],
+  "source_url": "https://www.merriam-webster.com/dictionary/prosody",
+  "source_label": "Merriam-Webster — prosody",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "The rhythm, stress, pitch, and intonation of speech; a key signal for speech-emotion recognition and expressive voice models. PRAH-suh-dee is primary; a voiced-s PRAH-zuh-dee variant is also documented.",
+  "audio_url": "https://pronounce.renlab.ai/audio/prosody.mp3",
+  "url": "https://pronounce.renlab.ai/word/prosody",
+  "date_modified": "2026-09-01"
+}

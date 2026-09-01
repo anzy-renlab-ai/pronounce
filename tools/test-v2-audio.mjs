@@ -56,18 +56,18 @@ test('VS Code count copy keeps total, sourced, and creator metrics distinct', ()
 
   assert.equal(
     syncCountText(stale, {
-      count: 1888,
-      sourceCount: 1268,
+      count: 1903,
+      sourceCount: 1283,
       creatorCount: 108,
       contestedCount: 175,
     }),
     [
-      '1,888 entries; 1,268 carry a citable source',
-      '1,268 also carry a citable source',
-      '1,268 of 1,888 entries carry a citable source',
-      '1,268 sourced entries',
+      '1,903 entries; 1,283 carry a citable source',
+      '1,283 also carry a citable source',
+      '1,283 of 1,903 entries carry a citable source',
+      '1,283 sourced entries',
       '108 settled by the creator; 175 the community still argues',
-      '1888 条社区维护词条，其中 1268 条带来源引用，108 条为作者确认',
+      '1903 条社区维护词条，其中 1283 条带来源引用，108 条为作者确认',
     ].join('\n'),
   );
 });
@@ -602,7 +602,7 @@ test('v2 product and release fact source contract', async t => {
     );
     assert.doesNotMatch(
       `${SECTIONS_1_SOURCE}\n${SECTIONS_2_SOURCE}`,
-      /(?:all|every) (?:1,888|1888|\$\{DICT_ALL\.length\})[^.\n]*(?:source|cited)/i,
+      /(?:all|every) (?:1,903|1903|\$\{DICT_ALL\.length\})[^.\n]*(?:source|cited)/i,
     );
     assert.doesNotMatch(SECTIONS_2_SOURCE, /Every entry[^.\n]*(?:source|linked)/i);
     assert.match(SECTIONS_2_SOURCE, /a source citation when available/i);
@@ -612,9 +612,9 @@ test('v2 product and release fact source contract', async t => {
     );
   });
 
-  await t.test('footer and noindex scaffold identify the v2.25.0 release', () => {
-    assert.match(SECTIONS_2_SOURCE, /sayit · MIT · v2\.25\.0 ·/);
-    assert.match(V2_INDEX_SOURCE, /1,888 entries[^"\n]*1,268[^"\n]*cited sources/i);
+  await t.test('footer and noindex scaffold identify the v2.26.0 release', () => {
+    assert.match(SECTIONS_2_SOURCE, /sayit · MIT · v2\.26\.0 ·/);
+    assert.match(V2_INDEX_SOURCE, /1,903 entries[^"\n]*1,283[^"\n]*cited sources/i);
   });
 
   await t.test('noindex scaffold uses root OG URL and deferred same-origin runtime scripts', () => {

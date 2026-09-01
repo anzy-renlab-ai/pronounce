@@ -1890,3 +1890,18 @@ Haxe | /hɛks/ | hex | product | contested | https://groups.google.com/g/haxelan
 FLTK | /ˈfʊltɪk/ | full tick | tool | creator-clarified | https://www.fltk.org/doc-1.1/intro.html
 Cygwin | /ˈsɪɡwɪn/ | sig win | tool | community-consensus | https://en.wikipedia.org/wiki/Cygwin
 Nagios | /ˈnɑːɡiːoʊs/ | nah ghee ose | tool | creator-clarified | https://web.archive.org/web/20060103075457/http://www.nagios.org/faqs/viewfaq.php?faq_id=3&expand=false&showdesc=true
+persona | /pɚˈsoʊnə/ | per soh nuh | cs-term | community-consensus | https://dictionary.cambridge.org/pronunciation/english/persona
+affect | /ˈæfɛkt/ | AFF ekt | cs-term | community-consensus | https://dictionary.cambridge.org/pronunciation/english/affect
+affective | /əˈfɛktɪv/ | uh FEK tiv | cs-term | community-consensus | https://dictionary.cambridge.org/pronunciation/english/affective
+anthropomorphism | /ˌænθrəpəˈmɔːrfɪzəm/ | an thruh puh MOR fiz um | cs-term | community-consensus | https://dictionary.cambridge.org/pronunciation/english/anthropomorphism
+prosody | /ˈprɑːsədi/ | PRAH suh dee | cs-term | community-consensus | https://www.merriam-webster.com/dictionary/prosody
+valence | /ˈveɪləns/ | vay luns | cs-term | community-consensus | https://dictionary.cambridge.org/pronunciation/english/valence
+arousal | /əˈraʊzəl/ | uh rouse uhl | cs-term | community-consensus | https://dictionary.cambridge.org/pronunciation/english/arousal
+interoception | /ˌɪntəroʊˈsɛpʃən/ | in ter oh SEP shun | cs-term | community-consensus | https://dictionary.cambridge.org/pronunciation/english/interoception
+alexithymia | /əˌlɛksɪˈθaɪmiə/ | uh lek sih THIGH mee uh | cs-term | community-consensus | https://en.wiktionary.org/wiki/alexithymia
+affordance | /əˈfɔːrdəns/ | uh FOR dunce | cs-term | community-consensus | https://dictionary.cambridge.org/pronunciation/english/affordance
+homeostasis | /ˌhoʊmioʊˈsteɪsɪs/ | hoh mee oh STAY sis | cs-term | community-consensus | https://dictionary.cambridge.org/pronunciation/english/homeostasis
+enactivism | /ɪˈnæktɪvɪzəm/ | ih NAK tih viz um | cs-term | community-consensus | https://en.wikipedia.org/wiki/Enactivism
+autopoiesis | /ˌɔːtoʊpɔɪˈiːsɪs/ | aw toh poy EE sis | cs-term | community-consensus | https://en.wiktionary.org/wiki/autopoiesis
+Genie 3 | /ˈdʒiːni ˈθriː/ | jee nee three | product | community-consensus | https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/
+Marble | /ˈmɑːrbəl/ | mar bul | product | community-consensus | https://www.worldlabs.ai/blog/marble-world-model

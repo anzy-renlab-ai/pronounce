@@ -1886,5 +1886,20 @@
   {"word": "Haxe", "slug": "haxe", "category": "product", "confidence": "contested"},
   {"word": "FLTK", "slug": "fltk", "category": "tool", "confidence": "creator-clarified"},
   {"word": "Cygwin", "slug": "cygwin", "category": "tool", "confidence": "community-consensus"},
-  {"word": "Nagios", "slug": "nagios", "category": "tool", "confidence": "creator-clarified"}
+  {"word": "Nagios", "slug": "nagios", "category": "tool", "confidence": "creator-clarified"},
+  {"word": "persona", "slug": "persona", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "affect", "slug": "affect", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "affective", "slug": "affective", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "anthropomorphism", "slug": "anthropomorphism", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "prosody", "slug": "prosody", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "valence", "slug": "valence", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "arousal", "slug": "arousal", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "interoception", "slug": "interoception", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "alexithymia", "slug": "alexithymia", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "affordance", "slug": "affordance", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "homeostasis", "slug": "homeostasis", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "enactivism", "slug": "enactivism", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "autopoiesis", "slug": "autopoiesis", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "Genie 3", "slug": "genie-3", "category": "product", "confidence": "community-consensus"},
+  {"word": "Marble", "slug": "marble", "category": "product", "confidence": "community-consensus"}
 ]

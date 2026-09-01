@@ -287,8 +287,8 @@ class RepositoryProductFactTests(unittest.TestCase):
             if len(cells) >= 10 and cells[0] and cells[2]:
                 rows.append(cells)
 
-        self.assertEqual(len(rows), 1_888)
-        self.assertEqual(sum(bool(cells[5].strip()) for cells in rows), 1_268)
+        self.assertEqual(len(rows), 1_903)
+        self.assertEqual(sum(bool(cells[5].strip()) for cells in rows), 1_283)
 
     def test_v224_ai_company_rows(self):
         expected = {
@@ -416,6 +416,83 @@ class RepositoryProductFactTests(unittest.TestCase):
                 self.assertEqual(tuple(rows[word][1:9]), contract)
                 self.assertTrue(rows[word][5].startswith("https://"))
 
+    def test_v226_persona_affective_and_world_model_rows(self):
+        expected = {
+            "persona": ("/pɚˈsoʊnə/", "per soh nuh", "", "", "cs-term"),
+            "affect": ("/ˈæfɛkt/", "AFF ekt", "/əˈfɛkt/", "uh FEKT", "cs-term"),
+            "affective": ("/əˈfɛktɪv/", "uh FEK tiv", "", "", "cs-term"),
+            "anthropomorphism": (
+                "/ˌænθrəpəˈmɔːrfɪzəm/",
+                "an thruh puh MOR fiz um",
+                "",
+                "",
+                "cs-term",
+            ),
+            "prosody": (
+                "/ˈprɑːsədi/",
+                "PRAH suh dee",
+                "/ˈprɑːzədi/",
+                "PRAH zuh dee",
+                "cs-term",
+            ),
+            "valence": ("/ˈveɪləns/", "vay luns", "", "", "cs-term"),
+            "arousal": ("/əˈraʊzəl/", "uh rouse uhl", "", "", "cs-term"),
+            "interoception": (
+                "/ˌɪntəroʊˈsɛpʃən/",
+                "in ter oh SEP shun",
+                "",
+                "",
+                "cs-term",
+            ),
+            "alexithymia": (
+                "/əˌlɛksɪˈθaɪmiə/",
+                "uh lek sih THIGH mee uh",
+                "/eɪˌlɛksəˈθaɪmiə/",
+                "ay lek suh THIGH mee uh",
+                "cs-term",
+            ),
+            "affordance": ("/əˈfɔːrdəns/", "uh FOR dunce", "", "", "cs-term"),
+            "homeostasis": (
+                "/ˌhoʊmioʊˈsteɪsɪs/",
+                "hoh mee oh STAY sis",
+                "",
+                "",
+                "cs-term",
+            ),
+            "enactivism": (
+                "/ɪˈnæktɪvɪzəm/",
+                "ih NAK tih viz um",
+                "",
+                "",
+                "cs-term",
+            ),
+            "autopoiesis": (
+                "/ˌɔːtoʊpɔɪˈiːsɪs/",
+                "aw toh poy EE sis",
+                "",
+                "",
+                "cs-term",
+            ),
+            "Genie 3": ("/ˈdʒiːni ˈθriː/", "jee nee three", "", "", "product"),
+            "Marble": ("/ˈmɑːrbəl/", "mar bul", "", "", "product"),
+        }
+
+        for word, contract in expected.items():
+            with self.subTest(word=word):
+                entry = self.dictionary_entry(word)
+                self.assertEqual(
+                    (
+                        entry["ipa"],
+                        entry["respelling_us"],
+                        entry["alt_ipa"],
+                        entry["alt_respelling_us"],
+                        entry["category"],
+                    ),
+                    contract,
+                )
+                self.assertTrue(entry["source_url"].startswith("https://"))
+                self.assertEqual(entry["confidence"], "community-consensus")
+
     def test_current_sources_omit_retired_marketing_and_roadmap_claims(self):
         for path in self.CURRENT_SOURCES:
             source = self.source(path)
@@ -452,7 +529,7 @@ class RepositoryProductFactTests(unittest.TestCase):
 
     def test_readme_reports_source_coverage_without_universal_source_claims(self):
         readme = self.source("README.md")
-        self.assertIn("1,888 entries — 1,268 carry a citable source", readme)
+        self.assertIn("1,903 entries — 1,283 carry a citable source", readme)
         self.assertNotIn("Shipped since this list was written", readme)
         self.assertNotRegex(
             readme,
@@ -467,7 +544,7 @@ class RepositoryProductFactTests(unittest.TestCase):
         self.assertNotRegex(
             readme,
             re.compile(
-                r"(?:all|every) (?:1,888|1888) (?:entries|words)"
+                r"(?:all|every) (?:1,903|1903) (?:entries|words)"
                 r"[^.\n]*(?:source|cited)",
                 re.IGNORECASE,
             ),
@@ -484,13 +561,13 @@ class RepositoryProductFactTests(unittest.TestCase):
         self.assertIn("syncCountText(text", builder)
 
         zh = self.source("integrations/vscode/package.nls.zh-cn.json")
-        self.assertIn("1888 条发音词条，其中 1268 条带来源引用，108 条为作者确认", zh)
-        self.assertNotIn("1888 条带来源", zh)
+        self.assertIn("1903 条发音词条，其中 1283 条带来源引用，108 条为作者确认", zh)
+        self.assertNotIn("1903 条带来源", zh)
 
         package = self.source("integrations/vscode/package.json")
         walkthrough = self.source("integrations/vscode/media/walkthrough-star.md")
         self.assertIn("Browse all confidence-tagged entries", package)
-        self.assertIn("1,888 entries; 1,268 carry a citable source", walkthrough)
+        self.assertIn("1,903 entries; 1,283 carry a citable source", walkthrough)
         self.assertNotIn("Every entry has a source citation", walkthrough)
 
     def test_committed_daily_page_keeps_its_original_word_selection(self):
@@ -519,14 +596,14 @@ class RepositoryProductFactTests(unittest.TestCase):
                     root,
                     re.compile(
                         rf'<meta {attribute} content="[^"]*'
-                        r'1,888[^"]*1,268[^"]*citable source',
+                        r'1,903[^"]*1,283[^"]*citable source',
                         re.IGNORECASE,
                     ),
                 )
 
         noscript = root.split("<noscript>", 1)[1].split("</noscript>", 1)[0]
-        self.assertIn("1,888", noscript)
-        self.assertIn("1,268", noscript)
+        self.assertIn("1,903", noscript)
+        self.assertIn("1,283", noscript)
         self.assertNotIn("1,880", noscript)
         self.assertNotIn("1,260", noscript)
         self.assertNotRegex(
@@ -534,7 +611,7 @@ class RepositoryProductFactTests(unittest.TestCase):
             re.compile(
                 r"(?:each|every|all) (?:dictionary )?entr(?:y|ies)"
                 r"[^.\n]*(?:source|cited)|"
-                r"(?:1,888|1888) entries with cited sources",
+                r"(?:1,903|1903) entries with cited sources",
                 re.IGNORECASE,
             ),
         )
@@ -735,7 +812,7 @@ class RepositoryProductFactTests(unittest.TestCase):
         changelog = self.source("CHANGELOG.md")
         self.assertTrue(
             changelog.startswith(
-                "# Changelog\n\n## v2.25.0 — 2026-08-27\n"
+                "# Changelog\n\n## v2.26.0 — 2026-09-01\n"
             )
         )
         self.assertIn("## v2.23.0 — 2026-07-17", changelog)

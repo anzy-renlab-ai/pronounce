@@ -46,8 +46,8 @@ Show HN: Pronounce – a CLI that speaks kubectl, GIF, JSON the way devs actuall
 ```
 Hi HN — I built Pronounce, a tiny CLI + community dictionary for the project
 names devs trip over: kubectl ("koob-control"), nginx ("engine X"), GIF
-("jif"), JSON ("jay-son"), and more. The dictionary has 1,888 entries:
-all are confidence-tagged, 1,268 are source-cited, 108 are
+("jif"), JSON ("jay-son"), and more. The dictionary has 1,903 entries:
+all are confidence-tagged, 1,283 are source-cited, 108 are
 creator-clarified, and 175 are contested.
 
   $ say-it kubectl
@@ -83,7 +83,7 @@ Quiz: https://pronounce.renlab.ai/quiz.html
 
 **Title**:
 ```
-I built a CLI that pronounces kubectl, GIF, JWT the way the community actually says them (1,888 entries; 1,268 sourced)
+I built a CLI that pronounces kubectl, GIF, JWT the way the community actually says them (1,903 entries; 1,283 sourced)
 ```
 
 **Body**:
@@ -95,9 +95,9 @@ OS speech backend:
     $ say-it kubectl
     🔊 koob control. koob control. koob control. or: cube cuddle. or: kube C T L.
 
-It ships with a 1,888-entry dictionary (kubectl, nginx, GIF, JSON,
+It ships with a 1,903-entry dictionary (kubectl, nginx, GIF, JSON,
 Pydantic, JWT, Knative, LaTeX, …). Every entry has a confidence level;
-1,268 have source URLs, 108 are creator-clarified, and 175 are contested.
+1,283 have source URLs, 108 are creator-clarified, and 175 are contested.
 Entries without reliable evidence leave the source field blank.
 
 Multi-reading words audibly chain their alternates ("or: ghif", an explicit hard-G speech cue) so you hear
@@ -120,7 +120,7 @@ https://pronounce.renlab.ai/
 ```
 1/ You say "n-jinx" in standup one time and you never recover.
 
-I built Pronounce — a CLI that speaks 1,888 project / product names the way devs actually say them.
+I built Pronounce — a CLI that speaks 1,903 project / product names the way devs actually say them.
 
 kubectl → "koob control"
 GIF    → "jif" (creator says so)
@@ -130,7 +130,7 @@ https://pronounce.renlab.ai 🔊
 ```
 
 ```
-2/ Every one of the 1,888 entries is confidence-tagged; 1,268 are source-cited.
+2/ Every one of the 1,903 entries is confidence-tagged; 1,283 are source-cited.
 
 If a creator settled the pronunciation on record (Wilhite at the Webby Awards for GIF, Linus for Linux, Crockford for JSON), the dictionary cites it.
 
@@ -187,7 +187,7 @@ Then walk through: the problem → the dictionary approach → the audible alter
 
 **Title**:
 ```
-[分享] kubectl 怎么读？一个 1,888 词的开发者发音字典 + CLI
+[分享] kubectl 怎么读？一个 1,903 词的开发者发音字典 + CLI
 ```
 
 **Body**:
@@ -203,7 +203,7 @@ Then walk through: the problem → the dictionary approach → the audible alter
     $ say-it kubectl
     🔊  koob control. koob control. koob control. or: cube cuddle. or: kube C T L.
 
-字典 1,888 条，每条都标了置信度；其中 1,268 条有来源 URL，
+字典 1,903 条，每条都标了置信度；其中 1,283 条有来源 URL，
 108 条是 creator-clarified，175 条是 contested。没有可靠证据的条目会
 留空来源，不编造 URL。
 
@@ -222,7 +222,7 @@ MIT、无需 npm runtime、PR 欢迎。GitHub：https://github.com/anzy-renlab-a
 
 **Title**:
 ```
-你确定 kubectl 念 "kub-cuttle"？我做了一个 1,888 词的开发者发音字典
+你确定 kubectl 念 "kub-cuttle"？我做了一个 1,903 词的开发者发音字典
 ```
 
 **Frontmatter (tags)**: `命令行`, `开源`, `CLI`, `开发工具`, `效率`
@@ -232,7 +232,7 @@ MIT、无需 npm runtime、PR 欢迎。GitHub：https://github.com/anzy-renlab-a
 本文背景：写了 6 个月 Kubernetes，听到第一次 KubeCon talk 才知道 kubectl 念 "koob-control"，不是 "kub-cuttle"；nginx 念 "engine X"，不是 "n-jinx"；GIF 创作者 Wilhite 在 Webby Awards 上明确说念 "jif"，不是 "gif"…
 
 整理了一份开发者发音字典，写了个 Bash CLI 自动调用 macOS、Linux 或
-Windows 的语音后端播出来。共 1,888 条，全部标置信度；1,268 条有来源，
+Windows 的语音后端播出来。共 1,903 条，全部标置信度；1,283 条有来源，
 108 条是 creator-clarified，175 条是 contested。开源 MIT，欢迎补充。
 ```
 
@@ -252,7 +252,7 @@ Small thing — but every standup, every demo, every interview where someone
 gently corrects you costs micro-trust. So I open-sourced what I'd wanted:
 
 ▸ Pronounce — a CLI + community dictionary for developer jargon
-▸ 1,888 confidence-tagged entries; 1,268 source-cited
+▸ 1,903 confidence-tagged entries; 1,283 source-cited
 ▸ 108 creator-clarified; 175 contested
 ▸ Audio playback for the "intended" community reading
 ▸ MCP server so AI assistants stop guessing
@@ -270,8 +270,8 @@ https://github.com/anzy-renlab-ai/pronounce
 
 ```
 new tiny tool: Pronounce — a CLI that says "kubectl", "nginx", "GIF",
-"JSON", and 1,888 developer jargon names the way the community actually
-says them. 1,268 source-cited, audible alternates, MIT, no npm runtime.
+"JSON", and 1,903 developer jargon names the way the community actually
+says them. 1,283 source-cited, audible alternates, MIT, no npm runtime.
 
 🌐 https://pronounce.renlab.ai
 🐙 https://github.com/anzy-renlab-ai/pronounce
@@ -286,7 +286,7 @@ says them. 1,268 source-cited, audible alternates, MIT, no npm runtime.
 Adjust target community:
 
 - General dev: `does anyone else still pronounce kubectl as "kub-cuttle"? I made a thing → https://pronounce.renlab.ai`
-- DevOps: `apparently it's "et-cetera-distributed", not "et-see-dee". 1,888 entries, 1,268 source-cited → https://pronounce.renlab.ai`
+- DevOps: `apparently it's "et-cetera-distributed", not "et-see-dee". 1,903 entries, 1,283 source-cited → https://pronounce.renlab.ai`
 - AI/ML: `built an MCP server so Claude / Cursor can answer "how to pronounce X" with audio → https://github.com/anzy-renlab-ai/pronounce/tree/main/mcp-server`
 - Newbie-friendly: `if you've ever said n-jinx in a meeting and felt the shame, this is for you → https://pronounce.renlab.ai`
 
@@ -297,7 +297,7 @@ Adjust target community:
 Copy this into the repo Description field:
 
 ```
-🔊 Pronounce developer jargon out loud. 1,888 confidence-tagged entries; 1,268 source-cited. Cross-platform Bash CLI + quiz + voice search + MCP server.
+🔊 Pronounce developer jargon out loud. 1,903 confidence-tagged entries; 1,283 source-cited. Cross-platform Bash CLI + quiz + voice search + MCP server.
 ```
 
 Topics to add (Settings → Topics):
@@ -319,7 +319,7 @@ sre  devops  programming  jargon
 4. **Reply, don't post** — when someone tweets "how do you pronounce X", reply with the canonical link + 1 sentence. Genuine help converts to stars more than launches do.
 5. **Cross-link from your other repos** — README badge `[![Pronounce](https://img.shields.io/badge/say-it-ff6a3d)](https://pronounce.renlab.ai)`.
 6. **Submit to awesome lists** — `awesome-cli-apps`, `awesome-shell`, `awesome-developer-tools`, `awesome-mcp-servers` (you're already in two).
-7. **Hacker News follow-up post a month later** — "Pronounce update: 1,888 entries, MCP server, here's what worked" tends to chart better than launches.
+7. **Hacker News follow-up post a month later** — "Pronounce update: 1,903 entries, MCP server, here's what worked" tends to chart better than launches.
 
 ---
 
