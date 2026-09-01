@@ -814,7 +814,7 @@ class RepositoryProductFactTests(unittest.TestCase):
         changelog = self.source("CHANGELOG.md")
         self.assertTrue(
             changelog.startswith(
-                "# Changelog\n\n## v2.27.0 — 2026-09-01\n"
+                "# Changelog\n\n## v2.28.0 — 2026-09-01\n"
             )
         )
         self.assertIn("## v2.23.0 — 2026-07-17", changelog)

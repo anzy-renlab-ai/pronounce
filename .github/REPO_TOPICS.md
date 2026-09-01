@@ -6,7 +6,7 @@
 ## 1. Description (top right of repo page)
 
 ```
-🔊 Pronounce developer jargon out loud. 540+ entries (kubectl, GIF, JSON, JWT…), sourced, with confidence levels. Bash CLI + interactive quiz + voice search + MCP server.
+🔊 Hear how developers actually pronounce kubectl, nginx, GIF & 1,900+ tech terms. Sourced dictionary + CLI + VS Code + GitHub Action + MCP + Agent Skill.
 ```
 
 ## 2. Website
@@ -20,25 +20,24 @@ https://pronounce.renlab.ai
 Add these — GitHub allows up to 20:
 
 ```
-cli
 bash
+cli
 pronunciation
-dictionary
-macos
 developer-tools
-text-to-speech
-tts
-speech-synthesis
-open-source
-community-driven
+dictionary
+github-actions
+agent-skills
 claude-code
+ai-agents
 mcp
 mcp-server
-raycast
-alfred
-pwa
+speech-synthesis
+text-to-speech
+tts
+ipa
+pronunciation-dictionary
+vscode-extension
 kubernetes
-sre
 devops
 ```
 
@@ -74,7 +73,7 @@ Make sure the badges at the top render correctly. Ones we ship:
 - `![GitHub stars]` — social proof
 - `![Live site]` — proves it's not vapor
 - `![License: MIT]` — removes friction
-- `![Entries: 540+]` — concrete numbers
+- `![Entries: 1,900+]` — concrete numbers
 - `![🎯 Quiz]` — call to interactive demo
-- `![Platform: macOS]` — sets expectation
+- `![GitHub Action]` — reusable workflow entry point
 - `![PRs welcome]` — invites contribution

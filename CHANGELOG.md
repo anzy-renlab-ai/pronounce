@@ -1,5 +1,29 @@
 # Changelog
 
+## v2.28.0 — 2026-09-01
+
+**Workflow distribution release.** Pronounce can now be installed directly as
+an Agent Skill and used as a zero-dependency GitHub Action that turns developer
+jargon in documentation into a sourced pronunciation glossary.
+
+### Added
+
+- **Pronounce Docs GitHub Action** — scans changed Markdown/MDX, writes a linked
+  pronunciation glossary to the job summary, and exposes `count`, `words`, and
+  ready-to-paste `markdown` outputs. It requires no token, API key, package
+  install, network request, or telemetry.
+- **Weekly source-verification sprint** — a guarded scheduled workflow opens at
+  most one active `good first issue`, with five deterministic unsourced product
+  or tool entries and exact contribution instructions.
+- Action documentation, a self-hosted PR workflow, and tests for matching,
+  Markdown rendering, path confinement, source filtering, and sprint selection.
+
+### Changed
+
+- Added the recommended `license: MIT` metadata to `pronounce-word`, clearing
+  the GitHub Agent Skill publication warning.
+- Added direct `gh skill install` and GitHub Action setup paths to the README.
+
 ## v2.27.0 — 2026-09-01
 
 **Distribution and discovery release.** The 1,903-entry dictionary now has dedicated affective-AI and world-model topic guides, plus a README-safe pronunciation badge on every word page.

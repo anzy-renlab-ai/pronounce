@@ -29,6 +29,13 @@ on:
       - 'tools/make-og.py'
       - 'tools/make-og-all.py'
       - 'tools/test-v2-audio.mjs'
+      - 'tools/test_pronounce_action.mjs'
+      - 'tools/build_source_sprint.py'
+      - 'tools/test_source_sprint.py'
+      - 'action.yml'
+      - 'actions/pronounce-docs/**'
+      - '.github/workflows/pronounce-docs.yml'
+      - '.github/workflows/weekly-source-sprint.yml'
       - 'tools/test_build_v2_data.py'
       - 'tools/test_make_og_all.py'
       - 'tools/build-chrome-dict.py'
@@ -72,6 +79,6 @@ jobs:
       - name: Install Pillow
         run: python -m pip install Pillow
       - name: Test homepage audio
-        run: node --test tools/test-v2-audio.mjs
+        run: node --test tools/test-v2-audio.mjs tools/test_pronounce_action.mjs
       - name: Test generated data and OG state
-        run: python -m unittest tools/test_build_v2_data.py tools/test_make_og_all.py tools/test_chrome_dictionary.py tools/test_build_entry_dates.py tools/test_build_seo.py tools/test_indexnow_submit.py
+        run: python -m unittest tools/test_build_v2_data.py tools/test_make_og_all.py tools/test_chrome_dictionary.py tools/test_build_entry_dates.py tools/test_build_seo.py tools/test_indexnow_submit.py tools/test_source_sprint.py

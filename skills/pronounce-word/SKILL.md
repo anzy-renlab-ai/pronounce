@@ -1,6 +1,7 @@
 ---
 name: pronounce-word
 description: User asks how to pronounce an English word or project/product name ("how to pronounce X", "pronounce X", "X 怎么读", "X 怎么发音", "读一下 X"). Generate audio via the `say-it` CLI so the user actually HEARS the word — three times by default — instead of only writing IPA/syllable hints. The CLI consults a community-maintained pronunciation dictionary (kubectl → "koob-control", GIF → "jif", JSON → "jay-son", ...) and feeds an English-like respelling to the system TTS engine (macOS `say`, Linux `espeak-ng`, or Windows PowerShell) so project names come out the way engineers actually say them. Triggers on a single word or short phrase the user explicitly wants spoken.
+license: MIT
 ---
 
 # pronounce-word — speak the word out loud

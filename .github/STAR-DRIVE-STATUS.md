@@ -11,6 +11,7 @@
 | Watchers | 1 | lifetime |
 | Repository views | 66 / 24 unique | trailing 14 days |
 | Repository clones | 144 / 59 unique | trailing 14 days |
+| Stars gained | **5** | trailing 7 days ending 2026-09-01 |
 
 Top visible referrers in the same traffic snapshot were `pronounce.renlab.ai`
 (16 views / 7 unique), GitHub (6 / 5), Google (6 / 4), and Doubao (1 / 1).
@@ -33,6 +34,20 @@ distribution and reusable project surfaces the strongest current experiment.
 - Updated GitHub discovery metadata from a stale 1,650+ description to an
   evergreen 1,900+ description and added high-intent `ai-agents` / `devops`
   topics in place of generic topics.
+
+## Closed-loop work shipped in v2.28.0
+
+- Published `Pronounce Docs`, a zero-dependency GitHub Action that turns jargon
+  in changed Markdown into a sourced glossary. Every consumer references this
+  repository directly in its workflow, creating an adoption and backlink loop.
+- Cleared the `pronounce-word` Agent Skill publication warning, documented the
+  direct `gh skill install` path, and published it through GitHub's native skill
+  release flow.
+- Added a guarded weekly source sprint: at most one active `good first issue`
+  is open at once, and a new one is created only after contributors finish or
+  close the previous sprint.
+- Added `github-actions` and `agent-skills` discovery topics to match the two new
+  installable surfaces.
 
 ## Distribution status
 

@@ -1,0 +1,47 @@
+name: Weekly pronunciation source sprint
+
+on:
+  schedule:
+    - cron: '17 1 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  open-sprint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+
+      - name: Check for an active sprint
+        id: active
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          count="$(gh issue list --state open --label weekly-source-sprint --limit 1 --json number --jq length)"
+          echo "exists=$([[ "$count" -gt 0 ]] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+
+      - name: Build this week's source sprint
+        if: steps.active.outputs.exists == 'false'
+        id: sprint
+        run: |
+          python tools/build_source_sprint.py \
+            --output "$RUNNER_TEMP/source-sprint.md" \
+            --github-output "$GITHUB_OUTPUT"
+
+      - name: Open one contributor-friendly issue
+        if: steps.active.outputs.exists == 'false'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TITLE: ${{ steps.sprint.outputs.title }}
+        run: |
+          gh issue create \
+            --title "$TITLE" \
+            --body-file "$RUNNER_TEMP/source-sprint.md" \
+            --label "weekly-source-sprint,good first issue,help wanted,dictionary"
+
+      - name: Report active sprint
+        if: steps.active.outputs.exists == 'true'
+        run: echo "An open weekly-source-sprint issue already exists; no duplicate created." >> "$GITHUB_STEP_SUMMARY"

@@ -1,0 +1,37 @@
+name: Pronounce Docs
+description: Generate a sourced pronunciation glossary for developer jargon found in Markdown documentation.
+author: Pronounce contributors
+
+branding:
+  icon: volume-2
+  color: green
+
+inputs:
+  files:
+    description: Comma- or newline-separated Markdown files. Empty means changed Markdown in a pull request, then all Markdown as a fallback.
+    required: false
+    default: ''
+  max-results:
+    description: Maximum number of unique terms in the generated glossary.
+    required: false
+    default: '25'
+  include-unsourced:
+    description: Include dictionary entries that do not yet carry a source URL.
+    required: false
+    default: 'true'
+  fail-on-match:
+    description: Fail the step after producing the glossary when at least one term is found.
+    required: false
+    default: 'false'
+
+outputs:
+  count:
+    description: Number of unique dictionary terms found.
+  words:
+    description: Comma-separated matched terms.
+  markdown:
+    description: Ready-to-paste Markdown pronunciation glossary.
+
+runs:
+  using: node20
+  main: actions/pronounce-docs/index.js

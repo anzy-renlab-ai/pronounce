@@ -934,6 +934,15 @@ class WorkflowClosureTests(unittest.TestCase):
         "integrations/chrome/src/dictionary.json",
         "tools/test_chrome_dictionary.py",
     )
+    ACTION_SOURCE_AND_TEST_PATHS = (
+        "tools/test_pronounce_action.mjs",
+        "tools/build_source_sprint.py",
+        "tools/test_source_sprint.py",
+        "action.yml",
+        "actions/pronounce-docs/**",
+        ".github/workflows/pronounce-docs.yml",
+        ".github/workflows/weekly-source-sprint.yml",
+    )
 
     @staticmethod
     def source(path):
@@ -973,7 +982,9 @@ class WorkflowClosureTests(unittest.TestCase):
             *self.COMMON_SOURCE_AND_TEST_PATHS[2:14],
             "tools/test_indexnow_submit.py",
             "tools/indexnow-submit.sh",
-            *self.COMMON_SOURCE_AND_TEST_PATHS[14:],
+            *self.COMMON_SOURCE_AND_TEST_PATHS[14:18],
+            *self.ACTION_SOURCE_AND_TEST_PATHS,
+            *self.COMMON_SOURCE_AND_TEST_PATHS[18:],
             *self.CHROME_PARITY_PATHS,
             "tools/lint-dict.sh",
             "tools/smoke-test.sh",
@@ -1004,12 +1015,17 @@ class WorkflowClosureTests(unittest.TestCase):
         )
         self.assertIn("python-version: '3.12'", body)
         self.assertIn("run: python -m pip install Pillow", body)
-        self.assertIn("run: node --test tools/test-v2-audio.mjs", body)
+        self.assertIn(
+            "run: node --test tools/test-v2-audio.mjs "
+            "tools/test_pronounce_action.mjs",
+            body,
+        )
         self.assertIn(
             "run: python -m unittest "
             "tools/test_build_v2_data.py tools/test_make_og_all.py "
             "tools/test_chrome_dictionary.py tools/test_build_entry_dates.py "
-            "tools/test_build_seo.py tools/test_indexnow_submit.py",
+            "tools/test_build_seo.py tools/test_indexnow_submit.py "
+            "tools/test_source_sprint.py",
             body,
         )
 
