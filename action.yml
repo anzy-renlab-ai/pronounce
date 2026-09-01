@@ -33,5 +33,5 @@ outputs:
     description: Ready-to-paste Markdown pronunciation glossary.
 
 runs:
-  using: node20
+  using: node24
   main: actions/pronounce-docs/index.js

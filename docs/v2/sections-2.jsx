@@ -240,7 +240,7 @@ function Footer({ registerEgg }) {
         </div>
         <div className="legal">
           <div>
-            sayit · MIT · v2.28.0 · <span className="yr" onClick={() => registerEgg('year')}>© 2026</span>
+            sayit · MIT · v2.28.1 · <span className="yr" onClick={() => registerEgg('year')}>© 2026</span>
           </div>
           <div>built so you'd stop saying "kub-cuttle"</div>
         </div>

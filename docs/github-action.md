@@ -20,11 +20,11 @@ jobs:
   glossary:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
       - id: pronounce
-        uses: anzy-renlab-ai/pronounce@v2.28.0
+        uses: anzy-renlab-ai/pronounce@v2.28.1
       - run: echo "Found ${{ steps.pronounce.outputs.count }} terms"
 ```
 
@@ -52,7 +52,7 @@ To scan explicit files:
 
 ```yaml
 - id: pronounce
-  uses: anzy-renlab-ai/pronounce@v2.28.0
+  uses: anzy-renlab-ai/pronounce@v2.28.1
   with:
     files: |
       README.md

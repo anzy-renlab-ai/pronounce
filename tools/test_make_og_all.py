@@ -1007,7 +1007,7 @@ class WorkflowClosureTests(unittest.TestCase):
         self.assertIn("    runs-on: ubuntu-latest\n", body)
         self.assertRegex(
             body,
-            r"uses: actions/checkout@[0-9a-f]{40}\s+# v4",
+            r"uses: actions/checkout@[0-9a-f]{40}\s+# v7\.0\.1",
         )
         self.assertRegex(
             body,

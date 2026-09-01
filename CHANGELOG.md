@@ -1,5 +1,16 @@
 # Changelog
 
+## v2.28.1 — 2026-09-01
+
+### Fixed
+
+- Moved the JavaScript action runtime from deprecated Node 20 to native Node 24
+  after verifying the first hosted run on GitHub Actions.
+- Updated every repository workflow and public setup example from checkout v4
+  to the current pinned checkout v7.0.1 release, removing forced-runtime
+  migration warnings while retaining immutable action SHAs in maintained
+  workflows.
+
 ## v2.28.0 — 2026-09-01
 
 **Workflow distribution release.** Pronounce can now be installed directly as

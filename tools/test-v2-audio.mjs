@@ -612,8 +612,8 @@ test('v2 product and release fact source contract', async t => {
     );
   });
 
-  await t.test('footer and noindex scaffold identify the v2.28.0 release', () => {
-    assert.match(SECTIONS_2_SOURCE, /sayit · MIT · v2\.28\.0 ·/);
+  await t.test('footer and noindex scaffold identify the v2.28.1 release', () => {
+    assert.match(SECTIONS_2_SOURCE, /sayit · MIT · v2\.28\.1 ·/);
     assert.match(V2_INDEX_SOURCE, /1,903 entries[^"\n]*1,283[^"\n]*cited sources/i);
   });
 

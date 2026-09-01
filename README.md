@@ -198,11 +198,11 @@ Your AI replies with **sound**, not just a phonetic guess. Skill file: [`skills/
 Add a pronunciation glossary to every documentation pull request:
 
 ```yaml
-- uses: actions/checkout@v4
+- uses: actions/checkout@v7.0.1
   with:
     fetch-depth: 0
 - id: pronounce
-  uses: anzy-renlab-ai/pronounce@v2.28.0
+  uses: anzy-renlab-ai/pronounce@v2.28.1
 ```
 
 `Pronounce Docs` scans changed Markdown/MDX and writes a table containing each
