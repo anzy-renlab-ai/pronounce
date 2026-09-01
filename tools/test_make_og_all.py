@@ -1011,7 +1011,7 @@ class WorkflowClosureTests(unittest.TestCase):
         )
         self.assertRegex(
             body,
-            r"uses: actions/setup-python@[0-9a-f]{40}\s+# v5",
+            r"uses: actions/setup-python@[0-9a-f]{40}\s+# v7\.0\.0",
         )
         self.assertIn("python-version: '3.12'", body)
         self.assertIn("run: python -m pip install Pillow", body)
