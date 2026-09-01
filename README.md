@@ -7,8 +7,8 @@
 <a href="https://pronounce.renlab.ai"><img src="https://img.shields.io/badge/live-pronounce.renlab.ai-7adfbb?logo=safari&logoColor=white" alt="Live site"></a>
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
 <a href="https://pronounce.renlab.ai/browse"><img src="https://img.shields.io/badge/dictionary-1903%20entries-8fd694" alt="Entries"></a>
-<a href="https://marketplace.visualstudio.com/items?itemName=sayit.pronounce"><img src="https://img.shields.io/visual-studio-marketplace/v/sayit.pronounce?label=VS%20Code&color=007ACC&logo=visualstudiocode" alt="VS Code Marketplace"></a>
-<a href="https://open-vsx.org/extension/sayit/pronounce"><img src="https://img.shields.io/open-vsx/v/sayit/pronounce?label=Open%20VSX&color=8fd694" alt="Open VSX"></a>
+<a href="https://marketplace.visualstudio.com/items?itemName=sayit.pronounce"><img src="https://img.shields.io/badge/VS_Code_Marketplace-install-007ACC?logo=visualstudiocode" alt="Install from VS Code Marketplace"></a>
+<a href="https://open-vsx.org/extension/sayit/pronounce"><img src="https://img.shields.io/badge/Open_VSX-install-8fd694" alt="Install from Open VSX"></a>
 </p>
 
 <p align="center">
@@ -186,7 +186,7 @@ Your AI replies with **sound**, not just a phonetic guess. Skill file: [`skills/
 
 ## VS Code extension
 
-[![Open VSX Version](https://img.shields.io/open-vsx/v/sayit/pronounce?label=Open%20VSX&color=8fd694)](https://open-vsx.org/extension/sayit/pronounce) [![Open VSX Downloads](https://img.shields.io/open-vsx/dt/sayit/pronounce?label=installs)](https://open-vsx.org/extension/sayit/pronounce)
+[![Install from VS Code Marketplace](https://img.shields.io/badge/VS_Code_Marketplace-install-007ACC?logo=visualstudiocode)](https://marketplace.visualstudio.com/items?itemName=sayit.pronounce) [![Install from Open VSX](https://img.shields.io/badge/Open_VSX-install-8fd694)](https://open-vsx.org/extension/sayit/pronounce)
 
 ![Pronounce demo — kubectl, YAML, Ghostty, wagmi](integrations/vscode/media/demo.gif)
 

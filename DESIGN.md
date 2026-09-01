@@ -1,6 +1,6 @@
 # say-it — Design
 
-Status: **v2.26.0 shipped** · Last reviewed: 2026-09-01
+Status: **v2.27.0 shipped** · Last reviewed: 2026-09-01
 
 This document describes the product that is currently shipped. Future ideas live in
 `IDEAS.md`; they are not part of the runtime contract below.
@@ -62,7 +62,7 @@ Every row has a confidence value:
 - `community-consensus` — widespread usage without a single authoritative citation.
 - `contested` — multiple readings genuinely compete in developer usage.
 
-Source URLs are optional by design. The v2.26.0 corpus has 1,903 entries and 1,283
+Source URLs are optional by design. The v2.27.0 corpus has 1,903 entries and 1,283
 with a citable source. Empty source fields stay empty rather than being filled with
 weak or fabricated citations.
 

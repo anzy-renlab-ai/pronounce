@@ -1,9 +1,7 @@
 # Pronounce — VS Code
 
-[![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/sayit.pronounce?label=VS%20Code&color=007ACC&logo=visualstudiocode)](https://marketplace.visualstudio.com/items?itemName=sayit.pronounce)
-[![VS Code Installs](https://img.shields.io/visual-studio-marketplace/i/sayit.pronounce?label=installs&color=007ACC)](https://marketplace.visualstudio.com/items?itemName=sayit.pronounce)
-[![Open VSX Version](https://img.shields.io/open-vsx/v/sayit/pronounce?label=Open%20VSX&color=8fd694)](https://open-vsx.org/extension/sayit/pronounce)
-[![Open VSX Downloads](https://img.shields.io/open-vsx/dt/sayit/pronounce?label=installs&color=8fd694)](https://open-vsx.org/extension/sayit/pronounce)
+[![Install from VS Code Marketplace](https://img.shields.io/badge/VS_Code_Marketplace-install-007ACC?logo=visualstudiocode)](https://marketplace.visualstudio.com/items?itemName=sayit.pronounce)
+[![Install from Open VSX](https://img.shields.io/badge/Open_VSX-install-8fd694)](https://open-vsx.org/extension/sayit/pronounce)
 [![GitHub stars](https://img.shields.io/github/stars/anzy-renlab-ai/pronounce?style=flat&logo=github)](https://github.com/anzy-renlab-ai/pronounce)
 
 🌐 **English** · [🇨🇳 中文说明](https://pronounce.renlab.ai/zh.html) — the extension UI auto-switches to Chinese when VS Code's display language is `zh-cn`.

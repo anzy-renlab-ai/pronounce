@@ -1,5 +1,22 @@
 # Changelog
 
+## v2.27.0 — 2026-09-01
+
+**Distribution and discovery release.** The 1,903-entry dictionary now has dedicated affective-AI and world-model topic guides, plus a README-safe pronunciation badge on every word page.
+
+### Added
+
+- **Affective AI pronunciation collection** — 16 terms spanning persona, affect, prosody, emotion dimensions, interoception, and embodied cognition.
+- **World-model pronunciation collection** — 25 model, architecture, simulator, and embodied-agent terms including Genie, Marble, DreamerV3, JEPA, DINO-WM, MuJoCo, and CARLA.
+- **Copyable Markdown pronunciation badges** on every English word page, giving project maintainers a durable way to link readers back to the audio and cited entry from a GitHub README.
+
+### Changed
+
+- Replaced retired dynamic VS Code Marketplace and Open VSX Shields endpoints with stable install badges and direct listing links.
+- Made per-word metadata truncation explicitly UTF-8-aware, preventing byte-split HTML when a build runs under `LC_ALL=C`.
+- Updated the MCP package and registry metadata to v0.1.2, refreshed the documented corpus size to 1,900+, and made the published PyPI install the primary path.
+- Refreshed the public growth baseline and distribution status so follow-up work can be measured against 39 stars and current GitHub traffic.
+
 ## v2.26.0 — 2026-09-01
 
 **Persona, affective AI, and embodied world-model vocabulary — 15 sourced additions.** The dictionary now has 1,903 entries, 1,283 with a citable source; 108 are creator-clarified and 175 are contested.

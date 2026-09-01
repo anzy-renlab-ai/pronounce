@@ -773,6 +773,7 @@ class RepositoryProductFactTests(unittest.TestCase):
                 "&amp;",
                 "café Fréchet Jalapeño",
                 "IPA /ˈdʒeɪsən/ + 𝕏",
+                "a" * 299 + "é" + " must be truncated without splitting UTF-8",
                 "/ % + # = ?",
             )
         )
@@ -807,12 +808,13 @@ class RepositoryProductFactTests(unittest.TestCase):
         self.assertEqual(run_helper("html"), html_expected)
         self.assertEqual(run_helper("json"), json_expected)
         self.assertEqual(run_helper("url"), url_expected)
+        self.assertEqual(run_helper("truncate-300"), [value[:300] for value in values])
 
     def test_release_heading_and_historical_promo_asset_are_stable(self):
         changelog = self.source("CHANGELOG.md")
         self.assertTrue(
             changelog.startswith(
-                "# Changelog\n\n## v2.26.0 — 2026-09-01\n"
+                "# Changelog\n\n## v2.27.0 — 2026-09-01\n"
             )
         )
         self.assertIn("## v2.23.0 — 2026-07-17", changelog)
@@ -827,6 +829,25 @@ class RepositoryProductFactTests(unittest.TestCase):
             "releases/download/v2.5.0/promo.mp4",
             self.source("tools/build-site.sh"),
         )
+
+    def test_word_pages_offer_readme_safe_badges(self):
+        generator = self.source("tools/build-site.sh")
+        self.assertIn("Add a pronunciation badge to your README", generator)
+        self.assertIn("$SITE_URL/badge/$slug.svg", generator)
+        self.assertIn("$SITE_URL/word/$slug", generator)
+        self.assertIn("Markdown badge copied", generator)
+
+    def test_marketplace_badges_use_live_static_shields_endpoints(self):
+        readmes = "\n".join(
+            (self.source("README.md"), self.source("integrations/vscode/README.md"))
+        )
+        for retired in (
+            "img.shields.io/visual-studio-marketplace/",
+            "img.shields.io/open-vsx/",
+        ):
+            self.assertNotIn(retired, readmes)
+        self.assertIn("VS_Code_Marketplace-install", readmes)
+        self.assertIn("Open_VSX-install", readmes)
 
 
 if __name__ == "__main__":

@@ -84,6 +84,16 @@ jsonesc() {
   printf '%s' "$value"
 }
 
+# Bash string slicing follows the current process locale. CI and agent shells
+# sometimes export LC_ALL=C, where slicing counts UTF-8 bytes and can cut a
+# multibyte character in half. Run character-limited text in the same verified
+# UTF-8 locale used by the canonical slugger.
+truncate_chars() (
+  export LC_ALL="$SLUG_LOCALE"
+  local value="$1" limit="$2"
+  printf '%s' "${value:0:limit}"
+)
+
 # Match urllib.parse.quote() exactly: percent-encode UTF-8 bytes while leaving
 # RFC 3986 unreserved characters and "/" safe. LC_ALL=C makes Bash 3.2 slice
 # bytes; the signed-byte correction prevents é from becoming %FFFFFFC3.
@@ -132,15 +142,20 @@ if [[ "${1:-}" == "--feed-timestamp-for-test" ]]; then
 fi
 
 if [[ "${1:-}" == "--helper-stream-for-test" ]]; then
-  [[ $# -eq 2 ]] || { echo "usage: build-site.sh --helper-stream-for-test <html|json|url>" >&2; exit 2; }
+  [[ $# -eq 2 ]] || { echo "usage: build-site.sh --helper-stream-for-test <html|json|url|truncate-300>" >&2; exit 2; }
   case "$2" in
     html) helper=htmlesc ;;
     json) helper=jsonesc ;;
     url) helper=urlencode ;;
+    truncate-300) helper=truncate_chars_300 ;;
     *) echo "build-site: unknown helper: $2" >&2; exit 2 ;;
   esac
   while IFS= read -r -d '' value; do
-    "$helper" "$value"
+    if [[ "$helper" == "truncate_chars_300" ]]; then
+      truncate_chars "$value" 300
+    else
+      "$helper" "$value"
+    fi
     printf '\0'
   done
   exit 0
@@ -1807,7 +1822,7 @@ while IFS="$SEP" read -r word ipa resp alt_ipa alt_resp src_url src_label cat co
   # Meta description (under 160 chars where possible)
   meta_desc="$word is pronounced \"$resp\" ($ipa)."
   [[ -n "$notes" ]] && meta_desc="$meta_desc $notes"
-  meta_desc="$(htmlesc "${meta_desc:0:300}")"
+  meta_desc="$(htmlesc "$(truncate_chars "$meta_desc" 300)")"
 
   cat > "$fn" <<HTML
 <!DOCTYPE html>
@@ -1959,13 +1974,25 @@ $prev_next_html
 
     <section class="related embed-section" style="margin-top: 36px;">
       <h2>Embed this player</h2>
-      <p style="color: var(--muted-strong); font-size: 14.5px;">Drop this mini-player into a blog post, doc, or README. Add <code>?theme=light</code> or <code>?theme=auto</code> to match your page.</p>
+      <p style="color: var(--muted-strong); font-size: 14.5px;">Drop this mini-player into a blog post or documentation page. Add <code>?theme=light</code> or <code>?theme=auto</code> to match your page.</p>
       <div style="margin: 14px 0;">
         <iframe src="$SITE_URL/embed/$slug" width="380" height="74" style="border:0;border-radius:12px;max-width:100%;" loading="lazy" title="Pronounce $word_esc"></iframe>
       </div>
       <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
         <input id="embed-code" readonly value="&lt;iframe src=&quot;$SITE_URL/embed/$slug&quot; width=&quot;380&quot; height=&quot;74&quot; style=&quot;border:0;border-radius:12px&quot; loading=&quot;lazy&quot; title=&quot;Pronounce $word_esc&quot;&gt;&lt;/iframe&gt;" style="flex:1; min-width:240px; padding:9px 12px; font-family:ui-monospace,monospace; font-size:12.5px; border:1px solid var(--border,#333); border-radius:8px; background:var(--bg-elev,#1c1c20); color:var(--fg,#eee);">
         <button class="btn" onclick="var i=document.getElementById('embed-code'); i.select(); copyToClipboard(i.value,'Embed code copied')">Copy</button>
+      </div>
+    </section>
+
+    <section class="related embed-section" style="margin-top: 24px;">
+      <h2>Add a pronunciation badge to your README</h2>
+      <p style="color: var(--muted-strong); font-size: 14.5px;">GitHub READMEs do not render iframes. Use this linked Markdown badge instead so readers can see the pronunciation and click through to hear it.</p>
+      <div style="margin: 14px 0;">
+        <a href="$SITE_URL/word/$slug"><img src="$SITE_URL/badge/$slug.svg" alt="Pronounce $word_esc" loading="lazy"></a>
+      </div>
+      <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+        <input id="badge-code" readonly value="[![Pronunciation badge]($SITE_URL/badge/$slug.svg)]($SITE_URL/word/$slug)" style="flex:1; min-width:240px; padding:9px 12px; font-family:ui-monospace,monospace; font-size:12.5px; border:1px solid var(--border,#333); border-radius:8px; background:var(--bg-elev,#1c1c20); color:var(--fg,#eee);">
+        <button class="btn" onclick="var i=document.getElementById('badge-code'); i.select(); copyToClipboard(i.value,'Markdown badge copied')">Copy Markdown</button>
       </div>
     </section>
 

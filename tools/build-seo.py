@@ -300,6 +300,45 @@ COLLECTIONS = [
             "perplexity", "exa", "tavily", "kagi", "firecrawl", "browserbase",
         ],
     },
+    {
+        "slug": "affective-ai",
+        "title": "Affective AI and Emotion Vocabulary Pronunciation",
+        "h1": "How to pronounce affective AI terms",
+        "desc": "Persona, affect, valence, arousal, interoception, prosody, and other emotion-aware AI terms with audio, IPA, and sources.",
+        "intro": (
+            "Emotion-aware agents combine vocabulary from psychology, speech, "
+            "neuroscience, and embodied cognition. Familiar-looking words such "
+            "as affect and valence change meaning or stress in technical use, "
+            "while interoception and autopoiesis are easy to misread. This "
+            "collection keeps the core terms, audio, IPA, and citations together."
+        ),
+        "words": [
+            "persona", "affect", "affective", "anthropomorphism", "prosody",
+            "valence", "arousal", "interoception", "alexithymia", "affordance",
+            "homeostasis", "enactivism", "autopoiesis", "embodied",
+            "reward-model", "sycophancy",
+        ],
+    },
+    {
+        "slug": "world-models",
+        "title": "AI World Model Pronunciation Guide",
+        "h1": "How to pronounce world models and embodied AI systems",
+        "desc": "Genie, Marble, DreamerV3, JEPA, DINO-WM, MuJoCo, CARLA, and world-model vocabulary with audio, IPA, and sources.",
+        "intro": (
+            "World-model research spans learned simulators, predictive "
+            "architectures, robotics environments, and embodied agents. The "
+            "field mixes acronyms such as JEPA and RSSM with project names such "
+            "as Genie, Marble, and MuJoCo. Use this guide before a paper club, "
+            "podcast, demo, or research talk."
+        ),
+        "words": [
+            "Genie", "Genie 2", "Genie 3", "Marble", "dreamer", "dreamerv3",
+            "jepa", "I-JEPA", "V-JEPA", "V-JEPA 2", "A-JEPA", "MC-JEPA",
+            "Point-JEPA", "DINO-WM", "IRIS", "TWM", "rssm", "MuJoCo",
+            "Habitat", "Gazebo", "Webots", "CARLA", "Omniverse", "embodied",
+            "affordance",
+        ],
+    },
 ]
 
 

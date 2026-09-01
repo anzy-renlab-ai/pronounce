@@ -79,6 +79,27 @@ class BuildSeoTestCase(unittest.TestCase):
         return value
 
 
+class EditorialCollectionTests(BuildSeoTestCase):
+    def test_affective_ai_and_world_model_collections_resolve_every_word(self):
+        _entries, by_slug = self.module.load_entries()
+        collections = {item["slug"]: item for item in self.module.COLLECTIONS}
+
+        self.assertIn("affective-ai", collections)
+        self.assertIn("world-models", collections)
+        for collection_slug in ("affective-ai", "world-models"):
+            with self.subTest(collection=collection_slug):
+                missing = [
+                    word
+                    for word in collections[collection_slug]["words"]
+                    if self.module.slugify(word) not in by_slug
+                ]
+                self.assertEqual(missing, [])
+
+        self.assertIn("persona", collections["affective-ai"]["words"])
+        self.assertIn("Genie 3", collections["world-models"]["words"])
+        self.assertIn("Marble", collections["world-models"]["words"])
+
+
 class EntryDateTests(BuildSeoTestCase):
     def setUp(self):
         super().setUp()

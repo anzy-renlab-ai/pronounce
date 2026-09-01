@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://pronounce.renlab.ai/collection</loc><lastmod>2026-08-14</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://pronounce.renlab.ai/collection</loc><lastmod>2026-09-01</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
   <url><loc>https://pronounce.renlab.ai/collection/ai-startups</loc><lastmod>2026-08-14</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://pronounce.renlab.ai/collection/llm-models</loc><lastmod>2026-06-24</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://pronounce.renlab.ai/collection/chinese-ai-labs</loc><lastmod>2026-06-24</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
@@ -11,6 +11,8 @@
   <url><loc>https://pronounce.renlab.ai/collection/vector-databases</loc><lastmod>2026-05-16</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://pronounce.renlab.ai/collection/ai-frameworks</loc><lastmod>2026-05-17</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://pronounce.renlab.ai/collection/ai-search</loc><lastmod>2026-05-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pronounce.renlab.ai/collection/affective-ai</loc><lastmod>2026-09-01</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pronounce.renlab.ai/collection/world-models</loc><lastmod>2026-09-01</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://pronounce.renlab.ai/compare</loc><lastmod>2026-06-24</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
   <url><loc>https://pronounce.renlab.ai/compare/groq-vs-grok</loc><lastmod>2026-05-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://pronounce.renlab.ai/compare/gemma-vs-gemini</loc><lastmod>2026-05-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>

@@ -1,26 +1,26 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
   "name": "io.github.anzy-renlab-ai/pronounce",
-  "description": "How engineers actually pronounce developer jargon — 1903+ confidence-tagged entries (kubectl, nginx, GIF).",
+  "description": "How engineers pronounce developer jargon — 1,903 confidence-tagged entries with citations.",
   "repository": {
     "url": "https://github.com/anzy-renlab-ai/pronounce",
     "source": "github"
   },
-  "version": "0.1.1",
+  "version": "0.1.2",
   "websiteUrl": "https://pronounce.renlab.ai",
   "packages": [
     {
       "registryType": "pypi",
       "registryBaseUrl": "https://pypi.org",
       "identifier": "pronounce-mcp",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "transport": {
         "type": "stdio"
       }
     },
     {
       "registryType": "oci",
-      "identifier": "ghcr.io/anzy-renlab-ai/pronounce-mcp:0.1.1",
+      "identifier": "ghcr.io/anzy-renlab-ai/pronounce-mcp:0.1.2",
       "transport": {
         "type": "stdio"
       }

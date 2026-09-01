@@ -17,23 +17,6 @@ When a user asks an LLM "how do you pronounce kubectl?", the client invokes `pro
 | `search_pronunciations(query, limit)` | Find entries by partial match on word or category. |
 | `list_pronunciations(category)` | List all entries, optionally filtered by category (`product`, `cli-tool`, `acronym`, ...). |
 
-## Install via npm / npx (coming to npm — package ready in `mcp-server/npm/`)
-
-A zero-dependency Node (>= 18) implementation of the same server lives in [`mcp-server/npm/`](npm/). Once published it will be a one-liner in any MCP client:
-
-```json
-{
-  "mcpServers": {
-    "pronounce": {
-      "command": "npx",
-      "args": ["-y", "pronounce-mcp"]
-    }
-  }
-}
-```
-
-Until it lands on npm, run it straight from a checkout: `node mcp-server/npm/index.js`.
-
 ## Install (Claude Desktop)
 
 ```jsonc
@@ -68,6 +51,10 @@ Restart Claude Desktop. Ask any pronunciation question:
 
 Claude calls `pronounce("kubectl")` → gets `{respelling_us: "koob control", ipa: "/ˈkuːb kənˌtroʊl/", source_label: "Kelsey Hightower (KubeCon)", url: "https://pronounce.renlab.ai/word/kubectl", ...}` → answers with the canonical reading plus the citation.
 
+### Run the Node implementation from source
+
+A zero-dependency Node (>= 18) implementation of the same server lives in [`npm/`](npm/). It is not currently published to npm, so run it from a checkout with `node mcp-server/npm/index.js`. Use the PyPI package above for a registry-backed one-line install.
+
 ## Why this is useful
 
 LLMs are bad at pronunciation by default. They've seen the spelling and the IPA, but they confabulate when asked about contested words (GIF? jif or gif?) or project names with non-obvious readings (kubectl is "koob-control", not "kub-cuttle"; Pinia is "pee-nya"; Vite is "veet").
@@ -76,7 +63,7 @@ This MCP server gives the LLM a deterministic source: the dictionary is communit
 
 ## Source data
 
-The dictionary is at <https://github.com/anzy-renlab-ai/pronounce/blob/main/data/pronunciations.tsv> — 1,600+ entries (and growing) across cloud / DevOps, frontend & backend frameworks, AI/ML platforms and research, databases, languages, editors, companies, programmer jargon, and acronyms.
+The dictionary is at <https://github.com/anzy-renlab-ai/pronounce/blob/main/data/pronunciations.tsv> — 1,900+ entries (and growing) across cloud / DevOps, frontend & backend frameworks, AI/ML platforms and research, databases, languages, editors, companies, programmer jargon, and acronyms.
 
 Each entry has 10 columns: `word | ipa | respelling_us | alt_ipa | alt_respelling_us | source_url | source_label | category | confidence | notes`.
 
