@@ -1,0 +1,15 @@
+{
+  "word": "Astra",
+  "ipa": "/ˈæstrə/",
+  "respelling_us": "astruh",
+  "alt_ipa": ["/ˈɑːstrə/"],
+  "alt_respelling_us": ["ah strah"],
+  "source_url": "https://openai.com/index/gpt-6-astra/",
+  "source_label": "OpenAI GPT-6 Astra announcement",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "OpenAI's GPT-6 flagship family (Sep 2026); Latin for star, anglicized AS-truh like astral, with the Latin AH-strah as the alternate.",
+  "audio_url": "https://pronounce.renlab.ai/audio/astra.mp3",
+  "url": "https://pronounce.renlab.ai/word/astra",
+  "date_modified": "2026-11-06"
+}

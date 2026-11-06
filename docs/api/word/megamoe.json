@@ -1,0 +1,15 @@
+{
+  "word": "MegaMoE",
+  "ipa": "/ˈmɛɡə ˌɛm oʊ ˈiː/",
+  "respelling_us": "MEG uh em oh EE",
+  "alt_ipa": ["/ˈmɛɡə moʊ/"],
+  "alt_respelling_us": ["MEG uh moh"],
+  "source_url": "https://humansand.ai/blog/faster-than-light-nvfp4-decode",
+  "source_label": "humans& blog — Faster-than-light NVFP4 decode",
+  "category": "cs-term",
+  "confidence": "contested",
+  "notes": "Distributed MoE decode kernel from humans& (in FlashInfer and SGLang); mega + MoE, inheriting MoE's spelled-out vs \"moh\" split.",
+  "audio_url": "https://pronounce.renlab.ai/audio/megamoe.mp3",
+  "url": "https://pronounce.renlab.ai/word/megamoe",
+  "date_modified": "2026-11-06"
+}

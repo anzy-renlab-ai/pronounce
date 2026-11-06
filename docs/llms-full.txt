@@ -1905,3 +1905,20 @@ enactivism | /ɪˈnæktɪvɪzəm/ | ih NAK tih viz um | cs-term | community-cons
 autopoiesis | /ˌɔːtoʊpɔɪˈiːsɪs/ | aw toh poy EE sis | cs-term | community-consensus | https://en.wiktionary.org/wiki/autopoiesis
 Genie 3 | /ˈdʒiːni ˈθriː/ | jee nee three | product | community-consensus | https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/
 Marble | /ˈmɑːrbəl/ | mar bul | product | community-consensus | https://www.worldlabs.ai/blog/marble-world-model
+humans& | /ˈhjuːmənz ænd/ | humans and | product | creator-clarified | https://humansand.ai
+Boba | /ˈboʊbə/ | boh buh | product | community-consensus | https://boba.humansand.ai/blog/
+&Tutor | /ˈæmpərˌsænd ˈtuːtər/ | ampersand tutor | product | creator-clarified | https://tutor.humansand.ai/blog/
+Persimmon | /pərˈsɪmən/ | per sim uhn | product | community-consensus | https://persimmon.humansand.ai/blog/persimmon.html
+Ampersand | /ˈæmpərˌsænd/ | am per sand | product | community-consensus | https://ampersand.humansand.ai/blog/
+TutorMoments | /ˈtuːtər ˌmoʊmənts/ | tutor moments | product | community-consensus | https://tutormoments.allen.ai/
+MegaMoE | /ˈmɛɡə ˌɛm oʊ ˈiː/ | MEG uh em oh EE | cs-term | contested | https://humansand.ai/blog/faster-than-light-nvfp4-decode
+4-bitter Lesson | /ˌfɔːrˈbɪtər ˈlɛsən/ | four bitter lesson | cs-term | creator-clarified | https://humansand.ai/blog/nvfp4-rl.html
+Multi-User Turing Test | /ˌmʌlti ˌjuːzər ˈtʊrɪŋ ˌtɛst/ | mul tee yoo zer touring test | cs-term | community-consensus | https://persimmon.humansand.ai/blog/persimmon.html
+NVFP4 | /ˌɛn viː ɛf piː ˈfɔr/ | N V F P four | acronym | community-consensus | https://developer.nvidia.com/blog/nvfp4-trains-with-precision-of-16-bit-and-speed-and-efficiency-of-4-bit/
+Astra | /ˈæstrə/ | astruh | product | community-consensus | https://openai.com/index/gpt-6-astra/
+DeepInfer | /ˈdiːp ɪnˌfɜːr/ | deep infer | project | community-consensus | https://github.com/deepseek-ai/DeepInfer
+Jev | /dʒɛv/ | jev | product | creator-clarified | https://typesafe.ai/blog/introducing-system-one-models-and-jev
+Postman | /ˈpoʊstˌmən/ | post man | product | community-consensus | https://www.postman.com/
+Miles | /maɪlz/ | miles | project | community-consensus | https://github.com/radixark/miles
+CooperBench | /ˈkuːpər ˌbɛntʃ/ | cooper bench | project | community-consensus | https://cooperbench.com/
+Four Over Six | /fɔːr ˈoʊvər ˌsɪks/ | four over six | cs-term | community-consensus | https://arxiv.org/abs/2512.02010

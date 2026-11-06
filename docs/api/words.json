@@ -1901,5 +1901,22 @@
   {"word": "enactivism", "slug": "enactivism", "category": "cs-term", "confidence": "community-consensus"},
   {"word": "autopoiesis", "slug": "autopoiesis", "category": "cs-term", "confidence": "community-consensus"},
   {"word": "Genie 3", "slug": "genie-3", "category": "product", "confidence": "community-consensus"},
-  {"word": "Marble", "slug": "marble", "category": "product", "confidence": "community-consensus"}
+  {"word": "Marble", "slug": "marble", "category": "product", "confidence": "community-consensus"},
+  {"word": "humans&", "slug": "humans-", "category": "product", "confidence": "creator-clarified"},
+  {"word": "Boba", "slug": "boba", "category": "product", "confidence": "community-consensus"},
+  {"word": "&Tutor", "slug": "-tutor", "category": "product", "confidence": "creator-clarified"},
+  {"word": "Persimmon", "slug": "persimmon", "category": "product", "confidence": "community-consensus"},
+  {"word": "Ampersand", "slug": "ampersand", "category": "product", "confidence": "community-consensus"},
+  {"word": "TutorMoments", "slug": "tutormoments", "category": "product", "confidence": "community-consensus"},
+  {"word": "MegaMoE", "slug": "megamoe", "category": "cs-term", "confidence": "contested"},
+  {"word": "4-bitter Lesson", "slug": "4-bitter-lesson", "category": "cs-term", "confidence": "creator-clarified"},
+  {"word": "Multi-User Turing Test", "slug": "multi-user-turing-test", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "NVFP4", "slug": "nvfp4", "category": "acronym", "confidence": "community-consensus"},
+  {"word": "Astra", "slug": "astra", "category": "product", "confidence": "community-consensus"},
+  {"word": "DeepInfer", "slug": "deepinfer", "category": "project", "confidence": "community-consensus"},
+  {"word": "Jev", "slug": "jev", "category": "product", "confidence": "creator-clarified"},
+  {"word": "Postman", "slug": "postman", "category": "product", "confidence": "community-consensus"},
+  {"word": "Miles", "slug": "miles", "category": "project", "confidence": "community-consensus"},
+  {"word": "CooperBench", "slug": "cooperbench", "category": "project", "confidence": "community-consensus"},
+  {"word": "Four Over Six", "slug": "four-over-six", "category": "cs-term", "confidence": "community-consensus"}
 ]

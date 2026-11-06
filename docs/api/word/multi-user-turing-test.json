@@ -1,0 +1,15 @@
+{
+  "word": "Multi-User Turing Test",
+  "ipa": "/ˌmʌlti ˌjuːzər ˈtʊrɪŋ ˌtɛst/",
+  "respelling_us": "mul tee yoo zer touring test",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://persimmon.humansand.ai/blog/persimmon.html",
+  "source_label": "humans& Persimmon blog — Multi-User Turing Test",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "humans&'s user-model eval where an LLM judge tells all-human group chat from simulated; Turing as TOOR-ing.",
+  "audio_url": "https://pronounce.renlab.ai/audio/multi-user-turing-test.mp3",
+  "url": "https://pronounce.renlab.ai/word/multi-user-turing-test",
+  "date_modified": "2026-11-06"
+}

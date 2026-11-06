@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://pronounce.renlab.ai/</loc><lastmod>2026-09-01</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://pronounce.renlab.ai/zh</loc><lastmod>2026-09-01</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://pronounce.renlab.ai/browse</loc><lastmod>2026-09-01</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://pronounce.renlab.ai/scoreboard</loc><lastmod>2026-09-01</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://pronounce.renlab.ai/quiz</loc><lastmod>2026-09-01</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://pronounce.renlab.ai/hall-of-shame</loc><lastmod>2026-09-01</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://pronounce.renlab.ai/receipts</loc><lastmod>2026-09-01</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://pronounce.renlab.ai/faq</loc><lastmod>2026-09-01</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://pronounce.renlab.ai/stats</loc><lastmod>2026-09-01</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://pronounce.renlab.ai/about</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://pronounce.renlab.ai/daily</loc><lastmod>2026-09-01</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pronounce.renlab.ai/</loc><lastmod>2026-11-06</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://pronounce.renlab.ai/zh</loc><lastmod>2026-11-06</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pronounce.renlab.ai/browse</loc><lastmod>2026-11-06</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pronounce.renlab.ai/scoreboard</loc><lastmod>2026-11-06</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pronounce.renlab.ai/quiz</loc><lastmod>2026-11-06</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pronounce.renlab.ai/hall-of-shame</loc><lastmod>2026-11-06</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pronounce.renlab.ai/receipts</loc><lastmod>2026-11-06</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pronounce.renlab.ai/faq</loc><lastmod>2026-11-06</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pronounce.renlab.ai/stats</loc><lastmod>2026-11-06</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pronounce.renlab.ai/about</loc><lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily</loc><lastmod>2026-11-06</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
   <url><loc>https://pronounce.renlab.ai/word/kubectl</loc><lastmod>2026-05-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pronounce.renlab.ai/word/nginx</loc><lastmod>2026-05-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pronounce.renlab.ai/word/gif</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -1914,6 +1914,23 @@
   <url><loc>https://pronounce.renlab.ai/word/autopoiesis</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pronounce.renlab.ai/word/genie-3</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pronounce.renlab.ai/word/marble</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pronounce.renlab.ai/word/humans-</loc><lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pronounce.renlab.ai/word/boba</loc><lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pronounce.renlab.ai/word/-tutor</loc><lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pronounce.renlab.ai/word/persimmon</loc><lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pronounce.renlab.ai/word/ampersand</loc><lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pronounce.renlab.ai/word/tutormoments</loc><lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pronounce.renlab.ai/word/megamoe</loc><lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pronounce.renlab.ai/word/4-bitter-lesson</loc><lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pronounce.renlab.ai/word/multi-user-turing-test</loc><lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pronounce.renlab.ai/word/nvfp4</loc><lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pronounce.renlab.ai/word/astra</loc><lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pronounce.renlab.ai/word/deepinfer</loc><lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pronounce.renlab.ai/word/jev</loc><lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pronounce.renlab.ai/word/postman</loc><lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pronounce.renlab.ai/word/miles</loc><lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pronounce.renlab.ai/word/cooperbench</loc><lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pronounce.renlab.ai/word/four-over-six</loc><lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pronounce.renlab.ai/daily/2026-03-17</loc><lastmod>2026-03-17</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://pronounce.renlab.ai/daily/2026-03-18</loc><lastmod>2026-03-18</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://pronounce.renlab.ai/daily/2026-03-19</loc><lastmod>2026-03-19</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
@@ -2083,4 +2100,65 @@
   <url><loc>https://pronounce.renlab.ai/daily/2026-08-30</loc><lastmod>2026-08-30</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://pronounce.renlab.ai/daily/2026-08-31</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://pronounce.renlab.ai/daily/2026-09-01</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-09-07</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-09-08</loc><lastmod>2026-09-08</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-09-09</loc><lastmod>2026-09-09</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-09-10</loc><lastmod>2026-09-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-09-11</loc><lastmod>2026-09-11</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-09-12</loc><lastmod>2026-09-12</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-09-13</loc><lastmod>2026-09-13</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-09-14</loc><lastmod>2026-09-14</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-09-15</loc><lastmod>2026-09-15</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-09-16</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-09-17</loc><lastmod>2026-09-17</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-09-18</loc><lastmod>2026-09-18</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-09-19</loc><lastmod>2026-09-19</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-09-20</loc><lastmod>2026-09-20</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-09-21</loc><lastmod>2026-09-21</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-09-22</loc><lastmod>2026-09-22</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-09-23</loc><lastmod>2026-09-23</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-09-24</loc><lastmod>2026-09-24</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-09-25</loc><lastmod>2026-09-25</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-09-26</loc><lastmod>2026-09-26</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-09-27</loc><lastmod>2026-09-27</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-09-28</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-09-29</loc><lastmod>2026-09-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-09-30</loc><lastmod>2026-09-30</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-10-01</loc><lastmod>2026-10-01</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-10-02</loc><lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-10-03</loc><lastmod>2026-10-03</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-10-04</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-10-05</loc><lastmod>2026-10-05</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-10-06</loc><lastmod>2026-10-06</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-10-07</loc><lastmod>2026-10-07</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-10-08</loc><lastmod>2026-10-08</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-10-09</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-10-10</loc><lastmod>2026-10-10</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-10-11</loc><lastmod>2026-10-11</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-10-12</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-10-13</loc><lastmod>2026-10-13</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-10-14</loc><lastmod>2026-10-14</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-10-15</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-10-16</loc><lastmod>2026-10-16</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-10-17</loc><lastmod>2026-10-17</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-10-18</loc><lastmod>2026-10-18</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-10-19</loc><lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-10-20</loc><lastmod>2026-10-20</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-10-21</loc><lastmod>2026-10-21</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-10-22</loc><lastmod>2026-10-22</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-10-23</loc><lastmod>2026-10-23</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-10-24</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-10-25</loc><lastmod>2026-10-25</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-10-26</loc><lastmod>2026-10-26</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-10-27</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-10-28</loc><lastmod>2026-10-28</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-10-29</loc><lastmod>2026-10-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-10-30</loc><lastmod>2026-10-30</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-10-31</loc><lastmod>2026-10-31</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-11-01</loc><lastmod>2026-11-01</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-11-02</loc><lastmod>2026-11-02</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-11-03</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-11-04</loc><lastmod>2026-11-04</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-11-05</loc><lastmod>2026-11-05</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/2026-11-06</loc><lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
 </urlset>

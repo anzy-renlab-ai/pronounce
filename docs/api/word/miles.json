@@ -1,0 +1,15 @@
+{
+  "word": "Miles",
+  "ipa": "/maɪlz/",
+  "respelling_us": "miles",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/radixark/miles",
+  "source_label": "radixark/miles README",
+  "category": "project",
+  "confidence": "community-consensus",
+  "notes": "RadixArk's open-source RL post-training framework; the README tagline confirms the ordinary English word reading.",
+  "audio_url": "https://pronounce.renlab.ai/audio/miles.mp3",
+  "url": "https://pronounce.renlab.ai/word/miles",
+  "date_modified": "2026-11-06"
+}

@@ -287,8 +287,8 @@ class RepositoryProductFactTests(unittest.TestCase):
             if len(cells) >= 10 and cells[0] and cells[2]:
                 rows.append(cells)
 
-        self.assertEqual(len(rows), 1_903)
-        self.assertEqual(sum(bool(cells[5].strip()) for cells in rows), 1_283)
+        self.assertEqual(len(rows), 1_920)
+        self.assertEqual(sum(bool(cells[5].strip()) for cells in rows), 1_300)
 
     def test_v224_ai_company_rows(self):
         expected = {
@@ -529,7 +529,7 @@ class RepositoryProductFactTests(unittest.TestCase):
 
     def test_readme_reports_source_coverage_without_universal_source_claims(self):
         readme = self.source("README.md")
-        self.assertIn("1,903 entries — 1,283 carry a citable source", readme)
+        self.assertIn("1,920 entries — 1,300 carry a citable source", readme)
         self.assertNotIn("Shipped since this list was written", readme)
         self.assertNotRegex(
             readme,
@@ -814,7 +814,7 @@ class RepositoryProductFactTests(unittest.TestCase):
         changelog = self.source("CHANGELOG.md")
         self.assertTrue(
             changelog.startswith(
-                "# Changelog\n\n## v2.28.1 — 2026-09-01\n"
+                "# Changelog\n\n## v2.29.0 — 2026-11-06\n"
             )
         )
         self.assertIn("## v2.23.0 — 2026-07-17", changelog)

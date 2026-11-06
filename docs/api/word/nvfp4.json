@@ -1,0 +1,15 @@
+{
+  "word": "NVFP4",
+  "ipa": "/ˌɛn viː ɛf piː ˈfɔr/",
+  "respelling_us": "N V F P four",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://developer.nvidia.com/blog/nvfp4-trains-with-precision-of-16-bit-and-speed-and-efficiency-of-4-bit/",
+  "source_label": "NVIDIA Technical Blog — NVFP4",
+  "category": "acronym",
+  "confidence": "community-consensus",
+  "notes": "NVIDIA's 4-bit floating-point format (E2M1 values, E4M3 block scales) on Blackwell/Rubin; read letter-by-letter like other precision initialisms.",
+  "audio_url": "https://pronounce.renlab.ai/audio/nvfp4.mp3",
+  "url": "https://pronounce.renlab.ai/word/nvfp4",
+  "date_modified": "2026-11-06"
+}

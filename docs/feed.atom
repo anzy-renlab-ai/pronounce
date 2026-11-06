@@ -4,174 +4,181 @@
   <link href="https://pronounce.renlab.ai/feed.atom" rel="self"/>
   <link href="https://pronounce.renlab.ai/"/>
   <id>https://pronounce.renlab.ai/</id>
-  <updated>2026-09-01T00:00:00Z</updated>
+  <updated>2026-11-06T00:00:00Z</updated>
   <subtitle>How engineers actually pronounce project / product / jargon names. Community-maintained.</subtitle>
-  <entry>
-    <title>musl — muscle</title>
-    <link href="https://pronounce.renlab.ai/word/musl"/>
-    <id>https://pronounce.renlab.ai/word/musl</id>
-    <updated>2026-09-01T00:00:00Z</updated>
-    <summary>musl is pronounced "muscle" (/ˈmʌsəl/). Lightweight libc behind Alpine Linux images; official site says "musl, pronounced like the word 'mussel' or 'muscle'".</summary>
-  </entry>
-  <entry>
-    <title>axios — ak see ose</title>
-    <link href="https://pronounce.renlab.ai/word/axios"/>
-    <id>https://pronounce.renlab.ai/word/axios</id>
-    <updated>2026-09-01T00:00:00Z</updated>
-    <summary>axios is pronounced "ak see ose" (/ˈæksioʊs/). Promise-based HTTP client among npm's most-downloaded packages; from Greek axios ("worthy") with no official ruling — top-voted community reading is "AK-see-ohs".</summary>
-  </entry>
-  <entry>
-    <title>Mockito — mah kee toh</title>
-    <link href="https://pronounce.renlab.ai/word/mockito"/>
-    <id>https://pronounce.renlab.ai/word/mockito</id>
-    <updated>2026-09-01T00:00:00Z</updated>
-    <summary>Mockito is pronounced "mah kee toh" (/mɑːˈkiːtoʊ/). Java mocking framework whose name is a maintainer-confirmed pun on mock + mojito; a maintainer answered issue #889 with mock-based /mɑˈkiːtoʊ/ ("mah-KEE-toh"), while creator Szczepan Faber told the mailing list to "go ahead and pronounce it the mojito way" ("moh-KEE-toh"), so the split is genuine.</summary>
-  </entry>
-  <entry>
-    <title>xonsh — kahnsh</title>
-    <link href="https://pronounce.renlab.ai/word/xonsh"/>
-    <id>https://pronounce.renlab.ai/word/xonsh</id>
-    <updated>2026-09-01T00:00:00Z</updated>
-    <summary>xonsh is pronounced "kahnsh" (/kɑːnʃ/). Python-powered cross-platform shell; the official homepage states it "sounds like 'consh'".</summary>
-  </entry>
-  <entry>
-    <title>Pyodide — pie uh dyed</title>
-    <link href="https://pronounce.renlab.ai/word/pyodide"/>
-    <id>https://pronounce.renlab.ai/word/pyodide</id>
-    <updated>2026-09-01T00:00:00Z</updated>
-    <summary>Pyodide is pronounced "pie uh dyed" (/ˈpaɪəˌdaɪd/). CPython compiled to WebAssembly for running Python in the browser; maintainers rth and hoodmane gave the IPA ˈpɑɪ.ə.ˌdɑɪd (Py + Iodide — rhymes with iodide).</summary>
-  </entry>
-  <entry>
-    <title>Haxe — hex</title>
-    <link href="https://pronounce.renlab.ai/word/haxe"/>
-    <id>https://pronounce.renlab.ai/word/haxe</id>
-    <updated>2026-09-01T00:00:00Z</updated>
-    <summary>Haxe is pronounced "hex" (/hɛks/). Cross-platform language compiling to JS, C++, JVM and more; early official docs said "hex" while English speakers naturally say "hacks" — no creator ruling, both survive at conferences.</summary>
-  </entry>
-  <entry>
-    <title>FLTK — full tick</title>
-    <link href="https://pronounce.renlab.ai/word/fltk"/>
-    <id>https://pronounce.renlab.ai/word/fltk</id>
-    <updated>2026-09-01T00:00:00Z</updated>
-    <summary>FLTK is pronounced "full tick" (/ˈfʊltɪk/). Veteran cross-platform C++ GUI toolkit; the official docs open with 'The Fast Light Tool Kit ("FLTK", pronounced "fulltick")'.</summary>
-  </entry>
-  <entry>
-    <title>Cygwin — sig win</title>
-    <link href="https://pronounce.renlab.ai/word/cygwin"/>
-    <id>https://pronounce.renlab.ai/word/cygwin</id>
-    <updated>2026-09-01T00:00:00Z</updated>
-    <summary>Cygwin is pronounced "sig win" (/ˈsɪɡwɪn/). POSIX compatibility layer for Windows (Cygnus + Windows); Wikipedia gives /ˈsɪɡwɪn/ SIG-win, confirmed by a Cygwin developer on the project mailing list.</summary>
-  </entry>
-  <entry>
-    <title>Nagios — nah ghee ose</title>
-    <link href="https://pronounce.renlab.ai/word/nagios"/>
-    <id>https://pronounce.renlab.ai/word/nagios</id>
-    <updated>2026-09-01T00:00:00Z</updated>
-    <summary>Nagios is pronounced "nah ghee ose" (/ˈnɑːɡiːoʊs/). Veteran open-source infrastructure monitoring system (NetSaint 1999, renamed 2002); creator Ethan Galstad's official FAQ spells it out as "nah-ghee-ose" — "Nah" plus the start of "geese" plus the end of "verbose" — so the g is hard, never "NAY-jee-os", and Wikipedia records the same /ˈnɑːɡiːoʊs/.</summary>
-  </entry>
-  <entry>
-    <title>persona — per soh nuh</title>
-    <link href="https://pronounce.renlab.ai/word/persona"/>
-    <id>https://pronounce.renlab.ai/word/persona</id>
-    <updated>2026-09-01T00:00:00Z</updated>
-    <summary>persona is pronounced "per soh nuh" (/pɚˈsoʊnə/). In agent and prompt design, a persona is the identity, role, tone, and behavioral frame assigned to an AI system. Stress the middle syllable: per-SOH-nuh, not PER-suh-nuh.</summary>
-  </entry>
-  <entry>
-    <title>affect — AFF ekt</title>
-    <link href="https://pronounce.renlab.ai/word/affect"/>
-    <id>https://pronounce.renlab.ai/word/affect</id>
-    <updated>2026-09-01T00:00:00Z</updated>
-    <summary>affect is pronounced "AFF ekt" (/ˈæfɛkt/). In affective computing and psychology, the noun meaning observable emotion or feeling is AFF-ect, with first-syllable stress. The everyday verb meaning "influence" is uh-FECT; both established readings are included because the spelling is identical.</summary>
-  </entry>
-  <entry>
-    <title>affective — uh FEK tiv</title>
-    <link href="https://pronounce.renlab.ai/word/affective"/>
-    <id>https://pronounce.renlab.ai/word/affective</id>
-    <updated>2026-09-01T00:00:00Z</updated>
-    <summary>affective is pronounced "uh FEK tiv" (/əˈfɛktɪv/). Affective computing and affective AI model emotion, mood, and emotionally responsive interaction. Say uh-FEK-tiv; it is often confused with "effective."</summary>
-  </entry>
-  <entry>
-    <title>anthropomorphism — an thruh puh MOR fiz um</title>
-    <link href="https://pronounce.renlab.ai/word/anthropomorphism"/>
-    <id>https://pronounce.renlab.ai/word/anthropomorphism</id>
-    <updated>2026-09-01T00:00:00Z</updated>
-    <summary>anthropomorphism is pronounced "an thruh puh MOR fiz um" (/ˌænθrəpəˈmɔːrfɪzəm/). The attribution of human traits, intentions, or feelings to an AI agent or other nonhuman system. Six syllables, with primary stress on MOR: an-thruh-puh-MOR-fiz-um.</summary>
-  </entry>
-  <entry>
-    <title>prosody — PRAH suh dee</title>
-    <link href="https://pronounce.renlab.ai/word/prosody"/>
-    <id>https://pronounce.renlab.ai/word/prosody</id>
-    <updated>2026-09-01T00:00:00Z</updated>
-    <summary>prosody is pronounced "PRAH suh dee" (/ˈprɑːsədi/). The rhythm, stress, pitch, and intonation of speech; a key signal for speech-emotion recognition and expressive voice models. PRAH-suh-dee is primary; a voiced-s PRAH-zuh-dee variant is also documented.</summary>
-  </entry>
-  <entry>
-    <title>valence — vay luns</title>
-    <link href="https://pronounce.renlab.ai/word/valence"/>
-    <id>https://pronounce.renlab.ai/word/valence</id>
-    <updated>2026-09-01T00:00:00Z</updated>
-    <summary>valence is pronounced "vay luns" (/ˈveɪləns/). In emotion models, valence is the positive-to-negative dimension of affect, often paired with arousal. Say VAY-luhns, not VAL-ence.</summary>
-  </entry>
-  <entry>
-    <title>arousal — uh rouse uhl</title>
-    <link href="https://pronounce.renlab.ai/word/arousal"/>
-    <id>https://pronounce.renlab.ai/word/arousal</id>
-    <updated>2026-09-01T00:00:00Z</updated>
-    <summary>arousal is pronounced "uh rouse uhl" (/əˈraʊzəl/). In affective computing, arousal measures emotional activation or intensity independently of positive or negative valence. Stress ROUSE: uh-ROUSE-uhl.</summary>
-  </entry>
   <entry>
     <title>interoception — in ter oh SEP shun</title>
     <link href="https://pronounce.renlab.ai/word/interoception"/>
     <id>https://pronounce.renlab.ai/word/interoception</id>
-    <updated>2026-09-01T00:00:00Z</updated>
+    <updated>2026-11-06T00:00:00Z</updated>
     <summary>interoception is pronounced "in ter oh SEP shun" (/ˌɪntəroʊˈsɛpʃən/). The sensing of internal bodily signals such as heartbeat, breathing, and hunger; increasingly used in embodied-agent and computational-emotion models. Say in-ter-oh-SEP-shun.</summary>
   </entry>
   <entry>
     <title>alexithymia — uh lek sih THIGH mee uh</title>
     <link href="https://pronounce.renlab.ai/word/alexithymia"/>
     <id>https://pronounce.renlab.ai/word/alexithymia</id>
-    <updated>2026-09-01T00:00:00Z</updated>
+    <updated>2026-11-06T00:00:00Z</updated>
     <summary>alexithymia is pronounced "uh lek sih THIGH mee uh" (/əˌlɛksɪˈθaɪmiə/). Difficulty identifying or describing emotions, used in affect-recognition research and human-AI evaluation. Primary stress lands on THIGH: uh-lek-sih-THIGH-mee-uh.</summary>
   </entry>
   <entry>
     <title>affordance — uh FOR dunce</title>
     <link href="https://pronounce.renlab.ai/word/affordance"/>
     <id>https://pronounce.renlab.ai/word/affordance</id>
-    <updated>2026-09-01T00:00:00Z</updated>
+    <updated>2026-11-06T00:00:00Z</updated>
     <summary>affordance is pronounced "uh FOR dunce" (/əˈfɔːrdəns/). An action possibility offered by an environment to an agent; central to robotics, embodied AI, and action-aware world models. Stress FOR: uh-FOR-duhns.</summary>
   </entry>
   <entry>
     <title>homeostasis — hoh mee oh STAY sis</title>
     <link href="https://pronounce.renlab.ai/word/homeostasis"/>
     <id>https://pronounce.renlab.ai/word/homeostasis</id>
-    <updated>2026-09-01T00:00:00Z</updated>
+    <updated>2026-11-06T00:00:00Z</updated>
     <summary>homeostasis is pronounced "hoh mee oh STAY sis" (/ˌhoʊmioʊˈsteɪsɪs/). The regulation of internal stability; a useful framing for agents that model needs, drives, affect, and bodily state. Five syllables, with primary stress on STAY: hoh-mee-oh-STAY-sis.</summary>
   </entry>
   <entry>
     <title>enactivism — ih NAK tih viz um</title>
     <link href="https://pronounce.renlab.ai/word/enactivism"/>
     <id>https://pronounce.renlab.ai/word/enactivism</id>
-    <updated>2026-09-01T00:00:00Z</updated>
+    <updated>2026-11-06T00:00:00Z</updated>
     <summary>enactivism is pronounced "ih NAK tih viz um" (/ɪˈnæktɪvɪzəm/). A cognitive-science view in which cognition emerges through an agent's embodied interaction with its environment rather than passive representation alone. Say ih-NAK-tiv-iz-um.</summary>
   </entry>
   <entry>
     <title>autopoiesis — aw toh poy EE sis</title>
     <link href="https://pronounce.renlab.ai/word/autopoiesis"/>
     <id>https://pronounce.renlab.ai/word/autopoiesis</id>
-    <updated>2026-09-01T00:00:00Z</updated>
+    <updated>2026-11-06T00:00:00Z</updated>
     <summary>autopoiesis is pronounced "aw toh poy EE sis" (/ˌɔːtoʊpɔɪˈiːsɪs/). Self-production or self-maintenance in living systems, closely tied to enactive cognition and autonomous-agent theory. The final three syllables are poy-EE-sis, with primary stress on EE.</summary>
   </entry>
   <entry>
     <title>Genie 3 — jee nee three</title>
     <link href="https://pronounce.renlab.ai/word/genie-3"/>
     <id>https://pronounce.renlab.ai/word/genie-3</id>
-    <updated>2026-09-01T00:00:00Z</updated>
+    <updated>2026-11-06T00:00:00Z</updated>
     <summary>Genie 3 is pronounced "jee nee three" (/ˈdʒiːni ˈθriː/). Google DeepMind's real-time interactive world model, announced in 2025 and opened through Project Genie in 2026. The name is the ordinary word "genie" followed by the numeral: JEE-nee three.</summary>
   </entry>
   <entry>
     <title>Marble — mar bul</title>
     <link href="https://pronounce.renlab.ai/word/marble"/>
     <id>https://pronounce.renlab.ai/word/marble</id>
-    <updated>2026-09-01T00:00:00Z</updated>
+    <updated>2026-11-06T00:00:00Z</updated>
     <summary>Marble is pronounced "mar bul" (/ˈmɑːrbəl/). World Labs' multimodal model for creating editable, explorable 3D worlds from text, images, video, or layouts. Say MAR-buhl, like the ordinary English word.</summary>
+  </entry>
+  <entry>
+    <title>humans&amp; — humans and</title>
+    <link href="https://pronounce.renlab.ai/word/humans-"/>
+    <id>https://pronounce.renlab.ai/word/humans-</id>
+    <updated>2026-11-06T00:00:00Z</updated>
+    <summary>humans&amp; is pronounced "humans and" (/ˈhjuːmənz ænd/). Human-centric AI lab; the ampersand is read as the word "and" per its own domain humansand.ai and @humansand handle.</summary>
+  </entry>
+  <entry>
+    <title>Boba — boh buh</title>
+    <link href="https://pronounce.renlab.ai/word/boba"/>
+    <id>https://pronounce.renlab.ai/word/boba</id>
+    <updated>2026-11-06T00:00:00Z</updated>
+    <summary>Boba is pronounced "boh buh" (/ˈboʊbə/). humans&amp; social AI agent companion (launched Oct 2026); named after the drink, read like it: BOH-buh.</summary>
+  </entry>
+  <entry>
+    <title>&amp;Tutor — ampersand tutor</title>
+    <link href="https://pronounce.renlab.ai/word/-tutor"/>
+    <id>https://pronounce.renlab.ai/word/-tutor</id>
+    <updated>2026-11-06T00:00:00Z</updated>
+    <summary>&amp;Tutor is pronounced "ampersand tutor" (/ˈæmpərˌsænd ˈtuːtər/). humans&amp; tutor model; its own announcement expands "&amp;Tutor" to "Ampersand Tutor", so &amp; reads ampersand here, not "and".</summary>
+  </entry>
+  <entry>
+    <title>Persimmon — per sim uhn</title>
+    <link href="https://pronounce.renlab.ai/word/persimmon"/>
+    <id>https://pronounce.renlab.ai/word/persimmon</id>
+    <updated>2026-11-06T00:00:00Z</updated>
+    <summary>Persimmon is pronounced "per sim uhn" (/pərˈsɪmən/). humans&amp;'s large-scale user model simulating human chat behavior; a deliberate fruit name read as ordinary English.</summary>
+  </entry>
+  <entry>
+    <title>Ampersand — am per sand</title>
+    <link href="https://pronounce.renlab.ai/word/ampersand"/>
+    <id>https://pronounce.renlab.ai/word/ampersand</id>
+    <updated>2026-11-06T00:00:00Z</updated>
+    <summary>Ampersand is pronounced "am per sand" (/ˈæmpərˌsænd/). humans&amp;'s first collaborator model (Oct 2026, Agents API); named after the &amp; character, ordinary English reading.</summary>
+  </entry>
+  <entry>
+    <title>TutorMoments — tutor moments</title>
+    <link href="https://pronounce.renlab.ai/word/tutormoments"/>
+    <id>https://pronounce.renlab.ai/word/tutormoments</id>
+    <updated>2026-11-06T00:00:00Z</updated>
+    <summary>TutorMoments is pronounced "tutor moments" (/ˈtuːtər ˌmoʊmənts/). Ai2 benchmark scoring AI tutors on real tutoring decision moments; plain English compound tutor + moments.</summary>
+  </entry>
+  <entry>
+    <title>MegaMoE — MEG uh em oh EE</title>
+    <link href="https://pronounce.renlab.ai/word/megamoe"/>
+    <id>https://pronounce.renlab.ai/word/megamoe</id>
+    <updated>2026-11-06T00:00:00Z</updated>
+    <summary>MegaMoE is pronounced "MEG uh em oh EE" (/ˈmɛɡə ˌɛm oʊ ˈiː/). Distributed MoE decode kernel from humans&amp; (in FlashInfer and SGLang); mega + MoE, inheriting MoE's spelled-out vs "moh" split.</summary>
+  </entry>
+  <entry>
+    <title>4-bitter Lesson — four bitter lesson</title>
+    <link href="https://pronounce.renlab.ai/word/4-bitter-lesson"/>
+    <id>https://pronounce.renlab.ai/word/4-bitter-lesson</id>
+    <updated>2026-11-06T00:00:00Z</updated>
+    <summary>4-bitter Lesson is pronounced "four bitter lesson" (/ˌfɔːrˈbɪtər ˈlɛsən/). humans&amp; pun on Sutton's Bitter Lesson for its 4-bit RL recipe; reads four-BIT-ter LESS-un.</summary>
+  </entry>
+  <entry>
+    <title>Multi-User Turing Test — mul tee yoo zer touring test</title>
+    <link href="https://pronounce.renlab.ai/word/multi-user-turing-test"/>
+    <id>https://pronounce.renlab.ai/word/multi-user-turing-test</id>
+    <updated>2026-11-06T00:00:00Z</updated>
+    <summary>Multi-User Turing Test is pronounced "mul tee yoo zer touring test" (/ˌmʌlti ˌjuːzər ˈtʊrɪŋ ˌtɛst/). humans&amp;'s user-model eval where an LLM judge tells all-human group chat from simulated; Turing as TOOR-ing.</summary>
+  </entry>
+  <entry>
+    <title>NVFP4 — N V F P four</title>
+    <link href="https://pronounce.renlab.ai/word/nvfp4"/>
+    <id>https://pronounce.renlab.ai/word/nvfp4</id>
+    <updated>2026-11-06T00:00:00Z</updated>
+    <summary>NVFP4 is pronounced "N V F P four" (/ˌɛn viː ɛf piː ˈfɔr/). NVIDIA's 4-bit floating-point format (E2M1 values, E4M3 block scales) on Blackwell/Rubin; read letter-by-letter like other precision initialisms.</summary>
+  </entry>
+  <entry>
+    <title>Astra — astruh</title>
+    <link href="https://pronounce.renlab.ai/word/astra"/>
+    <id>https://pronounce.renlab.ai/word/astra</id>
+    <updated>2026-11-06T00:00:00Z</updated>
+    <summary>Astra is pronounced "astruh" (/ˈæstrə/). OpenAI's GPT-6 flagship family (Sep 2026); Latin for star, anglicized AS-truh like astral, with the Latin AH-strah as the alternate.</summary>
+  </entry>
+  <entry>
+    <title>DeepInfer — deep infer</title>
+    <link href="https://pronounce.renlab.ai/word/deepinfer"/>
+    <id>https://pronounce.renlab.ai/word/deepinfer</id>
+    <updated>2026-11-06T00:00:00Z</updated>
+    <summary>DeepInfer is pronounced "deep infer" (/ˈdiːp ɪnˌfɜːr/). DeepSeek's open-source large-scale inference framework (Oct 2026); said as the ordinary words "deep" + "infer".</summary>
+  </entry>
+  <entry>
+    <title>Jev — jev</title>
+    <link href="https://pronounce.renlab.ai/word/jev"/>
+    <id>https://pronounce.renlab.ai/word/jev</id>
+    <updated>2026-11-06T00:00:00Z</updated>
+    <summary>Jev is pronounced "jev" (/dʒɛv/). TypeSafe AI's decision model; the launch FAQ derives it from economist William Stanley Jevons, so one syllable "jev".</summary>
+  </entry>
+  <entry>
+    <title>Postman — post man</title>
+    <link href="https://pronounce.renlab.ai/word/postman"/>
+    <id>https://pronounce.renlab.ai/word/postman</id>
+    <updated>2026-11-06T00:00:00Z</updated>
+    <summary>Postman is pronounced "post man" (/ˈpoʊstˌmən/). API platform named for the mail carrier; ordinary English compound POHST-man.</summary>
+  </entry>
+  <entry>
+    <title>Miles — miles</title>
+    <link href="https://pronounce.renlab.ai/word/miles"/>
+    <id>https://pronounce.renlab.ai/word/miles</id>
+    <updated>2026-11-06T00:00:00Z</updated>
+    <summary>Miles is pronounced "miles" (/maɪlz/). RadixArk's open-source RL post-training framework; the README tagline confirms the ordinary English word reading.</summary>
+  </entry>
+  <entry>
+    <title>CooperBench — cooper bench</title>
+    <link href="https://pronounce.renlab.ai/word/cooperbench"/>
+    <id>https://pronounce.renlab.ai/word/cooperbench</id>
+    <updated>2026-11-06T00:00:00Z</updated>
+    <summary>CooperBench is pronounced "cooper bench" (/ˈkuːpər ˌbɛntʃ/). Stanford/SAP benchmark scoring AI coding agents as teammates; ordinary English compound Cooper + bench.</summary>
+  </entry>
+  <entry>
+    <title>Four Over Six — four over six</title>
+    <link href="https://pronounce.renlab.ai/word/four-over-six"/>
+    <id>https://pronounce.renlab.ai/word/four-over-six</id>
+    <updated>2026-11-06T00:00:00Z</updated>
+    <summary>Four Over Six is pronounced "four over six" (/fɔːr ˈoʊvər ˌsɪks/). NVFP4 block-scaling technique (caps block maxima at ±4 vs FP8's ±6); creators spell it as plain English words, read literally.</summary>
   </entry>
 </feed>

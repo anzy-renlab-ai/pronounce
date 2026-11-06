@@ -1,0 +1,15 @@
+{
+  "word": "Four Over Six",
+  "ipa": "/fɔːr ˈoʊvər ˌsɪks/",
+  "respelling_us": "four over six",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://arxiv.org/abs/2512.02010",
+  "source_label": "arXiv 2512.02010 (MIT Han Lab / NVIDIA)",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "NVFP4 block-scaling technique (caps block maxima at ±4 vs FP8's ±6); creators spell it as plain English words, read literally.",
+  "audio_url": "https://pronounce.renlab.ai/audio/four-over-six.mp3",
+  "url": "https://pronounce.renlab.ai/word/four-over-six",
+  "date_modified": "2026-11-06"
+}
