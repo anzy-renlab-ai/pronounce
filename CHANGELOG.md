@@ -1,5 +1,30 @@
 # Changelog
 
+## v2.29.0 — 2026-11-06
+
+**Late-2026 AI vocabulary batch.** 17 new entries (1,920 total), led by the
+full humans& lineup (Boba, &Tutor, Persimmon, Ampersand, MegaMoE, the
+4-bitter Lesson, the Multi-User Turing Test), plus GPT-6 Astra, DeepSeek's
+DeepInfer, TypeSafe's Jev, NVIDIA's NVFP4, Ai2's TutorMoments, CooperBench,
+Four Over Six, RadixArk's Miles, and the long-missing Postman.
+
+### Added
+
+- **17 dictionary entries** discovered by a 6-lens web-research workflow
+  (111 raw candidates → dedup vs the 1,920-word dictionary → one adversarial
+  verifier per shortlisted candidate; 18 survived, 2 rejected as
+  single-use jargon, 1 duplicate merged). Every respelling byte-verified
+  through macOS `say -o` before appending, per the batch-14 methodology.
+  Creator-clarified readings: humans& ("and"), &Tutor (the launch post
+  expands it to "Ampersand Tutor"), Jev (from economist Jevons).
+
+### Changed
+
+- **Consolidated the batch tooling** — the fourteen per-batch
+  `add-batch2..14.mjs` one-offs are replaced by a single parameterized
+  `tools/add-batch.mjs <batch.json>` (same validation, dedup, and append
+  behavior; batch row data stays in git history and `tools/batch*.json`).
+
 ## v2.28.1 — 2026-09-01
 
 ### Fixed
