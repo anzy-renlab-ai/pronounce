@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'data/pronunciations.tsv'
+      - 'data/creator-clips.tsv'
       - 'tools/build-site.sh'
       - '.github/workflows/build-site.yml'
       - 'docs/v2/audio.jsx'
@@ -52,6 +53,9 @@ jobs:
 
       - name: Install ffmpeg (for audio rendering)
         run: brew install ffmpeg
+
+      - name: Lint dictionary + creator clips
+        run: bash tools/lint-dict.sh
 
       - name: Build static site
         run: bash tools/build-site.sh

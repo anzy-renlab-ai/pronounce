@@ -48,7 +48,7 @@ If the target token is ambiguous (multiple candidates in the message), ask which
 
 ## When the word isn't in the dictionary
 
-`say-it <word>` still speaks the raw spelling on a miss, but the dictionary is the point — a miss is a chance to add the entry. If `--why` / `--json` reports `in_dict: false`, run:
+`say-it <word>` still speaks the raw spelling on a miss, but the dictionary is the point — a miss is a chance to add the entry. If `--json` reports `"in_dict": false` (or `--why` says `not in dictionary`), run:
 
 ```bash
 say-it propose <word>

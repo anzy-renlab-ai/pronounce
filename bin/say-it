@@ -754,8 +754,11 @@ MD
     REPO_TSV_URL="https://github.com/anzy-renlab-ai/pronounce/blob/main/data/pronunciations.tsv"
     ISSUE_NEW_URL="https://github.com/anzy-renlab-ai/pronounce/issues/new"
     sep=$'\x1f'
-    parsed=$(awk -F'\t' -v w="$(printf '%s' "$word" | tr '[:upper:]' '[:lower:]')" -v s="$sep" \
-      '!/^#/ && tolower($1)==w { print $2 s $3 s $9; exit }' "$DICT")
+    # The word reaches awk via the environment, not -v: awk -v interprets C
+    # escapes in the value, so a word containing a backslash would never match.
+    word_lower="$(printf '%s' "$word" | tr '[:upper:]' '[:lower:]')"
+    parsed=$(PROPOSE_WORD="$word_lower" awk -F'\t' -v s="$sep" \
+      'BEGIN { w = ENVIRON["PROPOSE_WORD"] } !/^#/ && tolower($1)==w { print $2 s $3 s $9; exit }' "$DICT")
     if [[ -n "$parsed" ]]; then
       IFS="$sep" read -r ipa resp conf <<< "$parsed"
       echo "${C_BOLD}$word${C_RESET} ${C_GREEN}is already in the dictionary${C_RESET} — no draft needed."
@@ -816,8 +819,11 @@ __ROW__
 _Scaffolded by `say-it propose __WORD__`. Replace every `[...]` placeholder above._
 BODY
 )"
-    issue_body="${issue_body//__ROW__/$draft_row}"
+    # __WORD__ first: $draft_row (substituted into __ROW__) may itself contain
+    # the literal string __WORD__ (a user proposing that exact token), and the
+    # second pass would then corrupt the row.
     issue_body="${issue_body//__WORD__/$word}"
+    issue_body="${issue_body//__ROW__/$draft_row}"
     echo "$ISSUE_NEW_URL?title=Add%20pronunciation:%20$(urlencode "$word")&body=$(urlencode "$issue_body")"
     echo ""
     echo "${C_DIM}No browser? The same body as plain text — paste it into the issue yourself:${C_RESET}"

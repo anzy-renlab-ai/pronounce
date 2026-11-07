@@ -8,6 +8,7 @@ on:
     paths:
       - 'bin/say-it'
       - 'data/pronunciations.tsv'
+      - 'data/creator-clips.tsv'
       - 'tools/build-site.sh'
       - '.github/workflows/ci.yml'
       - '.github/workflows/build-site.yml'

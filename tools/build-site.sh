@@ -77,6 +77,25 @@ htmlesc() {
   printf '%s' "$value"
 }
 
+# Escape for a single-quoted JS string literal inside an HTML attribute
+# (onclick="playEntry('...')" — htmlesc cannot help there: &quot;/&#39; entities
+# decode back to raw quotes before the JS is parsed). Backslash first so the
+# escape char itself can't be re-escaped.
+jsesc() {
+  # Char loop, not ${var//}: bash 3.2 and zsh disagree on how backslashes in
+  # the replacement string are unescaped, which silently changes the output.
+  local value="$1" out="" i c
+  for ((i = 0; i < ${#value}; i++)); do
+    c="${value:i:1}"
+    if [[ "$c" == "\\" || "$c" == "'" ]]; then
+      out+="\\$c"
+    else
+      out+="$c"
+    fi
+  done
+  printf '%s' "$out"
+}
+
 jsonesc() {
   local value="$1"
   value="${value//\\/\\\\}"
@@ -633,6 +652,12 @@ function playCreatorClip(btn, videoId, startSec) {
 function escHTML(s) {
   return (s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 }
+// Escape for a single-quoted JS string literal interpolated into an HTML
+// attribute (onclick="playEntry('...')"). escHTML's &#39; entity decodes back
+// to a raw apostrophe before the JS parses, so it cannot protect this slot.
+function escJS(s) {
+  return (s || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+}
 function badge(text, kind) { return \`<span class="badge badge-\${kind}">\${text}</span>\`; }
 function entryHref(word) {
   return './word/' + word.toLowerCase().replace(/[^a-z0-9._-]/gu, '-');
@@ -821,7 +846,7 @@ function renderTodaysWord() {
         <span class="todays-ipa">\${escHTML(e.ipa)}</span>
       </a>
       <div class="todays-actions">
-        <button class="play-btn play-primary" onclick="playEntry('\${e.w}')" aria-label="Play today's word">▶</button>
+        <button class="play-btn play-primary" onclick="playEntry('\${escJS(e.w)}')" aria-label="Play today's word">▶</button>
         <a href="./word/\${slug}" class="todays-cta">See the source →</a>
       </div>
     </div>\`;
@@ -1741,7 +1766,7 @@ while IFS="$SEP" read -r word ipa resp alt_ipa alt_resp src_url src_label cat co
       a_ipa_esc="$(htmlesc "$a_ipa")"
       alts_html="$alts_html
       <div class=\"alt-row\">
-        <button class=\"play-btn play-alt\" onclick=\"playEntry('$(htmlesc "$word")', {altIdx: $i})\" aria-label=\"Play alternate $((i+1))\">▶</button>
+        <button class=\"play-btn play-alt\" onclick=\"playEntry('$(jsesc "$word")', {altIdx: $i})\" aria-label=\"Play alternate $((i+1))\">▶</button>
         <span class=\"alt-label\">or:</span>
         <span class=\"alt-resp\">$a_esc</span>
         ${a_ipa:+<span class=\"ipa-small\">$a_ipa_esc</span>}
@@ -1855,8 +1880,11 @@ while IFS="$SEP" read -r word ipa resp alt_ipa alt_resp src_url src_label cat co
 
   # Creator clip card — links to (does not rehost) a public video where the
   # creator/founder says the name. Lazy: no iframe until the user clicks.
+  # The card interpolates $clip_yt/$clip_t into an onclick JS string, so the
+  # generator validates what lint-dict.sh [9/9] checks — a row that slips past
+  # lint (or a hand-edit) is skipped here, never injected raw.
   creator_clip_html=""
-  if [[ -n "$clip_yt" ]]; then
+  if [[ "$clip_yt" =~ ^[A-Za-z0-9_-]{11}$ && "$clip_t" =~ ^[0-9]+$ ]]; then
     clip_watch="https://www.youtube.com/watch?v=$clip_yt&t=${clip_t}s"
     clip_label_esc="$(htmlesc "$clip_label")"
     creator_clip_html="    <section class=\"creator-clip\">
@@ -1946,7 +1974,7 @@ HTML
 
     <div class="panel">
       <div class="panel-row">
-        <button class="play-btn play-primary" onclick="playEntry('$(htmlesc "$word")')" aria-label="Play primary reading">▶</button>
+        <button class="play-btn play-primary" onclick="playEntry('$(jsesc "$word")')" aria-label="Play primary reading">▶</button>
         <span class="resp-large">$resp_esc</span>
         <span class="ipa">$ipa_esc</span>
         <button class="copy-ipa-btn" onclick="copyToClipboard('$ipa_esc', 'IPA copied')" aria-label="Copy IPA to clipboard" title="Copy IPA (or press C)">📋 IPA</button>

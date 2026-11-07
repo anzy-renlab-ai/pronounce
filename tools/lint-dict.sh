@@ -13,7 +13,7 @@ fi
 fail=0
 
 # Check column count
-echo "[1/8] checking row column counts..."
+echo "[1/9] checking row column counts..."
 bad=$(awk -F'\t' '!/^#/ && NF>=1 && $1 != "" && $1 != "word" && NF != 10 { print NR ": got "NF" cols ("$1")" }' "$DICT")
 if [[ -n "$bad" ]]; then
   echo "  ✗ rows with != 10 cols:" >&2
@@ -22,7 +22,7 @@ if [[ -n "$bad" ]]; then
 else echo "  ✓ all rows have 10 columns"; fi
 
 # Check duplicate slugs
-echo "[2/8] checking for duplicate slugs..."
+echo "[2/9] checking for duplicate slugs..."
 dups=$(python3 - "$DICT" <<'PYEOF'
 from collections import Counter
 import re
@@ -44,7 +44,7 @@ if [[ -n "$dups" ]]; then
 else echo "  ✓ no duplicate slugs"; fi
 
 # Check confidence values
-echo "[3/8] checking confidence values..."
+echo "[3/9] checking confidence values..."
 bad=$(awk -F'\t' '
   BEGIN { ok["creator-clarified"]=1; ok["community-consensus"]=1; ok["contested"]=1 }
   !/^#/ && NF>=9 && $1 != "" && $1 != "word" && !($9 in ok) { print NR": "$1" has confidence: "$9 }
@@ -54,7 +54,7 @@ if [[ -n "$bad" ]]; then
 else echo "  ✓ all confidence values valid"; fi
 
 # Check creator-clarified entries have a source URL
-echo "[4/8] checking creator-clarified rows have source_url..."
+echo "[4/9] checking creator-clarified rows have source_url..."
 bad=$(awk -F'\t' '
   !/^#/ && NF>=9 && $1 != "" && $1 != "word" && $9 == "creator-clarified" && $6 == "" { print NR": "$1 }
 ' "$DICT")
@@ -65,7 +65,7 @@ if [[ -n "$bad" ]]; then
 else echo "  ✓ all creator-clarified rows have a source URL"; fi
 
 # Check source URLs start with http(s)://
-echo "[5/8] checking source URL formats..."
+echo "[5/9] checking source URL formats..."
 bad=$(awk -F'\t' '
   !/^#/ && NF>=6 && $1 != "" && $1 != "word" && $6 != "" && $6 !~ /^https?:\/\// { print NR": "$1": "$6 }
 ' "$DICT")
@@ -76,7 +76,7 @@ else echo "  ✓ all source URLs well-formed"; fi
 # Check advertised entry counts outside docs/ match the TSV (build-site.yml only
 # regenerates docs/; README/plugin/server.json counts are hand-synced and have
 # drifted before — v2.16.0 had to fix a 1738/1702/993 disagreement). Fail loud.
-echo "[6/8] checking advertised entry counts match the dict..."
+echo "[6/9] checking advertised entry counts match the dict..."
 COUNT=$(awk -F'\t' '!/^#/ && NF>=3 && $1 != "" && $1 != "word"' "$DICT" | wc -l | tr -d ' ')
 if (( COUNT >= 1000 )); then
   CNT_RX="${COUNT:0:${#COUNT}-3}[,]?${COUNT: -3}"
@@ -98,7 +98,7 @@ else echo "  ✓ README / plugin / server.json all advertise $COUNT"; fi
 # README's three companion statistics (sourced / creator-clarified / contested)
 # sit in prose next to the total and are NOT touched by the count-sync — they
 # drifted at v2.23.0 (1,229/86/169 shipped against actual 1,260/101/174).
-echo "[7/8] checking README companion stats (sourced/creator/contested)..."
+echo "[7/9] checking README companion stats (sourced/creator/contested)..."
 read -r SRCD CREATOR CONTESTED <<< "$(awk -F'\t' '
   !/^#/ && NF>=3 && $1 != "" && $1 != "word" {
     if ($6 != "") s++
@@ -123,7 +123,7 @@ else echo "  ✓ README states $SRCD sourced / $CREATOR creator-clarified / $CON
 # broken before: 90 OG 404s at v2.23.0 (make-og-all.py skipped for two batches),
 # dead ▶ audio at v2.10.x. Slugify in python to match the JS unicode semantics
 # (awk gsub is byte-wise and turns ñ into TWO hyphens).
-echo "[8/8] checking per-entry OG cards and audio files exist..."
+echo "[8/9] checking per-entry OG cards and audio files exist..."
 asset_bad="$(python3 - "$DICT" "$REPO_ROOT" <<'PYEOF'
 import re, sys
 dict_path, root = sys.argv[1], sys.argv[2]

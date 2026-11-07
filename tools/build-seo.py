@@ -154,6 +154,11 @@ def load_creator_clips(path: Path | None = None) -> dict[str, dict]:
         if len(cells) != 5 or not cells[1].strip():
             continue
         word, yt, t, label, quote = cells
+        # Same shape lint-dict.sh [9/9] enforces — the generator must not
+        # emit an unvalidated id/timestamp into an onclick JS string even if
+        # a bad row slips past lint.
+        if not re.fullmatch(r"[A-Za-z0-9_-]{11}", yt) or not t.isdigit():
+            continue
         clips[slugify(word)] = {
             "yt": yt,
             "t": t,
@@ -976,7 +981,7 @@ def emit_zh_word(e: dict, out_dir: Path, clips: dict[str, dict]) -> None:
         html += f"""    <section class="creator-clip">
       <h2>🎬 听创作者本人读</h2>
       <div class="clip-row">
-        <button class="play-btn clip-play" onclick="zhPlayClip(this, '{esc(clip['yt'])}', {esc(clip['t'])})" aria-label="播放创作者读音片段">▶</button>
+        <button class="play-btn clip-play" onclick="zhPlayClip(this, '{js_arg(clip['yt'])}', {int(clip['t'])})" aria-label="播放创作者读音片段">▶</button>
         <div>
           <p class="clip-label" lang="en">{esc(clip["label"])}</p>{quote_html}
           <a class="clip-link" href="{watch}" target="_blank" rel="noopener">在 YouTube 看这一段 ↗</a>

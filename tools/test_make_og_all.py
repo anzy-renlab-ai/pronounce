@@ -964,7 +964,9 @@ class WorkflowClosureTests(unittest.TestCase):
 
     def test_build_site_push_paths_are_the_exact_source_closure(self):
         expected = (
-            *self.COMMON_SOURCE_AND_TEST_PATHS[:2],
+            self.COMMON_SOURCE_AND_TEST_PATHS[0],  # data/pronunciations.tsv
+            "data/creator-clips.tsv",
+            self.COMMON_SOURCE_AND_TEST_PATHS[1],  # tools/build-site.sh
             ".github/workflows/build-site.yml",
             *self.COMMON_SOURCE_AND_TEST_PATHS[2:],
         )
@@ -976,7 +978,9 @@ class WorkflowClosureTests(unittest.TestCase):
     def test_ci_push_paths_are_the_exact_source_fact_and_test_closure(self):
         expected = (
             "bin/say-it",
-            *self.COMMON_SOURCE_AND_TEST_PATHS[:2],
+            self.COMMON_SOURCE_AND_TEST_PATHS[0],  # data/pronunciations.tsv
+            "data/creator-clips.tsv",
+            self.COMMON_SOURCE_AND_TEST_PATHS[1],  # tools/build-site.sh
             ".github/workflows/ci.yml",
             ".github/workflows/build-site.yml",
             *self.COMMON_SOURCE_AND_TEST_PATHS[2:14],

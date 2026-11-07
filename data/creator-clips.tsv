@@ -32,3 +32,23 @@ Syft	vQTvAPCvr2c	293	Anchore's own Syft/Grype engineers say Syft — official An
 Tcl	L0Qjk1BZDww	36	John Ousterhout (Tcl creator) says TICKLE — Tcl/Tk conference keynote (Part 1)	Unlike past times I've been to Tcl conference, I actually have glasses this time.
 Traefik	RgudiksfL-k	10	Emile Vauge (Traefik creator) introduces it — GopherCon 2017	A project I've been working on for two years now, and it's called Traefik, and it's a reverse proxy and load balancer written in Go.
 Typst	WQyqyrRQcSw	80	Co-creator Laurenz Mädje says Typst — official Typst channel meetup talk	"…write show rules that simulate that Typst has some kind of weird inheritance feature…" (spoken at ~80.5s)
+Buildah	bOzJ9RJ4elU	105	Nalin Dahyabhai & Dan Walsh (Buildah creators) — OpenShift Commons Briefing #102	and so we knocked something together and result is Buildah
+Debian	nyL2Fx0iNZ0	967	Ian Murdock says DEB-ee-un — Microsoft Research talk "Debian: Anatomy of an Open Source Project"	How do I give something back... and in my case that was Debian.
+Django	p-WXiqrzAf8	99	Jacob Kaplan-Moss says JANG-go — Google tech talk	So, my name's Jacob Kaplan-Moss. I'm one of the lead developers of Django, which is an open source web development framework for Python.
+GNU	UK52v6bCPvg	12	Richard Stallman says guh-NEW — "How he started the GNU project" interview (TFiR)	What's GNU plus Linux? In 1984 I began developing an operating system which is a free software replacement for Unix.
+io_uring	-5T4Cjw46ys	154	Jens Axboe (io_uring creator) — "Faster IO through io_uring", Kernel Recipes 2019	If we go through what the io_uring looks like and how you set it up and submit I/O...
+Jsonnet	vdDnUx2rsPs	593	Co-creator Dave Cunningham says Jsonnet — LondonGophers 2019	Jsonnet — Box and Databricks have a whole bunch of other internal infrastructure and they use it there.
+knip	9LB2WOrY91M	65	Lars Kappert (webpro), knip creator, says Knip with hard K — "Lars Kappert on Knip!" interview with Josh Goldberg	'What is Knip?' — Lars Kappert: 'Yeah, of course, thanks. Knip really started out of need...'
+LaTeX	U719vQz-WFs	3241	Leslie Lamport @ Ryan Peterman (54:01)	...a typographic designer at Addison Wesley who was responsible for the typographic design that's in the standard LaTeX styles.
+Logseq	DUGV8HL-poQ	56	Tienson Qin (Logseq creator) @ Fission (0:56)	I'm so excited to talk about Logseq
+n8n	d8KChF9l7yU	66	Jan Oberhauser (n8n founder/CEO) says n8n — official n8n channel, NYC meetup 2025	What is really at the core of n8n was always is the community.
+OWASP	5a7LM2PJffo	513	Mark Curphey (OWASP founder) keynote "20:20 The History and Future of OWASP" — official OWASP Foundation channel	When we first started OWASP we were using CVS...
+Pkl	dj-nspfpX_A	125	Dan Chao, core Pkl maintainer at Apple (captions hear "pickle") — InfoQ	I'm one of the core maintainers of Pkl at Apple... there's three of us maintaining Pkl.
+Postgres	S87qY2fubHA	184	Mike Stonebraker says POST-gres — "Goals for Postgres" interview clip	Basically we started building a new database system called Postgres... the key goal of Postgres was extendibility.
+quay	GmmjpIoQ7k0	86	Joey Schorr, Quay co-founder & tech lead, says Quay = 'key' — OpenShift Commons Briefing #121	I'm also the tech lead of Quay and the former co-founder of Quay back in the day... today I'll be talking about Quay, an enterprise-grade container registry.
+Raft	vYp4LYbnnW8	173	John Ousterhout (Raft co-author) @ Diego Ongaro channel, "Designing for Understandability" (2:53)	So today I'm going to talk about a new consensus algorithm that Diego and I designed called Raft
+scrypt	jzY3m5Kv7Y8	3853	Colin Percival (scrypt creator) — Everything you need to know about cryptography in 1 hour	The more secure option is scrypt — I came up with this, uh, back in 2009 I think it was — I was working on Tarsnap.
+TeX	jsZh4UEEyXU	2222	Donald Knuth @ Stanford Engineering (37:02)	I wrote a paper called the Errors of TeX, which lists more than a thousand mistakes... Since we were talking about TeX, I based TeX on binary arithmetic inside.
+tldraw	1C2TdPkj6aQ	17	Steve Ruiz (tldraw founder/CEO) introduces himself — AI Engineer World's Fair, "tldraw.computer" talk	My name's Steve, uh, Steve Ruiz. I am from a company that I started called tldraw. tldraw started as a, um...
+Vite	fxQXUqdzzFw	21	Evan You says VEET — ViteConf 2022 keynote	I'm Evan You, the original author of Vite and Vue.
+Vue	CB_QDOQ-8CI	0	Evan You says VYOO ("view") — Vue Fes Japan 2019 greeting	Hello Japanese Vue.js community! This is Evan You, creator of Vue.js.

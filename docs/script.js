@@ -1998,6 +1998,12 @@ function playCreatorClip(btn, videoId, startSec) {
 function escHTML(s) {
   return (s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 }
+// Escape for a single-quoted JS string literal interpolated into an HTML
+// attribute (onclick="playEntry('...')"). escHTML's &#39; entity decodes back
+// to a raw apostrophe before the JS parses, so it cannot protect this slot.
+function escJS(s) {
+  return (s || '').replace(/\/g, '\\').replace(/'/g, "\'");
+}
 function badge(text, kind) { return `<span class="badge badge-${kind}">${text}</span>`; }
 function entryHref(word) {
   return './word/' + word.toLowerCase().replace(/[^a-z0-9._-]/gu, '-');
@@ -2186,7 +2192,7 @@ function renderTodaysWord() {
         <span class="todays-ipa">${escHTML(e.ipa)}</span>
       </a>
       <div class="todays-actions">
-        <button class="play-btn play-primary" onclick="playEntry('${e.w}')" aria-label="Play today's word">▶</button>
+        <button class="play-btn play-primary" onclick="playEntry('${escJS(e.w)}')" aria-label="Play today's word">▶</button>
         <a href="./word/${slug}" class="todays-cta">See the source →</a>
       </div>
     </div>`;
