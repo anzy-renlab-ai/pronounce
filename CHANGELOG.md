@@ -1,5 +1,45 @@
 # Changelog
 
+## v2.30.0 — 2026-11-07
+
+**Creator clips: hear it from the creator's mouth.** Word pages now link the
+public YouTube moment where the name's creator says it — 49 verified clips
+(Donald Knuth on TeX, Leslie Lamport on LaTeX, Evan You on Vue and Vite,
+Richard Stallman on GNU, Mike Stonebraker on Postgres, Brian Kernighan on
+awk, Ian Murdock on Debian...). Every clip was curated and adversarially
+verified by a multi-agent workflow: oEmbed liveness, speaker identity, and
+timestamps corroborated against auto-captions. Clips only ever LINK — a
+lazy click-to-play youtube-nocookie embed, no rehosting.
+
+### Added
+
+- **Creator clip card on word pages** (English and 中文): play button, the
+  creator's own quote, and a plain watch-URL fallback. `data/creator-clips.tsv`
+  (word, youtube_id, t_seconds, label, quote), validated by lint check [9/9]
+  and by both site generators themselves.
+- **`say-it propose <word>`** — turns a dictionary miss into a contribution:
+  draft 10-column TSV row, research checklist, and a prefilled GitHub issue
+  URL. Fully offline; never invents a `source_url`.
+- 20 new clips in this release: TeX, LaTeX, Vue, Vite, Django, GNU, Debian,
+  Postgres, Raft, OWASP, Jsonnet, Pkl, Buildah, Logseq, n8n, quay, scrypt,
+  tldraw, knip, io_uring.
+
+### Fixed
+
+- **Cap'n Proto's play button worked never** — the raw apostrophe terminated
+  the `playEntry` JS string. New bash-3.2-safe `jsesc` helper (char loop;
+  `${var//}` replacement unescaping differs between bash 3.2 and zsh) now
+  escapes the word in every `onclick` slot, plus `escJS` for the client-side
+  today's-word button.
+- `say-it propose`: the lookup word reaches awk via `ENVIRON` (awk `-v`
+  interprets C escapes, so backslash words never matched), and `__WORD__` is
+  substituted before `__ROW__` so proposing that literal token can't corrupt
+  the draft row.
+- 中文 clip card uses `js_arg()` + `int(t)` instead of `esc()` — HTML entity
+  decoding re-arms a quote inside a JS string.
+- CI: `lint-dict.sh` now gates `build-site.yml`, and `data/creator-clips.tsv`
+  is in both workflows' path filters.
+
 ## v2.29.0 — 2026-11-06
 
 **Late-2026 AI vocabulary batch.** 17 new entries (1,920 total), led by the
