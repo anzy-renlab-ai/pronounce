@@ -62,6 +62,9 @@ assert_contains "--why GIF"        "Wilhite"           "$CLI" --why GIF
 assert_contains "--json kubectl"   "respelling_us"     "$CLI" --json kubectl
 assert_contains "--md JSON"        "Crockford"         "$CLI" --md JSON
 assert_contains "explain kubectl"  "Kelsey Hightower"  "$CLI" explain kubectl
+assert_contains "propose missing: draft row"     $'zzzfakeword\t[ipa GenAm'   "$CLI" propose zzzfakeword
+assert_contains "propose missing: GitHub issue"  "issues/new"                 "$CLI" propose zzzfakeword
+assert_contains_without "propose existing word"  "already in the dictionary"  "issues/new" "$CLI" propose kubectl
 assert_contains_without "badge GIF with failing pbcopy" "shields.io" "copied to clipboard" \
   env PATH="$failing_pbcopy_dir:$PATH" "$CLI" badge GIF
 assert_contains_without "tweet kubectl with failing pbcopy" "TIL" "copied to clipboard" \

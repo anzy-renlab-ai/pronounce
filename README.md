@@ -264,7 +264,7 @@ Local override: drop a `~/.config/say-it/pronunciations.local.tsv` and it takes 
 - ✅ Windows — PowerShell `System.Speech` from the same Bash CLI under Git Bash/MSYS2/Cygwin.
 - ✅ 1,920 entries; 1,300 carry a citable source — the rest are confidence-tagged, no fabricated citations.
 - ✅ **Audible multi-reading awareness** — contested words audibly chain alternates with "or:".
-- ✅ `--alt [N]`, `--all`, `--solo`, `--why`, `--json`, `--md`, `--no-dict`, `list`, `search`, `quiz`, `repl`, `stream`, `doctor`, `export`, `benchmark`, `badge`, `cheatsheet`.
+- ✅ `--alt [N]`, `--all`, `--solo`, `--why`, `--json`, `--md`, `--no-dict`, `list`, `search`, `quiz`, `repl`, `stream`, `doctor`, `export`, `benchmark`, `badge`, `cheatsheet`, `propose` (draft a new dictionary row + prefilled contribution issue).
 - ✅ Claude Code skill + MCP server for AI-side pronunciation questions.
 - ✅ GitHub Action — sourced pronunciation glossaries for Markdown pull requests.
 - ✅ Browser PWA — installable, offline-capable, instant search, voice-mic search, interactive quiz.

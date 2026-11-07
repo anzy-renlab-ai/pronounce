@@ -63,6 +63,27 @@ slugify_word() {
   fi
 }
 
+# Percent-encode a string for use inside a URL query value. Matches
+# urllib.parse.quote(): UTF-8 bytes are encoded, RFC 3986 unreserved
+# characters and "/" pass through. LC_ALL=C makes Bash 3.2 slice bytes; the
+# signed-byte correction keeps é from becoming %FFFFFFC3.
+urlencode() {
+  local LC_ALL=C value="$1" output="" char encoded number index
+  for (( index = 0; index < ${#value}; index++ )); do
+    char="${value:index:1}"
+    case "$char" in
+      [a-zA-Z0-9._~/-]) output="${output}${char}" ;;
+      *)
+        printf -v number '%d' "'$char"
+        (( number < 0 )) && number=$(( number + 256 ))
+        printf -v encoded '%%%02X' "$number"
+        output="${output}${encoded}"
+        ;;
+    esac
+  done
+  printf '%s' "$output"
+}
+
 # ANSI colors (disabled if NO_COLOR or not a TTY)
 if [[ -t 1 && -z "${NO_COLOR:-}" ]]; then
   C_RESET=$'\033[0m'; C_BOLD=$'\033[1m'; C_DIM=$'\033[2m'
@@ -211,6 +232,7 @@ ${C_BOLD}Subcommands:${C_RESET}
   say-it stream                  speak each line read from stdin as it arrives
   say-it minute                  60-second random-word pronunciation drill
   say-it export [json|csv|md]    bulk-export the whole dictionary
+  say-it propose <word>          draft a dict row + prefilled GitHub issue
   say-it benchmark               time dictionary lookups
   say-it doctor                  diagnose the TTS backend + optional deps
   say-it cheatsheet              print the full command cheatsheet
@@ -720,6 +742,87 @@ MD
     if [[ -n "$src_url" ]]; then echo ""; echo "${C_DIM}Source:${C_RESET} ${C_BLUE}$src_label${C_RESET}"; echo "        $src_url"; fi
     echo ""
     echo "${C_DIM}Category:${C_RESET} $cat${C_DIM} · Confidence:${C_RESET} $conf"
+    exit 0
+    ;;
+  propose)
+    # Offline scaffold generator: turns a dictionary miss into a contribution.
+    # It makes no network calls — it only prints a draft TSV row, a research
+    # checklist, and a prefilled GitHub issue URL the user can click.
+    require_dict
+    [[ -z "${2:-}" ]] && { echo "say-it: usage: say-it propose <word>" >&2; exit 2; }
+    word="$2"
+    REPO_TSV_URL="https://github.com/anzy-renlab-ai/pronounce/blob/main/data/pronunciations.tsv"
+    ISSUE_NEW_URL="https://github.com/anzy-renlab-ai/pronounce/issues/new"
+    sep=$'\x1f'
+    parsed=$(awk -F'\t' -v w="$(printf '%s' "$word" | tr '[:upper:]' '[:lower:]')" -v s="$sep" \
+      '!/^#/ && tolower($1)==w { print $2 s $3 s $9; exit }' "$DICT")
+    if [[ -n "$parsed" ]]; then
+      IFS="$sep" read -r ipa resp conf <<< "$parsed"
+      echo "${C_BOLD}$word${C_RESET} ${C_GREEN}is already in the dictionary${C_RESET} — no draft needed."
+      echo ""
+      echo "  ${C_DIM}respelling${C_RESET}  ${C_GREEN}${resp:-—}${C_RESET}"
+      echo "  ${C_DIM}ipa${C_RESET}         ${ipa:-—}"
+      echo "  ${C_DIM}confidence${C_RESET}  ${conf:-—}"
+      echo ""
+      echo "${C_DIM}To correct or extend this row, edit it in the TSV on GitHub:${C_RESET}"
+      echo "  $REPO_TSV_URL"
+      echo "${C_DIM}then open a pull request with the fix.${C_RESET}"
+      exit 0
+    fi
+    # 10-column draft row. Columns 4-5 (alternates) start empty on purpose;
+    # every other cell carries a bracketed hint so the row is obviously a draft.
+    draft_row="$(printf '%s\t%s\t%s\t\t\t%s\t%s\t%s\t%s\t%s' \
+      "$word" \
+      "[ipa GenAm w/ stress marks]" \
+      "[respelling: english-like words for TTS]" \
+      "[source_url]" \
+      "[source_label]" \
+      "[category: project|product|cli-tool|tool|cs-term|acronym|abbreviation]" \
+      "[confidence: creator-clarified|community-consensus|contested]" \
+      "[one-line note]")"
+    echo "${C_BOLD}$word${C_RESET} ${C_YELLOW}is not in the dictionary yet${C_RESET} — here's a contribution scaffold."
+    echo ""
+    echo "${C_BOLD}1. Draft TSV row${C_RESET} ${C_DIM}(10 TAB-separated columns — paste above the last row of data/pronunciations.tsv)${C_RESET}"
+    echo ""
+    printf '%s\n' "$draft_row"
+    echo ""
+    echo "${C_BOLD}2. Research checklist${C_RESET}"
+    echo "  ${C_DIM}1.${C_RESET} Find the official site / FAQ and check whether it states the pronunciation."
+    echo "  ${C_DIM}2.${C_RESET} Look for a creator quote or interview (conference talk, blog post, changelog)."
+    echo "  ${C_DIM}3.${C_RESET} Write the GenAm IPA with stress marks, e.g. /ˈkuːb kənˌtroʊl/."
+    echo "  ${C_DIM}4.${C_RESET} Write a respelling made of English-like words macOS ${C_BOLD}say${C_RESET} reads correctly."
+    echo "  ${C_DIM}5.${C_RESET} Never fabricate source_url — leave it empty if unverified."
+    echo ""
+    echo "${C_BOLD}3. Prefilled GitHub issue${C_RESET} ${C_DIM}(no network calls — it just opens the form)${C_RESET}"
+    # Body markdown is held in a quoted heredoc so the backticks survive, then
+    # the two placeholders are filled in afterwards.
+    issue_body="$(cat <<'BODY'
+### Add pronunciation: __WORD__
+
+**Draft dictionary row** — TAB-separated, 10 columns (paste it into `data/pronunciations.tsv`):
+
+```tsv
+__ROW__
+```
+
+**Research checklist**
+
+- [ ] Find the official site / FAQ and check whether it states the pronunciation.
+- [ ] Look for a creator quote or interview (conference talk, blog post, changelog).
+- [ ] Write the GenAm IPA with stress marks (e.g. `/ˈkuːb kənˌtroʊl/`).
+- [ ] Write a respelling made of English-like words that macOS `say` reads correctly.
+- [ ] Never fabricate `source_url` — leave it empty if unverified.
+
+_Scaffolded by `say-it propose __WORD__`. Replace every `[...]` placeholder above._
+BODY
+)"
+    issue_body="${issue_body//__ROW__/$draft_row}"
+    issue_body="${issue_body//__WORD__/$word}"
+    echo "$ISSUE_NEW_URL?title=Add%20pronunciation:%20$(urlencode "$word")&body=$(urlencode "$issue_body")"
+    echo ""
+    echo "${C_DIM}No browser? The same body as plain text — paste it into the issue yourself:${C_RESET}"
+    echo ""
+    printf '%s\n' "$issue_body"
     exit 0
     ;;
   playlist)

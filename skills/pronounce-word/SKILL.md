@@ -46,6 +46,20 @@ If the target token is ambiguous (multiple candidates in the message), ask which
 
 3. **Use `say-it --why <word>` to inspect** the dictionary entry (IPA, alternates, source, category, confidence) if you need to compose the caption — this is the canonical metadata for the reply.
 
+## When the word isn't in the dictionary
+
+`say-it <word>` still speaks the raw spelling on a miss, but the dictionary is the point — a miss is a chance to add the entry. If `--why` / `--json` reports `in_dict: false`, run:
+
+```bash
+say-it propose <word>
+```
+
+It prints a 10-column draft TSV row (placeholders for IPA, respelling, source, category, confidence, note), a five-item research checklist, and a prefilled GitHub issue URL whose body carries the draft. It is entirely offline — no network call and no side effects.
+
+Do the research yourself before filing: check the official site/FAQ, look for a creator quote or interview, write the GenAm IPA with stress marks, and write a respelling of English-like words that `say` reads correctly. **Never invent a `source_url`** — leave it empty when unverified. Then paste the result into the issue; if the user can't open a browser, hand them the plain-text body `propose` prints.
+
+If `propose` answers that the word is already in the dictionary, don't file an issue — show the existing entry instead (that path prints no `issues/new` link).
+
 ## Examples
 
 **Example 1 — creator-clarified word:**
