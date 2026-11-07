@@ -54,6 +54,18 @@
         <a class="download-mp3" href="../../audio/cap-n-proto.mp3" download="cap-n-proto.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <section class="creator-clip">
+      <h2>🎬 听创作者本人读</h2>
+      <div class="clip-row">
+        <button class="play-btn clip-play" onclick="zhPlayClip(this, 'Eg1YQ4V_Ouo', 1218)" aria-label="播放创作者读音片段">▶</button>
+        <div>
+          <p class="clip-label" lang="en">Kenton Varda (creator) @ Software Engineering Daily (20:18)</p>
+      <blockquote class="clip-quote" lang="en">it may still be in protobuf or Cap&#x27;n Proto format</blockquote>
+          <a class="clip-link" href="https://www.youtube.com/watch?v=Eg1YQ4V_Ouo&t=1218s" target="_blank" rel="noopener">在 YouTube 看这一段 ↗</a>
+        </div>
+      </div>
+      <div id="clip-frame-wrap" class="clip-frame-wrap"></div>
+    </section>
     <section class="prose">
       <p><strong>Cap&#x27;n Proto</strong> 在英语中的标准读法是 <strong>「KAP uhn PROH toh」</strong>（/ˌkæpən ˈproʊtoʊ/）。</p>
       <p class="en-note" lang="en">Zero-copy data serialization + RPC framework by Kenton Varda, former maintainer of Google&#x27;s Protocol Buffers. Per Varda himself, the name originally meant &#x27;Capabilities and Protobufs&#x27; — NOT a Cap&#x27;n Crunch pun; he said the cereal reference &#x27;never occurred to me,&#x27; and the &#x27;cerealization protocol&#x27; pun was pointed out by someone else and only then added to the logo. Regardless of origin, &#x27;Cap&#x27;n&#x27; is the ordinary contraction of &#x27;captain&#x27;, so it&#x27;s said &#x27;KAP-uhn PROH-toh&#x27; — same first word as the cereal mascot Cap&#x27;n Crunch — stress on KAP and PROH. Newcomers misread the apostrophe and say the full &#x27;CAPtain Proto&#x27;, or spell the tool name &#x27;capnp&#x27; out as letters C-A-P-N-P. The schema file extension and compiler are &#x27;capnp&#x27; (&#x27;cap-en-pee&#x27;).</p>
@@ -93,6 +105,7 @@
     function zhPlay(s){var n=0;(function go(){if(n++>=3)return;var a=new Audio('../../audio/'+s+'.mp3');a.addEventListener('ended',go);a.play().catch(function(){});})();}
     function zhSpeak(t){try{var u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=0.9;speechSynthesis.cancel();speechSynthesis.speak(u);}catch(e){}}
     function zhCopy(t,btn){if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){if(btn){var o=btn.textContent;btn.textContent='已复制 ✓';setTimeout(function(){btn.textContent=o;},1200);}});}}
+    function zhPlayClip(btn,videoId,startSec){var w=document.getElementById('clip-frame-wrap');if(!w)return;w.classList.add('on');w.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+videoId+'?start='+startSec+'&autoplay=1&rel=0" title="Creator clip" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';if(btn&&btn.parentNode)btn.parentNode.removeChild(btn);}
   </script>
   <a class="gh-float" href="https://github.com/anzy-renlab-ai/pronounce" target="_blank" rel="noopener"><span class="star">★</span> Star on GitHub</a>
   <footer class="footer">

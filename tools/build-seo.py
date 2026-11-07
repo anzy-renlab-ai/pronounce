@@ -29,6 +29,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 DICT = REPO / "data" / "pronunciations.tsv"
 ENTRY_DATES = REPO / "data" / "entry-dates.tsv"
+CREATOR_CLIPS = REPO / "data" / "creator-clips.tsv"
 DOCS = REPO / "docs"
 BRAND = "Pronounce"
 GH_REPO = "anzy-renlab-ai/pronounce"
@@ -134,6 +135,32 @@ def load_entry_dates(
             f"entry date slug mismatch: missing={missing}, stale={stale}"
         )
     return modified
+
+
+def load_creator_clips(path: Path | None = None) -> dict[str, dict]:
+    """slug -> {yt, t, label, quote} for words that have a creator clip.
+
+    Rows are validated by tools/lint-dict.sh check [9/9]; tolerate absence
+    (the file is optional) and skip silently malformed rows.
+    """
+    source = path if path is not None else CREATOR_CLIPS
+    clips: dict[str, dict] = {}
+    if not source.is_file():
+        return clips
+    for raw in source.read_text(encoding="utf-8").splitlines():
+        if not raw or raw.startswith("#"):
+            continue
+        cells = raw.split("\t")
+        if len(cells) != 5 or not cells[1].strip():
+            continue
+        word, yt, t, label, quote = cells
+        clips[slugify(word)] = {
+            "yt": yt,
+            "t": t,
+            "label": label,
+            "quote": quote,
+        }
+    return clips
 
 
 # ---------------------------------------------------------------------------
@@ -825,7 +852,7 @@ def _conf_zh(conf: str) -> str:
     }.get(conf, conf)
 
 
-def emit_zh_word(e: dict, out_dir: Path) -> None:
+def emit_zh_word(e: dict, out_dir: Path, clips: dict[str, dict]) -> None:
     slug = e["slug"]
     # Clean URL (Vercel cleanUrls) — the file on disk is still <slug>.html.
     canonical = f"{SITE_URL}/zh/word/{slug}"
@@ -938,7 +965,27 @@ def emit_zh_word(e: dict, out_dir: Path) -> None:
         <a class="download-mp3" href="../../audio/{slug}.mp3" download="{slug}.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
-    <section class="prose">
+"""
+    clip = clips.get(slug)
+    if clip:
+        watch = f"https://www.youtube.com/watch?v={clip['yt']}&t={clip['t']}s"
+        quote_html = (
+            f'\n      <blockquote class="clip-quote" lang="en">{esc(clip["quote"])}</blockquote>'
+            if clip["quote"] else ""
+        )
+        html += f"""    <section class="creator-clip">
+      <h2>🎬 听创作者本人读</h2>
+      <div class="clip-row">
+        <button class="play-btn clip-play" onclick="zhPlayClip(this, '{esc(clip['yt'])}', {esc(clip['t'])})" aria-label="播放创作者读音片段">▶</button>
+        <div>
+          <p class="clip-label" lang="en">{esc(clip["label"])}</p>{quote_html}
+          <a class="clip-link" href="{watch}" target="_blank" rel="noopener">在 YouTube 看这一段 ↗</a>
+        </div>
+      </div>
+      <div id="clip-frame-wrap" class="clip-frame-wrap"></div>
+    </section>
+"""
+    html += f"""    <section class="prose">
       <p><strong>{esc(e['word'])}</strong> 在英语中的标准读法是 <strong>「{esc(e['resp'])}」</strong>（{esc(e['ipa'])}）。</p>"""
     if e["notes"]:
         html += f'\n      <p class="en-note" lang="en">{esc(e["notes"])}</p>'
@@ -981,6 +1028,7 @@ def emit_zh_word(e: dict, out_dir: Path) -> None:
     function zhPlay(s){{var n=0;(function go(){{if(n++>=3)return;var a=new Audio('../../audio/'+s+'.mp3');a.addEventListener('ended',go);a.play().catch(function(){{}});}})();}}
     function zhSpeak(t){{try{{var u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=0.9;speechSynthesis.cancel();speechSynthesis.speak(u);}}catch(e){{}}}}
     function zhCopy(t,btn){{if(navigator.clipboard){{navigator.clipboard.writeText(t).then(function(){{if(btn){{var o=btn.textContent;btn.textContent='已复制 ✓';setTimeout(function(){{btn.textContent=o;}},1200);}}}});}}}}
+    function zhPlayClip(btn,videoId,startSec){{var w=document.getElementById('clip-frame-wrap');if(!w)return;w.classList.add('on');w.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+videoId+'?start='+startSec+'&autoplay=1&rel=0" title="Creator clip" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';if(btn&&btn.parentNode)btn.parentNode.removeChild(btn);}}
   </script>
 """
     html += footer("../..")
@@ -1194,7 +1242,8 @@ def patch_sitemap_index(
 def main() -> None:
     entries, by_slug = load_entries()
     modified = load_entry_dates(entries)
-    print(f"Loaded {len(entries)} entries.")
+    clips = load_creator_clips()
+    print(f"Loaded {len(entries)} entries, {len(clips)} creator clips.")
 
     coll_dir = DOCS / "collection"
     comp_dir = DOCS / "compare"
@@ -1215,7 +1264,7 @@ def main() -> None:
     print(f"  → wrote {n_comp} comparison pages + index")
 
     for e in entries:
-        emit_zh_word(e, zh_word_dir)
+        emit_zh_word(e, zh_word_dir, clips)
     emit_zh_word_index(entries, zh_word_dir)
     print(f"  → wrote {len(entries)} Chinese per-word pages + index")
 

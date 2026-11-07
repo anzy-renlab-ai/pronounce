@@ -54,6 +54,18 @@
         <a class="download-mp3" href="../../audio/leiningen.mp3" download="leiningen.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <section class="creator-clip">
+      <h2>🎬 听创作者本人读</h2>
+      <div class="clip-row">
+        <button class="play-btn clip-play" onclick="zhPlayClip(this, 'IgNocVDtMIQ', 19)" aria-label="播放创作者读音片段">▶</button>
+        <div>
+          <p class="clip-label" lang="en">Phil Hagelberg (Leiningen creator) @ ClojureTV (0:19) — Making Leiningen Work for You</p>
+      <blockquote class="clip-quote" lang="en">I&#x27;m sure many of you have heard about Leiningen... this Leiningen is a build tool with simple aspirations.</blockquote>
+          <a class="clip-link" href="https://www.youtube.com/watch?v=IgNocVDtMIQ&t=19s" target="_blank" rel="noopener">在 YouTube 看这一段 ↗</a>
+        </div>
+      </div>
+      <div id="clip-frame-wrap" class="clip-frame-wrap"></div>
+    </section>
     <section class="prose">
       <p><strong>Leiningen</strong> 在英语中的标准读法是 <strong>「line ing un」</strong>（/ˈlaɪnɪŋən/）。</p>
       <p class="en-note" lang="en">Leiningen (the lein command) is the long-standing build tool and project-automation entry point for Clojure. The official FAQ settles it: LINE-ing-en, with the German ei read as &quot;eye&quot; — the name comes from Carl Stephenson&#x27;s short story &quot;Leiningen Versus the Ants&quot;. Common misreadings like &quot;lay-nin-jen&quot; or &quot;lee-nin-gen&quot; are simply wrong.</p>
@@ -92,6 +104,7 @@
     function zhPlay(s){var n=0;(function go(){if(n++>=3)return;var a=new Audio('../../audio/'+s+'.mp3');a.addEventListener('ended',go);a.play().catch(function(){});})();}
     function zhSpeak(t){try{var u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=0.9;speechSynthesis.cancel();speechSynthesis.speak(u);}catch(e){}}
     function zhCopy(t,btn){if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){if(btn){var o=btn.textContent;btn.textContent='已复制 ✓';setTimeout(function(){btn.textContent=o;},1200);}});}}
+    function zhPlayClip(btn,videoId,startSec){var w=document.getElementById('clip-frame-wrap');if(!w)return;w.classList.add('on');w.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+videoId+'?start='+startSec+'&autoplay=1&rel=0" title="Creator clip" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';if(btn&&btn.parentNode)btn.parentNode.removeChild(btn);}
   </script>
   <a class="gh-float" href="https://github.com/anzy-renlab-ai/pronounce" target="_blank" rel="noopener"><span class="star">★</span> Star on GitHub</a>
   <footer class="footer">

@@ -54,6 +54,18 @@
         <a class="download-mp3" href="../../audio/dhall.mp3" download="dhall.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <section class="creator-clip">
+      <h2>🎬 听创作者本人读</h2>
+      <div class="clip-row">
+        <button class="play-btn clip-play" onclick="zhPlayClip(this, 'eG8GLudLIbA', 20)" aria-label="播放创作者读音片段">▶</button>
+        <div>
+          <p class="clip-label" lang="en">Creator Gabriella Gonzalez says Dhall — Houston FPUG talk</p>
+      <blockquote class="clip-quote" lang="en">today I&#x27;m gonna be talking about Dhall, which is a programmable configuration language</blockquote>
+          <a class="clip-link" href="https://www.youtube.com/watch?v=eG8GLudLIbA&t=20s" target="_blank" rel="noopener">在 YouTube 看这一段 ↗</a>
+        </div>
+      </div>
+      <div id="clip-frame-wrap" class="clip-frame-wrap"></div>
+    </section>
     <section class="prose">
       <p><strong>Dhall</strong> 在英语中的标准读法是 <strong>「dawl」</strong>（/dɔl/）。</p>
       <p class="en-note" lang="en">A programmable, non-Turing-complete configuration language by Gabriel Gonzalez (an alternative to YAML/JSON). The official README settles it: the name comes from a Dustman in the game Planescape: Torment (NOT author Roald DAHL and NOT the lentil dish &#x27;dal/daal&#x27;), and &#x27;rhymes with tall/call/hall — dɔl for a US speaker, dɔːl for a UK speaker.&#x27; So General American is DAWL (rhymes with TALL), stress on the single syllable. Despite the ruling, a large slice of the community still says /dɑːl/ (&#x27;dahl&#x27;, like the dish), tracked in GitHub issue #144 which also catalogs /dæl/ (rhymes with &#x27;pal&#x27;); the silent-h &#x27;Dh&#x27; digraph even tempts a /ð/ (&#x27;that&#x27;) onset.</p>
@@ -93,6 +105,7 @@
     function zhPlay(s){var n=0;(function go(){if(n++>=3)return;var a=new Audio('../../audio/'+s+'.mp3');a.addEventListener('ended',go);a.play().catch(function(){});})();}
     function zhSpeak(t){try{var u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=0.9;speechSynthesis.cancel();speechSynthesis.speak(u);}catch(e){}}
     function zhCopy(t,btn){if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){if(btn){var o=btn.textContent;btn.textContent='已复制 ✓';setTimeout(function(){btn.textContent=o;},1200);}});}}
+    function zhPlayClip(btn,videoId,startSec){var w=document.getElementById('clip-frame-wrap');if(!w)return;w.classList.add('on');w.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+videoId+'?start='+startSec+'&autoplay=1&rel=0" title="Creator clip" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';if(btn&&btn.parentNode)btn.parentNode.removeChild(btn);}
   </script>
   <a class="gh-float" href="https://github.com/anzy-renlab-ai/pronounce" target="_blank" rel="noopener"><span class="star">★</span> Star on GitHub</a>
   <footer class="footer">

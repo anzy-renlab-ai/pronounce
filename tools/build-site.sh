@@ -393,6 +393,18 @@ header.hero { margin-bottom: 48px; text-align: center; }
 .word-page .related li a { display: inline-block; padding: 7px 14px; background: var(--card); border: 1px solid var(--border); border-radius: 999px; text-decoration: none; color: var(--muted-strong); font-family: var(--mono); font-size: 14px; }
 .word-page .related li a:hover { border-color: var(--accent); color: var(--accent); background: var(--card-2); }
 
+/* Creator clip card — lazy click-to-play YouTube embed on word pages */
+.creator-clip { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin: 0 0 22px; }
+.creator-clip h2 { margin: 0 0 12px; font-size: 19px; }
+.creator-clip .clip-row { display: flex; gap: 14px; align-items: flex-start; }
+.creator-clip .clip-play { width: 44px; height: 44px; font-size: 15px; }
+.creator-clip .clip-label { color: var(--fg); font-size: 15px; margin: 2px 0 8px; font-weight: 600; }
+.creator-clip .clip-quote { color: var(--muted-strong); font-size: 14px; margin: 0 0 8px; padding-left: 10px; border-left: 3px solid var(--accent); font-style: italic; }
+.creator-clip .clip-link { font-size: 13px; color: var(--link); }
+.clip-frame-wrap { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: 8px; overflow: hidden; display: none; margin-top: 14px; background: #000; }
+.clip-frame-wrap.on { display: block; }
+.clip-frame-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
 /* Editor-install CTA — shown at the peak-intent moment, right after the answer */
 .editor-cta { background: var(--card-2); border: 1px solid var(--accent); border-radius: 14px; padding: 24px 26px; margin: 32px 0; }
 .editor-cta h2 { margin: 0 0 8px; font-size: 21px; }
@@ -606,6 +618,16 @@ function playEntry(idx, opts) {
     return;
   }
   playPrerendered(audioUrl(entry.w), buildBody(entry, opts || {}));
+}
+
+// Creator clip — click-to-play lazy YouTube embed (no iframe until asked).
+function playCreatorClip(btn, videoId, startSec) {
+  var wrap = document.getElementById('clip-frame-wrap');
+  if (!wrap) return;
+  wrap.classList.add('on');
+  wrap.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + videoId +
+    '?start=' + startSec + '&autoplay=1&rel=0" title="The creator says the name" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+  if (btn && btn.parentNode) btn.parentNode.removeChild(btn);
 }
 
 function escHTML(s) {
@@ -1611,7 +1633,7 @@ TMP_LIST="$(mktemp -t say-it-words.XXXXXX)"
 # can stamp datePublished/dateModified without spawning a lookup per word. These
 # used to be the BUILD date on every page — a fresh "modified today" on all 1,848
 # entries every CI run, which is both false and ~5,400 files of churn.
-slug_awk -F'\t' -v dates="$REPO_ROOT/data/entry-dates.tsv" '
+slug_awk -F'\t' -v dates="$REPO_ROOT/data/entry-dates.tsv" -v clips="$REPO_ROOT/data/creator-clips.tsv" '
   BEGIN {
     while ((getline line < dates) > 0) {
       if (line ~ /^#/ || line == "") continue
@@ -1619,15 +1641,27 @@ slug_awk -F'\t' -v dates="$REPO_ROOT/data/entry-dates.tsv" '
       if (n >= 3) { pub[d[1]] = d[2]; mod[d[1]] = d[3] }
     }
     close(dates)
+    # creator clips: word -> youtube_id, t_seconds, label, quote (fields 13-16)
+    while ((getline line < clips) > 0) {
+      if (line ~ /^#/ || line == "") continue
+      n = split(line, c, "\t")
+      if (n >= 3) { cyt[tolower(c[1])] = c[2]; ct[tolower(c[1])] = c[3]; clab[tolower(c[1])] = c[4]; cq[tolower(c[1])] = c[5] }
+    }
+    close(clips)
   }
   !/^#/ && NF>=3 && $1 != "" && $1 != "word" {
     slug = tolower($1)
     gsub(/[\200-\277]/, "", slug)
     gsub(/[^abcdefghijklmnopqrstuvwxyz0123456789._-]/, "-", slug)
-    printf "%s\x1f%s\x1f%s\x1f%s\x1f%s\x1f%s\x1f%s\x1f%s\x1f%s\x1f%s\x1f%s\x1f%s\n",
+    key = tolower($1)
+    printf "%s\x1f%s\x1f%s\x1f%s\x1f%s\x1f%s\x1f%s\x1f%s\x1f%s\x1f%s\x1f%s\x1f%s\x1f%s\x1f%s\x1f%s\x1f%s\n",
       $1, $2, $3, $4, $5, $6, $7, $8, $9, $10,
       (slug in pub ? pub[slug] : ENVIRON["TODAY"]),
-      (slug in mod ? mod[slug] : ENVIRON["TODAY"])
+      (slug in mod ? mod[slug] : ENVIRON["TODAY"]),
+      (key in cyt ? cyt[key] : ""),
+      (key in ct ? ct[key] : ""),
+      (key in clab ? clab[key] : ""),
+      (key in cq ? cq[key] : "")
   }
 ' "$DICT" > "$TMP_LIST"
 
@@ -1663,7 +1697,7 @@ prev_next() {
   ' "$WORD_LIST_TMP"
 }
 
-while IFS="$SEP" read -r word ipa resp alt_ipa alt_resp src_url src_label cat conf notes date_pub date_mod; do
+while IFS="$SEP" read -r word ipa resp alt_ipa alt_resp src_url src_label cat conf notes date_pub date_mod clip_yt clip_t clip_label clip_quote; do
   [[ -z "$word" ]] && continue
 
   slug="$(slugify "$word")"
@@ -1819,6 +1853,30 @@ while IFS="$SEP" read -r word ipa resp alt_ipa alt_resp src_url src_label cat co
     page_title="How to pronounce $word_esc"
   fi
 
+  # Creator clip card — links to (does not rehost) a public video where the
+  # creator/founder says the name. Lazy: no iframe until the user clicks.
+  creator_clip_html=""
+  if [[ -n "$clip_yt" ]]; then
+    clip_watch="https://www.youtube.com/watch?v=$clip_yt&t=${clip_t}s"
+    clip_label_esc="$(htmlesc "$clip_label")"
+    creator_clip_html="    <section class=\"creator-clip\">
+      <h2>🎬 Hear it from the creator</h2>
+      <div class=\"clip-row\">
+        <button class=\"play-btn clip-play\" onclick=\"playCreatorClip(this, '$clip_yt', $clip_t)\" aria-label=\"Play the clip where the creator says $word_esc\">▶</button>
+        <div>
+          <p class=\"clip-label\">$clip_label_esc</p>"
+    if [[ -n "$clip_quote" ]]; then
+      creator_clip_html="$creator_clip_html
+          <blockquote class=\"clip-quote\">$(htmlesc "$clip_quote")</blockquote>"
+    fi
+    creator_clip_html="$creator_clip_html
+          <a class=\"clip-link\" href=\"$clip_watch\" target=\"_blank\" rel=\"noopener\">Watch the moment on YouTube ↗</a>
+        </div>
+      </div>
+      <div id=\"clip-frame-wrap\" class=\"clip-frame-wrap\"></div>
+    </section>"
+  fi
+
   # Meta description (under 160 chars where possible)
   meta_desc="$word is pronounced \"$resp\" ($ipa)."
   [[ -n "$notes" ]] && meta_desc="$meta_desc $notes"
@@ -1896,6 +1954,8 @@ HTML
       </div>
 $alts_html
     </div>
+
+$creator_clip_html
 
     <section class="prose">
       <p><strong>$word_esc</strong> is most commonly pronounced <strong>"$resp_esc"</strong> ($ipa_esc). $conf_blurb</p>

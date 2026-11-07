@@ -54,6 +54,18 @@
         <a class="download-mp3" href="../../audio/mujoco.mp3" download="mujoco.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <section class="creator-clip">
+      <h2>🎬 听创作者本人读</h2>
+      <div class="clip-row">
+        <button class="play-btn clip-play" onclick="zhPlayClip(this, 'lJCwGKa1v8k', 44)" aria-label="播放创作者读音片段">▶</button>
+        <div>
+          <p class="clip-label" lang="en">Emo Todorov, MuJoCo creator, says MuJoCo (&quot;mew-jo-co&quot;) — CoRL 2023 Deployable workshop talk</p>
+      <blockquote class="clip-quote" lang="en">I&#x27;m going to talk about model-based optimization with MuJoCo physics... MuJoCo 3.0 was just released by the good people at DeepMind.</blockquote>
+          <a class="clip-link" href="https://www.youtube.com/watch?v=lJCwGKa1v8k&t=44s" target="_blank" rel="noopener">在 YouTube 看这一段 ↗</a>
+        </div>
+      </div>
+      <div id="clip-frame-wrap" class="clip-frame-wrap"></div>
+    </section>
     <section class="prose">
       <p><strong>mujoco</strong> 在英语中的标准读法是 <strong>「mew jo co」</strong>（/ˈmjuːdʒoʊkoʊ/）。</p>
       <p class="en-note" lang="en">Multi-Joint dynamics with Contact physics engine; &quot;MEW-jo-co&quot;.</p>
@@ -92,6 +104,7 @@
     function zhPlay(s){var n=0;(function go(){if(n++>=3)return;var a=new Audio('../../audio/'+s+'.mp3');a.addEventListener('ended',go);a.play().catch(function(){});})();}
     function zhSpeak(t){try{var u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=0.9;speechSynthesis.cancel();speechSynthesis.speak(u);}catch(e){}}
     function zhCopy(t,btn){if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){if(btn){var o=btn.textContent;btn.textContent='已复制 ✓';setTimeout(function(){btn.textContent=o;},1200);}});}}
+    function zhPlayClip(btn,videoId,startSec){var w=document.getElementById('clip-frame-wrap');if(!w)return;w.classList.add('on');w.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+videoId+'?start='+startSec+'&autoplay=1&rel=0" title="Creator clip" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';if(btn&&btn.parentNode)btn.parentNode.removeChild(btn);}
   </script>
   <a class="gh-float" href="https://github.com/anzy-renlab-ai/pronounce" target="_blank" rel="noopener"><span class="star">★</span> Star on GitHub</a>
   <footer class="footer">

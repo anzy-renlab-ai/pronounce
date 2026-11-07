@@ -1985,6 +1985,16 @@ function playEntry(idx, opts) {
   playPrerendered(audioUrl(entry.w), buildBody(entry, opts || {}));
 }
 
+// Creator clip — click-to-play lazy YouTube embed (no iframe until asked).
+function playCreatorClip(btn, videoId, startSec) {
+  var wrap = document.getElementById('clip-frame-wrap');
+  if (!wrap) return;
+  wrap.classList.add('on');
+  wrap.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + videoId +
+    '?start=' + startSec + '&autoplay=1&rel=0" title="The creator says the name" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+  if (btn && btn.parentNode) btn.parentNode.removeChild(btn);
+}
+
 function escHTML(s) {
   return (s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 }

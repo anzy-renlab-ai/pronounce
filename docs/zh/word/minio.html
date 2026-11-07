@@ -54,6 +54,18 @@
         <a class="download-mp3" href="../../audio/minio.mp3" download="minio.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <section class="creator-clip">
+      <h2>🎬 听创作者本人读</h2>
+      <div class="clip-row">
+        <button class="play-btn clip-play" onclick="zhPlayClip(this, 'bYlaqhblCuI', 15)" aria-label="播放创作者读音片段">▶</button>
+        <div>
+          <p class="clip-label" lang="en">MinIO CMO Jonathan Symonds opens Tech Field Day &quot;Understanding MinIO&quot; (SFD21): &quot;MinIO does only one thing, we only do object storage&quot; — co-founder AB Periasamy also presents later in the same video</p>
+      <blockquote class="clip-quote" lang="en">MinIO does only one thing. We only do object storage.</blockquote>
+          <a class="clip-link" href="https://www.youtube.com/watch?v=bYlaqhblCuI&t=15s" target="_blank" rel="noopener">在 YouTube 看这一段 ↗</a>
+        </div>
+      </div>
+      <div id="clip-frame-wrap" class="clip-frame-wrap"></div>
+    </section>
     <section class="prose">
       <p><strong>MinIO</strong> 在英语中的标准读法是 <strong>「min eye oh」</strong>（/mɪnˈaɪoʊ/）。</p>
       <p class="en-note" lang="en">MinIO is a high-performance, S3-compatible object-storage server; the name is short for &quot;minimal I/O,&quot; so it is said min-EYE-oh — the &quot;IO&quot; is the spelled-out input/output acronym (&quot;eye-oh&quot;). Founder/CEO A.B. (Anand Babu) Periasamy has explicitly stated he wants it known as &quot;Min-IO, as in minimal IO&quot; (TechTarget, verified). The article confirms the common variant: &quot;most people pronounce it MIN-EO&quot; (min-ee-oh, captured as the alt) — devs default to it because &quot;-io&quot; reads like an ordinary word ending rather than a spelled-out acronym.</p>
@@ -93,6 +105,7 @@
     function zhPlay(s){var n=0;(function go(){if(n++>=3)return;var a=new Audio('../../audio/'+s+'.mp3');a.addEventListener('ended',go);a.play().catch(function(){});})();}
     function zhSpeak(t){try{var u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=0.9;speechSynthesis.cancel();speechSynthesis.speak(u);}catch(e){}}
     function zhCopy(t,btn){if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){if(btn){var o=btn.textContent;btn.textContent='已复制 ✓';setTimeout(function(){btn.textContent=o;},1200);}});}}
+    function zhPlayClip(btn,videoId,startSec){var w=document.getElementById('clip-frame-wrap');if(!w)return;w.classList.add('on');w.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+videoId+'?start='+startSec+'&autoplay=1&rel=0" title="Creator clip" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';if(btn&&btn.parentNode)btn.parentNode.removeChild(btn);}
   </script>
   <a class="gh-float" href="https://github.com/anzy-renlab-ai/pronounce" target="_blank" rel="noopener"><span class="star">★</span> Star on GitHub</a>
   <footer class="footer">

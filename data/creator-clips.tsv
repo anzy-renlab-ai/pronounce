@@ -1,0 +1,34 @@
+# Creator audio clips — public videos where the creator/founder says the name.
+# One row per dictionary word (tabs, 5 columns):
+#   word  youtube_id  t_seconds  label  quote
+# The site LINKS to these (lazy click-to-play embed); it never rehosts audio.
+# Every row must reference a word in pronunciations.tsv (see tools/lint-dict.sh).
+arxiv	qQuDSZwGmcM	142	Paul Ginsparg, arXiv founder, says arXiv ("AR-kive") — Aspen Physics talk	I'll start out — as Ethan mentioned — with arXiv, which has become the standard way of communicating information in physics.
+awk	W5kr7X7EG4o	4	Brian Kernighan (awk co-creator) defines AWK and names Aho & Weinberger — Lex Fridman clip	What is awk? Awk is a scripting language that was done by myself, Al Aho, and Peter Weinberger.
+Cap'n Proto	Eg1YQ4V_Ouo	1218	Kenton Varda (creator) @ Software Engineering Daily (20:18)	it may still be in protobuf or Cap'n Proto format
+chezmoi	JrCMCdvoMAw	154	Tom Payne, chezmoi creator, says chezmoi ("shay-mwa") — Conf42 Open Source Showcase 2020	chezmoi is very nice to install — it's in Homebrew, there are packages for every major Linux distribution.
+Citus	vrdgxg7xcak	158	Umur Cubukcu (Citus Data co-founder/CEO) says SITE-us — Citus Con 2022 keynote, Microsoft Developer	With Citus, what you can do and what you are doing today is instead of scaling up with a traditional relational database that what you would do with Postgres, you're able to, in addition to scaling up, really scale out.
+CUE	b3fhA12KS48	42	Creator Marcel van Lohuizen says CUE — GopherCon Russia	I'm going to introduce a new approach to this called CUE
+Debezium	G7TvRzPQH-U	76	Gunnar Morling (Debezium creator/project lead) says dee-BEE-zee-um — CMU Database Group seminar	...thanks for having me for the talk about open source change data capture with Debezium.
+Dhall	eG8GLudLIbA	20	Creator Gabriella Gonzalez says Dhall — Houston FPUG talk	today I'm gonna be talking about Dhall, which is a programmable configuration language
+egui	6YzGGta_J1I	3196	Emil Ernerfeldt, egui creator, says egui ("e-gooey") — Rustacean Station interview	So far I've been working on egui on and off for well, almost three years... hopefully this is going to be a very exciting year for egui.
+Ghostty	l_qY2p0OH9A	373	Mitchell Hashimoto (Ghostty creator) introduces it — Zig SHOWTIME #32	I'm going to be talking about Ghostty. Ghostty is a terminal emulator written in Zig, from scratch.
+Godot	LDSwP37y_W4	3	Juan Linietsky (Godot co-creator) — GodotCon 2026, official Godot Engine channel	I haven't done a talk for Godot in a very long time, I guess. So it's nice to be around.
+Grype	vQTvAPCvr2c	253	Anchore's own Syft/Grype engineers say Grype — official Anchore dev stream	we had a false negative in Grype
+guix	339dRDf4c6E	70	Ludovic Courtès, Guix founder, says Guix ("geeks") — guix.social founder chat	...and then I worked on various Scheme-related things and eventually on Guix and before that I worked on Nix, but maybe we're going to talk a little bit more about this later.
+Immich	sZIEu6u-3qo	84	Alex Tran (Immich founder) says it like 'image' — 45Drives podcast	Hello everybody, my name is Alex from Immich... (auto-captions render the name as "image")
+Jina	YYIqvzbXfI8	36	Founder/CEO Han Xiao says Jina — official Jina AI webinar Ep.1 ("Hello Jina", 2020)	open source product which is called Jina
+jOOQ	W2uavVs3BsI	27	Lukas Eder (jOOQ creator) says JUKE — JUXTCast S5E10	hi Jeremy, so I'm Lukas. I made jOOQ, a popular Java persistence library that has been increasingly popular in the ecosystem.
+Keras	oekqrCFN7MM	107	François Chollet (Keras creator) @ Google for Developers, "Keras Turns 10" (1:47)	And I'm François. So, currently I'm running my own AI research startup. And before that, I was running the Keras team at Google... doing Keras since it started.
+Leiningen	IgNocVDtMIQ	19	Phil Hagelberg (Leiningen creator) @ ClojureTV (0:19) — Making Leiningen Work for You	I'm sure many of you have heard about Leiningen... this Leiningen is a build tool with simple aspirations.
+Lua	57jKNEKSNWA	145	Roberto Ierusalimschy (Lua creator) — Curry On closing keynote	I'm going to talk a little about scripting with Lua.
+MinIO	bYlaqhblCuI	15	MinIO CMO Jonathan Symonds opens Tech Field Day "Understanding MinIO" (SFD21): "MinIO does only one thing, we only do object storage" — co-founder AB Periasamy also presents later in the same video	MinIO does only one thing. We only do object storage.
+mise	XDAfpzjBYJQ	961	Jeff Dickey (jdx), mise creator, says mise ("meez") — devtools.fm interview	My goal with mise is for it to be one polyglot interface that no matter what your product's written in, no matter how many languages, ecosystems it has — you just have one common way to set it up.
+mujoco	lJCwGKa1v8k	44	Emo Todorov, MuJoCo creator, says MuJoCo ("mew-jo-co") — CoRL 2023 Deployable workshop talk	I'm going to talk about model-based optimization with MuJoCo physics... MuJoCo 3.0 was just released by the good people at DeepMind.
+Nagios	4ZpAghTzmO0	6	Ethan Galstad (Nagios founder) says nah-ghee-ose — official Nagios channel, Nagios World Conference keynote	My name is Ethan Galstad. I am the founder of Nagios and the president of Nagios Enterprises.
+nccl	BHqoXoRuH-I	42	Sylvain Jeaugey, NCCL lead developer at NVIDIA, says NCCL ("nickel") — inter-GPU comms talk (Coding Workflows channel re-post)	First things first: what is NCCL? NCCL is an inter-GPU communication library... you can download it from developer.nvidia.com/nccl.
+oxlint	IjV0tLysXc0	216	Boshen Chen, oxc/oxlint creator, says oxlint ("OX-lint") — ViteConf 2024	You can already try it in your own project by calling npx oxlint.
+Syft	vQTvAPCvr2c	293	Anchore's own Syft/Grype engineers say Syft — official Anchore dev stream	one of the things is that Syft was generating
+Tcl	L0Qjk1BZDww	36	John Ousterhout (Tcl creator) says TICKLE — Tcl/Tk conference keynote (Part 1)	Unlike past times I've been to Tcl conference, I actually have glasses this time.
+Traefik	RgudiksfL-k	10	Emile Vauge (Traefik creator) introduces it — GopherCon 2017	A project I've been working on for two years now, and it's called Traefik, and it's a reverse proxy and load balancer written in Go.
+Typst	WQyqyrRQcSw	80	Co-creator Laurenz Mädje says Typst — official Typst channel meetup talk	"…write show rules that simulate that Typst has some kind of weird inheritance feature…" (spoken at ~80.5s)

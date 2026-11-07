@@ -161,6 +161,54 @@ awk -F'\t' '
   }
 ' "$DICT"
 
+# Creator clips: every row must name a dictionary word, carry a plausible
+# 11-char YouTube ID and an integer start second. A clip for a word that
+# isn't in the dict renders nowhere and hides a casing typo.
+echo "[9/9] checking data/creator-clips.tsv rows..."
+CLIPS="$REPO_ROOT/data/creator-clips.tsv"
+if [[ -f "$CLIPS" ]]; then
+  clips_bad="$(python3 - "$DICT" "$CLIPS" <<'PYEOF'
+import sys
+dict_path, clips_path = sys.argv[1], sys.argv[2]
+words = set()
+for line in open(dict_path, encoding="utf-8"):
+    if line.startswith("#") or not line.strip():
+        continue
+    w = line.split("\t")[0].strip()
+    if w and w != "word":
+        words.add(w.lower())
+bad = []
+n = 0
+for line in open(clips_path, encoding="utf-8"):
+    if line.startswith("#") or not line.strip():
+        continue
+    n += 1
+    f = line.rstrip("\n").split("\t")
+    if len(f) != 5:
+        bad.append(f"row {n}: {len(f)} cols, need 5 ({f[0]})")
+    elif f[0].lower() not in words:
+        bad.append(f"row {n}: {f[0]!r} not in pronunciations.tsv")
+    elif len(f[1]) != 11 or any(ch not in "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_" for ch in f[1]):
+        bad.append(f"row {n}: {f[0]} bad youtube id {f[1]!r}")
+    elif not f[2].isdigit() or int(f[2]) < 0:
+        bad.append(f"row {n}: {f[0]} bad t_seconds {f[2]!r}")
+    elif not f[3].strip():
+        bad.append(f"row {n}: {f[0]} empty label")
+print("\n".join(bad))
+PYEOF
+)"
+  if [[ -n "$clips_bad" ]]; then
+    echo "  ✗ creator-clips problems:" >&2
+    echo "$clips_bad" >&2
+    fail=1
+  else
+    n_clips=$(awk -F'\t' '!/^#/ && NF>=1 && $1 != ""' "$CLIPS" | wc -l | tr -d ' ')
+    echo "  ✓ all $n_clips creator clips valid"
+  fi
+else
+  echo "  ✓ no creator-clips.tsv (optional)"
+fi
+
 echo ""
 if (( fail )); then echo "✗ lint failed"; exit 1
 else echo "✓ lint passed"; fi

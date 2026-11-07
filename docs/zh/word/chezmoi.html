@@ -54,6 +54,18 @@
         <a class="download-mp3" href="../../audio/chezmoi.mp3" download="chezmoi.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <section class="creator-clip">
+      <h2>🎬 听创作者本人读</h2>
+      <div class="clip-row">
+        <button class="play-btn clip-play" onclick="zhPlayClip(this, 'JrCMCdvoMAw', 154)" aria-label="播放创作者读音片段">▶</button>
+        <div>
+          <p class="clip-label" lang="en">Tom Payne, chezmoi creator, says chezmoi (&quot;shay-mwa&quot;) — Conf42 Open Source Showcase 2020</p>
+      <blockquote class="clip-quote" lang="en">chezmoi is very nice to install — it&#x27;s in Homebrew, there are packages for every major Linux distribution.</blockquote>
+          <a class="clip-link" href="https://www.youtube.com/watch?v=JrCMCdvoMAw&t=154s" target="_blank" rel="noopener">在 YouTube 看这一段 ↗</a>
+        </div>
+      </div>
+      <div id="clip-frame-wrap" class="clip-frame-wrap"></div>
+    </section>
     <section class="prose">
       <p><strong>chezmoi</strong> 在英语中的标准读法是 <strong>「shay mwa」</strong>（/ʃeɪ mwa/）。</p>
       <p class="en-note" lang="en">CLI dotfiles manager. Name = French &quot;chez moi&quot; (&quot;at my house&quot;). Official FAQ documents the pronunciation as /ʃeɪ mwa/ &quot;shay-mwa&quot;. Non-obvious because the spelling looks English/German; the &quot;z&quot; is silent and &quot;oi&quot; is the French [wa], not English &quot;oy&quot;.</p>
@@ -92,6 +104,7 @@
     function zhPlay(s){var n=0;(function go(){if(n++>=3)return;var a=new Audio('../../audio/'+s+'.mp3');a.addEventListener('ended',go);a.play().catch(function(){});})();}
     function zhSpeak(t){try{var u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=0.9;speechSynthesis.cancel();speechSynthesis.speak(u);}catch(e){}}
     function zhCopy(t,btn){if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){if(btn){var o=btn.textContent;btn.textContent='已复制 ✓';setTimeout(function(){btn.textContent=o;},1200);}});}}
+    function zhPlayClip(btn,videoId,startSec){var w=document.getElementById('clip-frame-wrap');if(!w)return;w.classList.add('on');w.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+videoId+'?start='+startSec+'&autoplay=1&rel=0" title="Creator clip" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';if(btn&&btn.parentNode)btn.parentNode.removeChild(btn);}
   </script>
   <a class="gh-float" href="https://github.com/anzy-renlab-ai/pronounce" target="_blank" rel="noopener"><span class="star">★</span> Star on GitHub</a>
   <footer class="footer">
