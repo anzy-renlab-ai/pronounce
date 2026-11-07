@@ -1017,7 +1017,7 @@ def emit_zh_word(e: dict, out_dir: Path, clips: dict[str, dict]) -> None:
       <div><span class="prompt">$</span> say-it {esc(e['word'])}<span style="color: var(--muted)">  # 主读音 × 3 次</span></div>
     </div>
     <p style="margin-top: 20px; font-size: 14px; color: var(--muted);">
-      安装 CLI：<code>git clone https://github.com/{GH_REPO}.git &amp;&amp; cd pronounce &amp;&amp; ./install.sh</code>
+      安装 CLI：<code>curl -fsSL {SITE_URL}/install.sh | bash</code>
     </p>
     <section class="related" style="margin-top: 36px;">
       <h2>查看英文完整词条</h2>

@@ -2,7 +2,7 @@
 function Terminal({ registerEgg }) {
   const [copied, setCopied] = React.useState(false);
   const copy = () => {
-    navigator.clipboard?.writeText('git clone https://github.com/anzy-renlab-ai/pronounce.git && cd pronounce && ./install.sh');
+    navigator.clipboard?.writeText('curl -fsSL https://pronounce.renlab.ai/install.sh | bash');
     setCopied(true);
     registerEgg('install');
     setTimeout(() => setCopied(false), 1600);
@@ -27,7 +27,7 @@ function Terminal({ registerEgg }) {
           </p>
           <div className="install" onClick={copy}>
             <span className="dollar">$</span>
-            <span>git clone https://github.com/anzy-renlab-ai/pronounce.git &amp;&amp; cd pronounce &amp;&amp; ./install.sh</span>
+            <span>curl -fsSL https://pronounce.renlab.ai/install.sh | bash</span>
             <span className="copy-state">{copied ? '✓ copied' : 'click to copy'}</span>
           </div>
         </div>

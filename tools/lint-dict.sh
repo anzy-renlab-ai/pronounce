@@ -123,7 +123,7 @@ else echo "  ✓ README states $SRCD sourced / $CREATOR creator-clarified / $CON
 # broken before: 90 OG 404s at v2.23.0 (make-og-all.py skipped for two batches),
 # dead ▶ audio at v2.10.x. Slugify in python to match the JS unicode semantics
 # (awk gsub is byte-wise and turns ñ into TWO hyphens).
-echo "[8/9] checking per-entry OG cards and audio files exist..."
+echo "[8/9] checking per-entry OG cards, audio files, and badge SVGs exist..."
 asset_bad="$(python3 - "$DICT" "$REPO_ROOT" <<'PYEOF'
 import re, sys
 dict_path, root = sys.argv[1], sys.argv[2]
@@ -140,6 +140,8 @@ for line in open(dict_path, encoding="utf-8"):
         missing.append(f"og/{slug}.png ({w})")
     if not os.path.exists(f"{root}/docs/audio/{slug}.mp3"):
         missing.append(f"audio/{slug}.mp3 ({w})")
+    if not os.path.exists(f"{root}/docs/badge/{slug}.svg"):
+        missing.append(f"badge/{slug}.svg ({w})")
 print("\n".join(missing[:20]))
 if len(missing) > 20:
     print(f"... and {len(missing)-20} more")

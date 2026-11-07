@@ -35,6 +35,13 @@
 ## 🚀 Try it in 30 seconds
 
 ```bash
+curl -fsSL https://pronounce.renlab.ai/install.sh | bash   # one-liner, no clone
+say-it kubectl
+```
+
+or the explicit way:
+
+```bash
 git clone https://github.com/anzy-renlab-ai/pronounce.git
 cd pronounce && ./install.sh
 say-it kubectl

@@ -1212,7 +1212,7 @@ cat > "$DOCS/v1.html" <<EOF
       </div>
       <div class="install">
         <code>code --install-extension sayit.pronounce</code>
-        <span class="install-note">Hover any tech word in your editor → hear it. Works in VS Code · Cursor · Windsurf · VSCodium · Zed. Prefer the terminal? <code class="inline">git clone https://github.com/${GH_REPO}.git &amp;&amp; ./install.sh</code></span>
+        <span class="install-note">Hover any tech word in your editor → hear it. Works in VS Code · Cursor · Windsurf · VSCodium · Zed. Prefer the terminal? <code class="inline">curl -fsSL ${SITE_URL}/install.sh | bash</code></span>
       </div>
       <p class="stats-bar"><strong>${ENTRY_COUNT}</strong> entries · <strong>${SOURCE_COUNT}</strong> with cited sources · MIT licensed</p>
     </header>
@@ -1420,7 +1420,7 @@ cat > "$DOCS/zh.html" <<EOF
       </div>
       <div class="install">
         <code>code --install-extension sayit.pronounce</code>
-        <span class="install-note">在编辑器里悬停任意技术词 → 直接听。支持 VS Code · Cursor · Windsurf · VSCodium · Zed，界面自动切中文。喜欢命令行？<code class="inline">git clone https://github.com/${GH_REPO}.git &amp;&amp; ./install.sh</code></span>
+        <span class="install-note">在编辑器里悬停任意技术词 → 直接听。支持 VS Code · Cursor · Windsurf · VSCodium · Zed，界面自动切中文。喜欢命令行？<code class="inline">curl -fsSL ${SITE_URL}/install.sh | bash</code></span>
       </div>
       <p class="stats-bar"><strong>${ENTRY_COUNT}</strong> 条词条 · <strong>${SOURCE_COUNT}</strong> 条带可引用来源 · MIT 许可</p>
     </header>
@@ -2045,7 +2045,7 @@ HTML
     </div>
 
     <p style="margin-top: 20px; font-size: 14px; color: var(--muted);">
-      Install the CLI: <code>git clone https://github.com/$GH_REPO.git &amp;&amp; cd pronounce &amp;&amp; ./install.sh</code>
+      Install the CLI: <code>curl -fsSL ${SITE_URL}/install.sh | bash</code>
     </p>
 
 $related_html
@@ -3211,7 +3211,7 @@ cat > "$DOCS/404.html" <<EOF
     <h1 style="font-size: 88px; margin: 0; font-family: var(--mono);">404</h1>
     <p style="color: var(--muted-strong); font-size: 20px; margin: 8px 0 36px;">That word isn't in our dictionary <em>yet</em>.</p>
     <div class="install" style="margin-bottom: 32px;">
-      <code>git clone https://github.com/${GH_REPO}.git &amp;&amp; cd pronounce &amp;&amp; ./install.sh</code>
+      <code>curl -fsSL ${SITE_URL}/install.sh | bash</code>
     </div>
     <p style="margin: 36px 0;">
       <a href="/browse" class="cta-btn" style="background: var(--accent); color: var(--bg); padding: 12px 22px; border-radius: 6px; text-decoration: none; font-weight: 600;">Browse the dictionary →</a>

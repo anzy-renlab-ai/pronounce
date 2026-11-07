@@ -1,76 +1,83 @@
 # Star growth status
 
-> Maintainer runbook and experiment ledger. Last updated 2026-09-01.
+> Maintainer runbook and experiment ledger. Last updated 2026-11-07.
+> **Active goal: ≥10 stars/week.**
 
 ## Current baseline
 
 | Metric | Value | Window |
 |---|---:|---|
-| GitHub stars | **39** | lifetime |
-| Forks | 0 | lifetime |
+| GitHub stars | **47** | lifetime |
+| Forks | 1 | lifetime |
 | Watchers | 1 | lifetime |
-| Repository views | 66 / 24 unique | trailing 14 days |
-| Repository clones | 144 / 59 unique | trailing 14 days |
-| Stars gained | **5** | trailing 7 days ending 2026-09-01 |
+| Largest historical jump | 13 stars (2026-06-10) | distribution release day |
 
-Top visible referrers in the same traffic snapshot were `pronounce.renlab.ai`
-(16 views / 7 unique), GitHub (6 / 5), Google (6 / 4), and Doubao (1 / 1).
-The largest historical star jump was 13 stars on 2026-06-10, the same day the
-project shipped its Homebrew, Codex, Kiro, MCP-registry, and awesome-mac
-distribution release. That is correlation rather than attribution, but it makes
-distribution and reusable project surfaces the strongest current experiment.
+Top referrers have been `pronounce.renlab.ai`, GitHub, Google, and Doubao.
+The 2026-06-10 jump landed the same day as the Homebrew/Codex/Kiro/MCP/
+awesome-mac distribution release — correlation, but it makes distribution
+and reusable project surfaces the strongest experiment class.
 
-## Closed-loop work shipped in v2.27.0
+## Closed-loop work shipped in v2.29.0 (2026-11-06)
 
-- Added `/collection/affective-ai` and `/collection/world-models` as focused,
-  indexable entry points for the newest high-interest vocabulary.
-- Added a copyable Markdown pronunciation badge to every English word page.
-  The badge links back to the canonical audio-and-source page, so adoption in
-  third-party READMEs creates durable referral paths.
-- Replaced retired VS Code/Open VSX dynamic badge endpoints with stable install
-  badges and direct marketplace links.
-- Refreshed the MCP PyPI and official-registry package to v0.1.2 and removed the
-  misleading unpublished npm install path from the primary instructions.
-- Updated GitHub discovery metadata from a stale 1,650+ description to an
-  evergreen 1,900+ description and added high-intent `ai-agents` / `devops`
-  topics in place of generic topics.
+- 17-entry late-2026 AI vocabulary batch (humans& Boba/&Tutor lineage,
+  GPT-6 Astra, DeepIn, Jev, NVFP4…), 1,920 entries total.
 
-## Closed-loop work shipped in v2.28.0
+## Closed-loop work shipped in v2.30.0 (2026-11-07)
 
-- Published `Pronounce Docs`, a zero-dependency GitHub Action that turns jargon
-  in changed Markdown into a sourced glossary. Every consumer references this
-  repository directly in its workflow, creating an adoption and backlink loop.
-- Cleared the `pronounce-word` Agent Skill publication warning, documented the
-  direct `gh skill install` path, and published it through GitHub's native skill
-  release flow.
-- Added a guarded weekly source sprint: at most one active `good first issue`
-  is open at once, and a new one is created only after contributors finish or
-  close the previous sprint.
-- Added `github-actions` and `agent-skills` discovery topics to match the two new
-  installable surfaces.
+- **Creator clips (49)** — word pages link the public YouTube moment where
+  the name's creator says it (Knuth/TeX, Lamport/LaTeX, Evan You/Vue+Vite,
+  Stallman/GNU, Stonebraker/Postgres, Kernighan/awk…). Multi-agent curated,
+  adversarially verified (oEmbed liveness, speaker identity, caption-
+  corroborated timestamps). Link-only, lazy youtube-nocookie embed. EN + 中文.
+- **`say-it propose`** — dictionary miss → draft TSV row + research
+  checklist + prefilled GitHub issue (offline, never invents sources).
+  Lowers the contribution barrier to one command.
+- **One-liner installer** — `curl -fsSL https://pronounce.renlab.ai/install.sh
+  | bash` on README, homepage, zh homepage, every word page, and 404.
+  (docs/install.sh is a static remote wrapper around ./install.sh.)
+- Pronunciation badges (`/badge/<word>.svg`, generated per build, guarded
+  by lint check [8/9]) with copy-Markdown embed on word pages — third-party
+  README embeds are durable referral paths.
+- Review hardening: bash-3.2-safe jsesc (fixed the shipped Cap'n Proto play
+  button), generator-side clip validation, CI lint gate in build-site.yml.
 
 ## Distribution status
 
 - `jaywcjlove/awesome-mac#2067` — merged.
 - `punkpeye/awesome-mcp-servers#9960` — merged.
 - `hesreallyhim/awesome-codex-plugins#223` — merged.
-- `alebcay/awesome-shell#710` — open and mergeable; do not bump again unless a
-  maintainer requests changes.
-- PyPI, GHCR, and the official MCP Registry are maintained by release workflows.
-- VS Code Marketplace and Open VSX listings are live. npm remains intentionally
-  unpublished until package-publishing credentials exist.
+- `alebcay/awesome-shell#710` — open and mergeable; do not bump again unless
+  a maintainer requests changes.
+- `toolleeo/awesome-cli-apps-in-a-csv#614` — open (2026-11-07, `learning`
+  category, CSV-only per their CONTRIBUTING).
+- `agarrharr/awesome-cli-apps` — NOT submitted: their CONTRIBUTING bans
+  AI-generated PRs ("we would like to know why a human thinks the app is
+  awesome"). Draft entry for a maintainer to file personally lives in
+  `/tmp/awesome-submissions.md` (regenerate: category "Command Line
+  Learning", entry `[say-it](repo) - Speaks developer jargon aloud with
+  pronunciations from a 1,900-word community dictionary, with sources for
+  contested ones like GIF and nginx.`). 47★ clears their 20★ bar.
+- PyPI, GHCR, and the official MCP Registry are maintained by release
+  workflows. VS Code Marketplace and Open VSX listings are live.
+
+## Maintainer-only amplification (highest star-per-hour — needs a human)
+
+1. **Show HN** v2.30.0 with the creator-clips story ("49 moments the
+   inventor says the name — Knuth on TeX, Stallman on GNU"). Copy in
+   `LAUNCH-READY.md`; answer replies from a real account.
+2. **Submit agarrharr/awesome-cli-apps personally** (20.6k★ list; see
+   draft above). One PR, `Add say-it`, one human why-awesome sentence.
+3. **Tell the clipped creators** — low-key reply/DM to Evan You, François
+   Chollet, John Ousterhout-adjacent communities: "we linked the moment you
+   say the name on its pronunciation page." Creators reshare.
+4. **V2EX / Juejin / Reddit r/programming** — 中文页 + quiz are ready-made
+   hooks; copy in `LAUNCH-READY.md`.
 
 ## Measurement plan
 
-Take another GitHub traffic snapshot on 2026-09-08 and 2026-09-15. Compare stars,
-unique views, unique clones, site referrals, and search referrals with the baseline
-above. A badge experiment is promising if external referrers broaden while the
-visitor-to-star ratio holds or improves; a collection experiment is promising if
-Google and site-originated repository visits rise after indexing.
-
-## Maintainer-only amplification
-
-Show HN, Reddit, V2EX, Juejin, and personal social posts require a real account
-and an author who can answer replies. Ready-to-edit copy remains in
-[`LAUNCH-READY.md`](../LAUNCH-READY.md). Avoid automated posting, bought stars,
-unrelated issue comments, or additional low-fit awesome-list submissions.
+Snapshot stars/views/clones/referrers every Monday. Creator clips are
+promising if Google + YouTube referrers rise after indexing; the installer
+one-liner if unique clones per view improve; badges if external referrers
+broaden. Target ≥10 stars/week; if two consecutive weeks fall short, ship
+the next experiment class (shareable quiz score card / IDE-extension
+co-marketing) before adding another awesome-list submission.
