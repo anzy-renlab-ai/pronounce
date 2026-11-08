@@ -1,4 +1,21 @@
 // ========== Terminal demo ==========
+function CopyRow({ label, value, mono = true }) {
+  const [copied, setCopied] = React.useState(false);
+  const copy = () => {
+    navigator.clipboard?.writeText(value);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1600);
+  };
+  return (
+    <div className="install" onClick={copy} style={{ marginTop: 8 }}>
+      <span className="dollar" style={{ fontFamily: 'inherit' }}>{label}</span>
+      <span style={mono ? undefined : { fontFamily: 'inherit' }}>{value}</span>
+      <span className="copy-state">{copied ? '✓ copied' : 'click to copy'}</span>
+    </div>
+  );
+}
+window.CopyRow = CopyRow;
+
 function Terminal({ registerEgg }) {
   const [copied, setCopied] = React.useState(false);
   const copy = () => {
@@ -30,6 +47,12 @@ function Terminal({ registerEgg }) {
             <span>curl -fsSL https://pronounce.renlab.ai/install.sh | bash</span>
             <span className="copy-state">{copied ? '✓ copied' : 'click to copy'}</span>
           </div>
+          <h3 style={{ marginTop: 20 }}>Use it inside your <em>AI client</em></h3>
+          <p style={{ fontSize: 13.5 }}>
+            Hosted MCP endpoint — no install, no API key. Streamable HTTP at <code>https://pronounce.renlab.ai/mcp</code>.
+          </p>
+          <CopyRow label="claude" value="claude mcp add --transport http pronounce https://pronounce.renlab.ai/mcp" />
+          <CopyRow label="json" value='{ "mcpServers": { "pronounce": { "type": "http", "url": "https://pronounce.renlab.ai/mcp" } } }' />
         </div>
 
         <div className="terminal">

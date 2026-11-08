@@ -17,7 +17,9 @@
 🇨🇳 <a href="https://pronounce.renlab.ai/zh" hreflang="zh-Hans">中文</a> ·
 📖 <a href="https://pronounce.renlab.ai/browse">Browse</a> ·
 🎯 <a href="https://pronounce.renlab.ai/quiz">Quiz</a> ·
+🎮 <a href="https://pronounce.renlab.ai/daily">Dev Jargon 5</a> ·
 🎤 <a href="https://pronounce.renlab.ai/#hero-search">Voice search</a> ·
+🔗 Correction short-links: <code>pronounce.renlab.ai/say/&lt;word&gt;</code> ·
 🔌 <a href="mcp-server/">MCP server</a>
  · ⚙️ <a href="docs/github-action.md">GitHub Action</a>
 </p>
@@ -197,6 +199,18 @@ Once installed, the `pronounce-word` skill auto-triggers on:
 Your AI replies with **sound**, not just a phonetic guess. Skill file: [`skills/pronounce-word/SKILL.md`](skills/pronounce-word/SKILL.md).
 
 **Not on Claude?** Same skill drops into [Codex CLI](integrations/codex/) (`codex plugin marketplace add anzy-renlab-ai/pronounce`) and [Kiro](integrations/kiro/) (`~/.kiro/skills/`), and the [MCP server](mcp-server/) covers Claude Desktop, Cursor, Continue, Zed, Cline & friends — full matrix in [`integrations/`](integrations/).
+
+## 🎮 Dev Jargon 5 — daily challenge
+
+Five words a day, same five for everyone: **[pronounce.renlab.ai/daily](https://pronounce.renlab.ai/daily)** — listen, pick the right respelling, share your emoji grid.
+
+## Hosted MCP (no install)
+
+Point any MCP client at `https://pronounce.renlab.ai/mcp` (streamable HTTP):
+
+```bash
+claude mcp add --transport http pronounce https://pronounce.renlab.ai/mcp
+```
 
 [![Add to Kiro](https://kiro.dev/images/add-to-kiro.svg)](https://kiro.dev/launch/mcp/add?name=pronounce&config=%7B%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22--from%22%2C%22git%2Bhttps%3A%2F%2Fgithub.com%2Fanzy-renlab-ai%2Fpronounce.git%23subdirectory%3Dmcp-server%22%2C%22pronounce-mcp%22%5D%7D)
 
