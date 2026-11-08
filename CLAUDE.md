@@ -26,11 +26,13 @@ CLAUDE_SKILLS_DIR=/path ./install.sh      # override skill target
 Release guards are dependency-light:
 
 ```bash
-node --test tools/test-v2-audio.mjs
-python3 -m unittest tools/test_build_v2_data.py tools/test_make_og_all.py tools/test_chrome_dictionary.py
+node --test tools/test-v2-audio.mjs tools/test-daily.mjs tools/test-mcp.mjs
+python3 -m unittest tools/test_build_v2_data.py tools/test_make_og_all.py tools/test_chrome_dictionary.py tools/test_deploy_config.py
 bash tools/lint-dict.sh
 bash tools/smoke-test.sh
 ```
+
+`tools/release.sh` runs the authoritative full set — keep this list in sync when guards change.
 
 ## Conventions when editing
 
