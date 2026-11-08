@@ -1,5 +1,14 @@
 # Changelog
 
+## v2.32.0 — 2026-11-08
+
+**Three star-growth features: `/say/<word>` correction short-links, Dev Jargon 5 daily challenge, hosted remote MCP endpoint.** No new dictionary entries (1,927 total unchanged).
+
+- `/say/<word>` short-links + 「Correct someone」 copy button on every EN/ZH word page.
+- Dev Jargon 5 at `pronounce.renlab.ai/daily` — deterministic daily 5-word challenge, emoji-grid share; word-of-the-day archive moved to `/daily/archive`.
+- Hosted MCP endpoint `https://pronounce.renlab.ai/mcp` (streamable HTTP, no install) + remote transport registered in server.json 0.2.0.
+- New guard suites: daily determinism, MCP logic, deploy-config.
+
 ## v2.31.0 — 2026-11-08
 
 **First daily-scan vocabulary batch.** 7 new entries (1,927 total) found by
