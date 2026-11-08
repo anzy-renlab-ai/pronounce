@@ -1,0 +1,15 @@
+{
+  "word": "claude-mem",
+  "ipa": "/ˌklɔːd ˈmɛm/",
+  "respelling_us": "clawed MEM",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/thedotmack/claude-mem/blob/main/docs/story.md",
+  "source_label": "claude-mem naming doc",
+  "category": "project",
+  "confidence": "community-consensus",
+  "notes": "Two spoken words: \"clawed MEM\". 'mem' said as a word (like Memcached, mem0), not spelled M-E-M. Persistent-memory plugin for coding agents; the creator's naming doc fixes \"Claude-Mem\" as the prose form.",
+  "audio_url": "https://pronounce.renlab.ai/audio/claude-mem.mp3",
+  "url": "https://pronounce.renlab.ai/word/claude-mem",
+  "date_modified": "2026-11-08"
+}

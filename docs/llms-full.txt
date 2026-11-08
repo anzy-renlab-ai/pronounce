@@ -1922,3 +1922,10 @@ Postman | /ˈpoʊstˌmən/ | post man | product | community-consensus | https://
 Miles | /maɪlz/ | miles | project | community-consensus | https://github.com/radixark/miles
 CooperBench | /ˈkuːpər ˌbɛntʃ/ | cooper bench | project | community-consensus | https://cooperbench.com/
 Four Over Six | /fɔːr ˈoʊvər ˌsɪks/ | four over six | cs-term | community-consensus | https://arxiv.org/abs/2512.02010
+T3Code | /ˌtiː ˈθriː ˈkoʊd/ | tee three code | product | community-consensus | https://github.com/pingdotgg/t3code/blob/main/docs/user/faq.md
+claude-mem | /ˌklɔːd ˈmɛm/ | clawed MEM | project | community-consensus | https://github.com/thedotmack/claude-mem/blob/main/docs/story.md
+stroq | /strɑk/ | strock | project | contested | https://news.ycombinator.com/item?id=50380704
+physicl | /ˈfɪzɪkəl/ | fiz ih kul | product | community-consensus | https://www.physicl.ai/
+SpAItial | /ˈspeɪʃəl/ | SPAY shul | product | creator-clarified | https://www.spaitial.ai/
+MaxxBench | /ˈmæks ˌbɛntʃ/ | MAKS bench | cs-term | community-consensus | https://maxxbench.unlap.ai/research/why-maxxbench/
+benchmaxxing | /ˈbɛntʃˌmæksɪŋ/ | bench maks ing | cs-term | community-consensus | https://maxxbench.unlap.ai/research/why-maxxbench/

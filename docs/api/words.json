@@ -1918,5 +1918,12 @@
   {"word": "Postman", "slug": "postman", "category": "product", "confidence": "community-consensus"},
   {"word": "Miles", "slug": "miles", "category": "project", "confidence": "community-consensus"},
   {"word": "CooperBench", "slug": "cooperbench", "category": "project", "confidence": "community-consensus"},
-  {"word": "Four Over Six", "slug": "four-over-six", "category": "cs-term", "confidence": "community-consensus"}
+  {"word": "Four Over Six", "slug": "four-over-six", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "T3Code", "slug": "t3code", "category": "product", "confidence": "community-consensus"},
+  {"word": "claude-mem", "slug": "claude-mem", "category": "project", "confidence": "community-consensus"},
+  {"word": "stroq", "slug": "stroq", "category": "project", "confidence": "contested"},
+  {"word": "physicl", "slug": "physicl", "category": "product", "confidence": "community-consensus"},
+  {"word": "SpAItial", "slug": "spaitial", "category": "product", "confidence": "creator-clarified"},
+  {"word": "MaxxBench", "slug": "maxxbench", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "benchmaxxing", "slug": "benchmaxxing", "category": "cs-term", "confidence": "community-consensus"}
 ]

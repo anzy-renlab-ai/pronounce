@@ -1,5 +1,26 @@
 # Changelog
 
+## v2.31.0 — 2026-11-08
+
+**First daily-scan vocabulary batch.** 7 new entries (1,927 total) found by
+the new daily discovery pipeline (3 lenses → per-candidate evidence
+adjudication; 1 candidate rejected for lack of evidence): T3Code
+("tee three code", not "tee-cubed"), claude-mem ("clawed MEM", from the
+creator's own naming doc), stroq (contested — the creator ruled out
+"stroke" on the Show HN thread; Kazakh-Latin q points to "strock"),
+physicl ("physical", Flickr-style vowel drop), SpAItial (creator-clarified
+"spatial" with decorative AI caps — not "spay-ai-tial"), MaxxBench
+("max bench"), and the coinage benchmaxxing.
+
+### Added
+
+- **Daily update & release pipeline**: `tools/release.sh` (version-pin
+  sync + full guards + tag + GitHub release in one command) and the
+  `.github/DAILY-RELEASE.md` runbook; a scheduled agent runs it every
+  morning and appends the star-count log to the runbook ledger.
+- One-liner installer `curl -fsSL https://pronounce.renlab.ai/install.sh
+  | bash` surfaced on README, homepage, 中文首页, every word page, and 404.
+
 ## v2.30.0 — 2026-11-07
 
 **Creator clips: hear it from the creator's mouth.** Word pages now link the

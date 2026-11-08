@@ -1,0 +1,86 @@
+[
+  {
+    "word": "T3Code",
+    "ipa": "/ˌtiː ˈθriː ˈkoʊd/",
+    "respelling_us": "tee three code",
+    "alt_ipa": "",
+    "alt_respelling_us": "",
+    "source_url": "https://github.com/pingdotgg/t3code/blob/main/docs/user/faq.md",
+    "source_label": "T3 Code official FAQ",
+    "category": "product",
+    "confidence": "community-consensus",
+    "notes": "\"tee-three-code\" — every official surface renders the name letter+digit (\"T3 Code\", CLI `t3`, winget T3Tools.T3Code, iOS listing \"T3 Code: Remote Claude & More\"); sibling brand T3 Chat is likewise spoken \"T three\". Not \"tee-cubed\"."
+  },
+  {
+    "word": "claude-mem",
+    "ipa": "/ˌklɔːd ˈmɛm/",
+    "respelling_us": "clawed MEM",
+    "alt_ipa": "",
+    "alt_respelling_us": "",
+    "source_url": "https://github.com/thedotmack/claude-mem/blob/main/docs/story.md",
+    "source_label": "claude-mem naming doc",
+    "category": "project",
+    "confidence": "community-consensus",
+    "notes": "Two spoken words: \"clawed MEM\". 'mem' said as a word (like Memcached, mem0), not spelled M-E-M. Persistent-memory plugin for coding agents; the creator's naming doc fixes \"Claude-Mem\" as the prose form."
+  },
+  {
+    "word": "stroq",
+    "ipa": "/strɑk/",
+    "respelling_us": "strock",
+    "alt_ipa": "/stroʊk/",
+    "alt_respelling_us": "stroke",
+    "source_url": "https://news.ycombinator.com/item?id=50380704",
+    "source_label": "Show HN launch thread",
+    "category": "project",
+    "confidence": "contested",
+    "notes": "Creator knocked out the obvious reading on the launch thread (q: \"is it pronounced, like, stroke?\" — creator: \"oh no, I hadn't made that connection until now\"); Kazakh Latin q = /k/, giving \"strock\". No official ruling; \"stroke\" is still the widespread default reading."
+  },
+  {
+    "word": "physicl",
+    "ipa": "/ˈfɪzɪkəl/",
+    "respelling_us": "fiz ih kul",
+    "alt_ipa": "",
+    "alt_respelling_us": "",
+    "source_url": "https://www.physicl.ai/",
+    "source_label": "Physicl official site",
+    "category": "product",
+    "confidence": "community-consensus",
+    "notes": "Physicl Studio — synthetic-data platform for physical AI / world models / robot training; $10M seed led by Inovia (TechCrunch, 2026-11-06). Name is 'physical' with the vowels dropped (Flickr-style), said exactly like \"physical\"."
+  },
+  {
+    "word": "SpAItial",
+    "ipa": "/ˈspeɪʃəl/",
+    "respelling_us": "SPAY shul",
+    "alt_ipa": "",
+    "alt_respelling_us": "",
+    "source_url": "https://www.spaitial.ai/",
+    "source_label": "SpAItial official site",
+    "category": "product",
+    "confidence": "creator-clarified",
+    "notes": "Spatial-AI startup (TUM professor Matthias Niessner); Echo-3 model shipped week of 2026-11-02; early customer of Physicl (TechCrunch, 2026-11-06). Brand is the ordinary word 'spatial' with decorative AI caps inserted — NOT \"spay-ai-tial\"."
+  },
+  {
+    "word": "MaxxBench",
+    "ipa": "/ˈmæks ˌbɛntʃ/",
+    "respelling_us": "MAKS bench",
+    "alt_ipa": "",
+    "alt_respelling_us": "",
+    "source_url": "https://maxxbench.unlap.ai/research/why-maxxbench/",
+    "source_label": "MaxxBench research post",
+    "category": "cs-term",
+    "confidence": "community-consensus",
+    "notes": "Benchmark for task adaptation and generalization in frontier coding agents (unlap.ai, Nov 2026). The double-x is decorative: \"max bench\", not \"maxx\"."
+  },
+  {
+    "word": "benchmaxxing",
+    "ipa": "/ˈbɛntʃˌmæksɪŋ/",
+    "respelling_us": "bench maks ing",
+    "alt_ipa": "",
+    "alt_respelling_us": "",
+    "source_url": "https://maxxbench.unlap.ai/research/why-maxxbench/",
+    "source_label": "MaxxBench research post",
+    "category": "cs-term",
+    "confidence": "community-consensus",
+    "notes": "Coined in the MaxxBench research post for grinding agent benchmark scores as an end in itself — the -maxxing suffix reads like \"vibe coding\"'s cousin: \"bench-MAX-ing\"."
+  }
+]

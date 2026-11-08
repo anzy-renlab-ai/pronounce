@@ -1,0 +1,15 @@
+{
+  "word": "MaxxBench",
+  "ipa": "/ˈmæks ˌbɛntʃ/",
+  "respelling_us": "MAKS bench",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://maxxbench.unlap.ai/research/why-maxxbench/",
+  "source_label": "MaxxBench research post",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "Benchmark for task adaptation and generalization in frontier coding agents (unlap.ai, Nov 2026). The double-x is decorative: \"max bench\", not \"maxx\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/maxxbench.mp3",
+  "url": "https://pronounce.renlab.ai/word/maxxbench",
+  "date_modified": "2026-11-08"
+}

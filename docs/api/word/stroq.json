@@ -1,0 +1,15 @@
+{
+  "word": "stroq",
+  "ipa": "/strɑk/",
+  "respelling_us": "strock",
+  "alt_ipa": ["/stroʊk/"],
+  "alt_respelling_us": ["stroke"],
+  "source_url": "https://news.ycombinator.com/item?id=50380704",
+  "source_label": "Show HN launch thread",
+  "category": "project",
+  "confidence": "contested",
+  "notes": "Creator knocked out the obvious reading on the launch thread (q: \"is it pronounced, like, stroke?\" — creator: \"oh no, I hadn't made that connection until now\"); Kazakh Latin q = /k/, giving \"strock\". No official ruling; \"stroke\" is still the widespread default reading.",
+  "audio_url": "https://pronounce.renlab.ai/audio/stroq.mp3",
+  "url": "https://pronounce.renlab.ai/word/stroq",
+  "date_modified": "2026-11-08"
+}

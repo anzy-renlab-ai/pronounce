@@ -1,7 +1,7 @@
 {
-  "total": 1920,
-  "with_source": 1300,
-  "source_coverage_pct": 67.7,
-  "by_category": {"project": 91,"acronym": 354,"person": 107,"cs-term": 280,"tool": 220,"product": 764,"abbreviation": 53,"cli-tool": 51},
-  "by_confidence": {"contested": 176,"creator-clarified": 112,"community-consensus": 1632}
+  "total": 1927,
+  "with_source": 1307,
+  "source_coverage_pct": 67.8,
+  "by_category": {"project": 93,"acronym": 354,"person": 107,"cs-term": 282,"tool": 220,"product": 767,"abbreviation": 53,"cli-tool": 51},
+  "by_confidence": {"contested": 177,"creator-clarified": 113,"community-consensus": 1637}
 }

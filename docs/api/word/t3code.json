@@ -1,0 +1,15 @@
+{
+  "word": "T3Code",
+  "ipa": "/ˌtiː ˈθriː ˈkoʊd/",
+  "respelling_us": "tee three code",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/pingdotgg/t3code/blob/main/docs/user/faq.md",
+  "source_label": "T3 Code official FAQ",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "\"tee-three-code\" — every official surface renders the name letter+digit (\"T3 Code\", CLI `t3`, winget T3Tools.T3Code, iOS listing \"T3 Code: Remote Claude & More\"); sibling brand T3 Chat is likewise spoken \"T three\". Not \"tee-cubed\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/t3code.mp3",
+  "url": "https://pronounce.renlab.ai/word/t3code",
+  "date_modified": "2026-11-08"
+}
