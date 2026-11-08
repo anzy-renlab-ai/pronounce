@@ -6,23 +6,30 @@
     "url": "https://github.com/anzy-renlab-ai/pronounce",
     "source": "github"
   },
-  "version": "0.1.2",
+  "version": "0.2.0",
   "websiteUrl": "https://pronounce.renlab.ai",
   "packages": [
     {
       "registryType": "pypi",
       "registryBaseUrl": "https://pypi.org",
       "identifier": "pronounce-mcp",
-      "version": "0.1.2",
+      "version": "0.2.0",
       "transport": {
         "type": "stdio"
       }
     },
     {
       "registryType": "oci",
-      "identifier": "ghcr.io/anzy-renlab-ai/pronounce-mcp:0.1.2",
+      "identifier": "ghcr.io/anzy-renlab-ai/pronounce-mcp:0.2.0",
       "transport": {
         "type": "stdio"
+      }
+    },
+    {
+      "registryType": "remote",
+      "transport": {
+        "type": "http",
+        "url": "https://pronounce.renlab.ai/mcp"
       }
     }
   ]
