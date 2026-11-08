@@ -1,84 +1,160 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pronunciation of the day — archive · Pronounce</title>
-<meta name="description" content="Daily pronunciation archive — every day a new project, product, or programmer-jargon term, with audio + source.">
-<link rel="canonical" href="https://pronounce.renlab.ai/daily">
-<meta property="og:image" content="https://pronounce.renlab.ai/og.png"><meta name="theme-color" content="#ff6a3d">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="stylesheet" href="/style.css"><script defer src="/_vercel/insights/script.js"></script></head>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dev Jargon 5 — daily developer pronunciation challenge</title>
+  <meta name="description" content="Five developer words a day, same for everyone. Listen, pick the right respelling, share your emoji grid. kubectl, nginx, GIF — can you say them?">
+  <link rel="canonical" href="https://pronounce.renlab.ai/daily">
+  <meta property="og:title" content="Dev Jargon 5 — how many dev words can you actually say?">
+  <meta property="og:description" content="Five words a day. Same five for everyone. Listen and pick the right respelling.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pronounce.renlab.ai/daily">
+  <meta property="og:image" content="https://pronounce.renlab.ai/og-daily.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dev Jargon 5 — daily dev pronunciation challenge">
+  <meta name="twitter:description" content="Five words a day. Same five for everyone.">
+  <meta name="twitter:image" content="https://pronounce.renlab.ai/og-daily.png">
+  <meta name="theme-color" content="#ff6a3d">
+  <link rel="icon" type="image/png" sizes="32" href="/favicon-32.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .j5-shell { max-width: 720px; margin: 0 auto; padding: 48px 24px 96px; }
+    .j5-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 32px 28px; margin-bottom: 24px; }
+    .j5-date { color: var(--muted); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .j5-word { font-family: var(--mono); font-size: 46px; letter-spacing: -0.01em; margin: 10px 0 4px; }
+    .j5-cat { color: var(--muted); font-size: 13px; margin-bottom: 20px; }
+    .j5-play { background: var(--accent); color: var(--bg); border: none; padding: 12px 22px; border-radius: 999px; font-weight: 700; cursor: pointer; font-size: 16px; }
+    .j5-play:hover { filter: brightness(1.08); }
+    .j5-options { display: grid; gap: 10px; margin-top: 18px; }
+    .j5-opt { background: var(--card-2); border: 1px solid var(--border); color: var(--fg); text-align: left; padding: 14px 18px; border-radius: 10px; cursor: pointer; font-family: var(--mono); font-size: 17px; transition: all 0.12s; }
+    .j5-opt:hover:not(.locked) { border-color: var(--accent); transform: translateX(2px); }
+    .j5-opt.correct { background: rgba(122,223,187,0.18); border-color: var(--accent-2); color: var(--accent-2); }
+    .j5-opt.wrong { background: rgba(255,106,61,0.15); border-color: var(--accent); color: var(--accent); }
+    .j5-opt.locked { cursor: default; }
+    .j5-feedback { margin-top: 18px; padding: 14px 18px; border-radius: 10px; background: var(--card-2); border: 1px solid var(--border); font-size: 14.5px; color: var(--muted-strong); display: none; }
+    .j5-feedback.shown { display: block; }
+    .j5-feedback .src a { color: var(--link); }
+    .j5-next { background: var(--accent); border: none; color: var(--bg); padding: 12px 28px; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 15px; margin-top: 18px; }
+    .j5-next:hover { filter: brightness(1.08); }
+    .j5-grid { font-size: 34px; letter-spacing: 4px; margin: 14px 0 6px; font-family: var(--mono); }
+    .j5-score { font-size: 20px; color: var(--accent-2); font-family: var(--mono); }
+    .j5-share { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 18px; }
+    .j5-share .btn, .j5-star { background: var(--accent); color: var(--bg); padding: 12px 22px; border-radius: 8px; font-weight: 700; text-decoration: none; border: none; cursor: pointer; font-size: 15px; }
+    .j5-star { background: var(--accent-2); display: inline-block; }
+    .j5-review { text-align: left; margin-top: 22px; border-top: 1px solid var(--border); padding-top: 16px; }
+    .j5-review .row { padding: 8px 0; font-size: 15px; }
+    .j5-review .r { font-family: var(--mono); color: var(--accent-2); }
+    .j5-review a { color: var(--link); }
+    .j5-mark { font-family: var(--mono); }
+  </style>
+</head>
 <body>
-<a class="skip-link" href="#main">Skip to main content</a>
-<div class="gh-banner">⭐ <a href="https://github.com/anzy-renlab-ai/pronounce">Star on GitHub</a></div>
-<nav class="topbar"><div class="brand"><a href="/">🔊 Pronounce</a></div>
-<div class="links"><a href="/">Home</a><a href="/browse">Browse</a><a href="/quiz">Quiz</a><a href="/hall-of-shame">Top 25</a><a href="/stats">Stats</a><a href="/zh" hreflang="zh-Hans" lang="zh-Hans">中文</a>
-<button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button></div></nav>
-<main class="container" id="main">
-<h1 style="font-size: 36px;">📅 Pronunciation of the day — archive</h1>
-<p style="color: var(--muted-strong);">Deterministic daily rotation — same date always picks the same word. Bookmark a day, or just <a href="/">visit the home page</a> for today's pick.</p>
-<ul class="cat-list" style="columns: 2; margin-top: 24px;">
-  <li><a href="/daily/2026-11-08">2026-11-08</a> <span class="cat-list-resp">sigmoid → sig moyd</span></li>
-  <li><a href="/daily/2026-11-07">2026-11-07</a> <span class="cat-list-resp">Solidity → so lid i tee</span></li>
-  <li><a href="/daily/2026-11-06">2026-11-06</a> <span class="cat-list-resp">IPFS → I P F S</span></li>
-  <li><a href="/daily/2026-11-05">2026-11-05</a> <span class="cat-list-resp">WASI → wah zee</span></li>
-  <li><a href="/daily/2026-11-04">2026-11-04</a> <span class="cat-list-resp">WebGPU → web G P U</span></li>
-  <li><a href="/daily/2026-11-03">2026-11-03</a> <span class="cat-list-resp">WebRTC → web R T C</span></li>
-  <li><a href="/daily/2026-11-02">2026-11-02</a> <span class="cat-list-resp">GPG → G P G</span></li>
-  <li><a href="/daily/2026-11-01">2026-11-01</a> <span class="cat-list-resp">PGP → P G P</span></li>
-  <li><a href="/daily/2026-10-31">2026-10-31</a> <span class="cat-list-resp">COLT → colt</span></li>
-  <li><a href="/daily/2026-10-30">2026-10-30</a> <span class="cat-list-resp">AISTATS → ay stats</span></li>
-  <li><a href="/daily/2026-10-29">2026-10-29</a> <span class="cat-list-resp">SDR → ess dee ar</span></li>
-  <li><a href="/daily/2026-10-28">2026-10-28</a> <span class="cat-list-resp">CS → see ess</span></li>
-  <li><a href="/daily/2026-10-27">2026-10-27</a> <span class="cat-list-resp">CSM → see ess em</span></li>
-  <li><a href="/daily/2026-10-26">2026-10-26</a> <span class="cat-list-resp">SA → ess ay</span></li>
-  <li><a href="/daily/2026-10-25">2026-10-25</a> <span class="cat-list-resp">SE → ess ee</span></li>
-  <li><a href="/daily/2026-10-24">2026-10-24</a> <span class="cat-list-resp">AM → ay em</span></li>
-  <li><a href="/daily/2026-10-23">2026-10-23</a> <span class="cat-list-resp">AE → ay ee</span></li>
-  <li><a href="/daily/2026-10-22">2026-10-22</a> <span class="cat-list-resp">BIE → bee eye ee</span></li>
-  <li><a href="/daily/2026-10-21">2026-10-21</a> <span class="cat-list-resp">DBA → dee bee ay</span></li>
-  <li><a href="/daily/2026-10-20">2026-10-20</a> <span class="cat-list-resp">DE → dee ee</span></li>
-  <li><a href="/daily/2026-10-19">2026-10-19</a> <span class="cat-list-resp">MLE → em ell ee</span></li>
-  <li><a href="/daily/2026-10-18">2026-10-18</a> <span class="cat-list-resp">SWE → ess double yoo ee</span></li>
-  <li><a href="/daily/2026-10-17">2026-10-17</a> <span class="cat-list-resp">MTS → em tee ess</span></li>
-  <li><a href="/daily/2026-10-16">2026-10-16</a> <span class="cat-list-resp">DRI → dee ar eye</span></li>
-  <li><a href="/daily/2026-10-15">2026-10-15</a> <span class="cat-list-resp">IC → eye see</span></li>
-  <li><a href="/daily/2026-10-14">2026-10-14</a> <span class="cat-list-resp">TL → tee ell</span></li>
-  <li><a href="/daily/2026-10-13">2026-10-13</a> <span class="cat-list-resp">TLM → tee ell em</span></li>
-  <li><a href="/daily/2026-10-12">2026-10-12</a> <span class="cat-list-resp">EM → ee em</span></li>
-  <li><a href="/daily/2026-10-11">2026-10-11</a> <span class="cat-list-resp">COS → see oh ess</span></li>
-  <li><a href="/daily/2026-10-10">2026-10-10</a> <span class="cat-list-resp">GM → jee em</span></li>
-  <li><a href="/daily/2026-10-09">2026-10-09</a> <span class="cat-list-resp">rollout → roll out</span></li>
-  <li><a href="/daily/2026-10-08">2026-10-08</a> <span class="cat-list-resp">slam → slam</span></li>
-  <li><a href="/daily/2026-10-07">2026-10-07</a> <span class="cat-list-resp">kinematics → kin uh mat iks</span></li>
-  <li><a href="/daily/2026-10-06">2026-10-06</a> <span class="cat-list-resp">holonomic → hol uh nom ik</span></li>
-  <li><a href="/daily/2026-10-05">2026-10-05</a> <span class="cat-list-resp">geodesic → jee oh dess ik</span></li>
-  <li><a href="/daily/2026-10-04">2026-10-04</a> <span class="cat-list-resp">proprioception → pro pree oh sep shun</span></li>
-  <li><a href="/daily/2026-10-03">2026-10-03</a> <span class="cat-list-resp">lidar → lye dar</span></li>
-  <li><a href="/daily/2026-10-02">2026-10-02</a> <span class="cat-list-resp">odometry → oh dom uh tree</span></li>
-  <li><a href="/daily/2026-10-01">2026-10-01</a> <span class="cat-list-resp">quaternion → kwuh ter nee un</span></li>
-  <li><a href="/daily/2026-09-30">2026-09-30</a> <span class="cat-list-resp">SDR → ess dee ar</span></li>
-  <li><a href="/daily/2026-09-29">2026-09-29</a> <span class="cat-list-resp">QE → kew ee</span></li>
-  <li><a href="/daily/2026-09-28">2026-09-28</a> <span class="cat-list-resp">QA → kew ay</span></li>
-  <li><a href="/daily/2026-09-27">2026-09-27</a> <span class="cat-list-resp">PE → pee ee</span></li>
-  <li><a href="/daily/2026-09-26">2026-09-26</a> <span class="cat-list-resp">FSE → eff ess ee</span></li>
-  <li><a href="/daily/2026-09-25">2026-09-25</a> <span class="cat-list-resp">BE → bee ee</span></li>
-  <li><a href="/daily/2026-09-24">2026-09-24</a> <span class="cat-list-resp">FE → eff ee</span></li>
-  <li><a href="/daily/2026-09-23">2026-09-23</a> <span class="cat-list-resp">FDE → eff dee ee</span></li>
-  <li><a href="/daily/2026-09-22">2026-09-22</a> <span class="cat-list-resp">RS → ar ess</span></li>
-  <li><a href="/daily/2026-09-21">2026-09-21</a> <span class="cat-list-resp">RE → ar ee</span></li>
-  <li><a href="/daily/2026-09-20">2026-09-20</a> <span class="cat-list-resp">MLE → em ell ee</span></li>
-  <li><a href="/daily/2026-09-19">2026-09-19</a> <span class="cat-list-resp">CMO → see em oh</span></li>
-  <li><a href="/daily/2026-09-18">2026-09-18</a> <span class="cat-list-resp">COO → see oh oh</span></li>
-  <li><a href="/daily/2026-09-17">2026-09-17</a> <span class="cat-list-resp">CFO → see eff oh</span></li>
-  <li><a href="/daily/2026-09-16">2026-09-16</a> <span class="cat-list-resp">CTO → see tee oh</span></li>
-  <li><a href="/daily/2026-09-15">2026-09-15</a> <span class="cat-list-resp">CEO → see ee oh</span></li>
-  <li><a href="/daily/2026-09-14">2026-09-14</a> <span class="cat-list-resp">allocentric → al oh sen trik</span></li>
-  <li><a href="/daily/2026-09-13">2026-09-13</a> <span class="cat-list-resp">egocentric → ee go sen trik</span></li>
-  <li><a href="/daily/2026-09-12">2026-09-12</a> <span class="cat-list-resp">embodied → im bod eed</span></li>
-  <li><a href="/daily/2026-09-11">2026-09-11</a> <span class="cat-list-resp">trajectory → truh jek tuh ree</span></li>
-  <li><a href="/daily/2026-09-10">2026-09-10</a> <span class="cat-list-resp">rollout → roll out</span></li>
-  <li><a href="/daily/2026-09-09">2026-09-09</a> <span class="cat-list-resp">atari → uh tar ee</span></li>
-</ul>
-</main>
-<footer class="footer"><p>Pronounce · MIT</p></footer>
-<script src="/script.js"></script>
-</body></html>
+  <div class="gh-banner">⭐ <a href="https://github.com/anzy-renlab-ai/pronounce">Star on GitHub</a> — community-curated dev pronunciation dictionary</div>
+  <main class="j5-shell">
+    <div id="app">
+      <div class="j5-card" style="text-align: center;">
+        <div class="j5-date" id="j5-date">—</div>
+        <h1 style="font-size: 34px; margin: 10px 0 6px;">Dev Jargon 5</h1>
+        <p style="color: var(--muted-strong); margin: 0 0 22px;">Five words. Same five for everyone today. Listen, pick the right respelling.</p>
+        <button class="j5-play" id="j5-start">▶ Play</button>
+        <p style="margin-top: 20px; font-size: 13.5px; color: var(--muted);"><a href="/daily/archive" style="color: var(--link);">Word-of-the-day archive →</a></p>
+      </div>
+    </div>
+  </main>
+  <footer class="footer"><p>Pronounce · MIT · <a href="/browse">browse all entries</a> · <a href="/quiz">endless quiz</a></p></footer>
+  <script src="/script.js"></script>
+  <script src="/daily/game.js"></script>
+  <script>
+  (function () {
+    if (typeof ENTRIES === "undefined" || typeof DailyGame === "undefined") return;
+    var app = document.getElementById("app");
+    var dateEl = document.getElementById("j5-date");
+    var date = DailyGame.todayISO();
+    dateEl.textContent = date + " · same five for everyone";
+    var qs = DailyGame.buildQuestions(DailyGame.pickFive(ENTRIES, date), ENTRIES, date);
+    var idx = 0, marks = [];
+
+    document.getElementById("j5-start").addEventListener("click", function () { renderQ(); });
+
+    function esc(s) {
+      return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+      });
+    }
+
+    function renderQ() {
+      var q = qs[idx];
+      app.innerHTML =
+        '<div class="j5-card">' +
+        '<div class="j5-date">Question ' + (idx + 1) + ' of 5</div>' +
+        '<div class="j5-word">' + esc(q.w) + '</div>' +
+        '<div class="j5-cat">' + esc(q.cat) + '</div>' +
+        '<button class="j5-play" id="j5-audio">🔊 Hear it</button>' +
+        '<div class="j5-options">' +
+        q.options.map(function (o, i) {
+          return '<button class="j5-opt" data-i="' + i + '">' + esc(o) + "</button>";
+        }).join("") +
+        "</div>" +
+        '<div class="j5-feedback" id="j5-fb"></div>' +
+        "</div>";
+      document.getElementById("j5-audio").addEventListener("click", function () {
+        if (typeof playEntry === "function") playEntry(q.w);
+      });
+      Array.prototype.forEach.call(app.querySelectorAll(".j5-opt"), function (btn) {
+        btn.addEventListener("click", function () { answer(parseInt(btn.dataset.i, 10), btn); });
+      });
+    }
+
+    function answer(i, btn) {
+      var q = qs[idx];
+      var opts = app.querySelectorAll(".j5-opt");
+      Array.prototype.forEach.call(opts, function (b) { b.classList.add("locked"); });
+      var right = i === q.answer;
+      opts[q.answer].classList.add("correct");
+      if (!right) btn.classList.add("wrong");
+      marks.push(right);
+      var fb = document.getElementById("j5-fb");
+      fb.innerHTML =
+        (right ? "🟩 Correct — " : "⬛ It's <strong>" + esc(q.options[q.answer]) + "</strong> — ") +
+        '<span class="src">' + esc(q.ipa) + ' · <a href="/word/' + encodeURIComponent(q.slug) + '">' + esc(q.w) + " page →</a></span>" +
+        (q.note ? '<div style="margin-top:8px; color: var(--muted);">' + esc(q.note) + "</div>" : "") +
+        '<button class="j5-next" id="j5-next">' + (idx === 4 ? "See result →" : "Next →") + "</button>";
+      fb.classList.add("shown");
+      document.getElementById("j5-next").addEventListener("click", function () {
+        idx += 1;
+        if (idx < 5) renderQ(); else renderResult();
+      });
+    }
+
+    function renderResult() {
+      var score = marks.filter(Boolean).length;
+      var grid = "🔊" + marks.map(function (m) { return m ? "🟩" : "⬛"; }).join("");
+      var share =
+        "Dev Jargon 5 · " + date + "\n" +
+        grid + " " + score + "/5\n" +
+        "how many dev words can you say?\n" +
+        "https://pronounce.renlab.ai/daily";
+      var review = qs.map(function (q, i) {
+        return '<div class="row">' + (marks[i] ? "🟩" : "⬛") + ' <a href="/word/' + encodeURIComponent(q.slug) + '">' + esc(q.w) + "</a> — <span class=\"r\">" + esc(q.options[q.answer]) + "</span></div>";
+      }).join("");
+      app.innerHTML =
+        '<div class="j5-card" style="text-align: center;">' +
+        '<div class="j5-date">' + date + "</div>" +
+        '<div class="j5-grid">' + grid + "</div>" +
+        '<div class="j5-score">' + score + " / 5</div>" +
+        '<div class="j5-share">' +
+        '<button class="btn" id="j5-copy">📋 Copy score</button>' +
+        '<a class="j5-star" href="https://github.com/anzy-renlab-ai/pronounce">⭐ Star the dictionary</a>' +
+        "</div>" +
+        '<div class="j5-review">' + review + "</div>" +
+        "</div>";
+      document.getElementById("j5-copy").addEventListener("click", function () {
+        copyToClipboard(share, "Score copied — paste it anywhere");
+      });
+    }
+  })();
+  </script>
+</body>
+</html>
