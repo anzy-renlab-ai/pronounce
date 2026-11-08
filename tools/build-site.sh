@@ -2560,7 +2560,7 @@ for ((d = DAYS_BACK; d >= 0; d--)); do
       <a href="/">Home</a>
       <a href="/browse">Browse</a>
       <a href="/quiz">Quiz</a>
-      <a href="/daily">Archive</a>
+      <a href="/daily/archive">Archive</a>
       <a href="https://github.com/$GH_REPO">GitHub</a>
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button>
     </div>
@@ -2580,7 +2580,7 @@ for ((d = DAYS_BACK; d >= 0; d--)); do
       <p>$d_notes_esc</p>
       <p>For the full source citation, alternate readings, and CLI usage, see the canonical page → <a href="$SITE_URL/word/$d_slug"><strong>$d_word_esc</strong></a>.</p>
     </section>
-    <p style="margin-top: 36px; color: var(--muted-strong); font-size: 14px;"><a href="/daily">← Browse the daily archive</a> · <a href="/browse">All $ENTRY_COUNT entries →</a></p>
+    <p style="margin-top: 36px; color: var(--muted-strong); font-size: 14px;"><a href="/daily">▶ Play today's Dev Jargon 5</a> · <a href="/daily/archive">Browse the daily archive</a> · <a href="/browse">All $ENTRY_COUNT entries →</a></p>
   </main>
   <footer class="footer"><p>$BRAND · MIT · daily rotation deterministic by date</p></footer>
   <script src="/script.js"></script>
@@ -2590,14 +2590,15 @@ DAILY
   echo "$daydate|$d_word|$d_slug|$d_resp|$d_ipa" >> "$DAILY_INDEX_TMP"
 done
 
-# /daily/index.html — archive index
+# /daily/archive.html — archive index (the /daily URL itself is the
+# hand-maintained Dev Jargon 5 game page: docs/daily/index.html)
 {
   cat <<DH
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pronunciation of the day — archive · $BRAND</title>
 <meta name="description" content="Daily pronunciation archive — every day a new project, product, or programmer-jargon term, with audio + source.">
-<link rel="canonical" href="$SITE_URL/daily">
+<link rel="canonical" href="$SITE_URL/daily/archive">
 <meta property="og:image" content="$SITE_URL/og.png"><meta name="theme-color" content="#ff6a3d">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="stylesheet" href="/style.css"><script defer src="/_vercel/insights/script.js"></script></head>
@@ -2605,10 +2606,11 @@ done
 <a class="skip-link" href="#main">Skip to main content</a>
 <div class="gh-banner">⭐ <a href="https://github.com/$GH_REPO">Star on GitHub</a></div>
 <nav class="topbar"><div class="brand"><a href="/">🔊 $BRAND</a></div>
-<div class="links"><a href="/">Home</a><a href="/browse">Browse</a><a href="/quiz">Quiz</a><a href="/hall-of-shame">Top 25</a><a href="/stats">Stats</a><a href="/zh" hreflang="zh-Hans" lang="zh-Hans">中文</a>
+<div class="links"><a href="/">Home</a><a href="/browse">Browse</a><a href="/quiz">Quiz</a><a href="/daily">Daily 5</a><a href="/hall-of-shame">Top 25</a><a href="/stats">Stats</a><a href="/zh" hreflang="zh-Hans" lang="zh-Hans">中文</a>
 <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button></div></nav>
 <main class="container" id="main">
 <h1 style="font-size: 36px;">📅 Pronunciation of the day — archive</h1>
+<p style="margin: 0 0 14px;"><a href="/daily" style="background: var(--accent); color: var(--bg); padding: 10px 18px; border-radius: 8px; font-weight: 700; text-decoration: none;">▶ Play today's Dev Jargon 5</a></p>
 <p style="color: var(--muted-strong);">Deterministic daily rotation — same date always picks the same word. Bookmark a day, or just <a href="/">visit the home page</a> for today's pick.</p>
 <ul class="cat-list" style="columns: 2; margin-top: 24px;">
 DH
@@ -2622,9 +2624,11 @@ DH
 <script src="/script.js"></script>
 </body></html>
 DH2
-} > "$DOCS/daily/index.html"
+} > "$DOCS/daily/archive.html"
 rm -f "$DAILY_INDEX_TMP"
-echo "Built $DOCS/daily/ ($(( DAYS_BACK + 1 )) daily pages + index)"
+# NOTE: docs/daily/index.html is the hand-maintained Dev Jargon 5 game
+# page — this generator must never write or delete it.
+echo "Built $DOCS/daily/ ($(( DAYS_BACK + 1 )) daily pages + archive)"
 
 
 # ---------------------------------------------------------------------------
@@ -2645,6 +2649,7 @@ TODAY="$(date +%Y-%m-%d)"
   printf '  <url><loc>%s/stats</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>\n' "$SITE_URL" "$TODAY"
   printf '  <url><loc>%s/about</loc><lastmod>%s</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>\n' "$SITE_URL" "$TODAY"
   printf '  <url><loc>%s/daily</loc><lastmod>%s</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>\n' "$SITE_URL" "$TODAY"
+  printf '  <url><loc>%s/daily/archive</loc><lastmod>%s</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>\n' "$SITE_URL" "$TODAY"
   # lastmod is the entry's REAL last-changed date, not the build date — telling
   # Google that all 1,848 pages changed today is both false and useless.
   slug_awk -F'\t' -v dates="$REPO_ROOT/data/entry-dates.tsv" -v site="$SITE_URL" -v today="$TODAY" '

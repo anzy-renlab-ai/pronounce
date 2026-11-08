@@ -11,6 +11,7 @@
   <url><loc>https://pronounce.renlab.ai/stats</loc><lastmod>2026-11-08</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pronounce.renlab.ai/about</loc><lastmod>2026-11-08</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://pronounce.renlab.ai/daily</loc><lastmod>2026-11-08</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/archive</loc><lastmod>2026-11-08</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
   <url><loc>https://pronounce.renlab.ai/word/kubectl</loc><lastmod>2026-05-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pronounce.renlab.ai/word/nginx</loc><lastmod>2026-05-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pronounce.renlab.ai/word/gif</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -2170,4 +2171,5 @@
   <url><loc>https://pronounce.renlab.ai/daily/2026-11-06</loc><lastmod>2026-11-06</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://pronounce.renlab.ai/daily/2026-11-07</loc><lastmod>2026-11-07</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://pronounce.renlab.ai/daily/2026-11-08</loc><lastmod>2026-11-08</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://pronounce.renlab.ai/daily/archive</loc><lastmod>archive</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
 </urlset>
