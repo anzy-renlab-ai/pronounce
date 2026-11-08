@@ -22,6 +22,21 @@ and reusable project surfaces the strongest experiment class.
 - 17-entry late-2026 AI vocabulary batch (humans& Boba/&Tutor lineage,
   GPT-6 Astra, DeepIn, Jev, NVFP4…), 1,920 entries total.
 
+## Growth trio shipped in v2.32.0 (2026-11-08)
+
+Three referral-loop features, spec + plan + multi-agent adversarially-reviewed:
+
+- **Dev Jargon 5** (`/daily`) — deterministic 5-word daily challenge
+  (UTC-rollover, same five for everyone), emoji-grid share text ending in the
+  site URL. Recurring-visit loop: the share grid is a daily social artifact.
+- **Hosted remote MCP** (`https://pronounce.renlab.ai/mcp`, streamable HTTP,
+  no install) + remote transport in server.json 0.2.0 for registry publish.
+  New-channel loop: MCP registries/directories list endpoints, each listing a
+  durable referral path.
+- **`/say/<word>` correction short-links** + one-click 「Correct someone」copy
+  button on every EN/ZH word page. Moment-of-need loop: the link gets pasted
+  exactly when someone mispronounces — highest-intent referral.
+
 ## Closed-loop work shipped in v2.30.0 (2026-11-07)
 
 - **Creator clips (49)** — word pages link the public YouTube moment where
@@ -85,3 +100,4 @@ co-marketing) before adding another awesome-list submission.
 ## Daily log
 
 - 2026-11-08 · v2.31.0 · +7 entries (T3Code, claude-mem, stroq, physicl, SpAItial, MaxxBench, benchmaxxing) · 1 rejected (openmausbot — no pronunciation evidence) · 47★
+- 2026-11-08 · v2.32.0 · growth trio shipped (Dev Jargon 5 /say short-links + hosted MCP), 8 review findings fixed pre-release · 47★

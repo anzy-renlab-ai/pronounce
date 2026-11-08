@@ -54,6 +54,12 @@ python3 tools/make-og-all.py      # per-word OG cards
 bash tools/lint-dict.sh           # MUST pass
 ```
 
+Note: the **Dev Jargon 5 game at `/daily` needs no per-day build** — it is
+client-side and deterministic (UTC date over ENTRIES). The build-site daily
+section only maintains dated word-of-the-day pages + `/daily/archive`;
+`docs/daily/index.html` and `docs/daily/game.js` are hand-maintained and the
+generator must never overwrite them.
+
 ## 5. Release
 
 1. Bump `.codex-plugin/plugin.json` version: MINOR for ≥1 new entry

@@ -37,7 +37,7 @@ All four hosted on the v2.5.0 release. Direct CDN URLs:
 
 **Title** (≤80 chars, no emoji):
 ```
-Show HN: Pronounce – a CLI that speaks kubectl, GIF, JSON the way devs actually say them
+Show HN: Pronounce – hear how devs actually say kubectl, nginx, GIF (1,927 entries)
 ```
 
 **URL**: `https://pronounce.renlab.ai/`
@@ -46,7 +46,7 @@ Show HN: Pronounce – a CLI that speaks kubectl, GIF, JSON the way devs actuall
 ```
 Hi HN — I built Pronounce, a tiny CLI + community dictionary for the project
 names devs trip over: kubectl ("koob-control"), nginx ("engine X"), GIF
-("jif"), JSON ("jay-son"), and more. The dictionary has 1,903 entries:
+("jif"), JSON ("jay-son"), and more. The dictionary has 1,927 entries:
 all are confidence-tagged, 1,283 are source-cited, 108 are
 creator-clarified, and 175 are contested.
 
@@ -59,9 +59,15 @@ macOS `say`, Linux `espeak-ng`/`espeak`, or Windows PowerShell
 letters. Multi-reading words (GIF, SQL, JWT) chain their alternates audibly
 so you know the debate exists.
 
-There's also an interactive quiz, voice search via Web Speech API, an MCP
-server so Claude/Cursor can answer pronunciation questions, and a Raycast
-script command.
+Three things you can do in the next 30 seconds:
+
+1. Play today's Dev Jargon 5 — five words, same five for everyone, share
+   your emoji grid: https://pronounce.renlab.ai/daily
+2. Correct someone the short way — every word page has a copyable
+   pronounce.renlab.ai/say/<word> link for the moment a teammate says it
+   wrong in a PR review.
+3. Add the hosted MCP to your AI client — no install, no key:
+   claude mcp add --transport http pronounce https://pronounce.renlab.ai/mcp
 
 The dictionary is a TSV file — every entry tagged with confidence
 (creator-clarified, community-consensus, contested) and a source URL when
@@ -72,7 +78,7 @@ ship today.
 
 Repo: https://github.com/anzy-renlab-ai/pronounce
 Live: https://pronounce.renlab.ai/
-Quiz: https://pronounce.renlab.ai/quiz.html
+Daily challenge: https://pronounce.renlab.ai/daily
 ```
 
 ---
@@ -320,6 +326,21 @@ sre  devops  programming  jargon
 5. **Cross-link from your other repos** — README badge `[![Pronounce](https://img.shields.io/badge/say-it-ff6a3d)](https://pronounce.renlab.ai)`.
 6. **Submit to awesome lists** — `awesome-cli-apps`, `awesome-shell`, `awesome-developer-tools`, `awesome-mcp-servers` (you're already in two).
 7. **Hacker News follow-up post a month later** — "Pronounce update: 1,903 entries, MCP server, here's what worked" tends to chart better than launches.
+
+## Post-v2.32.0 user actions (cannot be done by the agent)
+
+- **Smithery**: submit the server at https://smithery.ai/new (import the
+  GitHub repo; `smithery.yaml` at repo root configures the stdio deploy;
+  the hosted endpoint `https://pronounce.renlab.ai/mcp` is the no-install
+  pitch in the description).
+- **Glama**: claim/add the hosted endpoint at https://glama.ai/register
+  (repo `glama.json` carries maintainer metadata only — their schema is
+  portal-side).
+- **agarrharr/awesome-cli-apps** — personal PR only (list bans AI PRs);
+  draft in `/tmp/awesome-submissions.md`.
+- **Tell the clipped creators** — 49 word pages link the moment the creator
+  says the name; a low-key "we linked your moment" reply converts reshares.
+- **Show HN** — copy above now leads with Dev Jargon 5 + /say + hosted MCP.
 
 ---
 

@@ -1,0 +1,21 @@
+# Smithery deployment config — https://smithery.ai/docs/config
+# Deploys the stdio pronounce MCP server (same code as the hosted endpoint
+# at https://pronounce.renlab.ai/mcp, which needs no deployment).
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    properties: {}
+  commandFunction:
+    # A JS function that produces the CLI command to start the MCP on stdio.
+    type: code
+    script: |
+      module.exports = ({ config }) => ({
+        command: 'uvx',
+        args: [
+          '--from',
+          'git+https://github.com/anzy-renlab-ai/pronounce.git#subdirectory=mcp-server',
+          'pronounce-mcp',
+        ],
+      });
