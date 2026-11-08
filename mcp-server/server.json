@@ -24,15 +24,6 @@
       "transport": {
         "type": "stdio"
       }
-    },
-    {
-      "registryType": "remote",
-      "identifier": "https://pronounce.renlab.ai/mcp",
-      "version": "0.2.0",
-      "transport": {
-        "type": "streamable-http",
-        "url": "https://pronounce.renlab.ai/mcp"
-      }
     }
   ]
 }
