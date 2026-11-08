@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/raschka.mp3" download="raschka.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/raschka">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>Raschka</strong> 在英语中的标准读法是 <strong>「rahsh kuh」</strong>（/ˈrɑːʃkə/）。</p>
       <p class="en-note" lang="en">Sebastian Raschka, author of &quot;Build a Large Language Model (From Scratch)&quot; and the Ahead of AI newsletter. German surname: &quot;sch&quot; is the /ʃ/ digraph, so it is &quot;RAHSH-kuh&quot;, not a &quot;rask&quot; cluster. US speakers commonly anglicize the first vowel to &quot;RASH-kuh&quot;; both are heard.</p>

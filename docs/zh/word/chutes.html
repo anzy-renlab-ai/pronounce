@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/chutes.mp3" download="chutes.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/chutes">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>Chutes</strong> 在英语中的标准读法是 <strong>「shoots」</strong>（/ˈʃuːts/）。</p>
       <p class="en-note" lang="en">Chutes is Rayon Labs&#x27; serverless AI inference platform on Bittensor Subnet 64, and one of the highest-throughput providers routable from OpenRouter. The name is the ordinary English word chute (as in parachute or a garbage chute), borrowed from French, so the ch is /ʃ/ and it sounds exactly like shoots. Non-native developers reading it cold in a provider list routinely say chootz with an English ch, which is wrong.</p>

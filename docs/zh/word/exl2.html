@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/exl2.mp3" download="exl2.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/exl2">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>exl2</strong> 在英语中的标准读法是 <strong>「ee eks el too」</strong>（/ˌiː ɛks ɛl ˈtuː/）。</p>
       <p class="en-note" lang="en">Mixed-bitrate quantization format native to the ExLlamaV2 (turboderp) local-LLM inference library; the name is a contraction of ExLlamaV2 (EX-L + 2). Spelled out letter-by-letter &quot;E-X-L-TWO&quot; in local-LLM communities, not read as &quot;excel-two&quot;. STRESS on TWO. File extension/suffix seen as .exl2 on Hugging Face quants.</p>

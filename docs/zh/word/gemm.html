@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/gemm.mp3" download="gemm.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/gemm">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>GEMM</strong> 在英语中的标准读法是 <strong>「jem」</strong>（/dʒɛm/）。</p>
       <p class="en-note" lang="en">GEMM stands for GEneral Matrix Multiply, the BLAS Level-3 routine C = αAB + βC and the single most-invoked GPU kernel in deep learning (&quot;fp8 gemm&quot;, &quot;grouped gemm&quot;). One syllable, said exactly like the jewel GEM — /dʒɛm/. The double M just comes from the BLAS function names (sgemm/dgemm/cgemm) and is NOT a geminated or hard sound. Non-native devs often mis-say it as spelled-out &quot;G-E-M-M&quot;; it looks like an initialism and the doubled M invites a wrong reading.</p>

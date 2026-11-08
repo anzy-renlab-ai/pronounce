@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/claude-mem.mp3" download="claude-mem.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/claude-mem">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>claude-mem</strong> 在英语中的标准读法是 <strong>「clawed MEM」</strong>（/ˌklɔːd ˈmɛm/）。</p>
       <p class="en-note" lang="en">Two spoken words: &quot;clawed MEM&quot;. &#x27;mem&#x27; said as a word (like Memcached, mem0), not spelled M-E-M. Persistent-memory plugin for coding agents; the creator&#x27;s naming doc fixes &quot;Claude-Mem&quot; as the prose form.</p>

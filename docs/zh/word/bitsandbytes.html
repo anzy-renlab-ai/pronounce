@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/bitsandbytes.mp3" download="bitsandbytes.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/bitsandbytes">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>bitsandbytes</strong> 在英语中的标准读法是 <strong>「bits and bytes」</strong>（/ˌbɪts.ən.ˈbaɪts/）。</p>
       <p class="en-note" lang="en">k-bit quantization library for PyTorch underpinning 8-bit optimizers, LLM.int8() and 4-bit/NF4 QLoRA. Written as one lowercase token but spoken as three words: BITS-and-BYTES — STRESS on first and last, middle &#x27;and&#x27; reduced to schwa. The spelling is the pronunciation; only the concatenation obscures the word boundaries.</p>

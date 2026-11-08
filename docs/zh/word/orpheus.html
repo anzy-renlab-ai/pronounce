@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/orpheus.mp3" download="orpheus.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/orpheus">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>Orpheus</strong> 在英语中的标准读法是 <strong>「or fee us」</strong>（/ˈɔːrfiːəs/）。</p>
       <p class="en-note" lang="en">Orpheus is Canopy Labs&#x27; 2025 open-source, Llama-3b-based TTS model (repo canopyai/Orpheus-TTS; HF canopylabs/orpheus-3b-*), named after the legendary Greek bard-musician. Stress on the first syllable: OR-fee-us. Non-native devs often shift stress (or-FEE-us) or read &#x27;ph&#x27; as /p/ (&#x27;OR-pee-us&#x27;); &#x27;ph&#x27; is /f/ and the accent stays up front. Non-obvious because the classical name is unfamiliar and &#x27;eu&#x27; invites a false /juː/ reading — a rarer two-syllable variant OR-fyoos /ˈɔːrfjuːs/ does exist, but OR-fee-us is dominant.</p>

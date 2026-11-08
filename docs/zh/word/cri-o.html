@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/cri-o.mp3" download="cri-o.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/cri-o">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>CRI-O</strong> 在英语中的标准读法是 <strong>「CRY oh」</strong>（/ˈkraɪoʊ/）。</p>
       <p class="en-note" lang="en">Lightweight CNCF Kubernetes container runtime; default runtime in OpenShift. The name derives from CRI (Container Runtime Interface) plus OCI (Open Container Initiative) — confirmed by Red Hat&#x27;s announcement. Common community reading is &#x27;CRY-oh&#x27;: read &#x27;CRI&#x27; as the word &#x27;cry&#x27;, then &#x27;oh&#x27;. Stress on CRY. Common mispronunciations: spelling it out letter-by-letter &#x27;C-R-I-O&#x27;, or &#x27;CREE-oh&#x27;. No official/maintainer doc states the pronunciation, so this is community usage rather than a creator clarification.</p>

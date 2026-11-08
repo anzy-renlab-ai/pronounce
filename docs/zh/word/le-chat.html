@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/le-chat.mp3" download="le-chat.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/le-chat">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>Le Chat</strong> 在英语中的标准读法是 <strong>「luh shah」</strong>（/lə ʃɑ/）。</p>
       <p class="en-note" lang="en">Le Chat is Mistral AI&#x27;s consumer chatbot, a French pun since &quot;chat&quot; means both &quot;chat&quot; and &quot;cat,&quot; which went viral in France in early 2025. Say it the French way, luh SHAH: the final t is silent and &quot;ch&quot; is /ʃ/ (like English &quot;sh&quot;). Wikipedia gives strict French /lə ʃa/; American speakers naturally render the vowel as &quot;shah&quot; /ʃɑ/. English devs commonly mangle it as &quot;lee chat&quot; or &quot;luh CHAT&quot; with a hard English &quot;ch&quot; and an audible t. Non-obvious because the spelling looks like the English word &quot;chat,&quot; but it is French. (Mistral renamed the app Vibe at the end of May 2026.)</p>

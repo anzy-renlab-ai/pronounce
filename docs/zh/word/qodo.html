@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/qodo.mp3" download="qodo.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/qodo">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>Qodo</strong> 在英语中的标准读法是 <strong>「koh doh」</strong>（/ˈkoʊdoʊ/）。</p>
       <p class="en-note" lang="en">Qodo (formerly CodiumAI/Codium, rebranded 2024) is an AI code-review and test-generation agent platform. Its official rebrand blog confirms the name is a confluence of &quot;Quality&quot; and &quot;Code&quot; (and &quot;quality of development&quot;) — but the blog does NOT state a pronunciation. Said KOH-doh: first syllable like &quot;code,&quot; stress on syllable one. Pronunciation is community consensus (howtopronounce lists /ˈkoʊdoʊ/, &quot;koh-doh&quot;), consistent with the &quot;Code&quot; root — not an explicit creator statement. Non-native devs, thrown by a bare Q with no following U, often overcorrect to KWOH-doh (treating Q like &quot;queen&quot;/&quot;quick&quot;), but no /kw/ glide belongs here — this Q is a stylized C, not a normal English Q.</p>

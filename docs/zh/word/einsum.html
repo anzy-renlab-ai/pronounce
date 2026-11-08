@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/einsum.mp3" download="einsum.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/einsum">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>einsum</strong> 在英语中的标准读法是 <strong>「ine sum」</strong>（/ˈaɪnsʌm/）。</p>
       <p class="en-note" lang="en">Clip of &quot;Einstein summation&quot; — the tensor-contraction primitive in NumPy/PyTorch/JAX (np.einsum, torch.einsum); NumPy docs confirm it &quot;Evaluates the Einstein summation convention on the operands&quot; (docs state the meaning, not the pronunciation). Stress on the first syllable: INE-sum, where &quot;ein&quot; rhymes with the start of Einstein /aɪn/ (like &quot;wine&quot;). Non-native devs commonly say &quot;EEN-sum&quot; (/iːn/) or &quot;AYN-sum&quot; (/eɪn/, as in &quot;rein&quot;); the German &quot;ei&quot; digraph is /aɪ/, not /iː/ or /eɪ/. Non-obvious because the clipped &quot;ein-&quot; hides its origin in the surname Einstein.</p>

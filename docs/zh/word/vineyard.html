@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/vineyard.mp3" download="vineyard.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/vineyard">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>Vineyard</strong> 在英语中的标准读法是 <strong>「vin yerd」</strong>（/ˈvɪnjərd/）。</p>
       <p class="en-note" lang="en">Vineyard (v6d) is a CNCF sandbox project — an in-memory immutable data manager giving zero-copy sharing of distributed data between steps of big-data and ML pipelines. Despite the spelling it is VIN-yerd, with a short i and a silent e; it is not VINE-yard. Dictionaries are unanimous on /ˈvɪnjərd/, and the project site offers no alternative pronunciation of its own.</p>

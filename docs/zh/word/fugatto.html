@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/fugatto.mp3" download="fugatto.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/fugatto">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>Fugatto</strong> 在英语中的标准读法是 <strong>「foo gah toh」</strong>（/fuˈɡɑːtoʊ/）。</p>
       <p class="en-note" lang="en">Fugatto = &quot;Foundational Generative Audio Transformer Opus 1,&quot; NVIDIA&#x27;s Nov-2024 any-to-any generative audio model (text/audio prompts to create or transform music, voice, and sound). Pronounced foo-GAH-toh, stress on the second syllable (GAH = long &quot;ah&quot; as in father), echoing the Italian musical term &quot;fugato&quot; (in the manner of a fugue) — NVIDIA doubled the t for the backronym (Italian speakers note the real word is one-t &quot;fugato&quot;). NVIDIA never published an explicit pronunciation, so this reading is inferred from the fugato etymon (community-consensus, not creator-clarified). Non-native devs commonly flatten it to FOO-gat-oh or few-GAT-oh, misplacing stress and using a short American &quot;a.&quot;</p>

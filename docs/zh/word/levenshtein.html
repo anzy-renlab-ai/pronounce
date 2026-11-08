@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/levenshtein.mp3" download="levenshtein.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/levenshtein">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>Levenshtein</strong> 在英语中的标准读法是 <strong>「LEV en shtine」</strong>（/ˈlɛvənˌʃtaɪn/）。</p>
       <p class="en-note" lang="en">Named after Soviet/Russian mathematician Vladimir Levenshtein (Russian: Левенштейн), who defined the edit-distance metric in 1965 — bread-and-butter in NLP, spell-checkers, fuzzy search, and bioinformatics. The German/Yiddish-orthography &#x27;-stein&#x27; is the trap: the standard English reading rhymes &#x27;stein&#x27; with &#x27;mine&#x27; (like Einstein), giving LEV-en-shtine — stress on the FIRST syllable, &#x27;sht&#x27; cluster kept intact. Many devs instead say LEV-en-STEEN / LEE-ven-steen (sounding the &#x27;s&#x27; separately, &#x27;-steen&#x27; like the recurring &#x27;Bernstein&#x27; debate) or stress the middle syllable. The &#x27;sh&#x27; before the &#x27;t&#x27; is what most often gets dropped.</p>

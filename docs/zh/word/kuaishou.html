@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/kuaishou.mp3" download="kuaishou.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/kuaishou">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>Kuaishou</strong> 在英语中的标准读法是 <strong>「kwai show」</strong>（/ˈkwaɪʃoʊ/）。</p>
       <p class="en-note" lang="en">Kuaishou (快手, pinyin kuàishǒu, &quot;quick hand&quot;) is the Chinese short-video company behind the Kling video model and the Kwai-Keye / KwaiVGI open models on Hugging Face. &quot;Kuai&quot; is one syllable that rhymes with &quot;why&quot; — which is exactly why the company&#x27;s overseas brand is spelled Kwai — and &quot;shou&quot; rhymes with &quot;show&quot;. So it is KWAI-show, not &quot;koo-eye-shoo&quot; or &quot;KWAY-shoo&quot;.</p>

@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/pixtral.mp3" download="pixtral.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/pixtral">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>pixtral</strong> 在英语中的标准读法是 <strong>「piks trahl」</strong>（/ˈpɪks trɑːl/）。</p>
       <p class="en-note" lang="en">Mistral AI&#x27;s multimodal model family (Pixtral 12B, Pixtral Large). Blend of &#x27;pixel&#x27; + &#x27;Mistral,&#x27; so &#x27;-tral&#x27; rhymes with sibling Mistral/Mixtral entries (TRAHL, long ah). Front-loaded stress PIKS-trahl is most common; second-syllable piks-TRAHL (matching some Mixtral speakers) also heard. No creator pronunciation guide published.</p>

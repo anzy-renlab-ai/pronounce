@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/surya.mp3" download="surya.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/surya">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>Surya</strong> 在英语中的标准读法是 <strong>「soor yuh」</strong>（/ˈsuːrjə/）。</p>
       <p class="en-note" lang="en">Surya is Datalab&#x27;s open-source OCR, layout and table-recognition model and Python package (surya-ocr), the engine behind Marker. The README says it is named for the Hindu sun god, Sanskrit/Hindi sources support SOOR-yuh (two syllables, long oo, y-glide), while English Wikipedia gives the anglicized three-syllable SOO-ree-uh; both are attested and no source establishes a winner. The common mistake is reading the first vowel like surrey.</p>

@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/cutlass.mp3" download="cutlass.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/cutlass">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>cutlass</strong> 在英语中的标准读法是 <strong>「kut luhs」</strong>（/ˈkʌtləs/）。</p>
       <p class="en-note" lang="en">NVIDIA&#x27;s CUDA C++ GEMM/linear-algebra template library; kernel backend behind vLLM, FlashInfer, and many 2025 LLM-serving stacks. The name is an acronym (CUDA Templates for Linear Algebra Subroutines and Solvers) deliberately landing on the sword &#x27;cutlass&#x27; — say it exactly like that word. STRESS first syllable: KUT-luhs. NOT &#x27;CUDA-lass&#x27; or &#x27;cut-LASS&#x27;. Dictionary IPA /ˈkʌtləs/ (Oxford/Cambridge/Collins, same in BrE and AmE).</p>

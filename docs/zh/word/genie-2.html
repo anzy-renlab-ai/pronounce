@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/genie-2.mp3" download="genie-2.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/genie-2">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>Genie 2</strong> 在英语中的标准读法是 <strong>「jee nee two」</strong>（/ˈdʒiːni ˈtuː/）。</p>
       <p class="en-note" lang="en">DeepMind&#x27;s large-scale foundation world model that generates action-controllable, playable 3D environments from a single image; &#x27;Genie&#x27; (from &#x27;Generative Interactive Environments&#x27;) is said like the common word genie, &#x27;2&#x27; as &#x27;two&#x27; — &#x27;JEE-nee two&#x27;.</p>

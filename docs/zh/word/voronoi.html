@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/voronoi.mp3" download="voronoi.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/voronoi">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>Voronoi</strong> 在英语中的标准读法是 <strong>「VOR uh noy」</strong>（/ˈvɔːrənɔɪ/）。</p>
       <p class="en-note" lang="en">Stress placement is genuinely contested. Named after Russian mathematician Georgy Voronoy (Воронóй). The most commonly documented mainstream English form puts primary stress on the FIRST syllable — VOR-uh-noy, /ˈvɔːrənɔɪ/ (so howtopronounce.com and the dev-community Casual Effects computational-graphics guide). But it competes with a final-stress vor-uh-NOY (ending like &#x27;annoy&#x27;) and a middle-stress vor-OH-noy — no single anglicization has won. The Russian-accurate rendering is closer to &#x27;vah-rah-NOY&#x27;, with the unstressed o&#x27;s reduced toward &#x27;uh/ah&#x27;. Pervasive in computational geometry, mesh generation, procedural texturing, and game dev, where &#x27;how do you even say Voronoi?&#x27; (usually alongside Delaunay) is a recurring forum thread.</p>

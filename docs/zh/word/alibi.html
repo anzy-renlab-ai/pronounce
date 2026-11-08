@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/alibi.mp3" download="alibi.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/alibi">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>ALiBi</strong> 在英语中的标准读法是 <strong>「al uh by」</strong>（/ˈæləbaɪ/）。</p>
       <p class="en-note" lang="en">ALiBi = Attention with Linear Biases, a transformer position method used in BLOOM and MPT. The camelCase ALiBi cues that it reads as the everyday English word &quot;alibi&quot; (STRESS: AL-uh-by, first syllable) — not spelled out A-L-I-B-I, and the &quot;-bi&quot; is long-i (&quot;by&quot;), not &quot;bee&quot;. Paper/GitHub don&#x27;t document the pronunciation, so community-consensus, but the wordplay is unambiguous.</p>

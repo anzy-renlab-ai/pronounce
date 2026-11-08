@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/toolformer.mp3" download="toolformer.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/toolformer">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>toolformer</strong> 在英语中的标准读法是 <strong>「tool for mur」</strong>（/ˈtuːlˌfɔːrmər/）。</p>
       <p class="en-note" lang="en">Meta AI paper (Schick et al., 2023): seminal &quot;LLM teaches itself to use tools/APIs&quot; work, foundational to tool-calling agents. Portmanteau of &quot;tool&quot; + &quot;-former&quot; (borrowed from Transformer). STRESS: TOOL-for-mer; &quot;-former&quot; rhymes with the end of transFORMER. No creator audio on record, but the construction is unambiguous.</p>

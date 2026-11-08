@@ -971,6 +971,11 @@ def emit_zh_word(e: dict, out_dir: Path, clips: dict[str, dict]) -> None:
       </div>
     </div>
 """
+    html += f"""    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){{this.textContent='✅ 已复制';}}.bind(this))" data-url="{SITE_URL}/say/{slug}">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
+"""
     clip = clips.get(slug)
     if clip:
         watch = f"https://www.youtube.com/watch?v={clip['yt']}&t={clip['t']}s"

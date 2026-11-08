@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/maxxbench.mp3" download="maxxbench.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/maxxbench">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>MaxxBench</strong> 在英语中的标准读法是 <strong>「MAKS bench」</strong>（/ˈmæks ˌbɛntʃ/）。</p>
       <p class="en-note" lang="en">Benchmark for task adaptation and generalization in frontier coding agents (unlap.ai, Nov 2026). The double-x is decorative: &quot;max bench&quot;, not &quot;maxx&quot;.</p>

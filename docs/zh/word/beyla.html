@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/beyla.mp3" download="beyla.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/beyla">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>Beyla</strong> 在英语中的标准读法是 <strong>「BAY luh」</strong>（/ˈbeɪlə/）。</p>
       <p class="en-note" lang="en">Grafana&#x27;s eBPF auto-instrumentation tool (open-sourced 2023, github.com/grafana/beyla), since donated to OpenTelemetry as OpenTelemetry eBPF Instrumentation (OBI). Grafana Labs names projects after Norse mythology; Beyla is a figure from the Poetic Edda (Lokasenna), a servant of the god Freyr. Say it BAY-luh, stress on the FIRST syllable (first syllable rhymes with &#x27;bay&#x27;/&#x27;they&#x27;). The &#x27;ey&#x27; follows the standard English Anglicization of Old Norse names — the Bellows Poetic Edda pronouncing index lists &#x27;Beyl-a&#x27; with &#x27;ey as in they.&#x27; (Strict Old Norse is closer to [ˈbœylɑ], a front-rounded vowel, but English usage settles on the &#x27;they&#x27; vowel.) English readers commonly mis-guess BYE-la (eye sound) or BEE-la, both wrong.</p>

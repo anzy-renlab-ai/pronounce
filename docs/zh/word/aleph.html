@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/aleph.mp3" download="aleph.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/aleph">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>Aleph</strong> 在英语中的标准读法是 <strong>「ah lef」</strong>（/ˈɑːlɛf/）。</p>
       <p class="en-note" lang="en">Aleph is Runway&#x27;s July-2025 in-context video model, named after aleph (א), the first letter of the Hebrew/Semitic alphabet. Stress falls on the first syllable: AH-lef, with a broad &quot;ah&quot; /ɑː/; the -lif variant (AH-lif) is equally attested. Non-native devs often mis-stress it as &quot;uh-LEFF&quot; (second-syllable stress with a reduced first vowel) the second-syllable stress is wrong, while a long-a &quot;AY-lef&quot; /ˈeɪlɛf/ is a valid but less common dictionary variant. Non-obvious because the spelled &quot;a&quot; is the open /ɑ/, not a schwa or the English long-a, and Runway&#x27;s own announcement never states a pronunciation or name origin.</p>

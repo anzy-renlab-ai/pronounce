@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/aphrodite.mp3" download="aphrodite.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/aphrodite">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>Aphrodite</strong> 在英语中的标准读法是 <strong>「af ruh die tee」</strong>（/ˌæfrəˈdaɪti/）。</p>
       <p class="en-note" lang="en">Aphrodite (aphrodite-engine) is PygmalionAI&#x27;s large-scale LLM inference engine, built on vLLM&#x27;s PagedAttention and named after the Greek goddess of love. Four syllables with primary stress on the third: af-ruh-DY-tee, ending in a full &quot;-ee&quot; sound. Non-native devs mangle it to &quot;AY-pro-dite&quot; — but &quot;aph&quot; is &quot;af&quot; (not &quot;ayf&quot;), and the final -e is NOT silent (it&#x27;s &quot;ee&quot;). It&#x27;s non-obvious because the &quot;-ite&quot; ending looks like it should rhyme with &quot;kite,&quot; and English speakers instinctively silence a trailing -e. Verified against Wiktionary US IPA /æfɹəˈdaɪti/.</p>

@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/vlt.mp3" download="vlt.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/vlt">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>vlt</strong> 在英语中的标准读法是 <strong>「volt」</strong>（/ˈvoʊlt/）。</p>
       <p class="en-note" lang="en">vlt is a JavaScript package manager and CLI from npm&#x27;s creator Isaac Schlueter and former npm maintainers, released with vsr, a serverless registry. Because the name is written with no vowels, cold readers spell it out as &quot;V-L-T&quot; or guess &quot;vult&quot;, and many write-ups call it &quot;vault&quot; — but the project brands itself &quot;vlt /vōlt/&quot; in its own GitHub org name and site titles, so it is one syllable, exactly like the English word volt, rhyming with bolt.</p>

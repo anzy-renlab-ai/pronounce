@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/karmada.mp3" download="karmada.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/karmada">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>Karmada</strong> 在英语中的标准读法是 <strong>「kar MAH duh」</strong>（/kɑːrˈmɑːdə/）。</p>
       <p class="en-note" lang="en">CNCF multi-cluster Kubernetes orchestrator (incubation project). The README opens with the etymology spelled out: &#x27;Karmada (Kubernetes Armada)…&#x27; — a blend of Kubernetes + Armada. So the back half rhymes with &#x27;armada&#x27;: kar-MAH-duh, stress on the second syllable MAH, with a broad &#x27;ah&#x27;. The trap is reading the first four letters as &#x27;karm&#x27; (like karma) and saying KAR-ma-da with front stress; a secondary anglicization is kar-MAY-duh (mirroring the older &#x27;ar-MAY-duh&#x27; variant of armada). Following the Spanish-rooted &#x27;armada&#x27;, kar-MAH-duh is the natural fit.</p>

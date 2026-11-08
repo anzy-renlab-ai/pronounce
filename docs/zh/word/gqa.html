@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/gqa.mp3" download="gqa.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/gqa">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>GQA</strong> 在英语中的标准读法是 <strong>「jee kyoo ay」</strong>（/ˌdʒiː kjuː ˈeɪ/）。</p>
       <p class="en-note" lang="en">Grouped-Query Attention — the default attention in Llama 2/3, Qwen, Gemma, GPT-OSS. Read as an initialism, letter by letter: G-Q-A, jee-kyoo-AY, STRESS on the final letter. Said-as-a-word never caught on because the Q has no following vowel, so spelling it out is the dominant convention in papers, model cards, and talks.</p>

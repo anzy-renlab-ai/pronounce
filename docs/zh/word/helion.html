@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/helion.mp3" download="helion.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/helion">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>Helion</strong> 在英语中的标准读法是 <strong>「hee lee on」</strong>（/ˈhiːliɑːn/）。</p>
       <p class="en-note" lang="en">Helion is PyTorch&#x27;s high-level kernel-authoring DSL from Meta (public beta at PyTorch Conference 2025), which compiles down to Triton. The name is the physics term for a helium-3 nucleus, a deliberate sibling to Triton (the hydrogen-3 nucleus), and it is a portmanteau of helium + ion — so the first syllable is HEE as in helium, not HELL as in the English word hellion. The reduced form hee lee uhn is an equally valid variant.</p>

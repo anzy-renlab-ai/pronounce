@@ -134,6 +134,15 @@
       </div>
     </section>
 
+    <section class="related embed-section" style="margin-top: 24px;">
+      <h2>Correct someone the short way</h2>
+      <p style="color: var(--muted-strong); font-size: 14.5px;">Send this link when someone says it wrong in chat, a PR review, or a meeting.</p>
+      <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+        <input id="say-link" readonly value="https://pronounce.renlab.ai/say/marvin" style="flex:1; min-width:240px; padding:9px 12px; font-family:ui-monospace,monospace; font-size:12.5px; border:1px solid var(--border,#333); border-radius:8px; background:var(--bg-elev,#1c1c20); color:var(--fg,#eee);">
+        <button class="btn" onclick="var i=document.getElementById('say-link'); i.select(); copyToClipboard(i.value,'Correction link copied')">🔗 Copy link</button>
+      </div>
+    </section>
+
     <section class="related" style="margin-top: 36px;">
       <h2>About this entry</h2>
       <p style="color: var(--muted-strong); font-size: 14.5px;">

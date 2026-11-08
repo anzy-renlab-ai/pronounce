@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/sycl.mp3" download="sycl.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/sycl">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>SYCL</strong> 在英语中的标准读法是 <strong>「sik uhl」</strong>（/ˈsɪkəl/）。</p>
       <p class="en-note" lang="en">SYCL is a Khronos Group royalty-free C++ standard for heterogeneous/accelerator (GPU) computing, central to Intel oneAPI and CUDA-to-SYCL porting. Pronounced SICK-ul (/ˈsɪkəl/) — a deliberate homophone of the farming tool &quot;sickle&quot; — with stress on the first syllable. Non-native devs commonly spell it out &quot;S-Y-C-L&quot; or say &quot;SY-cull&quot; (/ˈsaɪkəl/), missing that the two-syllable name reads like a real English word. Originally &quot;System-wide Compute Language&quot;; since 2020 the creators state it is a name, not an acronym. Pronunciation documented on Wikipedia; no creator/official pronunciation quote located, so labeled community-consensus.</p>

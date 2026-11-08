@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/galore.mp3" download="galore.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/galore">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>GaLore</strong> 在英语中的标准读法是 <strong>「guh LOR」</strong>（/ɡəˈlɔːr/）。</p>
       <p class="en-note" lang="en">Memory-efficient LLM training method = &#x27;GRAdient LOw-Rank projEction&#x27; (ICML 2024 oral, jiaweizzhao/GaLore), pitched as a more memory-efficient cousin of LoRA. The casing &#x27;GaLore&#x27; reads as a homograph of the English word &#x27;galore&#x27; (/ɡəˈlɔːr/, stress on the SECOND syllable, as in &#x27;savings galore&#x27;) — which strongly suggests the intended reading is guh-LOR, a wink at LoRA. Note: this pun is an inference; the paper and authors don&#x27;t state the pronunciation. Because the capital L splits it visually into Ga+Lore, many practitioners instead read it as an initialism with FIRST-syllable stress, GAL-or. Genuinely split in practice.</p>

@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/t3code.mp3" download="t3code.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/t3code">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>T3Code</strong> 在英语中的标准读法是 <strong>「tee three code」</strong>（/ˌtiː ˈθriː ˈkoʊd/）。</p>
       <p class="en-note" lang="en">&quot;tee-three-code&quot; — every official surface renders the name letter+digit (&quot;T3 Code&quot;, CLI `t3`, winget T3Tools.T3Code, iOS listing &quot;T3 Code: Remote Claude &amp; More&quot;); sibling brand T3 Chat is likewise spoken &quot;T three&quot;. Not &quot;tee-cubed&quot;.</p>

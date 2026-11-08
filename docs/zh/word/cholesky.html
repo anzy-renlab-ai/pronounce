@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/cholesky.mp3" download="cholesky.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/cholesky">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>Cholesky</strong> 在英语中的标准读法是 <strong>「shuh LESS kee」</strong>（/ʃəˈlɛski/）。</p>
       <p class="en-note" lang="en">Stress on the SECOND syllable: shuh-LESS-kee. Named after French mathematician/military officer André-Louis Cholesky (decomposition posthumously published 1924). Wikipedia gives /ʃəˈlɛski/ — the onset is &#x27;sh&#x27;, NOT a hard &#x27;k&#x27;. The decomposition is everywhere in numerical computing / ML (covariance factorization, linear solvers, Gaussian processes), so the mispronunciation gets repeated constantly. English speakers overwhelmingly default to the spelling-driven &#x27;koh-LESS-kee&#x27; (hard C), and many keep that even after being corrected, which is why it&#x27;s genuinely contested rather than a clean single answer.</p>

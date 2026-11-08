@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/kyutai.mp3" download="kyutai.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/kyutai">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>Kyutai</strong> 在英语中的标准读法是 <strong>「KYOO tye」</strong>（/ˈkjuː.taɪ/）。</p>
       <p class="en-note" lang="en">Paris-based open-science AI lab (founded Nov 2023 by Xavier Niel/Iliad, Rodolphe Saadé/CMA CGM, and Eric Schmidt/Schmidt Sciences) behind the Moshi real-time voice model. The name romanizes the Japanese 球体 (kyūtai), meaning &#x27;sphere/orb&#x27; — the intended reading is two syllables: KYOO (きゅう, a long vowel like English &#x27;cue&#x27;/&#x27;queue&#x27;) + tye (たい, rhyming with &#x27;tie&#x27;). English devs routinely mangle it into 3-4 syllables (&#x27;kee-YOO-tah-ee&#x27;) because the vowel cluster looks longer than it sounds. Stress is genuinely contested: Japanese is pitch-accent rather than stressed, so English speakers split between first-syllable KYOO-tye (recommended primary) and second-syllable kyoo-TYE. Note kyutai.org itself does NOT explain the name; the Japanese-sphere etymology is confirmed by Amplify Partners&#x27; write-up.</p>

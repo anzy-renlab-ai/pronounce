@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/aeraki.mp3" download="aeraki.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/aeraki">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>Aeraki</strong> 在英语中的标准读法是 <strong>「air rah kee」</strong>（/ɛˈrɑːki/）。</p>
       <p class="en-note" lang="en">Aeraki Mesh is a CNCF sandbox project that manages non-HTTP layer-7 protocols such as Dubbo, Thrift and Redis in an Istio service mesh. The maintainers spell the pronunciation out in the README: Aeraki [Air-rah-ki] is the Greek word for breeze, with the stress on the second syllable. The ae- digraph misleads English readers into air-uh-kye or ay-RAY-kee.</p>

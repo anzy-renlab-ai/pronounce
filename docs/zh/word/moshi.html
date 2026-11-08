@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/moshi.mp3" download="moshi.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/moshi">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>Moshi</strong> 在英语中的标准读法是 <strong>「MOH shee」</strong>（/ˈmoʊ.ʃi/）。</p>
       <p class="en-note" lang="en">Kyutai&#x27;s real-time full-duplex speech-text foundation model (July 2024), built on the Mimi neural audio codec (Mimi = MEE-mee). Say it MOH-shee: stress the first syllable, long &#x27;o&#x27; as in &#x27;go&#x27;, &#x27;sh&#x27; as in &#x27;ship&#x27; — MOH-shee. The name matches the Japanese word もしもし (moshi moshi), the phrase used to answer the phone; that etymology is widely assumed but is NOT stated in Kyutai&#x27;s README, the arXiv paper (2410.00037), or kyutai.org, so treat the naming rationale as unconfirmed. Common English mispronunciations are &#x27;MOSH-ee&#x27; (rhyming with &#x27;posh&#x27;) and &#x27;MOSH-eye&#x27; — both wrong.</p>

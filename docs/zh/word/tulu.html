@@ -54,6 +54,10 @@
         <a class="download-mp3" href="../../audio/tulu.mp3" download="tulu.mp3" title="下载 macOS Samantha 朗读版 (.mp3)">mp3</a>
       </div>
     </div>
+    <p class="saylink-row" style="margin:14px 0 0;">
+      <button id="zh-say-link" style="cursor:pointer; border:none; border-radius:8px; padding:9px 14px; font-weight:700; background:#ff6a3d; color:#0e0e10;" onclick="navigator.clipboard.writeText(this.dataset.url).then(function(){this.textContent='✅ 已复制';}.bind(this))" data-url="https://pronounce.renlab.ai/say/tulu">🔗 复制纠音链接</button>
+      <span style="font-size:13px; color:#97979a;"> 发给读错的人</span>
+    </p>
     <section class="prose">
       <p><strong>Tulu</strong> 在英语中的标准读法是 <strong>「TOO loo」</strong>（/ˈtuːluː/）。</p>
       <p class="en-note" lang="en">AllenAI&#x27;s open post-training model family (Tülu 2, Tülu 3). The Tülu 3 paper footnotes the name: &#x27;A tülu is a hybrid camel bred between Bactrian camel and dromedary&#x27; — fitting AllenAI&#x27;s running camel theme (the predecessor papers &#x27;How Far Can Camels Go?&#x27; and &#x27;Camels in a Changing Climate&#x27;). It comes from the Turkish word tülü (&#x27;hairy/feathered&#x27;); the ü is a front rounded vowel (like German ü or French &#x27;tu&#x27;). English speakers overwhelmingly settle on TOO-loo with stress on the first syllable. A more faithful-to-Turkish rendering is tew-LOO — note Turkish stresses the FINAL syllable (Wiktionary: /tyˈly/). Common stumble: devs drop the umlaut entirely and say &#x27;tuh-LOO&#x27; or &#x27;TUH-luh&#x27;, or read it as &#x27;tulu&#x27; rhyming with &#x27;Zulu&#x27;. (The AllenAI model name is spelled &#x27;Tülu&#x27; with one ü; the underlying Turkish word is &#x27;tülü&#x27;.)</p>
