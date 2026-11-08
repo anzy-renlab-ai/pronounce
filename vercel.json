@@ -4,6 +4,10 @@
   "trailingSlash": false,
   "outputDirectory": "docs",
   "buildCommand": "echo 'prebuilt — docs/ is generated + committed in CI; Vercel serves it as-is'",
+  "rewrites": [
+    { "source": "/say/:slug", "destination": "/word/:slug" },
+    { "source": "/mcp", "destination": "/api/mcp" }
+  ],
   "headers": [
     {
       "source": "/api/(.*)",
