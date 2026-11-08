@@ -31,6 +31,12 @@ on:
       - 'tools/make-og-all.py'
       - 'tools/test-v2-audio.mjs'
       - 'tools/test_pronounce_action.mjs'
+      - 'tools/test-daily.mjs'
+      - 'tools/test-mcp.mjs'
+      - 'docs/daily/game.js'
+      - 'api/**'
+      - 'vercel.json'
+      - 'tools/test_deploy_config.py'
       - 'tools/build_source_sprint.py'
       - 'tools/test_source_sprint.py'
       - 'action.yml'
@@ -80,6 +86,6 @@ jobs:
       - name: Install Pillow
         run: python -m pip install Pillow
       - name: Test homepage audio
-        run: node --test tools/test-v2-audio.mjs tools/test_pronounce_action.mjs
+        run: node --test tools/test-v2-audio.mjs tools/test_pronounce_action.mjs tools/test-daily.mjs tools/test-mcp.mjs
       - name: Test generated data and OG state
-        run: python -m unittest tools/test_build_v2_data.py tools/test_make_og_all.py tools/test_chrome_dictionary.py tools/test_build_entry_dates.py tools/test_build_seo.py tools/test_indexnow_submit.py tools/test_source_sprint.py
+        run: python -m unittest tools/test_build_v2_data.py tools/test_make_og_all.py tools/test_chrome_dictionary.py tools/test_build_entry_dates.py tools/test_build_seo.py tools/test_indexnow_submit.py tools/test_source_sprint.py tools/test_deploy_config.py

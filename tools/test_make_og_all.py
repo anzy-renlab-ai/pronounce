@@ -936,6 +936,12 @@ class WorkflowClosureTests(unittest.TestCase):
     )
     ACTION_SOURCE_AND_TEST_PATHS = (
         "tools/test_pronounce_action.mjs",
+        "tools/test-daily.mjs",
+        "tools/test-mcp.mjs",
+        "docs/daily/game.js",
+        "api/**",
+        "vercel.json",
+        "tools/test_deploy_config.py",
         "tools/build_source_sprint.py",
         "tools/test_source_sprint.py",
         "action.yml",
