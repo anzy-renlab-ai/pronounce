@@ -66,9 +66,17 @@ bash tools/lint-dict.sh           # MUST pass
    **<one-line summary>.** N new entries (X total): word1, word2, …
    ```
 
-3. `bash tools/release.sh` — syncs the README/test pins, runs all guards,
-   tags, pushes, and opens the GitHub release. It fails loud if the
-   changelog top entry doesn't match the version/date.
+3. Sync every hardcoded count (the release guards check them all):
+   - README: total, sourced / creator-clarified / contested companion
+     stats, `dictionary-…%20entries` badge, body mentions.
+   - `.codex-plugin/plugin.json` and `mcp-server/server.json` entry counts.
+   - `tools/test_build_v2_data.py` pins: `len(rows)` exact total, sourced
+     total, and the `"N,NNN entries — N,NNN carry a citable source"`
+     README assertion (grep `1_9` / `1,9` / `1,30`).
+4. `bash tools/release.sh` — syncs the README uses-pin and the changelog
+   test pin, runs all guards, tags, pushes, and opens the GitHub release.
+   It fails loud if the changelog top entry doesn't match the
+   version/date.
 
 ## 6. Ledger
 

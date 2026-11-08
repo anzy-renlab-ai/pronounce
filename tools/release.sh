@@ -51,10 +51,13 @@ if readme2 != readme:
     print("release: README uses-pin synced to v" + version)
 
 t = open("tools/test_build_v2_data.py").read()
-pin = f'# Changelog\\n\\n## v{version} — '
+# Build the replacement as a plain string and hand it to re.sub via a lambda:
+# a pattern-side or replacement-side \\n would be re-interpreted as a real
+# newline, corrupting the Python source literal.
+new_pin = '"# Changelog\\\\n\\\\n## v' + version + ' — ' + __import__("datetime").date.today().isoformat() + '\\\\n"'
 t2 = re.sub(
-    r'"# Changelog\\n\\n## v\d+\.\d+\.\d+ — \d{4}-\d{2}-\d{2}\\n"',
-    f'"# Changelog\\n\\n## v{version} — {__import__("datetime").date.today().isoformat()}\\n"',
+    r'"# Changelog\\\\n\\\\n## v\d+\.\d+\.\d+ — \d{4}-\d{2}-\d{2}\\\\n"',
+    lambda m: new_pin,
     t,
 )
 if t2 != t:
