@@ -73,3 +73,12 @@ test("buildQuestions: 3-week streak of days all build cleanly", () => {
     assert.equal(qs.length, 5, date);
   }
 });
+
+test("todayISO is UTC-based: same instant, one date everywhere", () => {
+  const { todayISO } = require("../docs/daily/game.js");
+  // 2026-11-09T00:30Z is still 2026-11-08 evening in the Americas.
+  const instant = new Date(Date.UTC(2026, 10, 9, 0, 30));
+  const la = todayISO(instant); // reads UTC fields, so host TZ cannot leak in
+  assert.equal(la, "2026-11-09");
+  assert.equal(todayISO(new Date(Date.UTC(2026, 0, 2, 23, 59))), "2026-01-02");
+});

@@ -155,12 +155,21 @@ async function callTool(fetchImpl, name, args) {
 // body === undefined means "no response payload" (notification / empty batch).
 async function handleRequest(fetchImpl, body) {
   if (Array.isArray(body)) {
+    // JSON-RPC 2.0: an empty batch is a single -32600 error response.
+    if (body.length === 0) {
+      return {
+        status: 400,
+        body: rpcError(null, -32600, "Invalid Request — empty batch"),
+      };
+    }
     const out = [];
     for (const one of body) {
       const r = await handleRequest(fetchImpl, one);
       if (r.body !== undefined) out.push(r.body);
     }
-    return { status: 200, body: out.length ? out : undefined };
+    // Batch of only notifications/responses: 202 Accepted, no body (MCP spec).
+    if (out.length === 0) return { status: 202 };
+    return { status: 200, body: out };
   }
   if (!body || typeof body !== "object" || Array.isArray(body) ||
       body.jsonrpc !== "2.0" || typeof body.method !== "string") {
@@ -231,4 +240,5 @@ module.exports = {
   callTool: callTool,
   API_BASE: API_BASE,
   SERVER_VERSION: SERVER_VERSION,
+  SUPPORTED_PROTOCOLS: SUPPORTED_PROTOCOLS,
 };

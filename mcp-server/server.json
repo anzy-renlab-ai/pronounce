@@ -27,8 +27,10 @@
     },
     {
       "registryType": "remote",
+      "identifier": "https://pronounce.renlab.ai/mcp",
+      "version": "0.2.0",
       "transport": {
-        "type": "http",
+        "type": "streamable-http",
         "url": "https://pronounce.renlab.ai/mcp"
       }
     }

@@ -6,13 +6,15 @@
 // JSON-RPC response (no SSE, no sessions — the spec allows this for
 // stateless servers).
 
-const { handleRequest } = require("./mcp-lib.js");
+const { handleRequest, SUPPORTED_PROTOCOLS } = require("./mcp-lib.js");
 
 function readBody(req) {
+  // Concatenate Buffers, decode once — chunk-boundary splits inside a
+  // multi-byte UTF-8 sequence would corrupt the text if decoded per chunk.
   return new Promise(function (resolve, reject) {
-    let raw = "";
-    req.on("data", function (c) { raw += c; });
-    req.on("end", function () { resolve(raw); });
+    const chunks = [];
+    req.on("data", function (c) { chunks.push(Buffer.isBuffer(c) ? c : Buffer.from(c)); });
+    req.on("end", function () { resolve(Buffer.concat(chunks).toString("utf8")); });
     req.on("error", reject);
   });
 }
@@ -40,6 +42,21 @@ module.exports = async function (req, res) {
   if (req.method === "DELETE") { res.status(200).end(); return; } // stateless: no session to end
   if (req.method !== "POST") { res.status(405).json({ error: "POST, GET, DELETE, OPTIONS only" }); return; }
 
+  // MCP spec: invalid/unsupported MCP-Protocol-Version header MUST get 400.
+  const pv = req.headers["mcp-protocol-version"];
+  if (pv !== undefined && SUPPORTED_PROTOCOLS.indexOf(String(pv)) === -1) {
+    res.status(400).json({
+      jsonrpc: "2.0",
+      id: null,
+      error: {
+        code: -32000,
+        message: "Unsupported MCP-Protocol-Version: " + pv +
+          " (supported: " + SUPPORTED_PROTOCOLS.join(", ") + ")",
+      },
+    });
+    return;
+  }
+
   let parsed;
   try {
     parsed = JSON.parse(await readBody(req));
@@ -55,3 +72,4 @@ module.exports = async function (req, res) {
     res.status(500).json({ jsonrpc: "2.0", id: null, error: { code: -32603, message: "Internal error" } });
   }
 };
+module.exports.readBody = readBody; // exposed for tests

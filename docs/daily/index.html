@@ -110,6 +110,7 @@
     function answer(i, btn) {
       var q = qs[idx];
       var opts = app.querySelectorAll(".j5-opt");
+      if (opts.length && opts[0].classList.contains("locked")) return; // already answered
       Array.prototype.forEach.call(opts, function (b) { b.classList.add("locked"); });
       var right = i === q.answer;
       opts[q.answer].classList.add("correct");

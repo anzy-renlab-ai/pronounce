@@ -134,6 +134,73 @@ test("ping", async () => {
   assert.deepEqual(r.body.result, {});
 });
 
+test("all-notification batch -> 202 no body; empty batch -> single -32600", async () => {
+  const f = stubFetch(okRoutes);
+  const r1 = await lib.handleRequest(f, [
+    { jsonrpc: "2.0", method: "notifications/initialized" },
+    { jsonrpc: "2.0", method: "notifications/cancelled", params: { requestId: 1 } },
+  ]);
+  assert.equal(r1.status, 202);
+  assert.equal(r1.body, undefined);
+  const r2 = await lib.handleRequest(f, []);
+  assert.equal(r2.status, 400);
+  assert.equal(r2.body.error.code, -32600);
+});
+
+test("mixed batch returns array of responses", async () => {
+  const r = await lib.handleRequest(stubFetch(okRoutes), [
+    { jsonrpc: "2.0", method: "notifications/initialized" },
+    { jsonrpc: "2.0", id: 11, method: "ping" },
+  ]);
+  assert.equal(r.status, 200);
+  assert.ok(Array.isArray(r.body));
+  assert.equal(r.body.length, 1);
+  assert.equal(r.body[0].id, 11);
+});
+
+test("SUPPORTED_PROTOCOLS export exists for header validation", () => {
+  assert.ok(Array.isArray(lib.SUPPORTED_PROTOCOLS));
+  assert.ok(lib.SUPPORTED_PROTOCOLS.includes("2025-06-18"));
+});
+
+test("api/mcp.js readBody survives UTF-8 split across chunk boundary", async () => {
+  const { EventEmitter } = require("node:events");
+  const { readBody } = require("../api/mcp.js");
+  const bodyStr = JSON.stringify({ jsonrpc: "2.0", id: 12, method: "ping", params: { query: "数据" } });
+  const raw = Buffer.from(bodyStr, "utf8");
+  // Split in the middle of the multi-byte sequence 数据 — per-chunk decode would corrupt.
+  const splitAt = raw.indexOf(Buffer.from("数", "utf8")) + 1;
+  const req = new EventEmitter();
+  const p = readBody(req);
+  req.emit("data", raw.subarray(0, splitAt));
+  req.emit("data", raw.subarray(splitAt));
+  req.emit("end");
+  const text = await p;
+  assert.equal(text, bodyStr); // byte-exact round-trip, no U+FFFD replacement
+  assert.equal(JSON.parse(text).params.query, "数据");
+});
+
+test("api/mcp.js rejects unsupported MCP-Protocol-Version header with 400", async () => {
+  const { EventEmitter } = require("node:events");
+  const handler = require("../api/mcp.js");
+  const req = new EventEmitter();
+  req.headers = { "content-type": "application/json", "mcp-protocol-version": "1999-01-01" };
+  req.method = "POST";
+  const calls = { status: null, json: null };
+  const res = {
+    setHeader() {},
+    status(c) { calls.status = c; return this; },
+    json(b) { calls.json = b; return this; },
+    end() { return this; },
+  };
+  const p = handler(req, res);
+  req.emit("data", Buffer.from(JSON.stringify({ jsonrpc: "2.0", id: 1, method: "ping" })));
+  req.emit("end");
+  await p;
+  assert.equal(calls.status, 400);
+  assert.equal(calls.json.error.code, -32000);
+});
+
 test("live words.json really parses (>1900 entries) when reachable", async () => {
   // Network smoke against production — tolerated offline.
   try {

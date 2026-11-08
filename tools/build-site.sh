@@ -2681,7 +2681,7 @@ TODAY="$(date +%Y-%m-%d)"
     for f in "$DOCS"/daily/*.html; do
       [[ -f "$f" ]] || continue
       bn="$(basename "$f" .html)"
-      [[ "$bn" == "index" ]] && continue
+      [[ "$bn" == "index" || "$bn" == "archive" ]] && continue
       printf '  <url><loc>%s/daily/%s</loc><lastmod>%s</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>\n' "$SITE_URL" "$bn" "$bn"
     done
   fi

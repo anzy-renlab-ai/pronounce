@@ -78,11 +78,13 @@
     });
   }
 
+  // UTC date — the five words roll over at the same instant for every
+  // visitor, keeping the "same five for everyone" promise timezone-true.
   function todayISO(d) {
     d = d || new Date();
-    return d.getFullYear() + "-" +
-      String(d.getMonth() + 1).padStart(2, "0") + "-" +
-      String(d.getDate()).padStart(2, "0");
+    return d.getUTCFullYear() + "-" +
+      String(d.getUTCMonth() + 1).padStart(2, "0") + "-" +
+      String(d.getUTCDate()).padStart(2, "0");
   }
 
   var api = { fnv1a: fnv1a, pickFive: pickFive, buildQuestions: buildQuestions, todayISO: todayISO };
