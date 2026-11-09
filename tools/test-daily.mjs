@@ -82,3 +82,34 @@ test("todayISO is UTC-based: same instant, one date everywhere", () => {
   assert.equal(la, "2026-11-09");
   assert.equal(todayISO(new Date(Date.UTC(2026, 0, 2, 23, 59))), "2026-01-02");
 });
+
+test("prevDayISO crosses month and leap-year boundaries in UTC", () => {
+  const { prevDayISO } = require("../docs/daily/game.js");
+  assert.equal(prevDayISO("2026-11-09"), "2026-11-08");
+  assert.equal(prevDayISO("2026-03-01"), "2026-02-28"); // 2026 is not a leap year
+  assert.equal(prevDayISO("2028-03-01"), "2028-02-29"); // 2028 is
+  assert.equal(prevDayISO("2027-01-01"), "2026-12-31");
+});
+
+test("nextStreak: consecutive days extend, replay keeps, gap resets, garbage resets", () => {
+  const { nextStreak } = require("../docs/daily/game.js");
+  assert.deepEqual(nextStreak(null, "2026-11-09"), { last: "2026-11-09", n: 1 });
+  assert.deepEqual(nextStreak(undefined, "2026-11-09"), { last: "2026-11-09", n: 1 });
+  assert.deepEqual(nextStreak({ last: "2026-11-08", n: 3 }, "2026-11-09"), { last: "2026-11-09", n: 4 });
+  assert.deepEqual(nextStreak({ last: "2026-11-09", n: 4 }, "2026-11-09"), { last: "2026-11-09", n: 4 });
+  assert.deepEqual(nextStreak({ last: "2026-11-05", n: 9 }, "2026-11-09"), { last: "2026-11-09", n: 1 });
+  assert.deepEqual(nextStreak({ last: "2026-11-08", n: 0 }, "2026-11-09"), { last: "2026-11-09", n: 1 });
+  assert.deepEqual(nextStreak({ last: "not-a-date", n: 5 }, "2026-11-09"), { last: "2026-11-09", n: 1 });
+  // Tampered types must reset, never coerce: "5" + 1 === "51" would corrupt.
+  assert.deepEqual(nextStreak({ last: "2026-11-08", n: "5" }, "2026-11-09"), { last: "2026-11-09", n: 1 });
+  assert.deepEqual(nextStreak({ last: "2026-11-08", n: true }, "2026-11-09"), { last: "2026-11-09", n: 1 });
+  assert.deepEqual(nextStreak({ last: "2026-11-08", n: Infinity }, "2026-11-09"), { last: "2026-11-09", n: 1 });
+});
+
+test("index.html wires streak storage, start badge, and share line", () => {
+  const html = readFileSync(new URL("../docs/daily/index.html", import.meta.url), "utf8");
+  assert.ok(html.includes('id="j5-streak"'), "start-card streak element missing");
+  assert.ok(html.includes('STREAK_KEY = "j5-streak"'), "streak storage key missing");
+  assert.ok(html.includes("DailyGame.nextStreak(readStreak(), date)"), "result-card streak advance missing");
+  assert.ok(html.includes("-day streak"), "share streak line missing");
+});

@@ -87,7 +87,31 @@
       String(d.getUTCDate()).padStart(2, "0");
   }
 
-  var api = { fnv1a: fnv1a, pickFive: pickFive, buildQuestions: buildQuestions, todayISO: todayISO };
+  // UTC day before a YYYY-MM-DD string (also a UTC date), for streak math.
+  function prevDayISO(date) {
+    var d = new Date(date + "T00:00:00Z");
+    d.setUTCDate(d.getUTCDate() - 1);
+    return todayISO(d);
+  }
+
+  // Streak advance for finishing today's game: consecutive UTC days extend
+  // the run, replaying today keeps it, any gap resets to 1. Pure — tests pin it.
+  // prev.n must be a real number: ">=" alone would let tampered strings
+  // through ("5" + 1 === "51") and corrupt the stored streak.
+  function nextStreak(prev, today) {
+    if (!prev || typeof prev.last !== "string" ||
+        typeof prev.n !== "number" || !isFinite(prev.n) || prev.n < 1) {
+      return { last: today, n: 1 };
+    }
+    if (prev.last === today) return { last: today, n: prev.n };
+    if (prev.last === prevDayISO(today)) return { last: today, n: prev.n + 1 };
+    return { last: today, n: 1 };
+  }
+
+  var api = {
+    fnv1a: fnv1a, pickFive: pickFive, buildQuestions: buildQuestions,
+    todayISO: todayISO, prevDayISO: prevDayISO, nextStreak: nextStreak,
+  };
   if (typeof module !== "undefined" && module.exports) module.exports = api;
   else global.DailyGame = api;
 })(typeof window !== "undefined" ? window : globalThis);

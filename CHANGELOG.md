@@ -1,5 +1,20 @@
 # Changelog
 
+## v2.34.0 — 2026-11-09
+
+### Install→star funnel + daily-game retention
+
+- **CLI star nudge** — after a successful interactive speak, one dim `★` line
+  with the repo URL, at most once per day (stamp file under
+  `${XDG_CACHE_HOME:-$HOME/.cache}/say-it`). Never fires in scripts, pipes,
+  CI, or `-q`/`--json` runs; `SAY_IT_NO_STAR=1` disables it permanently.
+- **Dev Jargon 5 streaks** — consecutive-day streak (`🔥 N-day streak`) shown
+  on the start card and the result card, with a streak line in the share
+  text. Streak math is pure + UTC-deterministic (`nextStreak`/`prevDayISO`
+  in `docs/daily/game.js`), pinned by new tests in `tools/test-daily.mjs`.
+- GitHub profile README (anzy-renlab-ai/anzy-renlab-ai) published and
+  Discussions enabled on the main repo.
+
 ## v2.33.0 — 2026-11-09
 
 **Creator-ruled vocabulary batch.** 5 new entries (1,932 total): mitmproxy, Kiri, Toit, Le Chonk, PRQL — three ruled by their own creators (mitmproxy's maintainer says it on video; Toit's "toit like a tiger"; PRQL = "prequel"), plus Mistral's official Le Chonk nickname and the Igbo-named Kiri runtime.

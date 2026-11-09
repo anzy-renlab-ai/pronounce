@@ -59,6 +59,7 @@
         <h1 style="font-size: 34px; margin: 10px 0 6px;">Dev Jargon 5</h1>
         <p style="color: var(--muted-strong); margin: 0 0 22px;">Five words. Same five for everyone today. Listen, pick the right respelling.</p>
         <button class="j5-play" id="j5-start">▶ Play</button>
+        <p id="j5-streak" style="display: none; margin: 14px 0 0; font-weight: 700; color: var(--accent);"></p>
         <p style="margin-top: 20px; font-size: 13.5px; color: var(--muted);"><a href="/daily/archive" style="color: var(--link);">Word-of-the-day archive →</a></p>
       </div>
     </div>
@@ -75,6 +76,21 @@
     dateEl.textContent = date + " · same five for everyone";
     var qs = DailyGame.buildQuestions(DailyGame.pickFive(ENTRIES, date), ENTRIES, date);
     var idx = 0, marks = [];
+
+    // Consecutive-day streak, stored locally as {"last":"YYYY-MM-DD","n":N}.
+    var STREAK_KEY = "j5-streak";
+    function readStreak() {
+      try { return JSON.parse(localStorage.getItem(STREAK_KEY) || "null"); }
+      catch (e) { return null; }
+    }
+    var s0 = readStreak();
+    var streakEl = document.getElementById("j5-streak");
+    if (s0 && s0.n >= 2 && (s0.last === date || s0.last === DailyGame.prevDayISO(date))) {
+      streakEl.textContent = s0.last === date
+        ? "✅ " + s0.n + "-day streak — played today, back tomorrow"
+        : "🔥 " + s0.n + "-day streak — keep it alive";
+      streakEl.style.display = "block";
+    }
 
     document.getElementById("j5-start").addEventListener("click", function () { renderQ(); });
 
@@ -132,11 +148,16 @@
     function renderResult() {
       var score = marks.filter(Boolean).length;
       var grid = "🔊" + marks.map(function (m) { return m ? "🟩" : "⬛"; }).join("");
-      var share =
-        "Dev Jargon 5 · " + date + "\n" +
-        grid + " " + score + "/5\n" +
-        "how many dev words can you say?\n" +
-        "https://pronounce.renlab.ai/daily";
+      var streak = DailyGame.nextStreak(readStreak(), date);
+      try { localStorage.setItem(STREAK_KEY, JSON.stringify(streak)); } catch (e) {}
+      var lines = [
+        "Dev Jargon 5 · " + date,
+        grid + " " + score + "/5"
+      ];
+      if (streak.n >= 2) lines.push("🔥 " + streak.n + "-day streak");
+      lines.push("how many dev words can you say?");
+      lines.push("https://pronounce.renlab.ai/daily");
+      var share = lines.join("\n");
       var review = qs.map(function (q, i) {
         return '<div class="row">' + (marks[i] ? "🟩" : "⬛") + ' <a href="/word/' + encodeURIComponent(q.slug) + '">' + esc(q.w) + "</a> — <span class=\"r\">" + esc(q.options[q.answer]) + "</span></div>";
       }).join("");
@@ -145,6 +166,7 @@
         '<div class="j5-date">' + date + "</div>" +
         '<div class="j5-grid">' + grid + "</div>" +
         '<div class="j5-score">' + score + " / 5</div>" +
+        (streak.n >= 2 ? '<div style="margin-top: 6px; font-weight: 700; color: var(--accent);">🔥 ' + streak.n + "-day streak</div>" : "") +
         '<div class="j5-share">' +
         '<button class="btn" id="j5-copy">📋 Copy score</button>' +
         '<a class="j5-star" href="https://github.com/anzy-renlab-ai/pronounce">⭐ Star the dictionary</a>' +

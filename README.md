@@ -120,6 +120,8 @@ You don't need a phonetic transcription. You need to **hear** the word. Twice. M
 
 `say-it` ships a community-maintained dictionary of how engineers actually say the names that trip everyone up — and feeds the *intended* respelling to your OS's text-to-speech engine, so `kubectl` comes out as `koob-control`, not whatever your computer guessed from the letters.
 
+After a spoken `say-it <word>` lookup, the CLI prints a one-line `★` nudge at most once per day (only when stdout is a terminal — kept out of pipes, redirects, and `-q` runs; if the cache dir is unwritable it repeats each run). Disable it with `SAY_IT_NO_STAR=1`.
+
 ## Famous moments
 
 Some pronunciations aren't opinions — the creators settled them. The dictionary cites every one:

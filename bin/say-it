@@ -1415,3 +1415,22 @@ if [[ $COPY_CLIP -eq 1 && -n "$RESP" ]] && command -v pbcopy >/dev/null 2>&1; th
   printf '%s' "$RESP" | pbcopy
   [[ $QUIET -eq 0 ]] && echo "${C_DIM}(respelling \"$RESP\" copied to clipboard)${C_RESET}"
 fi
+
+# --- one-line star nudge (interactive use only, at most once a day) -----------
+# After a successful interactive speak — the moment of value. Never fires in
+# scripts, skills, CI, or pipe contexts ([ -t 1 ] gates those), never in
+# -q/--json runs, and never twice in one day. SAY_IT_NO_STAR=1 (or true/yes/on)
+# disables it permanently; an unwritable HOME just degrades to showing it
+# again next time.
+if [[ $QUIET -eq 0 && -t 1 && ! "${SAY_IT_NO_STAR:-0}" =~ ^(1|true|yes|on)$ ]]; then
+  # XDG spec requires XDG_CACHE_HOME to be absolute; honor only absolute values
+  # so a relative one can't mkdir inside whatever project the user is in.
+  case "$XDG_CACHE_HOME" in
+    /*) _star_stamp="$XDG_CACHE_HOME/say-it/star-prompt" ;;
+    *)  _star_stamp="$HOME/.cache/say-it/star-prompt" ;;
+  esac
+  if [[ "$(cat "$_star_stamp" 2>/dev/null)" != "$(date +%F)" ]]; then
+    echo "${C_DIM}★ say-it is community-built — https://github.com/anzy-renlab-ai/pronounce${C_RESET}"
+    (mkdir -p "${_star_stamp%/*}" 2>/dev/null; date +%F > "$_star_stamp") 2>/dev/null || true
+  fi
+fi

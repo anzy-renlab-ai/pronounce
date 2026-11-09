@@ -61,8 +61,8 @@ so you know the debate exists.
 
 Three things you can do in the next 30 seconds:
 
-1. Play today's Dev Jargon 5 — five words, same five for everyone, share
-   your emoji grid: https://pronounce.renlab.ai/daily
+1. Play today's Dev Jargon 5 — five words, same five for everyone, keep your
+   🔥 streak alive, share your emoji grid: https://pronounce.renlab.ai/daily
 2. Correct someone the short way — every word page has a copyable
    pronounce.renlab.ai/say/<word> link for the moment a teammate says it
    wrong in a PR review.
