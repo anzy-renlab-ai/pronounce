@@ -101,3 +101,4 @@ co-marketing) before adding another awesome-list submission.
 
 - 2026-11-08 · v2.31.0 · +7 entries (T3Code, claude-mem, stroq, physicl, SpAItial, MaxxBench, benchmaxxing) · 1 rejected (openmausbot — no pronunciation evidence) · 47★
 - 2026-11-08 · v2.32.0 · growth trio shipped (Dev Jargon 5 /say short-links + hosted MCP), 8 review findings fixed pre-release · 47★
+- 2026-11-09 · v2.33.0 · +5 entries (mitmproxy, Kiri, Toit, Le Chonk, PRQL — 3 creator-ruled) · 4 held in candidate pool (Goethe, e/acc, p(doom), pwn) · 47★
