@@ -225,7 +225,7 @@ Add a pronunciation glossary to every documentation pull request:
   with:
     fetch-depth: 0
 - id: pronounce
-  uses: anzy-renlab-ai/pronounce@v2.33.0
+  uses: anzy-renlab-ai/pronounce@v2.34.0
 ```
 
 `Pronounce Docs` scans changed Markdown/MDX and writes a table containing each
