@@ -1,0 +1,15 @@
+{
+  "word": "mitmproxy",
+  "ipa": "/ˈmɪdəmˌprɑːksi/",
+  "respelling_us": "mid-um proxy",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/mitmproxy/mitmproxy/discussions/5813",
+  "source_label": "mitmproxy maintainer (Maximilian Hils)",
+  "category": "cli-tool",
+  "confidence": "creator-clarified",
+  "notes": "Core team says it as one word, \"midemproxy\" (middle syllable reduces to schwa); Hils says it at youtu.be/hPuOtJbxJT8 0:15. Outsiders default to spelling out M-I-T-M — \"mitm now stands for mitmproxy in the middle\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/mitmproxy.mp3",
+  "url": "https://pronounce.renlab.ai/word/mitmproxy",
+  "date_modified": "2026-11-09"
+}

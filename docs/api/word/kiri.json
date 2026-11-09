@@ -1,0 +1,15 @@
+{
+  "word": "Kiri",
+  "ipa": "/ˈkiːri/",
+  "respelling_us": "KEE-ree",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/libracoder/kiri",
+  "source_label": "Kiri README",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Rust container runtime replacing Docker Desktop/OrbStack (runkiri.com). Name is the Igbo word ntakịrị, \"small\", per the creator README — so KEE-ree, not KIH-ree or KERRY.",
+  "audio_url": "https://pronounce.renlab.ai/audio/kiri.mp3",
+  "url": "https://pronounce.renlab.ai/word/kiri",
+  "date_modified": "2026-11-09"
+}

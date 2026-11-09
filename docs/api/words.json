@@ -1925,5 +1925,10 @@
   {"word": "physicl", "slug": "physicl", "category": "product", "confidence": "community-consensus"},
   {"word": "SpAItial", "slug": "spaitial", "category": "product", "confidence": "creator-clarified"},
   {"word": "MaxxBench", "slug": "maxxbench", "category": "cs-term", "confidence": "community-consensus"},
-  {"word": "benchmaxxing", "slug": "benchmaxxing", "category": "cs-term", "confidence": "community-consensus"}
+  {"word": "benchmaxxing", "slug": "benchmaxxing", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "mitmproxy", "slug": "mitmproxy", "category": "cli-tool", "confidence": "creator-clarified"},
+  {"word": "Kiri", "slug": "kiri", "category": "product", "confidence": "community-consensus"},
+  {"word": "Toit", "slug": "toit", "category": "tool", "confidence": "creator-clarified"},
+  {"word": "Le Chonk", "slug": "le-chonk", "category": "product", "confidence": "community-consensus"},
+  {"word": "PRQL", "slug": "prql", "category": "tool", "confidence": "creator-clarified"}
 ]

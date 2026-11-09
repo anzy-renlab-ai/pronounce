@@ -7708,4 +7708,24 @@
     <image:image><image:loc>https://pronounce.renlab.ai/og/benchmaxxing.png</image:loc><image:caption>How to pronounce benchmaxxing — OG card</image:caption></image:image>
     <image:image><image:loc>https://pronounce.renlab.ai/badge/benchmaxxing.svg</image:loc><image:caption>Pronunciation badge for benchmaxxing</image:caption></image:image>
   </url>
+  <url><loc>https://pronounce.renlab.ai/word/mitmproxy</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/mitmproxy.png</image:loc><image:caption>How to pronounce mitmproxy — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/mitmproxy.svg</image:loc><image:caption>Pronunciation badge for mitmproxy</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/kiri</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/kiri.png</image:loc><image:caption>How to pronounce Kiri — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/kiri.svg</image:loc><image:caption>Pronunciation badge for Kiri</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/toit</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/toit.png</image:loc><image:caption>How to pronounce Toit — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/toit.svg</image:loc><image:caption>Pronunciation badge for Toit</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/le-chonk</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/le-chonk.png</image:loc><image:caption>How to pronounce Le Chonk — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/le-chonk.svg</image:loc><image:caption>Pronunciation badge for Le Chonk</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/prql</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/prql.png</image:loc><image:caption>How to pronounce PRQL — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/prql.svg</image:loc><image:caption>Pronunciation badge for PRQL</image:caption></image:image>
+  </url>
 </urlset>

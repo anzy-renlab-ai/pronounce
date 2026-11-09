@@ -1929,3 +1929,8 @@ physicl | /ˈfɪzɪkəl/ | fiz ih kul | product | community-consensus | https://
 SpAItial | /ˈspeɪʃəl/ | SPAY shul | product | creator-clarified | https://www.spaitial.ai/
 MaxxBench | /ˈmæks ˌbɛntʃ/ | MAKS bench | cs-term | community-consensus | https://maxxbench.unlap.ai/research/why-maxxbench/
 benchmaxxing | /ˈbɛntʃˌmæksɪŋ/ | bench maks ing | cs-term | community-consensus | https://maxxbench.unlap.ai/research/why-maxxbench/
+mitmproxy | /ˈmɪdəmˌprɑːksi/ | mid-um proxy | cli-tool | creator-clarified | https://github.com/mitmproxy/mitmproxy/discussions/5813
+Kiri | /ˈkiːri/ | KEE-ree | product | community-consensus | https://github.com/libracoder/kiri
+Toit | /tɔɪt/ | toy-t | tool | creator-clarified | https://news.ycombinator.com/item?id=50321605
+Le Chonk | /lə ˈtʃɑŋk/ | luh chongk | product | community-consensus | https://mistral.ai/news/mistral-large-4/
+PRQL | /ˈpriːkwəl/ | PREE-kwul | tool | creator-clarified | https://github.com/PRQL/prql

@@ -1,0 +1,15 @@
+{
+  "word": "Toit",
+  "ipa": "/tɔɪt/",
+  "respelling_us": "toy-t",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://news.ycombinator.com/item?id=50321605",
+  "source_label": "Hacker News (Toit core dev)",
+  "category": "tool",
+  "confidence": "creator-clarified",
+  "notes": "ESP32 language/runtime by ex-V8/Dart engineers. Asked how to say it, the creator answered: \"It's from Austin Powers. 'toit like a tiger'\" — rhymes with height, not French \"twah\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/toit.mp3",
+  "url": "https://pronounce.renlab.ai/word/toit",
+  "date_modified": "2026-11-09"
+}

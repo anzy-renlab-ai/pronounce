@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.33.0 — 2026-11-09
+
+**Creator-ruled vocabulary batch.** 5 new entries (1,932 total): mitmproxy, Kiri, Toit, Le Chonk, PRQL — three ruled by their own creators (mitmproxy's maintainer says it on video; Toit's "toit like a tiger"; PRQL = "prequel"), plus Mistral's official Le Chonk nickname and the Igbo-named Kiri runtime.
+
 ## v2.32.0 — 2026-11-08
 
 **Three star-growth features: `/say/<word>` correction short-links, Dev Jargon 5 daily challenge, hosted remote MCP endpoint.** No new dictionary entries (1,927 total unchanged).

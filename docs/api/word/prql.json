@@ -1,0 +1,15 @@
+{
+  "word": "PRQL",
+  "ipa": "/ˈpriːkwəl/",
+  "respelling_us": "PREE-kwul",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/PRQL/prql",
+  "source_label": "PRQL project",
+  "category": "tool",
+  "confidence": "creator-clarified",
+  "notes": "Pipelined Relational Query Language — pronounced \"prequel\", per the project itself, not P-R-Q-L.",
+  "audio_url": "https://pronounce.renlab.ai/audio/prql.mp3",
+  "url": "https://pronounce.renlab.ai/word/prql",
+  "date_modified": "2026-11-09"
+}

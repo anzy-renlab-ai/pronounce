@@ -1,0 +1,15 @@
+{
+  "word": "Le Chonk",
+  "ipa": "/lə ˈtʃɑŋk/",
+  "respelling_us": "luh chongk",
+  "alt_ipa": ["/ˈliː ˈtʃɑŋk/"],
+  "alt_respelling_us": ["lee chongk"],
+  "source_url": "https://mistral.ai/news/mistral-large-4/",
+  "source_label": "Mistral official announcement",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Mistral's own nickname for Mistral Large 4 (1T params): \"Unofficially ML4, very officially: le Chonk.\" Le as in the sibling product Le Chat (luh), matching the meme spelling chonk.",
+  "audio_url": "https://pronounce.renlab.ai/audio/le-chonk.mp3",
+  "url": "https://pronounce.renlab.ai/word/le-chonk",
+  "date_modified": "2026-11-09"
+}
