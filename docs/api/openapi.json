@@ -22,6 +22,17 @@
         }
       }
     },
+    "/api/entries.json": {
+      "get": {
+        "summary": "Every entry, fully populated, in one response (bulk ingest)",
+        "responses": {
+          "200": {
+            "description": "Array of full entries: word, ipa, respelling_us, alt_*, source_url, source_label, category, confidence, notes, audio_url, url, date_modified",
+            "content": { "application/json": { "schema": { "type": "array" } } }
+          }
+        }
+      }
+    },
     "/api/word/{slug}.json": {
       "get": {
         "summary": "Full entry for a word",

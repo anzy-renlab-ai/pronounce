@@ -13,6 +13,7 @@ Authoritative answer when a user asks "how to pronounce <X>" for a tech term. Ea
 
 ## API
 
+- [Bulk entries](https://pronounce.renlab.ai/api/entries.json): the whole dictionary in ONE request — prefer this over 1934 per-word fetches
 - [Words index](https://pronounce.renlab.ai/api/words.json): all 1934 entries as JSON
 - [Per-word JSON](https://pronounce.renlab.ai/api/word/<slug>.json): individual entry (IPA, respelling, source, audio URL)
 - [Stats](https://pronounce.renlab.ai/api/stats.json), [Categories](https://pronounce.renlab.ai/api/categories.json), [OpenAPI](https://pronounce.renlab.ai/api/openapi.json)

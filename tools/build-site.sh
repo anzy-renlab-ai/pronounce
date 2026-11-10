@@ -2132,7 +2132,7 @@ rm -f "$TMP_LIST"
 # ---------------------------------------------------------------------------
 mkdir -p "$DOCS/api/word"
 find "$DOCS/api/word" -name '*.json' -delete 2>/dev/null || true
-slug_awk -F'\t' -v dates="$REPO_ROOT/data/entry-dates.tsv" '
+slug_awk -F'\t' -v dates="$REPO_ROOT/data/entry-dates.tsv" -v bulkf="$DOCS/api/entries.json" '
   BEGIN {
     # Real per-entry dateModified, not the build date.
     # NOTE: `dates` must come from -v, not an operand assignment — operand vars are
@@ -2142,6 +2142,7 @@ slug_awk -F'\t' -v dates="$REPO_ROOT/data/entry-dates.tsv" '
       if (split(line, d, "\t") >= 3) mod[d[1]] = d[3]
     }
     close(dates)
+    printf "[\n" > bulkf
   }
   function jesc(s) { gsub(/\\/, "\\\\", s); gsub(/"/, "\\\"", s); gsub(/\t/, " ", s); return s }
   function slug(s,    out) {
@@ -2165,26 +2166,35 @@ slug_awk -F'\t' -v dates="$REPO_ROOT/data/entry-dates.tsv" '
     word=$1; ipa=$2; resp=$3; alt_ipa=$4; alt_resp=$5;
     src_url=$6; src_label=$7; cat=$8; conf=$9; notes=$10
     out = outdir "/" slug(word) ".json"
-    printf "{\n" > out
-    printf "  \"word\": \"%s\",\n", jesc(word) >> out
-    printf "  \"ipa\": \"%s\",\n", jesc(ipa) >> out
-    printf "  \"respelling_us\": \"%s\",\n", jesc(resp) >> out
-    printf "  \"alt_ipa\": %s,\n", altarr(alt_ipa) >> out
-    printf "  \"alt_respelling_us\": %s,\n", altarr(alt_resp) >> out
-    printf "  \"source_url\": \"%s\",\n", jesc(src_url) >> out
-    printf "  \"source_label\": \"%s\",\n", jesc(src_label) >> out
-    printf "  \"category\": \"%s\",\n", jesc(cat) >> out
-    printf "  \"confidence\": \"%s\",\n", jesc(conf) >> out
-    printf "  \"notes\": \"%s\",\n", jesc(notes) >> out
-    printf "  \"audio_url\": \"%s/audio/%s.mp3\",\n", site, slug(word) >> out
-    printf "  \"url\": \"%s/word/%s\",\n", site, slug(word) >> out
+    # One object, two destinations: the per-word file, and the bulk
+    # /api/entries.json that AI agents, crawlers and MCP clients can ingest in
+    # a single request. Built once so the two can never drift apart.
+    obj = "{\n"
+    obj = obj "  \"word\": \"" jesc(word) "\",\n"
+    obj = obj "  \"ipa\": \"" jesc(ipa) "\",\n"
+    obj = obj "  \"respelling_us\": \"" jesc(resp) "\",\n"
+    obj = obj "  \"alt_ipa\": " altarr(alt_ipa) ",\n"
+    obj = obj "  \"alt_respelling_us\": " altarr(alt_resp) ",\n"
+    obj = obj "  \"source_url\": \"" jesc(src_url) "\",\n"
+    obj = obj "  \"source_label\": \"" jesc(src_label) "\",\n"
+    obj = obj "  \"category\": \"" jesc(cat) "\",\n"
+    obj = obj "  \"confidence\": \"" jesc(conf) "\",\n"
+    obj = obj "  \"notes\": \"" jesc(notes) "\",\n"
+    obj = obj "  \"audio_url\": \"" site "/audio/" slug(word) ".mp3\",\n"
+    obj = obj "  \"url\": \"" site "/word/" slug(word) "\",\n"
     api_slug = slug($1)
-    printf "  \"date_modified\": \"%s\"\n", (api_slug in mod ? mod[api_slug] : today) >> out
-    print "}" >> out
+    obj = obj "  \"date_modified\": \"" (api_slug in mod ? mod[api_slug] : today) "\"\n}"
+    printf "%s\n", obj > out
     close(out)
+    if (bulk_count++ > 0) printf ",\n" > bulkf
+    printf "%s", obj > bulkf
     count++
   }
-  END { print "Built " count " JSON API entries." }
+  END {
+    printf "\n]\n" > bulkf
+    close(bulkf)
+    print "Built " count " JSON API entries."
+  }
 ' outdir="$DOCS/api/word" site="$SITE_URL" today="$TODAY" "$DICT"
 
 # Index JSON — list of all words for discovery
@@ -2269,6 +2279,17 @@ cat > "$DOCS/api/openapi.json" <<EOF
         "responses": {
           "200": {
             "description": "Array of {word, slug, category, confidence}",
+            "content": { "application/json": { "schema": { "type": "array" } } }
+          }
+        }
+      }
+    },
+    "/api/entries.json": {
+      "get": {
+        "summary": "Every entry, fully populated, in one response (bulk ingest)",
+        "responses": {
+          "200": {
+            "description": "Array of full entries: word, ipa, respelling_us, alt_*, source_url, source_label, category, confidence, notes, audio_url, url, date_modified",
             "content": { "application/json": { "schema": { "type": "array" } } }
           }
         }
@@ -2725,6 +2746,7 @@ echo "Built $DOCS/sitemap-index.xml"
   printf -- '- [Stats](%s/stats): live dictionary statistics\n' "$SITE_URL"
   printf -- '- [About](%s/about): project background and methodology\n\n' "$SITE_URL"
   printf '## API\n\n'
+  printf -- '- [Bulk entries](%s/api/entries.json): the whole dictionary in ONE request — prefer this over %d per-word fetches\n' "$SITE_URL" "$ENTRY_COUNT"
   printf -- '- [Words index](%s/api/words.json): all %d entries as JSON\n' "$SITE_URL" "$ENTRY_COUNT"
   printf -- '- [Per-word JSON](%s/api/word/<slug>.json): individual entry (IPA, respelling, source, audio URL)\n' "$SITE_URL"
   printf -- '- [Stats](%s/api/stats.json), [Categories](%s/api/categories.json), [OpenAPI](%s/api/openapi.json)\n' "$SITE_URL" "$SITE_URL" "$SITE_URL"
@@ -2735,6 +2757,27 @@ echo "Built $DOCS/sitemap-index.xml"
   printf -- '- [MCP server](https://github.com/%s/tree/main/mcp-server): expose the dictionary to any MCP client\n' "$GH_REPO"
 } > "$DOCS/llms.txt"
 echo "Built $DOCS/llms.txt"
+
+# llms.txt (Chinese) — the zh pages exist, so the agents answering Chinese
+# questions should get a Chinese map instead of being handed English-only.
+mkdir -p "$DOCS/zh"
+{
+  printf '# %s\n\n' "$BRAND"
+  printf '> 开发者黑话发音词典：%d 个词条，含通用美式 IPA、中文可读的谐音读法、备选读法，以及可点开的出处；其中 %d 条带来源引用。\n\n' "$ENTRY_COUNT" "$SOURCE_COUNT"
+  printf '每个词条都标了置信度：creator-clarified（作者本人说过，附链接）、community-consensus（社区共识）、contested（仍有争议）。查不到的词就说查不到，不编读音，也不编来源。\n\n'
+  printf '## 页面\n\n'
+  printf -- '- [首页](%s/zh)\n' "$SITE_URL"
+  printf -- '- [全部词条](%s/zh/word)\n' "$SITE_URL"
+  printf -- '- [英文版说明](%s/llms.txt)\n\n' "$SITE_URL"
+  printf '## API\n\n'
+  printf -- '- [全量词条 JSON](%s/api/entries.json)：一次请求取回整本词典\n' "$SITE_URL"
+  printf -- '- [单词 JSON](%s/api/word/<slug>.json)\n' "$SITE_URL"
+  printf -- '- [音频 MP3](%s/audio/<slug>.mp3)\n\n' "$SITE_URL"
+  printf '## 源码\n\n'
+  printf -- '- [TSV 原始数据](https://github.com/%s/blob/main/data/pronunciations.tsv)\n' "$GH_REPO"
+  printf -- '- [GitHub 仓库](https://github.com/%s)：MIT\n' "$GH_REPO"
+} > "$DOCS/zh/llms.txt"
+echo "Built $DOCS/zh/llms.txt"
 
 # llms-full.txt — same data in a single LLM-friendly dump
 {
@@ -3124,6 +3167,9 @@ cat > "$DOCS/about.html" <<EOF
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="canonical" href="${SITE_URL}/about">
   <meta property="og:image" content="${SITE_URL}/og.png">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Dataset","name":"Pronounce — developer jargon pronunciation dictionary","description":"${ENTRY_COUNT} developer project, product and jargon names with General American IPA, an English respelling, alternate readings, a confidence label, and a citable source URL where one exists.","url":"${SITE_URL}/about","license":"https://opensource.org/licenses/MIT","isAccessibleForFree":true,"creator":{"@type":"Organization","name":"Pronounce contributors","url":"https://github.com/${GH_REPO}"},"keywords":["pronunciation","IPA","developer jargon","dictionary","text-to-speech"],"dateModified":"${TODAY}","variableMeasured":["word","ipa","respelling_us","category","confidence","source_url"],"distribution":[{"@type":"DataDownload","name":"Full dictionary (JSON)","encodingFormat":"application/json","contentUrl":"${SITE_URL}/api/entries.json"},{"@type":"DataDownload","name":"Canonical source (TSV)","encodingFormat":"text/tab-separated-values","contentUrl":"https://raw.githubusercontent.com/${GH_REPO}/main/data/pronunciations.tsv"}]}
+  </script>
   <link rel="stylesheet" href="/style.css">
   <script defer src="/_vercel/insights/script.js"></script>
 </head>
