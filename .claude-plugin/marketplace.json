@@ -1,0 +1,15 @@
+{
+  "name": "pronounce",
+  "description": "Pronounce developer jargon out loud — a community pronunciation dictionary for developer terms, as a Claude Code plugin.",
+  "owner": {
+    "name": "anzy-renlab-ai",
+    "url": "https://github.com/anzy-renlab-ai"
+  },
+  "plugins": [
+    {
+      "name": "pronounce",
+      "source": "./",
+      "description": "Hear how developers actually say kubectl, GIF, JSON, JWT and 1,930 more — with a confidence label and a source citation on every entry."
+    }
+  ]
+}

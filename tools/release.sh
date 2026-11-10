@@ -50,8 +50,7 @@ if readme2 != readme:
     open("README.md", "w").write(readme2)
     print("release: README uses-pin synced to v" + version)
 
-t = open("tools/test_build_v2_data.py").read()
-# The pin is a Python string literal, so the newlines in it are written as
+t = open("tools/test_build_v2_data.py").read()# The pin is a Python string literal, so the newlines in it are written as
 # escapes. Rebuild the literal in whatever escaping the file currently uses
 # (one backslash-n or two) rather than assuming — assuming is how this sync
 # silently stopped matching while still printing success.
@@ -71,10 +70,23 @@ if m:
         print("release: test changelog pin synced (v" + version + ")")
 else:
     print("release: WARNING — changelog pin in tools/test_build_v2_data.py not found; update it by hand")
+
+# The Claude Code plugin manifest carries the same version; if it drifts,
+# Claude Code keeps serving the old copy to `/plugin install` users.
+import json
+cp = ".claude-plugin/plugin.json"
+try:
+    plug = json.load(open(cp))
+    if plug.get("version") != version:
+        plug["version"] = version
+        open(cp, "w").write(json.dumps(plug, indent=2, ensure_ascii=False) + "\n")
+        print("release: .claude-plugin/plugin.json synced to v" + version)
+except FileNotFoundError:
+    pass
 PYEOF
 
 if [[ -n "$(git status --porcelain)" ]]; then
-  git add README.md tools/test_build_v2_data.py
+  git add README.md tools/test_build_v2_data.py .claude-plugin/plugin.json
   git commit -q -m "release: sync version pins to v$VERSION"
 fi
 
@@ -86,7 +98,8 @@ node --test tools/test-v2-audio.mjs >/dev/null || fail "test-v2-audio failed"
 node --test tools/test-daily.mjs tools/test-mcp.mjs >/dev/null || fail "daily/mcp tests failed"
 python3 -m unittest tools/test_build_v2_data.py tools/test_make_og_all.py \
   tools/test_chrome_dictionary.py tools/test_build_entry_dates.py \
-  tools/test_build_seo.py tools/test_deploy_config.py >/dev/null || fail "unittest suite failed"
+  tools/test_build_seo.py tools/test_deploy_config.py \
+  tools/test_plugin_manifests.py >/dev/null || fail "unittest suite failed"
 
 # --- tag + push --------------------------------------------------------------
 git tag "v$VERSION"

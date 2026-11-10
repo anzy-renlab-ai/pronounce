@@ -179,7 +179,13 @@ The default macOS voice is `Samantha` (General American); `-v <voice>` selects a
 
 ## Claude Code integration
 
-Install the cross-tool Agent Skill directly with GitHub CLI:
+One step, inside a [Claude Code](https://claude.com/claude-code) session — installs the `pronounce-word` skill **and** the `pronounce` MCP server as a plugin:
+
+```bash
+/plugin install pronounce --marketplace anzy-renlab-ai/pronounce
+```
+
+Or install just the cross-tool Agent Skill (works in any [Agent Skills](https://agentskills.io) host) with GitHub CLI:
 
 ```bash
 gh skill install anzy-renlab-ai/pronounce pronounce-word
