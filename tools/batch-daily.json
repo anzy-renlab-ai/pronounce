@@ -1,0 +1,26 @@
+[
+  {
+    "word": "GPUI",
+    "ipa": "/ˌdʒiː piː juː ˈaɪ/",
+    "respelling_us": "G P U I",
+    "alt_ipa": "",
+    "alt_respelling_us": "",
+    "source_url": "https://docs.rs/gpui/latest/gpui/",
+    "source_label": "GPUI crate docs",
+    "category": "acronym",
+    "confidence": "community-consensus",
+    "notes": "Zed's GPU-accelerated UI framework in Rust. It is GPU + UI, so it is said as four letters — G-P-U-I — not as a word. Do not say guh-POO-ee or gee-pwee. The crate docs gloss it as a GPU-accelerated UI framework, which is where the reading comes from; it trended the week of 2026-11-09 with the Blender-vs-GPUI write-up (738 points on HN)."
+  },
+  {
+    "word": "DMARC",
+    "ipa": "/ˈdiː mɑːrk/",
+    "respelling_us": "DEE mark",
+    "alt_ipa": "",
+    "alt_respelling_us": "",
+    "source_url": "",
+    "source_label": "",
+    "category": "acronym",
+    "confidence": "community-consensus",
+    "notes": "Domain-based Message Authentication, Reporting and Conformance — the email-auth standard behind the p=reject records everyone eventually has to add. Said as a word, DEE-mark, never spelled out D-M-A-R-C; the whole deliverability literature (dmarcian, the vendor playbooks) reads it that way. Trending 2026-11-09 after Outlook.com started rejecting mail from domains with no DMARC record."
+  }
+]

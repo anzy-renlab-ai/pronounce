@@ -7728,4 +7728,12 @@
     <image:image><image:loc>https://pronounce.renlab.ai/og/prql.png</image:loc><image:caption>How to pronounce PRQL — OG card</image:caption></image:image>
     <image:image><image:loc>https://pronounce.renlab.ai/badge/prql.svg</image:loc><image:caption>Pronunciation badge for PRQL</image:caption></image:image>
   </url>
+  <url><loc>https://pronounce.renlab.ai/word/gpui</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/gpui.png</image:loc><image:caption>How to pronounce GPUI — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/gpui.svg</image:loc><image:caption>Pronunciation badge for GPUI</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/dmarc</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/dmarc.png</image:loc><image:caption>How to pronounce DMARC — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/dmarc.svg</image:loc><image:caption>Pronunciation badge for DMARC</image:caption></image:image>
+  </url>
 </urlset>

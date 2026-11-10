@@ -1930,5 +1930,7 @@
   {"word": "Kiri", "slug": "kiri", "category": "product", "confidence": "community-consensus"},
   {"word": "Toit", "slug": "toit", "category": "tool", "confidence": "creator-clarified"},
   {"word": "Le Chonk", "slug": "le-chonk", "category": "product", "confidence": "community-consensus"},
-  {"word": "PRQL", "slug": "prql", "category": "tool", "confidence": "creator-clarified"}
+  {"word": "PRQL", "slug": "prql", "category": "tool", "confidence": "creator-clarified"},
+  {"word": "GPUI", "slug": "gpui", "category": "acronym", "confidence": "community-consensus"},
+  {"word": "DMARC", "slug": "dmarc", "category": "acronym", "confidence": "community-consensus"}
 ]

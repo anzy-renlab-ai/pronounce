@@ -1,0 +1,15 @@
+{
+  "word": "GPUI",
+  "ipa": "/ˌdʒiː piː juː ˈaɪ/",
+  "respelling_us": "G P U I",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://docs.rs/gpui/latest/gpui/",
+  "source_label": "GPUI crate docs",
+  "category": "acronym",
+  "confidence": "community-consensus",
+  "notes": "Zed's GPU-accelerated UI framework in Rust. It is GPU + UI, so it is said as four letters — G-P-U-I — not as a word. Do not say guh-POO-ee or gee-pwee. The crate docs gloss it as a GPU-accelerated UI framework, which is where the reading comes from; it trended the week of 2026-11-09 with the Blender-vs-GPUI write-up (738 points on HN).",
+  "audio_url": "https://pronounce.renlab.ai/audio/gpui.mp3",
+  "url": "https://pronounce.renlab.ai/word/gpui",
+  "date_modified": "2026-11-10"
+}

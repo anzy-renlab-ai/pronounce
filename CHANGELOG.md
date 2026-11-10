@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.35.0 — 2026-11-10
+
+**Two acronyms off this week's front page.** 2 new entries (1,934 total): GPUI, DMARC — Zed's UI framework is GPU + UI and so is read as four letters, G-P-U-I, never as a word; email's DMARC goes the other way, read as a word ("DEE-mark") and never spelled out.
+
 ## v2.34.0 — 2026-11-09
 
 ### Install→star funnel + daily-game retention
