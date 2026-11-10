@@ -51,18 +51,26 @@ if readme2 != readme:
     print("release: README uses-pin synced to v" + version)
 
 t = open("tools/test_build_v2_data.py").read()
-# Build the replacement as a plain string and hand it to re.sub via a lambda:
-# a pattern-side or replacement-side \\n would be re-interpreted as a real
-# newline, corrupting the Python source literal.
-new_pin = '"# Changelog\\\\n\\\\n## v' + version + ' — ' + __import__("datetime").date.today().isoformat() + '\\\\n"'
-t2 = re.sub(
-    r'"# Changelog\\\\n\\\\n## v\d+\.\d+\.\d+ — \d{4}-\d{2}-\d{2}\\\\n"',
-    lambda m: new_pin,
-    t,
+# The pin is a Python string literal, so the newlines in it are written as
+# escapes. Rebuild the literal in whatever escaping the file currently uses
+# (one backslash-n or two) rather than assuming — assuming is how this sync
+# silently stopped matching while still printing success.
+pin_re = re.compile(
+    r'"# Changelog(?P<nl>\\n|\\\\n)(?P=nl)'
+    r'## v\d+\.\d+\.\d+ — \d{4}-\d{2}-\d{2}'
+    r'(?P=nl)"'
 )
-if t2 != t:
-    open("tools/test_build_v2_data.py", "w").write(t2)
-    print("release: test changelog pin synced (v" + version + ")")
+m = pin_re.search(t)
+if m:
+    nl = m.group("nl")
+    today = __import__("datetime").date.today().isoformat()
+    new_pin = '"# Changelog' + nl + nl + '## v' + version + ' — ' + today + nl + '"'
+    t2 = t[:m.start()] + new_pin + t[m.end():]
+    if t2 != t:
+        open("tools/test_build_v2_data.py", "w").write(t2)
+        print("release: test changelog pin synced (v" + version + ")")
+else:
+    print("release: WARNING — changelog pin in tools/test_build_v2_data.py not found; update it by hand")
 PYEOF
 
 if [[ -n "$(git status --porcelain)" ]]; then
