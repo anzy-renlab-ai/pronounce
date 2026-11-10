@@ -37,6 +37,12 @@ If the target token is ambiguous (multiple candidates in the message), ask which
 
    Defaults: voice `Samantha` (General American), rate 130 wpm, 3 repetitions. This blocks until the audio finishes; the user hears it through the speakers.
 
+   **If `say-it` is not on `$PATH`** (installed as a Claude Code plugin, no CLI yet), don't dead-end the user:
+
+   1. Call the `pronounce` MCP tool (the plugin ships it). The entry's `audio_url` is a pre-rendered MP3 — fetch it to a temp file and play it (`afplay`), or hand the user the URL. Then say it *again* from the text, and give the one-line install so audio works natively next time:
+      `curl -fsSL https://pronounce.renlab.ai/install.sh | bash`
+   2. No MCP either: answer with IPA + respelling from the table below, and offer the install line. Never pretend audio played.
+
 2. **Reply with one short line of text alongside the audio.** Always include:
 
    - The IPA reading (GenAm).
