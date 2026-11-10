@@ -103,3 +103,4 @@ co-marketing) before adding another awesome-list submission.
 - 2026-11-08 · v2.32.0 · growth trio shipped (Dev Jargon 5 /say short-links + hosted MCP), 8 review findings fixed pre-release · 47★
 - 2026-11-09 · v2.33.0 · +5 entries (mitmproxy, Kiri, Toit, Le Chonk, PRQL — 3 creator-ruled) · 4 held in candidate pool (Goethe, e/acc, p(doom), pwn) · 47★
 - 2026-11-09 · v2.34.0 · funnel fix: CLI ★ nudge (TTY + once/day, SAY_IT_NO_STAR opt-out), Dev Jargon 5 streaks (🔥 badge + share line), profile README repo, Discussions enabled · 6 adversarial review findings fixed pre-release · aocr.org referrer = spam, not a channel · 47★
+- 2026-11-10 · v2.35.0 · +2 entries (GPUI, DMARC — both acronyms off this week's HN front page) · 0 rejected this run; held without evidence: Flide/qev (OmniJev, no stated reading), poki, vork, Firenook, Scrapling · release.sh changelog-pin sync repaired (was silently no-opping) · 48★
