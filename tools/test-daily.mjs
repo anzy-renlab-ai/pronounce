@@ -6,16 +6,74 @@ import { readFileSync } from "node:fs";
 const require = createRequire(import.meta.url);
 const { pickFive, buildQuestions, fnv1a } = require("../docs/daily/game.js");
 
-// Load the real ENTRIES array from docs/script.js WITHOUT evaluating the
-// whole file (it touches `document` at the bottom). Slice the literal only.
+// Load the real ENTRIES array from docs/script.js WITHOUT evaluating it: the
+// file touches `document` at the bottom, and evaluating generated source is
+// exactly the dynamic-execution pattern the plugin scanner rejects. The build
+// only ever emits `{ key: "string", … }` object literals, so read that shape
+// directly and fail loudly on anything else.
 function loadEntries() {
   const src = readFileSync(new URL("../docs/script.js", import.meta.url), "utf8");
   const start = src.indexOf("const ENTRIES = [");
   assert.ok(start !== -1, "ENTRIES literal not found in script.js");
   const end = src.indexOf("\n];", start);
   assert.ok(end !== -1, "ENTRIES literal end not found");
-  const literal = src.slice(start, end + 3); // include "\n];"
-  return new Function(literal + "\nreturn ENTRIES;")();
+  return parseObjectList(src.slice(start, end));
+}
+
+function parseObjectList(literal) {
+  const entries = [];
+  const isIdent = (c) => /[A-Za-z0-9_$]/.test(c);
+  let cur = null;
+  let key = null;
+  let i = literal.indexOf("[") + 1;
+  const skipWs = () => {
+    while (i < literal.length && /\s/.test(literal[i])) i++;
+  };
+  while (i < literal.length) {
+    const ch = literal[i];
+    if (ch === "{") {
+      cur = {};
+      key = null;
+      i++;
+    } else if (ch === "}") {
+      assert.ok(cur, "unbalanced '}' in ENTRIES literal");
+      entries.push(cur);
+      cur = null;
+      i++;
+    } else if (ch === '"') {
+      let out = "";
+      i++;
+      for (;;) {
+        assert.ok(i < literal.length, "unterminated string in ENTRIES literal");
+        if (literal[i] === "\\") {
+          const esc = literal[i + 1];
+          out += esc === "n" ? "\n" : esc === "t" ? "\t" : esc;
+          i += 2;
+          continue;
+        }
+        if (literal[i] === '"') {
+          i++;
+          break;
+        }
+        out += literal[i++];
+      }
+      assert.ok(cur !== null && key !== null, "string value with no key in ENTRIES literal");
+      cur[key] = out;
+      key = null;
+    } else if (/[A-Za-z_$]/.test(ch)) {
+      let id = "";
+      while (i < literal.length && isIdent(literal[i])) id += literal[i++];
+      skipWs();
+      assert.equal(literal[i], ":", "expected ':' after key " + id);
+      i++;
+      skipWs();
+      assert.equal(literal[i], '"', "expected a string value for key " + id);
+      key = id;
+    } else {
+      i++;
+    }
+  }
+  return entries;
 }
 
 const ENTRIES = loadEntries();
