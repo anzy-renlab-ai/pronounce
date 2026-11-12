@@ -12,7 +12,7 @@
 #   - .codex-plugin/plugin.json already bumped to <version>
 # The script then:
 #   1. syncs README's `uses: …@v<version>` pin
-#   2. syncs tools/test_build_v2_data.py's changelog-prefix pin
+#   2. syncs .claude-plugin/plugin.json to the same version
 #   3. runs all four guard suites (fails loud, releases nothing)
 #   4. commits any pin drift, tags v<version>, pushes main + tag
 #   5. creates the GitHub release from the changelog section
@@ -50,26 +50,6 @@ if readme2 != readme:
     open("README.md", "w").write(readme2)
     print("release: README uses-pin synced to v" + version)
 
-t = open("tools/test_build_v2_data.py").read()# The pin is a Python string literal, so the newlines in it are written as
-# escapes. Rebuild the literal in whatever escaping the file currently uses
-# (one backslash-n or two) rather than assuming — assuming is how this sync
-# silently stopped matching while still printing success.
-pin_re = re.compile(
-    r'"# Changelog(?P<nl>\\n|\\\\n)(?P=nl)'
-    r'## v\d+\.\d+\.\d+ — \d{4}-\d{2}-\d{2}'
-    r'(?P=nl)"'
-)
-m = pin_re.search(t)
-if m:
-    nl = m.group("nl")
-    today = __import__("datetime").date.today().isoformat()
-    new_pin = '"# Changelog' + nl + nl + '## v' + version + ' — ' + today + nl + '"'
-    t2 = t[:m.start()] + new_pin + t[m.end():]
-    if t2 != t:
-        open("tools/test_build_v2_data.py", "w").write(t2)
-        print("release: test changelog pin synced (v" + version + ")")
-else:
-    print("release: WARNING — changelog pin in tools/test_build_v2_data.py not found; update it by hand")
 
 # The Claude Code plugin manifest carries the same version; if it drifts,
 # Claude Code keeps serving the old copy to `/plugin install` users.
@@ -86,7 +66,7 @@ except FileNotFoundError:
 PYEOF
 
 if [[ -n "$(git status --porcelain)" ]]; then
-  git add README.md tools/test_build_v2_data.py .claude-plugin/plugin.json
+  git add README.md .claude-plugin/plugin.json
   git commit -q -m "release: sync version pins to v$VERSION"
 fi
 

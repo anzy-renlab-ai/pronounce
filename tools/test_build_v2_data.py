@@ -812,10 +812,19 @@ class RepositoryProductFactTests(unittest.TestCase):
 
     def test_release_heading_and_historical_promo_asset_are_stable(self):
         changelog = self.source("CHANGELOG.md")
-        self.assertTrue(
-            changelog.startswith(
-                "# Changelog\n\n## v2.37.3 — 2026-11-12\n"
-            )
+        manifest_version = json.loads(self.source(".codex-plugin/plugin.json"))["version"]
+        lines = changelog.splitlines()
+        self.assertEqual(lines[0], "# Changelog")
+        self.assertEqual(lines[1], "")
+        # Shape first, then agreement with the manifest. Pinning the literal
+        # version here meant every commit that opened a new changelog section
+        # failed CI until the release step rewrote this line — red builds that
+        # said nothing about the code and trained everyone to ignore CI.
+        self.assertRegex(lines[2], r"^## v\d+\.\d+\.\d+ — \d{4}-\d{2}-\d{2}$")
+        self.assertEqual(
+            lines[2].split()[1],
+            "v" + manifest_version,
+            "CHANGELOG top heading and .codex-plugin/plugin.json disagree",
         )
         self.assertIn("## v2.23.0 — 2026-07-17", changelog)
         self.assertIn("Windows / Linux backends on the roadmap.", changelog)

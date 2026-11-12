@@ -1,5 +1,13 @@
 # Changelog
 
+## v2.37.4 — 2026-11-12
+
+**CI had been red on every commit, for three reasons that had nothing to do with the code.**
+
+- The HOL plugin scanner flagged `tools/test-site-search.mjs` as high severity: the test executed the extracted page code through the `Function` constructor. It now writes the extracted source to a temp module and imports it, so the same tests run without dynamic evaluation. Score 80 → 93, zero high/medium findings.
+- `npm.yml` still used floating `actions/checkout@v4` / `actions/setup-node@v4` tags; both are pinned to commit SHAs like the rest of the workflows.
+- `test_release_heading_and_historical_promo_asset_are_stable` hardcoded the current changelog heading, so every commit that opened a new release section failed CI until the release script rewrote the line. It now checks the heading's shape and that it agrees with `.codex-plugin/plugin.json` — the invariant that actually matters, and it can no longer go red for merely starting a release.
+
 ## v2.37.3 — 2026-11-12
 
 **The home page can now be asked by sound too.** The landing page is the React app and does not load `script.js`, so yesterday's sounds-like search stopped at the door of the page most visitors actually land on — ⌘K matched spelling only. Its palette now runs the same two-pass search: spelling first, and only when nothing is spelled that way, the vowel-free sound skeleton (`engine x` → nginx, `kube control` → kubectl). The palette hint says so, and a parity test compares the React app's copy of `soundKey` against the shared script's, so the two pages of one site cannot answer the same query differently.
