@@ -1,0 +1,15 @@
+{
+  "word": "Gestalt",
+  "ipa": "/ɡəˈʃtælt/",
+  "respelling_us": "guh shtalt",
+  "alt_ipa": ["/ɡəˈʃtɑːlt/"],
+  "alt_respelling_us": ["guh SHALT"],
+  "source_url": "https://en.wikipedia.org/wiki/Gestalt",
+  "source_label": "Wikipedia § Gestalt",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "German loanword, stress on the second syllable and an sh where the spelling shows an s: guh-SHTALT, never GES-talt. Developers meet it in Gestalt pattern matching (Python's difflib) and in design-system writing about perceptual grouping; GestaltX, an iOS MobileGestalt editor, was the top new GitHub repository the week of 2026-11-09 (6k+ stars).",
+  "audio_url": "https://pronounce.renlab.ai/audio/gestalt.mp3",
+  "url": "https://pronounce.renlab.ai/word/gestalt",
+  "date_modified": "2026-11-12"
+}

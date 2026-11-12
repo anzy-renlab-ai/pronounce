@@ -29008,5 +29008,35 @@
   "audio_url": "https://pronounce.renlab.ai/audio/dmarc.mp3",
   "url": "https://pronounce.renlab.ai/word/dmarc",
   "date_modified": "2026-11-10"
+},
+{
+  "word": "GrapheneOS",
+  "ipa": "/ˈɡræfiːn oʊ ˈɛs/",
+  "respelling_us": "GRA feen oh ess",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://en.wikipedia.org/wiki/Graphene",
+  "source_label": "Wikipedia § Graphene",
+  "category": "project",
+  "confidence": "community-consensus",
+  "notes": "Android-based mobile OS: graphene + OS. The hard part is graphene, which Wikipedia records as /ˈɡræfiːn/ — GRA-feen, rhyming with 'seen', not graph-een and not gra-FEEN; then the two letters O-S. It trended the week of 2026-11-09 with the Motorola partnership and the Dutch bank ASN blocking non-Google Android — two front-page stories, and the name gets mangled in both threads.",
+  "audio_url": "https://pronounce.renlab.ai/audio/grapheneos.mp3",
+  "url": "https://pronounce.renlab.ai/word/grapheneos",
+  "date_modified": "2026-11-12"
+},
+{
+  "word": "Gestalt",
+  "ipa": "/ɡəˈʃtælt/",
+  "respelling_us": "guh shtalt",
+  "alt_ipa": ["/ɡəˈʃtɑːlt/"],
+  "alt_respelling_us": ["guh SHALT"],
+  "source_url": "https://en.wikipedia.org/wiki/Gestalt",
+  "source_label": "Wikipedia § Gestalt",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "German loanword, stress on the second syllable and an sh where the spelling shows an s: guh-SHTALT, never GES-talt. Developers meet it in Gestalt pattern matching (Python's difflib) and in design-system writing about perceptual grouping; GestaltX, an iOS MobileGestalt editor, was the top new GitHub repository the week of 2026-11-09 (6k+ stars).",
+  "audio_url": "https://pronounce.renlab.ai/audio/gestalt.mp3",
+  "url": "https://pronounce.renlab.ai/word/gestalt",
+  "date_modified": "2026-11-12"
 }
 ]

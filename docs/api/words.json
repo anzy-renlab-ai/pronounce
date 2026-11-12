@@ -1932,5 +1932,7 @@
   {"word": "Le Chonk", "slug": "le-chonk", "category": "product", "confidence": "community-consensus"},
   {"word": "PRQL", "slug": "prql", "category": "tool", "confidence": "creator-clarified"},
   {"word": "GPUI", "slug": "gpui", "category": "acronym", "confidence": "community-consensus"},
-  {"word": "DMARC", "slug": "dmarc", "category": "acronym", "confidence": "community-consensus"}
+  {"word": "DMARC", "slug": "dmarc", "category": "acronym", "confidence": "community-consensus"},
+  {"word": "GrapheneOS", "slug": "grapheneos", "category": "project", "confidence": "community-consensus"},
+  {"word": "Gestalt", "slug": "gestalt", "category": "cs-term", "confidence": "community-consensus"}
 ]

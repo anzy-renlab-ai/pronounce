@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.36.0 — 2026-11-12
+
+**Two names this week's front page kept mangling.** 2 new entries (1,936 total): GrapheneOS, Gestalt — the mobile OS is GRA-feen plus two letters, not graph-een or gra-FEEN; the German loanword takes its stress on the second syllable with an sh where the spelling shows an s, guh-SHTALT, never GES-talt. Both readings are cited to Wikipedia.
+
 ## v2.35.0 — 2026-11-10
 
 **Two acronyms off this week's front page.** 2 new entries (1,934 total): GPUI, DMARC — Zed's UI framework is GPU + UI and so is read as four letters, G-P-U-I, never as a word; email's DMARC goes the other way, read as a word ("DEE-mark") and never spelled out.

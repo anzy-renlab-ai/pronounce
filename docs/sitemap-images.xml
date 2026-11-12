@@ -7736,4 +7736,12 @@
     <image:image><image:loc>https://pronounce.renlab.ai/og/dmarc.png</image:loc><image:caption>How to pronounce DMARC — OG card</image:caption></image:image>
     <image:image><image:loc>https://pronounce.renlab.ai/badge/dmarc.svg</image:loc><image:caption>Pronunciation badge for DMARC</image:caption></image:image>
   </url>
+  <url><loc>https://pronounce.renlab.ai/word/grapheneos</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/grapheneos.png</image:loc><image:caption>How to pronounce GrapheneOS — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/grapheneos.svg</image:loc><image:caption>Pronunciation badge for GrapheneOS</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/gestalt</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/gestalt.png</image:loc><image:caption>How to pronounce Gestalt — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/gestalt.svg</image:loc><image:caption>Pronunciation badge for Gestalt</image:caption></image:image>
+  </url>
 </urlset>

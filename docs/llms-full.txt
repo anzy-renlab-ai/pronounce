@@ -1936,3 +1936,5 @@ Le Chonk | /lə ˈtʃɑŋk/ | luh chongk | product | community-consensus | https
 PRQL | /ˈpriːkwəl/ | PREE-kwul | tool | creator-clarified | https://github.com/PRQL/prql
 GPUI | /ˌdʒiː piː juː ˈaɪ/ | G P U I | acronym | community-consensus | https://docs.rs/gpui/latest/gpui/
 DMARC | /ˈdiː mɑːrk/ | DEE mark | acronym | community-consensus | (no source)
+GrapheneOS | /ˈɡræfiːn oʊ ˈɛs/ | GRA feen oh ess | project | community-consensus | https://en.wikipedia.org/wiki/Graphene
+Gestalt | /ɡəˈʃtælt/ | guh shtalt | cs-term | community-consensus | https://en.wikipedia.org/wiki/Gestalt
