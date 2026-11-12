@@ -1,0 +1,60 @@
+name: Publish pronounce-mcp to npm
+
+# npm has no OIDC/trusted-publishing equivalent to PyPI's, so this needs one
+# stored secret:
+#   Settings → Secrets and variables → Actions → New repository secret
+#   Name: NPM_TOKEN
+#   Value: an npm "Automation" granular access token with publish rights on
+#          the `pronounce-mcp` package (npmjs.com → Access Tokens → Generate).
+# Until that secret exists the publish step fails loudly instead of silently
+# doing nothing.
+#
+# Why this matters: `npx -y pronounce-mcp` is the install line MCP clients and
+# directories (Smithery, Glama, mcp.so, …) reach for first. The Python package
+# is on PyPI (uvx), this is the Node twin — same three tools, same responses.
+#
+# Ship with:  git tag npm-v0.2.0 && git push origin npm-v0.2.0
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "npm-v*"
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write # npm provenance attestation
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Check the secret is configured
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          if [ -z "$NODE_AUTH_TOKEN" ]; then
+            echo "::error::NPM_TOKEN is not set. Add it under Settings → Secrets → Actions (see the header of this workflow)."
+            exit 1
+          fi
+
+      - name: Verify the tarball before publishing
+        working-directory: mcp-server/npm
+        run: |
+          npm pack --dry-run
+          node --check index.js
+
+      - name: Publish
+        working-directory: mcp-server/npm
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish --access public --provenance
