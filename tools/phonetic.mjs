@@ -25,6 +25,7 @@ export function soundKey(s) {
   if (!t) return '';
   // Order matters: digraphs before single letters, and `c` before `q`.
   t = t
+    .replace(/you/g, 'u') // "you boon too" -> "u boon too" (Ubuntu)
     .replace(/ph/g, 'f')
     .replace(/ck/g, 'k')
     .replace(/qu/g, 'kw')

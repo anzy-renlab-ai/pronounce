@@ -656,11 +656,39 @@ function escHTML(s) {
 // attribute (onclick="playEntry('...')"). escHTML's &#39; entity decodes back
 // to a raw apostrophe before the JS parses, so it cannot protect this slot.
 function escJS(s) {
-  return (s || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+  // Doubled for this unquoted heredoc: backslash pairs collapse on the way out.
+  // Writing the JS-escaped form here produced a file that could not parse and
+  // shipped that way — never treat the source text as the output text.
+  return (s || '').replace(/\\\\/g, '\\\\\\\\').replace(/'/g, "\\\\'");
 }
 function badge(text, kind) { return \`<span class="badge badge-\${kind}">\${text}</span>\`; }
 function entryHref(word) {
   return './word/' + word.toLowerCase().replace(/[^a-z0-9._-]/gu, '-');
+}
+
+// Sounds-like. The real query pattern is "I heard it and cannot spell it":
+// engine x -> nginx, kube control -> kubectl, jason -> JSON. Vowel-free
+// skeletons of the word and of its respelling are compared, so only an exact
+// skeleton match surfaces — and every caller runs it only after the spelling
+// search came up empty, so it can never reorder a normal result.
+function soundKey(s) {
+  return String(s || '').toLowerCase().replace(/[^a-z]+/g, '')
+    .replace(/you/g, 'u').replace(/ph/g, 'f').replace(/ck/g, 'k')
+    .replace(/qu/g, 'kw').replace(/wh/g, 'w').replace(/x/g, 'ks')
+    .replace(/c(?=[eiy])/g, 's').replace(/c/g, 'k').replace(/q/g, 'k')
+    .replace(/z/g, 's').replace(/(.)\1+/g, '$1')
+    .replace(/[aeiou]+/g, 'a').replace(/a/g, '');
+}
+function entrySoundKeys(e) {
+  return [e.w, ...(e.r || '').split('|'), ...(e.r2 || '').split('|')]
+    .filter(Boolean).map(soundKey).filter((k) => k.length >= 3);
+}
+function soundMatches(q) {
+  try {
+    const qk = soundKey(q);
+    if (qk.length < 3) return [];
+    return ENTRIES.filter((e) => entrySoundKeys(e).indexOf(qk) !== -1).slice(0, 8);
+  } catch (_) { return []; }
 }
 
 function renderEntry(e, idx) {
@@ -685,7 +713,7 @@ function renderEntry(e, idx) {
     ? \`<div class="source">📎 <a href="\${escHTML(e.url)}" target="_blank" rel="noopener">\${escHTML(e.srcLabel || e.url)}</a></div>\`
     : '';
   return \`
-    <article class="entry" data-cat="\${escHTML(e.cat)}" data-conf="\${escHTML(e.conf)}">
+    <article class="entry" data-cat="\${escHTML(e.cat)}" data-conf="\${escHTML(e.conf)}" data-sound="\${entrySoundKeys(e).join(' ')}">
       <header class="entry-header">
         <h3 class="word"><a href="\${entryHref(e.w)}">\${escHTML(e.w)}</a></h3>
         <div class="entry-badges">\${badge(e.cat, 'cat')}\${badge(e.conf, e.conf)}</div>
@@ -716,13 +744,23 @@ function initBrowse() {
   let activeCat = 'all';
   function applyFilter() {
     const q = (search.value || '').toLowerCase().trim();
-    let shown = 0;
-    container.querySelectorAll('.entry').forEach(el => {
+    const qSound = q ? soundKey(q) : '';
+    const els = Array.from(container.querySelectorAll('.entry'));
+    const spellingHit = (el) => {
       const w = el.querySelector('.word').textContent.toLowerCase();
       const notes = (el.querySelector('.notes')?.textContent || '').toLowerCase();
-      const cat = el.dataset.cat;
-      const catOk = (activeCat === 'all') || (cat === activeCat);
-      const qOk = !q || w.includes(q) || notes.includes(q);
+      return w.includes(q) || notes.includes(q);
+    };
+    const soundHit = (el) =>
+      qSound.length >= 3 && (el.dataset.sound || '').split(' ').indexOf(qSound) !== -1;
+    // Spelling first. Only when no entry matches the spelling at all does the
+    // sounds-like pass run, so a normal query never mixes phonetic noise in.
+    const anySpelling = !q || els.some(spellingHit);
+    const useSound = !anySpelling;
+    let shown = 0;
+    els.forEach(el => {
+      const catOk = (activeCat === 'all') || (el.dataset.cat === activeCat);
+      const qOk = !q || (useSound ? soundHit(el) : spellingHit(el));
       const show = catOk && qOk;
       el.style.display = show ? '' : 'none';
       if (show) shown++;
@@ -894,7 +932,8 @@ function initHeroSearch() {
       else if (w.startsWith(q)) prefix.push(e);
       else if (w.includes(q) || (e.r || '').toLowerCase().includes(q)) contains.push(e);
     }
-    return [...exact, ...prefix, ...contains].slice(0, 8);
+    const found = [...exact, ...prefix, ...contains].slice(0, 8);
+    return found.length ? found : soundMatches(q);
   }
 
   function render(items) {
@@ -1029,6 +1068,11 @@ document.addEventListener('DOMContentLoaded', () => {
   else initWordPage();
 });
 EOF
+
+# The heredoc above is unquoted, so backslashes collapse on the way out. A
+# mishandled escape produced a script.js that shipped for weeks with a syntax
+# error — parse the emitted file, not the source, before anything else runs.
+node --check "$DOCS/script.js" || { echo "build-site: docs/script.js does not parse" >&2; exit 1; }
 
 # ---------------------------------------------------------------------------
 # sw.js — service worker, EMITTED each build so its cache version tracks content.

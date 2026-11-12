@@ -1,5 +1,13 @@
 # Changelog
 
+## v2.37.1 — 2026-11-12
+
+**Search that listens to what you say, not what you spell.** The site's search now falls back to a sounds-like pass: type `engine x` and get nginx, `kube control` and get kubectl, `jason` and get JSON, `a patch ee` and get Apache. The word and its respelling are reduced to a vowel-free sound skeleton, so a query only surfaces an entry when the two really sound alike — and the pass runs only after the spelling search has found nothing, which keeps it from ever reordering a normal result.
+
+Live on the landing pages (`/v1`, `/zh`) and the full browser (`/browse`), where each entry now carries its sound keys. `tools/test-site-search.mjs` extracts the shipped code out of `tools/build-site.sh` and tests it, so the feature cannot quietly disappear from the page again.
+
+This release also uncovers why the shared page script had been dead in the browser: `escJS` was emitted from an unquoted heredoc, so `\\` collapsed to `\` and `docs/script.js` shipped with a syntax error at the top level — every page that loaded it lost its search, filter, and player. The build now runs `node --check` on the emitted file, so a broken artifact fails the build instead of the browser.
+
 ## v2.37.0 — 2026-11-12
 
 **The dictionary could not answer `python`.** The daily loop had been growing it by *novelty* — whatever trended that morning — and nothing ever measured it against *demand*. Scored against the 200 most-asked Stack Overflow tags it covered 39%, and `/api/word/python.json` returned 404. So did `java`, `android`, `git`, `jquery`, `ios`, `.net`, `xcode`, and `apache`.
