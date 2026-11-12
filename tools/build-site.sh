@@ -673,10 +673,16 @@ function entryHref(word) {
 // search came up empty, so it can never reorder a normal result.
 function soundKey(s) {
   return String(s || '').toLowerCase().replace(/[^a-z]+/g, '')
+    // `h` after a vowel is not a sound: the "uh" in a respelling is a schwa,
+    // so "uh patch ee" and "a patch ee" must reduce to the same skeleton.
+    // `\$1` not `$1`: this heredoc is unquoted, so a bare $1 expands to the
+    // build script's (empty) first argument and the collapse silently became
+    // "delete every doubled letter".
+    .replace(/([aeiou])h/g, '\$1')
     .replace(/you/g, 'u').replace(/ph/g, 'f').replace(/ck/g, 'k')
     .replace(/qu/g, 'kw').replace(/wh/g, 'w').replace(/x/g, 'ks')
     .replace(/c(?=[eiy])/g, 's').replace(/c/g, 'k').replace(/q/g, 'k')
-    .replace(/z/g, 's').replace(/(.)\1+/g, '$1')
+    .replace(/z/g, 's').replace(/(.)\1+/g, '\$1')
     .replace(/[aeiou]+/g, 'a').replace(/a/g, '');
 }
 function entrySoundKeys(e) {

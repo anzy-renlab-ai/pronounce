@@ -36,11 +36,12 @@ const ENTRIES = [
   { w: "JSON", r: "jay son", ipa: "" },
   { w: "Python", r: "pie thon", ipa: "" },
   { w: "jQuery", r: "JAY kwery|jay QUERY", ipa: "" },
+  { w: "Apache", r: "uh patch ee", ipa: "" },
 ];
 
-const soundMatches = new Function(
+const { soundMatches, soundKey } = new Function(
   "ENTRIES",
-  `${extractFunctions()}\nreturn soundMatches;`,
+  `${extractFunctions()}\nreturn { soundMatches, soundKey };`,
 )(ENTRIES);
 
 const top = (q) => (soundMatches(q)[0] || {}).w;
@@ -55,6 +56,22 @@ test("heard-it-misspelled queries land on the right word", () => {
 
 test("alternate respellings are searched too", () => {
   assert.equal(top("jay query"), "jQuery");
+});
+
+test("a respelling's filler vowel does not change its skeleton", () => {
+  // "uh" is a schwa: the h is not a sound. Without the vowel+h rule this query
+  // keeps a stray h the dictionary's respelling does not have.
+  assert.equal(top("a patch ee"), "Apache");
+  assert.equal(soundKey("uh patch ee"), soundKey("a patch ee"));
+});
+
+test("doubled letters collapse to one, not to nothing", () => {
+  // The collapse replacement lost its capture group once ($1 expanded to an
+  // empty positional in the build heredoc), which deleted the letters instead
+  // of merging them.
+  assert.equal(soundKey("coffee"), "kf");
+  assert.equal(soundKey("cofee"), "kf");
+  assert.notEqual(soundKey("bell"), "");
 });
 
 test("no skeleton match means no suggestions", () => {

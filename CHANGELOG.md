@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.37.2 — 2026-11-12
+
+**Two escaping bugs in yesterday's search, caught by running the shipped file instead of reading the source.** `soundKey`'s doubled-letter collapse lost its `$1` — inside an unquoted heredoc that expands to the build script's (empty) first argument — so a run of repeated letters was *deleted* rather than merged, and `coffee` collapsed differently from `cofee`. And the schwa in a respelling kept a stray `h`: `uh patch ee` reached Apache while `a patch ee` reached nothing. Both sides now drop the h after a vowel, so either spelling of the sound lands on the same key. `tools/test-site-search.mjs` pins both cases against the emitted code.
+
 ## v2.37.1 — 2026-11-12
 
 **Search that listens to what you say, not what you spell.** The site's search now falls back to a sounds-like pass: type `engine x` and get nginx, `kube control` and get kubectl, `jason` and get JSON, `a patch ee` and get Apache. The word and its respelling are reduced to a vowel-free sound skeleton, so a query only surfaces an entry when the two really sound alike — and the pass runs only after the spelling search has found nothing, which keeps it from ever reordering a normal result.
