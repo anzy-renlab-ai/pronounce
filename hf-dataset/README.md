@@ -26,7 +26,7 @@ A community dictionary of how engineers actually pronounce developer jargon: pro
 
 The dataset is the data behind [pronounce.renlab.ai](https://pronounce.renlab.ai). Each entry carries IPA, an English-like respelling, alternative readings, a confidence label, a citable source URL where one exists, and a URL to pre-rendered audio.
 
-- **Entries:** 1,936
+- **Entries:** 1,972
 - **Language:** English (General American only)
 - **Format:** one JSON object per line (`pronunciations.jsonl`); a flat `pronunciations.csv` is also included
 - **License:** MIT

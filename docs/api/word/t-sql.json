@@ -1,0 +1,15 @@
+{
+  "word": "T-SQL",
+  "ipa": "/ˌtiː ˈsiːkwəl/",
+  "respelling_us": "T sequel",
+  "alt_ipa": ["/ˌtiː ˌɛs kjuː ˈɛl/"],
+  "alt_respelling_us": ["T S Q L"],
+  "source_url": "",
+  "source_label": "",
+  "category": "acronym",
+  "confidence": "contested",
+  "notes": "Microsoft's dialect: 'tee-sequel' is the common reading, but plenty of DBAs say the letters 'tee-ess-kyoo-ell'. Both are in circulation inside Microsoft's own docs and talks.",
+  "audio_url": "https://pronounce.renlab.ai/audio/t-sql.mp3",
+  "url": "https://pronounce.renlab.ai/word/t-sql",
+  "date_modified": "2026-11-12"
+}

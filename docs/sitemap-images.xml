@@ -7744,4 +7744,148 @@
     <image:image><image:loc>https://pronounce.renlab.ai/og/gestalt.png</image:loc><image:caption>How to pronounce Gestalt — OG card</image:caption></image:image>
     <image:image><image:loc>https://pronounce.renlab.ai/badge/gestalt.svg</image:loc><image:caption>Pronunciation badge for Gestalt</image:caption></image:image>
   </url>
+  <url><loc>https://pronounce.renlab.ai/word/python</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/python.png</image:loc><image:caption>How to pronounce Python — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/python.svg</image:loc><image:caption>Pronunciation badge for Python</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/java</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/java.png</image:loc><image:caption>How to pronounce Java — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/java.svg</image:loc><image:caption>Pronunciation badge for Java</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/android</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/android.png</image:loc><image:caption>How to pronounce Android — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/android.svg</image:loc><image:caption>Pronunciation badge for Android</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/git</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/git.png</image:loc><image:caption>How to pronounce Git — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/git.svg</image:loc><image:caption>Pronunciation badge for Git</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/c</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/c.png</image:loc><image:caption>How to pronounce C — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/c.svg</image:loc><image:caption>Pronunciation badge for C</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/r</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/r.png</image:loc><image:caption>How to pronounce R — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/r.svg</image:loc><image:caption>Pronunciation badge for R</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/node.js</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/node.js.png</image:loc><image:caption>How to pronounce Node.js — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/node.js.svg</image:loc><image:caption>Pronunciation badge for Node.js</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/macos</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/macos.png</image:loc><image:caption>How to pronounce macOS — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/macos.svg</image:loc><image:caption>Pronunciation badge for macOS</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/ruby-on-rails</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/ruby-on-rails.png</image:loc><image:caption>How to pronounce Ruby on Rails — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/ruby-on-rails.svg</image:loc><image:caption>Pronunciation badge for Ruby on Rails</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/jquery</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/jquery.png</image:loc><image:caption>How to pronounce jQuery — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/jquery.svg</image:loc><image:caption>Pronunciation badge for jQuery</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/ios</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/ios.png</image:loc><image:caption>How to pronounce iOS — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/ios.svg</image:loc><image:caption>Pronunciation badge for iOS</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/.net</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/.net.png</image:loc><image:caption>How to pronounce .NET — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/.net.svg</image:loc><image:caption>Pronunciation badge for .NET</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/asp.net</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/asp.net.png</image:loc><image:caption>How to pronounce ASP.NET — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/asp.net.svg</image:loc><image:caption>Pronunciation badge for ASP.NET</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/sql-server</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/sql-server.png</image:loc><image:caption>How to pronounce SQL Server — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/sql-server.svg</image:loc><image:caption>Pronunciation badge for SQL Server</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/objective-c</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/objective-c.png</image:loc><image:caption>How to pronounce Objective-C — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/objective-c.svg</image:loc><image:caption>Pronunciation badge for Objective-C</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/wpf</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/wpf.png</image:loc><image:caption>How to pronounce WPF — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/wpf.svg</image:loc><image:caption>Pronunciation badge for WPF</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/wcf</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/wcf.png</image:loc><image:caption>How to pronounce WCF — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/wcf.svg</image:loc><image:caption>Pronunciation badge for WCF</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/jsp</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/jsp.png</image:loc><image:caption>How to pronounce JSP — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/jsp.svg</image:loc><image:caption>Pronunciation badge for JSP</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/vba</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/vba.png</image:loc><image:caption>How to pronounce VBA — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/vba.svg</image:loc><image:caption>Pronunciation badge for VBA</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/vb.net</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/vb.net.png</image:loc><image:caption>How to pronounce VB.NET — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/vb.net.svg</image:loc><image:caption>Pronunciation badge for VB.NET</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/xcode</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/xcode.png</image:loc><image:caption>How to pronounce Xcode — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/xcode.svg</image:loc><image:caption>Pronunciation badge for Xcode</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/oracle</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/oracle.png</image:loc><image:caption>How to pronounce Oracle — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/oracle.svg</image:loc><image:caption>Pronunciation badge for Oracle</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/eclipse</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/eclipse.png</image:loc><image:caption>How to pronounce Eclipse — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/eclipse.svg</image:loc><image:caption>Pronunciation badge for Eclipse</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/matlab</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/matlab.png</image:loc><image:caption>How to pronounce MATLAB — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/matlab.svg</image:loc><image:caption>Pronunciation badge for MATLAB</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/linq</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/linq.png</image:loc><image:caption>How to pronounce LINQ — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/linq.svg</image:loc><image:caption>Pronunciation badge for LINQ</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/apache</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/apache.png</image:loc><image:caption>How to pronounce Apache — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/apache.svg</image:loc><image:caption>Pronunciation badge for Apache</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/opencv</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/opencv.png</image:loc><image:caption>How to pronounce OpenCV — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/opencv.svg</image:loc><image:caption>Pronunciation badge for OpenCV</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/xamarin</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/xamarin.png</image:loc><image:caption>How to pronounce Xamarin — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/xamarin.svg</image:loc><image:caption>Pronunciation badge for Xamarin</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/t-sql</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/t-sql.png</image:loc><image:caption>How to pronounce T-SQL — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/t-sql.svg</image:loc><image:caption>Pronunciation badge for T-SQL</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/ggplot2</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/ggplot2.png</image:loc><image:caption>How to pronounce ggplot2 — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/ggplot2.svg</image:loc><image:caption>Pronunciation badge for ggplot2</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/uitableview</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/uitableview.png</image:loc><image:caption>How to pronounce UITableView — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/uitableview.svg</image:loc><image:caption>Pronunciation badge for UITableView</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/winapi</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/winapi.png</image:loc><image:caption>How to pronounce winapi — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/winapi.svg</image:loc><image:caption>Pronunciation badge for winapi</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/delphi</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/delphi.png</image:loc><image:caption>How to pronounce Delphi — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/delphi.svg</image:loc><image:caption>Pronunciation badge for Delphi</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/cordova</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/cordova.png</image:loc><image:caption>How to pronounce Cordova — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/cordova.svg</image:loc><image:caption>Pronunciation badge for Cordova</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/hibernate</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/hibernate.png</image:loc><image:caption>How to pronounce Hibernate — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/hibernate.svg</image:loc><image:caption>Pronunciation badge for Hibernate</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/.htaccess</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/.htaccess.png</image:loc><image:caption>How to pronounce .htaccess — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/.htaccess.svg</image:loc><image:caption>Pronunciation badge for .htaccess</image:caption></image:image>
+  </url>
 </urlset>

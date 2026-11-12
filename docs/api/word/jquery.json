@@ -1,0 +1,15 @@
+{
+  "word": "jQuery",
+  "ipa": "/ˈdʒeɪ kwɛri/",
+  "respelling_us": "JAY kwery",
+  "alt_ipa": ["/ˈdʒeɪ ˈkwiːri/"],
+  "alt_respelling_us": ["jay QUERY"],
+  "source_url": "",
+  "source_label": "",
+  "category": "project",
+  "confidence": "contested",
+  "notes": "The J is the letter, then 'query': 'jay-kwery' /ˈdʒeɪ kwɛri/. The stress splits the community — JAY-kwery against jay-QUERY — and neither the project nor its docs ever settled it. Previously a 404 on one of the ten most-asked tags on Stack Overflow.",
+  "audio_url": "https://pronounce.renlab.ai/audio/jquery.mp3",
+  "url": "https://pronounce.renlab.ai/word/jquery",
+  "date_modified": "2026-11-12"
+}

@@ -18,9 +18,21 @@ project names, (b) genuinely pronounced in a non-obvious way, and (c) NOT
 already in the dictionary (check `data/pronunciations.tsv`, case-insensitive,
 and remember slug collisions). Sources, in order of yield:
 
-1. Recent GitHub trending / new AI product launches (past 7 days).
-2. HN / X launches of dev tools with odd spellings.
-3. New entries in adjacent dictionaries' watchlists.
+1. **Demand gaps first** — `node tools/coverage.mjs --all` lists the
+   most-asked Stack Overflow tags the dictionary still cannot answer, ranked
+   by real question volume. Take those before anything trending: on
+   2026-11-12 this list was how `python`, `java`, `jquery`, `ios`, `.net`,
+   `xcode`, and `apache` were discovered missing from a 1,936-entry
+   dictionary. A hole a million developers ask about beats a word that
+   trended this morning. The in-scope floor in `tools/coverage.mjs` only
+   ratchets upward — raise it when you close holes.
+2. Recent GitHub trending / new AI product launches (past 7 days).
+3. HN / X launches of dev tools with odd spellings.
+4. New entries in adjacent dictionaries' watchlists.
+
+Record what you closed: if the entry came off the coverage list, say so in
+the CHANGELOG — "the dictionary could not answer python yesterday" is a
+better sentence than "added 36 entries".
 
 Hard cap: **5 candidates** per day. Fewer is better.
 
@@ -41,7 +53,7 @@ lint enforces it).
 
 ```bash
 # batch file format: see tools/batch*.json history
-python3 tools/add-batch.mjs tools/batch-daily.json   # validates + dedups + appends
+node tools/add-batch.mjs tools/batch-daily.json    # validates + dedups + appends
 ```
 
 ## 4. Rebuild assets

@@ -96,6 +96,8 @@ bash tools/lint-dict.sh >/dev/null            || fail "lint-dict failed"
 bash tools/smoke-test.sh >/dev/null           || fail "smoke-test failed"
 node --test tools/test-v2-audio.mjs >/dev/null || fail "test-v2-audio failed"
 node --test tools/test-daily.mjs tools/test-mcp.mjs >/dev/null || fail "daily/mcp tests failed"
+node --test tools/test-coverage.mjs >/dev/null || fail "coverage tests failed"
+node tools/coverage.mjs --check >/dev/null    || fail "demand coverage fell below the floor"
 python3 -m unittest tools/test_build_v2_data.py tools/test_make_og_all.py \
   tools/test_chrome_dictionary.py tools/test_build_entry_dates.py \
   tools/test_build_seo.py tools/test_deploy_config.py \

@@ -287,7 +287,7 @@ class RepositoryProductFactTests(unittest.TestCase):
             if len(cells) >= 10 and cells[0] and cells[2]:
                 rows.append(cells)
 
-        self.assertEqual(len(rows), 1_936)
+        self.assertEqual(len(rows), 1_972)
         self.assertEqual(sum(bool(cells[5].strip()) for cells in rows), 1_315)
 
     def test_v224_ai_company_rows(self):
@@ -529,7 +529,7 @@ class RepositoryProductFactTests(unittest.TestCase):
 
     def test_readme_reports_source_coverage_without_universal_source_claims(self):
         readme = self.source("README.md")
-        self.assertIn("1,936 entries — 1,315 carry a citable source", readme)
+        self.assertIn("1,972 entries — 1,315 carry a citable source", readme)
         self.assertNotIn("Shipped since this list was written", readme)
         self.assertNotRegex(
             readme,

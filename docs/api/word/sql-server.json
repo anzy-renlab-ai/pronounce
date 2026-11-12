@@ -1,0 +1,15 @@
+{
+  "word": "SQL Server",
+  "ipa": "/ˌɛs kjuː ˈɛl ˈsɜːrvər/",
+  "respelling_us": "S Q L server",
+  "alt_ipa": ["/ˈsiːkwəl ˈsɜːrvər/"],
+  "alt_respelling_us": ["sequel server"],
+  "source_url": "",
+  "source_label": "",
+  "category": "product",
+  "confidence": "contested",
+  "notes": "Both readings are current for Microsoft's database: letters ('ess-kyoo-ell server') and 'sequel server'. Microsoft itself uses both in its own talks, so neither is wrong — the letters are the safer default in an international room.",
+  "audio_url": "https://pronounce.renlab.ai/audio/sql-server.mp3",
+  "url": "https://pronounce.renlab.ai/word/sql-server",
+  "date_modified": "2026-11-12"
+}

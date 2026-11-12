@@ -1,0 +1,15 @@
+{
+  "word": "Eclipse",
+  "ipa": "/ɪˈklɪps/",
+  "respelling_us": "ih clips",
+  "alt_ipa": ["/iːˈklɪps/"],
+  "alt_respelling_us": ["ee clips"],
+  "source_url": "",
+  "source_label": "",
+  "category": "product",
+  "confidence": "contested",
+  "notes": "The IDE splits the community: 'ih-CLIPS' /ɪˈklɪps/, like the astronomical event, against 'ee-CLIPS' /iːˈklɪps/, which the Foundation's own presenters use. Both are heard at every Java conference.",
+  "audio_url": "https://pronounce.renlab.ai/audio/eclipse.mp3",
+  "url": "https://pronounce.renlab.ai/word/eclipse",
+  "date_modified": "2026-11-12"
+}

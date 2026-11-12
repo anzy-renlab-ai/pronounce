@@ -1,5 +1,13 @@
 # Changelog
 
+## v2.37.0 — 2026-11-12
+
+**The dictionary could not answer `python`.** The daily loop had been growing it by *novelty* — whatever trended that morning — and nothing ever measured it against *demand*. Scored against the 200 most-asked Stack Overflow tags it covered 39%, and `/api/word/python.json` returned 404. So did `java`, `android`, `git`, `jquery`, `ios`, `.net`, `xcode`, and `apache`.
+
+36 entries added (1,972 total), demand coverage 39% → 59%, in-scope (product/tool/language names) 19% → 68%. Most of the gap was the acronym-heavy half of the industry the dictionary had never touched: `LINQ` is "link", `Xcode` is "ex-code", `.NET` is "dot net", `T-SQL` is "tee-sequel", `Xamarin` is "ZAM-uh-rin", `ggplot2` is "gee-gee-plot-two", `UITableView` is "you-eye table view", `.htaccess` is "H-T-access", plus `WPF`/`WCF`/`JSP`/`VBA`/`VB.NET` and the contested pairs `jQuery` (JAY-kwery vs jay-QUERY), `SQL Server` (letters vs "sequel"), `Eclipse` (ih- vs ee-CLIPS). The four biggest holes — `Python`, `Java`, `Android`, `Git` — are in as well.
+
+New guard: `tools/coverage.mjs` ranks the highest-demand holes and fails the release when in-scope coverage drops below its floor; `data/top-dev-terms.tsv` is the dated snapshot it measures. The daily runbook now takes demand gaps before trending words.
+
 ## v2.36.0 — 2026-11-12
 
 **Two names this week's front page kept mangling.** 2 new entries (1,936 total): GrapheneOS, Gestalt — the mobile OS is GRA-feen plus two letters, not graph-een or gra-FEEN; the German loanword takes its stress on the second syllable with an sh where the spelling shows an s, guh-SHTALT, never GES-talt. Both readings are cited to Wikipedia.
