@@ -65,7 +65,20 @@ jobs:
             | tar xz mcp-publisher
           sudo mv mcp-publisher /usr/local/bin/
 
+      # A published version cannot be published again — the registry answers
+      # "duplicate version" with a 400 and the job goes red on a successful
+      # correction's re-run. Ask first, and treat "already there" as done.
+      - name: Is this version already published?
+        id: published
+        run: |
+          v="$(jq -r .version mcp-server/server.json)"
+          found="$(curl -fsS "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.anzy-renlab-ai%2Fpronounce" \
+            | jq -r --arg v "$v" '[.servers[].server | select(.version == $v)] | length')"
+          echo "skip=$([ "${found:-0}" -gt 0 ] && echo 1 || echo 0)" >> "$GITHUB_OUTPUT"
+          echo "registry already has $v: ${found:-0} entries"
+
       - name: Publish to official MCP registry (GitHub OIDC)
+        if: steps.published.outputs.skip != '1'
         working-directory: mcp-server
         run: |
           mcp-publisher login github-oidc
