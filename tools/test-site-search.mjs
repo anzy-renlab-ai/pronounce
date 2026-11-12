@@ -44,6 +44,29 @@ const { soundMatches, soundKey } = new Function(
   `${extractFunctions()}\nreturn { soundMatches, soundKey };`,
 )(ENTRIES);
 
+// The landing page's command palette carries a second copy of the same idea
+// (docs/v2/eggs.jsx) because the React app does not load script.js. Two copies
+// that drift apart would answer the same query differently on two pages of the
+// same site, so this compares them directly.
+function extractV2() {
+  const src = readFileSync(join(REPO_ROOT, "docs", "v2", "eggs.jsx"), "utf8");
+  const start = src.indexOf("function soundKey(s)");
+  assert.ok(start > 0, "soundKey() is gone from docs/v2/eggs.jsx");
+  const begin = src.indexOf("function entrySoundKeys(d)");
+  assert.ok(begin > start, "entrySoundKeys() is gone from docs/v2/eggs.jsx");
+  let i = src.indexOf("{", begin), depth = 0;
+  for (; i < src.length; i++) {
+    if (src[i] === "{") depth++;
+    else if (src[i] === "}") {
+      depth--;
+      if (depth === 0) break;
+    }
+  }
+  return src.slice(start, i + 1);
+}
+
+const v2 = new Function(`${extractV2()}\nreturn { soundKey, entrySoundKeys };`)();
+
 const top = (q) => (soundMatches(q)[0] || {}).w;
 
 test("heard-it-misspelled queries land on the right word", () => {
@@ -72,6 +95,20 @@ test("doubled letters collapse to one, not to nothing", () => {
   assert.equal(soundKey("coffee"), "kf");
   assert.equal(soundKey("cofee"), "kf");
   assert.notEqual(soundKey("bell"), "");
+});
+
+test("the React app and the shared script agree on every skeleton", () => {
+  const probe = [
+    "engine x", "kube control", "jason", "uh patch ee", "a patch ee",
+    "coffee", "cofee", "json", "nginx", "dot net", "ex code", "sequel",
+    "chat g p t", "you boon too", "pie thon", "", "zzzzqqqq",
+  ];
+  for (const q of probe) {
+    assert.equal(v2.soundKey(q), soundKey(q), `soundKey("${q}") differs between docs/v2/eggs.jsx and tools/build-site.sh`);
+  }
+  // The palette reads {w, resp, alt}; the shared script reads {w, r, r2}.
+  const keys = v2.entrySoundKeys({ w: "jQuery", resp: "JAY kwery", alt: "jay QUERY" });
+  assert.ok(keys.includes(soundKey("jay query")), "palette must search the alternate respelling");
 });
 
 test("no skeleton match means no suggestions", () => {

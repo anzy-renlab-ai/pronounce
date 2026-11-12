@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.37.3 — 2026-11-12
+
+**The home page can now be asked by sound too.** The landing page is the React app and does not load `script.js`, so yesterday's sounds-like search stopped at the door of the page most visitors actually land on — ⌘K matched spelling only. Its palette now runs the same two-pass search: spelling first, and only when nothing is spelled that way, the vowel-free sound skeleton (`engine x` → nginx, `kube control` → kubectl). The palette hint says so, and a parity test compares the React app's copy of `soundKey` against the shared script's, so the two pages of one site cannot answer the same query differently.
+
 ## v2.37.2 — 2026-11-12
 
 **Two escaping bugs in yesterday's search, caught by running the shipped file instead of reading the source.** `soundKey`'s doubled-letter collapse lost its `$1` — inside an unquoted heredoc that expands to the build script's (empty) first argument — so a run of repeated letters was *deleted* rather than merged, and `coffee` collapsed differently from `cofee`. And the schwa in a respelling kept a stray `h`: `uh patch ee` reached Apache while `a patch ee` reached nothing. Both sides now drop the h after a vowel, so either spelling of the sound lands on the same key. `tools/test-site-search.mjs` pins both cases against the emitted code.

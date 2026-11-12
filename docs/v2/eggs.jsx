@@ -1,18 +1,46 @@
+// ========== Sounds-like ==========
+// Someone hears "engine x" and types exactly that; a substring search over the
+// spelling cannot answer it. Both sides are reduced to a vowel-free skeleton so
+// they land on the same key. This is the second copy of this function — the
+// first ships inside tools/build-site.sh for the v1/zh/browse pages —
+// and tools/test-site-search.mjs fails if the two stop agreeing.
+function soundKey(s) {
+  return String(s || '').toLowerCase().replace(/[^a-z]+/g, '')
+    .replace(/([aeiou])h/g, '$1')
+    .replace(/you/g, 'u').replace(/ph/g, 'f').replace(/ck/g, 'k')
+    .replace(/qu/g, 'kw').replace(/wh/g, 'w').replace(/x/g, 'ks')
+    .replace(/c(?=[eiy])/g, 's').replace(/c/g, 'k').replace(/q/g, 'k')
+    .replace(/z/g, 's').replace(/(.)\1+/g, '$1')
+    .replace(/[aeiou]+/g, 'a').replace(/a/g, '');
+}
+function entrySoundKeys(d) {
+  return [d.w, d.resp, d.alt]
+    .filter(Boolean).join('|').split('|')
+    .map(soundKey).filter((k) => k.length >= 3);
+}
+
 // ========== Command Palette ==========
 function CommandPalette({ open, onClose, registerEgg }) {
   const [q, setQ] = React.useState('');
   const [cursor, setCursor] = React.useState(0);
   const inputRef = React.useRef(null);
 
-  const results = React.useMemo(() => {
+  const { results, phonetic } = React.useMemo(() => {
     const source = window.DICT_ALL || DICT;
-    if (!q.trim()) return source.slice(0, 8);
+    if (!q.trim()) return { results: source.slice(0, 8), phonetic: false };
     const needle = q.toLowerCase();
-    return source.filter(d =>
+    const spelled = source.filter(d =>
       d.w.toLowerCase().includes(needle) ||
       d.resp.toLowerCase().includes(needle) ||
       (d.alt && d.alt.toLowerCase().includes(needle))
-    ).slice(0, 12);
+    );
+    // Spelling first, sounds-like only when the spelling found nothing, so a
+    // normal query never mixes phonetic noise into its results.
+    if (spelled.length) return { results: spelled.slice(0, 12), phonetic: false };
+    const qk = soundKey(q);
+    if (qk.length < 3) return { results: [], phonetic: false };
+    const heard = source.filter(d => entrySoundKeys(d).indexOf(qk) !== -1);
+    return { results: heard.slice(0, 12), phonetic: heard.length > 0 };
   }, [q]);
 
   React.useEffect(() => {
@@ -52,7 +80,7 @@ function CommandPalette({ open, onClose, registerEgg }) {
             value={q}
             onChange={(e) => setQ(e.target.value)}
             onKeyDown={onKey}
-            placeholder="type a word — kubectl, nginx, GIF…"
+            placeholder="type a word, or how it sounds — nginx, engine x…"
           />
           <span className="esc">ESC</span>
         </div>
@@ -60,6 +88,11 @@ function CommandPalette({ open, onClose, registerEgg }) {
           {results.length === 0 && (
             <div style={{ padding: '36px 22px', textAlign: 'center', color: 'var(--ink-3)', fontFamily: 'var(--mono)', fontSize: 12 }}>
               No match. Submit a PR — every star helps.
+            </div>
+          )}
+          {phonetic && (
+            <div style={{ padding: '10px 22px', color: 'var(--ink-3)', fontFamily: 'var(--mono)', fontSize: 11 }}>
+              no spelling match — these sound like it
             </div>
           )}
           {results.map((r, i) => (
