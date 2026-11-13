@@ -8,7 +8,6 @@ REPO = Path(__file__).resolve().parent.parent
 TSV = REPO / "data" / "pronunciations.tsv"
 CHROME_DICTIONARY = REPO / "integrations" / "chrome" / "src" / "dictionary.json"
 CI_WORKFLOW = REPO / ".github" / "workflows" / "ci.yml"
-EXPECTED_ENTRY_COUNT = 1972
 
 TSV_COLUMNS = (
     "word",
@@ -62,13 +61,16 @@ class ChromeDictionaryParityTests(unittest.TestCase):
         cls.actual = json.loads(CHROME_DICTIONARY.read_text(encoding="utf-8"))
 
     def test_chrome_dictionary_matches_all_tsv_fields(self):
-        self.assertEqual(len(self.rows), EXPECTED_ENTRY_COUNT)
+        # No literal entry count: the dictionary grows every release, and a pin
+        # here only ever went red for adding a word. What matters is that the
+        # shipped file and the TSV are the same set, key-for-key.
+        self.assertGreaterEqual(len(self.rows), 1900, "dictionary shrank unexpectedly")
         self.assertEqual(
             len(self.expected),
-            EXPECTED_ENTRY_COUNT,
+            len(self.rows),
             "lowercased Chrome dictionary keys must stay collision-free",
         )
-        self.assertEqual(len(self.actual), EXPECTED_ENTRY_COUNT)
+        self.assertEqual(len(self.actual), len(self.rows))
         self.assertEqual(self.actual, self.expected)
 
     def test_gif_alternate_and_notes_match_tsv(self):

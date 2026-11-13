@@ -278,7 +278,7 @@ class RepositoryProductFactTests(unittest.TestCase):
                 self.assertIn(cli["source_url"], demo)
                 self.assertIn(cli["confidence"], demo)
 
-    def test_dictionary_has_exact_total_and_sourced_counts(self):
+    def dictionary_counts(self):
         rows = []
         for line in self.source("data/pronunciations.tsv").splitlines():
             if not line or line.startswith("#") or line.startswith("word\t"):
@@ -286,9 +286,19 @@ class RepositoryProductFactTests(unittest.TestCase):
             cells = line.split("\t")
             if len(cells) >= 10 and cells[0] and cells[2]:
                 rows.append(cells)
+        return len(rows), sum(bool(cells[5].strip()) for cells in rows)
 
-        self.assertEqual(len(rows), 1_972)
-        self.assertEqual(sum(bool(cells[5].strip()) for cells in rows), 1_315)
+    def test_dictionary_counts_match_what_the_readme_advertises(self):
+        # These were two literals, so every release that added an entry turned
+        # CI red until someone edited the test — the same trap the changelog
+        # heading had. The invariant worth testing is that the numbers the
+        # README tells users are the numbers actually in the dictionary.
+        total, sourced = self.dictionary_counts()
+        self.assertGreaterEqual(total, 1900, "dictionary shrank unexpectedly")
+        self.assertIn(
+            f"{total:,} entries — {sourced:,} carry a citable source",
+            self.source("README.md"),
+        )
 
     def test_v224_ai_company_rows(self):
         expected = {
@@ -529,7 +539,10 @@ class RepositoryProductFactTests(unittest.TestCase):
 
     def test_readme_reports_source_coverage_without_universal_source_claims(self):
         readme = self.source("README.md")
-        self.assertIn("1,972 entries — 1,315 carry a citable source", readme)
+        total, sourced = self.dictionary_counts()
+        self.assertIn(
+            f"{total:,} entries — {sourced:,} carry a citable source", readme
+        )
         self.assertNotIn("Shipped since this list was written", readme)
         self.assertNotRegex(
             readme,
