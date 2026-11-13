@@ -1970,5 +1970,6 @@
   {"word": "Delphi", "slug": "delphi", "category": "product", "confidence": "community-consensus"},
   {"word": "Cordova", "slug": "cordova", "category": "project", "confidence": "community-consensus"},
   {"word": "Hibernate", "slug": "hibernate", "category": "project", "confidence": "community-consensus"},
-  {"word": ".htaccess", "slug": ".htaccess", "category": "cs-term", "confidence": "community-consensus"}
+  {"word": ".htaccess", "slug": ".htaccess", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "Unix", "slug": "unix", "category": "product", "confidence": "community-consensus"}
 ]

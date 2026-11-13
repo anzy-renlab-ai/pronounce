@@ -1972,6 +1972,7 @@ const ENTRIES = [
   { w: "Cordova", ipa: "/kɔːrˈdoʊvə/", r: "cor DOH vuh", aIpa: "", aR: "", url: "", srcLabel: "", cat: "project", conf: "community-consensus", notes: "Stress on the middle syllable: kor-DOH-vuh /kɔːrˈdoʊvə/, named after the Spanish city." },
   { w: "Hibernate", ipa: "/ˈhaɪbərneɪt/", r: "HIGH ber nate", aIpa: "", aR: "", url: "", srcLabel: "", cat: "project", conf: "community-consensus", notes: "The English verb, first-syllable stress: HIGH-ber-nate /ˈhaɪbərneɪt/. Not 'hih-BER-nut'." },
   { w: ".htaccess", ipa: "/ˌeɪtʃ tiː ˈæksɛs/", r: "aitch tee access", aIpa: "", aR: "", url: "", srcLabel: "", cat: "cs-term", conf: "community-consensus", notes: "Read as the hidden filename it is: 'H-T-access' /eɪtʃ tiː æksɛs/. The leading dot is never spoken, and the T is always there — 'aitch-access' drops a letter." },
+  { w: "Unix", ipa: "/ˈjuːnɪks/", r: "YOO niks", aIpa: "", aR: "", url: "https://en.wikipedia.org/wiki/Unix", srcLabel: "Wikipedia lead (IPAc-en + Respelled)", cat: "product", conf: "community-consensus", notes: "YOO-niks — first-syllable stress, from the Wikipedia lead's /ˈjuːnɪks/ and respelling 'YOO-niks'; the trademark form is UNIX. Not 'you-NIX'. Originally UNICS, a pun on MULTICS. A ~47k-question Stack Overflow tag the dictionary could not answer." },
 ];
 const BY_WORD = Object.fromEntries(ENTRIES.map(e => [e.w.toLowerCase(), e]));
 

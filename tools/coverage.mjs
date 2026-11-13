@@ -24,7 +24,7 @@ const TERMS = join(REPO_ROOT, "data", "top-dev-terms.tsv");
 
 // Ratchet floor for in-scope coverage, as a percentage of data/top-dev-terms.tsv.
 // Raise it when entries land; lowering it needs a reason in the commit message.
-export const IN_SCOPE_FLOOR = 67.0;
+export const IN_SCOPE_FLOOR = 69.0;
 
 /** Skip `#` comment lines and the header row. */
 function rows(text) {

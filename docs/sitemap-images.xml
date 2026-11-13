@@ -7888,4 +7888,8 @@
     <image:image><image:loc>https://pronounce.renlab.ai/og/.htaccess.png</image:loc><image:caption>How to pronounce .htaccess — OG card</image:caption></image:image>
     <image:image><image:loc>https://pronounce.renlab.ai/badge/.htaccess.svg</image:loc><image:caption>Pronunciation badge for .htaccess</image:caption></image:image>
   </url>
+  <url><loc>https://pronounce.renlab.ai/word/unix</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/unix.png</image:loc><image:caption>How to pronounce Unix — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/unix.svg</image:loc><image:caption>Pronunciation badge for Unix</image:caption></image:image>
+  </url>
 </urlset>

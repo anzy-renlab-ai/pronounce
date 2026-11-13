@@ -1974,3 +1974,4 @@ Delphi | /ˈdɛlfaɪ/ | DEL fy | product | community-consensus | (no source)
 Cordova | /kɔːrˈdoʊvə/ | cor DOH vuh | project | community-consensus | (no source)
 Hibernate | /ˈhaɪbərneɪt/ | HIGH ber nate | project | community-consensus | (no source)
 .htaccess | /ˌeɪtʃ tiː ˈæksɛs/ | aitch tee access | cs-term | community-consensus | (no source)
+Unix | /ˈjuːnɪks/ | YOO niks | product | community-consensus | https://en.wikipedia.org/wiki/Unix

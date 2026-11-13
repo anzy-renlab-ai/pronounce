@@ -1,0 +1,15 @@
+{
+  "word": "Unix",
+  "ipa": "/ˈjuːnɪks/",
+  "respelling_us": "YOO niks",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://en.wikipedia.org/wiki/Unix",
+  "source_label": "Wikipedia lead (IPAc-en + Respelled)",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "YOO-niks — first-syllable stress, from the Wikipedia lead's /ˈjuːnɪks/ and respelling 'YOO-niks'; the trademark form is UNIX. Not 'you-NIX'. Originally UNICS, a pun on MULTICS. A ~47k-question Stack Overflow tag the dictionary could not answer.",
+  "audio_url": "https://pronounce.renlab.ai/audio/unix.mp3",
+  "url": "https://pronounce.renlab.ai/word/unix",
+  "date_modified": "2026-11-13"
+}

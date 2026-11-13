@@ -1,5 +1,13 @@
 # Changelog
 
+## v2.38.0 — 2026-11-13
+
+**The dictionary could not answer `unix`.** One entry added (1,973 total): `/ˈjuːnɪks/`, "YOO-niks" — first-syllable stress, never "you-NIX"; originally UNICS, a pun on MULTICS. Cited to the Wikipedia lead, which is the rare source that states both an IPA and a respelling.
+
+`unix` was the highest-demand hole that could be answered honestly. Four other gaps examined today were rejected: `tkinter` (the community splits between "T-K-inter" and "tink-ter", and neither the Python docs nor the Tk manuals state a reading, so there is nothing to cite), and `iphone` / `wordpress` / `codeigniter`, whose readings fall out of their English parts with no citable statement behind them. The 24 remaining in-scope holes are now almost all of that kind — a tag name that a speaker already knows how to say.
+
+Demand coverage 59.0% → 59.5% of the top 200 Stack Overflow tags; in-scope 68.4% → 69.6%, and the ratchet floor in `tools/coverage.mjs` moves 67 → 69.
+
 ## v2.37.4 — 2026-11-12
 
 **CI had been red on every commit, for three reasons that had nothing to do with the code.**
