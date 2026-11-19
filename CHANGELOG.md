@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.39.0 — 2026-11-19
+
+**Your score deserved better than a text grid.** Dev Jargon 5's result card now renders a 1200×630 PNG score card — a big grade letter (S/A/B/C), Wordle-style mark squares in the site palette, today's five with their respellings, the streak, and both links — and one tap saves it (Web Share sheet on touch devices, plain download on desktop). The clipboard text is unchanged byte-for-byte; it just moved into `buildShareText` in `game.js`, where the daily tests pin it.
+
+Two bugs the headless-Chromium playthrough caught before shipping: `navigator.share` throws *synchronously* (not a rejected promise) when user activation lapses across the async `toBlob`, which silently killed the download fallback — now wrapped; and desktop Chrome exposes `canShare` too, so the naive branch would open a pointless share sheet where people expect a file — sharing is now gated on `maxTouchPoints > 0`. Shipped because the ledger's rule fired: two weeks under the 10★/week target means the next experiment class (shareable score card) goes out before any new awesome-list submission.
+
 ## v2.38.0 — 2026-11-13
 
 **The dictionary could not answer `unix`.** One entry added (1,973 total): `/ˈjuːnɪks/`, "YOO-niks" — first-syllable stress, never "you-NIX"; originally UNICS, a pun on MULTICS. Cited to the Wikipedia lead, which is the rare source that states both an IPA and a respelling.
