@@ -108,9 +108,34 @@
     return { last: today, n: 1 };
   }
 
+  // Grade letter for a finished run — the score card's hero. 5=S 4=A 3=B
+  // else C. Pinned by tests.
+  function gradeOf(score) {
+    return score >= 5 ? "S" : score === 4 ? "A" : score === 3 ? "B" : "C";
+  }
+
+  // The clipboard share block, assembled here so tests pin the exact bytes
+  // the page ships. streak is a nextStreak() result or null.
+  function buildShareText(o) {
+    var score = 0, marks = "";
+    for (var i = 0; i < o.marks.length; i++) {
+      if (o.marks[i]) score++;
+      marks += o.marks[i] ? "🟩" : "⬛";
+    }
+    var lines = [
+      "Dev Jargon 5 · " + o.date,
+      "🔊" + marks + " " + score + "/" + o.marks.length
+    ];
+    if (o.streak && o.streak.n >= 2) lines.push("🔥 " + o.streak.n + "-day streak");
+    lines.push("how many dev words can you say?");
+    lines.push("https://pronounce.renlab.ai/daily");
+    return lines.join("\n");
+  }
+
   var api = {
     fnv1a: fnv1a, pickFive: pickFive, buildQuestions: buildQuestions,
     todayISO: todayISO, prevDayISO: prevDayISO, nextStreak: nextStreak,
+    gradeOf: gradeOf, buildShareText: buildShareText,
   };
   if (typeof module !== "undefined" && module.exports) module.exports = api;
   else global.DailyGame = api;

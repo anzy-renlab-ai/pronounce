@@ -4,7 +4,7 @@ import assert from "node:assert/strict";
 import { createRequire } from "node:module";
 import { readFileSync } from "node:fs";
 const require = createRequire(import.meta.url);
-const { pickFive, buildQuestions, fnv1a } = require("../docs/daily/game.js");
+const { pickFive, buildQuestions, fnv1a, gradeOf, buildShareText } = require("../docs/daily/game.js");
 
 // Load the real ENTRIES array from docs/script.js WITHOUT evaluating it: the
 // file touches `document` at the bottom, and evaluating generated source is
@@ -170,4 +170,59 @@ test("index.html wires streak storage, start badge, and share line", () => {
   assert.ok(html.includes('STREAK_KEY = "j5-streak"'), "streak storage key missing");
   assert.ok(html.includes("DailyGame.nextStreak(readStreak(), date)"), "result-card streak advance missing");
   assert.ok(html.includes("-day streak"), "share streak line missing");
+});
+
+test("gradeOf: 5→S, 4→A, 3→B, else C", () => {
+  assert.equal(gradeOf(5), "S");
+  assert.equal(gradeOf(4), "A");
+  assert.equal(gradeOf(3), "B");
+  assert.equal(gradeOf(2), "C");
+  assert.equal(gradeOf(0), "C");
+});
+
+test("buildShareText: byte-pins the clipboard block, with and without streak", () => {
+  const marks = [true, false, true, true, true];
+  assert.equal(
+    buildShareText({ date: "2026-11-19", marks, streak: null }),
+    "Dev Jargon 5 · 2026-11-19\n🔊🟩⬛🟩🟩🟩 4/5\nhow many dev words can you say?\nhttps://pronounce.renlab.ai/daily"
+  );
+  assert.equal(
+    buildShareText({ date: "2026-11-19", marks, streak: { last: "2026-11-19", n: 3 } }),
+    "Dev Jargon 5 · 2026-11-19\n🔊🟩⬛🟩🟩🟩 4/5\n🔥 3-day streak\nhow many dev words can you say?\nhttps://pronounce.renlab.ai/daily"
+  );
+});
+
+test("score card wired: page renders image card and uses the shared share-text builder", () => {
+  const html = readFileSync(new URL("../docs/daily/index.html", import.meta.url), "utf8");
+  assert.ok(html.includes("Save score card"), "save-card button missing");
+  assert.ok(html.includes("DailyGame.buildShareText"), "page still hand-rolls share text");
+  assert.ok(html.includes("drawCard"), "canvas card renderer missing");
+  assert.ok(html.includes("navigator.canShare"), "Web Share file branch missing");
+});
+
+// Two shipped card bugs, both reproduced in real Chrome by the adversarial
+// review: (1) the word was measured under the 19px respelling font while
+// drawn at 26px, so long words let the respelling overprint them
+// ("continual-learning" et al. on hash-deterministic dates); (2) on a 5/5
+// card the footer divider inherited the grade ring's 6px orange stroke.
+// Both are ordering/state pins on the drawCard source — Node has no canvas,
+// so the guard is structural.
+test("drawCard geometry: word measured under its own font; divider sets its own stroke", () => {
+  const html = readFileSync(new URL("../docs/daily/index.html", import.meta.url), "utf8");
+  const start = html.indexOf("function drawCard");
+  const end = html.indexOf("function saveCard");
+  assert.ok(start !== -1 && end !== -1, "drawCard/saveCard not found");
+  const seg = html.slice(start, end);
+  const wordDraw = seg.indexOf("x.fillText(qs[j].w, 654, ry)");
+  const wordMeasure = seg.indexOf("wordW = x.measureText(qs[j].w).width");
+  const respFont = seg.indexOf('"500 19px "');
+  assert.ok(wordDraw !== -1 && wordMeasure !== -1 && respFont !== -1, "row-draw block reshaped");
+  assert.ok(wordDraw < wordMeasure && wordMeasure < respFont,
+    "word width must be captured while the 26px font is active, before switching to the 19px respelling font");
+  const divider = seg.indexOf("x.moveTo(72, 560)");
+  const dividerStroke = seg.lastIndexOf("x.strokeStyle =", divider);
+  const ringStroke = seg.indexOf('x.strokeStyle = "#ff6a3d"');
+  assert.ok(divider !== -1 && dividerStroke !== -1,
+    "footer divider must set strokeStyle/lineWidth itself, not inherit the grade ring's");
+  assert.ok(ringStroke === -1 || dividerStroke > ringStroke);
 });

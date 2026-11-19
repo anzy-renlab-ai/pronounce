@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dev Jargon 5 — daily developer pronunciation challenge</title>
-  <meta name="description" content="Five developer words a day, same for everyone. Listen, pick the right respelling, share your emoji grid. kubectl, nginx, GIF — can you say them?">
+  <meta name="description" content="Five developer words a day, same for everyone. Listen, pick the right respelling, save your score card. kubectl, nginx, GIF — can you say them?">
   <link rel="canonical" href="https://pronounce.renlab.ai/daily">
   <meta property="og:title" content="Dev Jargon 5 — how many dev words can you actually say?">
   <meta property="og:description" content="Five words a day. Same five for everyone. Listen and pick the right respelling.">
@@ -150,14 +150,7 @@
       var grid = "🔊" + marks.map(function (m) { return m ? "🟩" : "⬛"; }).join("");
       var streak = DailyGame.nextStreak(readStreak(), date);
       try { localStorage.setItem(STREAK_KEY, JSON.stringify(streak)); } catch (e) {}
-      var lines = [
-        "Dev Jargon 5 · " + date,
-        grid + " " + score + "/5"
-      ];
-      if (streak.n >= 2) lines.push("🔥 " + streak.n + "-day streak");
-      lines.push("how many dev words can you say?");
-      lines.push("https://pronounce.renlab.ai/daily");
-      var share = lines.join("\n");
+      var share = DailyGame.buildShareText({ date: date, marks: marks, streak: streak });
       var review = qs.map(function (q, i) {
         return '<div class="row">' + (marks[i] ? "🟩" : "⬛") + ' <a href="/word/' + encodeURIComponent(q.slug) + '">' + esc(q.w) + "</a> — <span class=\"r\">" + esc(q.options[q.answer]) + "</span></div>";
       }).join("");
@@ -165,10 +158,11 @@
         '<div class="j5-card" style="text-align: center;">' +
         '<div class="j5-date">' + date + "</div>" +
         '<div class="j5-grid">' + grid + "</div>" +
-        '<div class="j5-score">' + score + " / 5</div>" +
+        '<div class="j5-score">' + score + " / 5 · " + DailyGame.gradeOf(score) + "</div>" +
         (streak.n >= 2 ? '<div style="margin-top: 6px; font-weight: 700; color: var(--accent);">🔥 ' + streak.n + "-day streak</div>" : "") +
         '<div class="j5-share">' +
         '<button class="btn" id="j5-copy">📋 Copy score</button>' +
+        '<button class="btn" id="j5-img">🖼 Save score card</button>' +
         '<a class="j5-star" href="https://github.com/anzy-renlab-ai/pronounce">⭐ Star the dictionary</a>' +
         "</div>" +
         '<div class="j5-review">' + review + "</div>" +
@@ -176,6 +170,101 @@
       document.getElementById("j5-copy").addEventListener("click", function () {
         copyToClipboard(share, "Score copied — paste it anywhere");
       });
+      document.getElementById("j5-img").addEventListener("click", function () {
+        saveCard(this);
+      });
+    }
+
+    // 1200×630 PNG score card in the site palette — squares instead of emoji
+    // (crisper in canvas), today's five with their respellings, CTA + repo in
+    // the footer. The image is what travels on social; the words' answers are
+    // on it, but the day's five are public the moment anyone shares text.
+    function drawCard(score, streak) {
+      var c = document.createElement("canvas");
+      c.width = 1200; c.height = 630;
+      var x = c.getContext("2d");
+      var MONO = "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace";
+      x.fillStyle = "#0e0e10"; x.fillRect(0, 0, 1200, 630);
+      x.strokeStyle = "#2a2a30"; x.lineWidth = 3; x.strokeRect(1.5, 1.5, 1197, 627);
+      x.textBaseline = "alphabetic";
+      x.fillStyle = "#f6f6f7"; x.font = "800 34px " + MONO;
+      x.fillText("DEV JARGON 5", 72, 88);
+      x.fillStyle = "#8b8b94"; x.font = "600 26px " + MONO; x.textAlign = "right";
+      x.fillText(date, 1128, 88);
+      x.textAlign = "left";
+      x.strokeStyle = "#26262c"; x.lineWidth = 2;
+      x.beginPath(); x.moveTo(72, 120); x.lineTo(1128, 120); x.stroke();
+      x.fillStyle = "#f6f6f7"; x.font = "800 168px " + MONO;
+      x.fillText(String(score), 72, 300);
+      var scoreW = x.measureText(String(score)).width;
+      x.fillStyle = "#8b8b94"; x.font = "700 64px " + MONO;
+      x.fillText("/ 5", 72 + scoreW + 12, 300);
+      x.strokeStyle = "#ff6a3d"; x.lineWidth = 6;
+      x.beginPath(); x.arc(452, 240, 52, 0, 2 * Math.PI); x.stroke();
+      x.fillStyle = "#ff6a3d"; x.font = "800 56px " + MONO; x.textAlign = "center";
+      x.fillText(DailyGame.gradeOf(score), 452, 260);
+      x.textAlign = "left";
+      for (var i = 0; i < 5; i++) {
+        var sx = 72 + i * 64, sy = 352, ok = marks[i];
+        x.beginPath();
+        if (x.roundRect) x.roundRect(sx, sy, 52, 52, 12); else x.rect(sx, sy, 52, 52);
+        if (ok) { x.fillStyle = "#7adfbb"; x.fill(); }
+        else { x.fillStyle = "#26262c"; x.fill(); x.strokeStyle = "#3a3a42"; x.lineWidth = 2; x.stroke(); }
+      }
+      x.font = "700 30px " + MONO;
+      if (streak.n >= 2) { x.fillStyle = "#7adfbb"; x.fillText("🔥 " + streak.n + "-day streak", 72, 476); }
+      else { x.fillStyle = "#8b8b94"; x.fillText("back tomorrow for a new five", 72, 476); }
+      x.fillStyle = "#8b8b94"; x.font = "italic 500 24px Georgia, serif";
+      x.fillText("how many dev words can you say?", 72, 524);
+      x.fillStyle = "#8b8b94"; x.font = "600 22px " + MONO;
+      x.fillText("TODAY'S FIVE", 620, 196);
+      for (var j = 0; j < qs.length; j++) {
+        var ry = 248 + j * 62;
+        x.beginPath(); x.arc(630, ry - 9, 9, 0, 2 * Math.PI);
+        x.fillStyle = marks[j] ? "#7adfbb" : "#5a5a64"; x.fill();
+        x.fillStyle = "#f6f6f7"; x.font = "700 26px " + MONO;
+        x.fillText(qs[j].w, 654, ry);
+        var wordW = x.measureText(qs[j].w).width;
+        x.fillStyle = "#8b8b94"; x.font = "500 19px " + MONO;
+        var resp = qs[j].options[qs[j].answer];
+        var maxW = 1128 - (654 + wordW) - 48;
+        while (resp.length > 1 && x.measureText(resp).width > maxW) resp = resp.slice(0, -2) + "…";
+        x.textAlign = "right"; x.fillText(resp, 1128, ry); x.textAlign = "left";
+      }
+      x.strokeStyle = "#26262c"; x.lineWidth = 2;
+      x.beginPath(); x.moveTo(72, 560); x.lineTo(1128, 560); x.stroke();
+      x.fillStyle = "#8b8b94"; x.font = "600 24px " + MONO;
+      x.fillText("pronounce.renlab.ai/daily", 72, 600);
+      x.textAlign = "right"; x.fillText("⭐ github.com/anzy-renlab-ai/pronounce", 1128, 600);
+      return c;
+    }
+
+    function saveCard(btn) {
+      var streak = readStreak() || { n: 1, last: date };
+      var score = marks.filter(Boolean).length;
+      var name = "dev-jargon-5-" + date + ".png";
+      drawCard(score, streak).toBlob(function (blob) {
+        if (!blob) { btn.textContent = "⚠ Could not render"; return; }
+        var file = new File([blob], name, { type: "image/png" });
+        var download = function () {
+          var a = document.createElement("a");
+          a.href = URL.createObjectURL(blob); a.download = name; a.click();
+          setTimeout(function () { URL.revokeObjectURL(a.href); }, 4000);
+        };
+        // Share sheet only where it's the native gesture (touch); on desktop
+        // the file is what people want. share() also throws synchronously
+        // when activation lapsed after the async toBlob, so guard with try.
+        var shared = false;
+        if (navigator.canShare && navigator.maxTouchPoints > 0 &&
+            navigator.canShare({ files: [file] })) {
+          try {
+            navigator.share({ files: [file], title: "Dev Jargon 5" }).catch(download);
+            shared = true;
+          } catch (e) { shared = false; }
+        }
+        if (!shared) download();
+        btn.textContent = "✅ Saved — share it";
+      }, "image/png");
     }
   })();
   </script>
