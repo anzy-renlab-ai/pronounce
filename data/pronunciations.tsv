@@ -96,6 +96,7 @@ pandas	/ˈpændəz/	pandas			https://pandas.pydata.org/	pandas docs	product	comm
 PyTorch	/ˈpaɪtɔːrtʃ/	pie torch			https://pytorch.org/	PyTorch	product	community-consensus	"PIE-torch".
 NaN	/næn/	nan	/ˌɛn eɪ ˈɛn/	N A N	https://en.wikipedia.org/wiki/NaN	Wikipedia	cs-term	contested	"nan" (rhymes with "can") or "N-A-N".
 enum	/ˈiːnəm/	ee num				dev community	cs-term	community-consensus	"EE-num".
+word	ipa	respelling_us	alt_ipa	alt_respelling_us	source_url	source_label	category	confidence	notes
 # --- AI / ML platforms and tools ---
 Anthropic	/ænˈθrɑpɪk/	an THROP ik			https://dictionary.cambridge.org/pronunciation/english/anthropic	Cambridge Dictionary	product	community-consensus	Standard/now-famous reading is "an-THROP-ik" (stress on second syllable THROP), identical to the adjective "anthropic"; matches the company's own usage. The "an-THROW-pick" reading is a common mistake.
 OpenAI	/ˈoʊpən eɪ aɪ/	open A I			https://openai.com/	OpenAI	product	community-consensus	"OH-pen A-I" letter-by-letter.
