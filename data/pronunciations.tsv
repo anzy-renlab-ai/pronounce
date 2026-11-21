@@ -24,7 +24,6 @@
 #     proves, not what you believe to be true. When in doubt, mark `community-consensus` and let a future PR upgrade
 #     with a real citation.
 #
-word	ipa	respelling_us	alt_ipa	alt_respelling_us	source_url	source_label	category	confidence	notes
 kubectl	/ˈkuːb kənˌtroʊl/	koob control	/ˈkjuːb kʌtəl/|/ˌkjuːb siː tiː ˈɛl/	cube cuddle|kube C T L			cli-tool	contested	K8s community readings vary widely. "koob-control" is heard from Kelsey Hightower and many maintainers; "cube-cuddle" is the running meme; some say it letter-by-letter.
 nginx	/ˈɛn dʒɪnˈɛks/	engine X			https://nginx.org/en/	NGINX official	product	creator-clarified	"engine-x" is the documented reading from the official site.
 GIF	/dʒɪf/	jif	/ɡɪf/	ghif	https://www.nytimes.com/2013/05/22/business/media/creator-of-the-gif-says-its-pronounced-jif.html	Steve Wilhite, NYT (2013)	acronym	creator-clarified	Wilhite (creator): "It's pronounced JIF, not GIF." Community remains split. The alternate uses "ghif" as an explicit hard-G TTS cue.
@@ -2039,3 +2038,6 @@ Cordova	/kɔːrˈdoʊvə/	cor DOH vuh					project	community-consensus	Stress on 
 Hibernate	/ˈhaɪbərneɪt/	HIGH ber nate					project	community-consensus	The English verb, first-syllable stress: HIGH-ber-nate /ˈhaɪbərneɪt/. Not 'hih-BER-nut'.
 .htaccess	/ˌeɪtʃ tiː ˈæksɛs/	aitch tee access					cs-term	community-consensus	Read as the hidden filename it is: 'H-T-access' /eɪtʃ tiː æksɛs/. The leading dot is never spoken, and the T is always there — 'aitch-access' drops a letter.
 Unix	/ˈjuːnɪks/	YOO niks			https://en.wikipedia.org/wiki/Unix	Wikipedia lead (IPAc-en + Respelled)	product	community-consensus	YOO-niks — first-syllable stress, from the Wikipedia lead's /ˈjuːnɪks/ and respelling 'YOO-niks'; the trademark form is UNIX. Not 'you-NIX'. Originally UNICS, a pun on MULTICS. A ~47k-question Stack Overflow tag the dictionary could not answer.
+pdf	/ˌpiː diː ˈɛf/	pee dee EF			https://www.oxfordlearnersdictionaries.com/definition/english/pdf_1	Oxford Learner's Dictionaries (NAmE phonetics)	acronym	community-consensus	Letters read out: P-D-F, final-letter stress; BrE and NAmE identical (Oxford states /ˌpiː diː ˈef/).
+OLED	/ˈoʊˌlɛd/	OH led	/ˌoʊˌɛlˌiːˈdiː/	oh el ee DEE	https://dictionary.cambridge.org/us/dictionary/english/oled	Cambridge Dictionary (US) — both readings stated	acronym	community-consensus	Two live readings: word-read OH-led (Cambridge US primary) and letter-read O-L-E-D; Cambridge US lists both.
+Navier-Stokes	/nævˈjeɪ ˈstoʊks/	nav YAY STOHKS			https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations	Wikipedia lead (IPAc-en template)	cs-term	community-consensus	Navier French-style nav-YAY, Stokes like the physicist; Wikipedia lead template params n-æ-v-ˈ-j-eɪ ˈ-s-t-oʊ-k-s (en-dash title, GenAm oʊ).

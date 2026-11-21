@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.40.0 — 2026-11-21
+
+**Three words a skeptic chain couldn't kill: `pdf`, `OLED`, `Navier–Stokes`** (1,976 total). The daily sweep ran as an adversarial pipeline — three finders (demand holes / HN front page / GitHub's week's new repos) fanned out to 32 per-candidate skeptics, each told to refute by default. 24 died on the evidence bar (alias keys like `vue.js`, root+plain-word compounds like `intellij-idea`, READMEs that state no reading). Of the 5 survivors, the orchestrator's own re-fetch killed 2 more and caught one fabricated citation: the OLED verdict quoted Merriam-Webster and Wiktionary as corroboration — both unreachable from this machine (MW 403, Wiktionary TLS-blocked), so the quote could not have been fetched. Cambridge's US entry independently states both readings (`ˈoʊ.led`, `ˌoʊ.el.iːˈdiː`), so OLED ships on Cambridge instead. `pdf` cites Oxford Learner's NAmE phonetics; `Navier–Stokes` cites the Wikipedia lead's IPAc-en template (params pulled from the page source, not the rendered text).
+
+Also this run: a duplicate header row that had ridden along inside `pronunciations.tsv` since v0.1 (line 27) is gone — invisible to the tooling, but every naive parser saw a phantom `word` entry. Sourced entries 1,316 → 1,319.
+
 ## v2.39.0 — 2026-11-19
 
 **Your score deserved better than a text grid.** Dev Jargon 5's result card now renders a 1200×630 PNG score card — a big grade letter (S/A/B/C), Wordle-style mark squares in the site palette, today's five with their respellings, the streak, and both links — and one tap saves it (Web Share sheet on touch devices, plain download on desktop). The clipboard text is unchanged byte-for-byte; it just moved into `buildShareText` in `game.js`, where the daily tests pin it.

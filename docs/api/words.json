@@ -1971,5 +1971,8 @@
   {"word": "Cordova", "slug": "cordova", "category": "project", "confidence": "community-consensus"},
   {"word": "Hibernate", "slug": "hibernate", "category": "project", "confidence": "community-consensus"},
   {"word": ".htaccess", "slug": ".htaccess", "category": "cs-term", "confidence": "community-consensus"},
-  {"word": "Unix", "slug": "unix", "category": "product", "confidence": "community-consensus"}
+  {"word": "Unix", "slug": "unix", "category": "product", "confidence": "community-consensus"},
+  {"word": "pdf", "slug": "pdf", "category": "acronym", "confidence": "community-consensus"},
+  {"word": "OLED", "slug": "oled", "category": "acronym", "confidence": "community-consensus"},
+  {"word": "Navier-Stokes", "slug": "navier-stokes", "category": "cs-term", "confidence": "community-consensus"}
 ]

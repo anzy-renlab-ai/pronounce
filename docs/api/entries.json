@@ -29593,5 +29593,50 @@
   "audio_url": "https://pronounce.renlab.ai/audio/unix.mp3",
   "url": "https://pronounce.renlab.ai/word/unix",
   "date_modified": "2026-11-13"
+},
+{
+  "word": "pdf",
+  "ipa": "/ˌpiː diː ˈɛf/",
+  "respelling_us": "pee dee EF",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://www.oxfordlearnersdictionaries.com/definition/english/pdf_1",
+  "source_label": "Oxford Learner's Dictionaries (NAmE phonetics)",
+  "category": "acronym",
+  "confidence": "community-consensus",
+  "notes": "Letters read out: P-D-F, final-letter stress; BrE and NAmE identical (Oxford states /ˌpiː diː ˈef/).",
+  "audio_url": "https://pronounce.renlab.ai/audio/pdf.mp3",
+  "url": "https://pronounce.renlab.ai/word/pdf",
+  "date_modified": "2026-11-21"
+},
+{
+  "word": "OLED",
+  "ipa": "/ˈoʊˌlɛd/",
+  "respelling_us": "OH led",
+  "alt_ipa": ["/ˌoʊˌɛlˌiːˈdiː/"],
+  "alt_respelling_us": ["oh el ee DEE"],
+  "source_url": "https://dictionary.cambridge.org/us/dictionary/english/oled",
+  "source_label": "Cambridge Dictionary (US) — both readings stated",
+  "category": "acronym",
+  "confidence": "community-consensus",
+  "notes": "Two live readings: word-read OH-led (Cambridge US primary) and letter-read O-L-E-D; Cambridge US lists both.",
+  "audio_url": "https://pronounce.renlab.ai/audio/oled.mp3",
+  "url": "https://pronounce.renlab.ai/word/oled",
+  "date_modified": "2026-11-21"
+},
+{
+  "word": "Navier-Stokes",
+  "ipa": "/nævˈjeɪ ˈstoʊks/",
+  "respelling_us": "nav YAY STOHKS",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations",
+  "source_label": "Wikipedia lead (IPAc-en template)",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "Navier French-style nav-YAY, Stokes like the physicist; Wikipedia lead template params n-æ-v-ˈ-j-eɪ ˈ-s-t-oʊ-k-s (en-dash title, GenAm oʊ).",
+  "audio_url": "https://pronounce.renlab.ai/audio/navier-stokes.mp3",
+  "url": "https://pronounce.renlab.ai/word/navier-stokes",
+  "date_modified": "2026-11-21"
 }
 ]

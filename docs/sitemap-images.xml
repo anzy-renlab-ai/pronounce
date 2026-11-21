@@ -7892,4 +7892,16 @@
     <image:image><image:loc>https://pronounce.renlab.ai/og/unix.png</image:loc><image:caption>How to pronounce Unix — OG card</image:caption></image:image>
     <image:image><image:loc>https://pronounce.renlab.ai/badge/unix.svg</image:loc><image:caption>Pronunciation badge for Unix</image:caption></image:image>
   </url>
+  <url><loc>https://pronounce.renlab.ai/word/pdf</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/pdf.png</image:loc><image:caption>How to pronounce pdf — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/pdf.svg</image:loc><image:caption>Pronunciation badge for pdf</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/oled</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/oled.png</image:loc><image:caption>How to pronounce OLED — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/oled.svg</image:loc><image:caption>Pronunciation badge for OLED</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/navier-stokes</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/navier-stokes.png</image:loc><image:caption>How to pronounce Navier-Stokes — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/navier-stokes.svg</image:loc><image:caption>Pronunciation badge for Navier-Stokes</image:caption></image:image>
+  </url>
 </urlset>

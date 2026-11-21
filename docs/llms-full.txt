@@ -1975,3 +1975,6 @@ Cordova | /kɔːrˈdoʊvə/ | cor DOH vuh | project | community-consensus | (no 
 Hibernate | /ˈhaɪbərneɪt/ | HIGH ber nate | project | community-consensus | (no source)
 .htaccess | /ˌeɪtʃ tiː ˈæksɛs/ | aitch tee access | cs-term | community-consensus | (no source)
 Unix | /ˈjuːnɪks/ | YOO niks | product | community-consensus | https://en.wikipedia.org/wiki/Unix
+pdf | /ˌpiː diː ˈɛf/ | pee dee EF | acronym | community-consensus | https://www.oxfordlearnersdictionaries.com/definition/english/pdf_1
+OLED | /ˈoʊˌlɛd/ | OH led | acronym | community-consensus | https://dictionary.cambridge.org/us/dictionary/english/oled
+Navier-Stokes | /nævˈjeɪ ˈstoʊks/ | nav YAY STOHKS | cs-term | community-consensus | https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations
