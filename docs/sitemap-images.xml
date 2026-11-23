@@ -7904,4 +7904,16 @@
     <image:image><image:loc>https://pronounce.renlab.ai/og/navier-stokes.png</image:loc><image:caption>How to pronounce Navier-Stokes — OG card</image:caption></image:image>
     <image:image><image:loc>https://pronounce.renlab.ai/badge/navier-stokes.svg</image:loc><image:caption>Pronunciation badge for Navier-Stokes</image:caption></image:image>
   </url>
+  <url><loc>https://pronounce.renlab.ai/word/excel</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/excel.png</image:loc><image:caption>How to pronounce excel — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/excel.svg</image:loc><image:caption>Pronunciation badge for excel</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/ajax</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/ajax.png</image:loc><image:caption>How to pronounce ajax — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/ajax.svg</image:loc><image:caption>Pronunciation badge for ajax</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/asynchronous</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/asynchronous.png</image:loc><image:caption>How to pronounce asynchronous — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/asynchronous.svg</image:loc><image:caption>Pronunciation badge for asynchronous</image:caption></image:image>
+  </url>
 </urlset>

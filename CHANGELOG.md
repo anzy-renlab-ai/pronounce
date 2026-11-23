@@ -1,5 +1,11 @@
 # Changelog
 
+## v2.41.0 — 2026-11-23
+
+**Three words nobody could believe were missing: `excel`, `ajax`, `asynchronous`** (1,979 total) — a 1,976-entry dev dictionary that could answer `Navier–Stokes` but drew a blank on the spreadsheet everyone opens daily, the technique every web dev has said since 2005, and the adjective in every API doc. `excel` /ɪkˈsɛl/ cites Cambridge US, which lists the software trademark under the headword (word-read ik-SELL, not EX-cell); `ajax` /ˈeɪdʒæks/ cites the Wikipedia lead's IPAc-en; `asynchronous` /eɪˈsɪŋkrənəs/ cites Cambridge US — stress on the second syllable, and its short form `async` has had an entry all along. All three citations re-fetched by the orchestrator before shipping; the verifiers' quotes are inputs, not evidence.
+
+The sweep's 4th initial survivor, `Nyx`, was rejected on adjudication: its citation was the Wikipedia article for the Greek goddess, while the product's own site states no reading — an inference chain, not a stated reading (the sshell precedent). 8 more candidates died at the evidence bar (0rwx, Muru, GPGME, Spelunkr, Klauria, Leonida, agy, PentAGI — all fetched live, none states a pronunciation).
+
 ## v2.40.0 — 2026-11-21
 
 **Three words a skeptic chain couldn't kill: `pdf`, `OLED`, `Navier–Stokes`** (1,976 total). The daily sweep ran as an adversarial pipeline — three finders (demand holes / HN front page / GitHub's week's new repos) fanned out to 32 per-candidate skeptics, each told to refute by default. 24 died on the evidence bar (alias keys like `vue.js`, root+plain-word compounds like `intellij-idea`, READMEs that state no reading). Of the 5 survivors, the orchestrator's own re-fetch killed 2 more and caught one fabricated citation: the OLED verdict quoted Merriam-Webster and Wiktionary as corroboration — both unreachable from this machine (MW 403, Wiktionary TLS-blocked), so the quote could not have been fetched. Cambridge's US entry independently states both readings (`ˈoʊ.led`, `ˌoʊ.el.iːˈdiː`), so OLED ships on Cambridge instead. `pdf` cites Oxford Learner's NAmE phonetics; `Navier–Stokes` cites the Wikipedia lead's IPAc-en template (params pulled from the page source, not the rendered text).

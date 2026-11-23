@@ -1978,3 +1978,6 @@ Unix | /ˈjuːnɪks/ | YOO niks | product | community-consensus | https://en.wik
 pdf | /ˌpiː diː ˈɛf/ | pee dee EF | acronym | community-consensus | https://www.oxfordlearnersdictionaries.com/definition/english/pdf_1
 OLED | /ˈoʊˌlɛd/ | OH led | acronym | community-consensus | https://dictionary.cambridge.org/us/dictionary/english/oled
 Navier-Stokes | /nævˈjeɪ ˈstoʊks/ | nav YAY STOHKS | cs-term | community-consensus | https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations
+excel | /ɪkˈsɛl/ | ik SELL | product | community-consensus | https://dictionary.cambridge.org/us/dictionary/english/excel
+ajax | /ˈeɪdʒæks/ | AY jaks | acronym | community-consensus | https://en.wikipedia.org/wiki/Ajax_(programming)
+asynchronous | /eɪˈsɪŋkrənəs/ | ay SING kruh nuhs | cs-term | community-consensus | https://dictionary.cambridge.org/us/dictionary/english/asynchronous

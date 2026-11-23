@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://pronounce.renlab.ai/zh/word</loc><lastmod>2026-11-21</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://pronounce.renlab.ai/zh/word</loc><lastmod>2026-11-23</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
   <url><loc>https://pronounce.renlab.ai/zh/word/kubectl</loc><lastmod>2026-05-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pronounce.renlab.ai/zh/word/nginx</loc><lastmod>2026-05-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pronounce.renlab.ai/zh/word/gif</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -1977,4 +1977,7 @@
   <url><loc>https://pronounce.renlab.ai/zh/word/pdf</loc><lastmod>2026-11-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pronounce.renlab.ai/zh/word/oled</loc><lastmod>2026-11-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pronounce.renlab.ai/zh/word/navier-stokes</loc><lastmod>2026-11-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pronounce.renlab.ai/zh/word/excel</loc><lastmod>2026-11-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pronounce.renlab.ai/zh/word/ajax</loc><lastmod>2026-11-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pronounce.renlab.ai/zh/word/asynchronous</loc><lastmod>2026-11-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

@@ -29638,5 +29638,50 @@
   "audio_url": "https://pronounce.renlab.ai/audio/navier-stokes.mp3",
   "url": "https://pronounce.renlab.ai/word/navier-stokes",
   "date_modified": "2026-11-21"
+},
+{
+  "word": "excel",
+  "ipa": "/ɪkˈsɛl/",
+  "respelling_us": "ik SELL",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://dictionary.cambridge.org/us/dictionary/english/excel",
+  "source_label": "Cambridge Dictionary (US) — headword + Excel IT-trademark noun",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Word-read ik-SELL, not EX-cell; Cambridge lists the software trademark under this headword, US /ɪkˈsel/.",
+  "audio_url": "https://pronounce.renlab.ai/audio/excel.mp3",
+  "url": "https://pronounce.renlab.ai/word/excel",
+  "date_modified": "2026-11-23"
+},
+{
+  "word": "ajax",
+  "ipa": "/ˈeɪdʒæks/",
+  "respelling_us": "AY jaks",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://en.wikipedia.org/wiki/Ajax_(programming)",
+  "source_label": "Wikipedia lead (IPAc-en)",
+  "category": "acronym",
+  "confidence": "community-consensus",
+  "notes": "Word-read AY-jaks per the Wikipedia lead; coined 2005 for Asynchronous JavaScript and XML — the all-caps AJAX is the acronym, said as a word.",
+  "audio_url": "https://pronounce.renlab.ai/audio/ajax.mp3",
+  "url": "https://pronounce.renlab.ai/word/ajax",
+  "date_modified": "2026-11-23"
+},
+{
+  "word": "asynchronous",
+  "ipa": "/eɪˈsɪŋkrənəs/",
+  "respelling_us": "ay SING kruh nuhs",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://dictionary.cambridge.org/us/dictionary/english/asynchronous",
+  "source_label": "Cambridge Dictionary (US)",
+  "category": "cs-term",
+  "confidence": "community-consensus",
+  "notes": "Stress on the second syllable: ay-SING-kruh-nuhs; the short form async already has its own entry.",
+  "audio_url": "https://pronounce.renlab.ai/audio/asynchronous.mp3",
+  "url": "https://pronounce.renlab.ai/word/asynchronous",
+  "date_modified": "2026-11-23"
 }
 ]

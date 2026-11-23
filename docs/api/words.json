@@ -1974,5 +1974,8 @@
   {"word": "Unix", "slug": "unix", "category": "product", "confidence": "community-consensus"},
   {"word": "pdf", "slug": "pdf", "category": "acronym", "confidence": "community-consensus"},
   {"word": "OLED", "slug": "oled", "category": "acronym", "confidence": "community-consensus"},
-  {"word": "Navier-Stokes", "slug": "navier-stokes", "category": "cs-term", "confidence": "community-consensus"}
+  {"word": "Navier-Stokes", "slug": "navier-stokes", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "excel", "slug": "excel", "category": "product", "confidence": "community-consensus"},
+  {"word": "ajax", "slug": "ajax", "category": "acronym", "confidence": "community-consensus"},
+  {"word": "asynchronous", "slug": "asynchronous", "category": "cs-term", "confidence": "community-consensus"}
 ]
