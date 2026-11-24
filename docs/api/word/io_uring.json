@@ -7,9 +7,9 @@
   "source_url": "https://kernel.dk/io_uring.pdf",
   "source_label": "Jens Axboe paper",
   "category": "cs-term",
-  "confidence": "creator-clarified",
-  "notes": "Jens Axboe (creator): \"I-O ring\" — letters I and O then the word \"ring\". The underscore is silent; the \"u\" is the start of \"uring\" → \"ring\". Async I/O syscall API.",
+  "confidence": "community-consensus",
+  "notes": "Jens Axboe's async I/O interface: the letters I and O, then \"ring\". The paper that introduced it gives no pronunciation.",
   "audio_url": "https://pronounce.renlab.ai/audio/io_uring.mp3",
   "url": "https://pronounce.renlab.ai/word/io_uring",
-  "date_modified": "2026-05-19"
+  "date_modified": "2026-11-24"
 }

@@ -7,9 +7,9 @@
   "source_url": "https://aclanthology.org/P02-1040/",
   "source_label": "Papineni 2002",
   "category": "acronym",
-  "confidence": "creator-clarified",
-  "notes": "Bilingual Evaluation Understudy; pronounced \"blue\" per the original paper.",
+  "confidence": "community-consensus",
+  "notes": "Bilingual Evaluation Understudy (Papineni et al., 2002); said like the word \"blue\". The paper itself gives no pronunciation.",
   "audio_url": "https://pronounce.renlab.ai/audio/bleu.mp3",
   "url": "https://pronounce.renlab.ai/word/bleu",
-  "date_modified": "2026-05-27"
+  "date_modified": "2026-11-24"
 }

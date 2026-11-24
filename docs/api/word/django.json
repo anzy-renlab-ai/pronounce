@@ -4,12 +4,12 @@
   "respelling_us": "jang go",
   "alt_ipa": [],
   "alt_respelling_us": [],
-  "source_url": "https://www.djangoproject.com/foundation/faq/",
-  "source_label": "Django FAQ",
+  "source_url": "https://docs.djangoproject.com/en/stable/faq/general/",
+  "source_label": "Django FAQ (docs)",
   "category": "product",
   "confidence": "creator-clarified",
   "notes": "FAQ documents \"JANG-go\" — silent D, like jazz guitarist Django Reinhardt.",
   "audio_url": "https://pronounce.renlab.ai/audio/django.mp3",
   "url": "https://pronounce.renlab.ai/word/django",
-  "date_modified": "2026-05-16"
+  "date_modified": "2026-11-24"
 }

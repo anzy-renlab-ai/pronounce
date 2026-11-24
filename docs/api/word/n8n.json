@@ -4,12 +4,12 @@
   "respelling_us": "N eight N",
   "alt_ipa": [],
   "alt_respelling_us": [],
-  "source_url": "https://n8n.io/",
-  "source_label": "n8n",
+  "source_url": "https://github.com/n8n-io/n8n/blob/master/README.md",
+  "source_label": "n8n README — founder Jan Oberhauser",
   "category": "product",
   "confidence": "creator-clarified",
   "notes": "\"N-eight-N\" — workflow automation. Documented as \"nodemation\".",
   "audio_url": "https://pronounce.renlab.ai/audio/n8n.mp3",
   "url": "https://pronounce.renlab.ai/word/n8n",
-  "date_modified": "2026-05-17"
+  "date_modified": "2026-11-24"
 }

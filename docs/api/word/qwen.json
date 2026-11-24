@@ -7,9 +7,9 @@
   "source_url": "https://huggingface.co/Qwen",
   "source_label": "Alibaba Qwen HF",
   "category": "product",
-  "confidence": "creator-clarified",
+  "confidence": "community-consensus",
   "notes": "Alibaba's open LLM family. Single syllable \"KWEN\" — short for 通义千问.",
   "audio_url": "https://pronounce.renlab.ai/audio/qwen.mp3",
   "url": "https://pronounce.renlab.ai/word/qwen",
-  "date_modified": "2026-05-18"
+  "date_modified": "2026-11-24"
 }

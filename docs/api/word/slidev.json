@@ -7,9 +7,9 @@
   "source_url": "https://sli.dev/",
   "source_label": "Slidev",
   "category": "tool",
-  "confidence": "creator-clarified",
-  "notes": "Anthony Fu (creator): \"SLIE-dev\"; slide + dev.",
+  "confidence": "community-consensus",
+  "notes": "Presentation slides for developers; slide + dev, hence \"SLIE-dev\". The project's docs state no reading.",
   "audio_url": "https://pronounce.renlab.ai/audio/slidev.mp3",
   "url": "https://pronounce.renlab.ai/word/slidev",
-  "date_modified": "2026-05-18"
+  "date_modified": "2026-11-24"
 }

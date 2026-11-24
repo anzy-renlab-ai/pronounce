@@ -7,9 +7,9 @@
   "source_url": "https://www.qt.io/",
   "source_label": "Qt Company",
   "category": "tool",
-  "confidence": "creator-clarified",
-  "notes": "GUI framework; officially \"cute\", though many say \"Q-T\".",
+  "confidence": "contested",
+  "notes": "GUI framework from the Qt Company. Said \"cute\", like the word; \"Q-T\" is just as common. No official statement of either was found on qt.io.",
   "audio_url": "https://pronounce.renlab.ai/audio/qt.mp3",
   "url": "https://pronounce.renlab.ai/word/qt",
-  "date_modified": "2026-05-21"
+  "date_modified": "2026-11-24"
 }

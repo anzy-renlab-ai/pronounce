@@ -24,10 +24,10 @@
   "source_label": "NGINX official",
   "category": "product",
   "confidence": "creator-clarified",
-  "notes": "\"engine-x\" is the documented reading from the official site.",
+  "notes": "\"engine x\" is the documented reading from the official site.",
   "audio_url": "https://pronounce.renlab.ai/audio/nginx.mp3",
   "url": "https://pronounce.renlab.ai/word/nginx",
-  "date_modified": "2026-05-16"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "GIF",
@@ -35,14 +35,14 @@
   "respelling_us": "jif",
   "alt_ipa": ["/ɡɪf/"],
   "alt_respelling_us": ["ghif"],
-  "source_url": "https://www.nytimes.com/2013/05/22/business/media/creator-of-the-gif-says-its-pronounced-jif.html",
+  "source_url": "https://web.archive.org/web/20130522145554/http://bits.blogs.nytimes.com/2013/05/21/an-honor-for-the-creator-of-the-gif/",
   "source_label": "Steve Wilhite, NYT (2013)",
   "category": "acronym",
   "confidence": "creator-clarified",
-  "notes": "Wilhite (creator): \"It's pronounced JIF, not GIF.\" Community remains split. The alternate uses \"ghif\" as an explicit hard-G TTS cue.",
+  "notes": "Wilhite (creator), NYT 2013: \"It is a soft 'G,' pronounced 'jif.' End of story.\" The community remains split. The alternate uses \"ghif\" as an explicit hard-G TTS cue.",
   "audio_url": "https://pronounce.renlab.ai/audio/gif.mp3",
   "url": "https://pronounce.renlab.ai/word/gif",
-  "date_modified": "2026-07-24"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "JSON",
@@ -309,10 +309,10 @@
   "source_label": "etcd FAQ",
   "category": "product",
   "confidence": "creator-clarified",
-  "notes": "Project FAQ documents \"et-cetera-distributed\".",
+  "notes": "Project FAQ: \"etcd is pronounced /ˈɛtsiːdiː/\" — the letters E-T-C-D, meaning \"distributed etc directory\".",
   "audio_url": "https://pronounce.renlab.ai/audio/etcd.mp3",
   "url": "https://pronounce.renlab.ai/word/etcd",
-  "date_modified": "2026-05-19"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "containerd",
@@ -365,14 +365,14 @@
   "respelling_us": "post gress Q L",
   "alt_ipa": [],
   "alt_respelling_us": [],
-  "source_url": "https://www.postgresql.org/docs/current/faq.html",
-  "source_label": "PostgreSQL FAQ",
+  "source_url": "https://www.postgresql.org/about/press/faq/",
+  "source_label": "PostgreSQL press FAQ",
   "category": "product",
   "confidence": "creator-clarified",
-  "notes": "FAQ documents \"post-gres-Q-L\" as official.",
+  "notes": "The official press FAQ: \"post-GRES-que-ell\". The project's wiki FAQ writes \"Post-Gres-Q-L\".",
   "audio_url": "https://pronounce.renlab.ai/audio/postgresql.mp3",
   "url": "https://pronounce.renlab.ai/word/postgresql",
-  "date_modified": "2026-05-19"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "Postgres",
@@ -380,14 +380,14 @@
   "respelling_us": "post gress",
   "alt_ipa": [],
   "alt_respelling_us": [],
-  "source_url": "https://www.postgresql.org/docs/current/faq.html",
-  "source_label": "PostgreSQL FAQ",
+  "source_url": "https://wiki.postgresql.org/wiki/FAQ",
+  "source_label": "PostgreSQL wiki FAQ",
   "category": "product",
   "confidence": "creator-clarified",
-  "notes": "\"POST-gress\".",
+  "notes": "\"POST-gress\". Short for PostgreSQL; the official press FAQ writes \"post-GRES\" and says many people find it easier to just say that.",
   "audio_url": "https://pronounce.renlab.ai/audio/postgres.mp3",
   "url": "https://pronounce.renlab.ai/word/postgres",
-  "date_modified": "2026-05-16"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "SQLite",
@@ -560,14 +560,14 @@
   "respelling_us": "jang go",
   "alt_ipa": [],
   "alt_respelling_us": [],
-  "source_url": "https://www.djangoproject.com/foundation/faq/",
-  "source_label": "Django FAQ",
+  "source_url": "https://docs.djangoproject.com/en/stable/faq/general/",
+  "source_label": "Django FAQ (docs)",
   "category": "product",
   "confidence": "creator-clarified",
   "notes": "FAQ documents \"JANG-go\" — silent D, like jazz guitarist Django Reinhardt.",
   "audio_url": "https://pronounce.renlab.ai/audio/django.mp3",
   "url": "https://pronounce.renlab.ai/word/django",
-  "date_modified": "2026-05-16"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "Vue",
@@ -2903,11 +2903,11 @@
   "source_url": "https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing",
   "source_label": "Wikipedia",
   "category": "acronym",
-  "confidence": "creator-clarified",
-  "notes": "\"cider\" — like the apple drink. Documented in CIDR specs.",
+  "confidence": "community-consensus",
+  "notes": "\"cider\" — like the apple drink. Wikipedia's article records the reading.",
   "audio_url": "https://pronounce.renlab.ai/audio/cidr.mp3",
   "url": "https://pronounce.renlab.ai/word/cidr",
-  "date_modified": "2026-05-16"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "Gleam",
@@ -3680,14 +3680,14 @@
   "respelling_us": "jo tie",
   "alt_ipa": [],
   "alt_respelling_us": [],
-  "source_url": "https://jotai.org/",
-  "source_label": "Jotai docs",
+  "source_url": "https://github.com/pmndrs/jotai",
+  "source_label": "Jotai (pmndrs/jotai)",
   "category": "product",
-  "confidence": "creator-clarified",
+  "confidence": "community-consensus",
   "notes": "Japanese for \"state\": \"JOH-tie\".",
   "audio_url": "https://pronounce.renlab.ai/audio/jotai.mp3",
   "url": "https://pronounce.renlab.ai/word/jotai",
-  "date_modified": "2026-05-16"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "Valtio",
@@ -3698,11 +3698,11 @@
   "source_url": "https://valtio.dev/",
   "source_label": "Valtio docs",
   "category": "product",
-  "confidence": "creator-clarified",
+  "confidence": "community-consensus",
   "notes": "Finnish for \"state\": \"VAHL-tee-oh\".",
   "audio_url": "https://pronounce.renlab.ai/audio/valtio.mp3",
   "url": "https://pronounce.renlab.ai/word/valtio",
-  "date_modified": "2026-05-16"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "Recoil",
@@ -3893,11 +3893,11 @@
   "source_url": "https://dapr.io/",
   "source_label": "Dapr",
   "category": "product",
-  "confidence": "creator-clarified",
+  "confidence": "community-consensus",
   "notes": "\"DAP-er\" — like the adjective dapper. Distributed Application Runtime.",
   "audio_url": "https://pronounce.renlab.ai/audio/dapr.mp3",
   "url": "https://pronounce.renlab.ai/word/dapr",
-  "date_modified": "2026-05-16"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "Backstage",
@@ -3920,14 +3920,14 @@
   "respelling_us": "traffic",
   "alt_ipa": [],
   "alt_respelling_us": [],
-  "source_url": "https://traefik.io/",
-  "source_label": "Traefik",
+  "source_url": "https://github.com/traefik/traefik/blob/master/README.md",
+  "source_label": "Traefik README",
   "category": "product",
   "confidence": "creator-clarified",
-  "notes": "\"TRAFFIC\" — exactly like the word.",
+  "notes": "\"TRAFFIC\" — exactly like the word. The README: \"Traefik (pronounced traffic)\".",
   "audio_url": "https://pronounce.renlab.ai/audio/traefik.mp3",
   "url": "https://pronounce.renlab.ai/word/traefik",
-  "date_modified": "2026-05-16"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "WireGuard",
@@ -3950,14 +3950,14 @@
   "respelling_us": "wez term",
   "alt_ipa": [],
   "alt_respelling_us": [],
-  "source_url": "https://wezfurlong.org/wezterm/",
+  "source_url": "https://wezterm.org/",
   "source_label": "WezTerm",
   "category": "tool",
-  "confidence": "creator-clarified",
+  "confidence": "community-consensus",
   "notes": "Named after Wez Furlong: \"WEZ-term\".",
   "audio_url": "https://pronounce.renlab.ai/audio/wezterm.mp3",
   "url": "https://pronounce.renlab.ai/word/wezterm",
-  "date_modified": "2026-05-16"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "Alacritty",
@@ -4850,14 +4850,14 @@
   "respelling_us": "N eight N",
   "alt_ipa": [],
   "alt_respelling_us": [],
-  "source_url": "https://n8n.io/",
-  "source_label": "n8n",
+  "source_url": "https://github.com/n8n-io/n8n/blob/master/README.md",
+  "source_label": "n8n README — founder Jan Oberhauser",
   "category": "product",
   "confidence": "creator-clarified",
   "notes": "\"N-eight-N\" — workflow automation. Documented as \"nodemation\".",
   "audio_url": "https://pronounce.renlab.ai/audio/n8n.mp3",
   "url": "https://pronounce.renlab.ai/word/n8n",
-  "date_modified": "2026-05-17"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "Tabnine",
@@ -7460,14 +7460,14 @@
   "respelling_us": "god oh",
   "alt_ipa": [],
   "alt_respelling_us": [],
-  "source_url": "https://godotengine.org/",
-  "source_label": "Godot",
+  "source_url": "https://godotengine.org/press",
+  "source_label": "Godot Engine press page",
   "category": "product",
   "confidence": "creator-clarified",
-  "notes": "\"GOD-oh\" per project FAQ. \"GOD-ot\" also widespread.",
+  "notes": "Named after the play \"Waiting for Godot\" and, per the project's press page, usually pronounced like in the play: \"GOD-oh\".",
   "audio_url": "https://pronounce.renlab.ai/audio/godot.mp3",
   "url": "https://pronounce.renlab.ai/word/godot",
-  "date_modified": "2026-05-19"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "Unreal",
@@ -8753,11 +8753,11 @@
   "source_url": "https://groq.com/",
   "source_label": "Groq",
   "category": "project",
-  "confidence": "creator-clarified",
+  "confidence": "community-consensus",
   "notes": "LPU inference chip company. Filed trademark before xAI's Grok — both read \"GRAHK.\"",
   "audio_url": "https://pronounce.renlab.ai/audio/groq.mp3",
   "url": "https://pronounce.renlab.ai/word/groq",
-  "date_modified": "2026-05-18"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "kagi",
@@ -8783,11 +8783,11 @@
   "source_url": "https://huggingface.co/Qwen",
   "source_label": "Alibaba Qwen HF",
   "category": "product",
-  "confidence": "creator-clarified",
+  "confidence": "community-consensus",
   "notes": "Alibaba's open LLM family. Single syllable \"KWEN\" — short for 通义千问.",
   "audio_url": "https://pronounce.renlab.ai/audio/qwen.mp3",
   "url": "https://pronounce.renlab.ai/word/qwen",
-  "date_modified": "2026-05-18"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "kimi",
@@ -8807,17 +8807,17 @@
 {
   "word": "doubao",
   "ipa": "/doʊ ˈbaʊ/",
-  "respelling_us": "doh BOW",
+  "respelling_us": "doh bough",
   "alt_ipa": [],
   "alt_respelling_us": [],
   "source_url": "https://www.doubao.com/",
   "source_label": "Doubao official",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "ByteDance chatbot 豆包. Pinyin dòu-bāo → \"doh-BOW\" (bow as in bow-and-arrow).",
+  "notes": "ByteDance chatbot 豆包. Pinyin dòu-bāo → \"doh bough\" (bough as in \"take a bow\", rhymes with cow).",
   "audio_url": "https://pronounce.renlab.ai/audio/doubao.mp3",
   "url": "https://pronounce.renlab.ai/word/doubao",
-  "date_modified": "2026-05-18"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "minimax",
@@ -8870,14 +8870,14 @@
   "respelling_us": "fai",
   "alt_ipa": ["/fiː/"],
   "alt_respelling_us": ["fee"],
-  "source_url": "https://huggingface.co/microsoft/phi-3",
-  "source_label": "Microsoft Phi",
+  "source_url": "",
+  "source_label": "",
   "category": "product",
   "confidence": "contested",
   "notes": "Microsoft's small-model series. Greek letter φ — US \"FAI\"; British/math \"FEE.\"",
   "audio_url": "https://pronounce.renlab.ai/audio/phi.mp3",
   "url": "https://pronounce.renlab.ai/word/phi",
-  "date_modified": "2026-05-18"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "jamba",
@@ -9563,11 +9563,11 @@
   "source_url": "https://datatracker.ietf.org/doc/html/rfc9000",
   "source_label": "IETF RFC 9000",
   "category": "acronym",
-  "confidence": "creator-clarified",
-  "notes": "IETF + Google docs: \"quick\". From \"Quick UDP Internet Connections\".",
+  "confidence": "community-consensus",
+  "notes": "\"quick\", like the word. Its designer's name for it was \"Quick UDP Internet Connections\" (Chromium blog, 2013); RFC 9000 says \"QUIC is a name, not an acronym\".",
   "audio_url": "https://pronounce.renlab.ai/audio/quic.mp3",
   "url": "https://pronounce.renlab.ai/word/quic",
-  "date_modified": "2026-05-19"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "CORS",
@@ -9620,29 +9620,29 @@
   "respelling_us": "yam ul",
   "alt_ipa": [],
   "alt_respelling_us": [],
-  "source_url": "https://yaml.org/",
-  "source_label": "yaml.org",
+  "source_url": "https://yaml.org/spec/1.2.2/",
+  "source_label": "YAML 1.2.2 specification, Abstract",
   "category": "acronym",
   "confidence": "creator-clarified",
-  "notes": "yaml.org tagline historically read \"YAML Ain't Markup Language\" and FAQ stated \"rhymes with camel\". \"YAM-uhl\".",
+  "notes": "YAML Ain't Markup Language. The spec's Abstract says it rhymes with \"camel\" — \"YAM-uhl\".",
   "audio_url": "https://pronounce.renlab.ai/audio/yaml.mp3",
   "url": "https://pronounce.renlab.ai/word/yaml",
-  "date_modified": "2026-05-27"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "TOML",
-  "ipa": "/toʊml/",
-  "respelling_us": "tohml",
+  "ipa": "/ˈtɑməl/",
+  "respelling_us": "tom ul",
   "alt_ipa": [],
   "alt_respelling_us": [],
   "source_url": "https://toml.io/",
   "source_label": "toml.io",
   "category": "acronym",
-  "confidence": "creator-clarified",
-  "notes": "Tom Preston-Werner (creator): \"rhymes with knoll/troll/roll\".",
+  "confidence": "community-consensus",
+  "notes": "Tom's Obvious, Minimal Language. Two syllables, \"TOM-ul\"; a project maintainer answers \"tom-el\" in issue #447.",
   "audio_url": "https://pronounce.renlab.ai/audio/toml.mp3",
   "url": "https://pronounce.renlab.ai/word/toml",
-  "date_modified": "2026-05-18"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "SDK",
@@ -9923,11 +9923,11 @@
   "source_url": "https://keras.io/",
   "source_label": "Keras docs",
   "category": "product",
-  "confidence": "creator-clarified",
-  "notes": "François Chollet (creator): \"KEHR-uss\", rhymes with \"Aaron\".",
+  "confidence": "community-consensus",
+  "notes": "From Greek κέρας \"horn\" (keras.io: \"Why this name, Keras?\"); rhymes with \"Aaron\".",
   "audio_url": "https://pronounce.renlab.ai/audio/keras.mp3",
   "url": "https://pronounce.renlab.ai/word/keras",
-  "date_modified": "2026-05-18"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "YOLO",
@@ -9995,14 +9995,14 @@
   "respelling_us": "T L draw",
   "alt_ipa": [],
   "alt_respelling_us": [],
-  "source_url": "https://tldraw.dev/",
-  "source_label": "tldraw",
+  "source_url": "https://github.com/tldraw/tldraw/issues/4488#issuecomment-2352529910",
+  "source_label": "Steve Ruiz (tldraw founder) in tldraw issue #4488",
   "category": "tool",
   "confidence": "creator-clarified",
-  "notes": "Letters \"T-L\" then \"draw\". Steve Ruiz (creator) confirmed.",
+  "notes": "Letters \"T-L\" then \"draw\". Steve Ruiz (founder), in issue #4488: I say \"tee ell draw\", but you can also say \"teeee el draw\".",
   "audio_url": "https://pronounce.renlab.ai/audio/tldraw.mp3",
   "url": "https://pronounce.renlab.ai/word/tldraw",
-  "date_modified": "2026-05-18"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "Logseq",
@@ -10010,14 +10010,14 @@
   "respelling_us": "log seek",
   "alt_ipa": [],
   "alt_respelling_us": [],
-  "source_url": "https://logseq.com/",
-  "source_label": "Logseq",
+  "source_url": "https://discuss.logseq.com/t/how-do-you-pronounce-logseq-and-what-does-it-mean/321",
+  "source_label": "Logseq forum — staff moderator's answer",
   "category": "product",
-  "confidence": "creator-clarified",
-  "notes": "\"log-SEEK\"; log + sequence. Knowledge-graph notes.",
+  "confidence": "community-consensus",
+  "notes": "\"log-SEEK\"; log + sequence. The reading comes from a Logseq forum moderator, not a founder.",
   "audio_url": "https://pronounce.renlab.ai/audio/logseq.mp3",
   "url": "https://pronounce.renlab.ai/word/logseq",
-  "date_modified": "2026-05-18"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "AppFlowy",
@@ -10103,11 +10103,11 @@
   "source_url": "https://sli.dev/",
   "source_label": "Slidev",
   "category": "tool",
-  "confidence": "creator-clarified",
-  "notes": "Anthony Fu (creator): \"SLIE-dev\"; slide + dev.",
+  "confidence": "community-consensus",
+  "notes": "Presentation slides for developers; slide + dev, hence \"SLIE-dev\". The project's docs state no reading.",
   "audio_url": "https://pronounce.renlab.ai/audio/slidev.mp3",
   "url": "https://pronounce.renlab.ai/word/slidev",
-  "date_modified": "2026-05-18"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "Yazi",
@@ -10133,11 +10133,11 @@
   "source_url": "https://ghostty.org/",
   "source_label": "Ghostty",
   "category": "product",
-  "confidence": "creator-clarified",
-  "notes": "Mitchell Hashimoto (creator): \"GHOST-ee\". GPU terminal.",
+  "confidence": "community-consensus",
+  "notes": "GPU-accelerated terminal emulator by Mitchell Hashimoto. Read \"GHOST-ee\"; the project's site states no reading.",
   "audio_url": "https://pronounce.renlab.ai/audio/ghostty.mp3",
   "url": "https://pronounce.renlab.ai/word/ghostty",
-  "date_modified": "2026-05-18"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "viem",
@@ -10148,11 +10148,11 @@
   "source_url": "https://viem.sh/",
   "source_label": "viem docs",
   "category": "tool",
-  "confidence": "creator-clarified",
+  "confidence": "community-consensus",
   "notes": "One syllable, \"veem\". TypeScript Ethereum library.",
   "audio_url": "https://pronounce.renlab.ai/audio/viem.mp3",
   "url": "https://pronounce.renlab.ai/word/viem",
-  "date_modified": "2026-05-18"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "wagmi",
@@ -10291,8 +10291,8 @@
 },
 {
   "word": "HTTPie",
-  "ipa": "/ˌeɪtʃ tiː tiː piː ˈaɪ/",
-  "respelling_us": "H T T P aye",
+  "ipa": "/ˌeɪtʃ tiː tiː ˈpaɪ/",
+  "respelling_us": "H T T pie",
   "alt_ipa": [],
   "alt_respelling_us": [],
   "source_url": "https://httpie.io/docs/cli",
@@ -10302,7 +10302,7 @@
   "notes": "\"aitch-tee-tee-pie\" — like the suffix \"-ie\" in English.",
   "audio_url": "https://pronounce.renlab.ai/audio/httpie.mp3",
   "url": "https://pronounce.renlab.ai/word/httpie",
-  "date_modified": "2026-05-19"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "Bruno",
@@ -10373,11 +10373,11 @@
   "source_url": "https://www.cs.utexas.edu/users/EWD/",
   "source_label": "Edsger Dijkstra archive",
   "category": "cs-term",
-  "confidence": "creator-clarified",
-  "notes": "Dutch: \"DIKE-strah\". Edsger himself corrected English speakers many times.",
+  "confidence": "community-consensus",
+  "notes": "Dutch surname of the algorithm's designer. English speakers say \"DYKE-strah\" or \"DYKE-struh\"; in Dutch it is closer to \"DAYK-strah\".",
   "audio_url": "https://pronounce.renlab.ai/audio/dijkstra.mp3",
   "url": "https://pronounce.renlab.ai/word/dijkstra",
-  "date_modified": "2026-05-19"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "trie",
@@ -10703,11 +10703,11 @@
   "source_url": "https://owasp.org/",
   "source_label": "OWASP",
   "category": "acronym",
-  "confidence": "creator-clarified",
+  "confidence": "community-consensus",
   "notes": "\"oh-WASP\". Open Worldwide Application Security Project.",
   "audio_url": "https://pronounce.renlab.ai/audio/owasp.mp3",
   "url": "https://pronounce.renlab.ai/word/owasp",
-  "date_modified": "2026-05-18"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "SBOM",
@@ -11493,16 +11493,16 @@
   "word": "Tcl",
   "ipa": "/ˈtɪkəl/",
   "respelling_us": "tickle",
-  "alt_ipa": [],
-  "alt_respelling_us": [],
-  "source_url": "https://www.tcl-lang.org/",
-  "source_label": "Tcl official",
+  "alt_ipa": ["/ˌtiː siː ˈɛl/"],
+  "alt_respelling_us": ["T C L"],
+  "source_url": "https://csis.pace.edu/~benjamin/software/book1.pdf",
+  "source_label": "Ousterhout, \"Tcl and the Tk Toolkit\" (1993 book draft)",
   "category": "product",
   "confidence": "creator-clarified",
-  "notes": "John Ousterhout (creator): \"tickle\". Official Tcl Developer Xchange confirms.",
+  "notes": "John Ousterhout (creator): \"Tcl stands for 'tool command language' and is pronounced 'tickle'\". The Tcler's Wiki now calls the letter-by-letter reading preferred.",
   "audio_url": "https://pronounce.renlab.ai/audio/tcl.mp3",
   "url": "https://pronounce.renlab.ai/word/tcl",
-  "date_modified": "2026-05-19"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "awk",
@@ -11510,14 +11510,14 @@
   "respelling_us": "auk",
   "alt_ipa": [],
   "alt_respelling_us": [],
-  "source_url": "https://en.wikipedia.org/wiki/AWK#Origin_of_the_name",
-  "source_label": "Wikipedia § Origin of the name",
+  "source_url": "https://en.wikipedia.org/wiki/AWK",
+  "source_label": "Wikipedia",
   "category": "cli-tool",
-  "confidence": "creator-clarified",
-  "notes": "\"auk\" — like the seabird, rhymes with \"hawk\". Named after creators' initials (Aho/Weinberger/Kernighan); pronunciation confirmed in original AWK book.",
+  "confidence": "community-consensus",
+  "notes": "\"auk\" — like the seabird, rhymes with \"hawk\". Named after its authors' initials (Aho, Weinberger, Kernighan); the auk is on the cover of their book.",
   "audio_url": "https://pronounce.renlab.ai/audio/awk.mp3",
   "url": "https://pronounce.renlab.ai/word/awk",
-  "date_modified": "2026-05-19"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "Perl",
@@ -12408,16 +12408,16 @@
   "word": "a11y",
   "ipa": "/ˌeɪ ɪˈlɛvən waɪ/",
   "respelling_us": "A eleven Y",
-  "alt_ipa": [],
-  "alt_respelling_us": [],
-  "source_url": "https://www.a11yproject.com/",
-  "source_label": "A11y Project",
+  "alt_ipa": ["/ˈæli/"],
+  "alt_respelling_us": ["alley"],
+  "source_url": "https://github.com/a11yproject/a11yproject.com/issues/507",
+  "source_label": "A11Y Project issue #507 on how it is said",
   "category": "abbreviation",
-  "confidence": "creator-clarified",
-  "notes": "\"A-eleven-Y\". 11 letters between a and y in \"accessibility\".",
+  "confidence": "contested",
+  "notes": "11 letters between a and y in \"accessibility\". The A11Y Project's own issue #507 lists three ways people say it: \"Alley\", \"A-eleven-Y\" and \"A-1-1-Y\".",
   "audio_url": "https://pronounce.renlab.ai/audio/a11y.mp3",
   "url": "https://pronounce.renlab.ai/word/a11y",
-  "date_modified": "2026-05-19"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "e2e",
@@ -12893,11 +12893,11 @@
   "source_url": "https://raft.github.io/",
   "source_label": "raft.github.io",
   "category": "cs-term",
-  "confidence": "creator-clarified",
+  "confidence": "community-consensus",
   "notes": "\"raft\" the word. Consensus algorithm by Diego Ongaro + John Ousterhout, intended as \"more understandable than Paxos\".",
   "audio_url": "https://pronounce.renlab.ai/audio/raft.mp3",
   "url": "https://pronounce.renlab.ai/word/raft",
-  "date_modified": "2026-05-19"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "Paxos",
@@ -12968,11 +12968,11 @@
   "source_url": "https://lamport.azurewebsites.net/",
   "source_label": "Leslie Lamport site",
   "category": "cs-term",
-  "confidence": "creator-clarified",
+  "confidence": "community-consensus",
   "notes": "\"LAM-port\". Leslie Lamport — distributed-systems pioneer.",
   "audio_url": "https://pronounce.renlab.ai/audio/lamport.mp3",
   "url": "https://pronounce.renlab.ai/word/lamport",
-  "date_modified": "2026-05-19"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "Saga",
@@ -13100,14 +13100,14 @@
   "respelling_us": "S crypt",
   "alt_ipa": [],
   "alt_respelling_us": [],
-  "source_url": "https://www.tarsnap.com/scrypt.html",
-  "source_label": "Colin Percival (creator)",
+  "source_url": "https://news.ycombinator.com/item?id=931544",
+  "source_label": "Colin Percival (cperciva) on Hacker News",
   "category": "cs-term",
   "confidence": "creator-clarified",
-  "notes": "Creator Colin Percival: \"ess-crypt\" (S then crypt). \"script\" is common but not the intent.",
+  "notes": "Creator Colin Percival (cperciva), HN 2009: \"s-crypt\", not \"script\".",
   "audio_url": "https://pronounce.renlab.ai/audio/scrypt.mp3",
   "url": "https://pronounce.renlab.ai/word/scrypt",
-  "date_modified": "2026-05-19"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "argon2",
@@ -13298,11 +13298,11 @@
   "source_url": "https://kernel.dk/io_uring.pdf",
   "source_label": "Jens Axboe paper",
   "category": "cs-term",
-  "confidence": "creator-clarified",
-  "notes": "Jens Axboe (creator): \"I-O ring\" — letters I and O then the word \"ring\". The underscore is silent; the \"u\" is the start of \"uring\" → \"ring\". Async I/O syscall API.",
+  "confidence": "community-consensus",
+  "notes": "Jens Axboe's async I/O interface: the letters I and O, then \"ring\". The paper that introduced it gives no pronunciation.",
   "audio_url": "https://pronounce.renlab.ai/audio/io_uring.mp3",
   "url": "https://pronounce.renlab.ai/word/io_uring",
-  "date_modified": "2026-05-19"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "Btrfs",
@@ -13445,14 +13445,14 @@
   "respelling_us": "O three",
   "alt_ipa": [],
   "alt_respelling_us": [],
-  "source_url": "https://openai.com/o3/",
-  "source_label": "OpenAI o3",
+  "source_url": "",
+  "source_label": "",
   "category": "product",
   "confidence": "community-consensus",
   "notes": "\"O-three\". OpenAI reasoning model.",
   "audio_url": "https://pronounce.renlab.ai/audio/o3.mp3",
   "url": "https://pronounce.renlab.ai/word/o3",
-  "date_modified": "2026-05-19"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "Sonnet",
@@ -13955,14 +13955,14 @@
   "respelling_us": "BIL duh",
   "alt_ipa": [],
   "alt_respelling_us": [],
-  "source_url": "https://buildah.io/",
-  "source_label": "buildah.io",
+  "source_url": "https://github.com/podman-container-tools/buildah/issues/206",
+  "source_label": "Buildah issue #206 — \"How to pronounce buildah?\"",
   "category": "cli-tool",
-  "confidence": "creator-clarified",
-  "notes": "\"BIL-duh\" — Boston-accent \"builder\". Dan Walsh (creator) has confirmed in multiple talks.",
+  "confidence": "community-consensus",
+  "notes": "\"BIL-duh\" — Boston-accent \"builder\". A Red Hat contributor spells it \"bill-dah\" in issue #206, where the project's Dan Walsh answers with a 15-second video.",
   "audio_url": "https://pronounce.renlab.ai/audio/buildah.mp3",
   "url": "https://pronounce.renlab.ai/word/buildah",
-  "date_modified": "2026-05-21"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "cert-manager",
@@ -15860,14 +15860,14 @@
   "respelling_us": "gheeks",
   "alt_ipa": [],
   "alt_respelling_us": [],
-  "source_url": "https://guix.gnu.org/",
-  "source_label": "GNU Guix",
+  "source_url": "https://guix.gnu.org/manual/en/html_node/Introduction.html",
+  "source_label": "GNU Guix manual, Introduction",
   "category": "product",
   "confidence": "creator-clarified",
   "notes": "GNU package manager; pronounced \"geeks\".",
   "audio_url": "https://pronounce.renlab.ai/audio/guix.mp3",
   "url": "https://pronounce.renlab.ai/word/guix",
-  "date_modified": "2026-07-12"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "gvisor",
@@ -16223,11 +16223,11 @@
   "source_url": "https://www.qt.io/",
   "source_label": "Qt Company",
   "category": "tool",
-  "confidence": "creator-clarified",
-  "notes": "GUI framework; officially \"cute\", though many say \"Q-T\".",
+  "confidence": "contested",
+  "notes": "GUI framework from the Qt Company. Said \"cute\", like the word; \"Q-T\" is just as common. No official statement of either was found on qt.io.",
   "audio_url": "https://pronounce.renlab.ai/audio/qt.mp3",
   "url": "https://pronounce.renlab.ai/word/qt",
-  "date_modified": "2026-05-21"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "quarto",
@@ -16248,16 +16248,16 @@
   "word": "quay",
   "ipa": "/kiː/",
   "respelling_us": "key",
-  "alt_ipa": [],
-  "alt_respelling_us": [],
-  "source_url": "https://quay.io/",
-  "source_label": "Red Hat Quay",
+  "alt_ipa": ["/kweɪ/"],
+  "alt_respelling_us": ["kway"],
+  "source_url": "https://news.ycombinator.com/item?id=45369383",
+  "source_label": "Quay co-founder (jschorr) on Hacker News",
   "category": "product",
-  "confidence": "creator-clarified",
-  "notes": "Container registry; pronounced \"key\" (like the dock).",
+  "confidence": "contested",
+  "notes": "Container registry. The English word \"quay\" is said \"key\". A Quay co-founder says the team originally said \"kway\" and told customers to pronounce it however they please.",
   "audio_url": "https://pronounce.renlab.ai/audio/quay.mp3",
   "url": "https://pronounce.renlab.ai/word/quay",
-  "date_modified": "2026-05-21"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "rancher",
@@ -16715,14 +16715,14 @@
   "respelling_us": "zap ee er",
   "alt_ipa": [],
   "alt_respelling_us": [],
-  "source_url": "https://zapier.com/",
-  "source_label": "Zapier",
+  "source_url": "https://mixergy.com/interviews/zapier-with-wade-foster/",
+  "source_label": "Wade Foster (founder), Mixergy interview",
   "category": "product",
   "confidence": "creator-clarified",
   "notes": "Automation platform; rhymes with \"happier\", not \"zay-pier\".",
   "audio_url": "https://pronounce.renlab.ai/audio/zapier.mp3",
   "url": "https://pronounce.renlab.ai/word/zapier",
-  "date_modified": "2026-05-21"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "torvalds",
@@ -20258,11 +20258,11 @@
   "source_url": "https://mujoco.org/",
   "source_label": "MuJoCo",
   "category": "product",
-  "confidence": "creator-clarified",
+  "confidence": "community-consensus",
   "notes": "Multi-Joint dynamics with Contact physics engine; \"MEW-jo-co\".",
   "audio_url": "https://pronounce.renlab.ai/audio/mujoco.mp3",
   "url": "https://pronounce.renlab.ai/word/mujoco",
-  "date_modified": "2026-05-26"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "isaac",
@@ -21905,14 +21905,14 @@
   "respelling_us": "ar kive",
   "alt_ipa": [],
   "alt_respelling_us": [],
-  "source_url": "https://info.arxiv.org/help/faq/whatisarxiv.html",
-  "source_label": "arXiv FAQ",
+  "source_url": "https://arxiv.org/new",
+  "source_label": "arXiv project history (arxiv.org/new)",
   "category": "product",
   "confidence": "creator-clarified",
   "notes": "\"AR-kive\" — the X is Greek chi (/k/), so it sounds like \"archive\". Not \"arks-iv\".",
   "audio_url": "https://pronounce.renlab.ai/audio/arxiv.mp3",
   "url": "https://pronounce.renlab.ai/word/arxiv",
-  "date_modified": "2026-05-27"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "preprint",
@@ -22133,11 +22133,11 @@
   "source_url": "https://aclanthology.org/P02-1040/",
   "source_label": "Papineni 2002",
   "category": "acronym",
-  "confidence": "creator-clarified",
-  "notes": "Bilingual Evaluation Understudy; pronounced \"blue\" per the original paper.",
+  "confidence": "community-consensus",
+  "notes": "Bilingual Evaluation Understudy (Papineni et al., 2002); said like the word \"blue\". The paper itself gives no pronunciation.",
   "audio_url": "https://pronounce.renlab.ai/audio/bleu.mp3",
   "url": "https://pronounce.renlab.ai/word/bleu",
-  "date_modified": "2026-05-27"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "ROUGE",
@@ -22148,11 +22148,11 @@
   "source_url": "https://aclanthology.org/W04-1013/",
   "source_label": "Lin 2004",
   "category": "acronym",
-  "confidence": "creator-clarified",
-  "notes": "Recall-Oriented Understudy for Gisting Evaluation; French \"rouge\" — \"roozh\".",
+  "confidence": "community-consensus",
+  "notes": "Recall-Oriented Understudy for Gisting Evaluation (Lin, 2004); said like the French word \"rouge\" — \"roozh\". The paper gives no pronunciation.",
   "audio_url": "https://pronounce.renlab.ai/audio/rouge.mp3",
   "url": "https://pronounce.renlab.ai/word/rouge",
-  "date_modified": "2026-05-27"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "METEOR",
@@ -24616,18 +24616,18 @@
 },
 {
   "word": "oxlint",
-  "ipa": "/ˈɒksˌlɪnt/",
-  "respelling_us": "ox lint",
-  "alt_ipa": [],
-  "alt_respelling_us": [],
+  "ipa": "/ˌoʊ ɛks ˈlɪnt/",
+  "respelling_us": "O X lint",
+  "alt_ipa": ["/ˈɑks lɪnt/"],
+  "alt_respelling_us": ["ox lint"],
   "source_url": "https://oxc.rs/docs/guide/usage/linter.html",
   "source_label": "Oxlint official docs (oxc.rs)",
   "category": "cli-tool",
   "confidence": "creator-clarified",
-  "notes": "\"OX-lint\" — the oxc-based linter; ox like the animal, not the letters O-X.",
+  "notes": "\"O-X-lint\" — the letters O and X, as in Oxc; the official docs write it /oʊ-ɛks-lɪnt/. A ViteConf 2024 talk by its creator is captioned \"OX-lint\" (see the clip).",
   "audio_url": "https://pronounce.renlab.ai/audio/oxlint.mp3",
   "url": "https://pronounce.renlab.ai/word/oxlint",
-  "date_modified": "2026-05-30"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "pixtral",
@@ -26093,11 +26093,11 @@
   "source_url": "https://news.ycombinator.com/item?id=36909537",
   "source_label": "Hacker News — Kenton Varda (kentonv, creator) on the name origin",
   "category": "tool",
-  "confidence": "creator-clarified",
+  "confidence": "community-consensus",
   "notes": "Zero-copy data serialization + RPC framework by Kenton Varda, former maintainer of Google's Protocol Buffers. Per Varda himself, the name originally meant 'Capabilities and Protobufs' — NOT a Cap'n Crunch pun; he said the cereal reference 'never occurred to me,' and the 'cerealization protocol' pun was pointed out by someone else and only then added to the logo. Regardless of origin, 'Cap'n' is the ordinary contraction of 'captain', so it's said 'KAP-uhn PROH-toh' — same first word as the cereal mascot Cap'n Crunch — stress on KAP and PROH. Newcomers misread the apostrophe and say the full 'CAPtain Proto', or spell the tool name 'capnp' out as letters C-A-P-N-P. The schema file extension and compiler are 'capnp' ('cap-en-pee').",
   "audio_url": "https://pronounce.renlab.ai/audio/cap-n-proto.mp3",
   "url": "https://pronounce.renlab.ai/word/cap-n-proto",
-  "date_modified": "2026-06-19"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "Dirichlet",
@@ -26825,14 +26825,14 @@
   "respelling_us": "min eye oh",
   "alt_ipa": ["/ˈmɪnioʊ/"],
   "alt_respelling_us": ["min ee oh"],
-  "source_url": "https://www.techtarget.com/searchstorage/blog/Storage-Soup/Minio-prepares-new-object-storage-dish-for-2019",
-  "source_label": "TechTarget Storage Soup — founder A.B. Periasamy on the MinIO name",
+  "source_url": "https://web.archive.org/web/20220120131257/https://www.techtarget.com/searchstorage/blog/Storage-Soup/Minio-prepares-new-object-storage-dish-for-2019",
+  "source_label": "TechTarget, 2018 — founder A.B. Periasamy on the name (archived copy)",
   "category": "product",
   "confidence": "creator-clarified",
-  "notes": "MinIO is a high-performance, S3-compatible object-storage server; the name is short for \"minimal I/O,\" so it is said min-EYE-oh — the \"IO\" is the spelled-out input/output acronym (\"eye-oh\"). Founder/CEO A.B. (Anand Babu) Periasamy has explicitly stated he wants it known as \"Min-IO, as in minimal IO\" (TechTarget, verified). The article confirms the common variant: \"most people pronounce it MIN-EO\" (min-ee-oh, captured as the alt) — devs default to it because \"-io\" reads like an ordinary word ending rather than a spelled-out acronym.",
+  "notes": "MinIO is a high-performance, S3-compatible object-storage server; the name is short for \"minimal I/O,\" so it is said min-EYE-oh — the \"IO\" is the spelled-out input/output acronym (\"eye-oh\"). Founder/CEO A.B. (Anand Babu) Periasamy has explicitly stated he wants it known as \"Min-IO, as in minimal IO\" (TechTarget, 2018; the article now survives only as the Internet Archive copy that is linked). The article confirms the common variant: \"most people pronounce it MIN-EO\" (min-ee-oh, captured as the alt) — devs default to it because \"-io\" reads like an ordinary word ending rather than a spelled-out acronym.",
   "audio_url": "https://pronounce.renlab.ai/audio/minio.mp3",
   "url": "https://pronounce.renlab.ai/word/minio",
-  "date_modified": "2026-07-05"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "Orpheus",
@@ -28253,11 +28253,11 @@
   "source_url": "https://github.com/pyodide/pyodide/issues/1631",
   "source_label": "Pyodide GitHub issue #1631",
   "category": "product",
-  "confidence": "creator-clarified",
-  "notes": "CPython compiled to WebAssembly for running Python in the browser; maintainers rth and hoodmane gave the IPA ˈpɑɪ.ə.ˌdɑɪd (Py + Iodide — rhymes with iodide).",
+  "confidence": "community-consensus",
+  "notes": "CPython compiled to WebAssembly for running Python in the browser; rhymes with \"iodide\". The reading is relayed second-hand in pyodide issue #1631 (a maintainers' answer from Gitter); the docs state none.",
   "audio_url": "https://pronounce.renlab.ai/audio/pyodide.mp3",
   "url": "https://pronounce.renlab.ai/word/pyodide",
-  "date_modified": "2026-07-17"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "Haxe",
@@ -28553,11 +28553,11 @@
   "source_url": "https://humansand.ai",
   "source_label": "humans& official site",
   "category": "product",
-  "confidence": "creator-clarified",
+  "confidence": "community-consensus",
   "notes": "Human-centric AI lab; the ampersand is read as the word \"and\" per its own domain humansand.ai and @humansand handle.",
   "audio_url": "https://pronounce.renlab.ai/audio/humans-.mp3",
   "url": "https://pronounce.renlab.ai/word/humans-",
-  "date_modified": "2026-11-06"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "Boba",
@@ -28658,11 +28658,11 @@
   "source_url": "https://humansand.ai/blog/nvfp4-rl.html",
   "source_label": "humans& — The 4-bitter Lesson",
   "category": "cs-term",
-  "confidence": "creator-clarified",
+  "confidence": "community-consensus",
   "notes": "humans& pun on Sutton's Bitter Lesson for its 4-bit RL recipe; reads four-BIT-ter LESS-un.",
   "audio_url": "https://pronounce.renlab.ai/audio/4-bitter-lesson.mp3",
   "url": "https://pronounce.renlab.ai/word/4-bitter-lesson",
-  "date_modified": "2026-11-06"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "Multi-User Turing Test",
@@ -28733,11 +28733,11 @@
   "source_url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
   "source_label": "TypeSafe AI launch blog FAQ",
   "category": "product",
-  "confidence": "creator-clarified",
+  "confidence": "community-consensus",
   "notes": "TypeSafe AI's decision model; the launch FAQ derives it from economist William Stanley Jevons, so one syllable \"jev\".",
   "audio_url": "https://pronounce.renlab.ai/audio/jev.mp3",
   "url": "https://pronounce.renlab.ai/word/jev",
-  "date_modified": "2026-11-06"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "Postman",
@@ -28868,11 +28868,11 @@
   "source_url": "https://www.spaitial.ai/",
   "source_label": "SpAItial official site",
   "category": "product",
-  "confidence": "creator-clarified",
+  "confidence": "community-consensus",
   "notes": "Spatial-AI startup (TUM professor Matthias Niessner); Echo-3 model shipped week of 2026-11-02; early customer of Physicl (TechCrunch, 2026-11-06). Brand is the ordinary word 'spatial' with decorative AI caps inserted — NOT \"spay-ai-tial\".",
   "audio_url": "https://pronounce.renlab.ai/audio/spaitial.mp3",
   "url": "https://pronounce.renlab.ai/word/spaitial",
-  "date_modified": "2026-11-08"
+  "date_modified": "2026-11-24"
 },
 {
   "word": "MaxxBench",

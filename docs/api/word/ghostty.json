@@ -7,9 +7,9 @@
   "source_url": "https://ghostty.org/",
   "source_label": "Ghostty",
   "category": "product",
-  "confidence": "creator-clarified",
-  "notes": "Mitchell Hashimoto (creator): \"GHOST-ee\". GPU terminal.",
+  "confidence": "community-consensus",
+  "notes": "GPU-accelerated terminal emulator by Mitchell Hashimoto. Read \"GHOST-ee\"; the project's site states no reading.",
   "audio_url": "https://pronounce.renlab.ai/audio/ghostty.mp3",
   "url": "https://pronounce.renlab.ai/word/ghostty",
-  "date_modified": "2026-05-18"
+  "date_modified": "2026-11-24"
 }

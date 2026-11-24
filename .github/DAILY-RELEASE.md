@@ -91,6 +91,11 @@ generator must never overwrite them.
    - `tools/test_build_v2_data.py` pins: `len(rows)` exact total, sourced
      total, and the `"N,NNN entries — N,NNN carry a citable source"`
      README assertion (grep `1_9` / `1,9` / `1,30`).
+   - The hand-maintained pages and the VS Code extension copy (`docs/index.html`,
+     `docs/v2/index.html`, `integrations/vscode/…`): `node tools/sync-counts.mjs --apply`.
+     No build rewrites their numbers. Without `--apply` the script only checks
+     and exits 1 when a file quotes other numbers. They were last synced by hand
+     on 2026-09-01 and still said 1,903 / 1,283 on 2026-11-24.
 4. `bash tools/release.sh` — syncs the README uses-pin and the changelog
    test pin, runs all guards, tags, pushes, and opens the GitHub release.
    It fails loud if the changelog top entry doesn't match the

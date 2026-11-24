@@ -3,7 +3,7 @@
 // must never overwrite one another merely because they share a counter word.
 
 const TOTAL_PROSE = /\b(\d{1,3}(?:,\d{3})+|\d{3,5})(\+?)((?:[ \-]confidence[ \-]tagged)?[ \-](?:entr(?:y|ies)|(?:developer[ \-]jargon|tech|project, product, and programmer[ \-]jargon)\s+names))/gi;
-const SOURCE_PROSE = /\b(\d{1,3}(?:,\d{3})+|\d{3,5})(?=(?:(?: also)? (?:(?:carry|have|with) (?:a )?citable sources?|sourced entr(?:y|ies))| of (?:\d{1,3}(?:,\d{3})+|\d{3,5}) entr(?:y|ies) (?:carry|have|with) (?:a )?citable sources?))/gi;
+const SOURCE_PROSE = /\b(\d{1,3}(?:,\d{3})+|\d{3,5})(?=(?:(?: also)? (?:(?:carry|have|with) (?:a )?(?:citable|cited) sources?|sourced entr(?:y|ies))| of (?:\d{1,3}(?:,\d{3})+|\d{3,5}) entr(?:y|ies) (?:carry|have|with) (?:a )?(?:citable|cited) sources?))/gi;
 const CREATOR_PROSE = /\b(\d{2,4})(?= (?:settled by the creator|creator-clarified entr(?:y|ies)))/gi;
 const CONTESTED_PROSE = /\b(\d{2,4})(?= (?:the community still argues|contested entr(?:y|ies)))/gi;
 const BADGE = /\b\d{3,4}(?:%2B)?%20entries/gi;

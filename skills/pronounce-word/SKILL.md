@@ -78,7 +78,7 @@ say-it GIF
 ```
 
 Reply:
-> 🔊 /dʒɪf/ — "JIF". Per the creator Steve Wilhite at the [Webby Awards 2013](https://www.nytimes.com/2013/05/22/business/media/creator-of-the-gif-says-its-pronounced-jif.html). The alternate reading /ɡɪf/ is widespread too — try `say-it --alt GIF` to hear it.
+> 🔊 /dʒɪf/ — "JIF". The creator Steve Wilhite told the [New York Times in 2013](https://web.archive.org/web/20130522145554/http://bits.blogs.nytimes.com/2013/05/21/an-honor-for-the-creator-of-the-gif/): "It is a soft 'G,' pronounced 'jif.'" The alternate reading /ɡɪf/ is widespread too — try `say-it --alt GIF` to hear it.
 
 **Example 2 — community-consensus product name:**
 

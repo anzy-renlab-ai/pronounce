@@ -2,14 +2,14 @@
   "word": "a11y",
   "ipa": "/ˌeɪ ɪˈlɛvən waɪ/",
   "respelling_us": "A eleven Y",
-  "alt_ipa": [],
-  "alt_respelling_us": [],
-  "source_url": "https://www.a11yproject.com/",
-  "source_label": "A11y Project",
+  "alt_ipa": ["/ˈæli/"],
+  "alt_respelling_us": ["alley"],
+  "source_url": "https://github.com/a11yproject/a11yproject.com/issues/507",
+  "source_label": "A11Y Project issue #507 on how it is said",
   "category": "abbreviation",
-  "confidence": "creator-clarified",
-  "notes": "\"A-eleven-Y\". 11 letters between a and y in \"accessibility\".",
+  "confidence": "contested",
+  "notes": "11 letters between a and y in \"accessibility\". The A11Y Project's own issue #507 lists three ways people say it: \"Alley\", \"A-eleven-Y\" and \"A-1-1-Y\".",
   "audio_url": "https://pronounce.renlab.ai/audio/a11y.mp3",
   "url": "https://pronounce.renlab.ai/word/a11y",
-  "date_modified": "2026-05-19"
+  "date_modified": "2026-11-24"
 }

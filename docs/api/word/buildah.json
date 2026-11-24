@@ -4,12 +4,12 @@
   "respelling_us": "BIL duh",
   "alt_ipa": [],
   "alt_respelling_us": [],
-  "source_url": "https://buildah.io/",
-  "source_label": "buildah.io",
+  "source_url": "https://github.com/podman-container-tools/buildah/issues/206",
+  "source_label": "Buildah issue #206 — \"How to pronounce buildah?\"",
   "category": "cli-tool",
-  "confidence": "creator-clarified",
-  "notes": "\"BIL-duh\" — Boston-accent \"builder\". Dan Walsh (creator) has confirmed in multiple talks.",
+  "confidence": "community-consensus",
+  "notes": "\"BIL-duh\" — Boston-accent \"builder\". A Red Hat contributor spells it \"bill-dah\" in issue #206, where the project's Dan Walsh answers with a 15-second video.",
   "audio_url": "https://pronounce.renlab.ai/audio/buildah.mp3",
   "url": "https://pronounce.renlab.ai/word/buildah",
-  "date_modified": "2026-05-21"
+  "date_modified": "2026-11-24"
 }

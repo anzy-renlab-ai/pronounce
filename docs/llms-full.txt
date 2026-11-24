@@ -4,7 +4,7 @@ Format: <word> | <IPA> | <respelling> | <category> | <confidence> | <source>
 
 kubectl | /ˈkuːb kənˌtroʊl/ | koob control | cli-tool | contested | (no source)
 nginx | /ˈɛn dʒɪnˈɛks/ | engine X | product | creator-clarified | https://nginx.org/en/
-GIF | /dʒɪf/ | jif | acronym | creator-clarified | https://www.nytimes.com/2013/05/22/business/media/creator-of-the-gif-says-its-pronounced-jif.html
+GIF | /dʒɪf/ | jif | acronym | creator-clarified | https://web.archive.org/web/20130522145554/http://bits.blogs.nytimes.com/2013/05/21/an-honor-for-the-creator-of-the-gif/
 JSON | /ˈdʒeɪsən/ | jay son | acronym | contested | https://en.wikipedia.org/wiki/JSON#Pronunciation
 SQL | /ˈsiːkwəl/ | sequel | acronym | contested | https://en.wikipedia.org/wiki/SQL#Pronunciation
 GUI | /ˈɡuːi/ | gooey | acronym | contested | https://en.wikipedia.org/wiki/Graphical_user_interface
@@ -26,8 +26,8 @@ etcd | /ˌɛt siː ˈdiː/ | et C D | product | creator-clarified | https://etcd
 containerd | /kənˈteɪnər diː/ | container D | product | community-consensus | https://containerd.io/
 runc | /rʌn ˈsiː/ | run C | tool | community-consensus | https://github.com/opencontainers/runc
 Podman | /ˈpɑːdmən/ | pod man | tool | community-consensus | https://podman.io/
-PostgreSQL | /ˈpoʊstɡrɛs kjuː ˈɛl/ | post gress Q L | product | creator-clarified | https://www.postgresql.org/docs/current/faq.html
-Postgres | /ˈpoʊstɡrɛs/ | post gress | product | creator-clarified | https://www.postgresql.org/docs/current/faq.html
+PostgreSQL | /ˈpoʊstɡrɛs kjuː ˈɛl/ | post gress Q L | product | creator-clarified | https://www.postgresql.org/about/press/faq/
+Postgres | /ˈpoʊstɡrɛs/ | post gress | product | creator-clarified | https://wiki.postgresql.org/wiki/FAQ
 SQLite | /ˌɛs kjuː ɛl ˈaɪt/ | S Q L ite | product | community-consensus | https://www.sqlite.org/famous.html
 MySQL | /ˌmaɪ ɛs kjuː ˈɛl/ | my S Q L | product | creator-clarified | https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html
 MongoDB | /ˈmɒŋɡoʊ diː biː/ | mongo D B | product | community-consensus | https://www.mongodb.com/
@@ -39,7 +39,7 @@ Debian | /ˈdɛbiən/ | deb ee un | product | creator-clarified | https://www.de
 Ubuntu | /ʊˈbʊntuː/ | oo boon too | product | community-consensus | https://ubuntu.com/
 Arch | /ɑːrtʃ/ | arch | product | community-consensus | https://archlinux.org/
 Nix | /nɪks/ | nicks | product | community-consensus | https://nixos.org/
-Django | /ˈdʒæŋɡoʊ/ | jang go | product | creator-clarified | https://www.djangoproject.com/foundation/faq/
+Django | /ˈdʒæŋɡoʊ/ | jang go | product | creator-clarified | https://docs.djangoproject.com/en/stable/faq/general/
 Vue | /vjuː/ | view | product | creator-clarified | https://github.com/vuejs/vue#readme
 Vite | /viːt/ | veet | product | creator-clarified | https://github.com/vitejs/vite#readme
 Pydantic | /paɪˈdæntɪk/ | pie dantick | product | community-consensus | https://docs.pydantic.dev/
@@ -195,7 +195,7 @@ OAuth | /ˈoʊɔːθ/ | oh awth | acronym | contested | https://oauth.net/
 JWT | /dʒɒt/ | jot | acronym | contested | https://datatracker.ietf.org/doc/html/rfc7519
 SAML | /ˈsæməl/ | sam ul | acronym | community-consensus | https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language
 DNS | /ˌdiː ɛn ˈɛs/ | D N S | abbreviation | community-consensus | https://en.wikipedia.org/wiki/Domain_Name_System
-CIDR | /ˈsaɪdər/ | cider | acronym | creator-clarified | https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing
+CIDR | /ˈsaɪdər/ | cider | acronym | community-consensus | https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing
 Gleam | /ɡliːm/ | gleem | product | community-consensus | https://gleam.run/
 Roc | /rɒk/ | rock | product | community-consensus | https://www.roc-lang.org/
 Carbon | /ˈkɑːrbən/ | carbon | product | community-consensus | https://github.com/carbon-language
@@ -247,8 +247,8 @@ CrewAI | /ˌkruː eɪ ˈaɪ/ | crew A I | product | community-consensus | https:
 LiteLLM | /ˈlaɪt ɛl ɛl ɛm/ | light L L M | product | community-consensus | https://www.litellm.ai/
 Marqo | /ˈmɑːrkoʊ/ | mar ko | product | community-consensus | https://www.marqo.ai/
 Tanstack | /ˈtænˌstæk/ | tan stack | product | community-consensus | https://tanstack.com/
-Jotai | /ˈdʒoʊtaɪ/ | jo tie | product | creator-clarified | https://jotai.org/
-Valtio | /ˈvɑːltioʊ/ | val tee oh | product | creator-clarified | https://valtio.dev/
+Jotai | /ˈdʒoʊtaɪ/ | jo tie | product | community-consensus | https://github.com/pmndrs/jotai
+Valtio | /ˈvɑːltioʊ/ | val tee oh | product | community-consensus | https://valtio.dev/
 Recoil | /ˈriːkɔɪl/ | ree coil | product | community-consensus | https://recoiljs.org/
 Million.js | /ˈmɪljən dʒeɪ ɛs/ | million J S | product | community-consensus | https://million.dev/
 Preact | /ˈpriːækt/ | pre act | product | community-consensus | https://preactjs.com/
@@ -261,11 +261,11 @@ Turbopack | /ˈtɜːrboʊˌpæk/ | turbo pack | tool | community-consensus | htt
 Rspack | /ˌɑːr ɛs ˈpæk/ | R S pack | tool | community-consensus | https://rspack.dev/
 Oxc | /ˌoʊ ɛks ˈsiː/ | O X C | tool | community-consensus | https://oxc.rs/
 Pulumi | /puːˈluːmi/ | poo loo mee | product | community-consensus | https://www.pulumi.com/
-Dapr | /ˈdæpər/ | dap er | product | creator-clarified | https://dapr.io/
+Dapr | /ˈdæpər/ | dap er | product | community-consensus | https://dapr.io/
 Backstage | /ˈbækˌsteɪdʒ/ | back stage | product | community-consensus | https://backstage.io/
-Traefik | /ˈtræfɪk/ | traffic | product | creator-clarified | https://traefik.io/
+Traefik | /ˈtræfɪk/ | traffic | product | creator-clarified | https://github.com/traefik/traefik/blob/master/README.md
 WireGuard | /ˈwaɪərˌɡɑːrd/ | wire guard | product | community-consensus | https://www.wireguard.com/
-Wezterm | /ˈwɛzˌtɜːrm/ | wez term | tool | creator-clarified | https://wezfurlong.org/wezterm/
+Wezterm | /ˈwɛzˌtɜːrm/ | wez term | tool | community-consensus | https://wezterm.org/
 Alacritty | /əˈlækrɪti/ | uh lack ri tee | tool | community-consensus | https://alacritty.org/
 Kitty | /ˈkɪti/ | kit ee | tool | community-consensus | https://sw.kovidgoyal.net/kitty/
 Zellij | /zɛˈliːʒ/ | zell eezh | tool | community-consensus | https://zellij.dev/
@@ -325,7 +325,7 @@ Pydantic AI | /paɪˈdæntɪk eɪ aɪ/ | pie dantick A I | product | community-c
 Windsurf | /ˈwɪndˌsɜːrf/ | wind surf | product | community-consensus | https://codeium.com/windsurf
 Lovable | /ˈlʌvəbəl/ | love a bul | product | community-consensus | https://lovable.dev/
 v0 | /ˌviː ˈzɪəroʊ/ | V zero | product | community-consensus | https://v0.dev/
-n8n | /ˌɛn ˈeɪt ɛn/ | N eight N | product | creator-clarified | https://n8n.io/
+n8n | /ˌɛn ˈeɪt ɛn/ | N eight N | product | creator-clarified | https://github.com/n8n-io/n8n/blob/master/README.md
 Tabnine | /ˈtæbnaɪn/ | tab nine | product | community-consensus | https://www.tabnine.com/
 Roo | /ruː/ | roo | product | community-consensus | https://github.com/RooVetGit/Roo-Cline
 Crystal | /ˈkrɪstəl/ | crys tul | product | community-consensus | https://crystal-lang.org/
@@ -499,7 +499,7 @@ Iceberg | /ˈaɪsˌbɜːrɡ/ | ice berg | product | community-consensus | https:
 Hudi | /ˈhuːdi/ | who dee | product | community-consensus | https://hudi.apache.org/
 Delta Lake | /ˈdɛltə leɪk/ | del ta lake | product | community-consensus | https://delta.io/
 Unity | /ˈjuːnɪti/ | you ni tee | product | community-consensus | https://unity.com/
-Godot | /ˈɡɒdoʊ/ | god oh | product | creator-clarified | https://godotengine.org/
+Godot | /ˈɡɒdoʊ/ | god oh | product | creator-clarified | https://godotengine.org/press
 Unreal | /ʌnˈriːəl/ | un real | product | community-consensus | https://www.unrealengine.com/
 Bevy | /ˈbɛvi/ | bevy | product | community-consensus | https://bevyengine.org/
 OIDC | /ˌoʊ aɪ diː ˈsiː/ | O I D C | abbreviation | community-consensus | https://openid.net/connect/
@@ -585,15 +585,15 @@ firecrawl | /ˈfaɪər krɔːl/ | FIRE krawl | project | community-consensus | h
 browserbase | /ˈbraʊ zər beɪs/ | BROW zer base | project | community-consensus | https://www.browserbase.com/
 exa | /ˈɛk sə/ | EK suh | project | community-consensus | https://exa.ai/
 tavily | /ˈtæ və li/ | TAV uh lee | project | community-consensus | https://tavily.com/
-groq | /ɡrɒk/ | grahk | project | creator-clarified | https://groq.com/
+groq | /ɡrɒk/ | grahk | project | community-consensus | https://groq.com/
 kagi | /ˈkɑː ɡi/ | KAH gee | project | community-consensus | https://kagi.com/
-qwen | /kwɛn/ | kwen | product | creator-clarified | https://huggingface.co/Qwen
+qwen | /kwɛn/ | kwen | product | community-consensus | https://huggingface.co/Qwen
 kimi | /ˈkiː mi/ | KEE mee | product | community-consensus | https://www.moonshot.cn/
-doubao | /doʊ ˈbaʊ/ | doh BOW | product | community-consensus | https://www.doubao.com/
+doubao | /doʊ ˈbaʊ/ | doh bough | product | community-consensus | https://www.doubao.com/
 minimax | /ˈmɪ ni mæks/ | MIN ee maks | project | community-consensus | https://www.minimaxi.com/
 baichuan | /ˈbaɪ tʃwɑːn/ | BYE chwahn | project | community-consensus | https://www.baichuan-ai.com/
 gemma | /ˈdʒɛ mə/ | JEM uh | product | community-consensus | https://ai.google.dev/gemma
-phi | /faɪ/ | fai | product | contested | https://huggingface.co/microsoft/phi-3
+phi | /faɪ/ | fai | product | contested | (no source)
 jamba | /ˈdʒæm bə/ | JAM buh | product | community-consensus | https://www.ai21.com/jamba
 dbrx | /ˌdiː biː ɑːr ˈɛks/ | D B R X | product | community-consensus | https://www.databricks.com/blog/introducing-dbrx-new-state-art-open-llm
 mixtral | /mɪks ˈtrɑːl/ | miks TRAHL | product | community-consensus | https://mistral.ai/news/mixtral-of-experts/
@@ -639,12 +639,12 @@ HTTPS | /ˌeɪtʃ tiː tiː piː ˈɛs/ | H T T P S | acronym | community-consen
 TCP | /ˌtiː siː ˈpiː/ | T C P | acronym | community-consensus | (no source)
 UDP | /ˌjuː diː ˈpiː/ | U D P | acronym | community-consensus | (no source)
 SSL | /ˌɛs ɛs ˈɛl/ | S S L | acronym | community-consensus | (no source)
-QUIC | /kwɪk/ | quick | acronym | creator-clarified | https://datatracker.ietf.org/doc/html/rfc9000
+QUIC | /kwɪk/ | quick | acronym | community-consensus | https://datatracker.ietf.org/doc/html/rfc9000
 CORS | /kɔːrz/ | cores | acronym | community-consensus | https://fetch.spec.whatwg.org/
 CSRF | /ˈsiː sɜːrf/ | sea surf | acronym | contested | https://owasp.org/www-community/attacks/csrf
 XSS | /ˌɛks ɛs ˈɛs/ | X S S | acronym | community-consensus | (no source)
-YAML | /ˈjæməl/ | yam ul | acronym | creator-clarified | https://yaml.org/
-TOML | /toʊml/ | tohml | acronym | creator-clarified | https://toml.io/
+YAML | /ˈjæməl/ | yam ul | acronym | creator-clarified | https://yaml.org/spec/1.2.2/
+TOML | /ˈtɑməl/ | tom ul | acronym | community-consensus | https://toml.io/
 SDK | /ˌɛs diː ˈkeɪ/ | S D K | acronym | community-consensus | (no source)
 CLI | /ˌsiː ɛl ˈaɪ/ | C L I | acronym | community-consensus | (no source)
 URL | /ˌjuː ɑːr ˈɛl/ | U R L | acronym | contested | (no source)
@@ -663,22 +663,22 @@ OpenID | /ˈoʊpən aɪ ˈdiː/ | open I D | acronym | community-consensus | htt
 OAuth2 | /oʊˈɔːθ tuː/ | oh auth two | acronym | community-consensus | (no source)
 VPN | /ˌviː piː ˈɛn/ | V P N | acronym | community-consensus | (no source)
 TensorFlow | /ˈtɛnsər floʊ/ | tenser flow | product | community-consensus | https://www.tensorflow.org/
-Keras | /ˈkɛrəs/ | KAIR uss | product | creator-clarified | https://keras.io/
+Keras | /ˈkɛrəs/ | KAIR uss | product | community-consensus | https://keras.io/
 YOLO | /ˈjoʊ loʊ/ | yoh loh | product | community-consensus | https://arxiv.org/abs/1506.02640
 Whisper | /ˈwɪspər/ | whisper | product | community-consensus | https://openai.com/research/whisper
 Mermaid | /ˈmɜːr meɪd/ | mermaid | tool | community-consensus | https://mermaid.js.org/
 Excalidraw | /ɛkˈskælɪ drɔː/ | ex CAL i draw | tool | community-consensus | https://excalidraw.com/
-tldraw | /ˌtiː ɛl ˈdrɔː/ | T L draw | tool | creator-clarified | https://tldraw.dev/
-Logseq | /lɒɡˈsiːk/ | log seek | product | creator-clarified | https://logseq.com/
+tldraw | /ˌtiː ɛl ˈdrɔː/ | T L draw | tool | creator-clarified | https://github.com/tldraw/tldraw/issues/4488#issuecomment-2352529910
+Logseq | /lɒɡˈsiːk/ | log seek | product | community-consensus | https://discuss.logseq.com/t/how-do-you-pronounce-logseq-and-what-does-it-mean/321
 AppFlowy | /æpˈfloʊi/ | app FLOH ee | product | community-consensus | https://appflowy.io/
 Affine | /əˈfaɪn/ | uh fine | product | contested | https://affine.pro/
 Anytype | /ˈɛni taɪp/ | enny type | product | community-consensus | https://anytype.io/
 Gitea | /ɡɪˈteɪ ə/ | ghih TAY uh | product | community-consensus | https://docs.gitea.com/
 Forgejo | /fɔːrˈdʒeɪ joʊ/ | for JAY yo | product | community-consensus | https://forgejo.org/
-Slidev | /ˈslaɪ dɛv/ | SLIE dev | tool | creator-clarified | https://sli.dev/
+Slidev | /ˈslaɪ dɛv/ | SLIE dev | tool | community-consensus | https://sli.dev/
 Yazi | /ˈjɑː ziː/ | YAH zee | cli-tool | community-consensus | https://yazi-rs.github.io/
-Ghostty | /ˈɡoʊsti/ | ghost ee | product | creator-clarified | https://ghostty.org/
-viem | /viːm/ | veem | tool | creator-clarified | https://viem.sh/
+Ghostty | /ˈɡoʊsti/ | ghost ee | product | community-consensus | https://ghostty.org/
+viem | /viːm/ | veem | tool | community-consensus | https://viem.sh/
 wagmi | /ˈwæɡ mi/ | WAG mee | tool | community-consensus | https://wagmi.sh/
 Streamlit | /ˈstriːm lɪt/ | STREEM lit | product | community-consensus | https://streamlit.io/
 Gradio | /ˈɡreɪ di oʊ/ | GRAY dee oh | product | community-consensus | https://gradio.app/
@@ -688,12 +688,12 @@ LLaVA | /ˈlɑː vɑː/ | LAH vah | product | community-consensus | https://llav
 LoRA | /ˈlɔːr ə/ | LOR ah | cs-term | community-consensus | https://arxiv.org/abs/2106.09685
 QLoRA | /ˌkjuː ˈlɔːr ə/ | Q LOR ah | cs-term | community-consensus | https://arxiv.org/abs/2305.14314
 PEFT | /pɛft/ | peft | tool | community-consensus | https://huggingface.co/docs/peft
-HTTPie | /ˌeɪtʃ tiː tiː piː ˈaɪ/ | H T T P aye | cli-tool | creator-clarified | https://httpie.io/docs/cli
+HTTPie | /ˌeɪtʃ tiː tiː ˈpaɪ/ | H T T pie | cli-tool | creator-clarified | https://httpie.io/docs/cli
 Bruno | /ˈbruː noʊ/ | BROO no | tool | community-consensus | https://www.usebruno.com/
 Hoppscotch | /ˈhɒp skɒtʃ/ | HOP skotch | tool | community-consensus | https://hoppscotch.io/
 Dify | /ˈdiː faɪ/ | DEE fye | product | community-consensus | https://dify.ai/
 Hunyuan | /ˌhuːn juˈɑːn/ | hoon yoo en | product | community-consensus | https://hunyuan.tencent.com/
-Dijkstra | /ˈdaɪk strɑː/ | DIKE strah | cs-term | creator-clarified | https://www.cs.utexas.edu/users/EWD/
+Dijkstra | /ˈdaɪk strɑː/ | DIKE strah | cs-term | community-consensus | https://www.cs.utexas.edu/users/EWD/
 trie | /triː/ | tree | cs-term | contested | https://en.wikipedia.org/wiki/Trie
 DAG | /dæɡ/ | dag | acronym | contested | (no source)
 CRDT | /ˌsiː ɑːr diː ˈtiː/ | C R D T | acronym | community-consensus | https://crdt.tech/
@@ -715,7 +715,7 @@ ICMP | /ˌaɪ siː ɛm ˈpiː/ | I C M P | acronym | community-consensus | (no s
 ARP | /ɑːrp/ | arp | acronym | community-consensus | (no source)
 MTU | /ˌɛm tiː ˈjuː/ | M T U | acronym | community-consensus | (no source)
 mTLS | /ˌɛm tiː ɛl ˈɛs/ | m T L S | acronym | community-consensus | (no source)
-OWASP | /ˈoʊ wæsp/ | oh wasp | acronym | creator-clarified | https://owasp.org/
+OWASP | /ˈoʊ wæsp/ | oh wasp | acronym | community-consensus | https://owasp.org/
 SBOM | /ˈɛs bɒm/ | S bom | acronym | contested | https://www.cisa.gov/sbom
 CVE | /ˌsiː viː ˈiː/ | C V E | acronym | community-consensus | https://www.cve.org/
 CVSS | /ˌsiː viː ɛs ˈɛs/ | C V S S | acronym | community-consensus | https://www.first.org/cvss/
@@ -768,8 +768,8 @@ C++ | /ˌsiː plʌs ˈplʌs/ | C plus plus | product | community-consensus | htt
 C# | /ˌsiː ˈʃɑːrp/ | C sharp | product | community-consensus | https://learn.microsoft.com/dotnet/csharp/
 TypeScript | /ˈtaɪpˌskrɪpt/ | TYPE script | product | community-consensus | https://www.typescriptlang.org/
 JavaScript | /ˈdʒɑːvə skrɪpt/ | JAH vah script | product | community-consensus | https://tc39.es/
-Tcl | /ˈtɪkəl/ | tickle | product | creator-clarified | https://www.tcl-lang.org/
-awk | /ɔːk/ | auk | cli-tool | creator-clarified | https://en.wikipedia.org/wiki/AWK#Origin_of_the_name
+Tcl | /ˈtɪkəl/ | tickle | product | creator-clarified | https://csis.pace.edu/~benjamin/software/book1.pdf
+awk | /ɔːk/ | auk | cli-tool | community-consensus | https://en.wikipedia.org/wiki/AWK
 Perl | /pɜːrl/ | purl | product | community-consensus | https://www.perl.org/
 Lisp | /lɪsp/ | lisp | product | community-consensus | (no source)
 Scheme | /skiːm/ | skeem | product | community-consensus | (no source)
@@ -829,7 +829,7 @@ pub/sub | /ˈpʌb sʌb/ | pub sub | cs-term | community-consensus | (no source)
 OOM | /ˌoʊ oʊ ˈɛm/ | O O M | acronym | contested | (no source)
 i18n | /ˌaɪ eɪˈtiːn ɛn/ | eye eighteen N | abbreviation | community-consensus | https://en.wikipedia.org/wiki/Internationalization_and_localization
 l10n | /ˌɛl tɛn ˈɛn/ | L ten N | abbreviation | community-consensus | https://en.wikipedia.org/wiki/Internationalization_and_localization
-a11y | /ˌeɪ ɪˈlɛvən waɪ/ | A eleven Y | abbreviation | creator-clarified | https://www.a11yproject.com/
+a11y | /ˌeɪ ɪˈlɛvən waɪ/ | A eleven Y | abbreviation | contested | https://github.com/a11yproject/a11yproject.com/issues/507
 e2e | /ˌiː tuː ˈiː/ | E two E | abbreviation | community-consensus | (no source)
 m17n | /ˌɛm sɛvənˈtiːn ɛn/ | M seventeen N | abbreviation | community-consensus | (no source)
 s11n | /ˌɛs ɪˈlɛvən ɛn/ | S eleven N | abbreviation | community-consensus | (no source)
@@ -861,12 +861,12 @@ Solana | /səˈlɑː nə/ | suh LAH nuh | product | community-consensus | https:
 WHATWG | /ˈwɒt wɪɡ/ | WAT wig | acronym | contested | https://whatwg.org/
 ECMA | /ˈɛk mə/ | EK ma | acronym | contested | https://ecma-international.org/
 IETF | /ˌaɪ iː tiː ˈɛf/ | I E T F | acronym | community-consensus | https://www.ietf.org/
-Raft | /ræft/ | raft | cs-term | creator-clarified | https://raft.github.io/
+Raft | /ræft/ | raft | cs-term | community-consensus | https://raft.github.io/
 Paxos | /ˈpæk soʊs/ | PAK sose | cs-term | community-consensus | https://en.wikipedia.org/wiki/Paxos_(computer_science)
 gossip | /ˈɡɒs ɪp/ | gossip | cs-term | community-consensus | https://en.wikipedia.org/wiki/Gossip_protocol
 Byzantine | /bɪˈzæn tiːn/ | biz AN teen | cs-term | contested | https://lamport.azurewebsites.net/pubs/byz.pdf
 quorum | /ˈkwɔːr əm/ | QUOR um | cs-term | community-consensus | (no source)
-Lamport | /ˈlæm pɔːrt/ | LAM port | cs-term | creator-clarified | https://lamport.azurewebsites.net/
+Lamport | /ˈlæm pɔːrt/ | LAM port | cs-term | community-consensus | https://lamport.azurewebsites.net/
 Saga | /ˈsɑː ɡə/ | SAH guh | cs-term | community-consensus | https://microservices.io/patterns/data/saga.html
 HLC | /ˌeɪtʃ ɛl ˈsiː/ | H L C | acronym | community-consensus | https://cse.buffalo.edu/tech-reports/2014-04.pdf
 vector clock | /ˈvɛk tər klɒk/ | VEK ter clock | cs-term | community-consensus | https://en.wikipedia.org/wiki/Vector_clock
@@ -875,7 +875,7 @@ ChaCha20 | /ˈtʃɑː tʃɑː ˌtwɛn ti/ | CHA cha twenty | cs-term | community
 Poly1305 | /ˈpɒl iː ˌθɜːrˌtiːn ˌoʊ ˈfaɪv/ | PA lee thirteen oh five | cs-term | community-consensus | (no source)
 X25519 | /ˌɛks ˌtwɛnti faɪv faɪv ˌwʌn ˈnaɪn/ | X twenty-five five one nine | cs-term | community-consensus | https://datatracker.ietf.org/doc/html/rfc7748
 OAEP | /ˌoʊ eɪ iː ˈpiː/ | O A E P | acronym | contested | https://datatracker.ietf.org/doc/html/rfc8017
-scrypt | /ɛs ˈkrɪpt/ | S crypt | cs-term | creator-clarified | https://www.tarsnap.com/scrypt.html
+scrypt | /ɛs ˈkrɪpt/ | S crypt | cs-term | creator-clarified | https://news.ycombinator.com/item?id=931544
 argon2 | /ˈɑːr ɡən tuː/ | AR gon two | cs-term | community-consensus | https://www.password-hashing.net/
 bcrypt | /ˈbiː krɪpt/ | B crypt | cs-term | community-consensus | https://www.usenix.org/legacy/events/usenix99/provos/provos_html/
 EC2 | /ˌiː tuː ˈsiː/ | E two C | product | community-consensus | https://aws.amazon.com/ec2/
@@ -888,7 +888,7 @@ ECS | /ˌiː siː ˈɛs/ | E C S | product | community-consensus | https://aws.a
 GKE | /ˌdʒiː keɪ ˈiː/ | G K E | product | community-consensus | https://cloud.google.com/kubernetes-engine
 AKS | /ˌeɪ keɪ ˈɛs/ | A K S | product | community-consensus | https://learn.microsoft.com/en-us/azure/aks/
 Route53 | /ruːt ˌfɪf ti ˈθriː/ | root fifty-three | product | contested | https://aws.amazon.com/route53/
-io_uring | /ˌaɪ oʊ ˈrɪŋ/ | I O ring | cs-term | creator-clarified | https://kernel.dk/io_uring.pdf
+io_uring | /ˌaɪ oʊ ˈrɪŋ/ | I O ring | cs-term | community-consensus | https://kernel.dk/io_uring.pdf
 Btrfs | /ˈbʌt ər ɛf ɛs/ | BUTTER F S | product | contested | https://btrfs.readthedocs.io/
 ZFS | /ˌziː ɛf ˈɛs/ | Z F S | product | community-consensus | https://openzfs.org/
 cgroups | /ˈsiː ɡruːps/ | C groups | cs-term | community-consensus | https://docs.kernel.org/admin-guide/cgroup-v2.html
@@ -898,7 +898,7 @@ syscall | /ˈsɪs kɔːl/ | SIS call | cs-term | community-consensus | (no sourc
 DeepSeek-R1 | /ˌdiːp siːk ˌɑːr ˈwʌn/ | deep seek R one | product | community-consensus | https://www.deepseek.com/
 R1 | /ˌɑːr ˈwʌn/ | R one | abbreviation | community-consensus | (no source)
 o1 | /ˌoʊ ˈwʌn/ | O one | product | community-consensus | https://openai.com/o1/
-o3 | /ˌoʊ ˈθriː/ | O three | product | community-consensus | https://openai.com/o3/
+o3 | /ˌoʊ ˈθriː/ | O three | product | community-consensus | (no source)
 Sonnet | /ˈsɒn ɪt/ | SON it | product | community-consensus | https://www.anthropic.com/claude
 Opus | /ˈoʊ pəs/ | OH pus | product | community-consensus | https://www.anthropic.com/claude
 Haiku | /ˈhaɪ kuː/ | HIGH koo | product | community-consensus | https://www.anthropic.com/claude
@@ -932,7 +932,7 @@ Snowpack | /ˈsnoʊ pæk/ | SNOW pak | product | community-consensus | https://w
 WireMock | /ˈwaɪər mɒk/ | WYE er mok | product | community-consensus | https://wiremock.org/
 Trino | /ˈtriː noʊ/ | TREE noh | product | community-consensus | https://trino.io/
 Skopeo | /skoʊˈpeɪ oʊ/ | skoh PAY oh | cli-tool | community-consensus | https://github.com/containers/skopeo
-Buildah | /ˈbɪl də/ | BIL duh | cli-tool | creator-clarified | https://buildah.io/
+Buildah | /ˈbɪl də/ | BIL duh | cli-tool | community-consensus | https://github.com/podman-container-tools/buildah/issues/206
 cert-manager | /sɜːrt ˈmæn ə dʒər/ | sert MAN uh jer | product | community-consensus | https://cert-manager.io/
 Verdaccio | /vɛrˈdɑː tʃoʊ/ | ver DAH cho | product | community-consensus | https://verdaccio.org/
 Tika | /ˈtiː kə/ | TEE kuh | product | community-consensus | https://tika.apache.org/
@@ -1059,7 +1059,7 @@ fulcio | /ˈfʊlsi oʊ/ | fool see oh | tool | contested | (no source)
 gentoo | /ˈdʒɛntuː/ | jen too | product | community-consensus | (no source)
 gnome | /ɡəˈnoʊm/ | guh nome | product | contested | (no source)
 graylog | /ˈɡreɪ lɒɡ/ | gray log | product | community-consensus | (no source)
-guix | /ɡiːks/ | gheeks | product | creator-clarified | https://guix.gnu.org/
+guix | /ɡiːks/ | gheeks | product | creator-clarified | https://guix.gnu.org/manual/en/html_node/Introduction.html
 gvisor | /ˈdʒiː vaɪzər/ | jee visor | product | community-consensus | (no source)
 hyprland | /ˈhaɪpər lænd/ | hyper land | product | community-consensus | (no source)
 kakoune | /kæˈkuːn/ | kah koon | tool | community-consensus | (no source)
@@ -1083,9 +1083,9 @@ pipewire | /ˈpaɪp waɪər/ | pipe wire | product | community-consensus | (no s
 postfix | /ˈpoʊst fɪks/ | post fix | product | community-consensus | (no source)
 pulseaudio | /ˈpʌls ˌɔːdi oʊ/ | pulse audio | product | community-consensus | (no source)
 pyroscope | /ˈpaɪroʊ skoʊp/ | pie ro scope | product | community-consensus | (no source)
-qt | /kjuːt/ | cute | tool | creator-clarified | https://www.qt.io/
+qt | /kjuːt/ | cute | tool | contested | https://www.qt.io/
 quarto | /ˈkwɑːrtoʊ/ | kwar toe | tool | community-consensus | (no source)
-quay | /kiː/ | key | product | creator-clarified | https://quay.io/
+quay | /kiː/ | key | product | contested | https://news.ycombinator.com/item?id=45369383
 rancher | /ˈræntʃər/ | ran cher | product | community-consensus | (no source)
 rekor | /ˈriːkɔːr/ | ree core | tool | community-consensus | (no source)
 scylla | /ˈsɪlə/ | sill uh | product | community-consensus | (no source)
@@ -1116,7 +1116,7 @@ payloadcms | /ˈpeɪloʊd ɛs ɛm ɛs/ | pay load ess em ess | product | communi
 sequelize | /ˈsiːkwəlaɪz/ | see kwul ize | tool | community-consensus | (no source)
 strapi | /ˈstrɑːpi/ | strah pee | product | contested | (no source)
 sveltekit | /ˈsvɛlt kɪt/ | svelt kit | product | community-consensus | (no source)
-zapier | /ˈzæpiər/ | zap ee er | product | creator-clarified | https://zapier.com/
+zapier | /ˈzæpiər/ | zap ee er | product | creator-clarified | https://mixergy.com/interviews/zapier-with-wade-foster/
 torvalds | /ˈtɔːrvɔːldz/ | tor valdz | person | community-consensus | (no source)
 guido | /ˈɣiːdoʊ/ | ghee doh | person | contested | (no source)
 stroustrup | /ˈstroʊstrʊp/ | strow strup | person | community-consensus | (no source)
@@ -1352,7 +1352,7 @@ rssm | /ˌɑːr ɛs ɛs ˈɛm/ | ar ess ess em | abbreviation | community-consen
 tdmpc | /ˌtiː diː ɛm piː ˈsiː/ | tee dee em pee see | abbreviation | community-consensus | (no source)
 octo | /ˈɒktoʊ/ | ok toh | product | community-consensus | (no source)
 openvla | /ˈoʊpən viː ɛl ˈeɪ/ | open vee ell ay | product | community-consensus | (no source)
-mujoco | /ˈmjuːdʒoʊkoʊ/ | mew jo co | product | creator-clarified | https://mujoco.org/
+mujoco | /ˈmjuːdʒoʊkoʊ/ | mew jo co | product | community-consensus | https://mujoco.org/
 isaac | /ˈaɪzək/ | eye zik | product | community-consensus | (no source)
 habitat | /ˈhæbɪtæt/ | hab ih tat | product | community-consensus | (no source)
 gymnasium | /dʒɪmˈneɪziəm/ | jim nay zee um | product | community-consensus | (no source)
@@ -1462,7 +1462,7 @@ RACI | /ˈreɪsi/ | ray see | acronym | community-consensus | https://en.wikiped
 EBR | /ˌiː biː ˈɑːr/ | ee bee ar | acronym | community-consensus | (no source)
 MBR | /ˌɛm biː ˈɑːr/ | em bee ar | acronym | community-consensus | (no source)
 MoTS | /ˌɛm oʊ tiː ˈɛs/ | em oh tee ess | acronym | contested | (no source)
-arxiv | /ˈɑːrkaɪv/ | ar kive | product | creator-clarified | https://info.arxiv.org/help/faq/whatisarxiv.html
+arxiv | /ˈɑːrkaɪv/ | ar kive | product | creator-clarified | https://arxiv.org/new
 preprint | /ˈpriːˌprɪnt/ | pree print | cs-term | community-consensus | (no source)
 NeurIPS | /ˈnʊrɪps/ | noor ips | acronym | community-consensus | https://neurips.cc/
 ICML | /ˌaɪ siː ɛm ˈɛl/ | eye see em ell | acronym | community-consensus | https://icml.cc/
@@ -1477,8 +1477,8 @@ COLT | /koʊlt/ | colt | acronym | community-consensus | https://learningtheory.
 IJCAI | /ˌaɪ dʒeɪ siː eɪ ˈaɪ/ | eye jay see ay eye | acronym | contested | https://www.ijcai.org/
 SIGGRAPH | /ˈsɪɡɡræf/ | sig graf | acronym | community-consensus | https://www.siggraph.org/
 OpenReview | /ˈoʊpən rɪˌvjuː/ | open re view | product | community-consensus | https://openreview.net/
-BLEU | /bluː/ | blue | acronym | creator-clarified | https://aclanthology.org/P02-1040/
-ROUGE | /ruːʒ/ | roozh | acronym | creator-clarified | https://aclanthology.org/W04-1013/
+BLEU | /bluː/ | blue | acronym | community-consensus | https://aclanthology.org/P02-1040/
+ROUGE | /ruːʒ/ | roozh | acronym | community-consensus | https://aclanthology.org/W04-1013/
 METEOR | /ˈmiːtiər/ | mee tee er | acronym | community-consensus | https://aclanthology.org/W05-0909/
 CIDEr | /ˈsaɪdər/ | side er | acronym | community-consensus | https://arxiv.org/abs/1411.5726
 IoU | /ˌaɪ oʊ ˈjuː/ | eye oh you | acronym | community-consensus | https://en.wikipedia.org/wiki/Jaccard_index
@@ -1643,7 +1643,7 @@ PagedAttention | /ˈpeɪdʒd əˈtɛnʃən/ | payjd uh ten shun | cs-term | comm
 maturin | /ˈmætʊrɪn/ | mat uh rin | cli-tool | community-consensus | https://github.com/PyO3/maturin
 krea | /ˈkriːə/ | kree uh | product | community-consensus | https://www.krea.ai/
 veo | /ˈviːoʊ/ | vee oh | product | contested | https://deepmind.google/models/veo/
-oxlint | /ˈɒksˌlɪnt/ | ox lint | cli-tool | creator-clarified | https://oxc.rs/docs/guide/usage/linter.html
+oxlint | /ˌoʊ ɛks ˈlɪnt/ | O X lint | cli-tool | creator-clarified | https://oxc.rs/docs/guide/usage/linter.html
 pixtral | /ˈpɪks trɑːl/ | piks trahl | product | community-consensus | https://arxiv.org/abs/2410.07073
 ChatGLM | /ˌtʃæt dʒiː ɛl ˈɛm/ | chat jee ell em | product | community-consensus | https://github.com/THUDM/ChatGLM-6B
 nemotron | /ˈniːmoʊˌtrɑːn/ | nee moh tron | product | community-consensus | https://en.wikipedia.org/wiki/Nemotron
@@ -1741,7 +1741,7 @@ Nostr | /ˈnoʊ.stər/ | NOH ster | cs-term | contested | https://en.wikipedia.o
 QOI | /kɔɪ/ | koy | abbreviation | contested | https://en.wikipedia.org/wiki/QOI_(image_format)
 CBOR | /ˈsiːbɔːr/ | SEE bore | acronym | contested | https://datatracker.ietf.org/doc/html/rfc8949
 Brotli | /ˈbroʊt.li/ | BROHT lee | cs-term | community-consensus | https://opensource.googleblog.com/2015/09/introducing-brotli-new-compression.html
-Cap'n Proto | /ˌkæpən ˈproʊtoʊ/ | KAP uhn PROH toh | tool | creator-clarified | https://news.ycombinator.com/item?id=36909537
+Cap'n Proto | /ˌkæpən ˈproʊtoʊ/ | KAP uhn PROH toh | tool | community-consensus | https://news.ycombinator.com/item?id=36909537
 Dirichlet | /ˌdɪərɪˈkleɪ/ | deer ick LAY | person | contested | https://en.wikipedia.org/wiki/Talk:Johann_Peter_Gustav_Lejeune_Dirichlet
 Galois | /ɡælˈwɑ/ | gal WAH | person | community-consensus | https://en.wiktionary.org/wiki/Galois
 Levenshtein | /ˈlɛvənˌʃtaɪn/ | LEV en shtine | person | contested | https://en.wikipedia.org/wiki/Levenshtein_distance
@@ -1790,7 +1790,7 @@ Kokoro | /ˈkoʊkoʊroʊ/ | koh koh roh | product | community-consensus | https:
 Le Chat | /lə ʃɑ/ | luh shah | product | community-consensus | https://en.wikipedia.org/wiki/Mistral_AI
 Machete | /məˈʃɛti/ | muh shet ee | project | community-consensus | https://developers.redhat.com/articles/2024/10/14/introducing-machete-mixed-input-gemm-kernel
 Marey | /ˈmɛri/ | mair ee | product | community-consensus | https://www.fastcompany.com/91363868/moonvalley-releases-its-power-tool-for-ai-filmmaking
-MinIO | /mɪnˈaɪoʊ/ | min eye oh | product | creator-clarified | https://www.techtarget.com/searchstorage/blog/Storage-Soup/Minio-prepares-new-object-storage-dish-for-2019
+MinIO | /mɪnˈaɪoʊ/ | min eye oh | product | creator-clarified | https://web.archive.org/web/20220120131257/https://www.techtarget.com/searchstorage/blog/Storage-Soup/Minio-prepares-new-object-storage-dish-for-2019
 Orpheus | /ˈɔːrfiːəs/ | or fee us | product | community-consensus | https://en.wikipedia.org/wiki/Orpheus
 Phind | /faɪnd/ | find | product | community-consensus | https://www.ycombinator.com/companies/phind
 Qodo | /ˈkoʊdoʊ/ | koh doh | product | community-consensus | https://www.qodo.ai/blog/introducing-qodo-a-new-name-the-same-commitment-to-quality/
@@ -1885,7 +1885,7 @@ musl | /ˈmʌsəl/ | muscle | product | creator-clarified | https://musl.libc.or
 axios | /ˈæksioʊs/ | ak see ose | product | contested | https://github.com/axios/axios/issues/802
 Mockito | /mɑːˈkiːtoʊ/ | mah kee toh | tool | contested | https://github.com/mockito/mockito/issues/889
 xonsh | /kɑːnʃ/ | kahnsh | cli-tool | creator-clarified | https://xon.sh/
-Pyodide | /ˈpaɪəˌdaɪd/ | pie uh dyed | product | creator-clarified | https://github.com/pyodide/pyodide/issues/1631
+Pyodide | /ˈpaɪəˌdaɪd/ | pie uh dyed | product | community-consensus | https://github.com/pyodide/pyodide/issues/1631
 Haxe | /hɛks/ | hex | product | contested | https://groups.google.com/g/haxelang/c/GSOT3BGU180
 FLTK | /ˈfʊltɪk/ | full tick | tool | creator-clarified | https://www.fltk.org/doc-1.1/intro.html
 Cygwin | /ˈsɪɡwɪn/ | sig win | tool | community-consensus | https://en.wikipedia.org/wiki/Cygwin
@@ -1905,19 +1905,19 @@ enactivism | /ɪˈnæktɪvɪzəm/ | ih NAK tih viz um | cs-term | community-cons
 autopoiesis | /ˌɔːtoʊpɔɪˈiːsɪs/ | aw toh poy EE sis | cs-term | community-consensus | https://en.wiktionary.org/wiki/autopoiesis
 Genie 3 | /ˈdʒiːni ˈθriː/ | jee nee three | product | community-consensus | https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/
 Marble | /ˈmɑːrbəl/ | mar bul | product | community-consensus | https://www.worldlabs.ai/blog/marble-world-model
-humans& | /ˈhjuːmənz ænd/ | humans and | product | creator-clarified | https://humansand.ai
+humans& | /ˈhjuːmənz ænd/ | humans and | product | community-consensus | https://humansand.ai
 Boba | /ˈboʊbə/ | boh buh | product | community-consensus | https://boba.humansand.ai/blog/
 &Tutor | /ˈæmpərˌsænd ˈtuːtər/ | ampersand tutor | product | creator-clarified | https://tutor.humansand.ai/blog/
 Persimmon | /pərˈsɪmən/ | per sim uhn | product | community-consensus | https://persimmon.humansand.ai/blog/persimmon.html
 Ampersand | /ˈæmpərˌsænd/ | am per sand | product | community-consensus | https://ampersand.humansand.ai/blog/
 TutorMoments | /ˈtuːtər ˌmoʊmənts/ | tutor moments | product | community-consensus | https://tutormoments.allen.ai/
 MegaMoE | /ˈmɛɡə ˌɛm oʊ ˈiː/ | MEG uh em oh EE | cs-term | contested | https://humansand.ai/blog/faster-than-light-nvfp4-decode
-4-bitter Lesson | /ˌfɔːrˈbɪtər ˈlɛsən/ | four bitter lesson | cs-term | creator-clarified | https://humansand.ai/blog/nvfp4-rl.html
+4-bitter Lesson | /ˌfɔːrˈbɪtər ˈlɛsən/ | four bitter lesson | cs-term | community-consensus | https://humansand.ai/blog/nvfp4-rl.html
 Multi-User Turing Test | /ˌmʌlti ˌjuːzər ˈtʊrɪŋ ˌtɛst/ | mul tee yoo zer touring test | cs-term | community-consensus | https://persimmon.humansand.ai/blog/persimmon.html
 NVFP4 | /ˌɛn viː ɛf piː ˈfɔr/ | N V F P four | acronym | community-consensus | https://developer.nvidia.com/blog/nvfp4-trains-with-precision-of-16-bit-and-speed-and-efficiency-of-4-bit/
 Astra | /ˈæstrə/ | astruh | product | community-consensus | https://openai.com/index/gpt-6-astra/
 DeepInfer | /ˈdiːp ɪnˌfɜːr/ | deep infer | project | community-consensus | https://github.com/deepseek-ai/DeepInfer
-Jev | /dʒɛv/ | jev | product | creator-clarified | https://typesafe.ai/blog/introducing-system-one-models-and-jev
+Jev | /dʒɛv/ | jev | product | community-consensus | https://typesafe.ai/blog/introducing-system-one-models-and-jev
 Postman | /ˈpoʊstˌmən/ | post man | product | community-consensus | https://www.postman.com/
 Miles | /maɪlz/ | miles | project | community-consensus | https://github.com/radixark/miles
 CooperBench | /ˈkuːpər ˌbɛntʃ/ | cooper bench | project | community-consensus | https://cooperbench.com/
@@ -1926,7 +1926,7 @@ T3Code | /ˌtiː ˈθriː ˈkoʊd/ | tee three code | product | community-consen
 claude-mem | /ˌklɔːd ˈmɛm/ | clawed MEM | project | community-consensus | https://github.com/thedotmack/claude-mem/blob/main/docs/story.md
 stroq | /strɑk/ | strock | project | contested | https://news.ycombinator.com/item?id=50380704
 physicl | /ˈfɪzɪkəl/ | fiz ih kul | product | community-consensus | https://www.physicl.ai/
-SpAItial | /ˈspeɪʃəl/ | SPAY shul | product | creator-clarified | https://www.spaitial.ai/
+SpAItial | /ˈspeɪʃəl/ | SPAY shul | product | community-consensus | https://www.spaitial.ai/
 MaxxBench | /ˈmæks ˌbɛntʃ/ | MAKS bench | cs-term | community-consensus | https://maxxbench.unlap.ai/research/why-maxxbench/
 benchmaxxing | /ˈbɛntʃˌmæksɪŋ/ | bench maks ing | cs-term | community-consensus | https://maxxbench.unlap.ai/research/why-maxxbench/
 mitmproxy | /ˈmɪdəmˌprɑːksi/ | mid-um proxy | cli-tool | creator-clarified | https://github.com/mitmproxy/mitmproxy/discussions/5813

@@ -7,9 +7,9 @@
   "source_url": "https://mujoco.org/",
   "source_label": "MuJoCo",
   "category": "product",
-  "confidence": "creator-clarified",
+  "confidence": "community-consensus",
   "notes": "Multi-Joint dynamics with Contact physics engine; \"MEW-jo-co\".",
   "audio_url": "https://pronounce.renlab.ai/audio/mujoco.mp3",
   "url": "https://pronounce.renlab.ai/word/mujoco",
-  "date_modified": "2026-05-26"
+  "date_modified": "2026-11-24"
 }

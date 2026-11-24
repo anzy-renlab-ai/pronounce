@@ -2,14 +2,14 @@
   "word": "quay",
   "ipa": "/kiː/",
   "respelling_us": "key",
-  "alt_ipa": [],
-  "alt_respelling_us": [],
-  "source_url": "https://quay.io/",
-  "source_label": "Red Hat Quay",
+  "alt_ipa": ["/kweɪ/"],
+  "alt_respelling_us": ["kway"],
+  "source_url": "https://news.ycombinator.com/item?id=45369383",
+  "source_label": "Quay co-founder (jschorr) on Hacker News",
   "category": "product",
-  "confidence": "creator-clarified",
-  "notes": "Container registry; pronounced \"key\" (like the dock).",
+  "confidence": "contested",
+  "notes": "Container registry. The English word \"quay\" is said \"key\". A Quay co-founder says the team originally said \"kway\" and told customers to pronounce it however they please.",
   "audio_url": "https://pronounce.renlab.ai/audio/quay.mp3",
   "url": "https://pronounce.renlab.ai/word/quay",
-  "date_modified": "2026-05-21"
+  "date_modified": "2026-11-24"
 }

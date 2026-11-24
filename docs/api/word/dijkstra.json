@@ -7,9 +7,9 @@
   "source_url": "https://www.cs.utexas.edu/users/EWD/",
   "source_label": "Edsger Dijkstra archive",
   "category": "cs-term",
-  "confidence": "creator-clarified",
-  "notes": "Dutch: \"DIKE-strah\". Edsger himself corrected English speakers many times.",
+  "confidence": "community-consensus",
+  "notes": "Dutch surname of the algorithm's designer. English speakers say \"DYKE-strah\" or \"DYKE-struh\"; in Dutch it is closer to \"DAYK-strah\".",
   "audio_url": "https://pronounce.renlab.ai/audio/dijkstra.mp3",
   "url": "https://pronounce.renlab.ai/word/dijkstra",
-  "date_modified": "2026-05-19"
+  "date_modified": "2026-11-24"
 }

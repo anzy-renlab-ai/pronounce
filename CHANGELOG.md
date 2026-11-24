@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.41.1 — 2026-11-24
+
+**`creator-clarified` now survives clicking the link: 116 → 83.** No entry added (1,979 total). We fetched the cited page of all 116 tagged rows and looked for a statement of the reading by the creator or by the project itself. 33 rows lost the tag. 30 of them moved to `community-consensus`, among them TOML, awk, Keras, Raft, OWASP, Dapr, Ghostty, Slidev and Buildah, because the page they cite never says how the name is spoken. 3 moved to `contested`, where the evidence shows two readings in wide use: `a11y`, `qt`, `quay`.
+
+24 rows now point to a different page, and the 15 that stay `creator-clarified` cite one that carries the statement. GIF's New York Times link had never been archived and answered 403 to every fetch. The archived NYT Bits post carries Wilhite's sentence. PostgreSQL's and arXiv's FAQ URLs are 404. Django's foundation FAQ has no pronunciation statement. `o3` and `phi` lost source URLs that supported nothing.
+
+Seven readings were corrected where the respelling said something other than the note claimed, or where the source gives a second reading. HTTPie is "H T T pie". `say` read the old "H T T P aye" as "…P eye". TOML is two syllables, "TOM-ul". doubao's second syllable rhymes with "cow". oxlint, Tcl, a11y and quay gained the alternates their own sources give.
+
+Three hand-written pages had drifted from the data. The receipts page set 21 quotes in quotation marks, and none was on the page it cited. All 24 cards now quote the linked page verbatim. The README scoreboard still presented TOML and awk as creator-settled. The home page, the VS Code copy and the plugin manifest quoted older totals (1,903 entries / 1,283 sources on the home page, 1,972 in the manifest). `tools/sync-counts.mjs` rewrites those numbers from the dictionary, and the tests compare them with it instead of pinning literals. Two new tests fail when a hand-picked "settled" list names a row that is not `creator-clarified`, or when a receipts card disagrees with its entry.
+
+Left alone on purpose. `TeX` keeps the tag on a Wikipedia citation, because changing it changes the home page's Famous Moments. Six rows (Simile, KugelAudio, Gradium, NeoCognition, Andon, TAIDE) cite a video of the creator saying the name, which a text check cannot re-read. About 600 source links are still only a project home page. No new word qualified: the week's trending model names state no reading anywhere official, and the 24 remaining in-scope demand holes (iphone, wordpress, windows, …) are names whose readings fall out of their English parts.
+
 ## v2.41.0 — 2026-11-23
 
 **Three words nobody could believe were missing: `excel`, `ajax`, `asynchronous`** (1,979 total) — a 1,976-entry dev dictionary that could answer `Navier–Stokes` but drew a blank on the spreadsheet everyone opens daily, the technique every web dev has said since 2005, and the adjective in every API doc. `excel` /ɪkˈsɛl/ cites Cambridge US, which lists the software trademark under the headword (word-read ik-SELL, not EX-cell); `ajax` /ˈeɪdʒæks/ cites the Wikipedia lead's IPAc-en; `asynchronous` /eɪˈsɪŋkrənəs/ cites Cambridge US — stress on the second syllable, and its short form `async` has had an entry all along. All three citations re-fetched by the orchestrator before shipping; the verifiers' quotes are inputs, not evidence.

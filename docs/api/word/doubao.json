@@ -1,15 +1,15 @@
 {
   "word": "doubao",
   "ipa": "/doʊ ˈbaʊ/",
-  "respelling_us": "doh BOW",
+  "respelling_us": "doh bough",
   "alt_ipa": [],
   "alt_respelling_us": [],
   "source_url": "https://www.doubao.com/",
   "source_label": "Doubao official",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "ByteDance chatbot 豆包. Pinyin dòu-bāo → \"doh-BOW\" (bow as in bow-and-arrow).",
+  "notes": "ByteDance chatbot 豆包. Pinyin dòu-bāo → \"doh bough\" (bough as in \"take a bow\", rhymes with cow).",
   "audio_url": "https://pronounce.renlab.ai/audio/doubao.mp3",
   "url": "https://pronounce.renlab.ai/word/doubao",
-  "date_modified": "2026-05-18"
+  "date_modified": "2026-11-24"
 }

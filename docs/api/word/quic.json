@@ -7,9 +7,9 @@
   "source_url": "https://datatracker.ietf.org/doc/html/rfc9000",
   "source_label": "IETF RFC 9000",
   "category": "acronym",
-  "confidence": "creator-clarified",
-  "notes": "IETF + Google docs: \"quick\". From \"Quick UDP Internet Connections\".",
+  "confidence": "community-consensus",
+  "notes": "\"quick\", like the word. Its designer's name for it was \"Quick UDP Internet Connections\" (Chromium blog, 2013); RFC 9000 says \"QUIC is a name, not an acronym\".",
   "audio_url": "https://pronounce.renlab.ai/audio/quic.mp3",
   "url": "https://pronounce.renlab.ai/word/quic",
-  "date_modified": "2026-05-19"
+  "date_modified": "2026-11-24"
 }

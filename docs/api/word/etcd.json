@@ -8,8 +8,8 @@
   "source_label": "etcd FAQ",
   "category": "product",
   "confidence": "creator-clarified",
-  "notes": "Project FAQ documents \"et-cetera-distributed\".",
+  "notes": "Project FAQ: \"etcd is pronounced /ˈɛtsiːdiː/\" — the letters E-T-C-D, meaning \"distributed etc directory\".",
   "audio_url": "https://pronounce.renlab.ai/audio/etcd.mp3",
   "url": "https://pronounce.renlab.ai/word/etcd",
-  "date_modified": "2026-05-19"
+  "date_modified": "2026-11-24"
 }

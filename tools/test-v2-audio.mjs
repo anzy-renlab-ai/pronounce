@@ -50,6 +50,7 @@ test('VS Code count copy keeps total, sourced, and creator metrics distinct', ()
     '1,260 also carry a citable source',
     '1,260 of 1,880 entries carry a citable source',
     '1,260 sourced entries',
+    '1,260 with cited sources',
     '101 settled by the creator; 172 the community still argues',
     '1880 条社区维护词条，其中 1260 条带来源引用，101 条为作者确认',
   ].join('\n');
@@ -66,6 +67,7 @@ test('VS Code count copy keeps total, sourced, and creator metrics distinct', ()
       '1,283 also carry a citable source',
       '1,283 of 1,903 entries carry a citable source',
       '1,283 sourced entries',
+      '1,283 with cited sources',
       '108 settled by the creator; 175 the community still argues',
       '1903 条社区维护词条，其中 1283 条带来源引用，108 条为作者确认',
     ].join('\n'),
@@ -602,7 +604,7 @@ test('v2 product and release fact source contract', async t => {
     );
     assert.doesNotMatch(
       `${SECTIONS_1_SOURCE}\n${SECTIONS_2_SOURCE}`,
-      /(?:all|every) (?:1,903|1903|\$\{DICT_ALL\.length\})[^.\n]*(?:source|cited)/i,
+      /(?:all|every) (?:\d[\d,]*|\$\{DICT_ALL\.length\})[^.\n]*(?:source|cited)/i,
     );
     assert.doesNotMatch(SECTIONS_2_SOURCE, /Every entry[^.\n]*(?:source|linked)/i);
     assert.match(SECTIONS_2_SOURCE, /a source citation when available/i);
@@ -614,7 +616,23 @@ test('v2 product and release fact source contract', async t => {
 
   await t.test('footer and noindex scaffold identify the v2.28.1 release', () => {
     assert.match(SECTIONS_2_SOURCE, /sayit · MIT · v2\.28\.1 ·/);
-    assert.match(V2_INDEX_SOURCE, /1,903 entries[^"\n]*1,283[^"\n]*cited sources/i);
+    // The scaffold's numbers are hand-maintained; compare them with the dictionary
+    // instead of pinning literals, which stayed on 1,903 / 1,283 until 2026-11-24.
+    const rows = readFileSync(
+      new URL('../data/pronunciations.tsv', import.meta.url),
+      'utf8',
+    )
+      .split('\n')
+      .filter(line => line && !line.startsWith('#') && !line.startsWith('word\t'))
+      .map(line => line.split('\t'))
+      .filter(cells => cells.length >= 10 && cells[0] && cells[2]);
+    const fmt = value => value.toLocaleString('en-US');
+    const total = fmt(rows.length);
+    const sourced = fmt(rows.filter(cells => (cells[5] || '').trim()).length);
+    assert.match(
+      V2_INDEX_SOURCE,
+      new RegExp(`${total} entries[^"\\n]*${sourced}[^"\\n]*cited sources`, 'i'),
+    );
   });
 
   await t.test('noindex scaffold uses root OG URL and deferred same-origin runtime scripts', () => {

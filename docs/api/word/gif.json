@@ -4,12 +4,12 @@
   "respelling_us": "jif",
   "alt_ipa": ["/ɡɪf/"],
   "alt_respelling_us": ["ghif"],
-  "source_url": "https://www.nytimes.com/2013/05/22/business/media/creator-of-the-gif-says-its-pronounced-jif.html",
+  "source_url": "https://web.archive.org/web/20130522145554/http://bits.blogs.nytimes.com/2013/05/21/an-honor-for-the-creator-of-the-gif/",
   "source_label": "Steve Wilhite, NYT (2013)",
   "category": "acronym",
   "confidence": "creator-clarified",
-  "notes": "Wilhite (creator): \"It's pronounced JIF, not GIF.\" Community remains split. The alternate uses \"ghif\" as an explicit hard-G TTS cue.",
+  "notes": "Wilhite (creator), NYT 2013: \"It is a soft 'G,' pronounced 'jif.' End of story.\" The community remains split. The alternate uses \"ghif\" as an explicit hard-G TTS cue.",
   "audio_url": "https://pronounce.renlab.ai/audio/gif.mp3",
   "url": "https://pronounce.renlab.ai/word/gif",
-  "date_modified": "2026-07-24"
+  "date_modified": "2026-11-24"
 }

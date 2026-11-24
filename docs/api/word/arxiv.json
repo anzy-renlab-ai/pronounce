@@ -4,12 +4,12 @@
   "respelling_us": "ar kive",
   "alt_ipa": [],
   "alt_respelling_us": [],
-  "source_url": "https://info.arxiv.org/help/faq/whatisarxiv.html",
-  "source_label": "arXiv FAQ",
+  "source_url": "https://arxiv.org/new",
+  "source_label": "arXiv project history (arxiv.org/new)",
   "category": "product",
   "confidence": "creator-clarified",
   "notes": "\"AR-kive\" — the X is Greek chi (/k/), so it sounds like \"archive\". Not \"arks-iv\".",
   "audio_url": "https://pronounce.renlab.ai/audio/arxiv.mp3",
   "url": "https://pronounce.renlab.ai/word/arxiv",
-  "date_modified": "2026-05-27"
+  "date_modified": "2026-11-24"
 }

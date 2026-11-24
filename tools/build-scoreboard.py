@@ -24,7 +24,9 @@ COLS = ["word", "ipa", "respelling_us", "alt_ipa", "alt_respelling_us",
 # Marquee fights surface first — the ones that reliably start standup arguments.
 CONTESTED_STARS = ["kubectl", "SQL", "JSON", "GUI", "JWT", "GIF", "char",
                    "regex", "sudo", "cron", "nginx", "Qdrant", "Dvorak"]
-SETTLED_STARS = ["GIF", "nginx", "YAML", "GNU", "LaTeX", "TOML", "Tcl", "awk"]
+# Every name here must still be tagged creator-clarified in the dictionary
+# (RepositoryProductFactTests in tools/test_build_v2_data.py).
+SETTLED_STARS = ["GIF", "nginx", "YAML", "GNU", "LaTeX", "etcd", "scrypt", "Tcl"]
 
 
 def slug(w):

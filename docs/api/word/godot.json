@@ -4,12 +4,12 @@
   "respelling_us": "god oh",
   "alt_ipa": [],
   "alt_respelling_us": [],
-  "source_url": "https://godotengine.org/",
-  "source_label": "Godot",
+  "source_url": "https://godotengine.org/press",
+  "source_label": "Godot Engine press page",
   "category": "product",
   "confidence": "creator-clarified",
-  "notes": "\"GOD-oh\" per project FAQ. \"GOD-ot\" also widespread.",
+  "notes": "Named after the play \"Waiting for Godot\" and, per the project's press page, usually pronounced like in the play: \"GOD-oh\".",
   "audio_url": "https://pronounce.renlab.ai/audio/godot.mp3",
   "url": "https://pronounce.renlab.ai/word/godot",
-  "date_modified": "2026-05-19"
+  "date_modified": "2026-11-24"
 }

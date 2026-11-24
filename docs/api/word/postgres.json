@@ -4,12 +4,12 @@
   "respelling_us": "post gress",
   "alt_ipa": [],
   "alt_respelling_us": [],
-  "source_url": "https://www.postgresql.org/docs/current/faq.html",
-  "source_label": "PostgreSQL FAQ",
+  "source_url": "https://wiki.postgresql.org/wiki/FAQ",
+  "source_label": "PostgreSQL wiki FAQ",
   "category": "product",
   "confidence": "creator-clarified",
-  "notes": "\"POST-gress\".",
+  "notes": "\"POST-gress\". Short for PostgreSQL; the official press FAQ writes \"post-GRES\" and says many people find it easier to just say that.",
   "audio_url": "https://pronounce.renlab.ai/audio/postgres.mp3",
   "url": "https://pronounce.renlab.ai/word/postgres",
-  "date_modified": "2026-05-16"
+  "date_modified": "2026-11-24"
 }

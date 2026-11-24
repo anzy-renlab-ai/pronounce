@@ -7,9 +7,9 @@
   "source_url": "https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing",
   "source_label": "Wikipedia",
   "category": "acronym",
-  "confidence": "creator-clarified",
-  "notes": "\"cider\" — like the apple drink. Documented in CIDR specs.",
+  "confidence": "community-consensus",
+  "notes": "\"cider\" — like the apple drink. Wikipedia's article records the reading.",
   "audio_url": "https://pronounce.renlab.ai/audio/cidr.mp3",
   "url": "https://pronounce.renlab.ai/word/cidr",
-  "date_modified": "2026-05-16"
+  "date_modified": "2026-11-24"
 }

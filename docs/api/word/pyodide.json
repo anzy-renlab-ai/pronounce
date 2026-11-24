@@ -7,9 +7,9 @@
   "source_url": "https://github.com/pyodide/pyodide/issues/1631",
   "source_label": "Pyodide GitHub issue #1631",
   "category": "product",
-  "confidence": "creator-clarified",
-  "notes": "CPython compiled to WebAssembly for running Python in the browser; maintainers rth and hoodmane gave the IPA ˈpɑɪ.ə.ˌdɑɪd (Py + Iodide — rhymes with iodide).",
+  "confidence": "community-consensus",
+  "notes": "CPython compiled to WebAssembly for running Python in the browser; rhymes with \"iodide\". The reading is relayed second-hand in pyodide issue #1631 (a maintainers' answer from Gitter); the docs state none.",
   "audio_url": "https://pronounce.renlab.ai/audio/pyodide.mp3",
   "url": "https://pronounce.renlab.ai/word/pyodide",
-  "date_modified": "2026-07-17"
+  "date_modified": "2026-11-24"
 }

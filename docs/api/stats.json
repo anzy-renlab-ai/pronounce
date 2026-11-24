@@ -1,7 +1,7 @@
 {
   "total": 1979,
-  "with_source": 1322,
-  "source_coverage_pct": 66.8,
+  "with_source": 1320,
+  "source_coverage_pct": 66.7,
   "by_category": {"project": 102,"acronym": 365,"person": 107,"cs-term": 288,"tool": 223,"product": 789,"abbreviation": 53,"cli-tool": 52},
-  "by_confidence": {"contested": 181,"creator-clarified": 116,"community-consensus": 1682}
+  "by_confidence": {"contested": 184,"creator-clarified": 83,"community-consensus": 1712}
 }

@@ -1,15 +1,15 @@
 {
   "word": "TOML",
-  "ipa": "/toʊml/",
-  "respelling_us": "tohml",
+  "ipa": "/ˈtɑməl/",
+  "respelling_us": "tom ul",
   "alt_ipa": [],
   "alt_respelling_us": [],
   "source_url": "https://toml.io/",
   "source_label": "toml.io",
   "category": "acronym",
-  "confidence": "creator-clarified",
-  "notes": "Tom Preston-Werner (creator): \"rhymes with knoll/troll/roll\".",
+  "confidence": "community-consensus",
+  "notes": "Tom's Obvious, Minimal Language. Two syllables, \"TOM-ul\"; a project maintainer answers \"tom-el\" in issue #447.",
   "audio_url": "https://pronounce.renlab.ai/audio/toml.mp3",
   "url": "https://pronounce.renlab.ai/word/toml",
-  "date_modified": "2026-05-18"
+  "date_modified": "2026-11-24"
 }

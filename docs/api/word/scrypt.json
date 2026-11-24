@@ -4,12 +4,12 @@
   "respelling_us": "S crypt",
   "alt_ipa": [],
   "alt_respelling_us": [],
-  "source_url": "https://www.tarsnap.com/scrypt.html",
-  "source_label": "Colin Percival (creator)",
+  "source_url": "https://news.ycombinator.com/item?id=931544",
+  "source_label": "Colin Percival (cperciva) on Hacker News",
   "category": "cs-term",
   "confidence": "creator-clarified",
-  "notes": "Creator Colin Percival: \"ess-crypt\" (S then crypt). \"script\" is common but not the intent.",
+  "notes": "Creator Colin Percival (cperciva), HN 2009: \"s-crypt\", not \"script\".",
   "audio_url": "https://pronounce.renlab.ai/audio/scrypt.mp3",
   "url": "https://pronounce.renlab.ai/word/scrypt",
-  "date_modified": "2026-05-19"
+  "date_modified": "2026-11-24"
 }

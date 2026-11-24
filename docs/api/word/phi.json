@@ -4,12 +4,12 @@
   "respelling_us": "fai",
   "alt_ipa": ["/fiː/"],
   "alt_respelling_us": ["fee"],
-  "source_url": "https://huggingface.co/microsoft/phi-3",
-  "source_label": "Microsoft Phi",
+  "source_url": "",
+  "source_label": "",
   "category": "product",
   "confidence": "contested",
   "notes": "Microsoft's small-model series. Greek letter φ — US \"FAI\"; British/math \"FEE.\"",
   "audio_url": "https://pronounce.renlab.ai/audio/phi.mp3",
   "url": "https://pronounce.renlab.ai/word/phi",
-  "date_modified": "2026-05-18"
+  "date_modified": "2026-11-24"
 }

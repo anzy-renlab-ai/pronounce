@@ -4,12 +4,12 @@
   "respelling_us": "log seek",
   "alt_ipa": [],
   "alt_respelling_us": [],
-  "source_url": "https://logseq.com/",
-  "source_label": "Logseq",
+  "source_url": "https://discuss.logseq.com/t/how-do-you-pronounce-logseq-and-what-does-it-mean/321",
+  "source_label": "Logseq forum — staff moderator's answer",
   "category": "product",
-  "confidence": "creator-clarified",
-  "notes": "\"log-SEEK\"; log + sequence. Knowledge-graph notes.",
+  "confidence": "community-consensus",
+  "notes": "\"log-SEEK\"; log + sequence. The reading comes from a Logseq forum moderator, not a founder.",
   "audio_url": "https://pronounce.renlab.ai/audio/logseq.mp3",
   "url": "https://pronounce.renlab.ai/word/logseq",
-  "date_modified": "2026-05-18"
+  "date_modified": "2026-11-24"
 }

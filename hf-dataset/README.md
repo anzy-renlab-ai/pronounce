@@ -26,7 +26,7 @@ A community dictionary of how engineers actually pronounce developer jargon: pro
 
 The dataset is the data behind [pronounce.renlab.ai](https://pronounce.renlab.ai). Each entry carries IPA, an English-like respelling, alternative readings, a confidence label, a citable source URL where one exists, and a URL to pre-rendered audio.
 
-- **Entries:** 1,972
+- **Entries:** 1,979
 - **Language:** English (General American only)
 - **Format:** one JSON object per line (`pronunciations.jsonl`); a flat `pronunciations.csv` is also included
 - **License:** MIT
@@ -44,9 +44,9 @@ That second part is the differentiator. The interesting rows are not the ones ev
 
 | confidence            | count | meaning                                                                    |
 |-----------------------|-------|----------------------------------------------------------------------------|
-| `community-consensus` | 1,643  | one dominant reading, no live dispute                                      |
-| `contested`           | 177   | two or more readings in active use; the debate is real                     |
-| `creator-clarified`   | 116    | settled by the creator or an official FAQ, with a source quote on file     |
+| `community-consensus` | 1,712  | one dominant reading, no live dispute                                      |
+| `contested`           | 184   | two or more readings in active use; the debate is real                     |
+| `creator-clarified`   | 83    | settled by the creator or an official FAQ, with a source quote on file     |
 
 ## Column schema
 
@@ -76,7 +76,7 @@ The data is hand-curated, not scraped. Confidence labels are assigned by this ru
 
 - **`creator-clarified`** — used only when `source_url` documents a creator quote or an official FAQ entry stating the pronunciation. Example: the GNU Project hosts a dedicated [pronunciation page](https://www.gnu.org/gnu/pronunciation.html); `nginx.org` documents "engine x". A `creator-clarified` row without a real source is a bug.
 - **`contested`** — assigned when two or more readings are demonstrably in active use among practitioners and no creator/official ruling settles it (or a ruling exists but the community visibly ignores it, like `GIF`). The `notes` field names the competing camps.
-- **`community-consensus`** — the default: one dominant reading with no live dispute. Most of the 1,643 such entries are uncontroversial words that just needed an IPA and a respelling.
+- **`community-consensus`** — the default: one dominant reading with no live dispute. Most of the 1,712 such entries are uncontroversial words that just needed an IPA and a respelling.
 
 `source_url` is filled in wherever a citable reference exists (official FAQ, project about-page, Wikipedia pronunciation anchor). Where no source exists, it is left empty rather than faked.
 
@@ -86,14 +86,14 @@ The dataset's reason to exist is the citations. A few of the settled ones:
 
 | word    | reading       | who settled it                                              | confidence          |
 |---------|---------------|------------------------------------------------------------|---------------------|
-| `GIF`   | "jif"         | Steve Wilhite (creator), [NYT 2013](https://www.nytimes.com/2013/05/22/business/media/creator-of-the-gif-says-its-pronounced-jif.html) | `creator-clarified` |
+| `GIF`   | "jif"         | Steve Wilhite (creator), [NYT 2013](https://web.archive.org/web/20130522145554/http://bits.blogs.nytimes.com/2013/05/21/an-honor-for-the-creator-of-the-gif/) | `creator-clarified` |
 | `nginx` | "engine x"    | [nginx.org](https://nginx.org/en/) official                | `creator-clarified` |
-| `YAML`  | "yam-ul"      | [yaml.org](https://yaml.org/) ("rhymes with camel")        | `creator-clarified` |
+| `YAML`  | "yam-ul"      | [YAML 1.2.2 spec](https://yaml.org/spec/1.2.2/) ("rhymes with camel") | `creator-clarified` |
 | `GNU`   | "guh-new"     | [gnu.org pronunciation FAQ](https://www.gnu.org/gnu/pronunciation.html) | `creator-clarified` |
 | `LaTeX` | "lay-tek"     | Lamport / [LaTeX project](https://www.latex-project.org/about/) | `creator-clarified` |
-| `TOML`  | rhymes with "knoll" | Tom Preston-Werner (creator)                         | `creator-clarified` |
-| `Tcl`   | "tickle"      | John Ousterhout (creator)                                  | `creator-clarified` |
-| `awk`   | "auk"         | Aho / Weinberger / Kernighan, original AWK book            | `creator-clarified` |
+| `etcd`  | "et-cee-dee"  | [etcd FAQ](https://etcd.io/docs/v3.5/faq/)                  | `creator-clarified` |
+| `scrypt`| "s-crypt"     | [Colin Percival (creator), HN 2009](https://news.ycombinator.com/item?id=931544) | `creator-clarified` |
+| `Pkl`   | "pickle"      | [Apple Pkl team, launch post](https://pkl-lang.org/blog/introducing-pkl.html) | `creator-clarified` |
 
 And a few that are still genuinely `contested`:
 
@@ -101,7 +101,7 @@ And a few that are still genuinely `contested`:
 |-----------|-----------------------------------------------|
 | `kubectl` | "koob-control" vs "cube-cuttle" vs letter-by-letter |
 | `SQL`     | "sequel" (heir to IBM SEQUEL) vs "S-Q-L" (ANSI) |
-| `JSON`    | "jay-son" (Crockford) vs "jason"              |
+| `JSON`    | "jay-son" vs "jee-son" (Crockford, 2011: "I strictly don't care") |
 | `GUI`     | "gooey" vs "G-U-I"                             |
 | `JWT`     | "jot" vs "J-W-T"                              |
 

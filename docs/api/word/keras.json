@@ -7,9 +7,9 @@
   "source_url": "https://keras.io/",
   "source_label": "Keras docs",
   "category": "product",
-  "confidence": "creator-clarified",
-  "notes": "François Chollet (creator): \"KEHR-uss\", rhymes with \"Aaron\".",
+  "confidence": "community-consensus",
+  "notes": "From Greek κέρας \"horn\" (keras.io: \"Why this name, Keras?\"); rhymes with \"Aaron\".",
   "audio_url": "https://pronounce.renlab.ai/audio/keras.mp3",
   "url": "https://pronounce.renlab.ai/word/keras",
-  "date_modified": "2026-05-18"
+  "date_modified": "2026-11-24"
 }

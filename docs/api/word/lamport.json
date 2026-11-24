@@ -7,9 +7,9 @@
   "source_url": "https://lamport.azurewebsites.net/",
   "source_label": "Leslie Lamport site",
   "category": "cs-term",
-  "confidence": "creator-clarified",
+  "confidence": "community-consensus",
   "notes": "\"LAM-port\". Leslie Lamport — distributed-systems pioneer.",
   "audio_url": "https://pronounce.renlab.ai/audio/lamport.mp3",
   "url": "https://pronounce.renlab.ai/word/lamport",
-  "date_modified": "2026-05-19"
+  "date_modified": "2026-11-24"
 }

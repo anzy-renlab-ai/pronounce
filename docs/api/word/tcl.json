@@ -2,14 +2,14 @@
   "word": "Tcl",
   "ipa": "/ˈtɪkəl/",
   "respelling_us": "tickle",
-  "alt_ipa": [],
-  "alt_respelling_us": [],
-  "source_url": "https://www.tcl-lang.org/",
-  "source_label": "Tcl official",
+  "alt_ipa": ["/ˌtiː siː ˈɛl/"],
+  "alt_respelling_us": ["T C L"],
+  "source_url": "https://csis.pace.edu/~benjamin/software/book1.pdf",
+  "source_label": "Ousterhout, \"Tcl and the Tk Toolkit\" (1993 book draft)",
   "category": "product",
   "confidence": "creator-clarified",
-  "notes": "John Ousterhout (creator): \"tickle\". Official Tcl Developer Xchange confirms.",
+  "notes": "John Ousterhout (creator): \"Tcl stands for 'tool command language' and is pronounced 'tickle'\". The Tcler's Wiki now calls the letter-by-letter reading preferred.",
   "audio_url": "https://pronounce.renlab.ai/audio/tcl.mp3",
   "url": "https://pronounce.renlab.ai/word/tcl",
-  "date_modified": "2026-05-19"
+  "date_modified": "2026-11-24"
 }

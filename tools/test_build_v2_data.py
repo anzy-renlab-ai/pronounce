@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import ast
 import importlib.util
 import json
 import os
@@ -278,7 +279,7 @@ class RepositoryProductFactTests(unittest.TestCase):
                 self.assertIn(cli["source_url"], demo)
                 self.assertIn(cli["confidence"], demo)
 
-    def dictionary_counts(self):
+    def dictionary_rows(self):
         rows = []
         for line in self.source("data/pronunciations.tsv").splitlines():
             if not line or line.startswith("#") or line.startswith("word\t"):
@@ -286,7 +287,18 @@ class RepositoryProductFactTests(unittest.TestCase):
             cells = line.split("\t")
             if len(cells) >= 10 and cells[0] and cells[2]:
                 rows.append(cells)
+        return rows
+
+    def dictionary_counts(self):
+        rows = self.dictionary_rows()
         return len(rows), sum(bool(cells[5].strip()) for cells in rows)
+
+    def dictionary_confidence_counts(self):
+        rows = self.dictionary_rows()
+        return (
+            sum(cells[8] == "creator-clarified" for cells in rows),
+            sum(cells[8] == "contested" for cells in rows),
+        )
 
     def test_dictionary_counts_match_what_the_readme_advertises(self):
         # These were two literals, so every release that added an entry turned
@@ -557,13 +569,19 @@ class RepositoryProductFactTests(unittest.TestCase):
         self.assertNotRegex(
             readme,
             re.compile(
-                r"(?:all|every) (?:1,903|1903) (?:entries|words)"
+                r"(?:all|every) \d[\d,]* (?:entries|words)"
                 r"[^.\n]*(?:source|cited)",
                 re.IGNORECASE,
             ),
         )
 
     def test_vscode_count_sync_does_not_overwrite_source_coverage(self):
+        # Expected numbers come from the dictionary: literals here went stale on
+        # 2026-11-24 (the extension copy still said 1903 / 1283 / 108) while the
+        # test stayed green.
+        total, sourced = self.dictionary_counts()
+        creator, _ = self.dictionary_confidence_counts()
+
         builder = self.source("integrations/vscode/scripts/build-dict.mjs")
         synchronizer = self.source("integrations/vscode/scripts/count-sync.mjs")
         self.assertNotIn("(?:[ \\-]sourced)?", synchronizer)
@@ -574,13 +592,16 @@ class RepositoryProductFactTests(unittest.TestCase):
         self.assertIn("syncCountText(text", builder)
 
         zh = self.source("integrations/vscode/package.nls.zh-cn.json")
-        self.assertIn("1903 条发音词条，其中 1283 条带来源引用，108 条为作者确认", zh)
-        self.assertNotIn("1903 条带来源", zh)
+        self.assertIn(
+            f"{total} 条发音词条，其中 {sourced} 条带来源引用，{creator} 条为作者确认", zh
+        )
+        self.assertNotIn(f"{total} 条带来源", zh)
 
         package = self.source("integrations/vscode/package.json")
         walkthrough = self.source("integrations/vscode/media/walkthrough-star.md")
         self.assertIn("Browse all confidence-tagged entries", package)
-        self.assertIn("1,903 entries; 1,283 carry a citable source", walkthrough)
+        self.assertIn(f"{total:,} entries; {sourced:,} carry a citable source", walkthrough)
+        self.assertIn(f"dictionary-{total}%20entries", package)
         self.assertNotIn("Every entry has a source citation", walkthrough)
 
     def test_committed_daily_page_keeps_its_original_word_selection(self):
@@ -598,6 +619,11 @@ class RepositoryProductFactTests(unittest.TestCase):
         self.assertNotIn('"commits":', stats)
 
     def test_live_root_reports_exact_source_coverage_without_universal_claims(self):
+        # The root page is hand-maintained and no build rewrites its numbers, so
+        # the literals this test used to pin went stale with the page: on
+        # 2026-11-24 the meta descriptions and noscript block still said
+        # 1,903 / 1,283 against a dictionary of 1,979 / 1,322.
+        total, sourced = self.dictionary_counts()
         root = self.source("docs/index.html")
         for attribute in (
             'name="description"',
@@ -609,22 +635,24 @@ class RepositoryProductFactTests(unittest.TestCase):
                     root,
                     re.compile(
                         rf'<meta {attribute} content="[^"]*'
-                        r'1,903[^"]*1,283[^"]*citable source',
+                        rf'{total:,}[^"]*{sourced:,}[^"]*citable source',
                         re.IGNORECASE,
                     ),
                 )
 
         noscript = root.split("<noscript>", 1)[1].split("</noscript>", 1)[0]
-        self.assertIn("1,903", noscript)
-        self.assertIn("1,283", noscript)
-        self.assertNotIn("1,880", noscript)
-        self.assertNotIn("1,260", noscript)
+        self.assertIn(f"{total:,}", noscript)
+        self.assertIn(f"{sourced:,}", noscript)
+        quoted_totals = set(
+            re.findall(r"\b(\d,\d{3})(?= (?:project|tech|entries))", root)
+        )
+        self.assertEqual(quoted_totals, {f"{total:,}"}, "root page quotes a stale entry total")
         self.assertNotRegex(
             root,
             re.compile(
                 r"(?:each|every|all) (?:dictionary )?entr(?:y|ies)"
                 r"[^.\n]*(?:source|cited)|"
-                r"(?:1,903|1903) entries with cited sources",
+                r"\d[\d,]* entries with cited sources",
                 re.IGNORECASE,
             ),
         )
@@ -870,6 +898,78 @@ class RepositoryProductFactTests(unittest.TestCase):
             self.assertNotIn(retired, readmes)
         self.assertIn("VS_Code_Marketplace-install", readmes)
         self.assertIn("Open_VSX-install", readmes)
+
+    def dictionary_rows_by_lowercased_word(self):
+        rows = {}
+        for line in self.source("data/pronunciations.tsv").splitlines():
+            cells = line.split("\t")
+            if len(cells) == 10 and not line.startswith("#") and cells[0] != "word":
+                rows.setdefault(cells[0].lower(), []).append(cells)
+        return rows
+
+    def test_hand_picked_settled_lists_name_creator_clarified_rows(self):
+        # The README table and the scoreboard star list both promise "the creator
+        # said so". On 2026-11-24 they still showcased TOML and awk after the rows
+        # behind them were downgraded, because nothing tied either list to the tag.
+        rows = self.dictionary_rows_by_lowercased_word()
+
+        readme = self.source("README.md")
+        section = readme[readme.index("### ✅ Settled — the creator said so"):]
+        section = section[: section.index("### ⚔️")]
+        showcased = re.findall(r"^\| \*\*\[([^\]]+)\]\(https://pronounce\.renlab\.ai/word/", section, flags=re.M)
+        self.assertGreaterEqual(len(showcased), 6, "README settled table lost its rows")
+
+        spec = importlib.util.spec_from_file_location(
+            "build_scoreboard_under_test", REPO / "tools" / "build-scoreboard.py"
+        )
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        stars = module.SETTLED_STARS
+
+        for source, names in (("README settled table", showcased), ("SETTLED_STARS", stars)):
+            for name in names:
+                with self.subTest(list=source, word=name):
+                    matches = rows[name.lower()]
+                    self.assertEqual(len(matches), 1, f"{name} is not exactly one dictionary row")
+                    self.assertEqual(
+                        matches[0][8],
+                        "creator-clarified",
+                        f"{source} showcases {name}, but the row is tagged {matches[0][8]}",
+                    )
+
+    def receipts_cards(self):
+        page = self.source("docs/receipts.html")
+        block = page[page.index("const RECEIPTS = ["):]
+        block = block[: block.index("];")]
+        cards = []
+        for line in block.splitlines()[1:]:
+            line = line.strip()
+            if line.startswith("["):
+                # one JS array of single-quoted strings per line; the same literal syntax as Python's
+                cards.append(ast.literal_eval(line.rstrip(",")))
+        return cards
+
+    def test_receipts_cards_match_their_dictionary_rows(self):
+        # Every card shows its quote inside quotation marks, so the quote has to be
+        # on the page the card links to. On 2026-11-24 none of the 21 was. Whether a
+        # quote is verbatim needs the network and is checked when a card is edited;
+        # everything that can be compared offline is compared here.
+        cards = self.receipts_cards()
+        self.assertGreaterEqual(len(cards), 20, 'the page promises "20+ entries have a direct citation"')
+        self.assertIn('<span class="stat">20+ entries</span>', self.source("docs/receipts.html"))
+        for card in cards:
+            self.assertEqual(len(card), 6, card)
+            word, reading, ipa, quote, label, url = card
+            with self.subTest(word=word):
+                entry = self.dictionary_entry(word)
+                self.assertEqual(entry["respelling_us"], reading)
+                self.assertEqual(entry["ipa"], ipa)
+                self.assertEqual(entry["source_label"], label)
+                self.assertEqual(entry["source_url"], url)
+                self.assertNotEqual(url, "")
+                self.assertGreaterEqual(len(quote), 20)
+                # the card template wraps every quote in quotation marks; the quote itself must not carry its own
+                self.assertFalse(quote[0] == quote[-1] and quote[0] in "\"'“", f"{word}: quote carries its own quotation marks")
 
 
 if __name__ == "__main__":

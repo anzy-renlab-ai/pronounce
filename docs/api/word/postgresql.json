@@ -4,12 +4,12 @@
   "respelling_us": "post gress Q L",
   "alt_ipa": [],
   "alt_respelling_us": [],
-  "source_url": "https://www.postgresql.org/docs/current/faq.html",
-  "source_label": "PostgreSQL FAQ",
+  "source_url": "https://www.postgresql.org/about/press/faq/",
+  "source_label": "PostgreSQL press FAQ",
   "category": "product",
   "confidence": "creator-clarified",
-  "notes": "FAQ documents \"post-gres-Q-L\" as official.",
+  "notes": "The official press FAQ: \"post-GRES-que-ell\". The project's wiki FAQ writes \"Post-Gres-Q-L\".",
   "audio_url": "https://pronounce.renlab.ai/audio/postgresql.mp3",
   "url": "https://pronounce.renlab.ai/word/postgresql",
-  "date_modified": "2026-05-19"
+  "date_modified": "2026-11-24"
 }

@@ -1,15 +1,15 @@
 {
   "word": "oxlint",
-  "ipa": "/ˈɒksˌlɪnt/",
-  "respelling_us": "ox lint",
-  "alt_ipa": [],
-  "alt_respelling_us": [],
+  "ipa": "/ˌoʊ ɛks ˈlɪnt/",
+  "respelling_us": "O X lint",
+  "alt_ipa": ["/ˈɑks lɪnt/"],
+  "alt_respelling_us": ["ox lint"],
   "source_url": "https://oxc.rs/docs/guide/usage/linter.html",
   "source_label": "Oxlint official docs (oxc.rs)",
   "category": "cli-tool",
   "confidence": "creator-clarified",
-  "notes": "\"OX-lint\" — the oxc-based linter; ox like the animal, not the letters O-X.",
+  "notes": "\"O-X-lint\" — the letters O and X, as in Oxc; the official docs write it /oʊ-ɛks-lɪnt/. A ViteConf 2024 talk by its creator is captioned \"OX-lint\" (see the clip).",
   "audio_url": "https://pronounce.renlab.ai/audio/oxlint.mp3",
   "url": "https://pronounce.renlab.ai/word/oxlint",
-  "date_modified": "2026-05-30"
+  "date_modified": "2026-11-24"
 }
