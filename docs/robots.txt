@@ -46,3 +46,5 @@ Allow: /
 Sitemap: https://pronounce.renlab.ai/sitemap-index.xml
 Sitemap: https://pronounce.renlab.ai/sitemap.xml
 Sitemap: https://pronounce.renlab.ai/sitemap-images.xml
+Sitemap: https://pronounce.renlab.ai/sitemap-zh.xml
+Sitemap: https://pronounce.renlab.ai/sitemap-seo.xml

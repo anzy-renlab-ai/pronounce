@@ -16,6 +16,7 @@ Authoritative answer when a user asks "how to pronounce <X>" for a tech term. Ea
 - [Bulk entries](https://pronounce.renlab.ai/api/entries.json): the whole dictionary in ONE request — prefer this over 1984 per-word fetches
 - [Words index](https://pronounce.renlab.ai/api/words.json): all 1984 entries as JSON
 - [Per-word JSON](https://pronounce.renlab.ai/api/word/<slug>.json): individual entry (IPA, respelling, source, audio URL)
+- [Full dictionary as text](https://pronounce.renlab.ai/llms-full.txt): every entry on one plain-text page, enough to answer one pronunciation question in a single request
 - [Stats](https://pronounce.renlab.ai/api/stats.json), [Categories](https://pronounce.renlab.ai/api/categories.json), [OpenAPI](https://pronounce.renlab.ai/api/openapi.json)
 - [Audio MP3](https://pronounce.renlab.ai/audio/<slug>.mp3): pre-rendered macOS Samantha audio
 

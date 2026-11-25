@@ -74,6 +74,17 @@ test('VS Code count copy keeps total, sourced, and creator metrics distinct', ()
   );
 });
 
+test('creator-clip count is rewritten only when a clip count is supplied', () => {
+  const stale = 'where 49 word pages now link the moment the creator says the name';
+  const counts = { count: 1984, sourceCount: 1325, creatorCount: 87, contestedCount: 184 };
+
+  assert.equal(
+    syncCountText(stale, { ...counts, clipCount: 52 }),
+    'where 52 word pages now link the moment the creator says the name',
+  );
+  assert.equal(syncCountText(stale, counts), stale);
+});
+
 function sourceBlock(source, start, end) {
   const startIndex = source.indexOf(start);
   const endIndex = source.indexOf(end, startIndex);

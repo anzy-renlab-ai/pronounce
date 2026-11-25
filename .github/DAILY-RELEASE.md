@@ -96,8 +96,10 @@ generator must never overwrite them.
      No build rewrites their numbers. Without `--apply` the script only checks
      and exits 1 when a file quotes other numbers. They were last synced by hand
      on 2026-09-01 and still said 1,903 / 1,283 on 2026-11-24.
-4. `bash tools/release.sh` — syncs the README uses-pin and the changelog
-   test pin, runs all guards, tags, pushes, and opens the GitHub release.
+4. `bash tools/release.sh` — syncs the README and `docs/github-action.md`
+   uses-pins and the changelog test pin, runs all guards, tags, pushes, opens
+   the GitHub release, uploads the source asset the Homebrew formula installs
+   (`say-it-<version>.tar.gz`), and points the tap at it.
    It fails loud if the changelog top entry doesn't match the
    version/date.
 

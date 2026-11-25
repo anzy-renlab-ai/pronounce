@@ -26,6 +26,7 @@ const repoRoot = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DEFAULT_FILES = [
   'README.md',
   '.claude-plugin/plugin.json',
+  '.claude-plugin/marketplace.json',
   'mcp-server/server.json',
   'integrations/chrome/README.md',
   'integrations/chrome/manifest.json',
@@ -55,6 +56,9 @@ const counts = {
   sourceCount: rows.filter(cells => (cells[5] || '').trim()).length,
   creatorCount: rows.filter(cells => cells[8] === 'creator-clarified').length,
   contestedCount: rows.filter(cells => cells[8] === 'contested').length,
+  clipCount: readFileSync(join(repoRoot, 'data', 'creator-clips.tsv'), 'utf8')
+    .split('\n')
+    .filter(line => line && !line.startsWith('#')).length,
 };
 
 const show = text => (text.length > 200 ? `${text.slice(0, 200)}…` : text).trim();

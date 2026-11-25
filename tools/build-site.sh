@@ -2799,6 +2799,7 @@ echo "Built $DOCS/sitemap-index.xml"
   printf -- '- [Bulk entries](%s/api/entries.json): the whole dictionary in ONE request — prefer this over %d per-word fetches\n' "$SITE_URL" "$ENTRY_COUNT"
   printf -- '- [Words index](%s/api/words.json): all %d entries as JSON\n' "$SITE_URL" "$ENTRY_COUNT"
   printf -- '- [Per-word JSON](%s/api/word/<slug>.json): individual entry (IPA, respelling, source, audio URL)\n' "$SITE_URL"
+  printf -- '- [Full dictionary as text](%s/llms-full.txt): every entry on one plain-text page, enough to answer one pronunciation question in a single request\n' "$SITE_URL"
   printf -- '- [Stats](%s/api/stats.json), [Categories](%s/api/categories.json), [OpenAPI](%s/api/openapi.json)\n' "$SITE_URL" "$SITE_URL" "$SITE_URL"
   printf -- '- [Audio MP3](%s/audio/<slug>.mp3): pre-rendered macOS Samantha audio\n\n' "$SITE_URL"
   printf '## Source\n\n'
@@ -2893,6 +2894,8 @@ Allow: /
 Sitemap: $SITE_URL/sitemap-index.xml
 Sitemap: $SITE_URL/sitemap.xml
 Sitemap: $SITE_URL/sitemap-images.xml
+Sitemap: $SITE_URL/sitemap-zh.xml
+Sitemap: $SITE_URL/sitemap-seo.xml
 EOF
 
 # ---------------------------------------------------------------------------

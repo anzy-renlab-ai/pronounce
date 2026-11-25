@@ -16,6 +16,8 @@
 #   3. runs all four guard suites (fails loud, releases nothing)
 #   4. commits any pin drift, tags v<version>, pushes main + tag
 #   5. creates the GitHub release from the changelog section
+#   6. uploads an immutable source asset for Homebrew
+#   7. points the Homebrew tap at that asset (tools/brew-tap-bump.sh)
 set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
@@ -44,11 +46,12 @@ python3 - "$VERSION" <<'PYEOF'
 import re, sys
 version = sys.argv[1]
 
-readme = open("README.md").read()
-readme2 = re.sub(r"(anzy-renlab-ai/pronounce@)v\d+\.\d+\.\d+", r"\g<1>v" + version, readme)
-if readme2 != readme:
-    open("README.md", "w").write(readme2)
-    print("release: README uses-pin synced to v" + version)
+for path in ("README.md", "docs/github-action.md"):
+    text = open(path).read()
+    synced = re.sub(r"(anzy-renlab-ai/pronounce@)v\d+\.\d+\.\d+", r"\g<1>v" + version, text)
+    if synced != text:
+        open(path, "w").write(synced)
+        print("release: " + path + " uses-pin synced to v" + version)
 
 
 # The Claude Code plugin manifest carries the same version; if it drifts,
@@ -66,7 +69,7 @@ except FileNotFoundError:
 PYEOF
 
 if [[ -n "$(git status --porcelain)" ]]; then
-  git add README.md .claude-plugin/plugin.json
+  git add README.md docs/github-action.md .claude-plugin/plugin.json
   git commit -q -m "release: sync version pins to v$VERSION"
 fi
 
@@ -103,5 +106,22 @@ gh release create "v$VERSION" \
   --title "v$VERSION — $(sed -n '5p' CHANGELOG.md | tr -d '*' | cut -c1-72)" \
   --notes-file /tmp/release-body.md \
   || fail "gh release create failed (tag is pushed; finish manually)"
+
+# --- Source asset for Homebrew -----------------------------------------------
+# GitHub's auto-generated source archives are not byte-stable: the v2.23.0
+# archive changed between 2026-07 and 2026-11 and broke the formula's checksum,
+# so `brew install anzy-renlab-ai/tap/say-it` failed. An uploaded asset is
+# immutable. Only the CLI's own files go in: the whole tree is 148 MB of site
+# audio and images, the CLI needs under 1 MB.
+ASSET="/tmp/say-it-$VERSION.tar.gz"
+git archive --format=tar.gz --prefix="say-it-$VERSION/" -o "$ASSET" "v$VERSION" -- \
+  bin data completions LICENSE README.md install.sh
+gh release upload "v$VERSION" "$ASSET" --clobber \
+  || fail "release is public, but its source asset was not uploaded — brew installs will fail"
+
+# --- Homebrew tap ------------------------------------------------------------
+# `brew install anzy-renlab-ai/tap/say-it` installs whatever this formula
+# points at; the release and its asset are already public when this runs.
+bash tools/brew-tap-bump.sh || fail "release shipped, but the Homebrew tap was not bumped — run bash tools/brew-tap-bump.sh by hand"
 
 echo "release: v$VERSION shipped — https://github.com/anzy-renlab-ai/pronounce/releases/tag/v$VERSION"

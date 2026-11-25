@@ -1,5 +1,18 @@
 # Changelog
 
+## v2.42.1 — 2026-11-25
+
+**`brew install anzy-renlab-ai/tap/say-it` installs again, and keeps installing after future releases.** No entries change (1,984 total).
+
+The Homebrew formula still pointed at v2.23.0, a July release, and its checksum no longer matched. GitHub generates its source archives on request and does not keep their bytes stable. The v2.23.0 archive changed between July and November. Every release now uploads an immutable source asset, `say-it-<version>.tar.gz`. It holds only the CLI's files and is about 200 KB, against 148 MB for the whole tree. A new script, `tools/brew-tap-bump.sh`, points the tap at that asset, and `tools/release.sh` runs it. Homebrew itself verified the result on v2.42.0. `brew fetch --build-from-source` and `brew audit` both pass.
+
+Four smaller things are put right in the same release.
+
+- `llms.txt` now links to `llms-full.txt`. An AI assistant can answer one pronunciation question in a single request instead of two. `robots.txt` lists the Chinese and SEO sitemaps next to the three it already listed.
+- The Claude Code plugin's marketplace description said "1,930 more" entries and promised a source on every entry. It now says 1,984 and says a citation exists where one does. The file is in `tools/sync-counts.mjs`, so the number follows the dictionary from now on. The README's count of word pages with a creator clip (52) is synced the same way.
+- `docs/github-action.md` still pinned the action at v2.29.0. `tools/release.sh` keeps that pin current with the README's.
+- The repository's GitHub description now opens with "Pronunciation dictionary for developers", and its topics include `macos`, `jargon` and `english-pronunciation`.
+
 ## v2.42.0 — 2026-11-25
 
 **Google named its four Gemini 4 models after elements, and the dictionary now answers each full name: `Gemini 4 Neon`, `Gemini 4 Carbon`, `Gemini 4 Hydrogen`, `Gemini 4 Argon`, plus OpenAI and Cisco's `Shirudo`** (1,984 total). Google launched the four over five weeks, Argon on 10-13, Carbon on 10-28, Hydrogen on 11-12 and Neon on 11-18. Each reads "jem in eye four" plus the element. The CLI already spoke these names word by word. The word pages, the badges and the API now answer them as one name.

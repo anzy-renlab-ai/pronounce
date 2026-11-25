@@ -10,6 +10,9 @@ const BADGE = /\b\d{3,4}(?:%2B)?%20entries/gi;
 const CJK_TOTAL = /\d{3,4}(?=\s*条(?:(?:发音|社区维护))?词条)/g;
 const CJK_SOURCE = /\d{3,4}(?=\s*条带来源(?:引用)?)/g;
 const CJK_CREATOR = /\d{2,4}(?=\s*条为作者确认)/g;
+// Rows of data/creator-clips.tsv, not of the dictionary: only a caller that
+// counts the clip registry may rewrite this number.
+const CLIPS = /\b(\d{2,3})(?= word pages (?:now )?link the\b)/gi;
 
 function formattedCount(value, matchedNumber) {
   return matchedNumber.includes(',')
@@ -19,7 +22,7 @@ function formattedCount(value, matchedNumber) {
 
 export function syncCountText(
   text,
-  { count, sourceCount, creatorCount, contestedCount },
+  { count, sourceCount, creatorCount, contestedCount, clipCount },
 ) {
   return text
     .replace(TOTAL_PROSE, (_match, number, plus, tail) =>
@@ -30,5 +33,7 @@ export function syncCountText(
     .replace(BADGE, `${count}%20entries`)
     .replace(CJK_TOTAL, `${count}`)
     .replace(CJK_SOURCE, `${sourceCount}`)
-    .replace(CJK_CREATOR, `${creatorCount}`);
+    .replace(CJK_CREATOR, `${creatorCount}`)
+    .replace(CLIPS, number =>
+      clipCount === undefined ? number : formattedCount(clipCount, number));
 }
