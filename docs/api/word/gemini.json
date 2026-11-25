@@ -4,12 +4,12 @@
   "respelling_us": "jem in eye",
   "alt_ipa": [],
   "alt_respelling_us": [],
-  "source_url": "https://gemini.google.com/",
-  "source_label": "Google Gemini",
+  "source_url": "https://dictionary.cambridge.org/us/pronunciation/english/gemini",
+  "source_label": "Cambridge Dictionary (US), headword Gemini",
   "category": "product",
   "confidence": "community-consensus",
   "notes": "\"JEM-in-eye\" — like the zodiac sign.",
   "audio_url": "https://pronounce.renlab.ai/audio/gemini.mp3",
   "url": "https://pronounce.renlab.ai/word/gemini",
-  "date_modified": "2026-05-16"
+  "date_modified": "2026-11-25"
 }

@@ -1,0 +1,15 @@
+{
+  "word": "Shirudo",
+  "ipa": "/ˈʃiːruːdoʊ/",
+  "respelling_us": "shee roo doh",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/shirudo-dev/shirudo",
+  "source_label": "shirudo README (OpenAI and Cisco)",
+  "category": "project",
+  "confidence": "creator-clarified",
+  "notes": "OpenAI and Cisco's open-source security runtime for Linux, announced 2026-11-23. Its README gives the reading: shirudo (Japanese シールド), pronounced \"shee-roo-doh\", means \"shield\". Three syllables with a long \"shee\" first, not \"shir-ODD-oh\" or \"SHEER-doh\".",
+  "audio_url": "https://pronounce.renlab.ai/audio/shirudo.mp3",
+  "url": "https://pronounce.renlab.ai/word/shirudo",
+  "date_modified": "2026-11-25"
+}

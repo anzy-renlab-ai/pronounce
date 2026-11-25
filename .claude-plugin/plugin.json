@@ -1,6 +1,6 @@
 {
   "name": "pronounce",
-  "description": "Speak developer jargon out loud instead of guessing: 1,979 confidence-tagged entries (kubectl, GIF, JSON, JWT, nginx, LaTeX, ...). Ships the pronounce-word skill and the pronounce MCP server.",
+  "description": "Speak developer jargon out loud instead of guessing: 1,984 confidence-tagged entries (kubectl, GIF, JSON, JWT, nginx, LaTeX, ...). Ships the pronounce-word skill and the pronounce MCP server.",
   "version": "2.41.1",
   "author": {
     "name": "anzy-renlab-ai",

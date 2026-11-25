@@ -1,14 +1,62 @@
 [
   {
-    "word": "Unix",
-    "ipa": "/ˈjuːnɪks/",
-    "respelling_us": "YOO niks",
+    "word": "Gemini 4 Argon",
+    "ipa": "/ˈdʒɛmɪnaɪ ˈfɔːr ˈɑːrɡɑːn/",
+    "respelling_us": "jem in eye four argon",
     "alt_ipa": "",
     "alt_respelling_us": "",
-    "source_url": "https://en.wikipedia.org/wiki/Unix",
-    "source_label": "Wikipedia lead (IPAc-en + Respelled)",
+    "source_url": "https://www.youtube.com/watch?v=Jh6mgf9M06M&t=49s",
+    "source_label": "Logan Kilpatrick (Google DeepMind) @ Google for Developers (0:49)",
+    "category": "product",
+    "confidence": "creator-clarified",
+    "notes": "Google's frontier model for hard problems, launched 2026-10-13. Google DeepMind's Logan Kilpatrick says the name on Google's own channel: \"Today we're here talking about Gemini 4 Argon.\" Stress the first syllable of the gas: \"AR-gon.\""
+  },
+  {
+    "word": "Gemini 4 Carbon",
+    "ipa": "/ˈdʒɛmɪnaɪ ˈfɔːr ˈkɑːrbən/",
+    "respelling_us": "jem in eye four carbon",
+    "alt_ipa": "",
+    "alt_respelling_us": "",
+    "source_url": "https://www.youtube.com/watch?v=sUcvhFGc4mw&t=59s",
+    "source_label": "Google Cloud Tech @ \"How Gemini 4 Argon & Carbon were built\" (0:59)",
+    "category": "product",
+    "confidence": "creator-clarified",
+    "notes": "Google's strongest model, launched 2026-10-28. Google's own channel says \"Gemini 4 Carbon\" at 0:59 of its interview with DeepMind's head of Gemini product. Named after the element like its siblings; not the Carbon programming language, which has its own entry."
+  },
+  {
+    "word": "Gemini 4 Hydrogen",
+    "ipa": "/ˈdʒɛmɪnaɪ ˈfɔːr ˈhaɪdrədʒən/",
+    "respelling_us": "jem in eye four hy druh jen",
+    "alt_ipa": "",
+    "alt_respelling_us": "",
+    "source_url": "https://www.youtube.com/watch?v=kyhw-v_iVf0",
+    "source_label": "Google Antigravity @ \"Gemini 4 Hydrogen available in Google Antigravity\" (0:00)",
+    "category": "product",
+    "confidence": "creator-clarified",
+    "notes": "Google's fast model for everyday coding and agentic workflows, launched 2026-11-12. Google's own channel opens by saying \"Gemini 4 Hydrogen\" and repeats it at 1:23. Stress the first syllable: \"HY-druh-jen.\""
+  },
+  {
+    "word": "Gemini 4 Neon",
+    "ipa": "/ˈdʒɛmɪnaɪ ˈfɔːr ˈniːɑːn/",
+    "respelling_us": "jem in eye four nee on",
+    "alt_ipa": "",
+    "alt_respelling_us": "",
+    "source_url": "https://dictionary.cambridge.org/us/pronunciation/english/neon",
+    "source_label": "Cambridge Dictionary (US), headword neon",
     "category": "product",
     "confidence": "community-consensus",
-    "notes": "\"YOO-niks\" — first-syllable stress, from the Wikipedia lead's /ˈjuːnɪks/ and {{Respell|YOO|niks}}; the trademark form is UNIX. Not \"you-NIX\". Originally UNICS, a pun on MULTICS. Ranked 47k questions on Stack Overflow and the dictionary could not answer it."
+    "notes": "Google's model for fast end-to-end tasks, launched 2026-11-18. Read it like the gas: \"NEE-on,\" not \"ne-ON.\" Google published five Neon videos and none has a voice, so nobody at Google is on record saying the name. The reading follows the dictionary and the way DeepMind staff say \"Gemini 4\" for the sibling models."
+  },
+  {
+    "word": "Shirudo",
+    "ipa": "/ˈʃiːruːdoʊ/",
+    "respelling_us": "shee roo doh",
+    "alt_ipa": "",
+    "alt_respelling_us": "",
+    "source_url": "https://github.com/shirudo-dev/shirudo",
+    "source_label": "shirudo README (OpenAI and Cisco)",
+    "category": "project",
+    "confidence": "creator-clarified",
+    "notes": "OpenAI and Cisco's open-source security runtime for Linux, announced 2026-11-23. Its README gives the reading: shirudo (Japanese シールド), pronounced \"shee-roo-doh\", means \"shield\". Three syllables with a long \"shee\" first, not \"shir-ODD-oh\" or \"SHEER-doh\"."
   }
 ]

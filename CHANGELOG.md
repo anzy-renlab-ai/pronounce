@@ -1,5 +1,19 @@
 # Changelog
 
+## v2.42.0 — 2026-11-25
+
+**Google named its four Gemini 4 models after elements, and the dictionary now answers each full name: `Gemini 4 Neon`, `Gemini 4 Carbon`, `Gemini 4 Hydrogen`, `Gemini 4 Argon`, plus OpenAI and Cisco's `Shirudo`** (1,984 total). Google launched the four over five weeks, Argon on 10-13, Carbon on 10-28, Hydrogen on 11-12 and Neon on 11-18. Each reads "jem in eye four" plus the element. The CLI already spoke these names word by word. The word pages, the badges and the API now answer them as one name.
+
+Three carry `creator-clarified`, each on a Google channel. Logan Kilpatrick of Google DeepMind says "Today we're here talking about Gemini 4 Argon" on Google for Developers at 0:49. Google Cloud Tech says "Gemini 4 Carbon" at 0:59 of its interview with DeepMind's head of Gemini product. Google Antigravity opens a video with "Gemini 4 Hydrogen" and repeats it at 1:23. Every source link carries its timestamp. A transcript of each video located the sentence before it was cited, and each sentence is now a clip on its word page.
+
+`Gemini 4 Neon` stays `community-consensus`. Google published five Neon videos and none has a voice, so nobody at Google is on record saying the name. The entry cites the Cambridge reading of "neon". `Gemini` itself now cites the Cambridge entry that states its reading. Its old link was the product home page.
+
+`Shirudo` has the clearest source of the five. Its README states the reading: shirudo (Japanese シールド), pronounced "shee-roo-doh", means "shield". OpenAI and Cisco announced the runtime on 11-23, and the Hacker News thread argued over how to say it.
+
+Yesterday's entry said the week's trending model names qualified for nothing, because no official page states a reading. That holds for text. Three of these names do have Google staff saying them on Google's own channels, which is the evidence Simile and KugelAudio carry.
+
+The seven-day trend sweep was stopped before it returned. One name it had surfaced was re-fetched and admitted as `Shirudo`. A second, `LLMON`, is verified and held for tomorrow because five entries is the daily cap: IBM Granite's blog says it is pronounced "lemon". The 24 in-scope demand holes are unchanged.
+
 ## v2.41.1 — 2026-11-24
 
 **`creator-clarified` now survives clicking the link: 116 → 83.** No entry added (1,979 total). We fetched the cited page of all 116 tagged rows and looked for a statement of the reading by the creator or by the project itself. 33 rows lost the tag. 30 of them moved to `community-consensus`, among them TOML, awk, Keras, Raft, OWASP, Dapr, Ghostty, Slidev and Buildah, because the page they cite never says how the name is spoken. 3 moved to `contested`, where the evidence shows two readings in wide use: `a11y`, `qt`, `quay`.

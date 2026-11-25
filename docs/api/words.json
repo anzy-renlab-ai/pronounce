@@ -1977,5 +1977,10 @@
   {"word": "Navier-Stokes", "slug": "navier-stokes", "category": "cs-term", "confidence": "community-consensus"},
   {"word": "excel", "slug": "excel", "category": "product", "confidence": "community-consensus"},
   {"word": "ajax", "slug": "ajax", "category": "acronym", "confidence": "community-consensus"},
-  {"word": "asynchronous", "slug": "asynchronous", "category": "cs-term", "confidence": "community-consensus"}
+  {"word": "asynchronous", "slug": "asynchronous", "category": "cs-term", "confidence": "community-consensus"},
+  {"word": "Gemini 4 Argon", "slug": "gemini-4-argon", "category": "product", "confidence": "creator-clarified"},
+  {"word": "Gemini 4 Carbon", "slug": "gemini-4-carbon", "category": "product", "confidence": "creator-clarified"},
+  {"word": "Gemini 4 Hydrogen", "slug": "gemini-4-hydrogen", "category": "product", "confidence": "creator-clarified"},
+  {"word": "Gemini 4 Neon", "slug": "gemini-4-neon", "category": "product", "confidence": "community-consensus"},
+  {"word": "Shirudo", "slug": "shirudo", "category": "project", "confidence": "creator-clarified"}
 ]

@@ -180,7 +180,7 @@ RAG | /ræɡ/ | rag | acronym | community-consensus | https://en.wikipedia.org/w
 MCP | /ˌɛm siː ˈpiː/ | M C P | abbreviation | community-consensus | https://modelcontextprotocol.io/
 LLaMA | /ˈlɑːmə/ | llama | product | community-consensus | https://www.llama.com/
 DALL-E | /ˈdɒli/ | dolly | product | community-consensus | https://openai.com/dall-e-2
-Gemini | /ˈdʒɛmɪnaɪ/ | jem in eye | product | community-consensus | https://gemini.google.com/
+Gemini | /ˈdʒɛmɪnaɪ/ | jem in eye | product | community-consensus | https://dictionary.cambridge.org/us/pronunciation/english/gemini
 GPT | /ˌdʒiː piː ˈtiː/ | G P T | acronym | community-consensus | https://en.wikipedia.org/wiki/Generative_pre-trained_transformer
 Sora | /ˈsɔːrə/ | sor ah | product | community-consensus | https://openai.com/sora
 Midjourney | /ˈmɪdˌdʒɜːrni/ | mid journey | product | community-consensus | https://www.midjourney.com/
@@ -1981,3 +1981,8 @@ Navier-Stokes | /nævˈjeɪ ˈstoʊks/ | nav YAY STOHKS | cs-term | community-co
 excel | /ɪkˈsɛl/ | ik SELL | product | community-consensus | https://dictionary.cambridge.org/us/dictionary/english/excel
 ajax | /ˈeɪdʒæks/ | AY jaks | acronym | community-consensus | https://en.wikipedia.org/wiki/Ajax_(programming)
 asynchronous | /eɪˈsɪŋkrənəs/ | ay SING kruh nuhs | cs-term | community-consensus | https://dictionary.cambridge.org/us/dictionary/english/asynchronous
+Gemini 4 Argon | /ˈdʒɛmɪnaɪ ˈfɔːr ˈɑːrɡɑːn/ | jem in eye four argon | product | creator-clarified | https://www.youtube.com/watch?v=Jh6mgf9M06M&t=49s
+Gemini 4 Carbon | /ˈdʒɛmɪnaɪ ˈfɔːr ˈkɑːrbən/ | jem in eye four carbon | product | creator-clarified | https://www.youtube.com/watch?v=sUcvhFGc4mw&t=59s
+Gemini 4 Hydrogen | /ˈdʒɛmɪnaɪ ˈfɔːr ˈhaɪdrədʒən/ | jem in eye four hy druh jen | product | creator-clarified | https://www.youtube.com/watch?v=kyhw-v_iVf0
+Gemini 4 Neon | /ˈdʒɛmɪnaɪ ˈfɔːr ˈniːɑːn/ | jem in eye four nee on | product | community-consensus | https://dictionary.cambridge.org/us/pronunciation/english/neon
+Shirudo | /ˈʃiːruːdoʊ/ | shee roo doh | project | creator-clarified | https://github.com/shirudo-dev/shirudo
