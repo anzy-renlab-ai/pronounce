@@ -124,4 +124,6 @@ gh release upload "v$VERSION" "$ASSET" --clobber \
 # points at; the release and its asset are already public when this runs.
 bash tools/brew-tap-bump.sh || fail "release shipped, but the Homebrew tap was not bumped — run bash tools/brew-tap-bump.sh by hand"
 
+rm -f "$ASSET" /tmp/release-body.md
+
 echo "release: v$VERSION shipped — https://github.com/anzy-renlab-ai/pronounce/releases/tag/v$VERSION"
