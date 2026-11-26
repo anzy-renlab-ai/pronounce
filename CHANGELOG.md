@@ -1,5 +1,21 @@
 # Changelog
 
+## v2.43.2 — 2026-11-26
+
+**Demo, link card and Chinese page now open with the Gemini 4 model names.** No entries change (1,988 total).
+
+v2.43.1 changed the README's words and left its pictures. The demo animation was drawn on 05-16 and still ended "310+ entries · with creator citations". The link card read "creator-sourced". The Chinese page asked "kubectl 到底怎么读？" in its headline. The README's text and its pictures disagreed.
+
+- **Demo animation.** `tools/make-demo.py` draws four frames: `say-it "Gemini 4 Carbon"` spoken three times, `say-it kubectl` as the example of a word with several readings, `say-it --why "Gemini 4 Carbon"`, and a closing frame. The closing frame reads the entry count from the dictionary when it is drawn, so it cannot fall behind again.
+- **Link card.** `docs/og.png` leads with Gemini 4 Neon and ends "every entry confidence-tagged".
+- **Chinese landing page.** Its headline, page title, card titles, star banner, search box and first terminal command lead with the model names. The page promised "the correct reading" of kubectl in 4 seconds. kubectl is contested, and with its two alternates the command runs 8.6 seconds. The sentence now uses `say-it "Gemini 4 Carbon"`, which runs 5.2.
+- **The source count is called a link.** The README said "1,329 carry a citable source". About half of those links are a project's home page, and that page does not state a reading. The README, both home pages, the VS Code walkthrough and its Chinese package description, the MCP server description and the Homebrew formula now say "1,988 entries, every one confidence-tagged" and call the 1,329 a source link. Two plugin descriptions that promised "a cited reading" or "a source citation" say a source link where one exists.
+- **Card titles.** The root page's title and card titles, and the repository's GitHub description, lead with the model names too.
+
+Left alone, on the owner's choice of scope: the English landing (`docs/v2/`), the second README GIF, which is a real terminal recording, the 47-second promo videos, the search page titles, the skill's trigger examples and the MCP server's tool description. The English landing still opens on kubectl.
+
+`tools/test_build_v2_data.py` grows a test that the card, the demo and the page titles share one lead, and its Chinese-landing test now covers the banner and the terminal sample. `tools/sync-counts.mjs` learns the sentence "N entries carry a source link", and `tools/lint-dict.sh` checks that the README's number is the dictionary's.
+
 ## v2.43.1 — 2026-11-26
 
 **The README now opens with Neon, Carbon, Hydrogen and Argon, the new Gemini 4 model names, instead of kubectl.** No entries change (1,988 total).

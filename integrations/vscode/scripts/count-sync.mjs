@@ -2,7 +2,11 @@
 // Each pattern is semantic: totals, source coverage, and creator confirmation
 // must never overwrite one another merely because they share a counter word.
 
-const TOTAL_PROSE = /\b(\d{1,3}(?:,\d{3})+|\d{3,5})(\+?)((?:[ \-]confidence[ \-]tagged)?[ \-](?:entr(?:y|ies)|(?:developer[ \-]jargon|tech|project, product, and programmer[ \-]jargon)\s+names))/gi;
+const TOTAL_PROSE = /\b(\d{1,3}(?:,\d{3})+|\d{3,5})(\+?)((?:[ \-]confidence[ \-]tagged)?[ \-](?:entr(?:y|ies)|(?:developer[ \-]jargon|tech|project, product, and programmer[ \-]jargon)\s+names))(?![ \-]+carry a source link)/gi;
+// "1,329 entries carry a source link" counts links, not citations: about half
+// of them are a project's home page, which is why the copy since 2026-11-26
+// says "link". It looks like a total to TOTAL_PROSE, so it runs first.
+const SOURCE_LINK = /\b(\d{1,3}(?:,\d{3})+|\d{3,5})(?= entries carry a source link)/gi;
 const SOURCE_PROSE = /\b(\d{1,3}(?:,\d{3})+|\d{3,5})(?=(?:(?: also)? (?:(?:carry|have|with) (?:a )?(?:citable|cited) sources?|sourced entr(?:y|ies))| of (?:\d{1,3}(?:,\d{3})+|\d{3,5}) entr(?:y|ies) (?:carry|have|with) (?:a )?(?:citable|cited) sources?))/gi;
 const CREATOR_PROSE = /\b(\d{2,4})(?= (?:settled by the creator|creator-clarified entr(?:y|ies)))/gi;
 const CONTESTED_PROSE = /\b(\d{2,4})(?= (?:the community still argues|contested entr(?:y|ies)))/gi;
@@ -25,6 +29,7 @@ export function syncCountText(
   { count, sourceCount, creatorCount, contestedCount, clipCount },
 ) {
   return text
+    .replace(SOURCE_LINK, number => formattedCount(sourceCount, number))
     .replace(TOTAL_PROSE, (_match, number, plus, tail) =>
       `${formattedCount(count, number)}${plus}${tail}`)
     .replace(SOURCE_PROSE, number => formattedCount(sourceCount, number))

@@ -53,6 +53,10 @@ test('VS Code count copy keeps total, sourced, and creator metrics distinct', ()
     '1,260 with cited sources',
     '101 settled by the creator; 172 the community still argues',
     '1880 条社区维护词条，其中 1260 条带来源引用，101 条为作者确认',
+    // Since 2026-11-26 the copy leads with the tag and calls a link a link.
+    '1,880 entries, every one confidence-tagged',
+    '1,260 entries carry a source link',
+    '1880 条发音词条，每条都标了置信度，其中 101 条为作者确认',
   ].join('\n');
 
   assert.equal(
@@ -70,6 +74,9 @@ test('VS Code count copy keeps total, sourced, and creator metrics distinct', ()
       '1,283 with cited sources',
       '108 settled by the creator; 175 the community still argues',
       '1903 条社区维护词条，其中 1283 条带来源引用，108 条为作者确认',
+      '1,903 entries, every one confidence-tagged',
+      '1,283 entries carry a source link',
+      '1903 条发音词条，每条都标了置信度，其中 108 条为作者确认',
     ].join('\n'),
   );
 });
@@ -640,10 +647,12 @@ test('v2 product and release fact source contract', async t => {
     const fmt = value => value.toLocaleString('en-US');
     const total = fmt(rows.length);
     const sourced = fmt(rows.filter(cells => (cells[5] || '').trim()).length);
+    // The scaffold states the total and the tag, not a count of source links.
     assert.match(
       V2_INDEX_SOURCE,
-      new RegExp(`${total} entries[^"\\n]*${sourced}[^"\\n]*cited sources`, 'i'),
+      new RegExp(`${total} entries, each with a confidence tag`, 'i'),
     );
+    assert.ok(!V2_INDEX_SOURCE.includes(sourced), 'the scaffold quotes a count of source links');
   });
 
   await t.test('noindex scaffold uses root OG URL and deferred same-origin runtime scripts', () => {

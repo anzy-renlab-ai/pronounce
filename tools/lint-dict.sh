@@ -106,7 +106,9 @@ read -r SRCD CREATOR CONTESTED <<< "$(awk -F'\t' '
     if ($9 == "contested") ct++
   } END { print s+0, cc+0, ct+0 }' "$DICT")"
 stat_bad=""
-for pair in "$SRCD:citable source" "$CREATOR:settled by the creator" "$CONTESTED:community still argues"; do
+# Since 2026-11-26 the README calls these links, not citations: about half of
+# them are a project's home page.
+for pair in "$SRCD:carry a source link" "$CREATOR:settled by the creator" "$CONTESTED:community still argues"; do
   n="${pair%%:*}"; label="${pair#*:}"
   if (( n >= 1000 )); then rx="${n:0:${#n}-3}[,]?${n: -3}"; else rx="$n"; fi
   if ! grep -qE "${rx}[^0-9]*${label}|${label}" <(grep -E "$rx" "$REPO_ROOT/README.md"); then
@@ -117,7 +119,7 @@ if [[ -n "$stat_bad" ]]; then
   echo "  ✗ companion-stat drift — recompute sourced/creator/contested in README:" >&2
   printf '%s' "$stat_bad" >&2
   fail=1
-else echo "  ✓ README states $SRCD sourced / $CREATOR creator-clarified / $CONTESTED contested"; fi
+else echo "  ✓ README states $SRCD source links / $CREATOR creator-clarified / $CONTESTED contested"; fi
 
 # Every entry must have its OG card and its audio file. Both classes shipped
 # broken before: 90 OG 404s at v2.23.0 (make-og-all.py skipped for two batches),

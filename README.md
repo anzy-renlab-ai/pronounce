@@ -1,6 +1,6 @@
 <h1 align="center">🔊 say-it · Pronounce</h1>
 
-<p align="center"><strong>Neon, Carbon, Hydrogen, Argon: say Google's new Gemini 4 model names right. One Bash command pronounces 1,988 developer jargon names — most with a cited source.</strong></p>
+<p align="center"><strong>Neon, Carbon, Hydrogen, Argon: how to say Google's new Gemini 4 model names. One Bash command pronounces 1,988 developer jargon names, each tagged with how settled its reading is.</strong></p>
 
 <p align="center">
 <a href="https://github.com/anzy-renlab-ai/pronounce/stargazers"><img src="https://img.shields.io/github/stars/anzy-renlab-ai/pronounce?style=social" alt="GitHub stars"></a>
@@ -24,7 +24,7 @@
  · ⚙️ <a href="docs/github-action.md">GitHub Action</a>
 </p>
 
-<p align="center"><img src="https://pronounce.renlab.ai/demo.gif" alt="say-it kubectl — terminal demo" width="720"></p>
+<p align="center"><img src="https://pronounce.renlab.ai/demo.gif" alt='say-it "Gemini 4 Carbon" — terminal demo' width="720"></p>
 
 <p align="center">
   <a href="https://github.com/anzy-renlab-ai/pronounce/releases/download/v2.5.0/promo.mp4"><strong>▶ Watch the 47-second promo</strong> (with voice)</a> ·
@@ -51,7 +51,7 @@ say-it "Gemini 4 Neon"
 
 ![say-it CLI demo — kubectl, YAML, TOML, Ghostty](pitch/say-it-cli-demo.gif)
 
-That's it. Now try `say-it GIF`, `say-it nginx`, `say-it Pydantic`, `say-it --why JSON`, or `say-it quiz` for a 10-question challenge. **Linux** users: install `espeak-ng` (`sudo apt install espeak-ng`) and the CLI just works. **Windows**: same CLI under WSL or git-bash + PowerShell. Or skip install and use the browser at **[pronounce.renlab.ai](https://pronounce.renlab.ai)** — where 52 word pages now link the **🎬 moment the creator says the name** (Knuth on TeX, Lamport on LaTeX, Evan You on Vite, Stallman on GNU — [example: Tcl](https://pronounce.renlab.ai/word/tcl)).
+That's it. Now try `say-it GIF`, `say-it nginx`, `say-it Pydantic`, `say-it --why JSON`, or `say-it quiz` to test yourself. **Linux** users: install `espeak-ng` (`sudo apt install espeak-ng`) and the CLI just works. **Windows**: same CLI under WSL or git-bash + PowerShell. Or skip install and use the browser at **[pronounce.renlab.ai](https://pronounce.renlab.ai)** — where 52 word pages now link the **🎬 moment the creator says the name** (Knuth on TeX, Lamport on LaTeX, Evan You on Vite, Stallman on GNU — [example: Tcl](https://pronounce.renlab.ai/word/tcl)).
 
 > ⭐ If `say-it "Gemini 4 Neon"` saves you one cringey standup moment — **[star the repo](https://github.com/anzy-renlab-ai/pronounce)**. It nudges more devs to contribute their favorite mispronounced project name.
 
@@ -61,7 +61,7 @@ That's it. Now try `say-it GIF`, `say-it nginx`, `say-it Pydantic`, `say-it --wh
 
 ## 🏆 The developer pronunciation scoreboard
 
-**1,988 entries — 1,329 carry a citable source** — **89 settled by the creator themselves**, **184 the community still argues about.** The famous ones:
+**1,988 entries, every one confidence-tagged** — **89 settled by the creator themselves**, **184 the community still argues about.** The famous ones:
 
 ### ✅ Settled — the creator said so
 
@@ -86,7 +86,7 @@ That's it. Now try `say-it GIF`, `say-it nginx`, `say-it Pydantic`, `say-it --wh
 | **[GUI](https://pronounce.renlab.ai/word/gui)** | "gooey" | "G-U-I" |
 | **[JWT](https://pronounce.renlab.ai/word/jwt)** | "jot" (per RFC 7519) | "J-W-T" |
 
-Every cell has IPA and audio; 1,329 also carry a citable source. **[Browse all 1,988 entries →](https://pronounce.renlab.ai/browse)**
+Every cell has IPA, audio and a confidence tag. **[Browse all 1,988 entries →](https://pronounce.renlab.ai/browse)**
 
 > Disagree with one? That's the whole point — [open a PR](CONTRIBUTING.md) with your reading and a source. The argument *is* the dataset.
 
@@ -94,7 +94,7 @@ Every cell has IPA and audio; 1,329 also carry a citable source. **[Browse all 1
 
 ## What you're actually getting
 
-- **1,988 entries — 1,329 carry a citable source.** Confidence-tagged (`creator-clarified` / `community-consensus` / `contested`), each with a citable URL where one exists (we'd rather leave it blank than fabricate one). Wilhite told the NYT in 2013 that GIF has "a soft 'G,' pronounced 'jif.'" Crockford said in 2011, "There's a lot of argument about how you pronounce that, but I strictly don't care." RFC 7519 says JWT is "jot". The dictionary cites them.
+- **1,988 entries, every one confidence-tagged.** Tagged `creator-clarified` / `community-consensus` / `contested`. 1,329 entries carry a source link, and many of those links are the project's home page, so a link is not the same as a citation. Where no source exists the field stays empty rather than being filled with a made-up one. Wilhite told the NYT in 2013 that GIF has "a soft 'G,' pronounced 'jif.'" Crockford said in 2011, "There's a lot of argument about how you pronounce that, but I strictly don't care." RFC 7519 says JWT is "jot". The dictionary cites them.
 - **Multi-reading audio.** For words where the debate is real — GIF, SQL, GUI, char, regex — the CLI chains the alternates after the primary with a spoken "or:" so you *hear* the debate without staring at the terminal. `--solo` skips the tail once you've internalized it.
 - **One Bash CLI, no npm runtime.** No sudo, no framework bootstrap, no surprises. It detects macOS `say`, Linux `espeak-ng`/`espeak`, or Windows PowerShell `System.Speech`. The repo also ships a [Claude Code skill](skills/pronounce-word/SKILL.md) and an [MCP server](mcp-server/) so your AI answers "how do you pronounce X?" with **audio**, not a phonetic guess.
 - **A docs-native GitHub Action.** Scan Markdown changed by a pull request and emit a sourced pronunciation glossary in the job summary — no API key, dependency install, or network request.
@@ -138,7 +138,7 @@ Some pronunciations aren't opinions: the people behind the name went on record. 
 | `Vite` | "veet" (French for *quick*) | [Vite README, "pronounced /viːt/"](https://github.com/vitejs/vite#readme) |
 | `etcd` | "et-cee-dee" (/ˈɛtsiːdiː/) | [etcd FAQ](https://etcd.io/docs/v3.5/faq/) |
 
-Run `say-it --why <word>` to see the citation when an entry has a `source_url`; unsourced entries are left blank rather than given a fabricated URL.
+Run `say-it --why <word>` to see the source link when an entry has a `source_url`; unsourced entries are left blank rather than given a fabricated URL.
 
 ## Install
 
@@ -290,14 +290,14 @@ Local override: drop a `~/.config/say-it/pronunciations.local.tsv` and it takes 
 - ✅ macOS — built-in `say`.
 - ✅ Linux — `espeak-ng` (preferred) or `espeak`.
 - ✅ Windows — PowerShell `System.Speech` from the same Bash CLI under Git Bash/MSYS2/Cygwin.
-- ✅ 1,988 entries; 1,329 carry a citable source — the rest are confidence-tagged, no fabricated citations.
+- ✅ 1,988 entries, every one confidence-tagged; no fabricated citations.
 - ✅ **Audible multi-reading awareness** — contested words audibly chain alternates with "or:".
 - ✅ `--alt [N]`, `--all`, `--solo`, `--why`, `--json`, `--md`, `--no-dict`, `list`, `search`, `quiz`, `repl`, `stream`, `doctor`, `export`, `benchmark`, `badge`, `cheatsheet`, `propose` (draft a new dictionary row + prefilled contribution issue).
 - ✅ Claude Code skill + MCP server for AI-side pronunciation questions.
 - ✅ GitHub Action — sourced pronunciation glossaries for Markdown pull requests.
 - ✅ Browser PWA — installable, offline-capable, instant search, voice-mic search, interactive quiz.
 - ✅ Editor integrations — Raycast, Alfred, VS Code, Cursor, Codex, Kiro, Continue.
-- ✅ **🌐 Live site** — [pronounce.renlab.ai](https://pronounce.renlab.ai) (1,988 entries browsable with audio; 1,329 sourced entries) + [/zh](https://pronounce.renlab.ai/zh) (Chinese landing).
+- ✅ **🌐 Live site** — [pronounce.renlab.ai](https://pronounce.renlab.ai) (1,988 entries browsable with audio) + [/zh](https://pronounce.renlab.ai/zh) (Chinese landing).
 
 ## What's coming
 

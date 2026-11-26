@@ -22,7 +22,8 @@ def entry_count() -> int:
     return n
 
 ENTRIES = entry_count()
-OTHERS = ENTRIES - 1  # subtract the "kubectl" headline word
+OTHERS = ENTRIES - 1  # subtract the "Gemini 4 Neon" headline name
+LEAD = "Gemini 4 Neon"   # the name the card leads with; the owner wants the new model names first
 
 W, H = 1200, 630
 
@@ -98,12 +99,12 @@ draw.text((60, 48), "🔊  pronounce.renlab.ai", font=font_brand, fill=ACCENT_2)
 # Main headline
 HEADLINE_TOP = 110
 draw.text((60, HEADLINE_TOP), "How to pronounce", font=font_subtitle, fill=MUTED_STRONG)
-draw.text((60, HEADLINE_TOP + 50), "kubectl", font=font_title, fill=FG)
+draw.text((60, HEADLINE_TOP + 50), LEAD, font=font_title, fill=FG)
 draw.text((60, HEADLINE_TOP + 132), f"and {OTHERS} more.", font=font_title, fill=ACCENT)
 
 # Subhead
 draw.text((60, HEADLINE_TOP + 218),
-          "Community dictionary · creator-sourced · MIT",
+          "Community dictionary · every entry confidence-tagged · MIT",
           font=font_subtitle, fill=MUTED_STRONG)
 
 # Terminal panel
@@ -129,10 +130,10 @@ def tline(y, parts):
         bbox = draw.textbbox((0, 0), text, font=font_terminal)
         x += (bbox[2] - bbox[0])
 
-tline(T_Y + 56, [("$ ", MUTED), ("say-it kubectl", FG)])
-tline(T_Y + 92, [("🔊 ", FG), ("koob control. ", ACCENT_2), ("or: cube cuddle.", ACCENT)])
-tline(T_Y + 134, [("$ ", MUTED), ("say-it GIF", FG)])
-tline(T_Y + 170, [("🔊 ", FG), ("jif. jif. ", ACCENT_2), ("or: ghif.   ", ACCENT), ("# hard-G cue · Wilhite, 2013", MUTED)])
+tline(T_Y + 56, [("$ ", MUTED), ('say-it "Gemini 4 Neon"', FG)])
+tline(T_Y + 92, [("🔊 ", FG), ("jem in eye four nee on.", ACCENT_2)])
+tline(T_Y + 134, [("$ ", MUTED), ('say-it "Gemini 4 Carbon"', FG)])
+tline(T_Y + 170, [("🔊 ", FG), ("jem in eye four carbon.  ", ACCENT_2), ("# said on Google's channel, 0:59", MUTED)])
 
 img.save(OUT, "PNG", optimize=True)
 print(f"Wrote {OUT}  ({OUT.stat().st_size // 1024} KB)")

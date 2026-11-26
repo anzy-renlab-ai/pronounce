@@ -2436,7 +2436,9 @@ window.copyToClipboard = function(text, toastText) {
 function initHeroCycle() {
   const el = document.getElementById('hero-cycle');
   if (!el) return;
-  const words = ['kubectl', 'nginx', 'GIF', 'JSON', 'Pydantic', 'Knative', 'LaTeX', 'JWT', 'CIDR', 'kubectl'];
+  // A page may name its own words in data-cycle; the list below is the default.
+  const own = el.dataset.cycle ? el.dataset.cycle.split('|') : [];
+  const words = own.length ? own : ['kubectl', 'nginx', 'GIF', 'JSON', 'Pydantic', 'Knative', 'LaTeX', 'JWT', 'CIDR', 'kubectl'];
   let i = 0, j = 0, deleting = false;
   function tick() {
     const w = words[i];

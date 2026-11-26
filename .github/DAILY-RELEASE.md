@@ -87,12 +87,12 @@ generator must never overwrite them.
    ```
 
 3. Sync every hardcoded count (the release guards check them all):
-   - README: total, sourced / creator-clarified / contested companion
-     stats, `dictionary-…%20entries` badge, body mentions.
+   - README: total, the source-link count ("N entries carry a source link"),
+     creator-clarified and contested companion stats, `dictionary-…%20entries`
+     badge, body mentions.
    - `.codex-plugin/plugin.json` and `mcp-server/server.json` entry counts.
-   - `tools/test_build_v2_data.py` pins: `len(rows)` exact total, sourced
-     total, and the `"N,NNN entries — N,NNN carry a citable source"`
-     README assertion (grep `1_9` / `1,9` / `1,30`).
+   - `tools/test_build_v2_data.py` holds no literals: it compares the
+     numbers the README and the home pages quote with the dictionary.
    - The hand-maintained pages and the VS Code extension copy (`docs/index.html`,
      `docs/v2/index.html`, `integrations/vscode/…`): `node tools/sync-counts.mjs --apply`.
      No build rewrites their numbers. Without `--apply` the script only checks

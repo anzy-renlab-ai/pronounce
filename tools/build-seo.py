@@ -1004,7 +1004,7 @@ def emit_zh_word(e: dict, out_dir: Path, clips: dict[str, dict]) -> None:
     if src_html:
         html += f"\n      {src_html}"
     html += f"""
-      <p>读对项目名只是工程师文化的一部分 — 但开会时被人轻轻纠正、或者在 podcast 上被嘉宾礼貌打断的滋味，并不好受。<strong>{BRAND}</strong> 是一个开源的开发者词汇发音词典，每条都标注来源、信心等级，并且有预渲染的音频可以直接听。</p>
+      <p>读对项目名只是工程师文化的一部分 — 但开会时被人轻轻纠正、或者在 podcast 上被嘉宾礼貌打断的滋味，并不好受。<strong>{BRAND}</strong> 是一个开源的开发者词汇发音词典，每条都标了置信度，有出处的附链接，并且有预渲染的音频可以直接听。</p>
     </section>
 
     <aside class="editor-cta">

@@ -308,7 +308,11 @@ class RepositoryProductFactTests(unittest.TestCase):
         total, sourced = self.dictionary_counts()
         self.assertGreaterEqual(total, 1900, "dictionary shrank unexpectedly")
         self.assertIn(
-            f"{total:,} entries — {sourced:,} carry a citable source",
+            f"{total:,} entries, every one confidence-tagged",
+            self.source("README.md"),
+        )
+        self.assertIn(
+            f"{sourced:,} entries carry a source link",
             self.source("README.md"),
         )
 
@@ -549,12 +553,25 @@ class RepositoryProductFactTests(unittest.TestCase):
             re.compile(r"respelling_us[^.\n]*detected OS TTS", re.IGNORECASE),
         )
 
-    def test_readme_reports_source_coverage_without_universal_source_claims(self):
+    def test_readme_leads_with_confidence_tags_and_calls_source_links_links(self):
+        # Until 2026-11-26 the README led with "N entries — M carry a citable
+        # source". About half of those M links were a project's home page, so
+        # the owner had the headline changed: every entry has a tag, and a link
+        # is reported as a link.
         readme = self.source("README.md")
         total, sourced = self.dictionary_counts()
-        self.assertIn(
-            f"{total:,} entries — {sourced:,} carry a citable source", readme
-        )
+        self.assertIn(f"{total:,} entries, every one confidence-tagged", readme)
+        self.assertIn(f"{sourced:,} entries carry a source link", readme)
+        self.assertIn("home page", readme.split("entries carry a source link", 1)[1][:160])
+        for phrase in (
+            "carry a citable source",
+            "with a cited source",
+            "with citable sources",
+            "creator-sourced",
+        ):
+            with self.subTest(phrase=phrase):
+                self.assertNotIn(phrase, readme)
+        self.assertNotRegex(readme, re.compile(r"(?<!un)[ \-]sourced entries", re.IGNORECASE))
         self.assertNotIn("Shipped since this list was written", readme)
         self.assertNotRegex(
             readme,
@@ -593,14 +610,16 @@ class RepositoryProductFactTests(unittest.TestCase):
 
         zh = self.source("integrations/vscode/package.nls.zh-cn.json")
         self.assertIn(
-            f"{total} 条发音词条，其中 {sourced} 条带来源引用，{creator} 条为作者确认", zh
+            f"{total} 条发音词条，每条都标了置信度，其中 {creator} 条为作者确认", zh
         )
         self.assertNotIn(f"{total} 条带来源", zh)
+        self.assertNotIn("带来源引用", zh)
 
         package = self.source("integrations/vscode/package.json")
         walkthrough = self.source("integrations/vscode/media/walkthrough-star.md")
         self.assertIn("Browse all confidence-tagged entries", package)
-        self.assertIn(f"{total:,} entries; {sourced:,} carry a citable source", walkthrough)
+        self.assertIn(f"{total:,} entries, every one confidence-tagged", walkthrough)
+        self.assertNotIn("citable source", walkthrough)
         self.assertIn(f"dictionary-{total}%20entries", package)
         self.assertNotIn("Every entry has a source citation", walkthrough)
 
@@ -618,11 +637,13 @@ class RepositoryProductFactTests(unittest.TestCase):
         self.assertNotIn('"commits":%d', generator)
         self.assertNotIn('"commits":', stats)
 
-    def test_live_root_reports_exact_source_coverage_without_universal_claims(self):
+    def test_live_root_reports_the_total_and_the_tag_not_a_count_of_source_links(self):
         # The root page is hand-maintained and no build rewrites its numbers, so
         # the literals this test used to pin went stale with the page: on
         # 2026-11-24 the meta descriptions and noscript block still said
-        # 1,903 / 1,283 against a dictionary of 1,979 / 1,322.
+        #1,903 / 1,283 against a dictionary of 1,979 / 1,322. Since 2026-11-26
+        # the page states the total and the confidence tag, and no count of
+        # source links: about half of those links are a project's home page.
         total, sourced = self.dictionary_counts()
         root = self.source("docs/index.html")
         for attribute in (
@@ -635,14 +656,15 @@ class RepositoryProductFactTests(unittest.TestCase):
                     root,
                     re.compile(
                         rf'<meta {attribute} content="[^"]*'
-                        rf'{total:,}[^"]*{sourced:,}[^"]*citable source',
+                        rf'{total:,}[^"]*confidence tag',
                         re.IGNORECASE,
                     ),
                 )
 
         noscript = root.split("<noscript>", 1)[1].split("</noscript>", 1)[0]
         self.assertIn(f"{total:,}", noscript)
-        self.assertIn(f"{sourced:,}", noscript)
+        self.assertIn("confidence tag", noscript)
+        self.assertNotIn(f"{sourced:,}", root)
         quoted_totals = set(
             re.findall(r"\b(\d,\d{3})(?= (?:project|tech|entries))", root)
         )
@@ -688,12 +710,15 @@ class RepositoryProductFactTests(unittest.TestCase):
     def test_site_generator_tracks_coverage_and_omits_core_public_overclaims(self):
         source = self.source("tools/build-site.sh")
         self.assertRegex(source, r'SOURCE_COUNT="\$\(awk ')
-        self.assertIn("${SOURCE_COUNT} of ${ENTRY_COUNT}", source)
+        # Since 2026-11-26 no page counts "citable" or "cited" sources: about
+        # half of the source links are a project's home page. A link is a link.
+        self.assertIn("Every one of ${ENTRY_COUNT} entries confidence-tagged", source)
+        self.assertNotIn("${SOURCE_COUNT} of ${ENTRY_COUNT}", source)
         self.assertIn("a source citation when available", source)
         self.assertIn("有可靠来源时附引用", source)
         self.assertIn(
-            "%d entries with IPA, respellings, and pre-rendered audio;"
-            " %d source citations.",
+            "%d entries with IPA, respellings, pre-rendered audio and a"
+            " confidence tag; %d carry a source link.",
             source,
         )
         self.assertIn('"$ENTRY_COUNT" "$SOURCE_COUNT"', source)
@@ -701,6 +726,13 @@ class RepositoryProductFactTests(unittest.TestCase):
             r"Every entry[^.\n]*linked to a real source",
             r"Every entry[^.\n]*a citable source URL",
             r"每条(?:都)?带来源",
+            r"每条都标注来源",
+            r"条带来源引用",
+            r"条带可引用来源",
+            r"条词条带来源",
+            r"have cited sources",
+            r"with cited sources",
+            r"source citations",
             r"Audio on this page is rendered by your browser's Web Speech API",
             r"在 M2/M3 路线图上",
             r"audio, IPA, and a source citation, not a phonetic guess",
@@ -709,6 +741,66 @@ class RepositoryProductFactTests(unittest.TestCase):
         ):
             with self.subTest(pattern=pattern):
                 self.assertNotRegex(source, re.compile(pattern, re.IGNORECASE))
+
+    def test_chinese_landing_leads_with_the_new_model_names(self):
+        # The owner's rule of 2026-11-26: the first name on the page is a newly
+        # coined model name, never kubectl. The page had "kubectl 到底怎么读？"
+        # as its headline and cycled kubectl first.
+        source = self.source("tools/build-site.sh")
+        self.assertIn('<code id="hero-cycle" class="hero-cycle" data-cycle="Gemini 4 Neon|', source)
+        self.assertIn('class="hero-cycle" data-cycle="Gemini 4 Neon|Gemini 4 Carbon|', source.split("到底怎么读")[0][-400:])
+        self.assertNotIn('class="hero-cycle">kubectl</code><br>到底怎么读', source)
+        self.assertIn("<title>Gemini 4 Neon、Carbon 怎么读", source)
+        self.assertIn("每条标了置信度", source)
+        self.assertIn("el.dataset.cycle", source)
+
+        # The same rule holds for everything a visitor reads first: the star
+        # banner above the headline, the first command of the terminal sample,
+        # and the titles a chat app shows next to the link card.
+        self.assertIn('这词典帮你少念错一次 "Gemini 4 Neon"', source)
+        self.assertIn(
+            '<meta property="og:title" content="Gemini 4 Neon、Carbon 怎么读 — ${BRAND}">',
+            source,
+        )
+        self.assertIn(
+            '<meta name="twitter:title" content="Gemini 4 Neon、Carbon 怎么读">', source
+        )
+        demos = re.findall(r'<pre class="demo">(.*?)</pre>', source, re.DOTALL)
+        chinese = [block for block in demos if "或读" in block]
+        self.assertEqual(len(chinese), 1, "the Chinese landing has no terminal sample")
+        first_command = chinese[0].strip().split("\n", 1)[0]
+        self.assertIn('say-it "Gemini 4 Carbon"', first_command)
+        self.assertNotIn("kubectl", first_command)
+        # kubectl is contested and the CLI chains its two alternates, so it is
+        # neither "the correct reading" nor done in four seconds (measured 8.6 s).
+        self.assertNotIn("把正确读法播三遍", source)
+        self.assertNotIn("可引用的来源", source)
+
+    def test_link_cards_lead_with_the_new_model_names(self):
+        # The root page's card title and the card and demo generators share the
+        # lead. On 2026-11-26 the card image said Gemini 4 Neon while the title
+        # beside it said "how to say kubectl", and the demo opened on kubectl.
+        root = self.source("docs/index.html")
+        for attribute in ('property="og:title"', 'name="twitter:title"', "<title>"):
+            with self.subTest(attribute=attribute):
+                self.assertRegex(
+                    root,
+                    re.compile(
+                        rf'<meta {attribute} content="[^"]*Gemini 4 Neon' if attribute != "<title>"
+                        else r"<title>[^<]*Gemini 4 Neon",
+                        re.IGNORECASE,
+                    ),
+                )
+        card = self.source("tools/make-og.py")
+        self.assertIn('LEAD = "Gemini 4 Neon"', card)
+        demo = self.source("tools/make-demo.py")
+        self.assertIn('LEAD = "Gemini 4 Carbon"', demo)
+        main = demo.split("def main(", 1)[1]
+        self.assertLess(
+            main.index("render_frame_lead("),
+            main.index("render_frame_contested("),
+            "the demo opens on the contested word instead of the new model name",
+        )
 
     def test_dictionary_lint_counts_citable_sources_by_source_url_only(self):
         source = self.source("tools/lint-dict.sh")

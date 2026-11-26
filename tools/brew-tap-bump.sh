@@ -50,8 +50,11 @@ asset_url = f'url "https://github.com/anzy-renlab-ai/pronounce/releases/download
 updated = re.sub(r'url "https://github\.com/anzy-renlab-ai/pronounce/[^"]+"', asset_url, text)
 updated = re.sub(r'^[ \t]*version "[^"]+"\n', '', updated, flags=re.MULTILINE)
 updated = re.sub(r'sha256 "[0-9a-f]{64}"', f'sha256 "{sha}"', updated)
-updated = re.sub(r'desc "Pronounce [0-9,+ ]+developer jargon names',
-                 f'desc "Pronounce {int(count):,} developer jargon names', updated)
+# The description is rewritten whole. It used to end "with cited sources",
+# which over-claims: about half of the source links are a project's home page.
+updated = re.sub(r'desc "Pronounce [0-9,+ ]+developer jargon names[^"]*"',
+                 f'desc "Pronounce {int(count):,} developer jargon names out loud, each confidence-tagged"',
+                 updated)
 print(json.dumps({
     "same": updated == text,
     "message": f"say-it {version}",

@@ -1022,7 +1022,9 @@ window.copyToClipboard = function(text, toastText) {
 function initHeroCycle() {
   const el = document.getElementById('hero-cycle');
   if (!el) return;
-  const words = ['kubectl', 'nginx', 'GIF', 'JSON', 'Pydantic', 'Knative', 'LaTeX', 'JWT', 'CIDR', 'kubectl'];
+  // A page may name its own words in data-cycle; the list below is the default.
+  const own = el.dataset.cycle ? el.dataset.cycle.split('|') : [];
+  const words = own.length ? own : ['kubectl', 'nginx', 'GIF', 'JSON', 'Pydantic', 'Knative', 'LaTeX', 'JWT', 'CIDR', 'kubectl'];
   let i = 0, j = 0, deleting = false;
   function tick() {
     const w = words[i];
@@ -1190,14 +1192,14 @@ cat > "$DOCS/v1.html" <<EOF
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>How to pronounce kubectl, nginx, GIF, JSON — ${BRAND}</title>
-  <meta name="description" content="A community-maintained pronunciation dictionary — ${ENTRY_COUNT} entries, ${SOURCE_COUNT} with cited sources — for the project, product, and programmer-jargon names developers actually use. Interactive quiz, voice search, MCP server, and a Claude Code skill included.">
+  <meta name="description" content="A community-maintained pronunciation dictionary — ${ENTRY_COUNT} entries, each with a confidence tag — for the project, product, and programmer-jargon names developers actually use. Interactive quiz, voice search, MCP server, and a Claude Code skill included.">
   <meta name="keywords" content="how to pronounce kubectl, how to pronounce nginx, how to pronounce GIF, how to pronounce JSON, project name pronunciation, developer pronunciation guide">
   <link rel="canonical" href="${SITE_URL}/">
   <link rel="alternate" hreflang="en" href="${SITE_URL}/">
   <link rel="alternate" hreflang="zh-Hans" href="${SITE_URL}/zh">
   <link rel="alternate" hreflang="x-default" href="${SITE_URL}/">
   <meta property="og:title" content="How to pronounce kubectl, nginx, GIF, JSON — ${BRAND}">
-  <meta property="og:description" content="${ENTRY_COUNT} developer-jargon pronunciations; ${SOURCE_COUNT} have cited sources. Open source, MIT.">
+  <meta property="og:description" content="${ENTRY_COUNT} developer-jargon pronunciations, each with a confidence tag. Open source, MIT.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="${SITE_URL}/">
   <meta property="og:image" content="${SITE_URL}/og.png">
@@ -1205,7 +1207,7 @@ cat > "$DOCS/v1.html" <<EOF
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="How to pronounce kubectl, nginx, GIF, JSON">
-  <meta name="twitter:description" content="${ENTRY_COUNT} developer pronunciations; ${SOURCE_COUNT} with cited sources.">
+  <meta name="twitter:description" content="${ENTRY_COUNT} developer pronunciations, each with a confidence tag.">
   <meta name="twitter:image" content="${SITE_URL}/og.png">
   <link rel="manifest" href="/manifest.webmanifest">
   <meta name="theme-color" content="#ff6a3d">
@@ -1248,7 +1250,7 @@ cat > "$DOCS/v1.html" <<EOF
 
     <header class="hero">
       <h1><span class="speaker">🔊</span><br>How to pronounce <code id="hero-cycle" class="hero-cycle">kubectl</code><br>without the cringe.</h1>
-      <p class="tagline">A community dictionary of how engineers <em>actually</em> say <code>kubectl</code>, <code>nginx</code>, <code>GIF</code>, <code>JSON</code>, <code>Pydantic</code>, <code>Knative</code>, <code>LaTeX</code>, <code>Postgres</code>… <strong>${SOURCE_COUNT} of ${ENTRY_COUNT} entries have cited sources.</strong></p>
+      <p class="tagline">A community dictionary of how engineers <em>actually</em> say <code>kubectl</code>, <code>nginx</code>, <code>GIF</code>, <code>JSON</code>, <code>Pydantic</code>, <code>Knative</code>, <code>LaTeX</code>, <code>Postgres</code>… <strong>Every one of ${ENTRY_COUNT} entries is confidence-tagged.</strong></p>
       <div class="hero-search" role="search">
         <input id="hero-search" type="search" placeholder="🔍 Type a word — kubectl, nginx, Pydantic, JWT…" autocomplete="off" aria-label="Search pronunciation dictionary">
         <button id="hero-mic" type="button" class="hero-mic" aria-label="Speak a word">🎤</button>
@@ -1264,7 +1266,7 @@ cat > "$DOCS/v1.html" <<EOF
         <code>code --install-extension sayit.pronounce</code>
         <span class="install-note">Hover any tech word in your editor → hear it. Works in VS Code · Cursor · Windsurf · VSCodium · Zed. Prefer the terminal? <code class="inline">curl -fsSL ${SITE_URL}/install.sh | bash</code></span>
       </div>
-      <p class="stats-bar"><strong>${ENTRY_COUNT}</strong> entries · <strong>${SOURCE_COUNT}</strong> with cited sources · MIT licensed</p>
+      <p class="stats-bar"><strong>${ENTRY_COUNT}</strong> entries · every one confidence-tagged · MIT licensed</p>
     </header>
 
     <div id="todays-word"></div>
@@ -1302,7 +1304,7 @@ $FAMOUS_HTML
 
     <div class="section-title">What's in the box</div>
     <div class="features">
-      <div class="feature"><span class="icon">🗂</span><h3>${SOURCE_COUNT} of ${ENTRY_COUNT} entries source-cited</h3><p>Project names, product names, programmer jargon, and acronyms. Every entry is confidence-tagged; cited URLs are shown where available.</p></div>
+      <div class="feature"><span class="icon">🗂</span><h3>Every one of ${ENTRY_COUNT} entries confidence-tagged</h3><p>Project names, product names, programmer jargon, and acronyms. The link is shown where an entry has one.</p></div>
       <div class="feature"><span class="icon">🔊</span><h3>Multi-reading audio awareness</h3><p>When a word is contested — GIF, SQL, GUI, kubectl — the CLI audibly chains the alternates ("…or: ghif", an explicit hard-G speech cue), so you hear the debate without watching the terminal.</p></div>
       <div class="feature"><span class="icon">🤖</span><h3>Claude Code skill included</h3><p>Ask Claude "how do you pronounce X?" — it replies with audio, IPA, and a source citation when available, not a phonetic guess.</p></div>
       <div class="feature"><span class="icon">⚡</span><h3>One Bash CLI, no npm runtime</h3><p>Detects macOS <code>say</code>, Linux <code>espeak-ng</code>/<code>espeak</code>, or Windows PowerShell <code>System.Speech</code>.</p></div>
@@ -1394,15 +1396,15 @@ cat > "$DOCS/zh.html" <<EOF
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>kubectl / nginx / GIF / JSON 怎么读 — ${BRAND} 程序员发音词典</title>
-  <meta name="description" content="开源、社区维护的程序员发音词典：共 ${ENTRY_COUNT} 条，其中 ${SOURCE_COUNT} 条带可引用来源。命令行工具 + 互动测验 + 语音搜索 + MCP server + Claude Code skill 一应俱全。">
+  <title>Gemini 4 Neon、Carbon 怎么读 — kubectl、nginx、GIF、JSON 等程序员术语的发音 | ${BRAND} 程序员发音词典</title>
+  <meta name="description" content="开源、社区维护的程序员发音词典：共 ${ENTRY_COUNT} 条，每条标了置信度。命令行工具 + 互动测验 + 语音搜索 + MCP server + Claude Code skill 一应俱全。">
   <meta name="keywords" content="kubectl 怎么读, nginx 发音, GIF 发音, JSON 发音, 程序员发音, 项目名读音, 英文发音词典">
   <link rel="canonical" href="${SITE_URL}/zh">
   <link rel="alternate" hreflang="zh-Hans" href="${SITE_URL}/zh">
   <link rel="alternate" hreflang="en" href="${SITE_URL}/">
   <link rel="alternate" hreflang="x-default" href="${SITE_URL}/">
-  <meta property="og:title" content="kubectl / nginx / GIF / JSON 怎么读 — ${BRAND}">
-  <meta property="og:description" content="开源、社区维护的程序员发音词典，带来源引用。MIT 许可，命令行 + 网站 + Claude Code skill。">
+  <meta property="og:title" content="Gemini 4 Neon、Carbon 怎么读 — ${BRAND}">
+  <meta property="og:description" content="开源、社区维护的程序员发音词典，每条标了置信度。MIT 许可，命令行 + 网站 + Claude Code skill。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="${SITE_URL}/zh">
   <meta property="og:image" content="${SITE_URL}/og.png">
@@ -1411,8 +1413,8 @@ cat > "$DOCS/zh.html" <<EOF
   <meta property="og:locale" content="zh_CN">
   <meta property="og:locale:alternate" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="kubectl / nginx / GIF / JSON 怎么读">
-  <meta name="twitter:description" content="社区维护的程序员发音词典：${ENTRY_COUNT} 条词条，其中 ${SOURCE_COUNT} 条带可引用来源。">
+  <meta name="twitter:title" content="Gemini 4 Neon、Carbon 怎么读">
+  <meta name="twitter:description" content="社区维护的程序员发音词典：${ENTRY_COUNT} 条词条，每条标了置信度。">
   <meta name="twitter:image" content="${SITE_URL}/og.png">
   <link rel="manifest" href="/manifest.webmanifest">
   <meta name="theme-color" content="#ff6a3d">
@@ -1438,7 +1440,7 @@ cat > "$DOCS/zh.html" <<EOF
 </head>
 <body>
   <a class="skip-link" href="#main">跳到主要内容</a>
-  <div class="gh-banner">⭐ 这词典帮你少念错一次 "库布喀托" — <a href="https://github.com/${GH_REPO}">来 GitHub 给个星</a></div>
+  <div class="gh-banner">⭐ 这词典帮你少念错一次 "Gemini 4 Neon" — <a href="https://github.com/${GH_REPO}">来 GitHub 给个星</a></div>
   <nav class="topbar">
     <div class="brand"><a href="./zh">🔊 ${BRAND}</a></div>
     <div class="links">
@@ -1455,10 +1457,10 @@ cat > "$DOCS/zh.html" <<EOF
   <div class="container" id="main">
 
     <header class="hero">
-      <h1><span class="speaker">🔊</span><br><code id="hero-cycle" class="hero-cycle">kubectl</code><br>到底怎么读？</h1>
-      <p class="tagline">一份社区维护的程序员发音词典——<code>kubectl</code>、<code>nginx</code>、<code>GIF</code>、<code>JSON</code>、<code>Pydantic</code>、<code>Knative</code>、<code>LaTeX</code>、<code>Postgres</code> ……共 ${ENTRY_COUNT} 条，其中 <strong>${SOURCE_COUNT} 条带来源引用</strong>。</p>
+      <h1><span class="speaker">🔊</span><br><code id="hero-cycle" class="hero-cycle" data-cycle="Gemini 4 Neon|Gemini 4 Carbon|Gemini 4 Hydrogen|Gemini 4 Argon|nginx|LaTeX|Gemini 4 Neon">Gemini 4 Neon</code><br>到底怎么读？</h1>
+      <p class="tagline">一份社区维护的程序员发音词典——Google 新模型的名字 <code>Gemini 4 Neon</code>、<code>Carbon</code>、<code>Hydrogen</code>、<code>Argon</code>，还有 <code>nginx</code>、<code>GIF</code>、<code>JSON</code>、<code>LaTeX</code>、<code>Postgres</code> ……共 ${ENTRY_COUNT} 条，每条标了置信度。</p>
       <div class="hero-search" role="search">
-        <input id="hero-search" type="search" placeholder="🔍 输入单词 — kubectl、nginx、Pydantic、JWT…" autocomplete="off" aria-label="搜索发音词典">
+        <input id="hero-search" type="search" placeholder="🔍 输入名字 — Gemini 4 Neon、nginx、Pydantic、JWT…" autocomplete="off" aria-label="搜索发音词典">
         <button id="hero-mic" type="button" class="hero-mic" aria-label="语音输入">🎤</button>
         <div id="hero-suggest" class="hero-suggest" role="listbox" hidden></div>
       </div>
@@ -1472,7 +1474,7 @@ cat > "$DOCS/zh.html" <<EOF
         <code>code --install-extension sayit.pronounce</code>
         <span class="install-note">在编辑器里悬停任意技术词 → 直接听。支持 VS Code · Cursor · Windsurf · VSCodium · Zed，界面自动切中文。喜欢命令行？<code class="inline">curl -fsSL ${SITE_URL}/install.sh | bash</code></span>
       </div>
-      <p class="stats-bar"><strong>${ENTRY_COUNT}</strong> 条词条 · <strong>${SOURCE_COUNT}</strong> 条带可引用来源 · MIT 许可</p>
+      <p class="stats-bar"><strong>${ENTRY_COUNT}</strong> 条词条 · 每条标了置信度 · MIT 许可</p>
     </header>
 
     <div style="margin: 0 0 48px; text-align: center;">
@@ -1484,8 +1486,8 @@ cat > "$DOCS/zh.html" <<EOF
     </div>
 
     <pre class="demo">
-<span class="prompt">\$</span> say-it kubectl
-<span class="out">🔊 koob control. koob control. koob control. <span class="alt">或读: cube cuddle. 或读: kube C T L.</span></span>
+<span class="prompt">\$</span> say-it "Gemini 4 Carbon"
+<span class="out">🔊 jem in eye four carbon. jem in eye four carbon. jem in eye four carbon.</span>   <span class="comment"># Google 自家频道 0:59</span>
 
 <span class="prompt">\$</span> say-it GIF
 <span class="out">🔊 jif. jif. jif. <span class="alt">或读: ghif.</span></span>         <span class="comment"># 硬 G 提示 · Wilhite 2013 年 Webby 奖现场亲口说</span>
@@ -1518,7 +1520,7 @@ url               https://en.wikipedia.org/wiki/JSON#Pronunciation</span></pre>
 
     <div class="section-title">这个工具盒里有什么</div>
     <div class="features">
-      <div class="feature"><span class="icon">🗂</span><h3>${SOURCE_COUNT} / ${ENTRY_COUNT} 条词条带来源</h3><p>项目名、产品名、程序员行话、缩写。所有词条都有 confidence 标签；有可靠来源时才显示链接。</p></div>
+      <div class="feature"><span class="icon">🗂</span><h3>每条词条都标了置信度</h3><p>项目名、产品名、程序员行话、缩写。有可靠来源时才显示链接。</p></div>
       <div class="feature"><span class="icon">🔊</span><h3>多读法链式播放</h3><p>对于 GIF / SQL / GUI / kubectl 这类有争议的词，CLI 会把所有读法连着播——"……或读: ghif."（明确提示硬 G）——你不盯终端也能听到争议。</p></div>
       <div class="feature"><span class="icon">🤖</span><h3>自带 Claude Code skill</h3><p>问 Claude："X 怎么读？"——它会播音频、给 IPA，有可靠来源时附引用，而不是瞎猜一个音标。</p></div>
       <div class="feature"><span class="icon">⚡</span><h3>一个 Bash CLI，无 npm 运行时</h3><p>自动检测 macOS <code>say</code>、Linux <code>espeak-ng</code>/<code>espeak</code> 或 Windows PowerShell <code>System.Speech</code>。</p></div>
@@ -1541,7 +1543,7 @@ url               https://en.wikipedia.org/wiki/JSON#Pronunciation</span></pre>
       <h2>常见问题</h2>
       <details>
         <summary>为什么不直接看 YouTube 视频？</summary>
-        <p>因为你得先搜对视频、取消静音、等加载、再倒回。<code>say-it kubectl</code> 在 4 秒内把正确读法播三遍。网站是给你不在终端旁时用的。</p>
+        <p>因为你得先搜对视频、取消静音、等加载、再倒回。<code>say-it "Gemini 4 Carbon"</code> 把读法连播三遍，五秒左右。网站是给你不在终端旁时用的。</p>
       </details>
       <details>
         <summary>浏览器里的声音和 CLI 不一样？</summary>
@@ -1549,7 +1551,7 @@ url               https://en.wikipedia.org/wiki/JSON#Pronunciation</span></pre>
       </details>
       <details>
         <summary>和普通发音词典有什么区别？</summary>
-        <p>这本只收程序员日常会念的名字——<code>kubectl</code>、<code>nginx</code>、<code>Pydantic</code>、<code>Knative</code>、<code>Cilium</code>。Webster 没收，这里有，并且每条带 confidence 标签和（尽可能）一条可引用的来源。</p>
+        <p>这本只收程序员日常会念的名字——<code>Gemini 4 Neon</code>、<code>nginx</code>、<code>Pydantic</code>、<code>Knative</code>、<code>Cilium</code>。Webster 没收，这里有，并且每条带 confidence 标签，有可靠来源时附链接。</p>
       </details>
       <details>
         <summary>为什么 GIF 是 "jif"？我一直读 "gif"。</summary>
@@ -1633,7 +1635,7 @@ cat > "$DOCS/browse.html" <<EOF
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="./style.css">
   <script defer src="/_vercel/insights/script.js"></script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Dataset","@id":"${SITE_URL}/#dataset","name":"${BRAND}: developer-jargon pronunciation dictionary","description":"A community-maintained dataset of ${ENTRY_COUNT} developer project, product, CLI-tool, CS-term, and acronym pronunciations. Entries include IPA, an English-like respelling, a confidence level (creator-clarified | community-consensus | contested), and pre-rendered audio; ${SOURCE_COUNT} have a citable source URL.","url":"${SITE_URL}/browse","license":"https://opensource.org/licenses/MIT","isAccessibleForFree":true,"keywords":["pronunciation","IPA","developer jargon","tech terms","respelling"],"creator":{"@type":"Organization","name":"${BRAND}","url":"${SITE_URL}/"},"dateModified":"${TODAY}","distribution":[{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"${SITE_URL}/api/words.json"},{"@type":"DataDownload","encodingFormat":"text/tab-separated-values","contentUrl":"https://github.com/${GH_REPO}/blob/main/data/pronunciations.tsv"}]},{"@type":"DefinedTermSet","@id":"${SITE_URL}/#dictionary","name":"${BRAND} — developer-jargon pronunciation dictionary","description":"How engineers actually pronounce ${ENTRY_COUNT} developer project, product, and jargon names.","url":"${SITE_URL}/browse"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Dataset","@id":"${SITE_URL}/#dataset","name":"${BRAND}: developer-jargon pronunciation dictionary","description":"A community-maintained dataset of ${ENTRY_COUNT} developer project, product, CLI-tool, CS-term, and acronym pronunciations. Entries include IPA, an English-like respelling, a confidence level (creator-clarified | community-consensus | contested), and pre-rendered audio; a source link is given where one exists.","url":"${SITE_URL}/browse","license":"https://opensource.org/licenses/MIT","isAccessibleForFree":true,"keywords":["pronunciation","IPA","developer jargon","tech terms","respelling"],"creator":{"@type":"Organization","name":"${BRAND}","url":"${SITE_URL}/"},"dateModified":"${TODAY}","distribution":[{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"${SITE_URL}/api/words.json"},{"@type":"DataDownload","encodingFormat":"text/tab-separated-values","contentUrl":"https://github.com/${GH_REPO}/blob/main/data/pronunciations.tsv"}]},{"@type":"DefinedTermSet","@id":"${SITE_URL}/#dictionary","name":"${BRAND} — developer-jargon pronunciation dictionary","description":"How engineers actually pronounce ${ENTRY_COUNT} developer project, product, and jargon names.","url":"${SITE_URL}/browse"}]}</script>
 </head>
 <body>
   <div class="gh-banner">⭐ <a href="https://github.com/${GH_REPO}">Star on GitHub</a> — open source, MIT, every dictionary entry is a community PR</div>
@@ -2788,8 +2790,8 @@ echo "Built $DOCS/sitemap-index.xml"
 # llms.txt — emerging AI-crawler standard (llmstxt.org)
 {
   printf '# %s\n\n' "$BRAND"
-  printf '> Community-maintained pronunciation dictionary for developer project, product, and programmer-jargon names. %d entries with IPA, respellings, and pre-rendered audio; %d source citations.\n\n' "$ENTRY_COUNT" "$SOURCE_COUNT"
-  printf 'Authoritative answer when a user asks "how to pronounce <X>" for a tech term. Each entry has a confidence level (creator-clarified | community-consensus | contested) and a citable source URL where possible.\n\n'
+  printf '> Community-maintained pronunciation dictionary for developer project, product, and programmer-jargon names. %d entries with IPA, respellings, pre-rendered audio and a confidence tag; %d carry a source link.\n\n' "$ENTRY_COUNT" "$SOURCE_COUNT"
+  printf 'Authoritative answer when a user asks "how to pronounce <X>" for a tech term. Each entry has a confidence level (creator-clarified | community-consensus | contested) and a source link where one exists.\n\n'
   printf '## Docs\n\n'
   printf -- '- [Browse all entries](%s/browse): full filterable dictionary\n' "$SITE_URL"
   printf -- '- [Quiz](%s/quiz): interactive pronunciation challenge\n' "$SITE_URL"
@@ -2814,7 +2816,7 @@ echo "Built $DOCS/llms.txt"
 mkdir -p "$DOCS/zh"
 {
   printf '# %s\n\n' "$BRAND"
-  printf '> 开发者黑话发音词典：%d 个词条，含通用美式 IPA、中文可读的谐音读法、备选读法，以及可点开的出处；其中 %d 条带来源引用。\n\n' "$ENTRY_COUNT" "$SOURCE_COUNT"
+  printf '> 开发者黑话发音词典：%d 个词条，含通用美式 IPA、中文可读的谐音读法、备选读法，每条都标了置信度；%d 条附来源链接。\n\n' "$ENTRY_COUNT" "$SOURCE_COUNT"
   printf '每个词条都标了置信度：creator-clarified（作者本人说过，附链接）、community-consensus（社区共识）、contested（仍有争议）。查不到的词就说查不到，不编读音，也不编来源。\n\n'
   printf '## 页面\n\n'
   printf -- '- [首页](%s/zh)\n' "$SITE_URL"
@@ -3221,7 +3223,7 @@ cat > "$DOCS/about.html" <<EOF
   <link rel="canonical" href="${SITE_URL}/about">
   <meta property="og:image" content="${SITE_URL}/og.png">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Dataset","name":"Pronounce — developer jargon pronunciation dictionary","description":"${ENTRY_COUNT} developer project, product and jargon names with General American IPA, an English respelling, alternate readings, a confidence label, and a citable source URL where one exists.","url":"${SITE_URL}/about","license":"https://opensource.org/licenses/MIT","isAccessibleForFree":true,"creator":{"@type":"Organization","name":"Pronounce contributors","url":"https://github.com/${GH_REPO}"},"keywords":["pronunciation","IPA","developer jargon","dictionary","text-to-speech"],"dateModified":"${TODAY}","variableMeasured":["word","ipa","respelling_us","category","confidence","source_url"],"distribution":[{"@type":"DataDownload","name":"Full dictionary (JSON)","encodingFormat":"application/json","contentUrl":"${SITE_URL}/api/entries.json"},{"@type":"DataDownload","name":"Canonical source (TSV)","encodingFormat":"text/tab-separated-values","contentUrl":"https://raw.githubusercontent.com/${GH_REPO}/main/data/pronunciations.tsv"}]}
+  {"@context":"https://schema.org","@type":"Dataset","name":"Pronounce — developer jargon pronunciation dictionary","description":"${ENTRY_COUNT} developer project, product and jargon names with General American IPA, an English respelling, alternate readings, a confidence label, and a source link where one exists.","url":"${SITE_URL}/about","license":"https://opensource.org/licenses/MIT","isAccessibleForFree":true,"creator":{"@type":"Organization","name":"Pronounce contributors","url":"https://github.com/${GH_REPO}"},"keywords":["pronunciation","IPA","developer jargon","dictionary","text-to-speech"],"dateModified":"${TODAY}","variableMeasured":["word","ipa","respelling_us","category","confidence","source_url"],"distribution":[{"@type":"DataDownload","name":"Full dictionary (JSON)","encodingFormat":"application/json","contentUrl":"${SITE_URL}/api/entries.json"},{"@type":"DataDownload","name":"Canonical source (TSV)","encodingFormat":"text/tab-separated-values","contentUrl":"https://raw.githubusercontent.com/${GH_REPO}/main/data/pronunciations.tsv"}]}
   </script>
   <link rel="stylesheet" href="/style.css">
   <script defer src="/_vercel/insights/script.js"></script>
@@ -3244,7 +3246,7 @@ cat > "$DOCS/about.html" <<EOF
   <div class="container-narrow">
     <h1>About this thing</h1>
 
-    <p style="color: var(--muted-strong); font-size: 18px;">A community-maintained dictionary of ${ENTRY_COUNT} project, product, and programmer-jargon pronunciations; ${SOURCE_COUNT} have cited sources.</p>
+    <p style="color: var(--muted-strong); font-size: 18px;">A community-maintained dictionary of ${ENTRY_COUNT} project, product, and programmer-jargon pronunciations, every one confidence-tagged.</p>
 
     <h2>Why</h2>
     <p>Every developer has been corrected mid-sentence at least once. "It's pronounced <strong>engine-x</strong>, not n-jinx." "It's <strong>koob-control</strong>, not kub-cuttle." "It's <strong>jif</strong>, not gif. <em>The creator said so.</em>"</p>

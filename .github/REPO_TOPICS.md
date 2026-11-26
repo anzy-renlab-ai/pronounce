@@ -6,7 +6,7 @@
 ## 1. Description (top right of repo page)
 
 ```
-🔊 Hear how developers actually pronounce kubectl, nginx, GIF & 1,900+ tech terms. Sourced dictionary + CLI + VS Code + GitHub Action + MCP + Agent Skill.
+🔊 Pronunciation dictionary for developers: hear how to actually say Gemini 4 Neon, Carbon, Hydrogen, Argon, nginx, YAML & 1,900+ tech terms, each tagged with how settled its reading is. CLI + VS Code + GitHub Action + MCP + Agent Skill.
 ```
 
 ## 2. Website
