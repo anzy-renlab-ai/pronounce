@@ -1,5 +1,15 @@
 # Changelog
 
+## v2.43.1 — 2026-11-26
+
+**The README now opens with Neon, Carbon, Hydrogen and Argon, the new Gemini 4 model names, instead of kubectl.** No entries change (1,988 total).
+
+The first line of the README read "Stop saying "kub-cuttle"", and the 30-second example was `say-it kubectl`. The first line now names the four models, and the example is `say-it "Gemini 4 Neon"`. The Claude Code plugin, its marketplace entry, the Codex plugin and the home page heading list the same four names where they listed kubectl.
+
+The reason comes from the project's owner: kubectl is not hot, while these model names are new. A dictionary earns its place on names that people have to say for the first time.
+
+Three places still begin with kubectl on purpose and were left alone: the search page titles, the skill's trigger examples and the MCP server's description. They exist to match what people type and ask for. The demo animation still shows kubectl and was not re-recorded.
+
 ## v2.43.0 — 2026-11-26
 
 **Nvidia had no entry, and neither did this week's most-upvoted model launch.** 4 new entries (1,988 total): Nvidia, Inkling 2 Mini, LLMON, NeuG.

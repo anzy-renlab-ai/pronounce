@@ -1,6 +1,6 @@
 <h1 align="center">🔊 say-it · Pronounce</h1>
 
-<p align="center"><strong>Stop saying "kub-cuttle". One Bash command pronounces 1,988 developer jargon names — most with a cited source.</strong></p>
+<p align="center"><strong>Neon, Carbon, Hydrogen, Argon: say Google's new Gemini 4 model names right. One Bash command pronounces 1,988 developer jargon names — most with a cited source.</strong></p>
 
 <p align="center">
 <a href="https://github.com/anzy-renlab-ai/pronounce/stargazers"><img src="https://img.shields.io/github/stars/anzy-renlab-ai/pronounce?style=social" alt="GitHub stars"></a>
@@ -38,7 +38,7 @@
 
 ```bash
 curl -fsSL https://pronounce.renlab.ai/install.sh | bash   # one-liner, no clone
-say-it kubectl
+say-it "Gemini 4 Neon"
 ```
 
 or the explicit way:
@@ -46,14 +46,14 @@ or the explicit way:
 ```bash
 git clone https://github.com/anzy-renlab-ai/pronounce.git
 cd pronounce && ./install.sh
-say-it kubectl
+say-it "Gemini 4 Neon"
 ```
 
 ![say-it CLI demo — kubectl, YAML, TOML, Ghostty](pitch/say-it-cli-demo.gif)
 
 That's it. Now try `say-it GIF`, `say-it nginx`, `say-it Pydantic`, `say-it --why JSON`, or `say-it quiz` for a 10-question challenge. **Linux** users: install `espeak-ng` (`sudo apt install espeak-ng`) and the CLI just works. **Windows**: same CLI under WSL or git-bash + PowerShell. Or skip install and use the browser at **[pronounce.renlab.ai](https://pronounce.renlab.ai)** — where 52 word pages now link the **🎬 moment the creator says the name** (Knuth on TeX, Lamport on LaTeX, Evan You on Vite, Stallman on GNU — [example: Tcl](https://pronounce.renlab.ai/word/tcl)).
 
-> ⭐ If `say-it kubectl` saves you one cringey standup moment — **[star the repo](https://github.com/anzy-renlab-ai/pronounce)**. It nudges more devs to contribute their favorite mispronounced project name.
+> ⭐ If `say-it "Gemini 4 Neon"` saves you one cringey standup moment — **[star the repo](https://github.com/anzy-renlab-ai/pronounce)**. It nudges more devs to contribute their favorite mispronounced project name.
 
 <p align="center"><a href="https://star-history.com/#anzy-renlab-ai/pronounce&Date"><img src="https://api.star-history.com/svg?repos=anzy-renlab-ai/pronounce&type=Date" alt="Star history" width="600"></a></p>
 
