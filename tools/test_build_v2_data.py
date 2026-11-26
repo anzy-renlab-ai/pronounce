@@ -802,6 +802,33 @@ class RepositoryProductFactTests(unittest.TestCase):
             "the demo opens on the contested word instead of the new model name",
         )
 
+    def test_first_run_works_on_a_stock_mac(self):
+        # The installer writes ~/.local/bin, which a stock Mac does not keep on
+        # PATH, and until 2026-11-26 it only said so in prose. The README's
+        # "Try it in 30 seconds" block went straight on to `say-it`, so a reader
+        # who pasted it met "command not found". The same block now carries the
+        # line that fixes it, and the installer prints that line.
+        readme = self.source("README.md")
+        quick = readme.split("## 🚀 Try it in 30 seconds", 1)[1].split("![", 1)[0]
+        blocks = re.findall(r"```bash\n(.*?)```", quick, re.DOTALL)
+        self.assertGreaterEqual(len(blocks), 2, "the quick-start blocks are gone")
+        export_line = 'export PATH="$HOME/.local/bin:$PATH"'
+        for block in blocks:
+            with self.subTest(block=block.splitlines()[0]):
+                lines = block.splitlines()
+                positions = [i for i, line in enumerate(lines) if line.startswith(export_line)]
+                self.assertEqual(len(positions), 1, f"{export_line} is missing from the block")
+                self.assertLess(
+                    positions[0],
+                    next(i for i, line in enumerate(lines) if line.startswith('say-it "')),
+                )
+                self.assertTrue(lines[-1].startswith('say-it "Gemini 4 '), lines[-1])
+
+        installer = self.source("install.sh")
+        self.assertRegex(installer, r'echo "  export PATH=\\"\$PREFIX/bin:\\\$PATH\\""')
+        # The first command the installer suggests is a new model name, not kubectl.
+        self.assertRegex(installer, r'Try:"\necho "  say-it \\"Gemini 4 ')
+
     def test_dictionary_lint_counts_citable_sources_by_source_url_only(self):
         source = self.source("tools/lint-dict.sh")
         coverage = source.split("# Source coverage", 1)[1]

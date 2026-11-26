@@ -1,5 +1,20 @@
 # Changelog
 
+## v2.43.3 — 2026-11-26
+
+**The quick start works on a Mac that has never heard of ~/.local/bin.** No entries change (1,988 total).
+
+The installer puts `say-it` in `~/.local/bin`, and a stock Mac does not keep that folder on `PATH`. The installer said so in one sentence and then suggested `say-it kubectl`. The README's "Try it in 30 seconds" block went straight from the curl line to `say-it`, so a reader who pasted it saw "command not found". Round 3 of today's review found it.
+
+- Both quick-start blocks in the README carry `export PATH="$HOME/.local/bin:$PATH"` before the `say-it` line. We ran the old block and the new one in an empty home with the system `PATH`. The old one prints `say-it: command not found`. The new one prints the entry.
+- The installer prints the line to run, and suggests `say-it "Gemini 4 Carbon"` first.
+- The README's follow-up sentence starts with `say-it --why "Gemini 4 Carbon"`, and its list of creator clips starts with the three Gemini 4 clips.
+- The link row at the top names the Claude Code skill, which the first screen had no link to.
+
+One thing measured and left alone: the one-liner downloads the repository archive from GitHub, 86.7 MB for a 218 KB script. On this machine that took 26 seconds.
+
+`tools/test_build_v2_data.py` grows a test for the quick-start block and the installer.
+
 ## v2.43.2 — 2026-11-26
 
 **Demo, link card and Chinese page now open with the Gemini 4 model names.** No entries change (1,988 total).

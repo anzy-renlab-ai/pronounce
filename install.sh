@@ -58,11 +58,13 @@ done
 echo
 echo "Done."
 if ! echo ":$PATH:" | grep -q ":$PREFIX/bin:"; then
-  echo "Note: $PREFIX/bin is NOT on your \$PATH. Add it to use \`say-it\` directly."
+  echo "Note: $PREFIX/bin is not on your \$PATH yet. To use \`say-it\` in this terminal:"
+  echo "  export PATH=\"$PREFIX/bin:\$PATH\""
+  echo "Add that line to ~/.zshrc (macOS) or ~/.bashrc to keep it."
 fi
 echo
 echo "Try:"
-echo "  say-it kubectl"
+echo "  say-it \"Gemini 4 Carbon\""
 echo "  say-it --why GIF"
 echo "  say-it list | head"
 echo

@@ -20,7 +20,7 @@
 🎮 <a href="https://pronounce.renlab.ai/daily">Dev Jargon 5</a> ·
 🎤 <a href="https://pronounce.renlab.ai/#hero-search">Voice search</a> ·
 🔗 Correction short-links: <code>pronounce.renlab.ai/say/&lt;word&gt;</code> ·
-🔌 <a href="mcp-server/">MCP server</a>
+🔌 <a href="mcp-server/">MCP server</a> · 🧩 <a href="skills/pronounce-word/SKILL.md">Claude Code skill</a>
  · ⚙️ <a href="docs/github-action.md">GitHub Action</a>
 </p>
 
@@ -38,6 +38,7 @@
 
 ```bash
 curl -fsSL https://pronounce.renlab.ai/install.sh | bash   # one-liner, no clone
+export PATH="$HOME/.local/bin:$PATH"                        # only if ~/.local/bin is not on your PATH yet
 say-it "Gemini 4 Neon"
 ```
 
@@ -46,12 +47,13 @@ or the explicit way:
 ```bash
 git clone https://github.com/anzy-renlab-ai/pronounce.git
 cd pronounce && ./install.sh
+export PATH="$HOME/.local/bin:$PATH"                        # only if ~/.local/bin is not on your PATH yet
 say-it "Gemini 4 Neon"
 ```
 
 ![say-it CLI demo — kubectl, YAML, TOML, Ghostty](pitch/say-it-cli-demo.gif)
 
-That's it. Now try `say-it GIF`, `say-it nginx`, `say-it Pydantic`, `say-it --why JSON`, or `say-it quiz` to test yourself. **Linux** users: install `espeak-ng` (`sudo apt install espeak-ng`) and the CLI just works. **Windows**: same CLI under WSL or git-bash + PowerShell. Or skip install and use the browser at **[pronounce.renlab.ai](https://pronounce.renlab.ai)** — where 52 word pages now link the **🎬 moment the creator says the name** (Knuth on TeX, Lamport on LaTeX, Evan You on Vite, Stallman on GNU — [example: Tcl](https://pronounce.renlab.ai/word/tcl)).
+That's it. Now try `say-it --why "Gemini 4 Carbon"` for the Google video where the name is said (0:59), then `say-it "Gemini 4 Argon"`, `say-it GIF`, `say-it nginx` or `say-it Pydantic`, or `say-it quiz` to test yourself. **Linux** users: install `espeak-ng` (`sudo apt install espeak-ng`) and the CLI just works. **Windows**: same CLI under WSL or git-bash + PowerShell. Or skip install and use the browser at **[pronounce.renlab.ai](https://pronounce.renlab.ai)** — where 52 word pages now link the **🎬 moment the creator says the name** (Google's own people on Gemini 4 Carbon, Argon and Hydrogen; Knuth on TeX, Lamport on LaTeX, Evan You on Vite, Stallman on GNU — [example: Gemini 4 Carbon](https://pronounce.renlab.ai/word/gemini-4-carbon)).
 
 > ⭐ If `say-it "Gemini 4 Neon"` saves you one cringey standup moment — **[star the repo](https://github.com/anzy-renlab-ai/pronounce)**. It nudges more devs to contribute their favorite mispronounced project name.
 
