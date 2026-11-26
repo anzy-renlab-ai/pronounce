@@ -24,7 +24,7 @@ jobs:
         with:
           fetch-depth: 0
       - id: pronounce
-        uses: anzy-renlab-ai/pronounce@v2.42.1
+        uses: anzy-renlab-ai/pronounce@v2.43.0
       - run: echo "Found ${{ steps.pronounce.outputs.count }} terms"
 ```
 
@@ -52,7 +52,7 @@ To scan explicit files:
 
 ```yaml
 - id: pronounce
-  uses: anzy-renlab-ai/pronounce@v2.42.1
+  uses: anzy-renlab-ai/pronounce@v2.43.0
   with:
     files: |
       README.md
