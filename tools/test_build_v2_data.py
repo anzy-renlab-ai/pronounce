@@ -4,6 +4,7 @@ import importlib.util
 import json
 import os
 import re
+import shlex
 import shutil
 import subprocess
 import tempfile
@@ -247,18 +248,15 @@ class RepositoryProductFactTests(unittest.TestCase):
                 self.assertEqual(cli[field], entry[field])
 
         self.assertEqual(cli["confidence"], "contested")
-        self.assertEqual(cli["source_label"], "Wikipedia § Pronunciation")
+        self.assertEqual(cli["source_label"], "Wikipedia § Naming and pronunciation")
         self.assertEqual(
             cli["source_url"],
-            "https://en.wikipedia.org/wiki/JSON#Pronunciation",
+            "https://en.wikipedia.org/wiki/JSON#Naming_and_pronunciation",
         )
 
         jsx_demo = self.source("docs/v2/sections-2.jsx").split(
             '<span className="flag">--why</span> JSON', 1
         )[1].split('<span className="prompt">$</span>', 1)[0]
-        readme_demo = self.source("README.md").split(
-            "$ say-it --why JSON", 1
-        )[1].split("```", 1)[0]
         shell_demos = re.findall(
             r"say-it --why JSON\n(.*?)</span></pre>",
             self.source("tools/build-site.sh"),
@@ -268,7 +266,6 @@ class RepositoryProductFactTests(unittest.TestCase):
 
         for name, demo in (
             ("v2 terminal", jsx_demo),
-            ("README", readme_demo),
             ("generated English source", shell_demos[0]),
             ("generated Chinese source", shell_demos[1]),
         ):
@@ -798,9 +795,58 @@ class RepositoryProductFactTests(unittest.TestCase):
         main = demo.split("def main(", 1)[1]
         self.assertLess(
             main.index("render_frame_lead("),
-            main.index("render_frame_contested("),
-            "the demo opens on the contested word instead of the new model name",
+            main.index("render_frame_why("),
+            "the demo does not open on the new model name",
         )
+        # Round 6 of the review: the contested word held the longest scene of the
+        # animation (8.4 of 21.8 seconds) under a caption about the model names.
+        self.assertNotIn("kubectl", demo, "the demo animation shows kubectl")
+
+    def test_first_screen_prints_the_readings_of_the_lead_names(self):
+        # A reader who came for "how to say Neon" had to install the tool or read
+        # 14-pixel text inside the animation to find the reading (review round 6).
+        readme = self.source("README.md")
+        first_line = readme.split('<p align="center"><strong>', 1)[1].split("</strong>", 1)[0]
+        rows = self.dictionary_rows_by_lowercased_word()
+        for word in ("Gemini 4 Neon", "Gemini 4 Carbon", "Gemini 4 Hydrogen", "Gemini 4 Argon"):
+            with self.subTest(word=word):
+                respelling = rows[word.lower()][0][2]
+                # The line states the part the four readings share once.
+                self.assertIn(respelling[len("jem in eye four"):].strip(), first_line)
+            self.assertEqual(first_line.count('"jem in eye four"'), 1)
+
+    def test_readme_prints_what_the_cli_prints(self):
+        # The sample block showed a `--why` layout the command never printed.
+        what_you_get = self.source("README.md").split("## What you're actually getting", 1)[1].split("\n## ", 1)[0]
+        real_block = re.search(r"```bash\n\$ (say-it --why [^\n]+)\n(.*?)```", what_you_get, re.DOTALL)
+        self.assertIsNotNone(real_block, "the README has no --why sample")
+        shown = [line for line in real_block.group(2).rstrip("\n").split("\n")]
+        real = subprocess.run(
+            [str(REPO / "bin" / "say-it")] + shlex.split(real_block.group(1))[1:],  # the first token is the command itself
+            cwd=REPO, capture_output=True, text=True, check=True,
+        ).stdout.split("\n")
+        self.assertGreaterEqual(len(real), len(shown))
+        self.assertEqual(shown, real[: len(shown)])
+
+    def test_scoreboard_line_explains_the_third_tag_and_the_unlinked(self):
+        # The line named the 89 and the 184 and said nothing of the other 1,715.
+        total, sourced = self.dictionary_counts()
+        creator, contested = self.dictionary_confidence_counts()
+        line = next(l for l in self.source("README.md").split("\n") if "every one confidence-tagged**" in l)
+        self.assertIn(f"**{creator} settled by the creator themselves**", line)
+        self.assertIn(f"**{contested} the community still argues about**", line)
+        self.assertIn(f"**{total - creator - contested:,} tagged `community-consensus`**", line)
+        self.assertIn(f"{total - sourced:,} carry no link", line)
+
+    def test_kubectl_is_not_the_first_contested_row_or_the_worked_example(self):
+        # The owner's rule of 2026-11-26: kubectl is never the first example.
+        readme = self.source("README.md")
+        table = readme.split("### ⚔️ Still contested", 1)[1].split("\n## ", 1)[0]
+        first_row = re.search(r"\[([^\]]+)\]\(https://pronounce\.renlab\.ai/word/", table).group(1)
+        self.assertNotEqual(first_row.lower(), "kubectl")
+        why = readme.split("## Why not just Google?", 1)[1].split("\n## ", 1)[0]
+        self.assertNotIn("kubectl", why)
+        self.assertIn('"Gemini 4 Neon"', why)
 
     def test_first_run_works_on_a_stock_mac(self):
         # The installer writes ~/.local/bin, which a stock Mac does not keep on
@@ -1033,7 +1079,7 @@ class RepositoryProductFactTests(unittest.TestCase):
         rows = self.dictionary_rows_by_lowercased_word()
 
         readme = self.source("README.md")
-        section = readme[readme.index("### ✅ Settled — the creator said so"):]
+        section = readme[readme.index("### ✅ The creator said so"):]
         section = section[: section.index("### ⚔️")]
         showcased = re.findall(r"^\| \*\*\[([^\]]+)\]\(https://pronounce\.renlab\.ai/word/", section, flags=re.M)
         self.assertGreaterEqual(len(showcased), 6, "README settled table lost its rows")

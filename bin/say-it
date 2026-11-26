@@ -1125,7 +1125,8 @@ lookup() {
   ' "$DICT"
 }
 
-# Did-you-mean — Python difflib for proper fuzzy match
+# Did-you-mean — an entry that ends with the typed word comes first, so a bare
+# last name finds its row ("hydrogen" → "Gemini 4 Hydrogen"); then Python difflib.
 did_you_mean() {
   local word="$1"
   awk -F'\t' '!/^#/ && NF>=2 && $1 != "" && $1 != "word" { print $1 }' "$DICT" | \
@@ -1133,11 +1134,28 @@ did_you_mean() {
 import sys, difflib
 w = sys.argv[1].lower()
 words = [l.strip() for l in sys.stdin if l.strip()]
-matches = difflib.get_close_matches(w, [x.lower() for x in words], n=3, cutoff=0.65)
-# Map back to canonical case
+ending = [x for x in words if x.lower() != w and x.lower().split()[-1] == w]
+near = [m for m in difflib.get_close_matches(w, [x.lower() for x in words], n=3, cutoff=0.65)]
 canon = {x.lower(): x for x in words}
-for m in matches: print(canon.get(m, m))
+seen = set()
+for m in ending + [canon[m] for m in near]:
+    if m.lower() not in seen:
+        seen.add(m.lower())
+        print(m)
 " "$word"
+}
+
+# Other entries that end with the typed word: `say-it --why neon` answers with
+# the database and then points at "Gemini 4 Neon".
+also_in_dictionary() {
+  local lower
+  lower="$(printf '%s' "$1" | tr '[:upper:]' '[:lower:]')"
+  awk -F'\t' -v w="$lower" -v s="$SEP" '
+    !/^#/ && NF>=3 && $1 != "" && $1 != "word" && tolower($1) != w {
+      n = split($1, parts, " ")
+      if (tolower(parts[n]) == w) printf "%s%s%s\n", $1, s, $3
+    }
+  ' "$DICT"
 }
 
 ENTRY=""
@@ -1263,6 +1281,9 @@ print_why() {
     [[ -n "$SRC_LABEL" ]] && echo "  ${C_DIM}source${C_RESET}    $SRC_LABEL"
     [[ -n "$SRC_URL" ]] && echo "  ${C_DIM}url${C_RESET}       $SRC_URL"
     [[ -n "$NOTES" ]] && echo "  ${C_DIM}notes${C_RESET}     $NOTES"
+    while IFS="$SEP" read -r also_word also_resp; do
+      [[ -z "$also_word" ]] || echo "  ${C_DIM}also${C_RESET}       ${C_CYAN}$also_word${C_RESET}  ${C_DIM}┄${C_RESET}  $also_resp"
+    done <<< "$(also_in_dictionary "$WORD")"
   else
     echo "${C_YELLOW}$WORD: not in dictionary; sending raw spelling to TTS.${C_RESET}"
     suggestions=$(did_you_mean "$WORD")

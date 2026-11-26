@@ -4,12 +4,12 @@
   "respelling_us": "jay son",
   "alt_ipa": ["/ˈdʒiːˌsɒn/"],
   "alt_respelling_us": ["jee son"],
-  "source_url": "https://en.wikipedia.org/wiki/JSON#Pronunciation",
-  "source_label": "Wikipedia § Pronunciation",
+  "source_url": "https://en.wikipedia.org/wiki/JSON#Naming_and_pronunciation",
+  "source_label": "Wikipedia § Naming and pronunciation",
   "category": "acronym",
   "confidence": "contested",
   "notes": "Crockford uses \"JAY-son\"; \"JEE-son\" is also widespread. Wikipedia notes the variance.",
   "audio_url": "https://pronounce.renlab.ai/audio/json.mp3",
   "url": "https://pronounce.renlab.ai/word/json",
-  "date_modified": "2026-05-16"
+  "date_modified": "2026-11-26"
 }

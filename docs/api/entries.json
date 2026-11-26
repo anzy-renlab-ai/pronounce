@@ -50,14 +50,14 @@
   "respelling_us": "jay son",
   "alt_ipa": ["/ˈdʒiːˌsɒn/"],
   "alt_respelling_us": ["jee son"],
-  "source_url": "https://en.wikipedia.org/wiki/JSON#Pronunciation",
-  "source_label": "Wikipedia § Pronunciation",
+  "source_url": "https://en.wikipedia.org/wiki/JSON#Naming_and_pronunciation",
+  "source_label": "Wikipedia § Naming and pronunciation",
   "category": "acronym",
   "confidence": "contested",
   "notes": "Crockford uses \"JAY-son\"; \"JEE-son\" is also widespread. Wikipedia notes the variance.",
   "audio_url": "https://pronounce.renlab.ai/audio/json.mp3",
   "url": "https://pronounce.renlab.ai/word/json",
-  "date_modified": "2026-05-16"
+  "date_modified": "2026-11-26"
 },
 {
   "word": "SQL",
@@ -65,14 +65,14 @@
   "respelling_us": "sequel",
   "alt_ipa": ["/ˌɛs kjuː ˈɛl/"],
   "alt_respelling_us": ["S Q L"],
-  "source_url": "https://en.wikipedia.org/wiki/SQL#Pronunciation",
-  "source_label": "Wikipedia § Pronunciation",
+  "source_url": "https://en.wikipedia.org/wiki/SQL",
+  "source_label": "Wikipedia",
   "category": "acronym",
   "confidence": "contested",
   "notes": "ANSI: \"S-Q-L\"; practitioner: \"sequel\" (heir to IBM SEQUEL).",
   "audio_url": "https://pronounce.renlab.ai/audio/sql.mp3",
   "url": "https://pronounce.renlab.ai/word/sql",
-  "date_modified": "2026-05-16"
+  "date_modified": "2026-11-26"
 },
 {
   "word": "GUI",
@@ -485,14 +485,14 @@
   "respelling_us": "linnix",
   "alt_ipa": [],
   "alt_respelling_us": [],
-  "source_url": "https://en.wikipedia.org/wiki/Linux#Pronunciation",
-  "source_label": "Wikipedia § Pronunciation",
+  "source_url": "https://en.wikipedia.org/wiki/Linux",
+  "source_label": "Wikipedia lead",
   "category": "product",
   "confidence": "community-consensus",
   "notes": "Linus's own pronunciation is \"LIN-ux\" (short I, schwa). Wikipedia documents the variants.",
   "audio_url": "https://pronounce.renlab.ai/audio/linux.mp3",
   "url": "https://pronounce.renlab.ai/word/linux",
-  "date_modified": "2026-05-16"
+  "date_modified": "2026-11-26"
 },
 {
   "word": "Debian",
@@ -756,13 +756,13 @@
   "alt_ipa": [],
   "alt_respelling_us": [],
   "source_url": "https://en.wikipedia.org/wiki/TeX#Pronunciation_and_spelling",
-  "source_label": "Wikipedia § Pronunciation",
+  "source_label": "Wikipedia § Pronunciation and spelling",
   "category": "tool",
   "confidence": "creator-clarified",
   "notes": "Knuth: like \"tech\" — the X is a Greek chi.",
   "audio_url": "https://pronounce.renlab.ai/audio/tex.mp3",
   "url": "https://pronounce.renlab.ai/word/tex",
-  "date_modified": "2026-05-16"
+  "date_modified": "2026-11-26"
 },
 {
   "word": "char",
@@ -29694,10 +29694,10 @@
   "source_label": "Logan Kilpatrick (Google DeepMind) @ Google for Developers (0:49)",
   "category": "product",
   "confidence": "creator-clarified",
-  "notes": "Google's frontier model for hard problems, launched 2026-10-13. Google DeepMind's Logan Kilpatrick says the name on Google's own channel: \"Today we're here talking about Gemini 4 Argon.\" Stress the first syllable of the gas: \"AR-gon.\"",
+  "notes": "Google's Gemini 4 model, launched 2026-10-13. Google DeepMind's Logan Kilpatrick says the name on Google's own channel: \"Today we're here talking about Gemini 4 Argon.\" Stress the first syllable of the gas: \"AR-gon.\"",
   "audio_url": "https://pronounce.renlab.ai/audio/gemini-4-argon.mp3",
   "url": "https://pronounce.renlab.ai/word/gemini-4-argon",
-  "date_modified": "2026-11-25"
+  "date_modified": "2026-11-26"
 },
 {
   "word": "Gemini 4 Carbon",
@@ -29709,10 +29709,10 @@
   "source_label": "Google Cloud Tech @ \"How Gemini 4 Argon & Carbon were built\" (0:59)",
   "category": "product",
   "confidence": "creator-clarified",
-  "notes": "Google's strongest model, launched 2026-10-28. Google's own channel says \"Gemini 4 Carbon\" at 0:59 of its interview with DeepMind's head of Gemini product. Named after the element like its siblings; not the Carbon programming language, which has its own entry.",
+  "notes": "Google's Gemini 4 model, launched 2026-10-28. Google's own channel says \"Gemini 4 Carbon\" at 0:59 of its interview with DeepMind's head of Gemini product. Named after the element like its siblings; not the Carbon programming language, which has its own entry.",
   "audio_url": "https://pronounce.renlab.ai/audio/gemini-4-carbon.mp3",
   "url": "https://pronounce.renlab.ai/word/gemini-4-carbon",
-  "date_modified": "2026-11-25"
+  "date_modified": "2026-11-26"
 },
 {
   "word": "Gemini 4 Hydrogen",
@@ -29724,10 +29724,10 @@
   "source_label": "Google Antigravity @ \"Gemini 4 Hydrogen available in Google Antigravity\" (0:00)",
   "category": "product",
   "confidence": "creator-clarified",
-  "notes": "Google's fast model for everyday coding and agentic workflows, launched 2026-11-12. Google's own channel opens by saying \"Gemini 4 Hydrogen\" and repeats it at 1:23. Stress the first syllable: \"HY-druh-jen.\"",
+  "notes": "Google's Gemini 4 model, launched 2026-11-12. Google's own channel opens by saying \"Gemini 4 Hydrogen\" and repeats it at 1:23. Stress the first syllable: \"HY-druh-jen.\"",
   "audio_url": "https://pronounce.renlab.ai/audio/gemini-4-hydrogen.mp3",
   "url": "https://pronounce.renlab.ai/word/gemini-4-hydrogen",
-  "date_modified": "2026-11-25"
+  "date_modified": "2026-11-26"
 },
 {
   "word": "Gemini 4 Neon",
@@ -29739,10 +29739,10 @@
   "source_label": "Cambridge Dictionary (US), headword neon",
   "category": "product",
   "confidence": "community-consensus",
-  "notes": "Google's model for fast end-to-end tasks, launched 2026-11-18. Read it like the gas: \"NEE-on,\" not \"ne-ON.\" Google published five Neon videos and none has a voice, so nobody at Google is on record saying the name. The reading follows the dictionary and the way DeepMind staff say \"Gemini 4\" for the sibling models.",
+  "notes": "Google's Gemini 4 model, launched 2026-11-18. Read it like the gas: \"NEE-on,\" not \"ne-ON.\" Google published five Neon videos and none has a voice, so nobody at Google is on record saying the name. The reading follows the dictionary and the way DeepMind staff say \"Gemini 4\" for the sibling models.",
   "audio_url": "https://pronounce.renlab.ai/audio/gemini-4-neon.mp3",
   "url": "https://pronounce.renlab.ai/word/gemini-4-neon",
-  "date_modified": "2026-11-25"
+  "date_modified": "2026-11-26"
 },
 {
   "word": "Shirudo",

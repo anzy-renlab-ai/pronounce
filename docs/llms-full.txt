@@ -5,8 +5,8 @@ Format: <word> | <IPA> | <respelling> | <category> | <confidence> | <source>
 kubectl | /ˈkuːb kənˌtroʊl/ | koob control | cli-tool | contested | (no source)
 nginx | /ˈɛn dʒɪnˈɛks/ | engine X | product | creator-clarified | https://nginx.org/en/
 GIF | /dʒɪf/ | jif | acronym | creator-clarified | https://web.archive.org/web/20130522145554/http://bits.blogs.nytimes.com/2013/05/21/an-honor-for-the-creator-of-the-gif/
-JSON | /ˈdʒeɪsən/ | jay son | acronym | contested | https://en.wikipedia.org/wiki/JSON#Pronunciation
-SQL | /ˈsiːkwəl/ | sequel | acronym | contested | https://en.wikipedia.org/wiki/SQL#Pronunciation
+JSON | /ˈdʒeɪsən/ | jay son | acronym | contested | https://en.wikipedia.org/wiki/JSON#Naming_and_pronunciation
+SQL | /ˈsiːkwəl/ | sequel | acronym | contested | https://en.wikipedia.org/wiki/SQL
 GUI | /ˈɡuːi/ | gooey | acronym | contested | https://en.wikipedia.org/wiki/Graphical_user_interface
 GNU | /ɡnuː/ | guh new | project | creator-clarified | https://www.gnu.org/gnu/pronunciation.html
 Kubernetes | /ˌkuːbərˈnɛtiːz/ | koober netteez | product | community-consensus | https://kubernetes.io/
@@ -34,7 +34,7 @@ MongoDB | /ˈmɒŋɡoʊ diː biː/ | mongo D B | product | community-consensus |
 ScyllaDB | /ˈsɪlə diː biː/ | silla D B | product | community-consensus | https://www.scylladb.com/
 ClickHouse | /ˈklɪkˌhaʊs/ | click house | product | community-consensus | https://clickhouse.com/
 DuckDB | /ˈdʌk diː biː/ | duck D B | product | community-consensus | https://duckdb.org/
-Linux | /ˈlɪnəks/ | linnix | product | community-consensus | https://en.wikipedia.org/wiki/Linux#Pronunciation
+Linux | /ˈlɪnəks/ | linnix | product | community-consensus | https://en.wikipedia.org/wiki/Linux
 Debian | /ˈdɛbiən/ | deb ee un | product | creator-clarified | https://www.debian.org/intro/about
 Ubuntu | /ʊˈbʊntuː/ | oo boon too | product | community-consensus | https://ubuntu.com/
 Arch | /ɑːrtʃ/ | arch | product | community-consensus | https://archlinux.org/

@@ -1,6 +1,6 @@
 <h1 align="center">🔊 say-it · Pronounce</h1>
 
-<p align="center"><strong>Neon, Carbon, Hydrogen, Argon: how to say Google's new Gemini 4 model names. One Bash command pronounces 1,988 developer jargon names, each tagged with how settled its reading is.</strong></p>
+<p align="center"><strong>Neon, Carbon, Hydrogen, Argon: how to say Google's new Gemini 4 model names. "jem in eye four" nee on, carbon, hy druh jen, argon. One Bash command pronounces 1,988 developer jargon names, each tagged with how settled its reading is.</strong></p>
 
 <p align="center">
 <a href="https://github.com/anzy-renlab-ai/pronounce/stargazers"><img src="https://img.shields.io/github/stars/anzy-renlab-ai/pronounce?style=social" alt="GitHub stars"></a>
@@ -19,12 +19,12 @@
 🎯 <a href="https://pronounce.renlab.ai/quiz">Quiz</a> ·
 🎮 <a href="https://pronounce.renlab.ai/daily">Dev Jargon 5</a> ·
 🎤 <a href="https://pronounce.renlab.ai/#hero-search">Voice search</a> ·
-🔗 Correction short-links: <code>pronounce.renlab.ai/say/&lt;word&gt;</code> ·
+🔗 Short link to any entry: <code>pronounce.renlab.ai/say/&lt;word&gt;</code> ·
 🔌 <a href="mcp-server/">MCP server</a> · 🧩 <a href="skills/pronounce-word/SKILL.md">Claude Code skill</a>
  · ⚙️ <a href="docs/github-action.md">GitHub Action</a>
 </p>
 
-<p align="center"><img src="https://pronounce.renlab.ai/demo.gif" alt='say-it "Gemini 4 Carbon" — terminal demo' width="720"></p>
+<p align="center"><img src="https://pronounce.renlab.ai/demo.gif" alt='say-it "Gemini 4 Carbon" and "Gemini 4 Hydrogen" — terminal demo' width="720"></p>
 
 <p align="center">
   <a href="https://github.com/anzy-renlab-ai/pronounce/releases/download/v2.5.0/promo.mp4"><strong>▶ Watch the 47-second promo</strong> (with voice)</a> ·
@@ -42,6 +42,8 @@ export PATH="$HOME/.local/bin:$PATH"                        # only if ~/.local/b
 say-it "Gemini 4 Neon"
 ```
 
+**Linux:** run `sudo apt install espeak-ng` first. **Windows:** git-bash + PowerShell, or WSL with `espeak-ng`.
+
 or the explicit way:
 
 ```bash
@@ -53,7 +55,7 @@ say-it "Gemini 4 Neon"
 
 ![say-it CLI demo — kubectl, YAML, TOML, Ghostty](pitch/say-it-cli-demo.gif)
 
-That's it. Now try `say-it --why "Gemini 4 Carbon"` for the Google video where the name is said (0:59), then `say-it "Gemini 4 Argon"`, `say-it GIF`, `say-it nginx` or `say-it Pydantic`, or `say-it quiz` to test yourself. **Linux** users: install `espeak-ng` (`sudo apt install espeak-ng`) and the CLI just works. **Windows**: same CLI under WSL or git-bash + PowerShell. Or skip install and use the browser at **[pronounce.renlab.ai](https://pronounce.renlab.ai)** — where 52 word pages now link the **🎬 moment the creator says the name** (Google's own people on Gemini 4 Carbon, Argon and Hydrogen; Knuth on TeX, Lamport on LaTeX, Evan You on Vite, Stallman on GNU — [example: Gemini 4 Carbon](https://pronounce.renlab.ai/word/gemini-4-carbon)).
+That's it. Now try `say-it --why "Gemini 4 Carbon"` for the Google video where the name is said (0:59), then `say-it "Gemini 4 Argon"`, `say-it GIF`, `say-it nginx` or `say-it Pydantic`, or `say-it quiz` to test yourself. Or skip install and use the browser at **[pronounce.renlab.ai](https://pronounce.renlab.ai)** — where 52 word pages link the **🎬 moment the creator says the name** (Google's own people on Gemini 4 Carbon, Argon and Hydrogen; Knuth on TeX, Lamport on LaTeX, Evan You on Vite, Stallman on GNU — [example: Gemini 4 Carbon](https://pronounce.renlab.ai/word/gemini-4-carbon)).
 
 > ⭐ If `say-it "Gemini 4 Neon"` saves you one cringey standup moment — **[star the repo](https://github.com/anzy-renlab-ai/pronounce)**. It nudges more devs to contribute their favorite mispronounced project name.
 
@@ -63,9 +65,9 @@ That's it. Now try `say-it --why "Gemini 4 Carbon"` for the Google video where t
 
 ## 🏆 The developer pronunciation scoreboard
 
-**1,988 entries, every one confidence-tagged** — **89 settled by the creator themselves**, **184 the community still argues about.** The famous ones:
+**1,988 entries, every one confidence-tagged** — **89 settled by the creator themselves**, **184 the community still argues about**, **1,715 tagged `community-consensus`**: the reading is widely used but no creator is on record. 659 carry no link. The famous ones:
 
-### ✅ Settled — the creator said so
+### ✅ The creator said so
 
 | Word | It's… | …not | Settled by |
 |------|-------|------|-----------|
@@ -82,15 +84,15 @@ That's it. Now try `say-it --why "Gemini 4 Carbon"` for the Google video where t
 
 | Word | Camp A | Camp B |
 |------|--------|--------|
-| **[kubectl](https://pronounce.renlab.ai/word/kubectl)** | "koob-control" | "cube-cuddle" |
 | **[SQL](https://pronounce.renlab.ai/word/sql)** | "sequel" | "S-Q-L" |
 | **[JSON](https://pronounce.renlab.ai/word/json)** | "JAY-son" | "JEE-son" |
 | **[GUI](https://pronounce.renlab.ai/word/gui)** | "gooey" | "G-U-I" |
 | **[JWT](https://pronounce.renlab.ai/word/jwt)** | "jot" (per RFC 7519) | "J-W-T" |
+| **[kubectl](https://pronounce.renlab.ai/word/kubectl)** | "koob-control" | "cube-cuddle" |
 
 Every cell has IPA, audio and a confidence tag. **[Browse all 1,988 entries →](https://pronounce.renlab.ai/browse)**
 
-> Disagree with one? That's the whole point — [open a PR](CONTRIBUTING.md) with your reading and a source. The argument *is* the dataset.
+> Disagree with one? That's the whole point — [open an issue](https://github.com/anzy-renlab-ai/pronounce/issues/new/choose) with your reading and a source. The argument *is* the dataset.
 
 ---
 
@@ -98,29 +100,28 @@ Every cell has IPA, audio and a confidence tag. **[Browse all 1,988 entries →]
 
 - **1,988 entries, every one confidence-tagged.** Tagged `creator-clarified` / `community-consensus` / `contested`. 1,329 entries carry a source link, and many of those links are the project's home page, so a link is not the same as a citation. Where no source exists the field stays empty rather than being filled with a made-up one. Wilhite told the NYT in 2013 that GIF has "a soft 'G,' pronounced 'jif.'" Crockford said in 2011, "There's a lot of argument about how you pronounce that, but I strictly don't care." RFC 7519 says JWT is "jot". The dictionary cites them.
 - **Multi-reading audio.** For words where the debate is real — GIF, SQL, GUI, char, regex — the CLI chains the alternates after the primary with a spoken "or:" so you *hear* the debate without staring at the terminal. `--solo` skips the tail once you've internalized it.
-- **One Bash CLI, no npm runtime.** No sudo, no framework bootstrap, no surprises. It detects macOS `say`, Linux `espeak-ng`/`espeak`, or Windows PowerShell `System.Speech`. The repo also ships a [Claude Code skill](skills/pronounce-word/SKILL.md) and an [MCP server](mcp-server/) so your AI answers "how do you pronounce X?" with **audio**, not a phonetic guess.
+- **One Bash CLI, no npm runtime.** No framework bootstrap. It detects macOS `say`, Linux `espeak-ng`/`espeak`, or Windows PowerShell `System.Speech`. The repo also ships a [Claude Code skill](skills/pronounce-word/SKILL.md) and an [MCP server](mcp-server/) so your AI answers "how do you pronounce X?" with **audio**, not a phonetic guess.
 - **A docs-native GitHub Action.** Scan Markdown changed by a pull request and emit a sourced pronunciation glossary in the job summary — no API key, dependency install, or network request.
 - **Canonical website audio.** The site plays each committed canonical MP3 first and uses Web Speech only as a fallback if playback fails.
 
 ```bash
-$ say-it --why JSON
-word              JSON
-ipa               /ˈdʒeɪsən/
-respelling_us     jay son
-confidence        contested
-source            Wikipedia § Pronunciation
-url               https://en.wikipedia.org/wiki/JSON#Pronunciation
+$ say-it --why "Gemini 4 Carbon"
+Gemini 4 Carbon  ┄  jem in eye four carbon  /ˈdʒɛmɪnaɪ ˈfɔːr ˈkɑːrbən/
+  category  product
+  confidence creator-clarified
+  source    Google Cloud Tech @ "How Gemini 4 Argon & Carbon were built" (0:59)
+  url       https://www.youtube.com/watch?v=sUcvhFGc4mw&t=59s
 ```
 
 ---
 
 ## Why not just Google?
 
-Because Google gives you 47 Reddit arguments and a YouTube clip you have to unmute. IPA gives you `/ˈkuːb kənˌtroʊl/` — a reference, not a teacher.
+Because Google gives you 47 Reddit arguments and a YouTube clip you have to unmute. IPA gives you `/ˈdʒɛmɪnaɪ ˈfɔːr ˈniːɑːn/` — a reference, not a teacher.
 
 You don't need a phonetic transcription. You need to **hear** the word. Twice. Maybe three times. Done.
 
-`say-it` ships a community-maintained dictionary of how engineers actually say the names that trip everyone up — and feeds the *intended* respelling to your OS's text-to-speech engine, so `kubectl` comes out as `koob-control`, not whatever your computer guessed from the letters.
+`say-it` ships a community-maintained dictionary of how engineers actually say the names that trip everyone up — and feeds the *intended* respelling to your OS's text-to-speech engine, so `"Gemini 4 Neon"` comes out as `"jem in eye four nee on"`, not whatever your computer guessed from the letters.
 
 After a spoken `say-it <word>` lookup, the CLI prints a one-line `★` nudge at most once per day (only when stdout is a terminal — kept out of pipes, redirects, and `-q` runs; if the cache dir is unwritable it repeats each run). Disable it with `SAY_IT_NO_STAR=1`.
 
@@ -131,7 +132,7 @@ Some pronunciations aren't opinions: the people behind the name went on record. 
 | Word | Reading | Source |
 |------|---------|--------|
 | `GIF` | "jif" (creator says so) | [Steve Wilhite, NYT 2013](https://web.archive.org/web/20130522145554/http://bits.blogs.nytimes.com/2013/05/21/an-honor-for-the-creator-of-the-gif/) |
-| `JSON` | "jay-son" or "jee-son" — Crockford "strictly [does not] care" | [Douglas Crockford, 2011, via Wikipedia](https://en.wikipedia.org/wiki/JSON#Pronunciation) |
+| `JSON` | "jay-son" or "jee-son" — Crockford "strictly [does not] care" | [Douglas Crockford, 2011, via Wikipedia](https://en.wikipedia.org/wiki/JSON#Naming_and_pronunciation) |
 | `GNU` | "g-noo" (hard G, one syllable) | [GNU Project official](https://www.gnu.org/gnu/pronunciation.html) |
 | `Linux` | "LIN-ux" (short i, schwa) | [Linus Torvalds himself](https://www.youtube.com/watch?v=5IfHm6R5le0) |
 | `LaTeX` | "lay-tek" (or "lah-tek") | [Leslie Lamport, official](https://www.latex-project.org/about/) |

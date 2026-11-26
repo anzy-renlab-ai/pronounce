@@ -74,6 +74,10 @@ assert_contains "--md Fréchet canonical slug" "/word/fr-chet" "$CLI" --md Fréc
 assert_contains "tweet Fréchet canonical slug" "/word/fr-chet" "$CLI" tweet Fréchet
 assert_contains "cheatsheet"       "Discovery"         "$CLI" cheatsheet
 assert_contains "didyoumean"       "did you mean"      "$CLI" --why Kafkah
+assert_contains "bare last name finds the model row"   "Gemini 4 Hydrogen"  "$CLI" --why hydrogen
+assert_contains "bare last name finds the model row"   "Gemini 4 Argon"     "$CLI" --why argon
+assert_contains "namesake points at the model row"     "also"               "$CLI" --why neon
+assert_contains "namesake names the model row"         "Gemini 4 Neon"      "$CLI" --why neon
 
 echo ""
 if (( fail )); then echo "✗ smoke test FAILED ($fail check(s))"; exit 1

@@ -1291,8 +1291,8 @@ cat > "$DOCS/v1.html" <<EOF
 ipa               /ˈdʒeɪsən/
 respelling_us     jay son
 confidence        contested
-source            Wikipedia § Pronunciation
-url               https://en.wikipedia.org/wiki/JSON#Pronunciation</span></pre>
+source            Wikipedia § Naming and pronunciation
+url               https://en.wikipedia.org/wiki/JSON#Naming_and_pronunciation</span></pre>
 
     <section class="famous">
       <h2>📜 Famous moments</h2>
@@ -1497,8 +1497,8 @@ cat > "$DOCS/zh.html" <<EOF
 ipa               /ˈdʒeɪsən/
 respelling_us     jay son
 confidence        contested
-source            Wikipedia § Pronunciation
-url               https://en.wikipedia.org/wiki/JSON#Pronunciation</span></pre>
+source            Wikipedia § Naming and pronunciation
+url               https://en.wikipedia.org/wiki/JSON#Naming_and_pronunciation</span></pre>
 
     <section class="famous">
       <h2>📜 经典案例（创作者钦定的读法）</h2>
@@ -1638,7 +1638,7 @@ cat > "$DOCS/browse.html" <<EOF
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Dataset","@id":"${SITE_URL}/#dataset","name":"${BRAND}: developer-jargon pronunciation dictionary","description":"A community-maintained dataset of ${ENTRY_COUNT} developer project, product, CLI-tool, CS-term, and acronym pronunciations. Entries include IPA, an English-like respelling, a confidence level (creator-clarified | community-consensus | contested), and pre-rendered audio; a source link is given where one exists.","url":"${SITE_URL}/browse","license":"https://opensource.org/licenses/MIT","isAccessibleForFree":true,"keywords":["pronunciation","IPA","developer jargon","tech terms","respelling"],"creator":{"@type":"Organization","name":"${BRAND}","url":"${SITE_URL}/"},"dateModified":"${TODAY}","distribution":[{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"${SITE_URL}/api/words.json"},{"@type":"DataDownload","encodingFormat":"text/tab-separated-values","contentUrl":"https://github.com/${GH_REPO}/blob/main/data/pronunciations.tsv"}]},{"@type":"DefinedTermSet","@id":"${SITE_URL}/#dictionary","name":"${BRAND} — developer-jargon pronunciation dictionary","description":"How engineers actually pronounce ${ENTRY_COUNT} developer project, product, and jargon names.","url":"${SITE_URL}/browse"}]}</script>
 </head>
 <body>
-  <div class="gh-banner">⭐ <a href="https://github.com/${GH_REPO}">Star on GitHub</a> — open source, MIT, every dictionary entry is a community PR</div>
+  <div class="gh-banner">⭐ <a href="https://github.com/${GH_REPO}">Star on GitHub</a> — open source, MIT; a reading changes when someone brings a source</div>
   <nav class="topbar">
     <div class="brand"><a href="./">🔊 ${BRAND}</a></div>
     <div class="links">

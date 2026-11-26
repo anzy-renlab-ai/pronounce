@@ -2,16 +2,20 @@
 """Generate a self-contained demo MP4 of say-it.
 
 Composes 4 terminal-style PNG frames with the real CLI audio output:
-1. say-it "Gemini 4 Carbon"  → the reading × 3
-2. say-it kubectl            → koob control × 3 + or: cube cuddle, or: kube C T L
-                               (a contested word, so every reading is spoken)
+1. say-it "Gemini 4 Carbon"   → the reading × 3
+2. say-it "Gemini 4 Hydrogen" → the reading × 3, with the second of the
+                                creator clip where the name is said
 3. say-it --why "Gemini 4 Carbon"  → the entry's source (silent panel)
 4. the entry count, counted from the dictionary when this runs, and the install line
 
-The new model names lead, as the owner asked on 2026-11-26. kubectl stays only
-as the example of a contested word. The script stops unless the dictionary holds
-both rows as it expects them, and every count, reading and source on screen
-comes from data/pronunciations.tsv.
+The Gemini 4 model names lead, as the owner asked on 2026-11-26, and no
+contested word is in the animation: under a caption about the model names the
+old example held the longest scene. The script stops unless the dictionary holds both rows as it expects
+them, and every count, reading, source and second on screen comes from the
+dictionary and the clip file.
+
+Counts are drawn as floors ("1,900+"), because nothing re-renders this file
+when the dictionary grows.
 
 Each frame is rendered with Pillow; audio is generated via the CLI (`-o`, so
 nothing is played); ffmpeg stitches frames + audio into demo.mp4. Run from the
@@ -32,12 +36,13 @@ from PIL import Image, ImageDraw, ImageFont
 REPO = pathlib.Path(__file__).resolve().parent.parent
 CLI = REPO / "bin" / "say-it"
 DICT = REPO / "data" / "pronunciations.tsv"
+CLIPS = REPO / "data" / "creator-clips.tsv"
 OUT = REPO / "docs" / "demo.mp4"
 TMP = pathlib.Path(tempfile.mkdtemp(prefix="say-it-demo-"))
 
 LEAD = "Gemini 4 Carbon"          # spoken first and shown with its source
 LEAD_RESP = "jem in eye four carbon"
-CONTESTED = "kubectl"             # the example of a word with several readings
+SECOND = "Gemini 4 Hydrogen"      # spoken next; its creator clip gives the second
 NAMED = 4                         # the four Gemini 4 model names in the title
 
 W, H = 1280, 720
@@ -89,6 +94,21 @@ def dictionary():
     return rows
 
 
+def clip_second(word):
+    """The second at which the creator clip for `word` says the name."""
+    with open(CLIPS, encoding="utf-8") as fh:
+        for line in fh:
+            cols = line.rstrip("\n").split("\t")
+            if len(cols) >= 3 and cols[0] == word:
+                return int(cols[2])
+    raise SystemExit(f'data/creator-clips.tsv has no clip for "{word}"')
+
+
+def floor(count, step=100):
+    """A lower bound that stays true after the dictionary grows: 1,988 → "1,900+"."""
+    return f"{count // step * step:,}+"
+
+
 def frame_base(subtitle: str):
     img = Image.new("RGB", (W, H), BG)
     d = ImageDraw.Draw(img)
@@ -132,33 +152,32 @@ def spoken(resp: str) -> list:
     ]
 
 
+def said_on_clip(word) -> str:
+    second = clip_second(word)
+    return f"# said on Google's own channel at {second // 60}:{second % 60:02d}"
+
+
 def render_frame_lead(path, subtitle):
     img, d = frame_base(subtitle)
     render_terminal_lines(d, [
         [("$ ", MUTED), (f'say-it "{LEAD}"', FG)],
         [],
         *spoken(LEAD_RESP),
+        [],
+        [("   ", FG), (said_on_clip(LEAD), MUTED)],
     ])
     img.save(path)
 
 
-def contested_lines(row):
-    """What the CLI says for a contested word: the primary reading three times, then each alternate."""
-    primary = " ".join(f"{row[2]}." for _ in range(3))
-    chain = "   ".join(f"or: {alt}." for alt in row[4].split("|"))
-    return [
-        [("$ ", MUTED), (f"say-it {row[0]}", FG)],
-        [],
-        [("   ", FG), (primary, ACCENT_2)],
-        [("   ", FG), (chain, ACCENT)],
-        [],
-        [("   ", FG), ("# a contested word: every reading is spoken", MUTED)],
-    ]
-
-
-def render_frame_contested(path, subtitle, row):
+def render_frame_second(path, subtitle, row):
     img, d = frame_base(subtitle)
-    render_terminal_lines(d, contested_lines(row))
+    render_terminal_lines(d, [
+        [("$ ", MUTED), (f'say-it "{row[0]}"', FG)],
+        [],
+        *spoken(row[2]),
+        [],
+        [("   ", FG), (said_on_clip(row[0]), MUTED)],
+    ])
     img.save(path)
 
 
@@ -179,7 +198,7 @@ def render_frame_why(path, subtitle, row):
 def render_frame_outro(path, subtitle, entries: int):
     img, d = frame_base(subtitle)
     d.text((PADDING + 28, TERMINAL_Y + 100),
-           f"{entries:,} entries · every one tagged by confidence · MIT", font=font_title, fill=FG)
+           f"{floor(entries)} entries · every one tagged by confidence · MIT", font=font_title, fill=FG)
     d.text((PADDING + 28, TERMINAL_Y + 180),
            "Install:", font=font_subtitle, fill=MUTED_STRONG)
     d.text((PADDING + 28, TERMINAL_Y + 220),
@@ -198,37 +217,37 @@ def main():
     lead_rows = [r for r in rows if r[0] == LEAD]
     if len(lead_rows) != 1 or lead_rows[0][2] != LEAD_RESP:
         raise SystemExit(f'the dictionary must hold exactly one "{LEAD}" row read "{LEAD_RESP}"')
-    contested_rows = [r for r in rows if r[0] == CONTESTED]
-    if len(contested_rows) != 1 or contested_rows[0][8] != "contested" or not contested_rows[0][4]:
-        raise SystemExit(f'the dictionary must hold exactly one "{CONTESTED}" row that is contested and has alternates')
-    subtitle = f"Hear how to say Google's new Gemini 4 models, and {len(rows) - NAMED:,} other names"
+    second_rows = [r for r in rows if r[0] == SECOND]
+    if len(second_rows) != 1:
+        raise SystemExit(f'the dictionary must hold exactly one "{SECOND}" row')
+    subtitle = f"Hear how to say Google's new Gemini 4 models, and {floor(len(rows) - NAMED)} other names"
 
     # 1) Render frames
     f_lead = TMP / "frame_1_lead.png"
-    f_contested = TMP / "frame_2_contested.png"
+    f_second = TMP / "frame_2_second.png"
     f_why = TMP / "frame_3_why.png"
     f_outro = TMP / "frame_4_outro.png"
     render_frame_lead(f_lead, subtitle)
-    render_frame_contested(f_contested, subtitle, contested_rows[0])
+    render_frame_second(f_second, subtitle, second_rows[0])
     render_frame_why(f_why, subtitle, lead_rows[0])
     render_frame_outro(f_outro, subtitle, len(rows))
     print(f"[1/3] Rendered 4 frames in {TMP}")
 
     # 2) Generate audio segments via the CLI (`-o` writes a file; nothing is played)
     a_lead = TMP / "a_lead.aiff"
-    a_contested = TMP / "a_contested.aiff"
+    a_second = TMP / "a_second.aiff"
     a_silent = TMP / "a_silent.aiff"
     subprocess.run([str(CLI), "-o", str(a_lead), LEAD], check=True, capture_output=True)
-    subprocess.run([str(CLI), "-o", str(a_contested), CONTESTED], check=True, capture_output=True)
+    subprocess.run([str(CLI), "-o", str(a_second), SECOND], check=True, capture_output=True)
     # 4-second silent track for the --why frame and the outro
     subprocess.run(["ffmpeg", "-y", "-f", "lavfi", "-i", "anullsrc=r=22050:cl=mono",
                     "-t", "4", "-c:a", "pcm_s16be", str(a_silent)],
                    check=True, capture_output=True)
-    print(f"[2/3] Generated audio ({LEAD}, {CONTESTED}, silence)")
+    print(f"[2/3] Generated audio ({LEAD}, {SECOND}, silence)")
 
     # 3) Compose with ffmpeg: each frame for the duration of its audio segment
     segments = []
-    for image, audio in ((f_lead, a_lead), (f_contested, a_contested), (f_why, a_silent), (f_outro, a_silent)):
+    for image, audio in ((f_lead, a_lead), (f_second, a_second), (f_why, a_silent), (f_outro, a_silent)):
         segment = TMP / f"seg_{image.stem}.mp4"
         cmd = ["ffmpeg", "-y", "-loop", "1", "-i", str(image), "-i", str(audio),
                "-c:v", "libx264", "-tune", "stillimage", "-pix_fmt", "yuv420p",

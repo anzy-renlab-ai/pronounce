@@ -1,5 +1,21 @@
 # Changelog
 
+## v2.43.4 — 2026-11-26
+
+**Bare model names find their row, and the install takes three seconds.** No entries change (1,988 total).
+
+Rounds 4 to 9 of today's adversarial review found the defects below. Each was reproduced before it was changed.
+
+- **Bare model names.** `say-it --why hydrogen` said "not in dictionary" and suggested procgen. An entry that ends with the typed word now comes first among the suggestions, so `hydrogen` suggests Gemini 4 Hydrogen and `argon` Gemini 4 Argon. A word the dictionary holds under another meaning, `neon` and `carbon`, prints a last line named `also` that points at the model's row.
+- **The one-liner downloaded 87 MB to copy four files.** `docs/install.sh` now fetches those four files from the main branch (under 500 KB) and falls back to the repository archive when that fails. Measured in an empty home: 3.3 seconds on the new path and 27 on the fallback, against 26 before.
+- **The first screen did not say how to say the names.** The README's first line now prints the four readings. Its `--why` sample is the real output of `say-it --why "Gemini 4 Carbon"`. The old sample showed a layout the command never prints.
+- **Three citation links opened nothing.** The JSON, SQL and Linux rows linked to a `Pronunciation` section that does not exist on those pages. JSON now links to "Naming and pronunciation". SQL and Linux link to the article, where the reading is in the lead. The TeX label names its section.
+- **The scoreboard line named two tags of three.** It now also states the 1,715 `community-consensus` rows and the 659 without a link. `count-sync.mjs` rewrites both numbers and is a release guard from now on.
+- **The animation.** The second scene is `say-it "Gemini 4 Hydrogen"`, said on Google's channel at 0:00. It replaces the kubectl scene, which was the longest in the loop under a caption about the model names. Counts on screen are floors (`1,900+`), because no release step re-renders the file.
+- **Smaller things.** Linux's `espeak-ng` sits under the quick-start block instead of 13 lines lower. kubectl is the last row of the contested table, and the worked example is Neon. The banner on `/browse` no longer says every entry is a community pull request. The notes of the four Gemini 4 rows no longer call one model the strongest. The installer suggests Neon first, as the README does. `make-og.py` stops when its lead name is missing from the dictionary.
+- **For third parties.** `docs/og-2026-11.png` and `docs/demo-2026-11.gif` are frozen copies for a listing that embeds an image by URL, since `/og.png` and `/demo.gif` change with each release.
+- **The runbook** has a section for the day the lead names change and a list of weekly checks.
+
 ## v2.43.3 — 2026-11-26
 
 **The quick start works on a Mac that has never heard of ~/.local/bin.** No entries change (1,988 total).

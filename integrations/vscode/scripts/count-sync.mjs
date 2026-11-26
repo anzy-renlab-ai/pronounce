@@ -8,6 +8,10 @@ const TOTAL_PROSE = /\b(\d{1,3}(?:,\d{3})+|\d{3,5})(\+?)((?:[ \-]confidence[ \-]
 // says "link". It looks like a total to TOTAL_PROSE, so it runs first.
 const SOURCE_LINK = /\b(\d{1,3}(?:,\d{3})+|\d{3,5})(?= entries carry a source link)/gi;
 const SOURCE_PROSE = /\b(\d{1,3}(?:,\d{3})+|\d{3,5})(?=(?:(?: also)? (?:(?:carry|have|with) (?:a )?(?:citable|cited) sources?|sourced entr(?:y|ies))| of (?:\d{1,3}(?:,\d{3})+|\d{3,5}) entr(?:y|ies) (?:carry|have|with) (?:a )?(?:citable|cited) sources?))/gi;
+// The third tag and the rows without a link are what is left of the total, so
+// they are counts of their own and never match TOTAL_PROSE.
+const CONSENSUS_PROSE = /\b(\d{1,3}(?:,\d{3})+|\d{3,5})(?= tagged `community-consensus`)/gi;
+const NO_LINK = /\b(\d{1,3}(?:,\d{3})+|\d{3,5})(?= carry no link)/gi;
 const CREATOR_PROSE = /\b(\d{2,4})(?= (?:settled by the creator|creator-clarified entr(?:y|ies)))/gi;
 const CONTESTED_PROSE = /\b(\d{2,4})(?= (?:the community still argues|contested entr(?:y|ies)))/gi;
 const BADGE = /\b\d{3,4}(?:%2B)?%20entries/gi;
@@ -33,6 +37,14 @@ export function syncCountText(
     .replace(TOTAL_PROSE, (_match, number, plus, tail) =>
       `${formattedCount(count, number)}${plus}${tail}`)
     .replace(SOURCE_PROSE, number => formattedCount(sourceCount, number))
+    .replace(CONSENSUS_PROSE, number =>
+      Number.isInteger(count) && Number.isInteger(creatorCount) && Number.isInteger(contestedCount)
+        ? formattedCount(count - creatorCount - contestedCount, number)
+        : number)
+    .replace(NO_LINK, number =>
+      Number.isInteger(count) && Number.isInteger(sourceCount)
+        ? formattedCount(count - sourceCount, number)
+        : number)
     .replace(CREATOR_PROSE, number => formattedCount(creatorCount, number))
     .replace(CONTESTED_PROSE, number => formattedCount(contestedCount, number))
     .replace(BADGE, `${count}%20entries`)

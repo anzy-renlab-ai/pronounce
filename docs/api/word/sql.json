@@ -4,12 +4,12 @@
   "respelling_us": "sequel",
   "alt_ipa": ["/ˌɛs kjuː ˈɛl/"],
   "alt_respelling_us": ["S Q L"],
-  "source_url": "https://en.wikipedia.org/wiki/SQL#Pronunciation",
-  "source_label": "Wikipedia § Pronunciation",
+  "source_url": "https://en.wikipedia.org/wiki/SQL",
+  "source_label": "Wikipedia",
   "category": "acronym",
   "confidence": "contested",
   "notes": "ANSI: \"S-Q-L\"; practitioner: \"sequel\" (heir to IBM SEQUEL).",
   "audio_url": "https://pronounce.renlab.ai/audio/sql.mp3",
   "url": "https://pronounce.renlab.ai/word/sql",
-  "date_modified": "2026-05-16"
+  "date_modified": "2026-11-26"
 }

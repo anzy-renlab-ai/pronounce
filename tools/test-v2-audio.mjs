@@ -92,6 +92,19 @@ test('creator-clip count is rewritten only when a clip count is supplied', () =>
   assert.equal(syncCountText(stale, counts), stale);
 });
 
+test('the third tag and the unlinked count follow the dictionary', () => {
+  // Round 6 of the 2026-11-26 review: the scoreboard line named two of the three
+  // tags (273 of 1,988 rows) and left the other 86% unexplained.
+  const stale = [
+    '**1,984 entries, every one confidence-tagged** — **87 settled by the creator themselves**, **184 the community still argues about**, **1,713 tagged `community-consensus`**: the reading is widely used but no creator is on record. 700 carry no link.',
+  ].join('\n');
+  const synced = syncCountText(stale, { count: 1988, sourceCount: 1329, creatorCount: 89, contestedCount: 184 });
+  assert.equal(
+    synced,
+    '**1,988 entries, every one confidence-tagged** — **89 settled by the creator themselves**, **184 the community still argues about**, **1,715 tagged `community-consensus`**: the reading is widely used but no creator is on record. 659 carry no link.',
+  );
+});
+
 function sourceBlock(source, start, end) {
   const startIndex = source.indexOf(start);
   const endIndex = source.indexOf(end, startIndex);

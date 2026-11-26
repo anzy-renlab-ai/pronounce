@@ -1,6 +1,6 @@
 {
   "name": "pronounce",
-  "version": "2.43.3",
+  "version": "2.43.4",
   "description": "Pronounce developer jargon out loud — 1988+ confidence-tagged entries (Neon, Carbon, Hydrogen, Argon, GIF, JSON, JWT, …). Ships the pronounce-word skill and the pronounce MCP server.",
   "author": {
     "name": "anzy-renlab-ai",

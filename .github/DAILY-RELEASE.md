@@ -111,6 +111,31 @@ Append one line to `.github/STAR-DRIVE-STATUS.md` under a `## Daily log`
 heading: date, version, entries added, entries rejected (+why), star count
 (`gh api repos/anzy-renlab-ai/pronounce --jq .stargazers_count`).
 
+## When the lead names change
+
+The lead examples (today the Gemini 4 model names) are typed by hand in a few
+places. List them all with:
+
+```bash
+git grep -n -I -e "Gemini 4" -e "Google's new" -e "Google 新" -- README.md install.sh \
+  tools/make-og.py tools/make-demo.py tools/build-site.sh .claude-plugin .codex-plugin .github/REPO_TOPICS.md
+```
+
+Then edit them, run `python3 tools/make-demo.py`, `python3 tools/make-og.py` and
+`bash tools/build-site.sh`, set the GitHub description to the text in
+`.github/REPO_TOPICS.md`, and run the guards. `make-demo.py` and `make-og.py`
+stop when their lead row is missing from the dictionary.
+
+## Weekly checks
+
+- `node tools/sync-counts.mjs` (a release guard as well): every quoted count.
+- `python3 tools/make-demo.py` and `python3 tools/make-og.py` when a lead name
+  changes. No release step re-renders them, and the demo prints its counts as
+  floors (`1,900+`) so they stay true.
+- Every creator clip still answers: the video ids in `data/creator-clips.tsv`
+  against `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=<id>&format=json`.
+  `lint-dict.sh` only checks the shape of an id.
+
 ## If nothing qualifies
 
 Skip steps 3–5. Still do step 6 (star count + a "no release" line). A quiet

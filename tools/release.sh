@@ -82,6 +82,7 @@ node --test tools/test-daily.mjs tools/test-mcp.mjs >/dev/null || fail "daily/mc
 node --test tools/test-coverage.mjs >/dev/null || fail "coverage tests failed"
 node --test tools/test-site-search.mjs >/dev/null || fail "site sounds-like search tests failed"
 node tools/coverage.mjs --check >/dev/null    || fail "demand coverage fell below the floor"
+node tools/sync-counts.mjs >/dev/null       || fail "a quoted count drifted from the dictionary"
 python3 -m unittest tools/test_build_v2_data.py tools/test_make_og_all.py \
   tools/test_chrome_dictionary.py tools/test_build_entry_dates.py \
   tools/test_build_hf_dataset.py tools/test_build_seo.py tools/test_deploy_config.py \

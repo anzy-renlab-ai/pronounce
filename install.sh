@@ -64,7 +64,7 @@ if ! echo ":$PATH:" | grep -q ":$PREFIX/bin:"; then
 fi
 echo
 echo "Try:"
-echo "  say-it \"Gemini 4 Carbon\""
+echo "  say-it \"Gemini 4 Neon\""
 echo "  say-it --why GIF"
 echo "  say-it list | head"
 echo

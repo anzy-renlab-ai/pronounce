@@ -25,6 +25,14 @@ ENTRIES = entry_count()
 OTHERS = ENTRIES - 1  # subtract the "Gemini 4 Neon" headline name
 LEAD = "Gemini 4 Neon"   # the name the card leads with; the owner wants the new model names first
 
+def has_word(word):
+    with open(DICT, encoding="utf-8") as fh:
+        return any(line.split("\t", 1)[0].strip().lower() == word.lower() for line in fh)
+
+if not has_word(LEAD):
+    raise SystemExit(f'the dictionary has no "{LEAD}" row: the card would name a word the CLI cannot answer')
+
+
 W, H = 1200, 630
 
 # Palette (matches docs/style.css)
