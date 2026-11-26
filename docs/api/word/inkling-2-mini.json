@@ -1,0 +1,15 @@
+{
+  "word": "Inkling 2 Mini",
+  "ipa": "/ˈɪŋklɪŋ ˈtuː ˈmɪni/",
+  "respelling_us": "INK ling too mini",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://dictionary.cambridge.org/us/dictionary/english/inkling",
+  "source_label": "Cambridge Dictionary (US), headword inkling",
+  "category": "product",
+  "confidence": "community-consensus",
+  "notes": "Thinking Machines Lab's small open-weights model, released 2026-11-20: a looped transformer that runs its middle layers three times per token. The launch post says nothing about the reading, so the entry follows Cambridge for the ordinary word: stress the first syllable, \"INK-ling,\" not \"ink-LING.\"",
+  "audio_url": "https://pronounce.renlab.ai/audio/inkling-2-mini.mp3",
+  "url": "https://pronounce.renlab.ai/word/inkling-2-mini",
+  "date_modified": "2026-11-26"
+}

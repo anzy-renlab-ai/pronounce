@@ -84,7 +84,7 @@ node --test tools/test-site-search.mjs >/dev/null || fail "site sounds-like sear
 node tools/coverage.mjs --check >/dev/null    || fail "demand coverage fell below the floor"
 python3 -m unittest tools/test_build_v2_data.py tools/test_make_og_all.py \
   tools/test_chrome_dictionary.py tools/test_build_entry_dates.py \
-  tools/test_build_seo.py tools/test_deploy_config.py \
+  tools/test_build_hf_dataset.py tools/test_build_seo.py tools/test_deploy_config.py \
   tools/test_plugin_manifests.py tools/test_npm_twin.py >/dev/null || fail "unittest suite failed"
 
 # --- tag + push --------------------------------------------------------------

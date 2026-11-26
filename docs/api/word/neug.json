@@ -1,0 +1,15 @@
+{
+  "word": "NeuG",
+  "ipa": "/ˈnuː ˈdʒiː/",
+  "respelling_us": "new gee",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://github.com/alibaba/neug",
+  "source_label": "NeuG README (Alibaba)",
+  "category": "product",
+  "confidence": "creator-clarified",
+  "notes": "Alibaba's graph-native transactional database, open source under Apache-2.0 and on GitHub since 2026-03. Its README states the reading: NeuG (pronounced \"new-gee\"), \"new\" plus the letter G.",
+  "audio_url": "https://pronounce.renlab.ai/audio/neug.mp3",
+  "url": "https://pronounce.renlab.ai/word/neug",
+  "date_modified": "2026-11-26"
+}

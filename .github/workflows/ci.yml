@@ -59,6 +59,8 @@ on:
       - 'docs/index.html'
       - 'docs/v2/index.html'
       - 'CHANGELOG.md'
+      - 'tools/build-hf-dataset.py'
+      - 'tools/test_build_hf_dataset.py'
 
 jobs:
   lint:
@@ -88,4 +90,4 @@ jobs:
       - name: Test homepage audio
         run: node --test tools/test-v2-audio.mjs tools/test_pronounce_action.mjs tools/test-daily.mjs tools/test-mcp.mjs
       - name: Test generated data and OG state
-        run: python -m unittest tools/test_build_v2_data.py tools/test_make_og_all.py tools/test_chrome_dictionary.py tools/test_build_entry_dates.py tools/test_build_seo.py tools/test_indexnow_submit.py tools/test_source_sprint.py tools/test_deploy_config.py
+        run: python -m unittest tools/test_build_v2_data.py tools/test_make_og_all.py tools/test_chrome_dictionary.py tools/test_build_entry_dates.py tools/test_build_hf_dataset.py tools/test_build_seo.py tools/test_indexnow_submit.py tools/test_source_sprint.py tools/test_deploy_config.py

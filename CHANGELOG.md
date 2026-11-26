@@ -1,5 +1,25 @@
 # Changelog
 
+## v2.43.0 — 2026-11-26
+
+**Nvidia had no entry, and neither did this week's most-upvoted model launch.** 4 new entries (1,988 total): Nvidia, Inkling 2 Mini, LLMON, NeuG.
+
+`Nvidia` was missing from a dictionary of 1,984 names. The word sat in the source links and notes of 29 other rows and never as a word of its own. It is read en-VID-ee-uh: the letter N comes first and the stress falls on the second syllable. The row cites the first sentence of the company's Wikipedia article, which gives both the IPA and the respelling. The same article records where the name comes from, "invidia", the Latin word for "envy". Two stories about the company drew more than 1,700 points on Hacker News this week.
+
+`Inkling 2 Mini` is Thinking Machines Lab's small open-weights model, released on 11-20. It is a looped transformer that runs its middle layers three times for every token. Its launch post was the most-upvoted model story of the week on Hacker News, at 1,488 points, and two more Inkling stories reached 776 and 598. The post says nothing about how to read the name. The entry therefore follows the Cambridge reading of the ordinary word, as `Gemini 4 Neon` does: INK-ling, with the stress in front.
+
+`LLMON` is IBM Granite's LLM-native markup language, introduced on 11-12 with Granite 4.1 3B and 8B. The blog post states the reading: LLMON (LLM Object Notation), pronounced "lemon". Yesterday's entry held it for today because five entries is the daily cap.
+
+`NeuG` is Alibaba's graph-native transactional database. Its README states the reading: NeuG (pronounced "new-gee").
+
+LLMON and NeuG carry `creator-clarified`, each on the maker's own text. That makes 89.
+
+Six names were rejected on pages read today. GLM-5.4 adds nothing to the `glm` row, and Z.ai's launch post states no reading. Stalwart is an ordinary English word and its maker says nothing about it. Ternary Bonsai 2.5 27B is a version string from a small lab. Ladybird, Spelunkr and Slopstrap give their reading in their spelling, or no page states one. The six words held in earlier runs stay held: pwn, Goethe, e/acc, p(doom), tkinter and Nyx.
+
+Every new audio file was transcribed to check how the voice reads the respelling. Three changed. `LEM un` came out as "lem-oon". `NOO jee` and `ING kling too MIN ee` came out unclear. They are now `LEM uhn`, `new gee` and `INK ling too mini`.
+
+One repair rides along. The Hugging Face dataset card has said "1,934 entries in all" in its first sentence since 11-12, while its count line followed the dictionary. The script that rewrites the card matched the hand-written sentence and not the sentence it had written itself. It now matches both, and `tools/test_build_hf_dataset.py` grows a dictionary under it to prove that the card follows.
+
 ## v2.42.1 — 2026-11-25
 
 **`brew install anzy-renlab-ai/tap/say-it` installs again, and keeps installing after future releases.** No entries change (1,984 total).

@@ -1,0 +1,15 @@
+{
+  "word": "LLMON",
+  "ipa": "/ˈlɛmən/",
+  "respelling_us": "LEM uhn",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite",
+  "source_label": "IBM Granite blog on Hugging Face, \"LLMON: An LLM-Native Markup Language, now in Granite 4.1 3B and 8B\"",
+  "category": "acronym",
+  "confidence": "creator-clarified",
+  "notes": "IBM Granite's LLM-native markup language, introduced with Granite 4.1 3B and 8B on 2026-11-12. The blog states the reading: LLMON (LLM Object Notation), pronounced \"lemon\". One word, not the letters L-L-M-O-N.",
+  "audio_url": "https://pronounce.renlab.ai/audio/llmon.mp3",
+  "url": "https://pronounce.renlab.ai/word/llmon",
+  "date_modified": "2026-11-26"
+}

@@ -929,6 +929,10 @@ class WorkflowClosureTests(unittest.TestCase):
         "docs/v2/index.html",
         "CHANGELOG.md",
     )
+    HF_CARD_PATHS = (
+        "tools/build-hf-dataset.py",
+        "tools/test_build_hf_dataset.py",
+    )
     CHROME_PARITY_PATHS = (
         "tools/build-chrome-dict.py",
         "integrations/chrome/src/dictionary.json",
@@ -1000,6 +1004,7 @@ class WorkflowClosureTests(unittest.TestCase):
             "tools/smoke-test.sh",
             ".github/workflows/indexnow.yml",
             *self.FACT_DOC_PATHS,
+            *self.HF_CARD_PATHS,
         )
         actual = self.push_paths(self.CI_WORKFLOW)
         self.assertEqual(actual, expected)
@@ -1034,7 +1039,8 @@ class WorkflowClosureTests(unittest.TestCase):
             "run: python -m unittest "
             "tools/test_build_v2_data.py tools/test_make_og_all.py "
             "tools/test_chrome_dictionary.py tools/test_build_entry_dates.py "
-            "tools/test_build_seo.py tools/test_indexnow_submit.py "
+            "tools/test_build_hf_dataset.py tools/test_build_seo.py "
+            "tools/test_indexnow_submit.py "
             "tools/test_source_sprint.py",
             body,
         )

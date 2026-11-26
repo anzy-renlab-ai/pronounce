@@ -7936,4 +7936,20 @@
     <image:image><image:loc>https://pronounce.renlab.ai/og/shirudo.png</image:loc><image:caption>How to pronounce Shirudo — OG card</image:caption></image:image>
     <image:image><image:loc>https://pronounce.renlab.ai/badge/shirudo.svg</image:loc><image:caption>Pronunciation badge for Shirudo</image:caption></image:image>
   </url>
+  <url><loc>https://pronounce.renlab.ai/word/llmon</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/llmon.png</image:loc><image:caption>How to pronounce LLMON — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/llmon.svg</image:loc><image:caption>Pronunciation badge for LLMON</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/inkling-2-mini</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/inkling-2-mini.png</image:loc><image:caption>How to pronounce Inkling 2 Mini — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/inkling-2-mini.svg</image:loc><image:caption>Pronunciation badge for Inkling 2 Mini</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/nvidia</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/nvidia.png</image:loc><image:caption>How to pronounce Nvidia — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/nvidia.svg</image:loc><image:caption>Pronunciation badge for Nvidia</image:caption></image:image>
+  </url>
+  <url><loc>https://pronounce.renlab.ai/word/neug</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/neug.png</image:loc><image:caption>How to pronounce NeuG — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/neug.svg</image:loc><image:caption>Pronunciation badge for NeuG</image:caption></image:image>
+  </url>
 </urlset>

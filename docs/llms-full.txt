@@ -1986,3 +1986,7 @@ Gemini 4 Carbon | /ˈdʒɛmɪnaɪ ˈfɔːr ˈkɑːrbən/ | jem in eye four carbo
 Gemini 4 Hydrogen | /ˈdʒɛmɪnaɪ ˈfɔːr ˈhaɪdrədʒən/ | jem in eye four hy druh jen | product | creator-clarified | https://www.youtube.com/watch?v=kyhw-v_iVf0
 Gemini 4 Neon | /ˈdʒɛmɪnaɪ ˈfɔːr ˈniːɑːn/ | jem in eye four nee on | product | community-consensus | https://dictionary.cambridge.org/us/pronunciation/english/neon
 Shirudo | /ˈʃiːruːdoʊ/ | shee roo doh | project | creator-clarified | https://github.com/shirudo-dev/shirudo
+LLMON | /ˈlɛmən/ | LEM uhn | acronym | creator-clarified | https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite
+Inkling 2 Mini | /ˈɪŋklɪŋ ˈtuː ˈmɪni/ | INK ling too mini | product | community-consensus | https://dictionary.cambridge.org/us/dictionary/english/inkling
+Nvidia | /ɛnˈvɪdiə/ | en VID ee uh | product | community-consensus | https://en.wikipedia.org/wiki/Nvidia
+NeuG | /ˈnuː ˈdʒiː/ | new gee | product | creator-clarified | https://github.com/alibaba/neug

@@ -1,62 +1,50 @@
 [
   {
-    "word": "Gemini 4 Argon",
-    "ipa": "/ˈdʒɛmɪnaɪ ˈfɔːr ˈɑːrɡɑːn/",
-    "respelling_us": "jem in eye four argon",
+    "word": "LLMON",
+    "ipa": "/ˈlɛmən/",
+    "respelling_us": "LEM uhn",
     "alt_ipa": "",
     "alt_respelling_us": "",
-    "source_url": "https://www.youtube.com/watch?v=Jh6mgf9M06M&t=49s",
-    "source_label": "Logan Kilpatrick (Google DeepMind) @ Google for Developers (0:49)",
-    "category": "product",
+    "source_url": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite",
+    "source_label": "IBM Granite blog on Hugging Face, \"LLMON: An LLM-Native Markup Language, now in Granite 4.1 3B and 8B\"",
+    "category": "acronym",
     "confidence": "creator-clarified",
-    "notes": "Google's frontier model for hard problems, launched 2026-10-13. Google DeepMind's Logan Kilpatrick says the name on Google's own channel: \"Today we're here talking about Gemini 4 Argon.\" Stress the first syllable of the gas: \"AR-gon.\""
+    "notes": "IBM Granite's LLM-native markup language, introduced with Granite 4.1 3B and 8B on 2026-11-12. The blog states the reading: LLMON (LLM Object Notation), pronounced \"lemon\". One word, not the letters L-L-M-O-N."
   },
   {
-    "word": "Gemini 4 Carbon",
-    "ipa": "/ˈdʒɛmɪnaɪ ˈfɔːr ˈkɑːrbən/",
-    "respelling_us": "jem in eye four carbon",
+    "word": "Inkling 2 Mini",
+    "ipa": "/ˈɪŋklɪŋ ˈtuː ˈmɪni/",
+    "respelling_us": "INK ling too mini",
     "alt_ipa": "",
     "alt_respelling_us": "",
-    "source_url": "https://www.youtube.com/watch?v=sUcvhFGc4mw&t=59s",
-    "source_label": "Google Cloud Tech @ \"How Gemini 4 Argon & Carbon were built\" (0:59)",
-    "category": "product",
-    "confidence": "creator-clarified",
-    "notes": "Google's strongest model, launched 2026-10-28. Google's own channel says \"Gemini 4 Carbon\" at 0:59 of its interview with DeepMind's head of Gemini product. Named after the element like its siblings; not the Carbon programming language, which has its own entry."
-  },
-  {
-    "word": "Gemini 4 Hydrogen",
-    "ipa": "/ˈdʒɛmɪnaɪ ˈfɔːr ˈhaɪdrədʒən/",
-    "respelling_us": "jem in eye four hy druh jen",
-    "alt_ipa": "",
-    "alt_respelling_us": "",
-    "source_url": "https://www.youtube.com/watch?v=kyhw-v_iVf0",
-    "source_label": "Google Antigravity @ \"Gemini 4 Hydrogen available in Google Antigravity\" (0:00)",
-    "category": "product",
-    "confidence": "creator-clarified",
-    "notes": "Google's fast model for everyday coding and agentic workflows, launched 2026-11-12. Google's own channel opens by saying \"Gemini 4 Hydrogen\" and repeats it at 1:23. Stress the first syllable: \"HY-druh-jen.\""
-  },
-  {
-    "word": "Gemini 4 Neon",
-    "ipa": "/ˈdʒɛmɪnaɪ ˈfɔːr ˈniːɑːn/",
-    "respelling_us": "jem in eye four nee on",
-    "alt_ipa": "",
-    "alt_respelling_us": "",
-    "source_url": "https://dictionary.cambridge.org/us/pronunciation/english/neon",
-    "source_label": "Cambridge Dictionary (US), headword neon",
+    "source_url": "https://dictionary.cambridge.org/us/dictionary/english/inkling",
+    "source_label": "Cambridge Dictionary (US), headword inkling",
     "category": "product",
     "confidence": "community-consensus",
-    "notes": "Google's model for fast end-to-end tasks, launched 2026-11-18. Read it like the gas: \"NEE-on,\" not \"ne-ON.\" Google published five Neon videos and none has a voice, so nobody at Google is on record saying the name. The reading follows the dictionary and the way DeepMind staff say \"Gemini 4\" for the sibling models."
+    "notes": "Thinking Machines Lab's small open-weights model, released 2026-11-20: a looped transformer that runs its middle layers three times per token. The launch post says nothing about the reading, so the entry follows Cambridge for the ordinary word: stress the first syllable, \"INK-ling,\" not \"ink-LING.\""
   },
   {
-    "word": "Shirudo",
-    "ipa": "/ˈʃiːruːdoʊ/",
-    "respelling_us": "shee roo doh",
+    "word": "Nvidia",
+    "ipa": "/ɛnˈvɪdiə/",
+    "respelling_us": "en VID ee uh",
     "alt_ipa": "",
     "alt_respelling_us": "",
-    "source_url": "https://github.com/shirudo-dev/shirudo",
-    "source_label": "shirudo README (OpenAI and Cisco)",
-    "category": "project",
+    "source_url": "https://en.wikipedia.org/wiki/Nvidia",
+    "source_label": "Wikipedia",
+    "category": "product",
+    "confidence": "community-consensus",
+    "notes": "The company behind GeForce GPUs and CUDA, founded in 1993 and headquartered in Santa Clara, California. Begin with the letter N and stress the second syllable: en-VID-ee-uh. The name comes from \"invidia,\" the Latin word for \"envy.\""
+  },
+  {
+    "word": "NeuG",
+    "ipa": "/ˈnuː ˈdʒiː/",
+    "respelling_us": "new gee",
+    "alt_ipa": "",
+    "alt_respelling_us": "",
+    "source_url": "https://github.com/alibaba/neug",
+    "source_label": "NeuG README (Alibaba)",
+    "category": "product",
     "confidence": "creator-clarified",
-    "notes": "OpenAI and Cisco's open-source security runtime for Linux, announced 2026-11-23. Its README gives the reading: shirudo (Japanese シールド), pronounced \"shee-roo-doh\", means \"shield\". Three syllables with a long \"shee\" first, not \"shir-ODD-oh\" or \"SHEER-doh\"."
+    "notes": "Alibaba's graph-native transactional database, open source under Apache-2.0 and on GitHub since 2026-03. Its README states the reading: NeuG (pronounced \"new-gee\"), \"new\" plus the letter G."
   }
 ]

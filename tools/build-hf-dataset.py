@@ -39,7 +39,9 @@ if os.path.exists(card_path):
         # size_categories must match the row count or the Hub mislabels it
         (r"size_categories:\n  - n<\d+K",
          "size_categories:\n  - " + ("n<1K" if len(rows) < 1000 else "1K<n<10K")),
-        (r"`awk`, and [\d,]+ more\.",
+        # Matches the hand-written form and the form this script writes, so the
+        # sentence keeps following the dictionary after its first rewrite.
+        (r"`awk`, and [\d,]+ more\.|`awk` — [\d,]+ entries in all\.",
          f"`awk` — {len(rows):,} entries in all."),
         (r"- \*\*Entries:\*\* [\d,]+", f"- **Entries:** {len(rows):,}"),
         (r"(\| `community-consensus` \| )[\d,]+", rf"\g<1>{by_conf.get('community-consensus', 0):,}"),

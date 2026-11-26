@@ -60,6 +60,8 @@ node tools/add-batch.mjs tools/batch-daily.json    # validates + dedups + append
 
 ```bash
 bash tools/build-site.sh          # word pages, badges, sitemaps, clips
+python3 tools/build-chrome-dict.py # Chrome extension dictionary (a guard fails without it)
+python3 tools/build-hf-dataset.py  # Hugging Face export and its dataset card
 python3 tools/make-audio-all.py   # macOS say → mp3 (fills new words only)
 python3 tools/make-og.py          # global OG card ("and N more.")
 python3 tools/make-og-all.py      # per-word OG cards
