@@ -1,6 +1,6 @@
 <h1 align="center">🔊 say-it · Pronounce</h1>
 
-<p align="center"><strong>Neon, Carbon, Hydrogen, Argon: how to say Google's new Gemini 4 model names. "jem in eye four" nee on, carbon, hy druh jen, argon. One Bash command pronounces 1,988 developer jargon names, each tagged with how settled its reading is.</strong></p>
+<p align="center"><strong>Neon, Carbon, Hydrogen, Argon: how to say Google's Gemini 4 model names. "jem in eye four" nee on, carbon, hy druh jen, argon. One Bash command pronounces 1,988 developer jargon names, each tagged with how settled its reading is.</strong></p>
 
 <p align="center">
 <a href="https://github.com/anzy-renlab-ai/pronounce/stargazers"><img src="https://img.shields.io/github/stars/anzy-renlab-ai/pronounce?style=social" alt="GitHub stars"></a>
@@ -101,7 +101,7 @@ Every cell has IPA, audio and a confidence tag. **[Browse all 1,988 entries →]
 - **1,988 entries, every one confidence-tagged.** Tagged `creator-clarified` / `community-consensus` / `contested`. 1,329 entries carry a source link, and many of those links are the project's home page, so a link is not the same as a citation. Where no source exists the field stays empty rather than being filled with a made-up one. Wilhite told the NYT in 2013 that GIF has "a soft 'G,' pronounced 'jif.'" Crockford said in 2011, "There's a lot of argument about how you pronounce that, but I strictly don't care." RFC 7519 says JWT is "jot". The dictionary cites them.
 - **Multi-reading audio.** For words where the debate is real — GIF, SQL, GUI, char, regex — the CLI chains the alternates after the primary with a spoken "or:" so you *hear* the debate without staring at the terminal. `--solo` skips the tail once you've internalized it.
 - **One Bash CLI, no npm runtime.** No framework bootstrap. It detects macOS `say`, Linux `espeak-ng`/`espeak`, or Windows PowerShell `System.Speech`. The repo also ships a [Claude Code skill](skills/pronounce-word/SKILL.md) and an [MCP server](mcp-server/) so your AI answers "how do you pronounce X?" with **audio**, not a phonetic guess.
-- **A docs-native GitHub Action.** Scan Markdown changed by a pull request and emit a sourced pronunciation glossary in the job summary — no API key, dependency install, or network request.
+- **A docs-native GitHub Action.** Scan Markdown changed by a pull request and emit a pronunciation glossary with each entry's dictionary link in the job summary — no API key, dependency install, or network request.
 - **Canonical website audio.** The site plays each committed canonical MP3 first and uses Web Speech only as a fallback if playback fails.
 
 ```bash
@@ -297,7 +297,7 @@ Local override: drop a `~/.config/say-it/pronunciations.local.tsv` and it takes 
 - ✅ **Audible multi-reading awareness** — contested words audibly chain alternates with "or:".
 - ✅ `--alt [N]`, `--all`, `--solo`, `--why`, `--json`, `--md`, `--no-dict`, `list`, `search`, `quiz`, `repl`, `stream`, `doctor`, `export`, `benchmark`, `badge`, `cheatsheet`, `propose` (draft a new dictionary row + prefilled contribution issue).
 - ✅ Claude Code skill + MCP server for AI-side pronunciation questions.
-- ✅ GitHub Action — sourced pronunciation glossaries for Markdown pull requests.
+- ✅ GitHub Action — pronunciation glossaries for Markdown pull requests, with each entry's link.
 - ✅ Browser PWA — installable, offline-capable, instant search, voice-mic search, interactive quiz.
 - ✅ Editor integrations — Raycast, Alfred, VS Code, Cursor, Codex, Kiro, Continue.
 - ✅ **🌐 Live site** — [pronounce.renlab.ai](https://pronounce.renlab.ai) (1,988 entries browsable with audio) + [/zh](https://pronounce.renlab.ai/zh) (Chinese landing).

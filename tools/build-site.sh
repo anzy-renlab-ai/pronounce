@@ -1458,7 +1458,7 @@ cat > "$DOCS/zh.html" <<EOF
 
     <header class="hero">
       <h1><span class="speaker">🔊</span><br><code id="hero-cycle" class="hero-cycle" data-cycle="Gemini 4 Neon|Gemini 4 Carbon|Gemini 4 Hydrogen|Gemini 4 Argon|nginx|LaTeX|Gemini 4 Neon">Gemini 4 Neon</code><br>到底怎么读？</h1>
-      <p class="tagline">一份社区维护的程序员发音词典——Google 新模型的名字 <code>Gemini 4 Neon</code>、<code>Carbon</code>、<code>Hydrogen</code>、<code>Argon</code>，还有 <code>nginx</code>、<code>GIF</code>、<code>JSON</code>、<code>LaTeX</code>、<code>Postgres</code> ……共 ${ENTRY_COUNT} 条，每条标了置信度。</p>
+      <p class="tagline">一份社区维护的程序员发音词典——Google 的 Gemini 4 模型 <code>Gemini 4 Neon</code>、<code>Carbon</code>、<code>Hydrogen</code>、<code>Argon</code>，还有 <code>nginx</code>、<code>GIF</code>、<code>JSON</code>、<code>LaTeX</code>、<code>Postgres</code> ……共 ${ENTRY_COUNT} 条，每条标了置信度。</p>
       <div class="hero-search" role="search">
         <input id="hero-search" type="search" placeholder="🔍 输入名字 — Gemini 4 Neon、nginx、Pydantic、JWT…" autocomplete="off" aria-label="搜索发音词典">
         <button id="hero-mic" type="button" class="hero-mic" aria-label="语音输入">🎤</button>
@@ -1490,7 +1490,7 @@ cat > "$DOCS/zh.html" <<EOF
 <span class="out">🔊 jem in eye four carbon. jem in eye four carbon. jem in eye four carbon.</span>   <span class="comment"># Google 自家频道 0:59</span>
 
 <span class="prompt">\$</span> say-it GIF
-<span class="out">🔊 jif. jif. jif. <span class="alt">或读: ghif.</span></span>         <span class="comment"># 硬 G 提示 · Wilhite 2013 年 Webby 奖现场亲口说</span>
+<span class="out">🔊 jif. jif. jif. <span class="alt">或读: ghif.</span></span>         <span class="comment"># 硬 G 提示 · Wilhite 2013 年对纽约时报说的</span>
 
 <span class="prompt">\$</span> say-it --why JSON
 <span class="comment">word              JSON
@@ -1501,8 +1501,8 @@ source            Wikipedia § Naming and pronunciation
 url               https://en.wikipedia.org/wiki/JSON#Naming_and_pronunciation</span></pre>
 
     <section class="famous">
-      <h2>📜 经典案例（创作者钦定的读法）</h2>
-      <p class="sub">有些读音不是观点之争——创作者已经留下了"官方"答案。</p>
+      <h2>📜 经典案例（创作者已明确的读法）</h2>
+      <p class="sub">有些读音不是观点之争——创作者本人留下过说法。</p>
       <div class="famous-list">
         <div class="famous-item"><span class="fam-word">nginx</span> → <span class="fam-resp">engine X（"引擎 X"）</span><a class="fam-src" href="https://nginx.org/en/" target="_blank" rel="noopener">NGINX 官方</a></div>
         <div class="famous-item"><span class="fam-word">GIF</span> → <span class="fam-resp">jif（"吉夫"）</span><a class="fam-src" href="https://web.archive.org/web/20130522145554/http://bits.blogs.nytimes.com/2013/05/21/an-honor-for-the-creator-of-the-gif/" target="_blank" rel="noopener">Steve Wilhite, NYT (2013)</a></div>
@@ -1520,9 +1520,9 @@ url               https://en.wikipedia.org/wiki/JSON#Naming_and_pronunciation</s
 
     <div class="section-title">这个工具盒里有什么</div>
     <div class="features">
-      <div class="feature"><span class="icon">🗂</span><h3>每条词条都标了置信度</h3><p>项目名、产品名、程序员行话、缩写。有可靠来源时才显示链接。</p></div>
+      <div class="feature"><span class="icon">🗂</span><h3>每条词条都标了置信度</h3><p>项目名、产品名、程序员行话、缩写。有链接的会显示，但其中不少只是项目主页，不等于出处。</p></div>
       <div class="feature"><span class="icon">🔊</span><h3>多读法链式播放</h3><p>对于 GIF / SQL / GUI / kubectl 这类有争议的词，CLI 会把所有读法连着播——"……或读: ghif."（明确提示硬 G）——你不盯终端也能听到争议。</p></div>
-      <div class="feature"><span class="icon">🤖</span><h3>自带 Claude Code skill</h3><p>问 Claude："X 怎么读？"——它会播音频、给 IPA，有可靠来源时附引用，而不是瞎猜一个音标。</p></div>
+      <div class="feature"><span class="icon">🤖</span><h3>自带 Claude Code skill</h3><p>问 Claude："X 怎么读？"——它会播音频、给 IPA 和置信度，有链接就附上，而不是瞎猜一个音标。</p></div>
       <div class="feature"><span class="icon">⚡</span><h3>一个 Bash CLI，无 npm 运行时</h3><p>自动检测 macOS <code>say</code>、Linux <code>espeak-ng</code>/<code>espeak</code> 或 Windows PowerShell <code>System.Speech</code>。</p></div>
       <div class="feature"><span class="icon">🔁</span><h3>多种播放控制</h3><p><code>--alt</code> 听备选读法，<code>--all</code> 听所有变体，<code>--solo</code> 跳过链式，<code>--why</code> 看完整词条和来源 URL。</p></div>
       <div class="feature"><span class="icon">📦</span><h3>社区共有</h3><p>词典本身就是一个 TSV 文件，欢迎 PR 加入你身边被念错的项目名 —— 详见 <a href="https://github.com/${GH_REPO}/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a>。</p></div>
@@ -1551,11 +1551,11 @@ url               https://en.wikipedia.org/wiki/JSON#Naming_and_pronunciation</s
       </details>
       <details>
         <summary>和普通发音词典有什么区别？</summary>
-        <p>这本只收程序员日常会念的名字——<code>Gemini 4 Neon</code>、<code>nginx</code>、<code>Pydantic</code>、<code>Knative</code>、<code>Cilium</code>。Webster 没收，这里有，并且每条带 confidence 标签，有可靠来源时附链接。</p>
+        <p>这本只收程序员日常会念的名字——<code>Gemini 4 Neon</code>、<code>nginx</code>、<code>Pydantic</code>、<code>Knative</code>、<code>Cilium</code>。Webster 没收，这里有，并且每条带 confidence 标签，有链接的附链接。</p>
       </details>
       <details>
         <summary>为什么 GIF 是 "jif"？我一直读 "gif"。</summary>
-        <p>两种读法都真实存在。词典把创作者亲口说的读法 ("jif"，Steve Wilhite 2013 年 Webby 奖) 列为主读；硬 G 的 "gif" 读法使用明确的语音提示 "ghif"。<code>say-it --alt GIF</code> 听备选。SQL / JSON / char / regex 同款多读处理。</p>
+        <p>两种读法都真实存在。词典把创作者对纽约时报说的读法 ("jif"，Steve Wilhite，2013) 列为主读；硬 G 的 "gif" 读法使用明确的语音提示 "ghif"。<code>say-it --alt GIF</code> 听备选。SQL / JSON / char / regex 同款多读处理。</p>
       </details>
       <details>
         <summary>支持 Windows / Linux 吗？</summary>
@@ -1567,7 +1567,7 @@ url               https://en.wikipedia.org/wiki/JSON#Naming_and_pronunciation</s
       </details>
       <details>
         <summary>来源 URL 是必填的吗？</summary>
-        <p>不必。没有可靠来源就留空，confidence 标 <code>community-consensus</code>。宁可保守也不胡编。</p>
+        <p>不必。没有可附的链接就留空，confidence 标 <code>community-consensus</code>。宁可保守也不胡编。</p>
       </details>
       <details>
         <summary>为什么 CLI 在主读后还播 "or: ghif"？</summary>

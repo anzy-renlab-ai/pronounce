@@ -220,7 +220,7 @@ def main():
     second_rows = [r for r in rows if r[0] == SECOND]
     if len(second_rows) != 1:
         raise SystemExit(f'the dictionary must hold exactly one "{SECOND}" row')
-    subtitle = f"Hear how to say Google's new Gemini 4 models, and {floor(len(rows) - NAMED)} other names"
+    subtitle = f"Hear how to say Google's Gemini 4 models, and {floor(len(rows) - NAMED)} other names"
 
     # 1) Render frames
     f_lead = TMP / "frame_1_lead.png"

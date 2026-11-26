@@ -1,7 +1,7 @@
 {
   "name": "pronounce",
   "description": "Speak developer jargon out loud instead of guessing: 1,988 confidence-tagged entries (Neon, Carbon, Hydrogen, Argon, GIF, JSON, JWT, nginx, LaTeX, ...). Ships the pronounce-word skill and the pronounce MCP server.",
-  "version": "2.43.4",
+  "version": "2.43.5",
   "author": {
     "name": "anzy-renlab-ai",
     "url": "https://github.com/anzy-renlab-ai"

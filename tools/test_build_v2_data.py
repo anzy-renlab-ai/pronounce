@@ -712,7 +712,11 @@ class RepositoryProductFactTests(unittest.TestCase):
         self.assertIn("Every one of ${ENTRY_COUNT} entries confidence-tagged", source)
         self.assertNotIn("${SOURCE_COUNT} of ${ENTRY_COUNT}", source)
         self.assertIn("a source citation when available", source)
-        self.assertIn("有可靠来源时附引用", source)
+        # Round 10: the page promised a link only where a reliable source exists,
+        # and about half of the 1,329 links are a project's home page.
+        self.assertIn("有链接就附上", source)
+        for banned in ("有可靠来源时", "钦定", "亲口"):
+            self.assertNotIn(banned, source)
         self.assertIn(
             "%d entries with IPA, respellings, pre-rendered audio and a"
             " confidence tag; %d carry a source link.",

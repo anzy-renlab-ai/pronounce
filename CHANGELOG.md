@@ -1,5 +1,17 @@
 # Changelog
 
+## v2.43.5 — 2026-11-26
+
+**The Chinese page no longer calls every link a reliable source.** No entries change (1,988 total).
+
+Round 10, a blind read of the final text, found what the nine rounds before it had left.
+
+- **The Chinese landing** said three times that a link appears only where a reliable source exists. About 45% of the 1,329 links are a project's home page. The three sentences now say that a link is shown where there is one, and that many of them are home pages. Its list of creator-settled readings was titled with a name the product does not use. It is now titled as the entry pages are. Its two GIF lines credited a Webby stage speech, where the entry and the README credit the New York Times. The page does too.
+- **"New" is gone from the places that carry no date**: the README's first line, the Chinese landing and the animation's caption now say "Google's Gemini 4 models". A draft that is dated keeps "new". From February the word would have been false in each of these places, and nothing would have noticed.
+- **The GitHub Action** is described without "sourced", like the rest of the page.
+- **The frozen copy** `docs/demo-2026-11.gif` was refreshed once with the new caption, before any directory listing used it.
+- Outside this repository, in the same round: the awesome-mac pull request now names the models in all four languages, and the HelloGitHub issue says that about half of the links are home pages.
+
 ## v2.43.4 — 2026-11-26
 
 **Bare model names find their row, and the install takes three seconds.** No entries change (1,988 total).
