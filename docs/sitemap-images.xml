@@ -7952,4 +7952,8 @@
     <image:image><image:loc>https://pronounce.renlab.ai/og/neug.png</image:loc><image:caption>How to pronounce NeuG — OG card</image:caption></image:image>
     <image:image><image:loc>https://pronounce.renlab.ai/badge/neug.svg</image:loc><image:caption>Pronunciation badge for NeuG</image:caption></image:image>
   </url>
+  <url><loc>https://pronounce.renlab.ai/word/jiff</loc>
+    <image:image><image:loc>https://pronounce.renlab.ai/og/jiff.png</image:loc><image:caption>How to pronounce Jiff — OG card</image:caption></image:image>
+    <image:image><image:loc>https://pronounce.renlab.ai/badge/jiff.svg</image:loc><image:caption>Pronunciation badge for Jiff</image:caption></image:image>
+  </url>
 </urlset>

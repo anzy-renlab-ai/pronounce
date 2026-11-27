@@ -1990,3 +1990,4 @@ LLMON | /ˈlɛmən/ | LEM uhn | acronym | creator-clarified | https://huggingfac
 Inkling 2 Mini | /ˈɪŋklɪŋ ˈtuː ˈmɪni/ | INK ling too mini | product | community-consensus | https://dictionary.cambridge.org/us/dictionary/english/inkling
 Nvidia | /ɛnˈvɪdiə/ | en VID ee uh | product | community-consensus | https://en.wikipedia.org/wiki/Nvidia
 NeuG | /ˈnuː ˈdʒiː/ | new gee | product | creator-clarified | https://github.com/alibaba/neug
+Jiff | /dʒɪf/ | jif | project | creator-clarified | https://burntsushi.net/jiff/

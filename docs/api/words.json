@@ -1986,5 +1986,6 @@
   {"word": "LLMON", "slug": "llmon", "category": "acronym", "confidence": "creator-clarified"},
   {"word": "Inkling 2 Mini", "slug": "inkling-2-mini", "category": "product", "confidence": "community-consensus"},
   {"word": "Nvidia", "slug": "nvidia", "category": "product", "confidence": "community-consensus"},
-  {"word": "NeuG", "slug": "neug", "category": "product", "confidence": "creator-clarified"}
+  {"word": "NeuG", "slug": "neug", "category": "product", "confidence": "creator-clarified"},
+  {"word": "Jiff", "slug": "jiff", "category": "project", "confidence": "creator-clarified"}
 ]

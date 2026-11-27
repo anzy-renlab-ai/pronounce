@@ -1,5 +1,12 @@
 # Changelog
 
+## v2.44.0 — 2026-11-27
+
+**A Rust library's own author settled how to say its name.** 1 new entry (1,989 total): Jiff.
+
+- **Jiff** /dʒɪf/ "jif" — Andrew Gallant's date and time library for Rust reached 1.0 on 2026-11-15 and was on the Hacker News front page the next day (444 points). His announcement states the reading in its own second line: "Jiff is pronounced like 'gif' with a soft 'g,' as in 'gem.'" The row is `creator-clarified` on that sentence, so it now sits beside the `GIF` row with the same soft G.
+- The citation was re-fetched by hand and the sentence found on the page before the row was written. Oryon, Qualcomm's CPU core and the day's other candidate (76 points on 11-26), was rejected: neither Qualcomm's product pages nor the Wikipedia article states a reading, and a guessed IPA is not an entry.
+
 ## v2.43.5 — 2026-11-26
 
 **The Chinese page no longer calls every link a reliable source.** No entries change (1,988 total).

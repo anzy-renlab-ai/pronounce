@@ -22,11 +22,11 @@ configs:
 
 # Dev Jargon Pronunciations
 
-A community dictionary of how engineers actually pronounce developer jargon: project names, products, CLI tools, CS terms, and acronyms. `kubectl`, `nginx`, `GIF`, `JSON`, `YAML`, `LaTeX`, `Tcl`, `awk` — 1,988 entries in all.
+A community dictionary of how engineers actually pronounce developer jargon: project names, products, CLI tools, CS terms, and acronyms. `kubectl`, `nginx`, `GIF`, `JSON`, `YAML`, `LaTeX`, `Tcl`, `awk` — 1,989 entries in all.
 
 The dataset is the data behind [pronounce.renlab.ai](https://pronounce.renlab.ai). Each entry carries IPA, an English-like respelling, alternative readings, a confidence label, a citable source URL where one exists, and a URL to pre-rendered audio.
 
-- **Entries:** 1,988
+- **Entries:** 1,989
 - **Language:** English (General American only)
 - **Format:** one JSON object per line (`pronunciations.jsonl`); a flat `pronunciations.csv` is also included
 - **License:** MIT
@@ -46,7 +46,7 @@ That second part is the differentiator. The interesting rows are not the ones ev
 |-----------------------|-------|----------------------------------------------------------------------------|
 | `community-consensus` | 1,715  | one dominant reading, no live dispute                                      |
 | `contested`           | 184   | two or more readings in active use; the debate is real                     |
-| `creator-clarified`   | 89    | settled by the creator or an official FAQ, with a source quote on file     |
+| `creator-clarified`   | 90    | settled by the creator or an official FAQ, with a source quote on file     |
 
 ## Column schema
 

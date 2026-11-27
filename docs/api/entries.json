@@ -29818,5 +29818,20 @@
   "audio_url": "https://pronounce.renlab.ai/audio/neug.mp3",
   "url": "https://pronounce.renlab.ai/word/neug",
   "date_modified": "2026-11-26"
+},
+{
+  "word": "Jiff",
+  "ipa": "/dʒɪf/",
+  "respelling_us": "jif",
+  "alt_ipa": [],
+  "alt_respelling_us": [],
+  "source_url": "https://burntsushi.net/jiff/",
+  "source_label": "Andrew Gallant (BurntSushi), \"Jiff 1.0\", 2026-11-15",
+  "category": "project",
+  "confidence": "creator-clarified",
+  "notes": "Jiff is Andrew Gallant's date and time library for Rust, released as 1.0 on 2026-11-15 (444 points on Hacker News the next day). The author states the reading in his own announcement: \"Jiff is pronounced like 'gif' with a soft 'g,' as in 'gem.'\" One syllable, and the G is the sound in 'gem', not the one in 'gift'.",
+  "audio_url": "https://pronounce.renlab.ai/audio/jiff.mp3",
+  "url": "https://pronounce.renlab.ai/word/jiff",
+  "date_modified": "2026-11-27"
 }
 ]

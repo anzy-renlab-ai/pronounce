@@ -4,7 +4,7 @@ The dictionary grows when more devs find it. The best forcing function is **one 
 
 **[★ Star on GitHub →](https://github.com/anzy-renlab-ai/pronounce)** — single click, no signup.
 
-1,988 entries, every one confidence-tagged. Every contested word lists both readings. The MIT license + TSV-as-source-of-truth means contributors can PR a row and the CLI / extension / web app all rebuild from it.
+1,989 entries, every one confidence-tagged. Every contested word lists both readings. The MIT license + TSV-as-source-of-truth means contributors can PR a row and the CLI / extension / web app all rebuild from it.
 
 Want to take it further? Open a PR for your favorite mispronounced project name.
 
